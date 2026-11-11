@@ -5,7 +5,119 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SpeakFlow — Aprende Inglés Hablando</title>
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
-  <script type="module" src="/firebase-config.js"></script>
+  <script type="module">
+    const DEFAULT_PROJECT_CONFIG = {
+      apiKey: "",
+      authDomain: "shadowing-efcab.firebaseapp.com",
+      projectId: "shadowing-efcab",
+      storageBucket: "shadowing-efcab.firebasestorage.app",
+      messagingSenderId: "",
+      appId: "",
+    };
+
+    function parseFirebaseConfigInput(rawInput) {
+      if (!rawInput) return null;
+      if (typeof rawInput === "object") return { ...DEFAULT_PROJECT_CONFIG, ...rawInput };
+      const text = String(rawInput).trim();
+      if (!text) return null;
+      if (/^AIza[0-9A-Za-z_-]{25,}$/.test(text)) return { ...DEFAULT_PROJECT_CONFIG, apiKey: text };
+      try {
+        const parsed = JSON.parse(text);
+        if (parsed && typeof parsed === "object") return { ...DEFAULT_PROJECT_CONFIG, ...parsed };
+      } catch (_) {}
+      const extracted = { ...DEFAULT_PROJECT_CONFIG };
+      const keys = ["apiKey", "authDomain", "projectId", "storageBucket", "messagingSenderId", "appId", "measurementId"];
+      let foundAny = false;
+      for (const k of keys) {
+        const re = new RegExp(`["']?${k}["']?\\s*:\\s*["']([^"']+)["']`);
+        const m = text.match(re);
+        if (m && m[1]) { extracted[k] = m[1].trim(); foundAny = true; }
+      }
+      return foundAny ? extracted : null;
+    }
+
+    class SpeakFlowFirebaseBridge {
+      constructor() {
+        this.app = null; this.auth = null; this.db = null; this.user = null;
+        this.connected = false; this.onlineEnabled = false;
+        this.localUid = localStorage.getItem("sf_anon_uid") || `anon-${Math.random().toString(36).slice(2, 10)}`;
+        localStorage.setItem("sf_anon_uid", this.localUid);
+      }
+      getStoredConfig() {
+        try {
+          const raw = localStorage.getItem("sf_firebase_config");
+          if (raw) { const cfg = parseFirebaseConfigInput(raw); if (cfg && cfg.apiKey) return cfg; }
+        } catch (_) {}
+        return window.FIREBASE_CONFIG || null;
+      }
+      async saveFirebaseConfig(rawInput) {
+        const parsed = parseFirebaseConfigInput(rawInput);
+        if (!parsed || !parsed.apiKey) {
+          return { connected: false, reason: "Pega el bloque initializeApp(firebaseConfig) de shadowing-efcab o tu apiKey (AIza...)." };
+        }
+        localStorage.setItem("sf_firebase_config", JSON.stringify(parsed));
+        return await this.init(parsed);
+      }
+      async init(customConfig = null) {
+        const cfg = customConfig || this.getStoredConfig();
+        if (!cfg || !cfg.apiKey) {
+          this.connected = false;
+          window.dispatchEvent(new CustomEvent("speakflow:firebase-ready", { detail: { mode: "local-fallback", uid: this.localUid, projectId: "shadowing-efcab" } }));
+          return { connected: false, uid: this.localUid, reason: "Pega tu objeto firebaseConfig de shadowing-efcab arriba." };
+        }
+        try {
+          const [
+            { initializeApp, getApps, deleteApp },
+            { getAuth, signInAnonymously },
+            { initializeFirestore, getFirestore, enableNetwork, doc, setDoc },
+          ] = await Promise.all([
+            import("https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js"),
+            import("https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js"),
+            import("https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js"),
+          ]);
+          if (getApps().length && customConfig) { for (const ex of getApps()) await deleteApp(ex); }
+          this.app = getApps().length ? getApps()[0] : initializeApp(cfg);
+          this.auth = getAuth(this.app);
+          try { this.db = initializeFirestore(this.app, { experimentalAutoDetectLongPolling: true }); }
+          catch (_) { this.db = getFirestore(this.app); }
+          this._firestoreFns = { doc, setDoc, enableNetwork };
+          await enableNetwork(this.db);
+          this.onlineEnabled = true;
+          const cred = await signInAnonymously(this.auth);
+          this.user = cred.user;
+          this.connected = true;
+          await setDoc(doc(this.db, "users", this.user.uid), {
+            uid: this.user.uid, isAnonymous: this.user.isAnonymous,
+            projectId: cfg.projectId || "shadowing-efcab", appName: "shadowing",
+            onlineAccess: true, updatedAt: new Date().toISOString(),
+          }, { merge: true });
+          window.dispatchEvent(new CustomEvent("speakflow:firebase-ready", { detail: { mode: "firebase-live", uid: this.user.uid, projectId: cfg.projectId || "shadowing-efcab" } }));
+          return { connected: true, uid: this.user.uid, projectId: cfg.projectId || "shadowing-efcab", onlineEnabled: true };
+        } catch (err) {
+          this.connected = false;
+          const errMsg = String(err && err.message ? err.message : err);
+          window.dispatchEvent(new CustomEvent("speakflow:firebase-ready", { detail: { mode: "local-fallback", uid: this.localUid, error: errMsg } }));
+          return { connected: false, uid: this.localUid, reason: errMsg };
+        }
+      }
+      async enableOnlineFirestore() { return await this.init(); }
+      async syncAttempt(d) {
+        if (!this.connected || !this.db || !this.user) return;
+        try { const { doc, setDoc } = this._firestoreFns; await setDoc(doc(this.db, "users", this.user.uid, "attempts", `att_${Date.now()}`), { ...d, createdAt: new Date().toISOString() }); } catch (_) {}
+      }
+      async syncSrsCard(d) {
+        if (!this.connected || !this.db || !this.user) return;
+        try { const { doc, setDoc } = this._firestoreFns; await setDoc(doc(this.db, "users", this.user.uid, "srs_cards", d.card_id || `${d.scenario_id}_${d.phrase_id}`), { ...d, updatedAt: new Date().toISOString() }, { merge: true }); } catch (_) {}
+      }
+      async syncRoleplay(d) {
+        if (!this.connected || !this.db || !this.user) return;
+        try { const { doc, setDoc } = this._firestoreFns; await setDoc(doc(this.db, "users", this.user.uid, "roleplay_sessions", d.session_id || `rp_${Date.now()}`), { ...d, updatedAt: new Date().toISOString() }, { merge: true }); } catch (_) {}
+      }
+    }
+    window.SpeakFlowFirebase = new SpeakFlowFirebaseBridge();
+    window.speakFlowFirebase = window.SpeakFlowFirebase;
+    window.SpeakFlowFirebase.init();
+  </script>
   <style>
     @keyframes pulse-ring {
       0% { transform: scale(0.96); box-shadow: 0 0 0 0 rgba(244, 63, 94, 0.65); }
@@ -125,16 +237,16 @@
       <div class="space-y-3 text-xs">
         <div class="p-3.5 rounded-2xl bg-slate-950 border border-slate-800 space-y-2.5">
           <div class="flex items-center justify-between">
-            <span class="font-semibold text-slate-200">Proyecto Firebase: <code class="text-indigo-300">agy-sandbox-488016</code></span>
+            <span class="font-semibold text-slate-200">Proyecto Firebase: <code class="text-indigo-300">shadowing-efcab</code> (<code class="text-slate-400">shadowing</code>)</span>
             <span id="modal-firebase-status" class="text-[11px] text-emerald-400">Listo para conectar</span>
           </div>
           <div>
-            <label class="block text-slate-400 mb-1">Pega el bloque <code class="text-slate-300">const firebaseConfig = { ... }</code> del Paso 2 (o solo tu <code class="text-slate-300">apiKey</code>)</label>
-            <textarea id="key-firebase-json" rows="4" placeholder='const firebaseConfig = { apiKey: "AIza...", authDomain: "agy-sandbox-488016.firebaseapp.com", projectId: "agy-sandbox-488016", ... };' class="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-800 text-white font-mono text-[11px]"></textarea>
+            <label class="block text-slate-400 mb-1">Pega el bloque <code class="text-slate-300">initializeApp(firebaseConfig)</code> de <code class="text-indigo-300">shadowing-efcab</code> (o solo tu <code class="text-slate-300">apiKey</code>)</label>
+            <textarea id="key-firebase-json" rows="4" placeholder='const firebaseConfig = { apiKey: "AIza...", authDomain: "shadowing-efcab.firebaseapp.com", projectId: "shadowing-efcab", ... }; const app = initializeApp(firebaseConfig);' class="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-800 text-white font-mono text-[11px]"></textarea>
           </div>
           <div class="flex flex-wrap items-center justify-between gap-2 pt-1">
-            <a href="https://console.firebase.google.com/project/agy-sandbox-488016/firestore" target="_blank" rel="noopener" class="text-indigo-400 hover:text-indigo-300 underline">
-              Abrir consola de Firestore (agy-sandbox-488016) ↗
+            <a href="https://console.firebase.google.com/project/shadowing-efcab/firestore" target="_blank" rel="noopener" class="text-indigo-400 hover:text-indigo-300 underline">
+              Abrir consola de Firestore (shadowing-efcab) ↗
             </a>
             <button onclick="connectAndEnableOnlineFirestore()" class="px-3.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition">
               🔥 Enable online access to Firestore

@@ -1,6 +1,6 @@
 /**
- * Firebase Web SDK v11 Connector for SpeakFlow (Project: agy-sandbox-488016):
- *  - Accepts raw JS snippet (`const firebaseConfig = { ... }`), JSON, or just the `apiKey` (`AIza...`)
+ * Firebase Web SDK v11 Connector for SpeakFlow (Project: shadowing-efcab / shadowing):
+ *  - Accepts raw JS snippet (`const firebaseConfig = { ... }; initializeApp(firebaseConfig);`), JSON, or `apiKey` (`AIza...`)
  *  - Service 1: Firebase Authentication (Anonymous Auth + optional Google Web Auth)
  *  - Service 2: Cloud Firestore Database with explicit `enableNetwork(db)` (Online access to Firestore)
  *  - Service 3: Firebase Hosting + Google Cloud / Gemini Free Tier integration
@@ -8,11 +8,11 @@
 
 export const DEFAULT_PROJECT_CONFIG = {
   apiKey: "",
-  authDomain: "agy-sandbox-488016.firebaseapp.com",
-  projectId: "agy-sandbox-488016",
-  storageBucket: "agy-sandbox-488016.firebasestorage.app",
-  messagingSenderId: "1094302132782",
-  appId: "1:1094302132782:web:e173010681f04a98a98dbf",
+  authDomain: "shadowing-efcab.firebaseapp.com",
+  projectId: "shadowing-efcab",
+  storageBucket: "shadowing-efcab.firebasestorage.app",
+  messagingSenderId: "",
+  appId: "",
 };
 
 export function parseFirebaseConfigInput(rawInput) {
@@ -34,8 +34,7 @@ export function parseFirebaseConfigInput(rawInput) {
     }
   } catch (_) {}
 
-  // Case 3: Full JS snippet from Firebase Console ("Step 2: Add Firebase SDK")
-  // e.g. const firebaseConfig = { apiKey: "...", authDomain: "...", ... };
+  // Case 3: Full JS snippet from Firebase Console ("const firebaseConfig = { ... }; const app = initializeApp(firebaseConfig);")
   const extracted = { ...DEFAULT_PROJECT_CONFIG };
   const keys = ["apiKey", "authDomain", "projectId", "storageBucket", "messagingSenderId", "appId", "measurementId"];
   let foundAny = false;
@@ -78,7 +77,7 @@ export class SpeakFlowFirebaseBridge {
     if (!parsed || !parsed.apiKey) {
       return {
         connected: false,
-        reason: "Pega el bloque 'const firebaseConfig = { ... }' del Paso 2 de Firebase o tu apiKey (AIza...).",
+        reason: "Pega el bloque 'const firebaseConfig = { ... }' de tu proyecto shadowing-efcab o tu apiKey (AIza...).",
       };
     }
     localStorage.setItem("sf_firebase_config", JSON.stringify(parsed));
@@ -123,7 +122,6 @@ export class SpeakFlowFirebaseBridge {
       this._firestoreFns = { doc, setDoc, getDoc, enableNetwork };
       this._authFns = { signInAnonymously, GoogleAuthProvider, signInWithPopup };
 
-      // Enable online access to Firestore explicitly
       await enableNetwork(this.db);
       this.onlineEnabled = true;
 
@@ -136,7 +134,8 @@ export class SpeakFlowFirebaseBridge {
         {
           uid: this.user.uid,
           isAnonymous: this.user.isAnonymous,
-          projectId: cfg.projectId,
+          projectId: cfg.projectId || "shadowing-efcab",
+          appName: "shadowing",
           tier: localStorage.getItem("sf_freemium_tier") || "free",
           onlineAccess: true,
           updatedAt: new Date().toISOString(),
@@ -148,18 +147,18 @@ export class SpeakFlowFirebaseBridge {
           detail: {
             mode: "firebase-live",
             uid: this.user.uid,
-            projectId: cfg.projectId,
+            projectId: cfg.projectId || "shadowing-efcab",
             onlineEnabled: true,
           },
         })
       );
-      return { connected: true, uid: this.user.uid, projectId: cfg.projectId, onlineEnabled: true };
+      return { connected: true, uid: this.user.uid, projectId: cfg.projectId || "shadowing-efcab", onlineEnabled: true };
     } catch (err) {
       this.connected = false;
       const errMsg = String(err && err.message ? err.message : err);
       window.dispatchEvent(
         new CustomEvent("speakflow:firebase-ready", {
-          detail: { mode: "local-fallback", uid: this.localUid, error: errMsg },
+          detail: { mode: "local-fallback", uid: this.localUid, projectId: cfg.projectId || "shadowing-efcab", error: errMsg },
         })
       );
       return { connected: false, uid: this.localUid, reason: errMsg };
