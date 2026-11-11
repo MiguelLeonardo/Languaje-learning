@@ -1,0 +1,44 @@
+id: a1-clothing-store
+title: Shopping for clothes
+title_es: Comprar ropa en una tienda
+cefr: A1
+topic: hotel-and-shopping
+description: Pregunta si tienen tu talla, pide probarte una prenda y consulta el precio.
+phrases:
+  - id: medium-size
+    text: Do you have this jacket in a medium size?
+    translation: ¿Tiene esta chaqueta en talla mediana?
+    visual_hint: "🧥📏"
+    cloze: [4, 7]
+    glossary:
+      - {word: jacket, meaning: "chaqueta", ipa: "ˈdʒækɪt"}
+      - {word: medium size, meaning: "talla mediana", ipa: "ˈmiːdiəm saɪz"}
+  - id: try-this-on
+    text: Can I try this on, please?
+    translation: ¿Me puedo probar esto, por favor?
+    visual_hint: "🪞👕"
+    cloze: [2, 4]
+    glossary:
+      - {word: try on, meaning: "probarse ropa", ipa: "traɪ ɑːn"}
+  - id: take-it
+    text: It fits well. I'll take it!
+    translation: Me queda bien. ¡Me lo llevo!
+    visual_hint: "🛍️✅"
+    cloze: [1, 4]
+    glossary:
+      - {word: fits, meaning: "quedar bien de talla", ipa: "fɪts"}
+      - {word: "I'll take it", meaning: "me lo llevo"}
+roleplay:
+  ai_role: shop assistant
+  user_role: shopper
+  setting: A clothing store on the high street.
+  turns:
+    - {speaker: ai, text: "Hi there! Let me know if you need help finding a size."}
+    - speaker: user
+      goal: Pregunta si tienen la chaqueta en talla mediana.
+      suggested_lines: ["Do you have this jacket in a medium size?"]
+    - {speaker: ai, text: "Yes, here is a medium. The fitting rooms are over there."}
+    - speaker: user
+      goal: Pregunta si puedes probártela y luego di que te la llevas.
+      suggested_lines: ["Can I try this on, please?", "It fits well. I'll take it!"]
+    - {speaker: ai, text: "Awesome! Follow me to the register."}

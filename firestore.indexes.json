@@ -1,0 +1,13 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "srs_cards",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "kind", "order": "DESCENDING" },
+        { "fieldPath": "due_at", "order": "ASCENDING" }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

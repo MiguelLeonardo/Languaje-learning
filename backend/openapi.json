@@ -61,6 +61,38 @@
         "operationId": "providers_status_v1_providers_status_get",
         "parameters": [
           {
+            "name": "x-google-cloud-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Google-Cloud-Key"
+            }
+          },
+          {
+            "name": "x-gemini-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Gemini-Key"
+            }
+          },
+          {
             "name": "x-openai-key",
             "in": "header",
             "required": false,
@@ -135,6 +167,62 @@
         }
       }
     },
+    "/v1/freemium/status": {
+      "get": {
+        "tags": [
+          "system"
+        ],
+        "summary": "Freemium Status",
+        "operationId": "freemium_status_v1_freemium_status_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "x-freemium-tier",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Freemium-Tier"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Freemium Status V1 Freemium Status Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/tts": {
       "post": {
         "tags": [
@@ -148,6 +236,22 @@
           }
         ],
         "parameters": [
+          {
+            "name": "x-google-cloud-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Google-Cloud-Key"
+            }
+          },
           {
             "name": "x-openai-key",
             "in": "header",
@@ -338,6 +442,36 @@
         ]
       }
     },
+    "/v1/modules": {
+      "get": {
+        "tags": [
+          "catalog"
+        ],
+        "summary": "Modules",
+        "operationId": "modules_v1_modules_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/ModuleOut"
+                  },
+                  "type": "array",
+                  "title": "Response Modules V1 Modules Get"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
     "/v1/scenarios": {
       "get": {
         "tags": [
@@ -381,6 +515,22 @@
                 }
               ],
               "title": "Band"
+            }
+          },
+          {
+            "name": "topic",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Topic"
             }
           }
         ],
@@ -672,6 +822,100 @@
         }
       }
     },
+    "/v1/translate": {
+      "post": {
+        "tags": [
+          "practice",
+          "translate"
+        ],
+        "summary": "Translate Word Or Phrase",
+        "operationId": "translate_word_or_phrase_v1_translate_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TranslateIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TranslationCard"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/review/bookmark": {
+      "post": {
+        "tags": [
+          "practice",
+          "review"
+        ],
+        "summary": "Bookmark For Review",
+        "operationId": "bookmark_for_review_v1_review_bookmark_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookmarkIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BookmarkOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
     "/v1/exercises/{exercise_id}/attempts": {
       "post": {
         "tags": [
@@ -692,6 +936,22 @@
             "schema": {
               "type": "string",
               "title": "Exercise Id"
+            }
+          },
+          {
+            "name": "x-google-cloud-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Google-Cloud-Key"
             }
           },
           {
@@ -819,6 +1079,22 @@
             "schema": {
               "type": "string",
               "title": "Card Id"
+            }
+          },
+          {
+            "name": "x-google-cloud-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Google-Cloud-Key"
             }
           },
           {
@@ -969,6 +1245,22 @@
             }
           },
           {
+            "name": "x-google-cloud-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Google-Cloud-Key"
+            }
+          },
+          {
             "name": "x-openai-key",
             "in": "header",
             "required": false,
@@ -982,6 +1274,22 @@
                 }
               ],
               "title": "X-Openai-Key"
+            }
+          },
+          {
+            "name": "x-gemini-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Gemini-Key"
             }
           },
           {
@@ -1140,6 +1448,83 @@
           "audio"
         ],
         "title": "Body_submit_turn_v1_roleplay_sessions__session_id__turns_post"
+      },
+      "BookmarkIn": {
+        "properties": {
+          "scenario_id": {
+            "type": "string",
+            "title": "Scenario Id"
+          },
+          "phrase_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Phrase Id"
+          },
+          "focus_word": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Focus Word"
+          }
+        },
+        "type": "object",
+        "required": [
+          "scenario_id"
+        ],
+        "title": "BookmarkIn"
+      },
+      "BookmarkOut": {
+        "properties": {
+          "card_id": {
+            "type": "string",
+            "title": "Card Id"
+          },
+          "kind": {
+            "type": "string",
+            "title": "Kind"
+          },
+          "next_due_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Next Due At"
+          },
+          "interval_days": {
+            "type": "number",
+            "title": "Interval Days"
+          },
+          "saved": {
+            "type": "boolean",
+            "title": "Saved",
+            "default": true
+          },
+          "focus_words": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Focus Words",
+            "default": []
+          }
+        },
+        "type": "object",
+        "required": [
+          "card_id",
+          "kind",
+          "next_due_at",
+          "interval_days"
+        ],
+        "title": "BookmarkOut"
       },
       "CEFR": {
         "type": "string",
@@ -1461,6 +1846,16 @@
             "type": "boolean",
             "title": "Roleplay Available",
             "default": true
+          },
+          "roleplay_script": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RoleplayScriptOverview"
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
         },
         "type": "object",
@@ -1517,6 +1912,52 @@
           "scenarios"
         ],
         "title": "LevelOut"
+      },
+      "ModuleOut": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "title_es": {
+            "type": "string",
+            "title": "Title Es"
+          },
+          "title_en": {
+            "type": "string",
+            "title": "Title En"
+          },
+          "icon": {
+            "type": "string",
+            "title": "Icon"
+          },
+          "description_es": {
+            "type": "string",
+            "title": "Description Es"
+          },
+          "levels": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Levels"
+          },
+          "scenarios": {
+            "type": "integer",
+            "title": "Scenarios"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "title_es",
+          "title_en",
+          "icon",
+          "description_es",
+          "levels",
+          "scenarios"
+        ],
+        "title": "ModuleOut"
       },
       "PendingTurn": {
         "properties": {
@@ -1626,6 +2067,34 @@
         ],
         "title": "Progress"
       },
+      "RelatedPhrase": {
+        "properties": {
+          "scenario_id": {
+            "type": "string",
+            "title": "Scenario Id"
+          },
+          "cefr": {
+            "type": "string",
+            "title": "Cefr"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "translation_es": {
+            "type": "string",
+            "title": "Translation Es"
+          }
+        },
+        "type": "object",
+        "required": [
+          "scenario_id",
+          "cefr",
+          "text",
+          "translation_es"
+        ],
+        "title": "RelatedPhrase"
+      },
       "ReviewItem": {
         "properties": {
           "card_id": {
@@ -1684,6 +2153,45 @@
           "turns"
         ],
         "title": "Roleplay"
+      },
+      "RoleplayScriptOverview": {
+        "properties": {
+          "ai_role": {
+            "type": "string",
+            "title": "Ai Role"
+          },
+          "user_role": {
+            "type": "string",
+            "title": "User Role"
+          },
+          "setting": {
+            "type": "string",
+            "title": "Setting"
+          },
+          "target_phrases": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Target Phrases"
+          },
+          "user_missions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "User Missions"
+          }
+        },
+        "type": "object",
+        "required": [
+          "ai_role",
+          "user_role",
+          "setting",
+          "target_phrases",
+          "user_missions"
+        ],
+        "title": "RoleplayScriptOverview"
       },
       "RoleplayState": {
         "properties": {
@@ -1745,6 +2253,44 @@
               }
             ],
             "title": "Accepted"
+          },
+          "response_style": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Response Style"
+          },
+          "natural_alternative": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Natural Alternative"
+          },
+          "target_phrases": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Target Phrases",
+            "default": []
+          },
+          "used_lesson_phrases": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Used Lesson Phrases",
+            "default": []
           },
           "feedback": {
             "anyOf": [
@@ -1979,6 +2525,192 @@
           "advice"
         ],
         "title": "Tip"
+      },
+      "TranslateIn": {
+        "properties": {
+          "selected_text": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Selected Text"
+          },
+          "text": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Text"
+          },
+          "phrase_text": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Phrase Text"
+          },
+          "context_phrase": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Context Phrase"
+          },
+          "scenario_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Scenario Id"
+          },
+          "phrase_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Phrase Id"
+          }
+        },
+        "type": "object",
+        "title": "TranslateIn"
+      },
+      "TranslationCard": {
+        "properties": {
+          "selected_text": {
+            "type": "string",
+            "title": "Selected Text"
+          },
+          "query": {
+            "type": "string",
+            "title": "Query"
+          },
+          "normalized": {
+            "type": "string",
+            "title": "Normalized"
+          },
+          "word_translation_es": {
+            "type": "string",
+            "title": "Word Translation Es"
+          },
+          "translation_es": {
+            "type": "string",
+            "title": "Translation Es"
+          },
+          "ipa": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ipa"
+          },
+          "phrase_text": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Phrase Text"
+          },
+          "phrase_translation_es": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Phrase Translation Es"
+          },
+          "usage_tip_es": {
+            "type": "string",
+            "title": "Usage Tip Es"
+          },
+          "chunk_tip_es": {
+            "type": "string",
+            "title": "Chunk Tip Es"
+          },
+          "chunk_breakdown": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Chunk Breakdown",
+            "default": []
+          },
+          "scenario_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Scenario Id"
+          },
+          "phrase_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Phrase Id"
+          },
+          "related_examples": {
+            "items": {
+              "$ref": "#/components/schemas/RelatedPhrase"
+            },
+            "type": "array",
+            "title": "Related Examples",
+            "default": []
+          }
+        },
+        "type": "object",
+        "required": [
+          "selected_text",
+          "query",
+          "normalized",
+          "word_translation_es",
+          "translation_es",
+          "usage_tip_es",
+          "chunk_tip_es"
+        ],
+        "title": "TranslationCard"
       },
       "TtsRequest": {
         "properties": {

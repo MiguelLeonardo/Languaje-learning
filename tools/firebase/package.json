@@ -1,0 +1,14 @@
+{
+  "name": "languaje-learning-firebase-tools",
+  "private": true,
+  "description": "Pinned Firebase CLI & official Firebase MCP server for project, Auth, Firestore, and Hosting management.",
+  "scripts": {
+    "firebase": "firebase",
+    "firebase:mcp": "firebase mcp",
+    "firebase:login": "firebase login --no-localhost",
+    "firebase:deploy": "firebase deploy --only hosting,firestore:rules,firestore:indexes"
+  },
+  "devDependencies": {
+    "firebase-tools": "15.35.0"
+  }
+}

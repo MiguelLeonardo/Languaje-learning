@@ -19,10 +19,19 @@ def _time_travel(minutes: int) -> None:
 def test_health_ready_and_auth_required(client, auth):
     ui = client.get("/")
     assert ui.status_code == 200 and "SpeakFlow" in ui.text
+    fb_js = client.get("/firebase-config.js")
+    assert fb_js.status_code == 200 and "SpeakFlowFirebase" in fb_js.text
     assert client.get("/health").json() == {"status": "ok"}
-    assert client.get("/ready").json()["scenarios"] == 6
+    assert client.get("/ready").json()["scenarios"] == 18
     st = client.get("/v1/providers/status", headers={"X-OpenAI-Key": "sk-test"}).json()
     assert st["has_openai_key"] is True and st["speech_provider"] == "openai_whisper"
+    st_gc = client.get(
+        "/v1/providers/status",
+        headers={"X-Google-Cloud-Key": "gc-test", "X-Gemini-Key": "gm-test"},
+    ).json()
+    assert st_gc["speech_provider"] == "google_cloud" and st_gc["llm_provider"] == "gemini"
+    fm = client.get("/v1/freemium/status", headers={**auth, "X-Freemium-Tier": "free"}).json()
+    assert fm["tier"] == "free" and fm["can_start_roleplay"] is True
     assert client.post("/v1/tts", headers=auth, json={"text": "Hello"}).status_code == 400
     assert client.get("/v1/scenarios").status_code == 401
     assert client.get("/v1/scenarios", headers={"Authorization": "Bearer bad"}).status_code == 401
@@ -31,17 +40,20 @@ def test_health_ready_and_auth_required(client, auth):
     assert r.headers["X-Content-Type-Options"] == "nosniff"
 
 
-
 def test_catalog(client, auth):
     levels = client.get("/v1/levels", headers=auth).json()
     assert [lv["cefr"] for lv in levels] == ["A1", "A2", "B1", "B2", "C1", "C2"]
     assert levels[0]["band"] == "basic"
-    assert len(client.get("/v1/scenarios?band=intermediate", headers=auth).json()) == 2
-    assert client.get("/v1/scenarios?cefr=C2", headers=auth).json()[0]["id"] == "c2-dinner-debate"
+    modules = client.get("/v1/modules", headers=auth).json()
+    assert len(modules) == 6 and all(m["scenarios"] == 3 for m in modules)
+    assert len(client.get("/v1/scenarios?band=intermediate", headers=auth).json()) == 7
+    assert len(client.get("/v1/scenarios?topic=health-and-emergencies", headers=auth).json()) == 3
+    c2_ids = {s["id"] for s in client.get("/v1/scenarios?cefr=C2", headers=auth).json()}
+    assert "c2-dinner-debate" in c2_ids and "c2-executive-pitch" in c2_ids
     assert client.get("/v1/scenarios/a1-ordering-coffee", headers=auth).json()["roleplay"]["ai_role"] == "barista"
     assert client.get("/v1/scenarios/nope", headers=auth).status_code == 404
     lesson = client.get("/v1/lessons/b1-hotel-check-in", headers=auth).json()
-    assert len(lesson["stages"]) == 4
+    assert len(lesson["stages"]) == 4 and lesson["roleplay_script"]["ai_role"] == "hotel receptionist"
     assert client.get("/v1/lessons/nope", headers=auth).status_code == 404
     shadow = client.get("/v1/shadowing/a2-asking-directions", headers=auth).json()
     assert all(e["type"] == "shadowing" and e["prompt"]["audio_text"] for e in shadow)
@@ -51,6 +63,63 @@ def test_catalog(client, auth):
     ex_id = common[0]["id"]
     assert client.get(f"/v1/exercises/{ex_id}", headers=auth).status_code == 200
     assert client.get("/v1/exercises/bad.id.x", headers=auth).status_code == 404
+
+
+def test_translate_and_bookmark_phrase(client, auth):
+    tr = client.post(
+        "/v1/translate",
+        headers=auth,
+        json={
+            "selected_text": "have",
+            "phrase_text": "Can I have a coffee, please?",
+            "scenario_id": "a1-ordering-coffee",
+            "phrase_id": "can-i-have",
+        },
+    ).json()
+    assert tr["ipa"] == "hæv" and "café" in tr["phrase_translation_es"]
+
+    tr_full = client.post(
+        "/v1/translate",
+        headers=auth,
+        json={"selected_text": "Can I have a coffee, please?", "scenario_id": "a1-ordering-coffee"},
+    ).json()
+    assert "café" in tr_full["word_translation_es"]
+
+    tr_fallback = client.post(
+        "/v1/translate",
+        headers=auth,
+        json={"selected_text": "please", "phrase_text": "Can I have a coffee, please?"},
+    ).json()
+    assert "por favor" in tr_fallback["word_translation_es"]
+
+    tr_unknown = client.post(
+        "/v1/translate",
+        headers=auth,
+        json={"selected_text": "supercalifragilistic", "phrase_text": "short text"},
+    ).json()
+    assert "contexto" in tr_unknown["word_translation_es"]
+
+    bm = client.post(
+        "/v1/review/bookmark",
+        headers=auth,
+        json={"scenario_id": "a1-ordering-coffee", "phrase_id": "can-i-have", "focus_word": "coffee"},
+    ).json()
+    assert bm["saved"] is True and "coffee" in bm["focus_words"]
+    bm2 = client.post(
+        "/v1/review/bookmark",
+        headers=auth,
+        json={"scenario_id": "a1-ordering-coffee", "phrase_id": "can-i-have", "focus_word": "please"},
+    ).json()
+    assert set(bm2["focus_words"]) == {"coffee", "please"}
+    assert client.post("/v1/review/bookmark", headers=auth, json={"scenario_id": "nope"}).status_code == 404
+    assert (
+        client.post(
+            "/v1/review/bookmark",
+            headers=auth,
+            json={"scenario_id": "a1-ordering-coffee", "phrase_id": "missing"},
+        ).status_code
+        == 404
+    )
 
 
 def test_attempt_feedback_and_srs_loop(client, auth):

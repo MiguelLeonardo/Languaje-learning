@@ -47,6 +47,20 @@ def test_factories_require_keys(monkeypatch):
         f.cache_clear()
     assert get_speech_provider().name == "openai_whisper"
     assert get_llm_provider().name == "anthropic"
+    monkeypatch.setenv("SPEECH_PROVIDER", "google_cloud")
+    monkeypatch.setenv("LLM_PROVIDER", "gemini")
+    for f in (get_settings, get_llm_provider, get_speech_provider):
+        f.cache_clear()
+    with pytest.raises(RuntimeError):
+        get_speech_provider()
+    with pytest.raises(RuntimeError):
+        get_llm_provider()
+    monkeypatch.setenv("GOOGLE_CLOUD_API_KEY", "gc")
+    monkeypatch.setenv("GEMINI_API_KEY", "gm")
+    for f in (get_settings, get_llm_provider, get_speech_provider):
+        f.cache_clear()
+    assert get_speech_provider().name == "google_cloud"
+    assert get_llm_provider().name == "gemini"
     for f in (get_settings, get_llm_provider, get_speech_provider):
         f.cache_clear()
 

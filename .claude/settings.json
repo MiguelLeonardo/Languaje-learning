@@ -5,7 +5,8 @@
       "Bash(pytest:*)",
       "Bash(git status)",
       "Bash(git diff:*)",
-      "Bash(npx rea:*)"
+      "Bash(npx rea:*)",
+      "Bash(npx firebase:*)"
     ],
     "deny": [
       "Read(./.env)",
@@ -14,5 +15,5 @@
     ]
   },
   "enableAllProjectMcpServers": false,
-  "enabledMcpjsonServers": ["rea"]
+  "enabledMcpjsonServers": ["rea", "firebase"]
 }

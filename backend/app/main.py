@@ -34,7 +34,16 @@ def create_app() -> FastAPI:
         CORSMiddleware,
         allow_origins=settings.cors_origins,
         allow_methods=["GET", "POST"],
-        allow_headers=["Authorization", "Content-Type", "X-OpenAI-Key", "X-ElevenLabs-Key", "X-Anthropic-Key"],
+        allow_headers=[
+            "Authorization",
+            "Content-Type",
+            "X-Google-Cloud-Key",
+            "X-Gemini-Key",
+            "X-Freemium-Tier",
+            "X-OpenAI-Key",
+            "X-ElevenLabs-Key",
+            "X-Anthropic-Key",
+        ],
     )
 
     @app.middleware("http")

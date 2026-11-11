@@ -1,0 +1,44 @@
+id: b1-dietary-restrictions
+title: Dietary restrictions and allergies
+title_es: Alergias y cambios en el menú
+cefr: B1
+topic: food-and-drink
+description: Explica una alergia alimentaria, pregunta por ingredientes y pide cambiar la guarnición.
+phrases:
+  - id: allergic-to-nuts
+    text: I'm severely allergic to peanuts and tree nuts.
+    translation: Soy severamente alérgico a los cacahuates y frutos secos.
+    visual_hint: "🥜⚠️"
+    cloze: [2, 4]
+    glossary:
+      - {word: allergic to, meaning: "alérgico/a a", ipa: "əˈlɜːrdʒɪk tuː"}
+      - {word: peanuts, meaning: "cacahuates / maní", ipa: "ˈpiːnʌts"}
+  - id: contain-dairy
+    text: Does this sauce contain any dairy products?
+    translation: ¿Esta salsa contiene algún producto lácteo?
+    visual_hint: "🥛❓"
+    cloze: [3, 5]
+    glossary:
+      - {word: contain, meaning: "contener", ipa: "kənˈteɪn"}
+      - {word: dairy, meaning: "lácteos", ipa: "ˈderi"}
+  - id: swap-side-dish
+    text: Would it be possible to swap the fries for steamed vegetables?
+    translation: ¿Sería posible cambiar las papas fritas por verduras al vapor?
+    visual_hint: "🥦🔄"
+    cloze: [5, 9]
+    glossary:
+      - {word: swap, meaning: "intercambiar / sustituir", ipa: "swɑːp"}
+roleplay:
+  ai_role: head server
+  user_role: guest with allergies
+  setting: Ordering lunch at a busy restaurant.
+  turns:
+    - {speaker: ai, text: "Hi! Before I take your order, do you have any food allergies we should know about?"}
+    - speaker: user
+      goal: Explica que tienes alergia a los frutos secos.
+      suggested_lines: ["I'm severely allergic to peanuts and tree nuts.", "Yes, I'm allergic to nuts."]
+    - {speaker: ai, text: "I'll make a note for the kitchen. Which dish were you looking at?"}
+    - speaker: user
+      goal: Pregunta si la salsa contiene lácteos y pide cambiar las papas por verduras.
+      suggested_lines: ["Does this sauce contain any dairy products?", "Would it be possible to swap the fries for steamed vegetables?"]
+    - {speaker: ai, text: "It's dairy-free, and we can gladly substitute steamed vegetables for you."}

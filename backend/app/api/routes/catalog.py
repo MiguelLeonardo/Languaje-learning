@@ -3,7 +3,7 @@ from pydantic import BaseModel
 
 from app.api.deps import RepoDep
 from app.content.repository import ContentRepository
-from app.content.schema import CEFR, Scenario
+from app.content.schema import CEFR, TOPIC_MODULES, Scenario
 from app.core.security import get_current_user
 from app.services.exercises import (
     Exercise,
@@ -20,6 +20,16 @@ router = APIRouter(prefix="/v1", tags=["catalog"], dependencies=[Depends(get_cur
 class LevelOut(BaseModel):
     cefr: CEFR
     band: str
+    scenarios: int
+
+
+class ModuleOut(BaseModel):
+    id: str
+    title_es: str
+    title_en: str
+    icon: str
+    description_es: str
+    levels: list[str]
     scenarios: int
 
 
@@ -44,9 +54,30 @@ def levels(repo: ContentRepository = RepoDep):
     return [LevelOut(cefr=c, band=c.band, scenarios=len(repo.list(cefr=c))) for c in CEFR]
 
 
+@router.get("/modules", response_model=list[ModuleOut])
+def modules(repo: ContentRepository = RepoDep):
+    out: list[ModuleOut] = []
+    for mod_id, meta in TOPIC_MODULES.items():
+        scens = repo.list(topic=mod_id)
+        out.append(
+            ModuleOut(
+                id=mod_id,
+                title_es=meta["title_es"],
+                title_en=meta["title_en"],
+                icon=meta["icon"],
+                description_es=meta["description_es"],
+                levels=sorted({s.cefr.value for s in scens}),
+                scenarios=len(scens),
+            )
+        )
+    return out
+
+
 @router.get("/scenarios", response_model=list[ScenarioSummary])
-def scenarios(cefr: CEFR | None = None, band: str | None = None, repo: ContentRepository = RepoDep):
-    return [_summary(s) for s in repo.list(cefr=cefr, band=band)]
+def scenarios(
+    cefr: CEFR | None = None, band: str | None = None, topic: str | None = None, repo: ContentRepository = RepoDep
+):
+    return [_summary(s) for s in repo.list(cefr=cefr, band=band, topic=topic)]
 
 
 @router.get("/scenarios/{scenario_id}", response_model=Scenario)

@@ -1,0 +1,43 @@
+id: b2-catching-up-plans
+title: Catching up and making plans
+title_es: Ponerse al día con un amigo
+cefr: B2
+topic: social-and-smalltalk
+description: Ponte al día después de mucho tiempo y coordina una salida para el fin de semana.
+phrases:
+  - id: long-time-no-see
+    text: It's been ages since we last caught up! How have you been?
+    translation: ¡Ha pasado muchísimo tiempo desde la última vez que nos pusimos al día! ¿Cómo has estado?
+    visual_hint: "☕🤗"
+    cloze: [2, 6]
+    glossary:
+      - {word: ages, meaning: "it's been ages = ha pasado muchísimo tiempo", ipa: "ˈeɪdʒɪz"}
+      - {word: caught up, meaning: "catch up = ponerse al día", ipa: "kɔːt ʌp"}
+  - id: grab-dinner
+    text: Are you free this Saturday to grab dinner downtown?
+    translation: ¿Estás libre este sábado para ir a cenar al centro?
+    visual_hint: "📅🍝"
+    cloze: [2, 6]
+    glossary:
+      - {word: grab dinner, meaning: "ir a cenar (natural e informal)"}
+  - id: rain-check
+    text: Let's lock in seven o'clock, and I'll book a table.
+    translation: Confirmemos a las siete y yo reservo una mesa.
+    visual_hint: "🕖📲"
+    cloze: [1, 7]
+    glossary:
+      - {word: lock in, meaning: "confirmar / dejar fijo un horario"}
+roleplay:
+  ai_role: close friend
+  user_role: friend
+  setting: Running into an old friend at a bookstore.
+  turns:
+    - {speaker: ai, text: "Hey! What a surprise running into you here!"}
+    - speaker: user
+      goal: Saluda diciendo que hace mucho no se ponían al día.
+      suggested_lines: ["It's been ages since we last caught up! How have you been?"]
+    - {speaker: ai, text: "I've been great, just busy with work. We should definitely hang out soon."}
+    - speaker: user
+      goal: Invítalo a cenar este sábado y confirma la hora.
+      suggested_lines: ["Are you free this Saturday to grab dinner downtown?", "Let's lock in seven o'clock, and I'll book a table."]
+    - {speaker: ai, text: "Seven on Saturday sounds perfect. See you then!"}

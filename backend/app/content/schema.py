@@ -84,3 +84,44 @@ class Scenario(BaseModel):
         if len(ids) != len(set(ids)):
             raise ValueError(f"scenario {self.id}: duplicate phrase ids")
         return self
+
+
+TOPIC_MODULES: dict[str, dict[str, str]] = {
+    "food-and-drink": {
+        "title_es": "Cafeterías, Restaurantes y Pedidos",
+        "title_en": "Food, Drink & Dining",
+        "icon": "🍽️",
+        "description_es": "Pide bebidas, ordena en restaurantes, gestiona alergias y solicita la cuenta.",
+    },
+    "travel-and-transport": {
+        "title_es": "Viajes, Transporte y Direcciones",
+        "title_en": "Travel, Transit & Directions",
+        "icon": "✈️",
+        "description_es": "Compra boletos, pide indicaciones en la calle y resuelve vuelos retrasados.",
+    },
+    "hotel-and-shopping": {
+        "title_es": "Alojamiento, Compras y Servicios",
+        "title_en": "Hotels, Shopping & Services",
+        "icon": "🏨",
+        "description_es": "Busca tallas en tiendas, haz check-in en hoteles y solicita reembolsos.",
+    },
+    "social-and-smalltalk": {
+        "title_es": "Vida Social, Amigos y Conversación",
+        "title_en": "Social Life, Friends & Debate",
+        "icon": "🤝",
+        "description_es": "Preséntate, habla de hobbies, ponte al día con amigos y debate con matices.",
+    },
+    "work-and-career": {
+        "title_es": "Trabajo, Entrevistas y Negociación",
+        "title_en": "Work, Interviews & Executive Pitch",
+        "icon": "💼",
+        "description_es": "Destaca en entrevistas, negocia plazos de entrega y defiende presupuestos.",
+    },
+    "health-and-emergencies": {
+        "title_es": "Salud, Farmacia e Imprevistos",
+        "title_en": "Health, Pharmacy & Insurance",
+        "icon": "🏥",
+        "description_es": "Explica síntomas en farmacias, acude a urgencias y gestiona seguros médicos.",
+    },
+}
+

@@ -124,12 +124,21 @@ class LessonStage(BaseModel):
     exercises: list[Exercise]
 
 
+class RoleplayScriptOverview(BaseModel):
+    ai_role: str
+    user_role: str
+    setting: str
+    target_phrases: list[str]
+    user_missions: list[str]
+
+
 class LessonPlan(BaseModel):
     scenario_id: str
     title: str
     cefr: str
     stages: list[LessonStage]
     roleplay_available: bool = True
+    roleplay_script: RoleplayScriptOverview | None = None
 
 
 def build_lesson(scenario: Scenario) -> LessonPlan:
@@ -138,4 +147,15 @@ def build_lesson(scenario: Scenario) -> LessonPlan:
                     exercises=[build_exercise(scenario, p, k) for p in scenario.phrases])
         for k in LESSON_ORDER
     ]
-    return LessonPlan(scenario_id=scenario.id, title=scenario.title, cefr=scenario.cefr.value, stages=stages)
+    script = RoleplayScriptOverview(
+        ai_role=scenario.roleplay.ai_role,
+        user_role=scenario.roleplay.user_role,
+        setting=scenario.roleplay.setting,
+        target_phrases=[p.text for p in scenario.phrases],
+        user_missions=[t.goal for t in scenario.roleplay.turns if t.speaker == "user" and t.goal],
+    )
+    return LessonPlan(
+        scenario_id=scenario.id, title=scenario.title, cefr=scenario.cefr.value,
+        stages=stages, roleplay_script=script,
+    )
+

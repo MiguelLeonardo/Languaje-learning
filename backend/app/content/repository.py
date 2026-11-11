@@ -24,12 +24,14 @@ class ContentRepository:
             scenarios.append(Scenario.model_validate(data))
         return cls(scenarios)
 
-    def list(self, cefr: CEFR | None = None, band: str | None = None) -> list[Scenario]:
+    def list(self, cefr: CEFR | None = None, band: str | None = None, topic: str | None = None) -> list[Scenario]:
         items = list(self._scenarios.values())
         if cefr:
             items = [s for s in items if s.cefr == cefr]
         if band:
             items = [s for s in items if s.cefr.band == band]
+        if topic:
+            items = [s for s in items if s.topic == topic]
         return sorted(items, key=lambda s: (s.cefr.value, s.id))
 
     def get(self, scenario_id: str) -> Scenario | None:

@@ -1,0 +1,44 @@
+id: b1-delayed-flight
+title: Dealing with a delayed flight
+title_es: Vuelo retrasado en el aeropuerto
+cefr: B1
+topic: travel-and-transport
+description: Gestiona una conexión perdida en el aeropuerto y pide reprogramar tu vuelo.
+phrases:
+  - id: flight-delayed
+    text: My flight has been delayed and I might miss my connection.
+    translation: Mi vuelo se ha retrasado y puede que pierda mi conexión.
+    visual_hint: "✈️⏰"
+    cloze: [4, 9]
+    glossary:
+      - {word: delayed, meaning: "retrasado", ipa: "dɪˈleɪd"}
+      - {word: miss my connection, meaning: "perder mi vuelo de conexión"}
+  - id: rebook-next-flight
+    text: Could you rebook me on the next available flight to London?
+    translation: ¿Podría reprogramarme en el próximo vuelo disponible a Londres?
+    visual_hint: "🛫🔁"
+    cloze: [2, 7]
+    glossary:
+      - {word: rebook, meaning: "cambiar la reserva / reprogramar", ipa: "ˌriːˈbʊk"}
+      - {word: available, meaning: "disponible", ipa: "əˈveɪləbəl"}
+  - id: meal-voucher
+    text: Are we entitled to a meal voucher while we wait?
+    translation: ¿Tenemos derecho a un vale de comida mientras esperamos?
+    visual_hint: "🎟️🥪"
+    cloze: [2, 5]
+    glossary:
+      - {word: entitled to, meaning: "tener derecho a", ipa: "ɪnˈtaɪtəld tuː"}
+roleplay:
+  ai_role: airline gate agent
+  user_role: passenger
+  setting: Customer service desk at an international airport.
+  turns:
+    - {speaker: ai, text: "Hello, I can see your inbound flight is delayed. How can I assist you?"}
+    - speaker: user
+      goal: Explica que puedes perder tu conexión.
+      suggested_lines: ["My flight has been delayed and I might miss my connection."]
+    - {speaker: ai, text: "Let me look at alternative routes for you."}
+    - speaker: user
+      goal: Pide que te reprogramen en el siguiente vuelo disponible y pregunta por el vale de comida.
+      suggested_lines: ["Could you rebook me on the next available flight to London?", "Are we entitled to a meal voucher while we wait?"]
+    - {speaker: ai, text: "Done! You're confirmed on the six p.m. flight, and here is your meal voucher."}

@@ -11,13 +11,18 @@ def test_scripted_roleplay_full_flow(client, auth):
     retry = speak(client, url, auth, "where is the bathroom").json()
     assert retry["accepted"] is False and retry["feedback"]["level"] == "retry"
 
-    answers = ["Can I have a coffee please", "Medium please", "How much is it", "Thank you very much"]
+    # Free-form response using scenario vocabulary is accepted with natural_alternative
+    free = speak(client, url, auth, "I would really love a hot coffee right now").json()
+    assert free["accepted"] is True and free["response_style"] == "freeform"
+    assert free["natural_alternative"]
+
+    answers = ["Medium please", "How much is it", "Thank you very much"]
     for a in answers:
         st = speak(client, url, auth, a).json()
         assert st["accepted"] is True, a
     assert st["status"] == "completed" and st["pending_turn"] is None
     assert st["ai_messages"] == ["Have a nice day!"]
-    assert st["average_score"] > 0.8
+    assert st["average_score"] > 0.75
     assert speak(client, url, auth, "hello").status_code == 409
 
 

@@ -1,0 +1,45 @@
+id: a2-pharmacy-symptoms
+title: Explaining symptoms at a pharmacy
+title_es: Explicar síntomas en la farmacia
+cefr: A2
+topic: health-and-emergencies
+description: Explica un dolor de cabeza o resfriado en la farmacia y pregunta cómo tomar el medicamento.
+phrases:
+  - id: sore-throat
+    text: I have a sore throat and a slight fever.
+    translation: Tengo dolor de garganta y un poco de fiebre.
+    visual_hint: "🤒🌡️"
+    cloze: [3, 7]
+    glossary:
+      - {word: sore throat, meaning: "dolor de garganta", ipa: "sɔːr θroʊt"}
+      - {word: slight fever, meaning: "fiebre leve"}
+  - id: recommend-something
+    text: Could you recommend something for a bad cough?
+    translation: ¿Podría recomendarme algo para una tos fuerte?
+    visual_hint: "💊🗣️"
+    cloze: [2, 7]
+    glossary:
+      - {word: recommend, meaning: "recomendar", ipa: "ˌrekəˈmend"}
+      - {word: cough, meaning: "tos", ipa: "kɔːf"}
+  - id: how-often-take
+    text: How often should I take these tablets?
+    translation: ¿Cada cuánto debo tomar estas pastillas?
+    visual_hint: "⏱️💊"
+    cloze: [1, 6]
+    glossary:
+      - {word: how often, meaning: "con qué frecuencia / cada cuánto"}
+      - {word: tablets, meaning: "pastillas / comprimidos", ipa: "ˈtæbləts"}
+roleplay:
+  ai_role: pharmacist
+  user_role: customer
+  setting: Local pharmacy counter.
+  turns:
+    - {speaker: ai, text: "Hello! How can I help you feel better today?"}
+    - speaker: user
+      goal: Describe tus síntomas (dolor de garganta y fiebre leve).
+      suggested_lines: ["I have a sore throat and a slight fever.", "Could you recommend something for a bad cough?"]
+    - {speaker: ai, text: "I recommend these lozenges and this cold relief medicine."}
+    - speaker: user
+      goal: Pregunta cada cuánto debes tomar las pastillas.
+      suggested_lines: ["How often should I take these tablets?"]
+    - {speaker: ai, text: "Take one tablet every eight hours with food."}

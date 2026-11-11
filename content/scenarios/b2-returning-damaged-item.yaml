@@ -1,0 +1,44 @@
+id: b2-returning-damaged-item
+title: Returning a faulty item
+title_es: Devolver un producto defectuoso
+cefr: B2
+topic: hotel-and-shopping
+description: Explica el fallo de un dispositivo electrónico y solicita un reembolso con el recibo.
+phrases:
+  - id: stopped-working
+    text: I bought these headphones yesterday, but the left side stopped working.
+    translation: Compré estos audífonos ayer, pero el lado izquierdo dejó de funcionar.
+    visual_hint: "🎧🔧"
+    cloze: [3, 9]
+    glossary:
+      - {word: headphones, meaning: "audífonos / auriculares", ipa: "ˈhedfoʊnz"}
+      - {word: stopped working, meaning: "dejó de funcionar"}
+  - id: full-refund
+    text: I have the receipt here, and I'd prefer a full refund.
+    translation: Tengo el recibo aquí y preferiría un reembolso completo.
+    visual_hint: "🧾💵"
+    cloze: [3, 9]
+    glossary:
+      - {word: receipt, meaning: "recibo / comprobante de compra", ipa: "rɪˈsiːt"}
+      - {word: full refund, meaning: "reembolso completo", ipa: "fʊl ˈriːfʌnd"}
+  - id: original-card
+    text: Could you credit the amount back to my original card?
+    translation: ¿Podría abonar el importe de vuelta a mi tarjeta original?
+    visual_hint: "💳↩️"
+    cloze: [2, 8]
+    glossary:
+      - {word: credit back, meaning: "reintegrar / abonar de vuelta"}
+roleplay:
+  ai_role: store supervisor
+  user_role: customer
+  setting: Electronics store returns counter.
+  turns:
+    - {speaker: ai, text: "Hello! How can I help you with your return today?"}
+    - speaker: user
+      goal: Explica que los audífonos comprados ayer dejaron de funcionar.
+      suggested_lines: ["I bought these headphones yesterday, but the left side stopped working."]
+    - {speaker: ai, text: "I'm sorry about that. Would you like an exchange or store credit?"}
+    - speaker: user
+      goal: Muestra el recibo y pide un reembolso completo a tu tarjeta original.
+      suggested_lines: ["I have the receipt here, and I'd prefer a full refund.", "Could you credit the amount back to my original card?"]
+    - {speaker: ai, text: "Certainly. I've processed the refund back to your card."}

@@ -14,8 +14,13 @@ def repo_dep() -> ContentRepository:
 
 def resolve_speech_provider(
     provider: SpeechProvider = Depends(get_speech_provider),
+    x_google_cloud_key: str | None = Header(default=None),
     x_openai_key: str | None = Header(default=None),
 ) -> SpeechProvider:
+    if x_google_cloud_key:
+        from app.speech.google_cloud import GoogleCloudSpeechProvider
+
+        return GoogleCloudSpeechProvider(x_google_cloud_key)
     if x_openai_key:
         from app.speech.openai_whisper import OpenAIWhisperProvider
 
@@ -26,8 +31,13 @@ def resolve_speech_provider(
 def resolve_llm_provider(
     llm: LLMProvider = Depends(get_llm_provider),
     settings: Settings = Depends(get_settings),
+    x_gemini_key: str | None = Header(default=None),
     x_anthropic_key: str | None = Header(default=None),
 ) -> LLMProvider:
+    if x_gemini_key:
+        from app.llm.gemini import GeminiLLMProvider
+
+        return GeminiLLMProvider(x_gemini_key, settings.gemini_model)
     if x_anthropic_key:
         from app.llm.anthropic_claude import AnthropicClaudeProvider
 

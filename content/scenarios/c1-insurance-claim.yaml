@@ -1,0 +1,44 @@
+id: c1-insurance-claim
+title: Filing a medical insurance claim
+title_es: Gestionar un reclamo con el seguro
+cefr: C1
+topic: health-and-emergencies
+description: Defiende la cobertura de tu póliza médica de viaje y solicita el reembolso de gastos clínicos.
+phrases:
+  - id: covered-under-policy
+    text: According to my policy terms, emergency outpatient care is fully covered.
+    translation: Según los términos de mi póliza, la atención ambulatoria de urgencia está totalmente cubierta.
+    visual_hint: "📄🏥"
+    cloze: [3, 7]
+    glossary:
+      - {word: policy terms, meaning: "condiciones de la póliza"}
+      - {word: outpatient care, meaning: "atención médica ambulatoria (sin hospitalización)"}
+  - id: itemized-invoice
+    text: I've already attached the itemized hospital invoice and the medical report.
+    translation: Ya he adjuntado la factura detallada del hospital y el informe médico.
+    visual_hint: "📎🧾"
+    cloze: [4, 9]
+    glossary:
+      - {word: itemized invoice, meaning: "factura desglosada / detallada", ipa: "ˈaɪtəmaɪzd ˈɪnvɔɪs"}
+  - id: expedite-reimbursement
+    text: Could you please expedite the reimbursement given the amount involved?
+    translation: ¿Podrían agilizar el reembolso dado el importe involucrado?
+    visual_hint: "⚡🏦"
+    cloze: [3, 5]
+    glossary:
+      - {word: expedite, meaning: "agilizar / acelerar un trámite", ipa: "ˈekspədaɪt"}
+      - {word: reimbursement, meaning: "reembolso de gastos", ipa: "ˌriːɪmˈbɜːrsmənt"}
+roleplay:
+  ai_role: insurance claims specialist
+  user_role: policyholder
+  setting: Phone call with international travel insurance support.
+  turns:
+    - {speaker: ai, text: "Thank you for calling global claims. How can I assist with your case number?"}
+    - speaker: user
+      goal: Aclara que la atención ambulatoria de urgencia está cubierta por tu póliza.
+      suggested_lines: ["According to my policy terms, emergency outpatient care is fully covered."]
+    - {speaker: ai, text: "I see. We still need the breakdown of charges from the clinic."}
+    - speaker: user
+      goal: Indica que ya adjuntaste la factura desglosada y pide agilizar el reembolso.
+      suggested_lines: ["I've already attached the itemized hospital invoice and the medical report.", "Could you please expedite the reimbursement given the amount involved?"]
+    - {speaker: ai, text: "I see the documents now. I've escalated your reimbursement for approval within forty-eight hours."}

@@ -6,6 +6,15 @@
       "env": {
         "REA_MCP_INPUT_SCHEMA_PROFILE": "compact"
       }
+    },
+    "firebase": {
+      "command": "node",
+      "args": [
+        "tools/firebase/node_modules/firebase-tools/lib/bin/firebase.js",
+        "mcp",
+        "--dir",
+        "."
+      ]
     }
   }
 }

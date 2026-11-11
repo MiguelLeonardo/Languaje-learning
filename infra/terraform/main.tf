@@ -1,11 +1,15 @@
-# GCP skeleton: Artifact Registry, Cloud SQL (Postgres), Secret Manager, Cloud Run (staging/production).
+# GCP & Firebase IaC:
+# 1. Enables Firebase project, Identity Platform (with Anonymous Auth), Cloud Firestore (Native),
+#    Firebase Hosting, and the 3rd service group: Google Cloud Speech/TTS/Translation + Gemini AI Free Tier.
+# 2. Provisions Artifact Registry, Secret Manager, Cloud SQL (optional) and Cloud Run v2.
 # Usage: terraform init && terraform apply -var project=<id> -var env=staging
+
 terraform {
   required_version = ">= 1.6"
   required_providers {
-    google = { source = "hashicorp/google", version = "~> 6.0" }
+    google      = { source = "hashicorp/google", version = "~> 6.0" }
+    google-beta = { source = "hashicorp/google-beta", version = "~> 6.0" }
   }
-  # backend "gcs" { bucket = "<tf-state-bucket>" prefix = "languaje" }
 }
 
 variable "project" { type = string }
@@ -14,7 +18,8 @@ variable "region" {
   default = "us-central1"
 }
 variable "env" {
-  type = string
+  type    = string
+  default = "production"
   validation {
     condition     = contains(["staging", "production"], var.env)
     error_message = "env must be staging or production"
@@ -30,10 +35,89 @@ provider "google" {
   region  = var.region
 }
 
+provider "google-beta" {
+  project = var.project
+  region  = var.region
+}
+
+locals {
+  required_apis = [
+    "firebase.googleapis.com",
+    "firebasehosting.googleapis.com",
+    "identitytoolkit.googleapis.com",      # Service 1: Firebase Authentication (Anonymous Auth)
+    "firestore.googleapis.com",            # Service 2: Cloud Firestore Database
+    "generativelanguage.googleapis.com",   # Service 3a: Gemini API Free Tier (Roleplay + Translator)
+    "aiplatform.googleapis.com",           # Service 3b: Vertex AI in Firebase
+    "speech.googleapis.com",               # Service 3c: Google Cloud Speech-to-Text (60 min/mo free)
+    "texttospeech.googleapis.com",         # Service 3d: Google Cloud Text-to-Speech (4M chars/mo free)
+    "translate.googleapis.com",            # Service 3e: Google Cloud Translation (500k chars/mo free)
+    "run.googleapis.com",
+    "artifactregistry.googleapis.com",
+    "secretmanager.googleapis.com",
+  ]
+}
+
+resource "google_project_service" "apis" {
+  for_each           = toset(local.required_apis)
+  project            = var.project
+  service            = each.value
+  disable_on_destroy = false
+}
+
+# --- Firebase Project & Web App ---
+resource "google_firebase_project" "default" {
+  provider   = google-beta
+  project    = var.project
+  depends_on = [google_project_service.apis]
+}
+
+resource "google_firebase_web_app" "web" {
+  provider     = google-beta
+  project      = var.project
+  display_name = "SpeakFlow Web & Mobile (${var.env})"
+  depends_on   = [google_firebase_project.default]
+}
+
+data "google_firebase_web_app_config" "web" {
+  provider   = google-beta
+  web_app_id = google_firebase_web_app.web.app_id
+}
+
+# --- Service 1: Firebase Authentication with Anonymous Auth Enabled ---
+resource "google_identity_platform_config" "auth" {
+  provider                   = google-beta
+  project                    = var.project
+  autodelete_anonymous_users = true
+  sign_in {
+    allow_duplicate_emails = false
+    anonymous {
+      enabled = true
+    }
+    email {
+      enabled           = true
+      password_required = false
+    }
+  }
+  depends_on = [google_project_service.apis]
+}
+
+# --- Service 2: Cloud Firestore Database (Native Mode) ---
+resource "google_firestore_database" "database" {
+  project                     = var.project
+  name                        = "(default)"
+  location_id                 = var.region
+  type                        = "FIRESTORE_NATIVE"
+  concurrency_mode            = "OPTIMISTIC"
+  app_engine_integration_mode = "DISABLED"
+  depends_on                  = [google_project_service.apis]
+}
+
+# --- Service 3: Cloud Run Backend + Secret Manager ---
 resource "google_artifact_registry_repository" "repo" {
   repository_id = "languaje"
   format        = "DOCKER"
   location      = var.region
+  depends_on    = [google_project_service.apis]
 }
 
 resource "google_service_account" "api" {
@@ -41,25 +125,8 @@ resource "google_service_account" "api" {
   display_name = "Languaje API (${var.env})"
 }
 
-resource "google_sql_database_instance" "pg" {
-  name             = "languaje-${var.env}"
-  database_version = "POSTGRES_16"
-  settings {
-    tier              = var.env == "production" ? "db-custom-2-7680" : "db-f1-micro"
-    availability_type = var.env == "production" ? "REGIONAL" : "ZONAL"
-    backup_configuration { enabled = true }
-    ip_configuration { ipv4_enabled = false } # private IP / Cloud SQL connector only
-  }
-  deletion_protection = var.env == "production"
-}
-
-resource "google_sql_database" "db" {
-  name     = "languaje"
-  instance = google_sql_database_instance.pg.name
-}
-
 locals {
-  secrets = ["JWT_SECRET", "DATABASE_URL", "OPENAI_API_KEY", "ANTHROPIC_API_KEY"]
+  secrets = ["JWT_SECRET", "GEMINI_API_KEY", "GOOGLE_CLOUD_API_KEY"]
 }
 
 resource "google_secret_manager_secret" "s" {
@@ -68,6 +135,7 @@ resource "google_secret_manager_secret" "s" {
   replication {
     auto {}
   }
+  depends_on = [google_project_service.apis]
 }
 
 resource "google_secret_manager_secret_iam_member" "api_access" {
@@ -77,12 +145,6 @@ resource "google_secret_manager_secret_iam_member" "api_access" {
   member    = "serviceAccount:${google_service_account.api.email}"
 }
 
-resource "google_project_iam_member" "sql_client" {
-  project = var.project
-  role    = "roles/cloudsql.client"
-  member  = "serviceAccount:${google_service_account.api.email}"
-}
-
 resource "google_cloud_run_v2_service" "api" {
   name     = "languaje-api-${var.env}"
   location = var.region
@@ -90,12 +152,8 @@ resource "google_cloud_run_v2_service" "api" {
   template {
     service_account = google_service_account.api.email
     scaling {
-      min_instance_count = var.env == "production" ? 1 : 0
+      min_instance_count = 0
       max_instance_count = 10
-    }
-    volumes {
-      name = "cloudsql"
-      cloud_sql_instance { instances = [google_sql_database_instance.pg.connection_name] }
     }
     containers {
       image = var.image
@@ -106,11 +164,15 @@ resource "google_cloud_run_v2_service" "api" {
       }
       env {
         name  = "SPEECH_PROVIDER"
-        value = "openai_whisper"
+        value = "google_cloud"
+      }
+      env {
+        name  = "TTS_PROVIDER"
+        value = "google_cloud"
       }
       env {
         name  = "LLM_PROVIDER"
-        value = "anthropic"
+        value = "gemini"
       }
       dynamic "env" {
         for_each = google_secret_manager_secret.s
@@ -124,16 +186,22 @@ resource "google_cloud_run_v2_service" "api" {
           }
         }
       }
-      volume_mounts {
-        name       = "cloudsql"
-        mount_path = "/cloudsql"
-      }
       startup_probe {
         http_get { path = "/ready" }
       }
     }
   }
-  lifecycle { ignore_changes = [template[0].containers[0].image] } # image managed by CI
+  lifecycle { ignore_changes = [template[0].containers[0].image] }
 }
 
 output "url" { value = google_cloud_run_v2_service.api.uri }
+output "firebase_web_config" {
+  value = {
+    projectId        = var.project
+    appId            = google_firebase_web_app.web.app_id
+    apiKey           = data.google_firebase_web_app_config.web.api_key
+    authDomain       = data.google_firebase_web_app_config.web.auth_domain
+    storageBucket    = lookup(data.google_firebase_web_app_config.web, "storage_bucket", "")
+    messagingSenderId = lookup(data.google_firebase_web_app_config.web, "messaging_sender_id", "")
+  }
+}
