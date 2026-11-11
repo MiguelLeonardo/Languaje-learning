@@ -5,50 +5,119 @@ cefr: A2
 topic: food-and-drink
 description: Pide una mesa para dos, ordena el plato principal y solicita la cuenta.
 phrases:
-  - id: table-for-two
-    text: Could we have a table for two, please?
-    translation: ¿Nos podría dar una mesa para dos, por favor?
-    visual_hint: "🍽️👥"
-    cloze: [4, 6]
-    glossary:
-      - {word: table for two, meaning: "mesa para dos personas", ipa: "ˈteɪbəl fər tuː"}
-  - id: order-salmon
-    text: I'd like the grilled salmon with salad.
-    translation: Me gustaría el salmón a la parrilla con ensalada.
-    visual_hint: "🐟🥗"
-    cloze: [1, 4]
-    glossary:
-      - {word: "I'd like", meaning: "Me gustaría (forma cortés de pedir comida)", ipa: "aɪd laɪk"}
-      - {word: grilled, meaning: "a la parrilla / a la plancha", ipa: "ɡrɪld"}
-  - id: glass-of-water
-    text: Can I get a glass of water, please?
-    translation: ¿Me trae un vaso de agua, por favor?
-    visual_hint: "🥛💧"
-    cloze: [4, 6]
-    glossary:
-      - {word: glass of water, meaning: "vaso de agua", ipa: "ɡlæs əv ˈwɔːtər"}
-  - id: have-the-bill
-    text: Could we have the bill, please?
-    translation: ¿Nos trae la cuenta, por favor?
-    visual_hint: "🧾💳"
-    cloze: [4]
-    glossary:
-      - {word: bill, meaning: "la cuenta (en restaurante)", ipa: "bɪl"}
+- id: table-for-two
+  text: Could we have a table for two, please?
+  translation: ¿Nos podría dar una mesa para dos, por favor?
+  visual_hint: 🍽️👥
+  cloze:
+  - 4
+  - 6
+  glossary:
+  - word: table for two
+    meaning: mesa para dos personas
+    ipa: ˈteɪbəl fər tuː
+- id: order-salmon
+  text: I'd like the grilled salmon with salad.
+  translation: Me gustaría el salmón a la parrilla con ensalada.
+  visual_hint: 🐟🥗
+  cloze:
+  - 1
+  - 4
+  glossary:
+  - word: I'd like
+    meaning: Me gustaría (forma cortés de pedir comida)
+    ipa: aɪd laɪk
+  - word: grilled
+    meaning: a la parrilla / a la plancha
+    ipa: ɡrɪld
+- id: glass-of-water
+  text: Can I get a glass of water, please?
+  translation: ¿Me trae un vaso de agua, por favor?
+  visual_hint: 🥛💧
+  cloze:
+  - 4
+  - 6
+  glossary:
+  - word: glass of water
+    meaning: vaso de agua
+    ipa: ɡlæs əv ˈwɔːtər
+- id: have-the-bill
+  text: Could we have the bill, please?
+  translation: ¿Nos trae la cuenta, por favor?
+  visual_hint: 🧾💳
+  cloze:
+  - 4
+  glossary:
+  - word: bill
+    meaning: la cuenta (en restaurante)
+    ipa: bɪl
+- id: sparkling-water
+  text: Could you bring us a bottle of sparkling water?
+  translation: ¿Nos podría traer una botella de agua con gas?
+  visual_hint: 🍾💧
+  cloze:
+  - 2
+  - 7
+  glossary:
+  - word: bring
+    meaning: traer
+    ipa: brɪŋ
+  - word: sparkling
+    meaning: con gas / espumosa
+    ipa: ˈspɑːrklɪŋ
+- id: split-the-bill
+  text: Can we split the bill by card, please?
+  translation: ¿Podemos dividir la cuenta con tarjeta, por favor?
+  visual_hint: 💳➗
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: split
+    meaning: dividir
+    ipa: splɪt
+  - word: bill
+    meaning: cuenta / factura
+    ipa: bɪl
+- id: side-of-vegetables
+  text: Does the dish come with a side of vegetables?
+  translation: ¿El plato viene con una guarnición de verduras?
+  visual_hint: 🥦🥕
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: dish
+    meaning: plato
+    ipa: dɪʃ
+  - word: side
+    meaning: acompañamiento / guarnición
+    ipa: saɪd
 roleplay:
   ai_role: restaurant waiter
   user_role: diner
   setting: A cozy neighborhood restaurant in the evening.
   turns:
-    - {speaker: ai, text: "Good evening! Welcome to Bistro Nine. How many are in your party?"}
-    - speaker: user
-      goal: Pide una mesa para dos personas.
-      suggested_lines: ["Could we have a table for two, please?", "A table for two, please."]
-    - {speaker: ai, text: "Right this way. Are you ready to order your main course?"}
-    - speaker: user
-      goal: Pide el salmón a la parrilla con ensalada y un vaso de agua.
-      suggested_lines: ["I'd like the grilled salmon with salad.", "Can I get a glass of water, please?"]
-    - {speaker: ai, text: "Wonderful choice. Anything else after dinner?"}
-    - speaker: user
-      goal: Pide la cuenta amablemente.
-      suggested_lines: ["Could we have the bill, please?", "Just the bill, please."]
-    - {speaker: ai, text: "I'll bring that right over. Thank you!"}
+  - speaker: ai
+    text: Good evening! Welcome to Bistro Nine. How many are in your party?
+  - speaker: user
+    goal: Pide una mesa para dos personas.
+    suggested_lines:
+    - Could we have a table for two, please?
+    - A table for two, please.
+  - speaker: ai
+    text: Right this way. Are you ready to order your main course?
+  - speaker: user
+    goal: Pide el salmón a la parrilla con ensalada y un vaso de agua.
+    suggested_lines:
+    - I'd like the grilled salmon with salad.
+    - Can I get a glass of water, please?
+  - speaker: ai
+    text: Wonderful choice. Anything else after dinner?
+  - speaker: user
+    goal: Pide la cuenta amablemente.
+    suggested_lines:
+    - Could we have the bill, please?
+    - Just the bill, please.
+  - speaker: ai
+    text: I'll bring that right over. Thank you!

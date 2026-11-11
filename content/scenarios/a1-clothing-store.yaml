@@ -5,40 +5,103 @@ cefr: A1
 topic: hotel-and-shopping
 description: Pregunta si tienen tu talla, pide probarte una prenda y consulta el precio.
 phrases:
-  - id: medium-size
-    text: Do you have this jacket in a medium size?
-    translation: ¿Tiene esta chaqueta en talla mediana?
-    visual_hint: "🧥📏"
-    cloze: [4, 7]
-    glossary:
-      - {word: jacket, meaning: "chaqueta", ipa: "ˈdʒækɪt"}
-      - {word: medium size, meaning: "talla mediana", ipa: "ˈmiːdiəm saɪz"}
-  - id: try-this-on
-    text: Can I try this on, please?
-    translation: ¿Me puedo probar esto, por favor?
-    visual_hint: "🪞👕"
-    cloze: [2, 4]
-    glossary:
-      - {word: try on, meaning: "probarse ropa", ipa: "traɪ ɑːn"}
-  - id: take-it
-    text: It fits well. I'll take it!
-    translation: Me queda bien. ¡Me lo llevo!
-    visual_hint: "🛍️✅"
-    cloze: [1, 4]
-    glossary:
-      - {word: fits, meaning: "quedar bien de talla", ipa: "fɪts"}
-      - {word: "I'll take it", meaning: "me lo llevo"}
+- id: medium-size
+  text: Do you have this jacket in a medium size?
+  translation: ¿Tiene esta chaqueta en talla mediana?
+  visual_hint: 🧥📏
+  cloze:
+  - 4
+  - 7
+  glossary:
+  - word: jacket
+    meaning: chaqueta
+    ipa: ˈdʒækɪt
+  - word: medium size
+    meaning: talla mediana
+    ipa: ˈmiːdiəm saɪz
+- id: try-this-on
+  text: Can I try this on, please?
+  translation: ¿Me puedo probar esto, por favor?
+  visual_hint: 🪞👕
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: try on
+    meaning: probarse ropa
+    ipa: traɪ ɑːn
+- id: take-it
+  text: It fits well. I'll take it!
+  translation: Me queda bien. ¡Me lo llevo!
+  visual_hint: 🛍️✅
+  cloze:
+  - 1
+  - 4
+  glossary:
+  - word: fits
+    meaning: quedar bien de talla
+    ipa: fɪts
+  - word: I'll take it
+    meaning: me lo llevo
+- id: different-color
+  text: Do you have this shirt in black or navy blue?
+  translation: ¿Tiene esta camisa en negro o azul marino?
+  visual_hint: 👔🎨
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: shirt
+    meaning: camisa
+    ipa: ʃɜːrt
+  - word: navy blue
+    meaning: azul marino
+    ipa: ˈneɪvi bluː
+- id: on-sale-today
+  text: Is this jacket on sale today?
+  translation: ¿Está esta chaqueta en oferta hoy?
+  visual_hint: 🏷️🧥
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: jacket
+    meaning: chaqueta
+    ipa: ˈdʒækɪt
+  - word: on sale
+    meaning: en oferta / descuento
+    ipa: ɑːn seɪl
+- id: take-this-one
+  text: It fits well. I will take this one, please.
+  translation: Me queda bien. Me llevo esta, por favor.
+  visual_hint: 🛍️✅
+  cloze:
+  - 1
+  - 5
+  glossary:
+  - word: fits
+    meaning: queda bien de talla
+    ipa: fɪts
+  - word: take
+    meaning: llevar
+    ipa: teɪk
 roleplay:
   ai_role: shop assistant
   user_role: shopper
   setting: A clothing store on the high street.
   turns:
-    - {speaker: ai, text: "Hi there! Let me know if you need help finding a size."}
-    - speaker: user
-      goal: Pregunta si tienen la chaqueta en talla mediana.
-      suggested_lines: ["Do you have this jacket in a medium size?"]
-    - {speaker: ai, text: "Yes, here is a medium. The fitting rooms are over there."}
-    - speaker: user
-      goal: Pregunta si puedes probártela y luego di que te la llevas.
-      suggested_lines: ["Can I try this on, please?", "It fits well. I'll take it!"]
-    - {speaker: ai, text: "Awesome! Follow me to the register."}
+  - speaker: ai
+    text: Hi there! Let me know if you need help finding a size.
+  - speaker: user
+    goal: Pregunta si tienen la chaqueta en talla mediana.
+    suggested_lines:
+    - Do you have this jacket in a medium size?
+  - speaker: ai
+    text: Yes, here is a medium. The fitting rooms are over there.
+  - speaker: user
+    goal: Pregunta si puedes probártela y luego di que te la llevas.
+    suggested_lines:
+    - Can I try this on, please?
+    - It fits well. I'll take it!
+  - speaker: ai
+    text: Awesome! Follow me to the register.

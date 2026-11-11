@@ -1,0 +1,135 @@
+id: c1-cultural-nuances
+title: Discussing cross-cultural idioms & humor
+title_es: Conversar sobre matices culturales y humor
+cefr: C1
+topic: social-and-smalltalk
+description: Analiza en una tertulia cómo el sarcasmo, la cortesía indirecta y los modismos cambian entre culturas.
+phrases:
+- id: lost-in-translation
+  text: Dry understatement often gets lost in translation when teams collaborate across continents.
+  translation: La ironía sutil a menudo se pierde en la traducción cuando los equipos colaboran entre continentes.
+  visual_hint: 🌍💬
+  cloze:
+  - 1
+  - 4
+  - 6
+  glossary:
+  - word: understatement
+    meaning: ironía sutil / atenuación
+    ipa: ˈʌndərsteɪtmənt
+  - word: lost in translation
+    meaning: perdido en la traducción
+    ipa: lɔːst ɪn trænsˈleɪʃən
+- id: read-between-lines
+  text: In high-context cultures, you quickly learn to read between the lines rather than expect a blunt refusal.
+  translation: En culturas de alto contexto, aprendes rápido a leer entre líneas en vez de esperar una negativa
+    directa.
+  visual_hint: 📖🧐
+  cloze:
+  - 7
+  - 10
+  - 15
+  glossary:
+  - word: read between the lines
+    meaning: leer entre líneas
+    ipa: riːd bɪˈtwiːn ðə laɪnz
+  - word: blunt refusal
+    meaning: negativa tajante / directa
+    ipa: blʌnt rɪˈfjuːzəl
+- id: self-deprecating-humor
+  text: Self-deprecating humor is a great icebreaker, provided people realize you're joking.
+  translation: El humor autocrítico es excelente para romper el hielo, siempre y cuando la gente note que bromeas.
+  visual_hint: 😄🧊
+  cloze:
+  - 0
+  - 5
+  - 7
+  glossary:
+  - word: self-deprecating
+    meaning: autocrítico / que se ríe de sí mismo
+    ipa: ˌself ˈdeprəkeɪtɪŋ
+  - word: icebreaker
+    meaning: rompehielos
+    ipa: ˈaɪsbreɪkər
+- id: vivid-idiom
+  text: Every language has vivid idioms that sound utterly baffling when translated word for word.
+  translation: Cada idioma tiene modismos vívidos que suenan totalmente desconcertantes cuando se traducen palabra
+    por palabra.
+  visual_hint: 🗣️🧩
+  cloze:
+  - 4
+  - 8
+  - 11
+  glossary:
+  - word: idioms
+    meaning: modismos / expresiones idiomáticas
+    ipa: ˈɪdiəmz
+  - word: baffling
+    meaning: desconcertantes / confusos
+    ipa: ˈbæflɪŋ
+- id: social-cues
+  text: Picking up on subtle vocal cues is half the battle toward sounding natural.
+  translation: Captar las sutiles señales del tono de voz es la mitad del camino para sonar natural.
+  visual_hint: 🎧🎯
+  cloze:
+  - 0
+  - 5
+  - 8
+  glossary:
+  - word: picking up on
+    meaning: captar / percibir
+    ipa: ˈpɪkɪŋ ʌp ɑːn
+  - word: half the battle
+    meaning: la mitad del triunfo / lo más importante
+    ipa: hæf ðə ˈbætəl
+- id: bridge-the-gap
+  text: Curiosity and a bit of humility go a long way toward bridging cultural gaps.
+  translation: La curiosidad y un poco de humildad ayudan muchísimo a acortar las brechas culturales.
+  visual_hint: 🌉🤝
+  cloze:
+  - 5
+  - 8
+  - 11
+  glossary:
+  - word: humility
+    meaning: humildad
+    ipa: hjuːˈmɪləti
+  - word: go a long way
+    meaning: ayudar muchísimo / rendir mucho
+    ipa: ɡoʊ ə lɔːŋ weɪ
+roleplay:
+  ai_role: international colleague
+  user_role: speaker
+  setting: Coffee break at an international cultural exchange meetup.
+  turns:
+  - speaker: ai
+    text: Have you ever noticed how differently British, American, and Latin colleagues give feedback in meetings?
+  - speaker: user
+    goal: Comenta cómo la ironía sutil o el leer entre líneas cambia según la cultura.
+    suggested_lines:
+    - Dry understatement often gets lost in translation when teams collaborate across continents.
+    - In high-context cultures, you quickly learn to read between the lines rather than expect a blunt refusal.
+  - speaker: ai
+    text: Totally! When someone in London says 'With the greatest respect,' you know they strongly disagree. What
+      about humor?
+  - speaker: user
+    goal: Habla del humor autocrítico como rompehielos y de los modismos traducidos literalmente.
+    suggested_lines:
+    - Self-deprecating humor is a great icebreaker, provided people realize you're joking.
+    - Every language has vivid idioms that sound utterly baffling when translated word for word.
+  - speaker: ai
+    text: So true! Literal translations of idioms always make for the funniest stories.
+  - speaker: user
+    goal: Explica que captar las señales del tono de voz es clave para sonar natural.
+    suggested_lines:
+    - Picking up on subtle vocal cues is half the battle toward sounding natural.
+    - Listening for vocal cues really helps you understand the real intent.
+  - speaker: ai
+    text: What's your best advice for someone moving abroad for the first time?
+  - speaker: user
+    goal: Concluye diciendo que la curiosidad y la humildad ayudan muchísimo a unir culturas.
+    suggested_lines:
+    - Curiosity and a bit of humility go a long way toward bridging cultural gaps.
+    - Curiosity and humility always go a long way.
+  - speaker: ai
+    text: Couldn't agree more. That's the best mindset to have!

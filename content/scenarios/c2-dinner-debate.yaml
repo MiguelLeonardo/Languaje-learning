@@ -5,52 +5,123 @@ cefr: C2
 topic: social-and-smalltalk
 description: Expresa matices, discrepa con elegancia y usa expresiones idiomáticas en una conversación social.
 phrases:
-  - id: devils-advocate
-    text: Just to play devil's advocate, couldn't remote work actually isolate people?
-    translation: Solo por llevar la contraria, ¿no podría el teletrabajo aislar a las personas?
-    visual_hint: "😈⚖️"
-    cloze: [3, 4]
-    glossary:
-      - {word: "devil's advocate", meaning: "abogado del diablo: defender la postura contraria para debatir"}
-      - {word: isolate, meaning: "aislar", ipa: "ˈaɪsəleɪt"}
-  - id: see-where
-    text: I see where you're coming from, but I'd take that with a grain of salt.
-    translation: Entiendo tu punto de vista, pero yo lo tomaría con pinzas.
-    visual_hint: "🧂"
-    cloze: [4, 12]
-    glossary:
-      - {word: coming from, meaning: "where you're coming from = tu perspectiva"}
-      - {word: grain of salt, meaning: "with a grain of salt = con escepticismo"}
-  - id: nuance
-    text: It's not so much a question of productivity as one of belonging.
-    translation: No es tanto una cuestión de productividad como de pertenencia.
-    visual_hint: "🧩"
-    cloze: [7, 11]
-    glossary:
-      - {word: "not so much ... as", meaning: "no tanto ... como"}
-      - {word: belonging, meaning: "pertenencia", ipa: "bɪˈlɔːŋɪŋ"}
-  - id: agree-to-disagree
-    text: Fair enough, let's agree to disagree on that one.
-    translation: Me parece justo, aceptemos que no estamos de acuerdo en eso.
-    visual_hint: "🤷"
-    cloze: [3, 4, 5]
-    glossary:
-      - {word: agree to disagree, meaning: "aceptar diferencias de opinión sin seguir discutiendo"}
+- id: devils-advocate
+  text: Just to play devil's advocate, couldn't remote work actually isolate people?
+  translation: Solo por llevar la contraria, ¿no podría el teletrabajo aislar a las personas?
+  visual_hint: 😈⚖️
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: devil's advocate
+    meaning: 'abogado del diablo: defender la postura contraria para debatir'
+  - word: isolate
+    meaning: aislar
+    ipa: ˈaɪsəleɪt
+- id: see-where
+  text: I see where you're coming from, but I'd take that with a grain of salt.
+  translation: Entiendo tu punto de vista, pero yo lo tomaría con pinzas.
+  visual_hint: 🧂
+  cloze:
+  - 4
+  - 12
+  glossary:
+  - word: coming from
+    meaning: where you're coming from = tu perspectiva
+  - word: grain of salt
+    meaning: with a grain of salt = con escepticismo
+- id: nuance
+  text: It's not so much a question of productivity as one of belonging.
+  translation: No es tanto una cuestión de productividad como de pertenencia.
+  visual_hint: 🧩
+  cloze:
+  - 7
+  - 11
+  glossary:
+  - word: not so much ... as
+    meaning: no tanto ... como
+  - word: belonging
+    meaning: pertenencia
+    ipa: bɪˈlɔːŋɪŋ
+- id: agree-to-disagree
+  text: Fair enough, let's agree to disagree on that one.
+  translation: Me parece justo, aceptemos que no estamos de acuerdo en eso.
+  visual_hint: 🤷
+  cloze:
+  - 3
+  - 4
+  - 5
+  glossary:
+  - word: agree to disagree
+    meaning: aceptar diferencias de opinión sin seguir discutiendo
+- id: unintended-consequences
+  text: We shouldn't overlook the unintended consequences of algorithmic curation.
+  translation: No deberíamos pasar por alto las consecuencias imprevistas de la curaduría algorítmica.
+  visual_hint: 🧠⚖️
+  cloze:
+  - 2
+  - 4
+  - 5
+  glossary:
+  - word: overlook
+    meaning: pasar por alto
+    ipa: ˌoʊvərˈlʊk
+  - word: unintended
+    meaning: imprevistas / no intencionadas
+    ipa: ˌʌnɪnˈtendɪd
+- id: common-ground
+  text: Even if we diverge on regulation, we clearly share common ground on ethics.
+  translation: Incluso si discrepamos en la regulación, claramente compartimos puntos en común sobre la ética.
+  visual_hint: 🤝🌐
+  cloze:
+  - 3
+  - 9
+  - 10
+  glossary:
+  - word: diverge
+    meaning: divergir / discrepar
+    ipa: daɪˈvɜːrdʒ
+  - word: common ground
+    meaning: terreno común / acuerdo base
+    ipa: ˈkɑːmən ɡraʊnd
+- id: empirical-evidence
+  text: Anecdotes are compelling, yet the empirical evidence points toward a more nuanced reality.
+  translation: Las anécdotas son convincentes, pero la evidencia empírica apunta hacia una realidad más matizada.
+  visual_hint: 📊🔬
+  cloze:
+  - 2
+  - 5
+  - 11
+  glossary:
+  - word: compelling
+    meaning: convincente
+    ipa: kəmˈpelɪŋ
+  - word: empirical
+    meaning: empírica
+    ipa: ɪmˈpɪrɪkəl
 roleplay:
   ai_role: opinionated dinner guest
   user_role: fellow guest
   setting: A relaxed dinner party among friends discussing the future of work.
   turns:
-    - {speaker: ai, text: "Honestly, I think offices are obsolete. Remote work is better in every way."}
-    - speaker: user
-      goal: Haz de abogado del diablo.
-      suggested_lines: ["Just to play devil's advocate, couldn't remote work actually isolate people?"]
-    - {speaker: ai, text: "But the productivity studies are overwhelmingly positive!"}
-    - speaker: user
-      goal: Reconoce su punto pero matiza.
-      suggested_lines: ["I see where you're coming from, but I'd take that with a grain of salt. It's not so much a question of productivity as one of belonging."]
-    - {speaker: ai, text: "Belonging? People can build community online just as well."}
-    - speaker: user
-      goal: Cierra el debate con elegancia.
-      suggested_lines: ["Fair enough, let's agree to disagree on that one."]
-    - {speaker: ai, text: "Ha, deal. More wine?"}
+  - speaker: ai
+    text: Honestly, I think offices are obsolete. Remote work is better in every way.
+  - speaker: user
+    goal: Haz de abogado del diablo.
+    suggested_lines:
+    - Just to play devil's advocate, couldn't remote work actually isolate people?
+  - speaker: ai
+    text: But the productivity studies are overwhelmingly positive!
+  - speaker: user
+    goal: Reconoce su punto pero matiza.
+    suggested_lines:
+    - I see where you're coming from, but I'd take that with a grain of salt. It's not so much a question of productivity
+      as one of belonging.
+  - speaker: ai
+    text: Belonging? People can build community online just as well.
+  - speaker: user
+    goal: Cierra el debate con elegancia.
+    suggested_lines:
+    - Fair enough, let's agree to disagree on that one.
+  - speaker: ai
+    text: Ha, deal. More wine?

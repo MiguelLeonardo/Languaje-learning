@@ -1,0 +1,139 @@
+id: c2-culinary-critique
+title: Gastronomic critique & chef's table
+title_es: Crítica gastronómica en la mesa del chef
+cefr: C2
+topic: food-and-drink
+description: Dialoga con el chef ejecutivo sobre técnicas de fermentación, contraste de texturas y trazabilidad
+  de ingredientes.
+phrases:
+- id: textural-juxtaposition
+  text: The textural juxtaposition between the crispy skin and the silky purée was sublime.
+  translation: El contraste de texturas entre la piel crujiente y el puré sedoso fue sublime.
+  visual_hint: 👨‍🍳✨
+  cloze:
+  - 1
+  - 2
+  - 9
+  - 12
+  glossary:
+  - word: juxtaposition
+    meaning: contraste / yuxtaposición
+    ipa: ˌdʒʌkstəpəˈzɪʃən
+  - word: sublime
+    meaning: sublime / extraordinario
+    ipa: səˈblaɪm
+- id: umami-depth
+  text: Fermenting the black garlic clearly imparted an extraordinary depth of umami to the broth.
+  translation: Fermentar el ajo negro claramente aportó una extraordinaria profundidad de umami al caldo.
+  visual_hint: 🧄🍲
+  cloze:
+  - 0
+  - 5
+  - 8
+  - 13
+  glossary:
+  - word: imparted
+    meaning: aportó / confirió
+    ipa: ɪmˈpɑːrtɪd
+  - word: broth
+    meaning: caldo / consomé
+    ipa: brɔːθ
+- id: hyper-local-sourcing
+  text: How do you maintain menu consistency while relying strictly on hyper-local foraging?
+  translation: ¿Cómo mantienen la consistencia del menú dependiendo estrictamente de la recolección hiperlocal?
+  visual_hint: 🍄🌱
+  cloze:
+  - 4
+  - 7
+  - 11
+  glossary:
+  - word: relying on
+    meaning: dependiendo de / apoyándose en
+    ipa: rɪˈlaɪɪŋ ɑːn
+  - word: foraging
+    meaning: recolección silvestre
+    ipa: ˈfɔːrɪdʒɪŋ
+- id: restraint-in-plating
+  text: What struck me most was the restraint in plating—every element earned its place.
+  translation: 'Lo que más me impresionó fue la sobriedad en el emplatado: cada elemento se ganó su lugar.'
+  visual_hint: 🍽️🎨
+  cloze:
+  - 1
+  - 6
+  - 8
+  - 11
+  glossary:
+  - word: struck me
+    meaning: me llamó la atención / impresionó
+    ipa: strʌk miː
+  - word: restraint
+    meaning: sobriedad / mesura
+    ipa: rɪˈstreɪnt
+- id: smoke-infusion
+  text: Had the smoke infusion been even slightly heavier, it might have masked the scallop's sweetness.
+  translation: Si la infusión de humo hubiera sido apenas más intensa, habría ocultado el dulzor de la vieira.
+  visual_hint: 💨🐚
+  cloze:
+  - 2
+  - 6
+  - 10
+  - 14
+  glossary:
+  - word: masked
+    meaning: enmascarado / ocultado
+    ipa: mæskt
+  - word: scallop
+    meaning: vieira / callo de hacha
+    ipa: ˈskɑːləp
+- id: culinary-narrative
+  text: Each course unfolded like a cohesive narrative bridging ancestral technique and modern precision.
+  translation: Cada tiempo se desplegó como una narrativa cohesiva que une técnica ancestral y precisión moderna.
+  visual_hint: 📖🔥
+  cloze:
+  - 2
+  - 5
+  - 7
+  - 9
+  glossary:
+  - word: unfolded
+    meaning: se desenvolvió / desplegó
+    ipa: ʌnˈfoʊldɪd
+  - word: bridging
+    meaning: tendiendo un puente / uniendo
+    ipa: ˈbrɪdʒɪŋ
+roleplay:
+  ai_role: executive chef
+  user_role: culinary critic
+  setting: Chef's counter at the end of a twelve-course tasting menu.
+  turns:
+  - speaker: ai
+    text: Thank you for dining at the counter tonight. What did you think of the seared scallop and black garlic
+      course?
+  - speaker: user
+    goal: Elogia el contraste de texturas y la profundidad umami del ajo negro fermentado.
+    suggested_lines:
+    - The textural juxtaposition between the crispy skin and the silky purée was sublime.
+    - Fermenting the black garlic clearly imparted an extraordinary depth of umami to the broth.
+  - speaker: ai
+    text: We calibrate the cold-smoking to the second so we don't overwhelm the shellfish.
+  - speaker: user
+    goal: Comenta que un humo más intenso habría ocultado el dulzor de la vieira.
+    suggested_lines:
+    - Had the smoke infusion been even slightly heavier, it might have masked the scallop's sweetness.
+    - The balance was exact; any heavier smoke would have masked the sweetness.
+  - speaker: ai
+    text: All our herbs and mushrooms are foraged within thirty miles of the kitchen each morning.
+  - speaker: user
+    goal: Pregunta cómo mantienen la consistencia dependiendo de ingredientes silvestres locales.
+    suggested_lines:
+    - How do you maintain menu consistency while relying strictly on hyper-local foraging?
+    - How do you balance consistency with hyper-local foraging?
+  - speaker: ai
+    text: We adapt the micro-garnishes daily while keeping the core flavor architecture intact.
+  - speaker: user
+    goal: Destaca la sobriedad del emplatado y la narrativa cohesiva del menú.
+    suggested_lines:
+    - What struck me most was the restraint in plating—every element earned its place.
+    - Each course unfolded like a cohesive narrative bridging ancestral technique and modern precision.
+  - speaker: ai
+    text: That means the world to our brigade. It was an honor cooking for you tonight.

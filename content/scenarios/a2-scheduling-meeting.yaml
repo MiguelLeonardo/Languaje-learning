@@ -1,0 +1,132 @@
+id: a2-scheduling-meeting
+title: Scheduling a team call
+title_es: Agendar una videollamada de equipo
+cefr: A2
+topic: work-and-career
+description: Coordina una videollamada con un colega en otra zona horaria, confirma la hora y envía la invitación.
+phrases:
+- id: free-tomorrow-morning
+  text: Are you free for a quick video call tomorrow morning?
+  translation: ¿Estás libre para una videollamada rápida mañana por la mañana?
+  visual_hint: 💻📅
+  cloze:
+  - 2
+  - 6
+  - 8
+  glossary:
+  - word: quick
+    meaning: rápida / breve
+    ipa: kwɪk
+  - word: video call
+    meaning: videollamada
+    ipa: ˈvɪdioʊ kɔːl
+- id: ten-am-work
+  text: Does ten thirty in the morning work for your schedule?
+  translation: ¿Las diez y media de la mañana te vienen bien en tu agenda?
+  visual_hint: 🕥🗓️
+  cloze:
+  - 1
+  - 6
+  - 9
+  glossary:
+  - word: work for
+    meaning: funcionar / acomodar
+    ipa: wɜːrk fɔːr
+  - word: schedule
+    meaning: agenda / horario
+    ipa: ˈskedʒuːl
+- id: send-calendar-invite
+  text: I will send you a calendar invite with the Zoom link.
+  translation: Te enviaré una invitación de calendario con el enlace de Zoom.
+  visual_hint: 📧🔗
+  cloze:
+  - 2
+  - 6
+  - 10
+  glossary:
+  - word: calendar invite
+    meaning: invitación de calendario
+    ipa: ˈkælɪndər ˈɪnvaɪt
+  - word: link
+    meaning: enlace
+    ipa: lɪŋk
+- id: share-the-slides
+  text: Could you share the presentation slides before the meeting?
+  translation: ¿Podrías compartir las diapositivas de la presentación antes de la reunión?
+  visual_hint: 📊📤
+  cloze:
+  - 2
+  - 5
+  - 8
+  glossary:
+  - word: share
+    meaning: compartir
+    ipa: ʃer
+  - word: slides
+    meaning: diapositivas
+    ipa: slaɪdz
+- id: push-it-back
+  text: If you are busy, we can move it to Thursday afternoon.
+  translation: Si estás ocupado, podemos moverla para el jueves por la tarde.
+  visual_hint: 🔄🕓
+  cloze:
+  - 3
+  - 6
+  - 9
+  glossary:
+  - word: busy
+    meaning: ocupado
+    ipa: ˈbɪzi
+  - word: move it
+    meaning: cambiarla de hora / moverla
+    ipa: muːv ɪt
+- id: talk-to-you-then
+  text: Perfect, thirty minutes will be enough. Talk to you tomorrow!
+  translation: Perfecto, treinta minutos serán suficientes. ¡Hablamos mañana!
+  visual_hint: 👍⏱️
+  cloze:
+  - 2
+  - 5
+  - 9
+  glossary:
+  - word: enough
+    meaning: suficiente
+    ipa: ɪˈnʌf
+  - word: talk to you
+    meaning: hablamos / conversamos
+    ipa: tɔːk tə juː
+roleplay:
+  ai_role: colleague (David)
+  user_role: project coordinator
+  setting: Planning a sync call to review client slides.
+  turns:
+  - speaker: ai
+    text: Hi! We should review the client presentation soon. When would you like to meet?
+  - speaker: user
+    goal: Pregunta si está libre para una videollamada mañana a las 10:30 AM.
+    suggested_lines:
+    - Are you free for a quick video call tomorrow morning?
+    - Does ten thirty in the morning work for your schedule?
+  - speaker: ai
+    text: Let me check my calendar. Yes, 10:30 AM tomorrow is wide open!
+  - speaker: user
+    goal: Di que enviarás la invitación de calendario con el enlace de Zoom.
+    suggested_lines:
+    - I will send you a calendar invite with the Zoom link.
+    - Great, I'll send the calendar invite with the link.
+  - speaker: ai
+    text: Sounds good. Do you need anything from me before we hop on the call?
+  - speaker: user
+    goal: Pídele compartir las diapositivas de la presentación antes de la reunión.
+    suggested_lines:
+    - Could you share the presentation slides before the meeting?
+    - Please share the slides before the call.
+  - speaker: ai
+    text: Sure, I'll email them to you this afternoon. Will half an hour be enough?
+  - speaker: user
+    goal: Confirma que treinta minutos bastan y despídete hasta mañana.
+    suggested_lines:
+    - Perfect, thirty minutes will be enough. Talk to you tomorrow!
+    - Yes, thirty minutes is enough. Talk to you tomorrow!
+  - speaker: ai
+    text: See you on Zoom tomorrow at 10:30!

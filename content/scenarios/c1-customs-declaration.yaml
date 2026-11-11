@@ -1,0 +1,134 @@
+id: c1-customs-declaration
+title: Customs inspection & commercial samples
+title_es: Inspección de aduana y muestras comerciales
+cefr: C1
+topic: travel-and-transport
+description: Explica en control aduanero el ingreso temporal de prototipos para una feria tecnológica sin fines
+  de venta.
+phrases:
+- id: temporary-importation
+  text: These hardware prototypes are strictly for exhibition at the trade summit and not for resale.
+  translation: Estos prototipos de hardware son estrictamente para exhibición en la cumbre comercial y no para reventa.
+  visual_hint: 🛂📦
+  cloze:
+  - 2
+  - 6
+  - 14
+  glossary:
+  - word: prototypes
+    meaning: prototipos
+    ipa: ˈproʊtətaɪps
+  - word: resale
+    meaning: reventa
+    ipa: ˈriːseɪl
+- id: ata-carnet-document
+  text: Here is our itemized ATA Carnet certifying that all equipment will be re-exported next Friday.
+  translation: Aquí está nuestro cuaderno ATA detallado certificando que todo el equipo será reexportado el próximo
+    viernes.
+  visual_hint: 📑✈️
+  cloze:
+  - 3
+  - 6
+  - 12
+  glossary:
+  - word: itemized
+    meaning: desglosado / detallado
+    ipa: ˈaɪtəmaɪzd
+  - word: re-exported
+    meaning: reexportado
+    ipa: ˌriːɪkˈspɔːrtɪd
+- id: serial-numbers-match
+  text: Every serial number on the pelican case corresponds directly to the manifest.
+  translation: Cada número de serie en el maletín protector corresponde directamente con el manifiesto de carga.
+  visual_hint: 🔢🧳
+  cloze:
+  - 1
+  - 7
+  - 11
+  glossary:
+  - word: corresponds
+    meaning: corresponde / coincide
+    ipa: ˌkɔːrəˈspɑːndz
+  - word: manifest
+    meaning: manifiesto de carga
+    ipa: ˈmænɪfest
+- id: nominal-commercial-value
+  text: They are non-functional display units carrying only nominal commercial value.
+  translation: Son unidades de demostración no funcionales con un valor comercial meramente simbólico.
+  visual_hint: 🏷️💻
+  cloze:
+  - 2
+  - 4
+  - 7
+  glossary:
+  - word: display units
+    meaning: unidades de exhibición
+    ipa: dɪˈspleɪ ˈjuːnɪts
+  - word: nominal
+    meaning: nominal / simbólico
+    ipa: ˈnɑːmɪnəl
+- id: customs-stamp-departure
+  text: Which counter should we report to upon departure to have the export voucher stamped?
+  translation: ¿A qué mostrador debemos presentarnos al salir para que sellen el comprobante de exportación?
+  visual_hint: 🖋️🛫
+  cloze:
+  - 4
+  - 7
+  - 13
+  glossary:
+  - word: upon departure
+    meaning: al momento de partir
+    ipa: əˈpɑːn dɪˈpɑːrtʃər
+  - word: stamped
+    meaning: sellado
+    ipa: stæmpt
+- id: open-for-inspection
+  text: I'd be happy to unlock the cases so you can verify the contents firsthand.
+  translation: Con gusto abro los maletines para que pueda verificar el contenido de primera mano.
+  visual_hint: 🔓🔍
+  cloze:
+  - 4
+  - 9
+  - 12
+  glossary:
+  - word: verify
+    meaning: verificar
+    ipa: ˈverɪfaɪ
+  - word: firsthand
+    meaning: de primera mano / directamente
+    ipa: ˌfɜːrstˈhænd
+roleplay:
+  ai_role: customs officer
+  user_role: conference exhibitor
+  setting: International airport red channel customs inspection desk.
+  turns:
+  - speaker: ai
+    text: Good morning. I see you're declaring three equipment cases. What is the commercial purpose of these devices?
+  - speaker: user
+    goal: Explica que son prototipos para exhibición en la feria y no están a la venta.
+    suggested_lines:
+    - These hardware prototypes are strictly for exhibition at the trade summit and not for resale.
+    - They are non-functional display units carrying only nominal commercial value.
+  - speaker: ai
+    text: Do you have temporary import documentation showing they will leave the country with you?
+  - speaker: user
+    goal: Entrega el cuaderno ATA y menciona que los números de serie coinciden con el manifiesto.
+    suggested_lines:
+    - Here is our itemized ATA Carnet certifying that all equipment will be re-exported next Friday.
+    - Every serial number on the pelican case corresponds directly to the manifest.
+  - speaker: ai
+    text: Let me inspect the first case and check the serial tags.
+  - speaker: user
+    goal: Ofrece abrir los maletines para que verifique el contenido directamente.
+    suggested_lines:
+    - I'd be happy to unlock the cases so you can verify the contents firsthand.
+    - Sure, let me unlock the case so you can check the serial numbers.
+  - speaker: ai
+    text: Everything matches the manifest. I've stamped your entry foil.
+  - speaker: user
+    goal: Pregunta a qué mostrador acudir al salir del país para sellar la reexportación.
+    suggested_lines:
+    - Which counter should we report to upon departure to have the export voucher stamped?
+    - Where do we get the export voucher stamped upon departure?
+  - speaker: ai
+    text: Report to Customs Desk B in Terminal 2 before checking the cases. Welcome and enjoy the summit!

@@ -1,0 +1,14 @@
+{
+  "name": "speakflow-shadowing",
+  "version": "1.0.0",
+  "description": "SpeakFlow — Speaking-First English Coach connected to Firebase project shadowing-efcab (shadowing)",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "firebase:verify": "node scripts/verify-firebase-npm.mjs",
+    "rea:analyze": "./tools/rea/node_modules/.bin/rea analyze-javascript-application public --json"
+  },
+  "dependencies": {
+    "firebase": "^13.3.0"
+  }
+}

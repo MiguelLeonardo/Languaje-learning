@@ -5,40 +5,104 @@ cefr: A1
 topic: travel-and-transport
 description: Compra un boleto hacia el centro, pregunta por la parada y el horario de salida.
 phrases:
-  - id: ticket-downtown
-    text: One ticket to downtown, please.
-    translation: Un boleto al centro, por favor.
-    visual_hint: "🎫🚌"
-    cloze: [1, 3]
-    glossary:
-      - {word: ticket, meaning: "boleto / billete", ipa: "ˈtɪkɪt"}
-      - {word: downtown, meaning: "el centro de la ciudad", ipa: "ˈdaʊntaʊn"}
-  - id: what-time-leave
-    text: What time does the next bus leave?
-    translation: ¿A qué hora sale el próximo autobús?
-    visual_hint: "🕒🚌"
-    cloze: [4, 6]
-    glossary:
-      - {word: next, meaning: "próximo / siguiente", ipa: "nekst"}
-      - {word: leave, meaning: "salir / partir", ipa: "liːv"}
-  - id: which-stop
-    text: Which bus stop is it?
-    translation: ¿Cuál parada de autobús es?
-    visual_hint: "🚏"
-    cloze: [2]
-    glossary:
-      - {word: bus stop, meaning: "parada de autobús", ipa: "bʌs stɑːp"}
+- id: ticket-downtown
+  text: One ticket to downtown, please.
+  translation: Un boleto al centro, por favor.
+  visual_hint: 🎫🚌
+  cloze:
+  - 1
+  - 3
+  glossary:
+  - word: ticket
+    meaning: boleto / billete
+    ipa: ˈtɪkɪt
+  - word: downtown
+    meaning: el centro de la ciudad
+    ipa: ˈdaʊntaʊn
+- id: what-time-leave
+  text: What time does the next bus leave?
+  translation: ¿A qué hora sale el próximo autobús?
+  visual_hint: 🕒🚌
+  cloze:
+  - 4
+  - 6
+  glossary:
+  - word: next
+    meaning: próximo / siguiente
+    ipa: nekst
+  - word: leave
+    meaning: salir / partir
+    ipa: liːv
+- id: which-stop
+  text: Which bus stop is it?
+  translation: ¿Cuál parada de autobús es?
+  visual_hint: 🚏
+  cloze:
+  - 2
+  glossary:
+  - word: bus stop
+    meaning: parada de autobús
+    ipa: bʌs stɑːp
+- id: next-bus-time
+  text: What time is the next bus?
+  translation: ¿A qué hora sale el próximo autobús?
+  visual_hint: 🕒🚌
+  cloze:
+  - 1
+  - 4
+  glossary:
+  - word: time
+    meaning: hora
+    ipa: taɪm
+  - word: next
+    meaning: próximo / siguiente
+    ipa: nekst
+- id: pay-by-card
+  text: Can I pay by credit card here?
+  translation: ¿Puedo pagar con tarjeta de crédito aquí?
+  visual_hint: 💳🚌
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: pay
+    meaning: pagar
+    ipa: peɪ
+  - word: credit card
+    meaning: tarjeta de crédito
+    ipa: ˈkredɪt kɑːrd
+- id: return-ticket
+  text: A return ticket for today, please.
+  translation: Un boleto de ida y vuelta para hoy, por favor.
+  visual_hint: 🔁🎫
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: return ticket
+    meaning: boleto de ida y vuelta
+    ipa: rɪˈtɜːrn ˈtɪkɪt
+  - word: today
+    meaning: hoy
+    ipa: təˈdeɪ
 roleplay:
   ai_role: ticket agent
   user_role: commuter
   setting: A central bus terminal ticket window.
   turns:
-    - {speaker: ai, text: "Hello! Where are you traveling today?"}
-    - speaker: user
-      goal: Pide un boleto hacia el centro.
-      suggested_lines: ["One ticket to downtown, please.", "A ticket to downtown, please."]
-    - {speaker: ai, text: "Here is your ticket. That's four dollars."}
-    - speaker: user
-      goal: Pregunta a qué hora sale el próximo autobús.
-      suggested_lines: ["What time does the next bus leave?", "Which bus stop is it?"]
-    - {speaker: ai, text: "It leaves in ten minutes from stop number three."}
+  - speaker: ai
+    text: Hello! Where are you traveling today?
+  - speaker: user
+    goal: Pide un boleto hacia el centro.
+    suggested_lines:
+    - One ticket to downtown, please.
+    - A ticket to downtown, please.
+  - speaker: ai
+    text: Here is your ticket. That's four dollars.
+  - speaker: user
+    goal: Pregunta a qué hora sale el próximo autobús.
+    suggested_lines:
+    - What time does the next bus leave?
+    - Which bus stop is it?
+  - speaker: ai
+    text: It leaves in ten minutes from stop number three.

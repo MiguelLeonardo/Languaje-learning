@@ -77,4 +77,4 @@ def test_validate_cli(capsys):
     from app.content.validate import main
 
     assert main([]) == 0
-    assert "18 scenarios" in capsys.readouterr().out
+    assert "36 scenarios" in capsys.readouterr().out

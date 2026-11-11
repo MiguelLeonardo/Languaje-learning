@@ -5,50 +5,106 @@ cefr: B1
 topic: hotel-and-shopping
 description: Confirma tu reserva, resuelve un problema con la habitación y pregunta por servicios.
 phrases:
-  - id: have-a-reservation
-    text: Hi, I have a reservation under the name Garcia.
-    translation: Hola, tengo una reserva a nombre de García.
-    visual_hint: "🏨🧾"
-    cloze: [4, 5]
-    glossary:
-      - {word: reservation, meaning: "reserva", ipa: "ˌrezərˈveɪʃən"}
-      - {word: under, meaning: "bajo / a nombre de", ipa: "ˈʌndər"}
-  - id: breakfast-included
-    text: Is breakfast included in the price?
-    translation: ¿El desayuno está incluido en el precio?
-    visual_hint: "🍳"
-    cloze: [2]
-    glossary:
-      - {word: included, meaning: "incluido", ipa: "ɪnˈkluːdɪd"}
-  - id: room-problem
-    text: I'm afraid the air conditioning in my room isn't working.
-    translation: Me temo que el aire acondicionado de mi habitación no funciona.
-    visual_hint: "❄️🚫"
-    cloze: [1, 9]
-    glossary:
-      - {word: afraid, meaning: "I'm afraid = me temo (forma educada de dar una mala noticia)", ipa: "əˈfreɪd"}
-  - id: late-checkout
-    text: Would it be possible to check out a bit later?
-    translation: ¿Sería posible hacer el check-out un poco más tarde?
-    visual_hint: "🕐"
-    cloze: [3]
-    glossary:
-      - {word: possible, meaning: "posible", ipa: "ˈpɑːsəbəl"}
+- id: have-a-reservation
+  text: Hi, I have a reservation under the name Garcia.
+  translation: Hola, tengo una reserva a nombre de García.
+  visual_hint: 🏨🧾
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: reservation
+    meaning: reserva
+    ipa: ˌrezərˈveɪʃən
+  - word: under
+    meaning: bajo / a nombre de
+    ipa: ˈʌndər
+- id: breakfast-included
+  text: Is breakfast included in the price?
+  translation: ¿El desayuno está incluido en el precio?
+  visual_hint: 🍳
+  cloze:
+  - 2
+  glossary:
+  - word: included
+    meaning: incluido
+    ipa: ɪnˈkluːdɪd
+- id: room-problem
+  text: I'm afraid the air conditioning in my room isn't working.
+  translation: Me temo que el aire acondicionado de mi habitación no funciona.
+  visual_hint: ❄️🚫
+  cloze:
+  - 1
+  - 9
+  glossary:
+  - word: afraid
+    meaning: I'm afraid = me temo (forma educada de dar una mala noticia)
+    ipa: əˈfreɪd
+- id: late-checkout
+  text: Would it be possible to check out a bit later?
+  translation: ¿Sería posible hacer el check-out un poco más tarde?
+  visual_hint: 🕐
+  cloze:
+  - 3
+  glossary:
+  - word: possible
+    meaning: posible
+    ipa: ˈpɑːsəbəl
+- id: quiet-room-high-floor
+  text: Do you happen to have a quiet room on a higher floor?
+  translation: ¿Por casualidad tienen una habitación tranquila en un piso más alto?
+  visual_hint: 🏢🤫
+  cloze:
+  - 3
+  - 6
+  - 10
+  glossary:
+  - word: happen to
+    meaning: por casualidad
+    ipa: ˈhæpən tə
+  - word: quiet
+    meaning: tranquila / silenciosa
+    ipa: ˈkwaɪət
+- id: luggage-storage
+  text: Could we store our bags at the front desk after checkout?
+  translation: ¿Podríamos guardar nuestras maletas en recepción después de entregar la habitación?
+  visual_hint: 🧳🛎️
+  cloze:
+  - 2
+  - 4
+  - 8
+  glossary:
+  - word: store
+    meaning: guardar / almacenar
+    ipa: stɔːr
+  - word: front desk
+    meaning: recepción
+    ipa: frʌnt desk
 roleplay:
   ai_role: hotel receptionist
   user_role: guest
   setting: The front desk of a mid-size hotel in the evening.
   turns:
-    - {speaker: ai, text: "Good evening and welcome. How can I help you?"}
-    - speaker: user
-      goal: Di que tienes una reserva.
-      suggested_lines: ["Hi, I have a reservation under the name Garcia.", "I have a reservation for two nights."]
-    - {speaker: ai, text: "Let me check... Yes, two nights in a double room. Here's your key."}
-    - speaker: user
-      goal: Pregunta si el desayuno está incluido.
-      suggested_lines: ["Thanks. Is breakfast included in the price?", "Is breakfast included?"]
-    - {speaker: ai, text: "Yes, it's served from seven to ten on the first floor."}
-    - speaker: user
-      goal: Pide salir más tarde el último día.
-      suggested_lines: ["Would it be possible to check out a bit later?", "Can I check out later on Sunday?"]
-    - {speaker: ai, text: "We can offer you a late checkout at one p.m. at no extra cost."}
+  - speaker: ai
+    text: Good evening and welcome. How can I help you?
+  - speaker: user
+    goal: Di que tienes una reserva.
+    suggested_lines:
+    - Hi, I have a reservation under the name Garcia.
+    - I have a reservation for two nights.
+  - speaker: ai
+    text: Let me check... Yes, two nights in a double room. Here's your key.
+  - speaker: user
+    goal: Pregunta si el desayuno está incluido.
+    suggested_lines:
+    - Thanks. Is breakfast included in the price?
+    - Is breakfast included?
+  - speaker: ai
+    text: Yes, it's served from seven to ten on the first floor.
+  - speaker: user
+    goal: Pide salir más tarde el último día.
+    suggested_lines:
+    - Would it be possible to check out a bit later?
+    - Can I check out later on Sunday?
+  - speaker: ai
+    text: We can offer you a late checkout at one p.m. at no extra cost.

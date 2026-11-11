@@ -5,40 +5,91 @@ cefr: B1
 topic: travel-and-transport
 description: Gestiona una conexión perdida en el aeropuerto y pide reprogramar tu vuelo.
 phrases:
-  - id: flight-delayed
-    text: My flight has been delayed and I might miss my connection.
-    translation: Mi vuelo se ha retrasado y puede que pierda mi conexión.
-    visual_hint: "✈️⏰"
-    cloze: [4, 9]
-    glossary:
-      - {word: delayed, meaning: "retrasado", ipa: "dɪˈleɪd"}
-      - {word: miss my connection, meaning: "perder mi vuelo de conexión"}
-  - id: rebook-next-flight
-    text: Could you rebook me on the next available flight to London?
-    translation: ¿Podría reprogramarme en el próximo vuelo disponible a Londres?
-    visual_hint: "🛫🔁"
-    cloze: [2, 7]
-    glossary:
-      - {word: rebook, meaning: "cambiar la reserva / reprogramar", ipa: "ˌriːˈbʊk"}
-      - {word: available, meaning: "disponible", ipa: "əˈveɪləbəl"}
-  - id: meal-voucher
-    text: Are we entitled to a meal voucher while we wait?
-    translation: ¿Tenemos derecho a un vale de comida mientras esperamos?
-    visual_hint: "🎟️🥪"
-    cloze: [2, 5]
-    glossary:
-      - {word: entitled to, meaning: "tener derecho a", ipa: "ɪnˈtaɪtəld tuː"}
+- id: flight-delayed
+  text: My flight has been delayed and I might miss my connection.
+  translation: Mi vuelo se ha retrasado y puede que pierda mi conexión.
+  visual_hint: ✈️⏰
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: delayed
+    meaning: retrasado
+    ipa: dɪˈleɪd
+  - word: miss my connection
+    meaning: perder mi vuelo de conexión
+- id: rebook-next-flight
+  text: Could you rebook me on the next available flight to London?
+  translation: ¿Podría reprogramarme en el próximo vuelo disponible a Londres?
+  visual_hint: 🛫🔁
+  cloze:
+  - 2
+  - 7
+  glossary:
+  - word: rebook
+    meaning: cambiar la reserva / reprogramar
+    ipa: ˌriːˈbʊk
+  - word: available
+    meaning: disponible
+    ipa: əˈveɪləbəl
+- id: meal-voucher
+  text: Are we entitled to a meal voucher while we wait?
+  translation: ¿Tenemos derecho a un vale de comida mientras esperamos?
+  visual_hint: 🎟️🥪
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: entitled to
+    meaning: tener derecho a
+    ipa: ɪnˈtaɪtəld tuː
+- id: direct-routing
+  text: Is there any seat available on a partner airline tonight?
+  translation: ¿Hay algún asiento disponible en una aerolínea asociada esta noche?
+  visual_hint: 🛫💺
+  cloze:
+  - 3
+  - 4
+  - 7
+  glossary:
+  - word: available
+    meaning: disponible
+    ipa: əˈveɪləbəl
+  - word: partner airline
+    meaning: aerolínea aliada
+    ipa: ˈpɑːrtnər ˈerlaɪn
+- id: boarding-gate-change
+  text: Will the new boarding pass be sent to my mobile app?
+  translation: ¿Se enviará la nueva tarjeta de embarque a mi aplicación móvil?
+  visual_hint: 📲🎫
+  cloze:
+  - 3
+  - 4
+  - 6
+  glossary:
+  - word: boarding pass
+    meaning: pase de abordar
+    ipa: ˈbɔːrdɪŋ pæs
+  - word: sent
+    meaning: enviado
+    ipa: sent
 roleplay:
   ai_role: airline gate agent
   user_role: passenger
   setting: Customer service desk at an international airport.
   turns:
-    - {speaker: ai, text: "Hello, I can see your inbound flight is delayed. How can I assist you?"}
-    - speaker: user
-      goal: Explica que puedes perder tu conexión.
-      suggested_lines: ["My flight has been delayed and I might miss my connection."]
-    - {speaker: ai, text: "Let me look at alternative routes for you."}
-    - speaker: user
-      goal: Pide que te reprogramen en el siguiente vuelo disponible y pregunta por el vale de comida.
-      suggested_lines: ["Could you rebook me on the next available flight to London?", "Are we entitled to a meal voucher while we wait?"]
-    - {speaker: ai, text: "Done! You're confirmed on the six p.m. flight, and here is your meal voucher."}
+  - speaker: ai
+    text: Hello, I can see your inbound flight is delayed. How can I assist you?
+  - speaker: user
+    goal: Explica que puedes perder tu conexión.
+    suggested_lines:
+    - My flight has been delayed and I might miss my connection.
+  - speaker: ai
+    text: Let me look at alternative routes for you.
+  - speaker: user
+    goal: Pide que te reprogramen en el siguiente vuelo disponible y pregunta por el vale de comida.
+    suggested_lines:
+    - Could you rebook me on the next available flight to London?
+    - Are we entitled to a meal voucher while we wait?
+  - speaker: ai
+    text: Done! You're confirmed on the six p.m. flight, and here is your meal voucher.

@@ -1,0 +1,132 @@
+id: b1-inviting-to-party
+title: Inviting friends to a weekend barbecue
+title_es: Invitar amigos a un asado de fin de semana
+cefr: B1
+topic: social-and-smalltalk
+description: Invita a un amigo a una reunión en tu terraza, coordina la hora y sugiere qué bebida o postre puede
+  traer.
+phrases:
+- id: hosting-barbecue
+  text: We're hosting a casual barbecue on our patio this Saturday afternoon.
+  translation: Vamos a organizar un asado informal en nuestro patio este sábado por la tarde.
+  visual_hint: 🍔☀️
+  cloze:
+  - 1
+  - 3
+  - 6
+  glossary:
+  - word: hosting
+    meaning: organizando / siendo anfitriones
+    ipa: ˈhoʊstɪŋ
+  - word: casual
+    meaning: informal / relajado
+    ipa: ˈkæʒuəl
+- id: hope-you-can-make-it
+  text: We'd love for you to come if you're free around four o'clock.
+  translation: Nos encantaría que vinieras si estás libre alrededor de las cuatro.
+  visual_hint: 🕓🎉
+  cloze:
+  - 1
+  - 5
+  - 8
+  glossary:
+  - word: love for you
+    meaning: encantaría que tú
+    ipa: lʌv fɔːr juː
+  - word: free
+    meaning: libre / disponible
+    ipa: friː
+- id: bring-a-friend
+  text: Feel free to bring your partner or a friend along too!
+  translation: ¡Siéntete con confianza de traer a tu pareja o a un amigo también!
+  visual_hint: 👫🎈
+  cloze:
+  - 0
+  - 3
+  - 9
+  glossary:
+  - word: feel free
+    meaning: siéntete libre / con confianza
+    ipa: fiːl friː
+  - word: bring along
+    meaning: traer contigo
+    ipa: brɪŋ əˈlɔːŋ
+- id: veggie-burgers-too
+  text: We'll grill burgers and veggies, so there's plenty of food for everyone.
+  translation: Asaremos hamburguesas y verduras, así que habrá mucha comida para todos.
+  visual_hint: 🌽🥩
+  cloze:
+  - 1
+  - 7
+  glossary:
+  - word: grill
+    meaning: asar a la parrilla
+    ipa: ɡrɪl
+  - word: plenty of
+    meaning: abundante / suficiente
+    ipa: ˈplenti əv
+- id: just-bring-drinks
+  text: You don't need to bring anything, maybe just your favorite drinks.
+  translation: No necesitas traer nada, tal vez solo tus bebidas favoritas.
+  visual_hint: 🥤🧊
+  cloze:
+  - 4
+  - 9
+  - 10
+  glossary:
+  - word: maybe
+    meaning: tal vez / quizás
+    ipa: ˈmeɪbi
+  - word: favorite
+    meaning: favoritas
+    ipa: ˈfeɪvərɪt
+- id: text-you-address
+  text: I'll text you the exact pin and buzzer code on Friday.
+  translation: Te enviaré por mensaje la ubicación exacta y el código del timbre el viernes.
+  visual_hint: 📍📱
+  cloze:
+  - 1
+  - 5
+  - 7
+  glossary:
+  - word: pin
+    meaning: ubicación en el mapa
+    ipa: pɪn
+  - word: buzzer code
+    meaning: código del interfón / timbre
+    ipa: ˈbʌzər koʊd
+roleplay:
+  ai_role: friend (Chloe)
+  user_role: host
+  setting: Chatting with a friend after work on Wednesday.
+  turns:
+  - speaker: ai
+    text: Hey! Do you have any plans for this weekend? The weather looks amazing.
+  - speaker: user
+    goal: Invítala al asado en tu patio este sábado a las cuatro.
+    suggested_lines:
+    - We're hosting a casual barbecue on our patio this Saturday afternoon.
+    - We'd love for you to come if you're free around four o'clock.
+  - speaker: ai
+    text: That sounds so fun! Can I bring my friend Lucas? He's visiting from Boston.
+  - speaker: user
+    goal: Dile que por supuesto puede traer a su amigo y que habrá comida para todos.
+    suggested_lines:
+    - Feel free to bring your partner or a friend along too!
+    - We'll grill burgers and veggies, so there's plenty of food for everyone.
+  - speaker: ai
+    text: Awesome! What can we bring to help out? A salad or dessert?
+  - speaker: user
+    goal: Dile que no hace falta nada, solo sus bebidas favoritas si gustan.
+    suggested_lines:
+    - You don't need to bring anything, maybe just your favorite drinks.
+    - Just bring your favorite drinks!
+  - speaker: ai
+    text: Deal! Send me your address so we don't get lost.
+  - speaker: user
+    goal: Promete enviarle la ubicación y el código del timbre el viernes.
+    suggested_lines:
+    - I'll text you the exact pin and buzzer code on Friday.
+    - I'll text you the address and buzzer code Friday!
+  - speaker: ai
+    text: Can't wait! See you Saturday at four.

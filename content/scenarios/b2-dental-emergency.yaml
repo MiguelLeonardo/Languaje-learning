@@ -1,0 +1,137 @@
+id: b2-dental-emergency
+title: Urgent dental appointment abroad
+title_es: Urgencia dental durante un viaje
+cefr: B2
+topic: health-and-emergencies
+description: Explica en una clínica dental que se te fracturó un empaste durante un viaje y necesitas atención de
+  urgencia.
+phrases:
+- id: cracked-filling
+  text: I cracked a filling on my upper molar last night and have sharp sensitivity to cold.
+  translation: Se me fracturó un empaste en la muela superior anoche y tengo una sensibilidad aguda al frío.
+  visual_hint: 🦷⚡
+  cloze:
+  - 1
+  - 3
+  - 6
+  - 13
+  glossary:
+  - word: filling
+    meaning: empaste / tapadura dental
+    ipa: ˈfɪlɪŋ
+  - word: molar
+    meaning: muela / molar
+    ipa: ˈmoʊlər
+- id: fit-me-in-today
+  text: Since I'm flying out on Thursday, could the dentist squeeze me in for an emergency slot today?
+  translation: Como mi vuelo sale el jueves, ¿podría el dentista hacerme un hueco de urgencia hoy?
+  visual_hint: 📅✈️
+  cloze:
+  - 9
+  - 14
+  - 15
+  glossary:
+  - word: squeeze me in
+    meaning: hacerme un espacio en la agenda
+    ipa: skwiːz miː ɪn
+  - word: slot
+    meaning: turno / espacio disponible
+    ipa: slɑːt
+- id: temporary-crown
+  text: Would a temporary composite restoration hold up until I see my regular dentist back home?
+  translation: ¿Aguantaría una restauración temporal de resina hasta que vea a mi dentista habitual en casa?
+  visual_hint: 🛡️🦷
+  cloze:
+  - 2
+  - 4
+  - 5
+  glossary:
+  - word: temporary
+    meaning: temporal / provisional
+    ipa: ˈtempəreri
+  - word: hold up
+    meaning: resistir / aguantar
+    ipa: hoʊld ʌp
+- id: local-anesthetic
+  text: I have no adverse reactions to local anesthetic, though I prefer a numbing gel first.
+  translation: No tengo reacciones adversas a la anestesia local, aunque prefiero un gel anestésico primero.
+  visual_hint: 💉🦷
+  cloze:
+  - 3
+  - 6
+  - 12
+  glossary:
+  - word: adverse reactions
+    meaning: reacciones adversas
+    ipa: ædˈvɜːrs riˈækʃənz
+  - word: numbing
+    meaning: adormecedor / anestésico tópico
+    ipa: ˈnʌmɪŋ
+- id: avoid-chewing-side
+  text: How long should I wait before chewing solid food on that side?
+  translation: ¿Cuánto tiempo debo esperar antes de masticar alimentos sólidos de ese lado?
+  visual_hint: 🍎⏳
+  cloze:
+  - 4
+  - 6
+  - 7
+  glossary:
+  - word: chewing
+    meaning: masticar
+    ipa: ˈtʃuːɪŋ
+  - word: solid food
+    meaning: comida sólida
+    ipa: ˈsɑːlɪd fuːd
+- id: dental-chart-copy
+  text: Could you email me the digital X-ray and treatment notes for my travel insurance?
+  translation: ¿Podría enviarme por correo la radiografía digital y las notas del tratamiento para mi seguro de
+    viaje?
+  visual_hint: 📧🩻
+  cloze:
+  - 5
+  - 7
+  - 8
+  glossary:
+  - word: treatment notes
+    meaning: notas clínicas del tratamiento
+    ipa: ˈtriːtmənt noʊts
+  - word: travel insurance
+    meaning: seguro de viaje
+    ipa: ˈtrævəl ɪnˈʃʊrəns
+roleplay:
+  ai_role: dentist
+  user_role: patient
+  setting: Dental clinic in London during an urgent walk-in visit.
+  turns:
+  - speaker: ai
+    text: Hello, come on in. Our receptionist mentioned you're traveling and having tooth pain. What happened?
+  - speaker: user
+    goal: Explica que se te rompió un empaste anoche y tienes sensibilidad al frío.
+    suggested_lines:
+    - I cracked a filling on my upper molar last night and have sharp sensitivity to cold.
+    - Since I'm flying out on Thursday, could the dentist squeeze me in for an emergency slot today?
+  - speaker: ai
+    text: 'Let''s take a quick bitewing X-ray. Good news: the nerve is healthy, so we can place a bonded composite
+      filling right now.'
+  - speaker: user
+    goal: Pregunta si la restauración aguantará hasta volver a casa y comenta sobre la anestesia local.
+    suggested_lines:
+    - Would a temporary composite restoration hold up until I see my regular dentist back home?
+    - I have no adverse reactions to local anesthetic, though I prefer a numbing gel first.
+  - speaker: ai
+    text: Actually, this UV-cured composite is a full permanent restoration, and I'll apply topical numbing gel
+      first.
+  - speaker: user
+    goal: Pregunta cuánto tiempo esperar antes de masticar sólidos de ese lado.
+    suggested_lines:
+    - How long should I wait before chewing solid food on that side?
+    - When can I chew solid food on that side?
+  - speaker: ai
+    text: Wait about two hours until the numbness wears off completely so you don't bite your cheek.
+  - speaker: user
+    goal: Pide que te envíen por correo la radiografía digital y las notas para tu seguro de viaje.
+    suggested_lines:
+    - Could you email me the digital X-ray and treatment notes for my travel insurance?
+    - Please email me the X-ray and treatment notes for my insurance.
+  - speaker: ai
+    text: Our front desk will email the full PDF packet and itemized receipt right now. Safe flight on Thursday!

@@ -5,51 +5,122 @@ cefr: B2
 topic: work-and-career
 description: Preséntate profesionalmente, habla de tu experiencia y haz preguntas sobre el puesto.
 phrases:
-  - id: tell-about-myself
-    text: I've been working in customer support for about five years.
-    translation: Llevo unos cinco años trabajando en atención al cliente.
-    visual_hint: "💼🎧"
-    cloze: [1, 2]
-    glossary:
-      - {word: been working, meaning: "present perfect continuous: acción que empezó en el pasado y continúa"}
-      - {word: support, meaning: "soporte / atención", ipa: "səˈpɔːrt"}
-  - id: strength
-    text: One of my main strengths is staying calm under pressure.
-    translation: Una de mis principales fortalezas es mantener la calma bajo presión.
-    visual_hint: "🧘"
-    cloze: [4, 6]
-    glossary:
-      - {word: strengths, meaning: "fortalezas", ipa: "streŋkθs"}
-      - {word: under pressure, meaning: "bajo presión"}
-  - id: team-question
-    text: Could you tell me a bit more about the team I'd be working with?
-    translation: ¿Podría contarme un poco más sobre el equipo con el que trabajaría?
-    visual_hint: "👥"
-    cloze: [9]
-    glossary:
-      - {word: "i'd", meaning: "I would (condicional)"}
-  - id: next-steps
-    text: What are the next steps in the hiring process?
-    translation: ¿Cuáles son los próximos pasos del proceso de selección?
-    visual_hint: "➡️"
-    cloze: [7]
-    glossary:
-      - {word: hiring, meaning: "contratación", ipa: "ˈhaɪərɪŋ"}
+- id: tell-about-myself
+  text: I've been working in customer support for about five years.
+  translation: Llevo unos cinco años trabajando en atención al cliente.
+  visual_hint: 💼🎧
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: been working
+    meaning: 'present perfect continuous: acción que empezó en el pasado y continúa'
+  - word: support
+    meaning: soporte / atención
+    ipa: səˈpɔːrt
+- id: strength
+  text: One of my main strengths is staying calm under pressure.
+  translation: Una de mis principales fortalezas es mantener la calma bajo presión.
+  visual_hint: 🧘
+  cloze:
+  - 4
+  - 6
+  glossary:
+  - word: strengths
+    meaning: fortalezas
+    ipa: streŋkθs
+  - word: under pressure
+    meaning: bajo presión
+- id: team-question
+  text: Could you tell me a bit more about the team I'd be working with?
+  translation: ¿Podría contarme un poco más sobre el equipo con el que trabajaría?
+  visual_hint: 👥
+  cloze:
+  - 9
+  glossary:
+  - word: i'd
+    meaning: I would (condicional)
+- id: next-steps
+  text: What are the next steps in the hiring process?
+  translation: ¿Cuáles son los próximos pasos del proceso de selección?
+  visual_hint: ➡️
+  cloze:
+  - 7
+  glossary:
+  - word: hiring
+    meaning: contratación
+    ipa: ˈhaɪərɪŋ
+- id: tight-deadlines
+  text: I thrive in collaborative environments where we solve complex problems under tight deadlines.
+  translation: Me desenvuelvo muy bien en entornos colaborativos donde resolvemos problemas complejos con plazos
+    ajustados.
+  visual_hint: ⚡🤝
+  cloze:
+  - 1
+  - 3
+  - 11
+  glossary:
+  - word: thrive
+    meaning: prosperar / destacar
+    ipa: θraɪv
+  - word: tight deadlines
+    meaning: plazos ajustados
+    ipa: taɪt ˈdedlaɪnz
+- id: measurable-impact
+  text: Within two quarters, that initiative boosted customer retention by eighteen percent.
+  translation: En dos trimestres, esa iniciativa impulsó la retención de clientes en un dieciocho por ciento.
+  visual_hint: 📈🎯
+  cloze:
+  - 2
+  - 5
+  - 7
+  glossary:
+  - word: quarters
+    meaning: trimestres
+    ipa: ˈkwɔːrtərz
+  - word: boosted
+    meaning: impulsó / aumentó
+    ipa: ˈbuːstɪd
+- id: onboarding-expectations
+  text: What would success look like in the first ninety days of this role?
+  translation: ¿Cómo se vería el éxito en los primeros noventa días de este puesto?
+  visual_hint: 🗓️🏆
+  cloze:
+  - 2
+  - 3
+  - 8
+  glossary:
+  - word: success
+    meaning: éxito
+    ipa: səkˈses
+  - word: role
+    meaning: puesto / rol
+    ipa: roʊl
 roleplay:
   ai_role: hiring manager
   user_role: candidate
   setting: A video interview for a customer success position.
   turns:
-    - {speaker: ai, text: "Thanks for joining us today. Could you start by telling me a little about yourself?"}
-    - speaker: user
-      goal: Resume tu experiencia.
-      suggested_lines: ["Sure. I've been working in customer support for about five years.", "I've been working in sales for three years."]
-    - {speaker: ai, text: "Interesting. What would you say is your biggest strength?"}
-    - speaker: user
-      goal: Describe una fortaleza.
-      suggested_lines: ["One of my main strengths is staying calm under pressure.", "I'm very good at solving problems quickly."]
-    - {speaker: ai, text: "That's important here. Do you have any questions for me?"}
-    - speaker: user
-      goal: Pregunta por el equipo o los próximos pasos.
-      suggested_lines: ["Could you tell me a bit more about the team I'd be working with?", "What are the next steps in the hiring process?"]
-    - {speaker: ai, text: "Great question. We'll get back to you within a week with the next steps."}
+  - speaker: ai
+    text: Thanks for joining us today. Could you start by telling me a little about yourself?
+  - speaker: user
+    goal: Resume tu experiencia.
+    suggested_lines:
+    - Sure. I've been working in customer support for about five years.
+    - I've been working in sales for three years.
+  - speaker: ai
+    text: Interesting. What would you say is your biggest strength?
+  - speaker: user
+    goal: Describe una fortaleza.
+    suggested_lines:
+    - One of my main strengths is staying calm under pressure.
+    - I'm very good at solving problems quickly.
+  - speaker: ai
+    text: That's important here. Do you have any questions for me?
+  - speaker: user
+    goal: Pregunta por el equipo o los próximos pasos.
+    suggested_lines:
+    - Could you tell me a bit more about the team I'd be working with?
+    - What are the next steps in the hiring process?
+  - speaker: ai
+    text: Great question. We'll get back to you within a week with the next steps.

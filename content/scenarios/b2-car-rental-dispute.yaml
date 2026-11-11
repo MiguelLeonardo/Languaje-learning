@@ -1,0 +1,137 @@
+id: b2-car-rental-dispute
+title: Resolving a car rental issue
+title_es: Resolver un cargo en alquiler de auto
+cefr: B2
+topic: travel-and-transport
+description: Aclara un cobro indebido en la devolución de un auto alquilado mostrando fotos previas y cobertura
+  contratada.
+phrases:
+- id: pre-existing-scratch
+  text: That scratch on the rear bumper was already documented on the pickup inspection sheet.
+  translation: Ese rasguño en el parachoques trasero ya estaba documentado en la hoja de inspección al recogerlo.
+  visual_hint: 🚗📋
+  cloze:
+  - 1
+  - 4
+  - 8
+  - 12
+  glossary:
+  - word: rear bumper
+    meaning: parachoques trasero
+    ipa: rɪr ˈbʌmpər
+  - word: documented
+    meaning: documentado / registrado
+    ipa: ˈdɑːkjəmentɪd
+- id: timestamped-photos
+  text: I took timestamped photos in the garage before driving off the lot.
+  translation: Tomé fotos con fecha y hora en el garaje antes de salir del estacionamiento.
+  visual_hint: 📸🕒
+  cloze:
+  - 2
+  - 3
+  - 8
+  - 11
+  glossary:
+  - word: timestamped
+    meaning: con marca de fecha y hora
+    ipa: ˈtaɪmstæmpt
+  - word: lot
+    meaning: lote / estacionamiento
+    ipa: lɑːt
+- id: full-tank-receipt
+  text: I refueled two miles away and have the gas station receipt right here.
+  translation: Recargué combustible a dos millas de aquí y tengo el recibo de la gasolinera justo aquí.
+  visual_hint: ⛽🧾
+  cloze:
+  - 1
+  - 8
+  - 10
+  glossary:
+  - word: refueled
+    meaning: reposté / llené el tanque
+    ipa: ˌriːˈfjuːəld
+  - word: receipt
+    meaning: recibo / comprobante
+    ipa: rɪˈsiːt
+- id: comprehensive-waiver
+  text: My booking includes the zero-deductible collision damage waiver.
+  translation: Mi reserva incluye la exención de daños por colisión con cero deducible.
+  visual_hint: 🛡️📄
+  cloze:
+  - 2
+  - 4
+  - 6
+  - 7
+  glossary:
+  - word: zero-deductible
+    meaning: sin franquicia / cero deducible
+    ipa: ˈzɪroʊ dɪˈdʌktəbəl
+  - word: waiver
+    meaning: exención de responsabilidad
+    ipa: ˈweɪvər
+- id: remove-extra-fee
+  text: Could you please remove the refueling surcharge and send an updated invoice?
+  translation: ¿Podría por favor eliminar el recargo por combustible y enviarme una factura actualizada?
+  visual_hint: 💻✅
+  cloze:
+  - 3
+  - 6
+  - 10
+  glossary:
+  - word: surcharge
+    meaning: recargo adicional
+    ipa: ˈsɜːrtʃɑːrdʒ
+  - word: updated
+    meaning: actualizada
+    ipa: ˌʌpˈdeɪtɪd
+- id: release-security-deposit
+  text: How soon will the security deposit hold be released on my credit card?
+  translation: ¿Qué tan pronto se liberará la retención del depósito de garantía en mi tarjeta de crédito?
+  visual_hint: 🔓💳
+  cloze:
+  - 4
+  - 5
+  - 8
+  glossary:
+  - word: security deposit
+    meaning: depósito de seguridad
+    ipa: sɪˈkjʊrəti dɪˈpɑːzɪt
+  - word: released
+    meaning: liberado
+    ipa: rɪˈliːst
+roleplay:
+  ai_role: rental return agent
+  user_role: traveler
+  setting: Airport car rental return desk before a flight.
+  turns:
+  - speaker: ai
+    text: Welcome back. Looking at the vehicle, there's a scratch on the rear bumper and a refueling fee on your
+      statement.
+  - speaker: user
+    goal: Explica que el rasguño ya estaba registrado y tienes fotos con hora.
+    suggested_lines:
+    - That scratch on the rear bumper was already documented on the pickup inspection sheet.
+    - I took timestamped photos in the garage before driving off the lot.
+  - speaker: ai
+    text: Oh, let me check the original check-out form. You're right, it's marked here. What about the fuel level?
+  - speaker: user
+    goal: Muestra el recibo de la gasolinera y pide eliminar el recargo.
+    suggested_lines:
+    - I refueled two miles away and have the gas station receipt right here.
+    - Could you please remove the refueling surcharge and send an updated invoice?
+  - speaker: ai
+    text: Got it, I've waived the fuel charge and noted your zero-deductible coverage.
+  - speaker: user
+    goal: Confirma tu cobertura sin deducible y pregunta cuándo liberan el depósito.
+    suggested_lines:
+    - How soon will the security deposit hold be released on my credit card?
+    - My booking includes the zero-deductible collision damage waiver.
+  - speaker: ai
+    text: The hold is released immediately and reflects within two business days. Here is your zero-balance receipt!
+  - speaker: user
+    goal: Agradece y pide que envíen la factura actualizada a tu correo.
+    suggested_lines:
+    - Thank you, please email me the updated invoice as well.
+    - Could you please remove the refueling surcharge and send an updated invoice?
+  - speaker: ai
+    text: Just sent it to your inbox. Safe travels home!

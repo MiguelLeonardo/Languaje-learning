@@ -1,0 +1,127 @@
+id: a1-first-day-office
+title: First day at the office
+title_es: Primer día en la oficina
+cefr: A1
+topic: work-and-career
+description: Preséntate en recepción en tu primer día de trabajo, pregunta por tu escritorio y conoce a tu equipo.
+phrases:
+- id: first-day-here
+  text: Good morning! Today is my first day in the marketing team.
+  translation: ¡Buenos días! Hoy es mi primer día en el equipo de marketing.
+  visual_hint: 💼😊
+  cloze:
+  - 4
+  - 5
+  - 9
+  glossary:
+  - word: first day
+    meaning: primer día
+    ipa: fɜːrst deɪ
+  - word: team
+    meaning: equipo
+    ipa: tiːm
+- id: where-is-my-desk
+  text: Where is my desk, please?
+  translation: ¿Dónde está mi escritorio, por favor?
+  visual_hint: 🖥️🪑
+  cloze:
+  - 0
+  - 3
+  glossary:
+  - word: where
+    meaning: dónde
+    ipa: wer
+  - word: desk
+    meaning: escritorio
+    ipa: desk
+- id: visitor-badge
+  text: Here is my ID card for the office badge.
+  translation: Aquí está mi identificación para la credencial de la oficina.
+  visual_hint: 🪪🏢
+  cloze:
+  - 3
+  - 8
+  glossary:
+  - word: ID card
+    meaning: documento de identidad
+    ipa: ˌaɪˈdiː kɑːrd
+  - word: badge
+    meaning: credencial / gafete
+    ipa: bædʒ
+- id: kitchen-and-coffee
+  text: Is the coffee machine on this floor?
+  translation: ¿Está la máquina de café en este piso?
+  visual_hint: ☕🏢
+  cloze:
+  - 2
+  - 6
+  glossary:
+  - word: coffee machine
+    meaning: máquina de café
+    ipa: ˈkɔːfi məˈʃiːn
+  - word: floor
+    meaning: piso / planta
+    ipa: flɔːr
+- id: happy-to-be-here
+  text: Nice to meet you! I am very happy to join the team.
+  translation: ¡Mucho gusto! Estoy muy feliz de unirme al equipo.
+  visual_hint: 🤝🌟
+  cloze:
+  - 6
+  - 8
+  glossary:
+  - word: happy
+    meaning: feliz / contento
+    ipa: ˈhæpi
+  - word: join
+    meaning: unirse a
+    ipa: dʒɔɪn
+- id: what-time-lunch
+  text: What time do we usually have lunch?
+  translation: ¿A qué hora solemos almorzar?
+  visual_hint: 🥗🕛
+  cloze:
+  - 1
+  - 6
+  glossary:
+  - word: usually
+    meaning: usualmente
+    ipa: ˈjuːʒuəli
+  - word: lunch
+    meaning: almuerzo
+    ipa: lʌntʃ
+roleplay:
+  ai_role: office manager
+  user_role: new team member
+  setting: Office reception area on Monday morning.
+  turns:
+  - speaker: ai
+    text: Good morning! Welcome to BrightTech. How can I help you today?
+  - speaker: user
+    goal: Di que hoy es tu primer día en el equipo de marketing y muestra tu identificación.
+    suggested_lines:
+    - Good morning! Today is my first day in the marketing team.
+    - Here is my ID card for the office badge.
+  - speaker: ai
+    text: Welcome aboard! Here is your security badge and laptop.
+  - speaker: user
+    goal: Pregunta dónde está tu escritorio y si la máquina de café está en este piso.
+    suggested_lines:
+    - Where is my desk, please?
+    - Is the coffee machine on this floor?
+  - speaker: ai
+    text: Your desk is right by the window, and the kitchen with free coffee is down the hall.
+  - speaker: user
+    goal: Di que estás muy feliz de unirte al equipo.
+    suggested_lines:
+    - Nice to meet you! I am very happy to join the team.
+    - Thank you! I am very happy to join the team.
+  - speaker: ai
+    text: Everyone is excited to meet you! Do you have any other questions?
+  - speaker: user
+    goal: Pregunta a qué hora suelen almorzar.
+    suggested_lines:
+    - What time do we usually have lunch?
+    - What time is lunch?
+  - speaker: ai
+    text: We head out for lunch together around 12:30. Have a great first day!

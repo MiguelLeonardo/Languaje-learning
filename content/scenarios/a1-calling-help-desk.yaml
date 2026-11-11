@@ -1,0 +1,127 @@
+id: a1-calling-help-desk
+title: Asking for first aid at reception
+title_es: Pedir un botiquín en recepción
+cefr: A1
+topic: health-and-emergencies
+description: Pide ayuda sencilla por un corte pequeño en el dedo, solicita una curita y agua.
+phrases:
+- id: cut-my-finger
+  text: Excuse me, I have a small cut on my finger.
+  translation: Disculpe, tengo un pequeño corte en el dedo.
+  visual_hint: ☝️🩹
+  cloze:
+  - 5
+  - 6
+  - 9
+  glossary:
+  - word: cut
+    meaning: corte / herida pequeña
+    ipa: kʌt
+  - word: finger
+    meaning: dedo de la mano
+    ipa: ˈfɪŋɡər
+- id: first-aid-kit
+  text: Do you have a first aid kit here?
+  translation: ¿Tienen un botiquín de primeros auxilios aquí?
+  visual_hint: 🧰➕
+  cloze:
+  - 4
+  - 5
+  - 6
+  glossary:
+  - word: first aid kit
+    meaning: botiquín de primeros auxilios
+    ipa: fɜːrst eɪd kɪt
+- id: need-a-band-aid
+  text: Can I have a bandage and some antiseptic wipes, please?
+  translation: ¿Me puede dar una curita y unas toallitas antisépticas, por favor?
+  visual_hint: 🩹🧴
+  cloze:
+  - 4
+  - 7
+  glossary:
+  - word: bandage
+    meaning: curita / vendaje
+    ipa: ˈbændɪdʒ
+  - word: wipes
+    meaning: toallitas limpiadoras
+    ipa: waɪps
+- id: glass-of-water
+  text: Could I also get a glass of cold water?
+  translation: ¿Me podría dar también un vaso de agua fría?
+  visual_hint: 🥛💧
+  cloze:
+  - 5
+  - 7
+  - 8
+  glossary:
+  - word: glass
+    meaning: vaso
+    ipa: ɡlæs
+  - word: cold
+    meaning: fría
+    ipa: koʊld
+- id: feel-much-better
+  text: It is not serious. I feel much better now.
+  translation: No es grave. Me siento mucho mejor ahora.
+  visual_hint: 😌👍
+  cloze:
+  - 3
+  - 5
+  - 7
+  glossary:
+  - word: serious
+    meaning: grave / serio
+    ipa: ˈsɪriəs
+  - word: better
+    meaning: mejor
+    ipa: ˈbetər
+- id: nearest-clinic
+  text: Where is the nearest pharmacy from here?
+  translation: ¿Dónde está la farmacia más cercana desde aquí?
+  visual_hint: 🏥📍
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: nearest
+    meaning: más cercana
+    ipa: ˈnɪrɪst
+  - word: pharmacy
+    meaning: farmacia
+    ipa: ˈfɑːrməsi
+roleplay:
+  ai_role: receptionist
+  user_role: visitor
+  setting: Lobby reception desk at a community center.
+  turns:
+  - speaker: ai
+    text: Oh! Are you okay? What happened to your hand?
+  - speaker: user
+    goal: Explica que tienes un pequeño corte en el dedo y pregunta por el botiquín.
+    suggested_lines:
+    - Excuse me, I have a small cut on my finger.
+    - Do you have a first aid kit here?
+  - speaker: ai
+    text: Yes, I have our first aid box right under the counter. What do you need?
+  - speaker: user
+    goal: Pide una curita y toallitas antisépticas.
+    suggested_lines:
+    - Can I have a bandage and some antiseptic wipes, please?
+    - A bandage, please.
+  - speaker: ai
+    text: Here you go. Please sit down for a moment. Can I get you anything else?
+  - speaker: user
+    goal: Pide un vaso de agua fría y di que ya te sientes mejor.
+    suggested_lines:
+    - Could I also get a glass of cold water?
+    - It is not serious. I feel much better now.
+  - speaker: ai
+    text: Here is your water. Glad it's just a paper cut!
+  - speaker: user
+    goal: Pregunta dónde está la farmacia más cercana.
+    suggested_lines:
+    - Where is the nearest pharmacy from here?
+    - Thank you! Where is the nearest pharmacy?
+  - speaker: ai
+    text: There's a pharmacy right across the street next to the bakery.

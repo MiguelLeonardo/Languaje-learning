@@ -5,40 +5,106 @@ cefr: B1
 topic: health-and-emergencies
 description: Describe cuándo empezaron los síntomas, la intensidad del dolor y pide una receta.
 phrases:
-  - id: sharp-pain
-    text: I've had a sharp pain in my ankle since yesterday morning.
-    translation: Tengo un dolor agudo en el tobillo desde ayer por la mañana.
-    visual_hint: "🦶⚡"
-    cloze: [3, 6]
-    glossary:
-      - {word: sharp pain, meaning: "dolor agudo / punzante"}
-      - {word: ankle, meaning: "tobillo", ipa: "ˈæŋkəl"}
-  - id: swollen-twisted
-    text: It got swollen after I twisted it while running.
-    translation: Se hinchó después de que me lo torcí corriendo.
-    visual_hint: "🏃‍♂️🩹"
-    cloze: [2, 5]
-    glossary:
-      - {word: swollen, meaning: "hinchado/a", ipa: "ˈswoʊlən"}
-      - {word: twisted, meaning: "torcido / esguinzado", ipa: "ˈtwɪstɪd"}
-  - id: need-x-ray
-    text: Do you think I need an X-ray or just rest?
-    translation: ¿Cree que necesito una radiografía o solo reposo?
-    visual_hint: "🩻🛌"
-    cloze: [6, 9]
-    glossary:
-      - {word: X-ray, meaning: "radiografía / rayos X", ipa: "ˈeks reɪ"}
+- id: sharp-pain
+  text: I've had a sharp pain in my ankle since yesterday morning.
+  translation: Tengo un dolor agudo en el tobillo desde ayer por la mañana.
+  visual_hint: 🦶⚡
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: sharp pain
+    meaning: dolor agudo / punzante
+  - word: ankle
+    meaning: tobillo
+    ipa: ˈæŋkəl
+- id: swollen-twisted
+  text: It got swollen after I twisted it while running.
+  translation: Se hinchó después de que me lo torcí corriendo.
+  visual_hint: 🏃‍♂️🩹
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: swollen
+    meaning: hinchado/a
+    ipa: ˈswoʊlən
+  - word: twisted
+    meaning: torcido / esguinzado
+    ipa: ˈtwɪstɪd
+- id: need-x-ray
+  text: Do you think I need an X-ray or just rest?
+  translation: ¿Cree que necesito una radiografía o solo reposo?
+  visual_hint: 🩻🛌
+  cloze:
+  - 6
+  - 9
+  glossary:
+  - word: X-ray
+    meaning: radiografía / rayos X
+    ipa: ˈeks reɪ
+- id: need-an-xray
+  text: Do you think I need an X-ray to rule out a fracture?
+  translation: ¿Cree que necesito una radiografía para descartar una fractura?
+  visual_hint: 🩻🦴
+  cloze:
+  - 5
+  - 7
+  - 11
+  glossary:
+  - word: X-ray
+    meaning: radiografía
+    ipa: ˈeks reɪ
+  - word: rule out
+    meaning: descartar
+    ipa: ruːl aʊt
+- id: keep-it-elevated
+  text: How many days should I keep my leg elevated and apply ice?
+  translation: ¿Cuántos días debo mantener la pierna elevada y aplicar hielo?
+  visual_hint: 🧊🦵
+  cloze:
+  - 5
+  - 8
+  - 10
+  glossary:
+  - word: elevated
+    meaning: elevada
+    ipa: ˈelɪveɪtɪd
+  - word: apply
+    meaning: aplicar
+    ipa: əˈplaɪ
+- id: medical-certificate
+  text: Could you write a medical certificate so I can rest from work?
+  translation: ¿Podría extenderme un certificado médico para poder descansar del trabajo?
+  visual_hint: 📋🏥
+  cloze:
+  - 4
+  - 5
+  - 9
+  glossary:
+  - word: medical certificate
+    meaning: certificado / justificante médico
+    ipa: ˈmedɪkəl sərˈtɪfɪkət
+  - word: rest
+    meaning: descansar
+    ipa: rest
 roleplay:
   ai_role: urgent care doctor
   user_role: patient
   setting: Urgent care clinic examination room.
   turns:
-    - {speaker: ai, text: "Good morning. Tell me what brings you to the clinic today."}
-    - speaker: user
-      goal: Explica que tienes un dolor agudo en el tobillo desde ayer.
-      suggested_lines: ["I've had a sharp pain in my ankle since yesterday morning."]
-    - {speaker: ai, text: "Let me take a look. How did the injury happen?"}
-    - speaker: user
-      goal: Explica que se hinchó al torcértelo corriendo y pregunta si necesitas radiografía.
-      suggested_lines: ["It got swollen after I twisted it while running.", "Do you think I need an X-ray or just rest?"]
-    - {speaker: ai, text: "We'll do a quick X-ray just to rule out a fracture."}
+  - speaker: ai
+    text: Good morning. Tell me what brings you to the clinic today.
+  - speaker: user
+    goal: Explica que tienes un dolor agudo en el tobillo desde ayer.
+    suggested_lines:
+    - I've had a sharp pain in my ankle since yesterday morning.
+  - speaker: ai
+    text: Let me take a look. How did the injury happen?
+  - speaker: user
+    goal: Explica que se hinchó al torcértelo corriendo y pregunta si necesitas radiografía.
+    suggested_lines:
+    - It got swollen after I twisted it while running.
+    - Do you think I need an X-ray or just rest?
+  - speaker: ai
+    text: We'll do a quick X-ray just to rule out a fracture.

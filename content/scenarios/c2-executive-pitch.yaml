@@ -5,41 +5,111 @@ cefr: C2
 topic: work-and-career
 description: Presenta una iniciativa estratégica ante el comité directivo y defiende el retorno de inversión.
 phrases:
-  - id: long-term-payoff
-    text: While the upfront investment is substantial, the long-term payoff is undeniable.
-    translation: Aunque la inversión inicial es considerable, el beneficio a largo plazo es innegable.
-    visual_hint: "📈💼"
-    cloze: [2, 7]
-    glossary:
-      - {word: upfront investment, meaning: "inversión inicial", ipa: "ˌʌpˈfrʌnt"}
-      - {word: payoff, meaning: "retorno / beneficio resultante", ipa: "ˈpeɪɔːf"}
-  - id: mitigate-risk
-    text: We've built in clear milestones so we can course-correct if needed.
-    translation: Hemos incorporado hitos claros para poder corregir el rumbo si fuera necesario.
-    visual_hint: "🧭🎯"
-    cloze: [4, 8]
-    glossary:
-      - {word: milestones, meaning: "hitos de control", ipa: "ˈmaɪlstoʊnz"}
-      - {word: course-correct, meaning: "corregir el rumbo sobre la marcha"}
-  - id: green-light
-    text: With your green light today, we can kick off the pilot next month.
-    translation: Con su visto bueno hoy, podemos poner en marcha el piloto el próximo mes.
-    visual_hint: "🟢🚀"
-    cloze: [2, 7]
-    glossary:
-      - {word: green light, meaning: "visto bueno / aprobación"}
-      - {word: kick off, meaning: "dar inicio / poner en marcha"}
+- id: long-term-payoff
+  text: While the upfront investment is substantial, the long-term payoff is undeniable.
+  translation: Aunque la inversión inicial es considerable, el beneficio a largo plazo es innegable.
+  visual_hint: 📈💼
+  cloze:
+  - 2
+  - 7
+  glossary:
+  - word: upfront investment
+    meaning: inversión inicial
+    ipa: ˌʌpˈfrʌnt
+  - word: payoff
+    meaning: retorno / beneficio resultante
+    ipa: ˈpeɪɔːf
+- id: mitigate-risk
+  text: We've built in clear milestones so we can course-correct if needed.
+  translation: Hemos incorporado hitos claros para poder corregir el rumbo si fuera necesario.
+  visual_hint: 🧭🎯
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: milestones
+    meaning: hitos de control
+    ipa: ˈmaɪlstoʊnz
+  - word: course-correct
+    meaning: corregir el rumbo sobre la marcha
+- id: green-light
+  text: With your green light today, we can kick off the pilot next month.
+  translation: Con su visto bueno hoy, podemos poner en marcha el piloto el próximo mes.
+  visual_hint: 🟢🚀
+  cloze:
+  - 2
+  - 7
+  glossary:
+  - word: green light
+    meaning: visto bueno / aprobación
+  - word: kick off
+    meaning: dar inicio / poner en marcha
+- id: downside-mitigation
+  text: We've ring-fenced the downside risk by staging capital deployment across three milestones.
+  translation: Hemos acotado el riesgo de pérdida escalonando el despliegue de capital en tres hitos.
+  visual_hint: 🛡️🏛️
+  cloze:
+  - 1
+  - 3
+  - 7
+  - 11
+  glossary:
+  - word: ring-fenced
+    meaning: blindado / aislado financieramente
+    ipa: ˈrɪŋ fenst
+  - word: milestones
+    meaning: hitos
+    ipa: ˈmaɪlstoʊnz
+- id: unit-economics
+  text: Our unit economics turn cash-flow positive well before the Series B runway expires.
+  translation: Nuestra economía unitaria genera flujo de caja positivo mucho antes de que expire el capital de la
+    Serie B.
+  visual_hint: 💹🏦
+  cloze:
+  - 1
+  - 2
+  - 4
+  - 11
+  glossary:
+  - word: unit economics
+    meaning: economía unitaria
+    ipa: ˈjuːnɪt ˌiːkəˈnɑːmɪks
+  - word: runway
+    meaning: margen de liquidez
+    ipa: ˈrʌnweɪ
+- id: board-alignment
+  text: With the board's green light today, we can execute the rollout by Q3.
+  translation: Con la luz verde del directorio hoy, podemos ejecutar el lanzamiento para el tercer trimestre.
+  visual_hint: 🟢🚀
+  cloze:
+  - 3
+  - 4
+  - 8
+  - 10
+  glossary:
+  - word: green light
+    meaning: aprobación / luz verde
+    ipa: ɡriːn laɪt
+  - word: rollout
+    meaning: despliegue / lanzamiento
+    ipa: ˈroʊlaʊt
 roleplay:
   ai_role: chief financial officer
   user_role: product director
   setting: Executive boardroom quarterly budget review.
   turns:
-    - {speaker: ai, text: "Your proposal looks ambitious, but the initial budget request is quite steep."}
-    - speaker: user
-      goal: Defiende el retorno a largo plazo pese a la inversión inicial.
-      suggested_lines: ["While the upfront investment is substantial, the long-term payoff is undeniable."]
-    - {speaker: ai, text: "And how do you plan to contain risk if adoption is slower than projected?"}
-    - speaker: user
-      goal: Explica que hay hitos para corregir el rumbo y pide aprobación para el piloto.
-      suggested_lines: ["We've built in clear milestones so we can course-correct if needed.", "With your green light today, we can kick off the pilot next month."]
-    - {speaker: ai, text: "Fair enough. You have our green light for the phase-one pilot."}
+  - speaker: ai
+    text: Your proposal looks ambitious, but the initial budget request is quite steep.
+  - speaker: user
+    goal: Defiende el retorno a largo plazo pese a la inversión inicial.
+    suggested_lines:
+    - While the upfront investment is substantial, the long-term payoff is undeniable.
+  - speaker: ai
+    text: And how do you plan to contain risk if adoption is slower than projected?
+  - speaker: user
+    goal: Explica que hay hitos para corregir el rumbo y pide aprobación para el piloto.
+    suggested_lines:
+    - We've built in clear milestones so we can course-correct if needed.
+    - With your green light today, we can kick off the pilot next month.
+  - speaker: ai
+    text: Fair enough. You have our green light for the phase-one pilot.

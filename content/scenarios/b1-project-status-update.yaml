@@ -1,0 +1,132 @@
+id: b1-project-status-update
+title: Giving a daily standup update
+title_es: Dar un avance diario de proyecto
+cefr: B1
+topic: work-and-career
+description: Explica en la reunión diaria qué completaste ayer, en qué trabajas hoy y si tienes algún bloqueo.
+phrases:
+- id: wrapped-up-feature
+  text: Yesterday I finished testing the payment page and fixed two small bugs.
+  translation: Ayer terminé de probar la página de pagos y corregí dos pequeños errores.
+  visual_hint: ✅💻
+  cloze:
+  - 2
+  - 3
+  - 8
+  glossary:
+  - word: testing
+    meaning: probando / haciendo pruebas
+    ipa: ˈtestɪŋ
+  - word: bugs
+    meaning: errores de código / fallos
+    ipa: bʌɡz
+- id: focusing-today-on
+  text: Today my main priority is connecting the checkout form to the database.
+  translation: Hoy mi prioridad principal es conectar el formulario de pago a la base de datos.
+  visual_hint: 🎯🗄️
+  cloze:
+  - 2
+  - 3
+  - 6
+  glossary:
+  - word: priority
+    meaning: prioridad
+    ipa: praɪˈɔːrəti
+  - word: checkout form
+    meaning: formulario de compra
+    ipa: ˈtʃekaʊt fɔːrm
+- id: waiting-on-api
+  text: I'm currently blocked waiting for the updated API keys from security.
+  translation: Actualmente estoy bloqueado esperando las llaves de API actualizadas de seguridad.
+  visual_hint: 🚧🔑
+  cloze:
+  - 2
+  - 3
+  - 7
+  glossary:
+  - word: blocked
+    meaning: bloqueado / detenido
+    ipa: blɑːkt
+  - word: waiting for
+    meaning: esperando por
+    ipa: ˈweɪtɪŋ fɔːr
+- id: on-track-for-friday
+  text: Once I get access, we'll still be on track for Friday's release.
+  translation: Una vez que tenga acceso, seguiremos a tiempo para el lanzamiento del viernes.
+  visual_hint: 🚀📅
+  cloze:
+  - 7
+  - 8
+  - 11
+  glossary:
+  - word: on track
+    meaning: en camino / a tiempo según el plan
+    ipa: ɑːn træk
+  - word: release
+    meaning: lanzamiento / entrega
+    ipa: rɪˈliːs
+- id: pair-after-standup
+  text: Could we sync for ten minutes after standup to review the pull request?
+  translation: ¿Podríamos reunirnos diez minutos después del standup para revisar el pull request?
+  visual_hint: 🤝🔍
+  cloze:
+  - 2
+  - 7
+  - 9
+  glossary:
+  - word: sync
+    meaning: sincronizarse / conversar brevemente
+    ipa: sɪŋk
+  - word: review
+    meaning: revisar
+    ipa: rɪˈvjuː
+- id: no-other-blockers
+  text: Other than that, everything is moving smoothly on my end.
+  translation: Fuera de eso, todo avanza sin contratiempos por mi parte.
+  visual_hint: 🌊👍
+  cloze:
+  - 5
+  - 6
+  - 9
+  glossary:
+  - word: smoothly
+    meaning: sin problemas / fluidamente
+    ipa: ˈsmuːðli
+  - word: on my end
+    meaning: por mi lado / de mi parte
+    ipa: ɑːn maɪ end
+roleplay:
+  ai_role: scrum master
+  user_role: team member
+  setting: Morning 10-minute agile daily standup.
+  turns:
+  - speaker: ai
+    text: Morning everyone! Let's go around the room. How did the payment module go yesterday?
+  - speaker: user
+    goal: Cuenta que ayer terminaste de probar la página de pagos y corregiste dos bugs.
+    suggested_lines:
+    - Yesterday I finished testing the payment page and fixed two small bugs.
+    - Today my main priority is connecting the checkout form to the database.
+  - speaker: ai
+    text: Nice progress! What are you focusing on today, and do you have any blockers?
+  - speaker: user
+    goal: Explica tu prioridad de hoy y que estás bloqueado esperando las llaves de API.
+    suggested_lines:
+    - I'm currently blocked waiting for the updated API keys from security.
+    - Today my main priority is connecting the checkout form to the database.
+  - speaker: ai
+    text: I'll ping the security lead right now to get those keys unlocked. Will this impact Friday's release?
+  - speaker: user
+    goal: Confirma que en cuanto tengas acceso seguirán a tiempo para el viernes.
+    suggested_lines:
+    - Once I get access, we'll still be on track for Friday's release.
+    - Other than that, everything is moving smoothly on my end.
+  - speaker: ai
+    text: Great to hear. Do you need anyone to review your code today?
+  - speaker: user
+    goal: Pide diez minutos después del standup para revisar el pull request.
+    suggested_lines:
+    - Could we sync for ten minutes after standup to review the pull request?
+    - Yes, let's sync after standup to review the pull request.
+  - speaker: ai
+    text: Sure thing, let's stay on the line right after this!

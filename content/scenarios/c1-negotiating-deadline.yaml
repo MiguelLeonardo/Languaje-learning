@@ -5,51 +5,105 @@ cefr: C1
 topic: work-and-career
 description: Explica un retraso con diplomacia y negocia una nueva fecha con tu cliente.
 phrases:
-  - id: heads-up
-    text: I wanted to give you a heads-up that we're running slightly behind schedule.
-    translation: Quería avisarte con antelación de que vamos un poco atrasados.
-    visual_hint: "⏳📅"
-    cloze: [6, 11]
-    glossary:
-      - {word: heads-up, meaning: "aviso anticipado (informal-profesional)"}
-      - {word: behind schedule, meaning: "atrasado respecto al calendario"}
-  - id: propose
-    text: Would you be open to pushing the deadline back by a week?
-    translation: ¿Estarías dispuesto a aplazar la fecha límite una semana?
-    visual_hint: "↪️"
-    cloze: [5, 7]
-    glossary:
-      - {word: open to, meaning: "dispuesto a considerar"}
-      - {word: push back, meaning: "aplazar"}
-  - id: trade-off
-    text: That way we can deliver without compromising on quality.
-    translation: Así podremos entregar sin sacrificar la calidad.
-    visual_hint: "⚖️"
-    cloze: [6]
-    glossary:
-      - {word: compromising, meaning: "comprometer / sacrificar", ipa: "ˈkɑːmprəmaɪzɪŋ"}
-  - id: meet-halfway
-    text: Perhaps we could meet halfway and ship the core features first.
-    translation: Quizás podríamos llegar a un punto medio y entregar primero las funciones principales.
-    visual_hint: "🤝"
-    cloze: [3, 4]
-    glossary:
-      - {word: meet halfway, meaning: "llegar a un acuerdo intermedio"}
+- id: heads-up
+  text: I wanted to give you a heads-up that we're running slightly behind schedule.
+  translation: Quería avisarte con antelación de que vamos un poco atrasados.
+  visual_hint: ⏳📅
+  cloze:
+  - 6
+  - 11
+  glossary:
+  - word: heads-up
+    meaning: aviso anticipado (informal-profesional)
+  - word: behind schedule
+    meaning: atrasado respecto al calendario
+- id: propose
+  text: Would you be open to pushing the deadline back by a week?
+  translation: ¿Estarías dispuesto a aplazar la fecha límite una semana?
+  visual_hint: ↪️
+  cloze:
+  - 5
+  - 7
+  glossary:
+  - word: open to
+    meaning: dispuesto a considerar
+  - word: push back
+    meaning: aplazar
+- id: trade-off
+  text: That way we can deliver without compromising on quality.
+  translation: Así podremos entregar sin sacrificar la calidad.
+  visual_hint: ⚖️
+  cloze:
+  - 6
+  glossary:
+  - word: compromising
+    meaning: comprometer / sacrificar
+    ipa: ˈkɑːmprəmaɪzɪŋ
+- id: meet-halfway
+  text: Perhaps we could meet halfway and ship the core features first.
+  translation: Quizás podríamos llegar a un punto medio y entregar primero las funciones principales.
+  visual_hint: 🤝
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: meet halfway
+    meaning: llegar a un acuerdo intermedio
+- id: parallel-workstreams
+  text: We can run QA testing in parallel to compress the critical path.
+  translation: Podemos ejecutar las pruebas de calidad en paralelo para comprimir la ruta crítica.
+  visual_hint: 🔀⚙️
+  cloze:
+  - 5
+  - 7
+  - 10
+  glossary:
+  - word: in parallel
+    meaning: en paralelo
+    ipa: ɪn ˈpærəlel
+  - word: compress
+    meaning: comprimir / acortar
+    ipa: kəmˈpres
+- id: stakeholder-sign-off
+  text: Once we secure stakeholder sign-off today, we'll lock in the sprint scope.
+  translation: Una vez que aseguremos la aprobación de los interesados hoy, fijaremos el alcance del sprint.
+  visual_hint: ✍️🔒
+  cloze:
+  - 2
+  - 4
+  - 7
+  glossary:
+  - word: sign-off
+    meaning: aprobación formal
+    ipa: ˈsaɪn ɔːf
+  - word: lock in
+    meaning: asegurar / fijar
+    ipa: lɑːk ɪn
 roleplay:
   ai_role: client project lead
   user_role: agency project manager
   setting: A weekly status call with an important client.
   turns:
-    - {speaker: ai, text: "Morning! So, are we still on track for the launch on the fifteenth?"}
-    - speaker: user
-      goal: Avisa del retraso con diplomacia.
-      suggested_lines: ["I wanted to give you a heads-up that we're running slightly behind schedule.", "Actually, we're running a bit behind schedule."]
-    - {speaker: ai, text: "Hmm, that's not ideal. What are you proposing?"}
-    - speaker: user
-      goal: Propón aplazar una semana y justifícalo.
-      suggested_lines: ["Would you be open to pushing the deadline back by a week? That way we can deliver without compromising on quality."]
-    - {speaker: ai, text: "A full week is hard for us. Our marketing campaign is already booked."}
-    - speaker: user
-      goal: Ofrece un punto medio.
-      suggested_lines: ["Perhaps we could meet halfway and ship the core features first.", "We could meet halfway and launch the core features on time."]
-    - {speaker: ai, text: "That could work. Send me a revised plan by Friday."}
+  - speaker: ai
+    text: Morning! So, are we still on track for the launch on the fifteenth?
+  - speaker: user
+    goal: Avisa del retraso con diplomacia.
+    suggested_lines:
+    - I wanted to give you a heads-up that we're running slightly behind schedule.
+    - Actually, we're running a bit behind schedule.
+  - speaker: ai
+    text: Hmm, that's not ideal. What are you proposing?
+  - speaker: user
+    goal: Propón aplazar una semana y justifícalo.
+    suggested_lines:
+    - Would you be open to pushing the deadline back by a week? That way we can deliver without compromising on
+      quality.
+  - speaker: ai
+    text: A full week is hard for us. Our marketing campaign is already booked.
+  - speaker: user
+    goal: Ofrece un punto medio.
+    suggested_lines:
+    - Perhaps we could meet halfway and ship the core features first.
+    - We could meet halfway and launch the core features on time.
+  - speaker: ai
+    text: That could work. Send me a revised plan by Friday.

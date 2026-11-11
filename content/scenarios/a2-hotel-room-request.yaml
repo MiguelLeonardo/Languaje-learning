@@ -1,0 +1,131 @@
+id: a2-hotel-room-request
+title: Requesting hotel room amenities
+title_es: Pedir servicios a la habitación del hotel
+cefr: A2
+topic: hotel-and-shopping
+description: Llama a recepción desde tu habitación para pedir toallas extra, una almohada adicional y preguntar
+  la clave del wifi.
+phrases:
+- id: extra-towels
+  text: Could you send two extra bath towels to room 304, please?
+  translation: ¿Podría enviar dos toallas de baño extra a la habitación 304, por favor?
+  visual_hint: 🛁🧺
+  cloze:
+  - 2
+  - 5
+  - 8
+  glossary:
+  - word: bath towels
+    meaning: toallas de baño
+    ipa: bæθ ˈtaʊəlz
+  - word: extra
+    meaning: adicionales / extra
+    ipa: ˈekstrə
+- id: wifi-password
+  text: What is the password for the guest Wi-Fi network?
+  translation: ¿Cuál es la contraseña de la red wifi para huéspedes?
+  visual_hint: 📶🔑
+  cloze:
+  - 3
+  - 6
+  - 8
+  glossary:
+  - word: password
+    meaning: contraseña
+    ipa: ˈpæswɜːrd
+  - word: guest
+    meaning: huésped / invitado
+    ipa: ɡest
+- id: air-conditioning-warm
+  text: The air conditioning in my room is not cooling properly.
+  translation: El aire acondicionado de mi habitación no está enfriando bien.
+  visual_hint: ❄️🌡️
+  cloze:
+  - 1
+  - 2
+  - 8
+  glossary:
+  - word: air conditioning
+    meaning: aire acondicionado
+    ipa: er kənˈdɪʃənɪŋ
+  - word: cooling
+    meaning: enfriando
+    ipa: ˈkuːlɪŋ
+- id: soft-pillow
+  text: May I also get an extra pillow and a blanket?
+  translation: ¿Me podrían traer también una almohada extra y una manta?
+  visual_hint: 🛏️🪶
+  cloze:
+  - 6
+  - 9
+  glossary:
+  - word: pillow
+    meaning: almohada
+    ipa: ˈpɪloʊ
+  - word: blanket
+    meaning: manta / cobija
+    ipa: ˈblæŋkɪt
+- id: hair-dryer-working
+  text: Do you have a clothes iron we can borrow for tonight?
+  translation: ¿Tienen una plancha de ropa que nos puedan prestar por esta noche?
+  visual_hint: 👔♨️
+  cloze:
+  - 5
+  - 8
+  glossary:
+  - word: clothes iron
+    meaning: plancha para ropa
+    ipa: kloʊðz ˈaɪərn
+  - word: borrow
+    meaning: pedir prestado
+    ipa: ˈbɑːroʊ
+- id: wake-up-call
+  text: Could you set a wake-up call for six thirty tomorrow morning?
+  translation: ¿Podría programar una llamada despertador para las seis y media mañana por la mañana?
+  visual_hint: ⏰📞
+  cloze:
+  - 4
+  - 7
+  - 8
+  glossary:
+  - word: wake-up call
+    meaning: llamada despertador
+    ipa: ˈweɪk ʌp kɔːl
+  - word: six thirty
+    meaning: seis y media
+    ipa: sɪks ˈθɜːrti
+roleplay:
+  ai_role: front desk agent
+  user_role: hotel guest
+  setting: Calling the hotel reception desk from Room 304.
+  turns:
+  - speaker: ai
+    text: Front desk, good evening! How can I make your stay more comfortable?
+  - speaker: user
+    goal: Pide dos toallas de baño extra y una almohada para la habitación 304.
+    suggested_lines:
+    - Could you send two extra bath towels to room 304, please?
+    - May I also get an extra pillow and a blanket?
+  - speaker: ai
+    text: Right away! Housekeeping will bring them up in five minutes. Anything else?
+  - speaker: user
+    goal: Comenta que el aire acondicionado no está enfriando bien.
+    suggested_lines:
+    - The air conditioning in my room is not cooling properly.
+    - Also, do you have a clothes iron we can borrow for tonight?
+  - speaker: ai
+    text: I'll send our maintenance technician to check the thermostat right now.
+  - speaker: user
+    goal: Pregunta la contraseña del wifi para huéspedes.
+    suggested_lines:
+    - What is the password for the guest Wi-Fi network?
+    - Could you tell me the guest Wi-Fi password?
+  - speaker: ai
+    text: It's 'GrandStay2026' with a capital G and S. Would you like a morning wake-up call?
+  - speaker: user
+    goal: Pide una llamada despertador a las 6:30 de la mañana.
+    suggested_lines:
+    - Could you set a wake-up call for six thirty tomorrow morning?
+    - Yes, please set a wake-up call for six thirty.
+  - speaker: ai
+    text: All set for 6:30 AM. Have a restful night!

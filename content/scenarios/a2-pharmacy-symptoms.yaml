@@ -5,41 +5,108 @@ cefr: A2
 topic: health-and-emergencies
 description: Explica un dolor de cabeza o resfriado en la farmacia y pregunta cómo tomar el medicamento.
 phrases:
-  - id: sore-throat
-    text: I have a sore throat and a slight fever.
-    translation: Tengo dolor de garganta y un poco de fiebre.
-    visual_hint: "🤒🌡️"
-    cloze: [3, 7]
-    glossary:
-      - {word: sore throat, meaning: "dolor de garganta", ipa: "sɔːr θroʊt"}
-      - {word: slight fever, meaning: "fiebre leve"}
-  - id: recommend-something
-    text: Could you recommend something for a bad cough?
-    translation: ¿Podría recomendarme algo para una tos fuerte?
-    visual_hint: "💊🗣️"
-    cloze: [2, 7]
-    glossary:
-      - {word: recommend, meaning: "recomendar", ipa: "ˌrekəˈmend"}
-      - {word: cough, meaning: "tos", ipa: "kɔːf"}
-  - id: how-often-take
-    text: How often should I take these tablets?
-    translation: ¿Cada cuánto debo tomar estas pastillas?
-    visual_hint: "⏱️💊"
-    cloze: [1, 6]
-    glossary:
-      - {word: how often, meaning: "con qué frecuencia / cada cuánto"}
-      - {word: tablets, meaning: "pastillas / comprimidos", ipa: "ˈtæbləts"}
+- id: sore-throat
+  text: I have a sore throat and a slight fever.
+  translation: Tengo dolor de garganta y un poco de fiebre.
+  visual_hint: 🤒🌡️
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: sore throat
+    meaning: dolor de garganta
+    ipa: sɔːr θroʊt
+  - word: slight fever
+    meaning: fiebre leve
+- id: recommend-something
+  text: Could you recommend something for a bad cough?
+  translation: ¿Podría recomendarme algo para una tos fuerte?
+  visual_hint: 💊🗣️
+  cloze:
+  - 2
+  - 7
+  glossary:
+  - word: recommend
+    meaning: recomendar
+    ipa: ˌrekəˈmend
+  - word: cough
+    meaning: tos
+    ipa: kɔːf
+- id: how-often-take
+  text: How often should I take these tablets?
+  translation: ¿Cada cuánto debo tomar estas pastillas?
+  visual_hint: ⏱️💊
+  cloze:
+  - 1
+  - 6
+  glossary:
+  - word: how often
+    meaning: con qué frecuencia / cada cuánto
+  - word: tablets
+    meaning: pastillas / comprimidos
+    ipa: ˈtæbləts
+- id: any-allergies-meds
+  text: I am not allergic to any medication, as far as I know.
+  translation: No soy alérgico a ningún medicamento, que yo sepa.
+  visual_hint: 💊✅
+  cloze:
+  - 3
+  - 6
+  - 8
+  glossary:
+  - word: allergic
+    meaning: alérgico
+    ipa: əˈlɜːrdʒɪk
+  - word: as far as I know
+    meaning: que yo sepa
+    ipa: æz fɑːr æz aɪ noʊ
+- id: throat-lozenges
+  text: Do you also have honey lozenges for a dry cough?
+  translation: ¿También tiene pastillas de miel para la tos seca?
+  visual_hint: 🍯🍬
+  cloze:
+  - 4
+  - 5
+  - 9
+  glossary:
+  - word: lozenges
+    meaning: pastillas para chupar
+    ipa: ˈlɑːzɪndʒɪz
+  - word: cough
+    meaning: tos
+    ipa: kɔːf
+- id: with-food-or-water
+  text: Should I take these tablets with food or on an empty stomach?
+  translation: ¿Debo tomar estas pastillas con comida o con el estómago vacío?
+  visual_hint: 🍽️🥛
+  cloze:
+  - 4
+  - 6
+  - 10
+  glossary:
+  - word: tablets
+    meaning: comprimidos / pastillas
+    ipa: ˈtæbləts
+  - word: empty stomach
+    meaning: estómago vacío / en ayunas
+    ipa: ˈempti ˈstʌmək
 roleplay:
   ai_role: pharmacist
   user_role: customer
   setting: Local pharmacy counter.
   turns:
-    - {speaker: ai, text: "Hello! How can I help you feel better today?"}
-    - speaker: user
-      goal: Describe tus síntomas (dolor de garganta y fiebre leve).
-      suggested_lines: ["I have a sore throat and a slight fever.", "Could you recommend something for a bad cough?"]
-    - {speaker: ai, text: "I recommend these lozenges and this cold relief medicine."}
-    - speaker: user
-      goal: Pregunta cada cuánto debes tomar las pastillas.
-      suggested_lines: ["How often should I take these tablets?"]
-    - {speaker: ai, text: "Take one tablet every eight hours with food."}
+  - speaker: ai
+    text: Hello! How can I help you feel better today?
+  - speaker: user
+    goal: Describe tus síntomas (dolor de garganta y fiebre leve).
+    suggested_lines:
+    - I have a sore throat and a slight fever.
+    - Could you recommend something for a bad cough?
+  - speaker: ai
+    text: I recommend these lozenges and this cold relief medicine.
+  - speaker: user
+    goal: Pregunta cada cuánto debes tomar las pastillas.
+    suggested_lines:
+    - How often should I take these tablets?
+  - speaker: ai
+    text: Take one tablet every eight hours with food.

@@ -1,0 +1,129 @@
+id: a1-greeting-neighbors
+title: Greeting a new neighbor
+title_es: Saludar a un vecino nuevo
+cefr: A1
+topic: social-and-smalltalk
+description: Saluda a tu vecino en el pasillo, dile tu nombre y número de apartamento y ofrécele ayuda.
+phrases:
+- id: welcome-to-building
+  text: Hi! Welcome to the building. I am Leo.
+  translation: ¡Hola! Bienvenido al edificio. Soy Leo.
+  visual_hint: 👋🏢
+  cloze:
+  - 1
+  - 4
+  glossary:
+  - word: welcome
+    meaning: bienvenido
+    ipa: ˈwelkəm
+  - word: building
+    meaning: edificio
+    ipa: ˈbɪldɪŋ
+- id: live-next-door
+  text: I live next door in apartment 4B.
+  translation: Vivo al lado, en el apartamento 4B.
+  visual_hint: 🚪🔑
+  cloze:
+  - 1
+  - 2
+  - 3
+  glossary:
+  - word: live
+    meaning: vivir
+    ipa: lɪv
+  - word: next door
+    meaning: al lado
+    ipa: nekst dɔːr
+- id: need-any-help
+  text: Do you need any help with those boxes?
+  translation: ¿Necesitas ayuda con esas cajas?
+  visual_hint: 📦💪
+  cloze:
+  - 2
+  - 4
+  - 7
+  glossary:
+  - word: help
+    meaning: ayuda
+    ipa: help
+  - word: boxes
+    meaning: cajas
+    ipa: ˈbɑːksɪz
+- id: quiet-neighborhood
+  text: This is a very friendly and quiet street.
+  translation: Esta es una calle muy amigable y tranquila.
+  visual_hint: 🌳😊
+  cloze:
+  - 4
+  - 6
+  glossary:
+  - word: friendly
+    meaning: amigable
+    ipa: ˈfrendli
+  - word: street
+    meaning: calle
+    ipa: striːt
+- id: supermarket-on-corner
+  text: There is a good supermarket on the corner.
+  translation: Hay un buen supermercado en la esquina.
+  visual_hint: 🛒🏪
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: supermarket
+    meaning: supermercado
+    ipa: ˈsuːpərmɑːrkɪt
+  - word: on the corner
+    meaning: en la esquina
+    ipa: ɑːn ðə ˈkɔːrnər
+- id: knock-on-my-door
+  text: Let me know if you need anything. See you soon!
+  translation: Avísame si necesitas algo. ¡Nos vemos pronto!
+  visual_hint: 🙌✨
+  cloze:
+  - 2
+  - 6
+  - 9
+  glossary:
+  - word: let me know
+    meaning: avísame / hazme saber
+    ipa: let miː noʊ
+  - word: soon
+    meaning: pronto
+    ipa: suːn
+roleplay:
+  ai_role: new neighbor
+  user_role: resident
+  setting: Apartment hallway while a new neighbor is moving in.
+  turns:
+  - speaker: ai
+    text: Hi there! I just moved in today. My name is Sam.
+  - speaker: user
+    goal: Dale la bienvenida al edificio y dile que vives al lado en el 4B.
+    suggested_lines:
+    - Hi! Welcome to the building. I am Leo.
+    - I live next door in apartment 4B.
+  - speaker: ai
+    text: Nice to meet you! I still have a few heavy boxes in the elevator.
+  - speaker: user
+    goal: Ofrécele ayuda con las cajas.
+    suggested_lines:
+    - Do you need any help with those boxes?
+    - I can help you with those boxes.
+  - speaker: ai
+    text: Thank you so much! By the way, is there a grocery store nearby?
+  - speaker: user
+    goal: Dile que la calle es tranquila y que hay un buen supermercado en la esquina.
+    suggested_lines:
+    - There is a good supermarket on the corner.
+    - This is a very friendly and quiet street.
+  - speaker: ai
+    text: Awesome, that's really convenient. Thanks again for your help!
+  - speaker: user
+    goal: Despídete diciéndole que te avise si necesita algo.
+    suggested_lines:
+    - Let me know if you need anything. See you soon!
+    - You're welcome! See you soon!
+  - speaker: ai
+    text: See you around, neighbor!

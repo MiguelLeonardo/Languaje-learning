@@ -1,0 +1,137 @@
+id: c2-luxury-concierge
+title: Bespoke event planning with a concierge
+title_es: Organización de evento privado con concierge
+cefr: C2
+topic: hotel-and-shopping
+description: Coordina con el jefe de conserjería un evento privado de aniversario en una terraza histórica con logística
+  confidencial.
+phrases:
+- id: exclusive-buyout
+  text: We're inquiring about an exclusive buyout of the rooftop conservatory for an intimate anniversary gala.
+  translation: Estamos consultando por la reserva exclusiva del invernadero de la azotea para una gala íntima de
+    aniversario.
+  visual_hint: 🏛️✨
+  cloze:
+  - 2
+  - 5
+  - 8
+  glossary:
+  - word: exclusive buyout
+    meaning: reserva privada total del espacio
+    ipa: ɪkˈskluːsɪv ˈbaɪaʊt
+  - word: conservatory
+    meaning: invernadero / salón acristalado
+    ipa: kənˈsɜːrvətɔːri
+- id: contingency-for-weather
+  text: Should the evening breeze turn brisk, we'll need a seamless contingency plan indoors.
+  translation: Si la brisa nocturna se vuelve fría, necesitaremos un plan de contingencia impecable en el interior.
+  visual_hint: 🌬️🕯️
+  cloze:
+  - 5
+  - 9
+  - 10
+  glossary:
+  - word: brisk
+    meaning: fresca / fría y vigorosa
+    ipa: brɪsk
+  - word: contingency plan
+    meaning: plan de contingencia / alternativo
+    ipa: kənˈtɪndʒənsi plæn
+- id: acoustic-quartet
+  text: Could you vet a string quartet capable of transitioning from classical repertoire to contemporary jazz?
+  translation: ¿Podría seleccionar un cuarteto de cuerdas capaz de pasar de repertorio clásico a jazz contemporáneo?
+  visual_hint: 🎻🎶
+  cloze:
+  - 2
+  - 4
+  - 7
+  glossary:
+  - word: vet
+    meaning: evaluar y seleccionar cuidadosamente
+    ipa: vet
+  - word: repertoire
+    meaning: repertorio
+    ipa: ˈrepərtwɑːr
+- id: utmost-discretion
+  text: Given the profile of several attendees, we trust your staff will exercise the utmost discretion.
+  translation: Dado el perfil de varios asistentes, confiamos en que su personal actuará con la máxima discreción.
+  visual_hint: 🤫🎩
+  cloze:
+  - 5
+  - 11
+  - 13
+  glossary:
+  - word: attendees
+    meaning: asistentes / invitados
+    ipa: əˌtenˈdiːz
+  - word: utmost discretion
+    meaning: máxima discreción
+    ipa: ˈʌtmoʊst dɪˈskreʃən
+- id: bespoke-floral
+  text: We want the floral installations to feel understated yet evocative of a Mediterranean courtyard.
+  translation: Queremos que los arreglos florales se sientan sobrios pero evocadores de un patio mediterráneo.
+  visual_hint: 🌿🌸
+  cloze:
+  - 3
+  - 7
+  - 9
+  glossary:
+  - word: understated
+    meaning: sobrio / elegante sin ostentación
+    ipa: ˌʌndərˈsteɪtɪd
+  - word: evocative
+    meaning: evocador
+    ipa: ɪˈvɑːkətɪv
+- id: itemized-retainer
+  text: Once you circulate the itemized proposal, we can wire the fifty-percent retainer immediately.
+  translation: Una vez que nos envíe la propuesta detallada, podemos transferir el anticipo del cincuenta por ciento
+    de inmediato.
+  visual_hint: 📑🏦
+  cloze:
+  - 2
+  - 4
+  - 8
+  - 11
+  glossary:
+  - word: itemized
+    meaning: desglosada partida por partida
+    ipa: ˈaɪtəmaɪzd
+  - word: retainer
+    meaning: anticipo / depósito de reserva
+    ipa: rɪˈteɪnər
+roleplay:
+  ai_role: chief concierge
+  user_role: event host
+  setting: Private consultation at a five-star heritage hotel.
+  turns:
+  - speaker: ai
+    text: It is a pleasure to assist with your anniversary celebration. Which venue space did you have in mind?
+  - speaker: user
+    goal: Consulta por la reserva exclusiva de la terraza acristalada y un plan interior por si refresca.
+    suggested_lines:
+    - We're inquiring about an exclusive buyout of the rooftop conservatory for an intimate anniversary gala.
+    - Should the evening breeze turn brisk, we'll need a seamless contingency plan indoors.
+  - speaker: ai
+    text: The conservatory and the adjacent library salon can be reserved together. What ambiance and entertainment
+      do you envision?
+  - speaker: user
+    goal: Pide un cuarteto de cuerdas versátil y decoración floral sobria de estilo mediterráneo.
+    suggested_lines:
+    - Could you vet a string quartet capable of transitioning from classical repertoire to contemporary jazz?
+    - We want the floral installations to feel understated yet evocative of a Mediterranean courtyard.
+  - speaker: ai
+    text: We work with an ensemble from the Philharmonic and a master botanist who can achieve that exact aesthetic.
+  - speaker: user
+    goal: Subraya la importancia de la máxima discreción por el perfil de los invitados.
+    suggested_lines:
+    - Given the profile of several attendees, we trust your staff will exercise the utmost discretion.
+    - Private elevator access and the utmost discretion will be essential.
+  - speaker: ai
+    text: Naturally—private elevator access and NDAs are standard protocol for our private buyouts.
+  - speaker: user
+    goal: Pide la propuesta desglosada para transferir el anticipo del 50% de inmediato.
+    suggested_lines:
+    - Once you circulate the itemized proposal, we can wire the fifty-percent retainer immediately.
+    - Send over the itemized proposal and we'll wire the retainer today.
+  - speaker: ai
+    text: You will have the complete dossier on your desk by four o'clock.

@@ -5,51 +5,107 @@ cefr: A2
 topic: travel-and-transport
 description: Pregunta cómo llegar a un lugar y entiende indicaciones simples.
 phrases:
-  - id: excuse-me
-    text: Excuse me, is there a pharmacy near here?
-    translation: Disculpe, ¿hay una farmacia cerca de aquí?
-    visual_hint: "💊📍"
-    cloze: [5, 6]
-    glossary:
-      - {word: pharmacy, meaning: "farmacia", ipa: "ˈfɑːrməsi"}
-      - {word: near, meaning: "cerca", ipa: "nɪr"}
-  - id: how-do-i-get
-    text: How do I get to the train station?
-    translation: ¿Cómo llego a la estación de tren?
-    visual_hint: "🚉"
-    cloze: [3]
-    glossary:
-      - {word: get to, meaning: "llegar a", ipa: "ɡet tuː"}
-      - {word: station, meaning: "estación", ipa: "ˈsteɪʃən"}
-  - id: is-it-far
-    text: Is it far from here?
-    translation: ¿Está lejos de aquí?
-    visual_hint: "📏"
-    cloze: [2]
-    glossary:
-      - {word: far, meaning: "lejos", ipa: "fɑːr"}
-  - id: could-you-repeat
-    text: Could you repeat that, please?
-    translation: ¿Podría repetir eso, por favor?
-    visual_hint: "🔁"
-    cloze: [2]
-    glossary:
-      - {word: repeat, meaning: "repetir", ipa: "rɪˈpiːt"}
+- id: excuse-me
+  text: Excuse me, is there a pharmacy near here?
+  translation: Disculpe, ¿hay una farmacia cerca de aquí?
+  visual_hint: 💊📍
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: pharmacy
+    meaning: farmacia
+    ipa: ˈfɑːrməsi
+  - word: near
+    meaning: cerca
+    ipa: nɪr
+- id: how-do-i-get
+  text: How do I get to the train station?
+  translation: ¿Cómo llego a la estación de tren?
+  visual_hint: 🚉
+  cloze:
+  - 3
+  glossary:
+  - word: get to
+    meaning: llegar a
+    ipa: ɡet tuː
+  - word: station
+    meaning: estación
+    ipa: ˈsteɪʃən
+- id: is-it-far
+  text: Is it far from here?
+  translation: ¿Está lejos de aquí?
+  visual_hint: 📏
+  cloze:
+  - 2
+  glossary:
+  - word: far
+    meaning: lejos
+    ipa: fɑːr
+- id: could-you-repeat
+  text: Could you repeat that, please?
+  translation: ¿Podría repetir eso, por favor?
+  visual_hint: 🔁
+  cloze:
+  - 2
+  glossary:
+  - word: repeat
+    meaning: repetir
+    ipa: rɪˈpiːt
+- id: cross-the-bridge
+  text: Should I cross the bridge or turn left at the corner?
+  translation: ¿Debo cruzar el puente o girar a la izquierda en la esquina?
+  visual_hint: 🌉⬅️
+  cloze:
+  - 2
+  - 6
+  - 10
+  glossary:
+  - word: cross
+    meaning: cruzar
+    ipa: krɔːs
+  - word: corner
+    meaning: esquina
+    ipa: ˈkɔːrnər
+- id: show-on-map
+  text: Could you show me on my phone map, please?
+  translation: ¿Podría mostrármelo en el mapa de mi teléfono, por favor?
+  visual_hint: 📱🗺️
+  cloze:
+  - 2
+  - 7
+  glossary:
+  - word: show
+    meaning: mostrar / enseñar
+    ipa: ʃoʊ
+  - word: map
+    meaning: mapa
+    ipa: mæp
 roleplay:
   ai_role: local resident
   user_role: tourist
   setting: A street corner in a city you are visiting.
   turns:
-    - {speaker: ai, text: "Hi there, you look a little lost. Can I help?"}
-    - speaker: user
-      goal: Pregunta cómo llegar a la estación de tren.
-      suggested_lines: ["Yes, please. How do I get to the train station?", "How do I get to the train station?"]
-    - {speaker: ai, text: "Go straight for two blocks, then turn left at the bank."}
-    - speaker: user
-      goal: Pide que repita.
-      suggested_lines: ["Sorry, could you repeat that, please?", "Could you repeat that, please?"]
-    - {speaker: ai, text: "Of course. Two blocks straight, then left at the bank."}
-    - speaker: user
-      goal: Pregunta si está lejos.
-      suggested_lines: ["Is it far from here?", "Thanks. Is it far from here?"]
-    - {speaker: ai, text: "Not at all, about five minutes on foot."}
+  - speaker: ai
+    text: Hi there, you look a little lost. Can I help?
+  - speaker: user
+    goal: Pregunta cómo llegar a la estación de tren.
+    suggested_lines:
+    - Yes, please. How do I get to the train station?
+    - How do I get to the train station?
+  - speaker: ai
+    text: Go straight for two blocks, then turn left at the bank.
+  - speaker: user
+    goal: Pide que repita.
+    suggested_lines:
+    - Sorry, could you repeat that, please?
+    - Could you repeat that, please?
+  - speaker: ai
+    text: Of course. Two blocks straight, then left at the bank.
+  - speaker: user
+    goal: Pregunta si está lejos.
+    suggested_lines:
+    - Is it far from here?
+    - Thanks. Is it far from here?
+  - speaker: ai
+    text: Not at all, about five minutes on foot.
