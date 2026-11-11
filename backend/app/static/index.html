@@ -125,20 +125,30 @@
       <div class="space-y-3 text-xs">
         <div class="p-3.5 rounded-2xl bg-slate-950 border border-slate-800 space-y-2.5">
           <div class="flex items-center justify-between">
-            <span class="font-semibold text-slate-200">Google Cloud & Firebase (Capa Gratuita)</span>
-            <span id="modal-firebase-status" class="text-[11px] text-emerald-400">Modo local activo</span>
+            <span class="font-semibold text-slate-200">Proyecto Firebase: <code class="text-indigo-300">agy-sandbox-488016</code></span>
+            <span id="modal-firebase-status" class="text-[11px] text-emerald-400">Listo para conectar</span>
           </div>
           <div>
-            <label class="block text-slate-400 mb-1">Gemini API Key (Google AI Studio)</label>
-            <input id="key-gemini" type="password" placeholder="AIzaSy..." class="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-800 text-white font-mono" />
+            <label class="block text-slate-400 mb-1">Pega el bloque <code class="text-slate-300">const firebaseConfig = { ... }</code> del Paso 2 (o solo tu <code class="text-slate-300">apiKey</code>)</label>
+            <textarea id="key-firebase-json" rows="4" placeholder='const firebaseConfig = { apiKey: "AIza...", authDomain: "agy-sandbox-488016.firebaseapp.com", projectId: "agy-sandbox-488016", ... };' class="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-800 text-white font-mono text-[11px]"></textarea>
           </div>
-          <div>
-            <label class="block text-slate-400 mb-1">Google Cloud Speech / TTS API Key</label>
-            <input id="key-google-cloud" type="password" placeholder="AIzaSy..." class="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-800 text-white font-mono" />
+          <div class="flex flex-wrap items-center justify-between gap-2 pt-1">
+            <a href="https://console.firebase.google.com/project/agy-sandbox-488016/firestore" target="_blank" rel="noopener" class="text-indigo-400 hover:text-indigo-300 underline">
+              Abrir consola de Firestore (agy-sandbox-488016) ↗
+            </a>
+            <button onclick="connectAndEnableOnlineFirestore()" class="px-3.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition">
+              🔥 Enable online access to Firestore
+            </button>
           </div>
-          <div>
-            <label class="block text-slate-400 mb-1">Configuración Web de Firebase (JSON opcional)</label>
-            <textarea id="key-firebase-json" rows="2" placeholder='{"apiKey":"...","authDomain":"...","projectId":"..."}' class="w-full px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-white font-mono text-[11px]"></textarea>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2 border-t border-slate-900">
+            <div>
+              <label class="block text-slate-400 mb-1">Gemini API Key (Opcional)</label>
+              <input id="key-gemini" type="password" placeholder="AIzaSy..." class="w-full px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-white font-mono" />
+            </div>
+            <div>
+              <label class="block text-slate-400 mb-1">Google Cloud Speech/TTS Key (Opcional)</label>
+              <input id="key-google-cloud" type="password" placeholder="AIzaSy..." class="w-full px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-white font-mono" />
+            </div>
           </div>
         </div>
 
@@ -723,6 +733,22 @@
         await window.SpeakFlowFirebase.saveFirebaseConfig(fbJson);
       }
       toggleKeysModal(false);
+    }
+
+    async function connectAndEnableOnlineFirestore() {
+      const fbJson = document.getElementById('key-firebase-json').value.trim();
+      const modalSt = document.getElementById('modal-firebase-status');
+      if (modalSt) modalSt.textContent = 'Conectando a Firestore Online…';
+      if (window.SpeakFlowFirebase) {
+        const res = fbJson
+          ? await window.SpeakFlowFirebase.saveFirebaseConfig(fbJson)
+          : await window.SpeakFlowFirebase.enableOnlineFirestore();
+        if (modalSt) {
+          modalSt.textContent = res.connected
+            ? `✔ Firestore Online Activo (${res.projectId} · UID ${(res.uid || '').slice(0, 6)})`
+            : `⚠ ${res.reason || 'Verifica que Anonymous Auth y Firestore estén activos en la consola'}`;
+        }
+      }
     }
 
     async function clearKeys() {
