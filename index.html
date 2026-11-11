@@ -11,7 +11,9 @@
         "firebase/app": "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js",
         "firebase/analytics": "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js",
         "firebase/auth": "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js",
-        "firebase/firestore": "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js"
+        "firebase/firestore": "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js",
+        "firebase/ai": "https://esm.run/firebase@13.3.0/ai",
+        "./miServicioDeIA": "./miServicioDeIA.js"
       }
     }
   </script>
@@ -20,6 +22,7 @@
     import { getAnalytics, isSupported as isAnalyticsSupported } from "firebase/analytics";
     import { getAuth, signInAnonymously } from "firebase/auth";
     import { initializeFirestore, getFirestore, enableNetwork, doc, setDoc } from "firebase/firestore";
+    import { consultarAsistente } from "./miServicioDeIA";
 
     const DEFAULT_PROJECT_CONFIG = {
       apiKey: "",
@@ -124,9 +127,26 @@
     }
     window.initializeApp = initializeApp;
     window.getAnalytics = getAnalytics;
+    window.consultarAsistente = consultarAsistente;
     window.SpeakFlowFirebase = new SpeakFlowFirebaseBridge();
     window.speakFlowFirebase = window.SpeakFlowFirebase;
     window.SpeakFlowFirebase.init();
+
+    // Ejecución inicial de la plantilla id: conexion-key con los argumentos configurados en [1.1.1]
+    (async () => {
+      const storedKey =
+        localStorage.getItem("sf_gemini_key") ||
+        localStorage.getItem("sf_openai_key") ||
+        "npm_key_live_example_9876543210abc";
+      const respuesta = await consultarAsistente(
+        storedKey, // Mapeado internamente a 'apiKey'
+        "Necesito un script básico de Node.js para conectar un cliente HTTP" // Mapeado a 'userQuery'
+      );
+      console.log("Respuesta del Asistente:", respuesta);
+      window.lastConexionKeyResponse = respuesta;
+      const outEl = document.getElementById("conexion-key-output");
+      if (outEl) outEl.textContent = respuesta;
+    })();
   </script>
   <style>
     @keyframes pulse-ring {
@@ -9012,6 +9032,18 @@
         </div>
         ${renderMicrophoneControls(ex, item.card_id, null)}
       `;
+    }
+
+    async function runConexionKeyTemplate() {
+      const outEl = document.getElementById('conexion-key-output');
+      const apiKeyArg = (document.getElementById('tpl-api-key')?.value || 'npm_key_live_example_9876543210abc').trim();
+      const userQueryArg = (document.getElementById('tpl-user-query')?.value || 'Necesito un script básico de Node.js para conectar un cliente HTTP').trim();
+      if (outEl) outEl.textContent = 'Ejecutando consultarAsistente(apiKey, userQuery) contra plantilla id: conexion-key...';
+      if (typeof window.consultarAsistente === 'function') {
+        const respuesta = await window.consultarAsistente(apiKeyArg, userQueryArg);
+        console.log('Respuesta del Asistente:', respuesta);
+        if (outEl) outEl.textContent = respuesta;
+      }
     }
 
     init();
