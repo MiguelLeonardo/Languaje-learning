@@ -1,10 +1,20 @@
 /**
- * Firebase Web SDK v11 Connector for SpeakFlow (Project: shadowing-efcab / shadowing):
- *  - Accepts raw JS snippet (`const firebaseConfig = { ... }; initializeApp(firebaseConfig);`), JSON, or `apiKey` (`AIza...`)
- *  - Service 1: Firebase Authentication (Anonymous Auth + optional Google Web Auth)
- *  - Service 2: Cloud Firestore Database with explicit `enableNetwork(db)` (Online access to Firestore)
- *  - Service 3: Firebase Hosting + Google Cloud / Gemini Free Tier integration
+ * Firebase Web SDK (npm `firebase` package) Connector for SpeakFlow
+ * Project ID: shadowing-efcab | App: shadowing
+ *
+ * Uses standard npm bare module specifiers (`firebase/app`, `firebase/analytics`,
+ * `firebase/auth`, `firebase/firestore`) resolved via npm/bundlers or `<script type="importmap">`:
+ *
+ *   import { initializeApp } from "firebase/app";
+ *   import { getAnalytics } from "firebase/analytics";
+ *   const app = initializeApp(firebaseConfig);
+ *   const analytics = getAnalytics(app);
  */
+
+import { initializeApp, getApps, deleteApp } from "firebase/app";
+import { getAnalytics, isSupported as isAnalyticsSupported } from "firebase/analytics";
+import { getAuth, signInAnonymously, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { initializeFirestore, getFirestore, enableNetwork, doc, setDoc, getDoc } from "firebase/firestore";
 
 export const DEFAULT_PROJECT_CONFIG = {
   apiKey: "",
@@ -13,6 +23,7 @@ export const DEFAULT_PROJECT_CONFIG = {
   storageBucket: "shadowing-efcab.firebasestorage.app",
   messagingSenderId: "",
   appId: "",
+  measurementId: "",
 };
 
 export function parseFirebaseConfigInput(rawInput) {
@@ -34,12 +45,15 @@ export function parseFirebaseConfigInput(rawInput) {
     }
   } catch (_) {}
 
-  // Case 3: Full JS snippet from Firebase Console ("const firebaseConfig = { ... }; const app = initializeApp(firebaseConfig);")
+  // Case 3: Full npm / JS snippet from Firebase Console:
+  // import { initializeApp } from "firebase/app";
+  // const firebaseConfig = { apiKey: "...", projectId: "shadowing-efcab", ... };
+  // const app = initializeApp(firebaseConfig);
   const extracted = { ...DEFAULT_PROJECT_CONFIG };
   const keys = ["apiKey", "authDomain", "projectId", "storageBucket", "messagingSenderId", "appId", "measurementId"];
   let foundAny = false;
   for (const k of keys) {
-    const re = new RegExp(`["']?${k}["']?\\s*:\\s*["']([^"']+)["']`);
+    const re = new RegExp(`["']?${k}["']?\\s*:\\s*(?:[^"'\\n,}]*?\\|\\|\\s*)?["']([^"']+)["']`);
     const m = text.match(re);
     if (m && m[1]) {
       extracted[k] = m[1].trim();
@@ -49,27 +63,58 @@ export function parseFirebaseConfigInput(rawInput) {
   return foundAny ? extracted : null;
 }
 
+/**
+ * Direct npm-style helper matching the Firebase Console snippet:
+ *   const app = initializeApp(firebaseConfig);
+ *   const analytics = getAnalytics(app);
+ */
+export async function initializeShadowingFirebaseApp(firebaseConfig) {
+  const cfg = parseFirebaseConfigInput(firebaseConfig) || DEFAULT_PROJECT_CONFIG;
+  if (getApps().length) {
+    for (const existing of getApps()) {
+      await deleteApp(existing);
+    }
+  }
+  const app = initializeApp(cfg);
+  let analytics = null;
+  if (typeof window !== "undefined") {
+    try {
+      if (await isAnalyticsSupported()) {
+        analytics = getAnalytics(app);
+      }
+    } catch (_) {}
+  }
+  return { app, analytics, config: cfg };
+}
+
 export class SpeakFlowFirebaseBridge {
   constructor() {
     this.app = null;
+    this.analytics = null;
     this.auth = null;
     this.db = null;
     this.user = null;
     this.connected = false;
     this.onlineEnabled = false;
-    this.localUid = localStorage.getItem("sf_anon_uid") || `anon-${Math.random().toString(36).slice(2, 10)}`;
-    localStorage.setItem("sf_anon_uid", this.localUid);
+    const hasStorage = typeof localStorage !== "undefined";
+    this.localUid =
+      (hasStorage && localStorage.getItem("sf_anon_uid")) || `anon-${Math.random().toString(36).slice(2, 10)}`;
+    if (hasStorage) {
+      localStorage.setItem("sf_anon_uid", this.localUid);
+    }
   }
 
   getStoredConfig() {
     try {
-      const raw = localStorage.getItem("sf_firebase_config");
-      if (raw) {
-        const cfg = parseFirebaseConfigInput(raw);
-        if (cfg && cfg.apiKey) return cfg;
+      if (typeof localStorage !== "undefined") {
+        const raw = localStorage.getItem("sf_firebase_config");
+        if (raw) {
+          const cfg = parseFirebaseConfigInput(raw);
+          if (cfg && cfg.apiKey) return cfg;
+        }
       }
     } catch (_) {}
-    return window.FIREBASE_CONFIG || null;
+    return (typeof window !== "undefined" && window.FIREBASE_CONFIG) || null;
   }
 
   async saveFirebaseConfig(rawInput) {
@@ -77,10 +122,13 @@ export class SpeakFlowFirebaseBridge {
     if (!parsed || !parsed.apiKey) {
       return {
         connected: false,
-        reason: "Pega el bloque 'const firebaseConfig = { ... }' de tu proyecto shadowing-efcab o tu apiKey (AIza...).",
+        reason:
+          "Pega el bloque npm 'const firebaseConfig = { ... }; const app = initializeApp(firebaseConfig);' de shadowing-efcab o tu apiKey (AIza...).",
       };
     }
-    localStorage.setItem("sf_firebase_config", JSON.stringify(parsed));
+    if (typeof localStorage !== "undefined") {
+      localStorage.setItem("sf_firebase_config", JSON.stringify(parsed));
+    }
     return await this.init(parsed);
   }
 
@@ -88,31 +136,19 @@ export class SpeakFlowFirebaseBridge {
     const cfg = customConfig || this.getStoredConfig();
     if (!cfg || !cfg.apiKey || String(cfg.apiKey).startsWith("REPLACE_")) {
       this.connected = false;
-      window.dispatchEvent(
-        new CustomEvent("speakflow:firebase-ready", {
-          detail: { mode: "local-fallback", uid: this.localUid, projectId: DEFAULT_PROJECT_CONFIG.projectId },
-        })
-      );
+      if (typeof window !== "undefined") {
+        window.dispatchEvent(
+          new CustomEvent("speakflow:firebase-ready", {
+            detail: { mode: "local-fallback", uid: this.localUid, projectId: DEFAULT_PROJECT_CONFIG.projectId },
+          })
+        );
+      }
       return { connected: false, uid: this.localUid, reason: "no_api_key" };
     }
     try {
-      const [
-        { initializeApp, getApps, deleteApp },
-        { getAuth, signInAnonymously, GoogleAuthProvider, signInWithPopup },
-        { initializeFirestore, getFirestore, enableNetwork, doc, setDoc, getDoc },
-      ] = await Promise.all([
-        import("https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js"),
-        import("https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js"),
-        import("https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js"),
-      ]);
-
-      if (getApps().length && customConfig) {
-        for (const existing of getApps()) {
-          await deleteApp(existing);
-        }
-      }
-
-      this.app = getApps().length ? getApps()[0] : initializeApp(cfg);
+      const { app, analytics } = await initializeShadowingFirebaseApp(cfg);
+      this.app = app;
+      this.analytics = analytics;
       this.auth = getAuth(this.app);
       try {
         this.db = initializeFirestore(this.app, { experimentalAutoDetectLongPolling: true });
@@ -136,31 +172,48 @@ export class SpeakFlowFirebaseBridge {
           isAnonymous: this.user.isAnonymous,
           projectId: cfg.projectId || "shadowing-efcab",
           appName: "shadowing",
-          tier: localStorage.getItem("sf_freemium_tier") || "free",
+          sdkMode: "npm-modular-v13",
+          tier: (typeof localStorage !== "undefined" && localStorage.getItem("sf_freemium_tier")) || "free",
           onlineAccess: true,
           updatedAt: new Date().toISOString(),
         },
         { merge: true }
       );
-      window.dispatchEvent(
-        new CustomEvent("speakflow:firebase-ready", {
-          detail: {
-            mode: "firebase-live",
-            uid: this.user.uid,
-            projectId: cfg.projectId || "shadowing-efcab",
-            onlineEnabled: true,
-          },
-        })
-      );
-      return { connected: true, uid: this.user.uid, projectId: cfg.projectId || "shadowing-efcab", onlineEnabled: true };
+      if (typeof window !== "undefined") {
+        window.dispatchEvent(
+          new CustomEvent("speakflow:firebase-ready", {
+            detail: {
+              mode: "firebase-live",
+              uid: this.user.uid,
+              projectId: cfg.projectId || "shadowing-efcab",
+              onlineEnabled: true,
+              sdkMode: "npm",
+            },
+          })
+        );
+      }
+      return {
+        connected: true,
+        uid: this.user.uid,
+        projectId: cfg.projectId || "shadowing-efcab",
+        onlineEnabled: true,
+        sdkMode: "npm",
+      };
     } catch (err) {
       this.connected = false;
       const errMsg = String(err && err.message ? err.message : err);
-      window.dispatchEvent(
-        new CustomEvent("speakflow:firebase-ready", {
-          detail: { mode: "local-fallback", uid: this.localUid, projectId: cfg.projectId || "shadowing-efcab", error: errMsg },
-        })
-      );
+      if (typeof window !== "undefined") {
+        window.dispatchEvent(
+          new CustomEvent("speakflow:firebase-ready", {
+            detail: {
+              mode: "local-fallback",
+              uid: this.localUid,
+              projectId: cfg.projectId || "shadowing-efcab",
+              error: errMsg,
+            },
+          })
+        );
+      }
       return { connected: false, uid: this.localUid, reason: errMsg };
     }
   }
@@ -177,9 +230,9 @@ export class SpeakFlowFirebaseBridge {
   async syncAttempt(attemptData) {
     if (!this.connected || !this.db || !this.user) return;
     try {
-      const { doc, setDoc } = this._firestoreFns;
+      const { doc: docFn, setDoc: setDocFn } = this._firestoreFns;
       const attemptId = `att_${Date.now()}`;
-      await setDoc(doc(this.db, "users", this.user.uid, "attempts", attemptId), {
+      await setDocFn(docFn(this.db, "users", this.user.uid, "attempts", attemptId), {
         ...attemptData,
         createdAt: new Date().toISOString(),
       });
@@ -189,10 +242,10 @@ export class SpeakFlowFirebaseBridge {
   async syncSrsCard(cardData) {
     if (!this.connected || !this.db || !this.user) return;
     try {
-      const { doc, setDoc } = this._firestoreFns;
+      const { doc: docFn, setDoc: setDocFn } = this._firestoreFns;
       const cardId = cardData.card_id || `${cardData.scenario_id}_${cardData.phrase_id}`;
-      await setDoc(
-        doc(this.db, "users", this.user.uid, "srs_cards", cardId),
+      await setDocFn(
+        docFn(this.db, "users", this.user.uid, "srs_cards", cardId),
         { ...cardData, updatedAt: new Date().toISOString() },
         { merge: true }
       );
@@ -202,10 +255,10 @@ export class SpeakFlowFirebaseBridge {
   async syncRoleplay(roleplayData) {
     if (!this.connected || !this.db || !this.user) return;
     try {
-      const { doc, setDoc } = this._firestoreFns;
+      const { doc: docFn, setDoc: setDocFn } = this._firestoreFns;
       const sessionId = roleplayData.session_id || `rp_${Date.now()}`;
-      await setDoc(
-        doc(this.db, "users", this.user.uid, "roleplay_sessions", sessionId),
+      await setDocFn(
+        docFn(this.db, "users", this.user.uid, "roleplay_sessions", sessionId),
         { ...roleplayData, updatedAt: new Date().toISOString() },
         { merge: true }
       );
@@ -213,6 +266,10 @@ export class SpeakFlowFirebaseBridge {
   }
 }
 
-window.SpeakFlowFirebase = new SpeakFlowFirebaseBridge();
-window.speakFlowFirebase = window.SpeakFlowFirebase;
-window.SpeakFlowFirebase.init();
+if (typeof window !== "undefined") {
+  window.initializeApp = initializeApp;
+  window.getAnalytics = getAnalytics;
+  window.SpeakFlowFirebase = new SpeakFlowFirebaseBridge();
+  window.speakFlowFirebase = window.SpeakFlowFirebase;
+  window.SpeakFlowFirebase.init();
+}
