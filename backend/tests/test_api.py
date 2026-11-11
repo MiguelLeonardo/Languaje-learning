@@ -21,6 +21,24 @@ def test_health_ready_and_auth_required(client, auth):
     assert ui.status_code == 200 and "SpeakFlow" in ui.text
     fb_js = client.get("/firebase-config.js")
     assert fb_js.status_code == 200 and "SpeakFlowFirebase" in fb_js.text
+    ia_js = client.get("/miServicioDeIA")
+    assert ia_js.status_code == 200 and "consultarAsistente" in ia_js.text
+    tpl = client.post(
+        "/v1/ai/template",
+        json={
+            "template_id": "conexion-key",
+            "template_variables": {
+                "apiKey": "npm_key_live_example_9876543210abc",
+                "userQuery": "Necesito un script básico de Node.js para conectar un cliente HTTP",
+            },
+        },
+    ).json()
+    assert tpl["template_id"] == "conexion-key" and "conexion-key" in tpl["response"]
+    tpl2 = client.post(
+        "/v1/ai/template",
+        json={"template_id": "conexion-key", "template_variables": {"apiKey": "short", "userQuery": "Hola"}},
+    ).json()
+    assert "Hola" in tpl2["response"]
     assert client.get("/health").json() == {"status": "ok"}
     assert client.get("/ready").json()["scenarios"] == 36
     st = client.get("/v1/providers/status", headers={"X-OpenAI-Key": "sk-test"}).json()

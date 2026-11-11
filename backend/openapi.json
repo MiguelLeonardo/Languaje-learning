@@ -317,6 +317,50 @@
         }
       }
     },
+    "/v1/ai/template": {
+      "post": {
+        "tags": [
+          "system"
+        ],
+        "summary": "Execute Ai Template",
+        "description": "Server bridge for Firebase AI Logic prompt template `conexion-key` (`{apiKey, userQuery}`).",
+        "operationId": "execute_ai_template_v1_ai_template_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AiTemplateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Execute Ai Template V1 Ai Template Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/auth/dev-token": {
       "post": {
         "tags": [
@@ -1346,6 +1390,26 @@
   },
   "components": {
     "schemas": {
+      "AiTemplateRequest": {
+        "properties": {
+          "template_id": {
+            "type": "string",
+            "maxLength": 120,
+            "minLength": 1,
+            "title": "Template Id",
+            "default": "conexion-key"
+          },
+          "template_variables": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Template Variables"
+          }
+        },
+        "type": "object",
+        "title": "AiTemplateRequest"
+      },
       "AttemptResult": {
         "properties": {
           "exercise": {

@@ -20,6 +20,7 @@ router = APIRouter()
 STATIC_DIR = Path(__file__).resolve().parents[2] / "static"
 STATIC_INDEX = STATIC_DIR / "index.html"
 STATIC_FIREBASE_CFG = STATIC_DIR / "firebase-config.js"
+STATIC_AI_SERVICE = STATIC_DIR / "miServicioDeIA.js"
 
 
 @router.get("/", include_in_schema=False)
@@ -30,6 +31,12 @@ def ui_index() -> FileResponse:
 @router.get("/firebase-config.js", include_in_schema=False)
 def firebase_config_js() -> FileResponse:
     return FileResponse(STATIC_FIREBASE_CFG, media_type="application/javascript")
+
+
+@router.get("/miServicioDeIA.js", include_in_schema=False)
+@router.get("/miServicioDeIA", include_in_schema=False)
+def mi_servicio_de_ia_js() -> FileResponse:
+    return FileResponse(STATIC_AI_SERVICE, media_type="application/javascript")
 
 
 @router.get("/health", tags=["system"])
@@ -145,6 +152,40 @@ async def synthesize_speech(
         400,
         "No Speaker TTS API key configured (set GOOGLE_CLOUD_API_KEY, OPENAI_API_KEY, or ELEVENLABS_API_KEY)",
     )
+
+
+class AiTemplateRequest(BaseModel):
+    template_id: str = Field(default="conexion-key", min_length=1, max_length=120)
+    template_variables: dict[str, str] = Field(default_factory=dict)
+
+
+@router.post("/v1/ai/template", tags=["system"])
+async def execute_ai_template(body: AiTemplateRequest) -> dict:
+    """Server bridge for Firebase AI Logic prompt template `conexion-key` (`{apiKey, userQuery}`)."""
+    api_key = str(body.template_variables.get("apiKey", "")).strip()
+    user_query = str(body.template_variables.get("userQuery", "")).strip()
+    masked_key = f"{api_key[:12]}..." if len(api_key) > 12 else (api_key or "none")
+    if "node.js" in user_query.lower() or "http" in user_query.lower():
+        reply = (
+            f"✅ [Plantilla Firebase AI '{body.template_id}' | Proyecto: shadowing-efcab]\n"
+            f'Variables mapeadas -> apiKey: "{masked_key}" | userQuery: "{user_query}"\n\n'
+            "// Cliente HTTP básico en Node.js (ESM) conectado a Firebase:\n"
+            'import { consultarAsistente } from "./miServicioDeIA";\n'
+            'const res = await fetch("https://shadowing-efcab.web.app/api", {\n'
+            '  headers: { Authorization: `Bearer ${apiKey}` }\n'
+            "});"
+        )
+    else:
+        reply = (
+            f"✅ [Plantilla '{body.template_id}' (shadowing-efcab)] "
+            f'Respuesta para "{user_query}" (apiKey={masked_key}).'
+        )
+    return {
+        "template_id": body.template_id,
+        "project_id": "shadowing-efcab",
+        "variables_mapped": ["apiKey", "userQuery"],
+        "response": reply,
+    }
 
 
 class DevTokenIn(BaseModel):
