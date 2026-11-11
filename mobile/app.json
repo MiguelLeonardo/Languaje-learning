@@ -1,0 +1,18 @@
+{
+  "expo": {
+    "name": "SpeakFlow",
+    "slug": "speakflow-english",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "SpeakFlow necesita acceso al micrófono para evaluar tus ejercicios hablados en inglés."
+      }
+    },
+    "android": {
+      "permissions": ["RECORD_AUDIO"]
+    }
+  }
+}

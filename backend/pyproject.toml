@@ -1,0 +1,48 @@
+[project]
+name = "languaje-learning-backend"
+version = "0.1.0"
+description = "Speaking-first English learning API (shadowing, phrases, SRS, scripted AI roleplay)."
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.30",
+  "sqlalchemy>=2.0",
+  "pydantic>=2.7",
+  "pydantic-settings>=2.3",
+  "pyyaml>=6.0",
+  "python-multipart>=0.0.9",
+  "pyjwt>=2.8",
+  "httpx>=0.27",
+  "psycopg[binary]>=3.2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-cov>=5", "ruff>=0.6", "bandit>=1.7", "pip-audit>=2.7"]
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --cov=app --cov-report=term-missing --cov-fail-under=85"
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S"]
+ignore = ["S101", "B008"]
+
+[tool.coverage.run]
+omit = ["app/speech/openai_whisper.py", "app/speech/tts.py", "app/llm/anthropic_claude.py"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S105", "S106"]
+
+[tool.bandit]
+exclude_dirs = ["tests", ".venv"]

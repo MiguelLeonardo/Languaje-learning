@@ -1,0 +1,58 @@
+id: a1-ordering-coffee
+title: Ordering a coffee
+title_es: Pedir un café
+cefr: A1
+topic: food-and-drink
+description: Pide una bebida, elige el tamaño y paga en una cafetería.
+phrases:
+  - id: can-i-have
+    text: Can I have a coffee, please?
+    translation: ¿Me da un café, por favor?
+    visual_hint: "☕"
+    cloze: [4]
+    glossary:
+      - {word: have, meaning: "tener / tomar (para pedir algo)", ipa: "hæv"}
+      - {word: please, meaning: "por favor", ipa: "pliːz"}
+  - id: small-one
+    text: A small one, please.
+    translation: Uno pequeño, por favor.
+    visual_hint: "🥤 S"
+    cloze: [1]
+    glossary:
+      - {word: small, meaning: "pequeño", ipa: "smɔːl"}
+  - id: how-much
+    text: How much is it?
+    translation: ¿Cuánto cuesta?
+    visual_hint: "💵"
+    cloze: [1]
+    glossary:
+      - {word: much, meaning: "mucho (how much = cuánto)", ipa: "mʌtʃ"}
+  - id: thank-you
+    text: Thank you very much.
+    translation: Muchas gracias.
+    visual_hint: "🙏"
+    cloze: [2]
+    glossary:
+      - {word: very, meaning: "muy", ipa: "ˈveri"}
+roleplay:
+  ai_role: barista
+  user_role: customer
+  setting: A busy coffee shop in the morning.
+  turns:
+    - {speaker: ai, text: "Hi! What can I get for you?"}
+    - speaker: user
+      goal: Pide un café.
+      suggested_lines: ["Can I have a coffee, please?", "A coffee, please."]
+    - {speaker: ai, text: "Sure. Small, medium or large?"}
+    - speaker: user
+      goal: Elige el tamaño.
+      suggested_lines: ["A small one, please.", "Medium, please.", "Large, please."]
+    - {speaker: ai, text: "Great. Anything else?"}
+    - speaker: user
+      goal: Pregunta el precio.
+      suggested_lines: ["No, thanks. How much is it?", "How much is it?"]
+    - {speaker: ai, text: "That's three dollars."}
+    - speaker: user
+      goal: Agradece.
+      suggested_lines: ["Thank you very much.", "Here you are. Thank you."]
+    - {speaker: ai, text: "Have a nice day!"}

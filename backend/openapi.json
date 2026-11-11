@@ -1,0 +1,2103 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Languaje-learning API",
+    "description": "Speaking-first English learning: shadowing, common phrases, staged exercises, spaced repetition and scripted AI roleplay. Every answer is submitted as audio.",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "tags": [
+          "system"
+        ],
+        "summary": "Health",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Health Health Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ready": {
+      "get": {
+        "tags": [
+          "system"
+        ],
+        "summary": "Ready",
+        "operationId": "ready_ready_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Ready Ready Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/providers/status": {
+      "get": {
+        "tags": [
+          "system"
+        ],
+        "summary": "Providers Status",
+        "operationId": "providers_status_v1_providers_status_get",
+        "parameters": [
+          {
+            "name": "x-openai-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Openai-Key"
+            }
+          },
+          {
+            "name": "x-elevenlabs-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Elevenlabs-Key"
+            }
+          },
+          {
+            "name": "x-anthropic-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Anthropic-Key"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Providers Status V1 Providers Status Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/tts": {
+      "post": {
+        "tags": [
+          "speech"
+        ],
+        "summary": "Synthesize Speech",
+        "operationId": "synthesize_speech_v1_tts_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "x-openai-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Openai-Key"
+            }
+          },
+          {
+            "name": "x-elevenlabs-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Elevenlabs-Key"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TtsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/auth/dev-token": {
+      "post": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Dev Token",
+        "description": "Local/test only. Staging/production use an external IdP (Firebase Auth / Cognito) issuing JWTs.",
+        "operationId": "dev_token_v1_auth_dev_token_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DevTokenIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Dev Token V1 Auth Dev Token Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/dev/fast-forward-srs": {
+      "post": {
+        "tags": [
+          "dev"
+        ],
+        "summary": "Fast Forward Srs",
+        "description": "Local/test helper to fast-forward due_at on SRS cards for immediate UI review.",
+        "operationId": "fast_forward_srs_v1_dev_fast_forward_srs_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "minutes",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 15,
+              "title": "Minutes"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Fast Forward Srs V1 Dev Fast Forward Srs Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/levels": {
+      "get": {
+        "tags": [
+          "catalog"
+        ],
+        "summary": "Levels",
+        "operationId": "levels_v1_levels_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/LevelOut"
+                  },
+                  "type": "array",
+                  "title": "Response Levels V1 Levels Get"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/scenarios": {
+      "get": {
+        "tags": [
+          "catalog"
+        ],
+        "summary": "Scenarios",
+        "operationId": "scenarios_v1_scenarios_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "cefr",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/CEFR"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Cefr"
+            }
+          },
+          {
+            "name": "band",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Band"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ScenarioSummary"
+                  },
+                  "title": "Response Scenarios V1 Scenarios Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/scenarios/{scenario_id}": {
+      "get": {
+        "tags": [
+          "catalog"
+        ],
+        "summary": "Scenario",
+        "operationId": "scenario_v1_scenarios__scenario_id__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scenario_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Scenario Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Scenario"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/lessons/{scenario_id}": {
+      "get": {
+        "tags": [
+          "catalog"
+        ],
+        "summary": "Lesson",
+        "operationId": "lesson_v1_lessons__scenario_id__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scenario_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Scenario Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LessonPlan"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/shadowing/{scenario_id}": {
+      "get": {
+        "tags": [
+          "catalog"
+        ],
+        "summary": "Shadowing Session",
+        "operationId": "shadowing_session_v1_shadowing__scenario_id__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scenario_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Scenario Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Exercise"
+                  },
+                  "title": "Response Shadowing Session V1 Shadowing  Scenario Id  Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/phrases/common": {
+      "get": {
+        "tags": [
+          "catalog"
+        ],
+        "summary": "Common Phrases",
+        "operationId": "common_phrases_v1_phrases_common_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "cefr",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/CEFR"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Cefr"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 20,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Exercise"
+                  },
+                  "title": "Response Common Phrases V1 Phrases Common Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/exercises/{exercise_id}": {
+      "get": {
+        "tags": [
+          "catalog"
+        ],
+        "summary": "Exercise",
+        "operationId": "exercise_v1_exercises__exercise_id__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "exercise_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Exercise Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Exercise"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/exercises/{exercise_id}/attempts": {
+      "post": {
+        "tags": [
+          "practice"
+        ],
+        "summary": "Submit Attempt",
+        "operationId": "submit_attempt_v1_exercises__exercise_id__attempts_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "exercise_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Exercise Id"
+            }
+          },
+          {
+            "name": "x-openai-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Openai-Key"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_submit_attempt_v1_exercises__exercise_id__attempts_post"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AttemptResult"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/review/due": {
+      "get": {
+        "tags": [
+          "practice",
+          "review"
+        ],
+        "summary": "Review Due",
+        "operationId": "review_due_v1_review_due_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 20,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ReviewItem"
+                  },
+                  "title": "Response Review Due V1 Review Due Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/review/{card_id}/attempts": {
+      "post": {
+        "tags": [
+          "practice",
+          "review"
+        ],
+        "summary": "Review Attempt",
+        "operationId": "review_attempt_v1_review__card_id__attempts_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "card_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Card Id"
+            }
+          },
+          {
+            "name": "x-openai-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Openai-Key"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_review_attempt_v1_review__card_id__attempts_post"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AttemptResult"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/progress": {
+      "get": {
+        "tags": [
+          "practice",
+          "progress"
+        ],
+        "summary": "Get Progress",
+        "operationId": "get_progress_v1_progress_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Progress"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/roleplay/{scenario_id}/sessions": {
+      "post": {
+        "tags": [
+          "roleplay"
+        ],
+        "summary": "Start Session",
+        "operationId": "start_session_v1_roleplay__scenario_id__sessions_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scenario_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Scenario Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoleplayState"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/roleplay/sessions/{session_id}/turns": {
+      "post": {
+        "tags": [
+          "roleplay"
+        ],
+        "summary": "Submit Turn",
+        "operationId": "submit_turn_v1_roleplay_sessions__session_id__turns_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "session_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Session Id"
+            }
+          },
+          {
+            "name": "x-openai-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Openai-Key"
+            }
+          },
+          {
+            "name": "x-anthropic-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Anthropic-Key"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_submit_turn_v1_roleplay_sessions__session_id__turns_post"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoleplayState"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AttemptResult": {
+        "properties": {
+          "exercise": {
+            "$ref": "#/components/schemas/Exercise"
+          },
+          "evaluation": {
+            "$ref": "#/components/schemas/Evaluation"
+          },
+          "feedback": {
+            "$ref": "#/components/schemas/Feedback"
+          },
+          "srs": {
+            "items": {
+              "$ref": "#/components/schemas/SrsUpdate"
+            },
+            "type": "array",
+            "title": "Srs"
+          }
+        },
+        "type": "object",
+        "required": [
+          "exercise",
+          "evaluation",
+          "feedback",
+          "srs"
+        ],
+        "title": "AttemptResult"
+      },
+      "Body_review_attempt_v1_review__card_id__attempts_post": {
+        "properties": {
+          "audio": {
+            "type": "string",
+            "contentMediaType": "application/octet-stream",
+            "title": "Audio"
+          },
+          "debug_transcript": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Debug Transcript"
+          }
+        },
+        "type": "object",
+        "required": [
+          "audio"
+        ],
+        "title": "Body_review_attempt_v1_review__card_id__attempts_post"
+      },
+      "Body_submit_attempt_v1_exercises__exercise_id__attempts_post": {
+        "properties": {
+          "audio": {
+            "type": "string",
+            "contentMediaType": "application/octet-stream",
+            "title": "Audio"
+          },
+          "debug_transcript": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Debug Transcript"
+          }
+        },
+        "type": "object",
+        "required": [
+          "audio"
+        ],
+        "title": "Body_submit_attempt_v1_exercises__exercise_id__attempts_post"
+      },
+      "Body_submit_turn_v1_roleplay_sessions__session_id__turns_post": {
+        "properties": {
+          "audio": {
+            "type": "string",
+            "contentMediaType": "application/octet-stream",
+            "title": "Audio"
+          },
+          "debug_transcript": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Debug Transcript"
+          }
+        },
+        "type": "object",
+        "required": [
+          "audio"
+        ],
+        "title": "Body_submit_turn_v1_roleplay_sessions__session_id__turns_post"
+      },
+      "CEFR": {
+        "type": "string",
+        "enum": [
+          "A1",
+          "A2",
+          "B1",
+          "B2",
+          "C1",
+          "C2"
+        ],
+        "title": "CEFR"
+      },
+      "DevTokenIn": {
+        "properties": {
+          "user_id": {
+            "type": "string",
+            "title": "User Id",
+            "default": "dev-user"
+          }
+        },
+        "type": "object",
+        "title": "DevTokenIn"
+      },
+      "Evaluation": {
+        "properties": {
+          "expected_text": {
+            "type": "string",
+            "title": "Expected Text"
+          },
+          "transcript": {
+            "type": "string",
+            "title": "Transcript"
+          },
+          "accuracy": {
+            "type": "number",
+            "title": "Accuracy"
+          },
+          "fluency": {
+            "type": "number",
+            "title": "Fluency"
+          },
+          "confidence": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Confidence"
+          },
+          "score": {
+            "type": "number",
+            "title": "Score"
+          },
+          "passed": {
+            "type": "boolean",
+            "title": "Passed"
+          },
+          "words": {
+            "items": {
+              "$ref": "#/components/schemas/WordResult"
+            },
+            "type": "array",
+            "title": "Words"
+          }
+        },
+        "type": "object",
+        "required": [
+          "expected_text",
+          "transcript",
+          "accuracy",
+          "fluency",
+          "confidence",
+          "score",
+          "passed",
+          "words"
+        ],
+        "title": "Evaluation"
+      },
+      "Exercise": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "type": {
+            "$ref": "#/components/schemas/ExerciseType"
+          },
+          "support": {
+            "$ref": "#/components/schemas/SupportLevel"
+          },
+          "scenario_id": {
+            "type": "string",
+            "title": "Scenario Id"
+          },
+          "phrase_id": {
+            "type": "string",
+            "title": "Phrase Id"
+          },
+          "prompt": {
+            "$ref": "#/components/schemas/ExercisePrompt"
+          },
+          "expected_text": {
+            "type": "string",
+            "title": "Expected Text"
+          },
+          "pass_threshold": {
+            "type": "number",
+            "title": "Pass Threshold"
+          },
+          "response_mode": {
+            "type": "string",
+            "title": "Response Mode",
+            "default": "speech"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "support",
+          "scenario_id",
+          "phrase_id",
+          "prompt",
+          "expected_text",
+          "pass_threshold"
+        ],
+        "title": "Exercise"
+      },
+      "ExercisePrompt": {
+        "properties": {
+          "instruction_es": {
+            "type": "string",
+            "title": "Instruction Es"
+          },
+          "display_text": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Display Text"
+          },
+          "translation": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Translation"
+          },
+          "glossary": {
+            "items": {
+              "$ref": "#/components/schemas/GlossaryEntry"
+            },
+            "type": "array",
+            "title": "Glossary",
+            "default": []
+          },
+          "visual_hint": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Visual Hint"
+          },
+          "audio_text": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Audio Text"
+          },
+          "focus_words": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Focus Words",
+            "default": []
+          }
+        },
+        "type": "object",
+        "required": [
+          "instruction_es"
+        ],
+        "title": "ExercisePrompt"
+      },
+      "ExerciseType": {
+        "type": "string",
+        "enum": [
+          "shadowing",
+          "recall",
+          "guided",
+          "completion"
+        ],
+        "title": "ExerciseType"
+      },
+      "Feedback": {
+        "properties": {
+          "level": {
+            "type": "string",
+            "title": "Level"
+          },
+          "message_es": {
+            "type": "string",
+            "title": "Message Es"
+          },
+          "tips": {
+            "items": {
+              "$ref": "#/components/schemas/Tip"
+            },
+            "type": "array",
+            "title": "Tips"
+          },
+          "focus_words": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Focus Words"
+          },
+          "model_answer": {
+            "type": "string",
+            "title": "Model Answer"
+          }
+        },
+        "type": "object",
+        "required": [
+          "level",
+          "message_es",
+          "tips",
+          "focus_words",
+          "model_answer"
+        ],
+        "title": "Feedback"
+      },
+      "GlossaryEntry": {
+        "properties": {
+          "word": {
+            "type": "string",
+            "title": "Word"
+          },
+          "meaning": {
+            "type": "string",
+            "title": "Meaning"
+          },
+          "ipa": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ipa"
+          }
+        },
+        "type": "object",
+        "required": [
+          "word",
+          "meaning"
+        ],
+        "title": "GlossaryEntry"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "LessonPlan": {
+        "properties": {
+          "scenario_id": {
+            "type": "string",
+            "title": "Scenario Id"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "cefr": {
+            "type": "string",
+            "title": "Cefr"
+          },
+          "stages": {
+            "items": {
+              "$ref": "#/components/schemas/LessonStage"
+            },
+            "type": "array",
+            "title": "Stages"
+          },
+          "roleplay_available": {
+            "type": "boolean",
+            "title": "Roleplay Available",
+            "default": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "scenario_id",
+          "title",
+          "cefr",
+          "stages"
+        ],
+        "title": "LessonPlan"
+      },
+      "LessonStage": {
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/ExerciseType"
+          },
+          "support": {
+            "$ref": "#/components/schemas/SupportLevel"
+          },
+          "exercises": {
+            "items": {
+              "$ref": "#/components/schemas/Exercise"
+            },
+            "type": "array",
+            "title": "Exercises"
+          }
+        },
+        "type": "object",
+        "required": [
+          "type",
+          "support",
+          "exercises"
+        ],
+        "title": "LessonStage"
+      },
+      "LevelOut": {
+        "properties": {
+          "cefr": {
+            "$ref": "#/components/schemas/CEFR"
+          },
+          "band": {
+            "type": "string",
+            "title": "Band"
+          },
+          "scenarios": {
+            "type": "integer",
+            "title": "Scenarios"
+          }
+        },
+        "type": "object",
+        "required": [
+          "cefr",
+          "band",
+          "scenarios"
+        ],
+        "title": "LevelOut"
+      },
+      "PendingTurn": {
+        "properties": {
+          "goal": {
+            "type": "string",
+            "title": "Goal"
+          },
+          "suggested_lines": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Suggested Lines"
+          }
+        },
+        "type": "object",
+        "required": [
+          "goal",
+          "suggested_lines"
+        ],
+        "title": "PendingTurn"
+      },
+      "Phrase": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]*$",
+            "title": "Id"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "translation": {
+            "type": "string",
+            "title": "Translation"
+          },
+          "glossary": {
+            "items": {
+              "$ref": "#/components/schemas/GlossaryEntry"
+            },
+            "type": "array",
+            "title": "Glossary"
+          },
+          "visual_hint": {
+            "type": "string",
+            "title": "Visual Hint",
+            "default": ""
+          },
+          "cloze": {
+            "items": {
+              "type": "integer"
+            },
+            "type": "array",
+            "title": "Cloze",
+            "description": "word indexes hidden in completion stage"
+          },
+          "common": {
+            "type": "boolean",
+            "title": "Common",
+            "default": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "text",
+          "translation"
+        ],
+        "title": "Phrase"
+      },
+      "Progress": {
+        "properties": {
+          "attempts": {
+            "type": "integer",
+            "title": "Attempts"
+          },
+          "passed": {
+            "type": "integer",
+            "title": "Passed"
+          },
+          "average_score": {
+            "type": "number",
+            "title": "Average Score"
+          },
+          "scenarios_practised": {
+            "type": "integer",
+            "title": "Scenarios Practised"
+          },
+          "cards_total": {
+            "type": "integer",
+            "title": "Cards Total"
+          },
+          "cards_due": {
+            "type": "integer",
+            "title": "Cards Due"
+          }
+        },
+        "type": "object",
+        "required": [
+          "attempts",
+          "passed",
+          "average_score",
+          "scenarios_practised",
+          "cards_total",
+          "cards_due"
+        ],
+        "title": "Progress"
+      },
+      "ReviewItem": {
+        "properties": {
+          "card_id": {
+            "type": "string",
+            "title": "Card Id"
+          },
+          "kind": {
+            "type": "string",
+            "title": "Kind"
+          },
+          "due_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Due At"
+          },
+          "exercise": {
+            "$ref": "#/components/schemas/Exercise"
+          }
+        },
+        "type": "object",
+        "required": [
+          "card_id",
+          "kind",
+          "due_at",
+          "exercise"
+        ],
+        "title": "ReviewItem"
+      },
+      "Roleplay": {
+        "properties": {
+          "ai_role": {
+            "type": "string",
+            "title": "Ai Role"
+          },
+          "user_role": {
+            "type": "string",
+            "title": "User Role"
+          },
+          "setting": {
+            "type": "string",
+            "title": "Setting"
+          },
+          "turns": {
+            "items": {
+              "$ref": "#/components/schemas/RoleplayTurn"
+            },
+            "type": "array",
+            "title": "Turns"
+          }
+        },
+        "type": "object",
+        "required": [
+          "ai_role",
+          "user_role",
+          "setting",
+          "turns"
+        ],
+        "title": "Roleplay"
+      },
+      "RoleplayState": {
+        "properties": {
+          "session_id": {
+            "type": "string",
+            "title": "Session Id"
+          },
+          "scenario_id": {
+            "type": "string",
+            "title": "Scenario Id"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "ai_messages": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Ai Messages"
+          },
+          "pending_turn": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/PendingTurn"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "history": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "History"
+          },
+          "last_score": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Last Score"
+          },
+          "accepted": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Accepted"
+          },
+          "feedback": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Feedback"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "average_score": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Average Score"
+          }
+        },
+        "type": "object",
+        "required": [
+          "session_id",
+          "scenario_id",
+          "status",
+          "ai_messages",
+          "pending_turn",
+          "history"
+        ],
+        "title": "RoleplayState"
+      },
+      "RoleplayTurn": {
+        "properties": {
+          "speaker": {
+            "type": "string",
+            "title": "Speaker"
+          },
+          "text": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Text"
+          },
+          "goal": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Goal"
+          },
+          "suggested_lines": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Suggested Lines"
+          }
+        },
+        "type": "object",
+        "required": [
+          "speaker"
+        ],
+        "title": "RoleplayTurn"
+      },
+      "Scenario": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]*$",
+            "title": "Id"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "title_es": {
+            "type": "string",
+            "title": "Title Es"
+          },
+          "cefr": {
+            "$ref": "#/components/schemas/CEFR"
+          },
+          "topic": {
+            "type": "string",
+            "title": "Topic"
+          },
+          "description": {
+            "type": "string",
+            "title": "Description"
+          },
+          "phrases": {
+            "items": {
+              "$ref": "#/components/schemas/Phrase"
+            },
+            "type": "array",
+            "minItems": 1,
+            "title": "Phrases"
+          },
+          "roleplay": {
+            "$ref": "#/components/schemas/Roleplay"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "title_es",
+          "cefr",
+          "topic",
+          "description",
+          "phrases",
+          "roleplay"
+        ],
+        "title": "Scenario"
+      },
+      "ScenarioSummary": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "title_es": {
+            "type": "string",
+            "title": "Title Es"
+          },
+          "cefr": {
+            "$ref": "#/components/schemas/CEFR"
+          },
+          "band": {
+            "type": "string",
+            "title": "Band"
+          },
+          "topic": {
+            "type": "string",
+            "title": "Topic"
+          },
+          "description": {
+            "type": "string",
+            "title": "Description"
+          },
+          "phrases": {
+            "type": "integer",
+            "title": "Phrases"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "title_es",
+          "cefr",
+          "band",
+          "topic",
+          "description",
+          "phrases"
+        ],
+        "title": "ScenarioSummary"
+      },
+      "SrsUpdate": {
+        "properties": {
+          "card_id": {
+            "type": "string",
+            "title": "Card Id"
+          },
+          "kind": {
+            "type": "string",
+            "title": "Kind"
+          },
+          "next_due_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Next Due At"
+          },
+          "interval_days": {
+            "type": "number",
+            "title": "Interval Days"
+          }
+        },
+        "type": "object",
+        "required": [
+          "card_id",
+          "kind",
+          "next_due_at",
+          "interval_days"
+        ],
+        "title": "SrsUpdate"
+      },
+      "SupportLevel": {
+        "type": "string",
+        "enum": [
+          "full",
+          "partial",
+          "low"
+        ],
+        "title": "SupportLevel"
+      },
+      "Tip": {
+        "properties": {
+          "word": {
+            "type": "string",
+            "title": "Word"
+          },
+          "issue": {
+            "type": "string",
+            "title": "Issue"
+          },
+          "advice": {
+            "type": "string",
+            "title": "Advice"
+          }
+        },
+        "type": "object",
+        "required": [
+          "word",
+          "issue",
+          "advice"
+        ],
+        "title": "Tip"
+      },
+      "TtsRequest": {
+        "properties": {
+          "text": {
+            "type": "string",
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Text"
+          },
+          "voice": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Voice"
+          }
+        },
+        "type": "object",
+        "required": [
+          "text"
+        ],
+        "title": "TtsRequest"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "WordResult": {
+        "properties": {
+          "expected": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expected"
+          },
+          "heard": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Heard"
+          },
+          "status": {
+            "$ref": "#/components/schemas/WordStatus"
+          }
+        },
+        "type": "object",
+        "required": [
+          "expected",
+          "heard",
+          "status"
+        ],
+        "title": "WordResult"
+      },
+      "WordStatus": {
+        "type": "string",
+        "enum": [
+          "correct",
+          "mispronounced",
+          "missing",
+          "extra"
+        ],
+        "title": "WordStatus"
+      }
+    },
+    "securitySchemes": {
+      "HTTPBearer": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  }
+}

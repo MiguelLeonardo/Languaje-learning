@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.db
+# Node
+node_modules/
+# Secrets / env
+.env
+.env.*
+!.env.example
+# Research raw captures (never commit third-party artifacts)
+research-artifacts/
+*.har
+*.apk
+*.ipa
+# Terraform
+infra/terraform/.terraform/
+*.tfstate*
+*.egg-info/

@@ -1,0 +1,26 @@
+# Local QA stack: Postgres + API with mock providers (deterministic).
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: app
+      POSTGRES_DB: languaje
+    ports: ["5432:5432"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U app"]
+      interval: 3s
+      retries: 20
+  api:
+    build:
+      context: ..
+      dockerfile: backend/Dockerfile
+    environment:
+      ENV: local
+      DATABASE_URL: postgresql+psycopg://app:app@db:5432/languaje
+      SPEECH_PROVIDER: mock
+      LLM_PROVIDER: mock
+    ports: ["8080:8080"]
+    depends_on:
+      db:
+        condition: service_healthy

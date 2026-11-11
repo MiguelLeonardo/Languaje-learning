@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpeakFlow — Speaking-First English Learning (A1–C2)</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    @keyframes pulse-ring {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 14px rgba(239, 68, 68, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+    }
+    .recording-pulse { animation: pulse-ring 1.5s infinite; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-30">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-indigo-600 flex items-center justify-center font-bold text-lg shadow-lg shadow-indigo-600/30">🎙️</div>
+        <div>
+          <h1 class="font-bold text-base tracking-tight flex items-center gap-2">
+            SpeakFlow
+            <span class="text-xs font-medium px-2 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Speak-First AI</span>
+            <span id="provider-pill" class="text-xs font-medium px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">Speaker: WebSpeech</span>
+          </h1>
+          <p class="text-xs text-slate-400">100% ejercicios por micrófono · CEFR A1–C2 · Sombra · SRS · Roleplay IA</p>
+        </div>
+      </div>
+
+      <!-- Global Stats & Speaker Keys Button -->
+      <div class="flex flex-wrap items-center gap-2 text-xs">
+        <div class="px-3 py-1.5 rounded-lg bg-slate-800/90 border border-slate-700 flex items-center gap-1.5">
+          <span class="text-slate-400">Intentos:</span>
+          <span id="stat-attempts" class="font-semibold text-white">0</span>
+        </div>
+        <div class="px-3 py-1.5 rounded-lg bg-slate-800/90 border border-slate-700 flex items-center gap-1.5">
+          <span class="text-slate-400">Score medio:</span>
+          <span id="stat-score" class="font-semibold text-emerald-400">0%</span>
+        </div>
+        <button onclick="switchTab('srs')" class="px-3 py-1.5 rounded-lg bg-amber-500/15 border border-amber-500/40 text-amber-300 hover:bg-amber-500/25 transition flex items-center gap-1.5">
+          <span>🧠 Repaso SRS:</span>
+          <span id="stat-due" class="font-bold">0</span>
+        </button>
+        <button onclick="toggleKeysModal(true)" class="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-semibold shadow transition flex items-center gap-1.5">
+          <span>🔑</span><span>Llaves Speaker / IA</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Speaker & AI Keys Modal -->
+  <div id="keys-modal" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-lg w-full p-5 space-y-4 shadow-2xl">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <div>
+          <h2 class="font-bold text-base text-white">🔑 Conectar Llaves del Speaker (TTS / STT) y Claude</h2>
+          <p class="text-xs text-slate-400">Se envían por cabeceras seguras al backend o directo al proveedor en modo Firebase Hosting.</p>
+        </div>
+        <button onclick="toggleKeysModal(false)" class="text-slate-400 hover:text-white text-sm px-2 py-1">✕</button>
+      </div>
+
+      <div class="space-y-3 text-xs">
+        <div>
+          <label class="block font-semibold text-slate-300 mb-1">OpenAI API Key (Whisper Mic STT + Speaker TTS "nova")</label>
+          <input id="key-openai" type="password" placeholder="sk-..." class="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-white font-mono" />
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+          <div class="sm:col-span-2">
+            <label class="block font-semibold text-slate-300 mb-1">ElevenLabs API Key (Speaker Neural TTS)</label>
+            <input id="key-elevenlabs" type="password" placeholder="xi-api-key..." class="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-white font-mono" />
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-300 mb-1">ElevenLabs Voice ID</label>
+            <input id="key-eleven-voice" type="text" value="21m00Tcm4TlvDq8ikWAM" class="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-white font-mono" />
+          </div>
+        </div>
+        <div>
+          <label class="block font-semibold text-slate-300 mb-1">Anthropic API Key (Claude 4.5 Roleplay Guionado)</label>
+          <input id="key-anthropic" type="password" placeholder="sk-ant-..." class="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-white font-mono" />
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between pt-2 border-t border-slate-800 text-xs">
+        <button onclick="testSpeakerVoice()" class="px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium">
+          🔊 Probar Voz del Speaker
+        </button>
+        <div class="flex gap-2">
+          <button onclick="clearKeys()" class="px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300">Limpiar</button>
+          <button onclick="saveKeys()" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold">Guardar y Conectar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Workspace -->
+  <div class="max-w-6xl mx-auto w-full flex-1 grid grid-cols-1 lg:grid-cols-12 gap-5 p-4">
+    <!-- Left Column: CEFR Levels & Real-world Scenarios -->
+    <aside class="lg:col-span-4 space-y-4">
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 space-y-3">
+        <div class="flex items-center justify-between">
+          <h2 class="text-xs font-semibold uppercase tracking-wider text-slate-400">1. Nivel CEFR</h2>
+          <span id="band-badge" class="text-xs px-2 py-0.5 rounded bg-slate-800 text-slate-300">Todos</span>
+        </div>
+        <div id="cefr-buttons" class="grid grid-cols-7 gap-1.5 text-xs font-semibold"></div>
+      </div>
+
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 space-y-3">
+        <div class="flex items-center justify-between">
+          <h2 class="text-xs font-semibold uppercase tracking-wider text-slate-400">2. Escenarios del Mundo Real</h2>
+          <span id="scenario-count" class="text-xs text-slate-400"></span>
+        </div>
+        <div id="scenario-list" class="space-y-2 max-h-[420px] overflow-y-auto pr-1"></div>
+      </div>
+    </aside>
+
+    <!-- Right Column: Active Mode & Phone-like Exercise Stage -->
+    <main class="lg:col-span-8 flex flex-col gap-4">
+      <nav class="bg-slate-900 border border-slate-800 rounded-2xl p-1.5 grid grid-cols-2 sm:grid-cols-5 gap-1 text-xs font-medium">
+        <button data-tab="lesson" onclick="switchTab('lesson')" class="tab-btn py-2 px-3 rounded-xl transition flex items-center justify-center gap-1.5">
+          <span>📚</span><span>Lección (4 Etapas)</span>
+        </button>
+        <button data-tab="shadowing" onclick="switchTab('shadowing')" class="tab-btn py-2 px-3 rounded-xl transition flex items-center justify-center gap-1.5">
+          <span>🎧</span><span>Sesión Sombra</span>
+        </button>
+        <button data-tab="common" onclick="switchTab('common')" class="tab-btn py-2 px-3 rounded-xl transition flex items-center justify-center gap-1.5">
+          <span>💬</span><span>Frases Comunes</span>
+        </button>
+        <button data-tab="roleplay" onclick="switchTab('roleplay')" class="tab-btn py-2 px-3 rounded-xl transition flex items-center justify-center gap-1.5">
+          <span>🤖</span><span>Charla IA Guion</span>
+        </button>
+        <button data-tab="srs" onclick="switchTab('srs')" class="tab-btn py-2 px-3 rounded-xl transition flex items-center justify-center gap-1.5">
+          <span>🧠</span><span>Memoria SRS</span>
+        </button>
+      </nav>
+
+      <div id="stage-container" class="bg-slate-900 border border-slate-800 rounded-2xl p-5 flex-1 flex flex-col justify-between min-h-[480px]">
+        <div class="text-center text-slate-400 py-16 text-sm">Cargando escenario…</div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Embedded fallback curriculum so Firebase static hosting works even if Cloud Run is not attached yet
+    const FALLBACK_SCENARIOS = [
+      {
+        id: "a1-ordering-coffee", title: "Ordering a coffee", title_es: "Pedir un café", cefr: "A1", band: "basic", topic: "food-and-drink",
+        description: "Pide una bebida, elige el tamaño y paga en una cafetería.",
+        phrases: [
+          { id: "can-i-have", text: "Can I have a coffee, please?", translation: "¿Me da un café, por favor?", visual_hint: "☕", cloze: [4], common: true,
+            glossary: [{ word: "have", meaning: "tener / tomar (para pedir algo)", ipa: "hæv" }, { word: "please", meaning: "por favor", ipa: "pliːz" }] },
+          { id: "small-one", text: "A small one, please.", translation: "Uno pequeño, por favor.", visual_hint: "🥤 S", cloze: [1], common: true,
+            glossary: [{ word: "small", meaning: "pequeño", ipa: "smɔːl" }] },
+          { id: "how-much", text: "How much is it?", translation: "¿Cuánto cuesta?", visual_hint: "💵", cloze: [1], common: true,
+            glossary: [{ word: "much", meaning: "mucho (how much = cuánto)", ipa: "mʌtʃ" }] },
+          { id: "thank-you", text: "Thank you very much.", translation: "Muchas gracias.", visual_hint: "🙏", cloze: [2], common: true,
+            glossary: [{ word: "very", meaning: "muy", ipa: "ˈveri" }] }
+        ],
+        roleplay: {
+          ai_role: "barista", user_role: "customer", setting: "A busy coffee shop in the morning.",
+          turns: [
+            { speaker: "ai", text: "Hi! What can I get for you?" },
+            { speaker: "user", goal: "Pide un café.", suggested_lines: ["Can I have a coffee, please?", "A coffee, please."] },
+            { speaker: "ai", text: "Sure. Small, medium or large?" },
+            { speaker: "user", goal: "Elige el tamaño.", suggested_lines: ["A small one, please.", "Medium, please."] },
+            { speaker: "ai", text: "Great. Anything else?" },
+            { speaker: "user", goal: "Pregunta el precio.", suggested_lines: ["No, thanks. How much is it?", "How much is it?"] },
+            { speaker: "ai", text: "That's three dollars. Have a nice day!" }
+          ]
+        }
+      },
+      {
+        id: "a2-asking-directions", title: "Asking for directions", title_es: "Pedir indicaciones", cefr: "A2", band: "basic", topic: "travel",
+        description: "Pregunta cómo llegar a un lugar y entiende indicaciones simples.",
+        phrases: [
+          { id: "excuse-me", text: "Excuse me, is there a pharmacy near here?", translation: "Disculpe, ¿hay una farmacia cerca de aquí?", visual_hint: "💊📍", cloze: [5, 6], common: true,
+            glossary: [{ word: "pharmacy", meaning: "farmacia", ipa: "ˈfɑːrməsi" }, { word: "near", meaning: "cerca", ipa: "nɪr" }] },
+          { id: "how-do-i-get", text: "How do I get to the train station?", translation: "¿Cómo llego a la estación de tren?", visual_hint: "🚉", cloze: [3], common: true,
+            glossary: [{ word: "get to", meaning: "llegar a", ipa: "ɡet tuː" }] },
+          { id: "is-it-far", text: "Is it far from here?", translation: "¿Está lejos de aquí?", visual_hint: "📏", cloze: [2], common: true,
+            glossary: [{ word: "far", meaning: "lejos", ipa: "fɑːr" }] },
+          { id: "could-you-repeat", text: "Could you repeat that, please?", translation: "¿Podría repetir eso, por favor?", visual_hint: "🔁", cloze: [2], common: true,
+            glossary: [{ word: "repeat", meaning: "repetir", ipa: "rɪˈpiːt" }] }
+        ],
+        roleplay: {
+          ai_role: "local resident", user_role: "tourist", setting: "A street corner in a city you are visiting.",
+          turns: [
+            { speaker: "ai", text: "Hi there, you look a little lost. Can I help?" },
+            { speaker: "user", goal: "Pregunta cómo llegar a la estación de tren.", suggested_lines: ["How do I get to the train station?"] },
+            { speaker: "ai", text: "Go straight for two blocks, then turn left at the bank." },
+            { speaker: "user", goal: "Pide que repita.", suggested_lines: ["Could you repeat that, please?"] },
+            { speaker: "ai", text: "Two blocks straight, then left at the bank." }
+          ]
+        }
+      },
+      {
+        id: "b1-hotel-check-in", title: "Checking into a hotel", title_es: "Registrarse en un hotel", cefr: "B1", band: "intermediate", topic: "travel",
+        description: "Confirma tu reserva, resuelve un problema y pregunta por servicios.",
+        phrases: [
+          { id: "have-a-reservation", text: "Hi, I have a reservation under the name Garcia.", translation: "Hola, tengo una reserva a nombre de García.", visual_hint: "🏨🧾", cloze: [4, 5], common: true,
+            glossary: [{ word: "reservation", meaning: "reserva", ipa: "ˌrezərˈveɪʃən" }] },
+          { id: "breakfast-included", text: "Is breakfast included in the price?", translation: "¿El desayuno está incluido en el precio?", visual_hint: "🍳", cloze: [2], common: true,
+            glossary: [{ word: "included", meaning: "incluido", ipa: "ɪnˈkluːdɪd" }] },
+          { id: "late-checkout", text: "Would it be possible to check out a bit later?", translation: "¿Sería posible hacer el check-out un poco más tarde?", visual_hint: "🕐", cloze: [3], common: true,
+            glossary: [{ word: "possible", meaning: "posible", ipa: "ˈpɑːsəbəl" }] }
+        ],
+        roleplay: {
+          ai_role: "hotel receptionist", user_role: "guest", setting: "The front desk of a mid-size hotel.",
+          turns: [
+            { speaker: "ai", text: "Good evening and welcome. How can I help you?" },
+            { speaker: "user", goal: "Di que tienes una reserva.", suggested_lines: ["Hi, I have a reservation under the name Garcia."] },
+            { speaker: "ai", text: "Here's your key. Anything else?" },
+            { speaker: "user", goal: "Pregunta si el desayuno está incluido.", suggested_lines: ["Is breakfast included in the price?"] },
+            { speaker: "ai", text: "Yes, from seven to ten on the first floor." }
+          ]
+        }
+      },
+      {
+        id: "b2-job-interview", title: "Job interview small talk", title_es: "Entrevista de trabajo", cefr: "B2", band: "intermediate", topic: "work",
+        description: "Preséntate profesionalmente, habla de tu experiencia y haz preguntas.",
+        phrases: [
+          { id: "tell-about-myself", text: "I've been working in customer support for about five years.", translation: "Llevo unos cinco años trabajando en atención al cliente.", visual_hint: "💼🎧", cloze: [1, 2], common: true,
+            glossary: [{ word: "been working", meaning: "present perfect continuous: acción iniciada en el pasado que continúa" }] },
+          { id: "strength", text: "One of my main strengths is staying calm under pressure.", translation: "Una de mis principales fortalezas es mantener la calma bajo presión.", visual_hint: "🧘", cloze: [4, 6], common: true,
+            glossary: [{ word: "strengths", meaning: "fortalezas", ipa: "streŋkθs" }] },
+          { id: "next-steps", text: "What are the next steps in the hiring process?", translation: "¿Cuáles son los próximos pasos del proceso de selección?", visual_hint: "➡️", cloze: [7], common: true,
+            glossary: [{ word: "hiring", meaning: "contratación", ipa: "ˈhaɪərɪŋ" }] }
+        ],
+        roleplay: {
+          ai_role: "hiring manager", user_role: "candidate", setting: "A video interview for a customer success position.",
+          turns: [
+            { speaker: "ai", text: "Thanks for joining us today. Could you tell me a little about yourself?" },
+            { speaker: "user", goal: "Resume tu experiencia.", suggested_lines: ["I've been working in customer support for about five years."] },
+            { speaker: "ai", text: "What would you say is your biggest strength?" },
+            { speaker: "user", goal: "Describe una fortaleza.", suggested_lines: ["One of my main strengths is staying calm under pressure."] },
+            { speaker: "ai", text: "We'll get back to you within a week!" }
+          ]
+        }
+      },
+      {
+        id: "c1-negotiating-deadline", title: "Negotiating a deadline", title_es: "Negociar un plazo de entrega", cefr: "C1", band: "advanced", topic: "work",
+        description: "Explica un retraso con diplomacia y negocia una nueva fecha.",
+        phrases: [
+          { id: "heads-up", text: "I wanted to give you a heads-up that we're running slightly behind schedule.", translation: "Quería avisarte con antelación de que vamos un poco atrasados.", visual_hint: "⏳📅", cloze: [6, 11], common: true,
+            glossary: [{ word: "heads-up", meaning: "aviso anticipado" }] },
+          { id: "propose", text: "Would you be open to pushing the deadline back by a week?", translation: "¿Estarías dispuesto a aplazar la fecha límite una semana?", visual_hint: "↪️", cloze: [5, 7], common: true,
+            glossary: [{ word: "push back", meaning: "aplazar" }] },
+          { id: "meet-halfway", text: "Perhaps we could meet halfway and ship the core features first.", translation: "Quizás podríamos llegar a un punto medio y entregar primero las funciones principales.", visual_hint: "🤝", cloze: [3, 4], common: true,
+            glossary: [{ word: "meet halfway", meaning: "llegar a un acuerdo intermedio" }] }
+        ],
+        roleplay: {
+          ai_role: "client project lead", user_role: "agency project manager", setting: "A weekly status call with a client.",
+          turns: [
+            { speaker: "ai", text: "Morning! Are we still on track for launch on the fifteenth?" },
+            { speaker: "user", goal: "Avisa del retraso con diplomacia.", suggested_lines: ["I wanted to give you a heads-up that we're running slightly behind schedule."] },
+            { speaker: "ai", text: "What are you proposing?" },
+            { speaker: "user", goal: "Ofrece un punto medio.", suggested_lines: ["Perhaps we could meet halfway and ship the core features first."] },
+            { speaker: "ai", text: "That could work. Send me a revised plan by Friday." }
+          ]
+        }
+      },
+      {
+        id: "c2-dinner-debate", title: "Debating at a dinner party", title_es: "Debatir en una cena", cefr: "C2", band: "advanced", topic: "social",
+        description: "Expresa matices, discrepa con elegancia y usa expresiones idiomáticas.",
+        phrases: [
+          { id: "devils-advocate", text: "Just to play devil's advocate, couldn't remote work actually isolate people?", translation: "Solo por llevar la contraria, ¿no podría el teletrabajo aislar a las personas?", visual_hint: "😈⚖️", cloze: [3, 4], common: true,
+            glossary: [{ word: "devil's advocate", meaning: "abogado del diablo" }] },
+          { id: "see-where", text: "I see where you're coming from, but I'd take that with a grain of salt.", translation: "Entiendo tu punto de vista, pero yo lo tomaría con pinzas.", visual_hint: "🧂", cloze: [4, 12], common: true,
+            glossary: [{ word: "grain of salt", meaning: "con escepticismo" }] },
+          { id: "agree-to-disagree", text: "Fair enough, let's agree to disagree on that one.", translation: "Me parece justo, aceptemos que no estamos de acuerdo en eso.", visual_hint: "🤷", cloze: [3, 4, 5], common: true,
+            glossary: [{ word: "agree to disagree", meaning: "aceptar diferencias sin seguir discutiendo" }] }
+        ],
+        roleplay: {
+          ai_role: "opinionated dinner guest", user_role: "fellow guest", setting: "A relaxed dinner party among friends.",
+          turns: [
+            { speaker: "ai", text: "Honestly, I think offices are obsolete. Remote work is better in every way." },
+            { speaker: "user", goal: "Haz de abogado del diablo.", suggested_lines: ["Just to play devil's advocate, couldn't remote work actually isolate people?"] },
+            { speaker: "ai", text: "People can build community online just as well." },
+            { speaker: "user", goal: "Cierra el debate con elegancia.", suggested_lines: ["Fair enough, let's agree to disagree on that one."] },
+            { speaker: "ai", text: "Ha, deal. More wine?" }
+          ]
+        }
+      }
+    ];
+
+    const state = {
+      backendOnline: false,
+      token: null,
+      cefr: 'ALL',
+      scenarios: [],
+      currentScenario: null,
+      lesson: null,
+      activeTab: 'lesson',
+      stageIndex: 0,
+      exerciseIndex: 0,
+      shadowingList: [],
+      commonList: [],
+      srsList: [],
+      roleplaySession: null,
+      lastEvaluation: null,
+      localAttempts: 0,
+      localScores: [],
+      keys: {
+        openai: localStorage.getItem('sf_openai_key') || '',
+        elevenlabs: localStorage.getItem('sf_elevenlabs_key') || '',
+        elevenVoice: localStorage.getItem('sf_eleven_voice') || '21m00Tcm4TlvDq8ikWAM',
+        anthropic: localStorage.getItem('sf_anthropic_key') || '',
+      }
+    };
+
+    const STAGE_LABELS = {
+      shadowing: { title: '1. Sesión de Sombra', badge: 'Soporte Visual ALTO · Input', color: 'bg-sky-500/20 text-sky-300 border-sky-500/40' },
+      recall: { title: '2. Recordación + Glosario', badge: 'Soporte Visual ALTO · Explicación', color: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40' },
+      guided: { title: '3. Refuerzo Guiado', badge: 'Soporte Visual MEDIO · Pistas', color: 'bg-amber-500/20 text-amber-300 border-amber-500/40' },
+      completion: { title: '4. Completar Frase (Cloze)', badge: 'Soporte Visual BAJO · Huecos', color: 'bg-purple-500/20 text-purple-300 border-purple-500/40' },
+    };
+
+    function keyHeaders() {
+      const h = {};
+      if (state.keys.openai) h['X-OpenAI-Key'] = state.keys.openai;
+      if (state.keys.elevenlabs) h['X-ElevenLabs-Key'] = state.keys.elevenlabs;
+      if (state.keys.anthropic) h['X-Anthropic-Key'] = state.keys.anthropic;
+      return h;
+    }
+
+    function toggleKeysModal(show) {
+      document.getElementById('key-openai').value = state.keys.openai;
+      document.getElementById('key-elevenlabs').value = state.keys.elevenlabs;
+      document.getElementById('key-eleven-voice').value = state.keys.elevenVoice;
+      document.getElementById('key-anthropic').value = state.keys.anthropic;
+      document.getElementById('keys-modal').classList.toggle('hidden', !show);
+    }
+
+    async function saveKeys() {
+      state.keys.openai = document.getElementById('key-openai').value.trim();
+      state.keys.elevenlabs = document.getElementById('key-elevenlabs').value.trim();
+      state.keys.elevenVoice = document.getElementById('key-eleven-voice').value.trim() || '21m00Tcm4TlvDq8ikWAM';
+      state.keys.anthropic = document.getElementById('key-anthropic').value.trim();
+      localStorage.setItem('sf_openai_key', state.keys.openai);
+      localStorage.setItem('sf_elevenlabs_key', state.keys.elevenlabs);
+      localStorage.setItem('sf_eleven_voice', state.keys.elevenVoice);
+      localStorage.setItem('sf_anthropic_key', state.keys.anthropic);
+      toggleKeysModal(false);
+      await updateProviderBadge();
+    }
+
+    async function clearKeys() {
+      state.keys = { openai: '', elevenlabs: '', elevenVoice: '21m00Tcm4TlvDq8ikWAM', anthropic: '' };
+      localStorage.removeItem('sf_openai_key');
+      localStorage.removeItem('sf_elevenlabs_key');
+      localStorage.removeItem('sf_anthropic_key');
+      toggleKeysModal(false);
+      await updateProviderBadge();
+    }
+
+    async function updateProviderBadge() {
+      const pill = document.getElementById('provider-pill');
+      if (state.backendOnline) {
+        try {
+          const st = await api('/v1/providers/status');
+          const tts = st.tts_provider === 'elevenlabs' ? 'ElevenLabs' : (st.tts_provider === 'openai_tts' ? 'OpenAI TTS' : 'WebSpeech');
+          const stt = st.speech_provider === 'openai_whisper' ? 'Whisper' : 'WebSpeech';
+          pill.textContent = `Speaker: ${tts} · Mic: ${stt}`;
+          return;
+        } catch (_) {}
+      }
+      const tts = state.keys.elevenlabs ? 'ElevenLabs' : (state.keys.openai ? 'OpenAI TTS' : 'WebSpeech');
+      const stt = state.keys.openai ? 'Whisper' : 'WebSpeech';
+      pill.textContent = `Speaker: ${tts} · Mic: ${stt}`;
+    }
+
+    async function testSpeakerVoice() {
+      await saveKeys();
+      await speakText('Welcome to SpeakFlow! Your speaker voice is connected and ready.');
+    }
+
+    function makeWavBlob() {
+      const sampleRate = 8000, numSamples = 1600;
+      const buf = new ArrayBuffer(44 + numSamples * 2);
+      const view = new DataView(buf);
+      const writeStr = (off, s) => { for (let i = 0; i < s.length; i++) view.setUint8(off + i, s.charCodeAt(i)); };
+      writeStr(0, 'RIFF'); view.setUint32(4, 36 + numSamples * 2, true); writeStr(8, 'WAVEfmt ');
+      view.setUint32(16, 16, true); view.setUint16(20, 1, true); view.setUint16(22, 1, true);
+      view.setUint32(24, sampleRate, true); view.setUint32(28, sampleRate * 2, true);
+      view.setUint16(32, 2, true); view.setUint16(34, 16, true); writeStr(36, 'data');
+      view.setUint32(40, numSamples * 2, true);
+      return new Blob([buf], { type: 'audio/wav' });
+    }
+
+    async function api(path, opts = {}) {
+      const headers = { ...keyHeaders(), ...(opts.headers || {}) };
+      if (state.token) headers['Authorization'] = `Bearer ${state.token}`;
+      const res = await fetch(path, { ...opts, headers });
+      if (!res.ok) throw new Error(`${res.status}: ${await res.text()}`);
+      return res.json();
+    }
+
+    async function speakText(text) {
+      if (!text) return;
+      // 1. Try Backend /v1/tts if backend is online and a TTS key exists
+      if (state.backendOnline && (state.keys.elevenlabs || state.keys.openai)) {
+        try {
+          const res = await fetch('/v1/tts', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${state.token}`, ...keyHeaders() },
+            body: JSON.stringify({ text, voice: state.keys.elevenlabs ? state.keys.elevenVoice : 'nova' })
+          });
+          if (res.ok) {
+            const blob = await res.blob();
+            const audio = new Audio(URL.createObjectURL(blob));
+            await audio.play();
+            return;
+          }
+        } catch (_) {}
+      }
+      // 2. Try direct ElevenLabs or OpenAI TTS if running statically on Firebase Hosting
+      if (state.keys.elevenlabs) {
+        try {
+          const r = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${state.keys.elevenVoice}`, {
+            method: 'POST',
+            headers: { 'xi-api-key': state.keys.elevenlabs, 'Content-Type': 'application/json', Accept: 'audio/mpeg' },
+            body: JSON.stringify({ text, model_id: 'eleven_multilingual_v2' })
+          });
+          if (r.ok) { const a = new Audio(URL.createObjectURL(await r.blob())); await a.play(); return; }
+        } catch (_) {}
+      }
+      if (state.keys.openai) {
+        try {
+          const r = await fetch('https://api.openai.com/v1/audio/speech', {
+            method: 'POST',
+            headers: { Authorization: `Bearer ${state.keys.openai}`, 'Content-Type': 'application/json' },
+            body: JSON.stringify({ model: 'tts-1', voice: 'nova', input: text })
+          });
+          if (r.ok) { const a = new Audio(URL.createObjectURL(await r.blob())); await a.play(); return; }
+        } catch (_) {}
+      }
+      // 3. Built-in browser Web Speech synthesis fallback
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const u = new SpeechSynthesisUtterance(text);
+        u.lang = 'en-US';
+        u.rate = 0.95;
+        window.speechSynthesis.speak(u);
+      }
+    }
+
+    function buildLocalLesson(scenario) {
+      const firstHint = t => t.split(' ').map(w => { const c = w.replace(/[.,!?]+$/, ''); return (c.length > 1 ? c[0] + '_'.repeat(c.length - 1) : c) + w.slice(c.length); }).join(' ');
+      const cloze = p => { const s = new Set(p.cloze || [1]); return p.text.split(' ').map((w, i) => s.has(i) ? '____' : w).join(' '); };
+      const mk = (p, type, support, th, inst, disp, tr, gl, aud) => ({
+        id: `${scenario.id}.${p.id}.${type}`, type, support, scenario_id: scenario.id, phrase_id: p.id,
+        expected_text: p.text, pass_threshold: th, response_mode: 'speech',
+        prompt: { instruction_es: inst, display_text: disp, translation: tr, glossary: gl || [], visual_hint: p.visual_hint, audio_text: aud, focus_words: [] }
+      });
+      return {
+        scenario_id: scenario.id, title: scenario.title, cefr: scenario.cefr,
+        stages: [
+          { type: 'shadowing', support: 'full', exercises: scenario.phrases.map(p => mk(p, 'shadowing', 'full', 0.70, 'Escucha y repite la frase imitando el ritmo y la entonación.', p.text, p.translation, [], p.text)) },
+          { type: 'recall', support: 'full', exercises: scenario.phrases.map(p => mk(p, 'recall', 'full', 0.75, 'Lee la frase en voz alta. Revisa las palabras clave.', p.text, p.translation, p.glossary, p.text)) },
+          { type: 'guided', support: 'partial', exercises: scenario.phrases.map(p => mk(p, 'guided', 'partial', 0.80, 'Di la frase en inglés usando las pistas.', firstHint(p.text), p.translation, [], null)) },
+          { type: 'completion', support: 'low', exercises: scenario.phrases.map(p => mk(p, 'completion', 'low', 0.85, 'Completa la frase diciéndola completa en voz alta.', cloze(p), null, [], null)) },
+        ]
+      };
+    }
+
+    async function init() {
+      try {
+        const auth = await api('/v1/auth/dev-token', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ user_id: 'demo-learner' }),
+        });
+        state.token = auth.access_token;
+        state.backendOnline = true;
+      } catch (_) {
+        state.backendOnline = false;
+      }
+      await updateProviderBadge();
+      renderCefrButtons();
+      await loadScenarios();
+      await refreshProgress();
+      updateTabStyles();
+    }
+
+    function renderCefrButtons() {
+      const levels = ['ALL', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+      document.getElementById('cefr-buttons').innerHTML = levels.map(lv => `
+        <button onclick="selectCefr('${lv}')" class="py-1.5 rounded-lg border transition ${
+          state.cefr === lv ? 'bg-indigo-600 border-indigo-400 text-white shadow' : 'bg-slate-800/80 border-slate-700 text-slate-300 hover:bg-slate-800'
+        }">${lv === 'ALL' ? 'Todos' : lv}</button>
+      `).join('');
+      const bandMap = { ALL: 'A1–C2 Completo', A1: 'Básico', A2: 'Básico', B1: 'Intermedio', B2: 'Intermedio', C1: 'Avanzado', C2: 'Avanzado' };
+      document.getElementById('band-badge').textContent = bandMap[state.cefr];
+    }
+
+    async function selectCefr(lv) {
+      state.cefr = lv;
+      renderCefrButtons();
+      await loadScenarios();
+      if (state.activeTab === 'common') await loadCommonPhrases();
+    }
+
+    async function loadScenarios() {
+      if (state.backendOnline) {
+        const q = state.cefr === 'ALL' ? '' : `?cefr=${state.cefr}`;
+        state.scenarios = await api(`/v1/scenarios${q}`);
+      } else {
+        const list = state.cefr === 'ALL' ? FALLBACK_SCENARIOS : FALLBACK_SCENARIOS.filter(s => s.cefr === state.cefr);
+        state.scenarios = list.map(s => ({ ...s, phrases: s.phrases.length }));
+      }
+      document.getElementById('scenario-count').textContent = `${state.scenarios.length} disponibles`;
+      if (state.scenarios.length && (!state.currentScenario || !state.scenarios.some(s => s.id === state.currentScenario.id))) {
+        await selectScenario(state.scenarios[0].id);
+      } else {
+        renderScenarioList();
+      }
+    }
+
+    function renderScenarioList() {
+      const bandColors = {
+        basic: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30',
+        intermediate: 'bg-amber-500/20 text-amber-300 border-amber-500/30',
+        advanced: 'bg-rose-500/20 text-rose-300 border-rose-500/30',
+      };
+      document.getElementById('scenario-list').innerHTML = state.scenarios.map(s => {
+        const active = state.currentScenario && state.currentScenario.id === s.id;
+        return `
+          <button onclick="selectScenario('${s.id}')" class="w-full text-left p-3 rounded-xl border transition flex items-start justify-between gap-2 ${
+            active ? 'bg-indigo-600/20 border-indigo-500 text-white' : 'bg-slate-800/50 border-slate-800 hover:border-slate-700 text-slate-200'
+          }">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-bold px-2 py-0.5 rounded border ${bandColors[s.band] || ''}">${s.cefr}</span>
+                <span class="font-semibold text-sm">${s.title_es}</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-1">${s.title} · ${s.description}</p>
+            </div>
+            <span class="text-xs text-slate-400 shrink-0">${s.phrases} frases</span>
+          </button>
+        `;
+      }).join('');
+    }
+
+    async function selectScenario(id) {
+      if (state.backendOnline) {
+        state.currentScenario = await api(`/v1/scenarios/${id}`);
+        state.lesson = await api(`/v1/lessons/${id}`);
+        state.shadowingList = await api(`/v1/shadowing/${id}`);
+      } else {
+        state.currentScenario = FALLBACK_SCENARIOS.find(s => s.id === id);
+        state.lesson = buildLocalLesson(state.currentScenario);
+        state.shadowingList = state.lesson.stages[0].exercises;
+      }
+      state.stageIndex = 0; state.exerciseIndex = 0; state.lastEvaluation = null; state.roleplaySession = null;
+      renderScenarioList();
+      await renderActiveTab();
+    }
+
+    async function refreshProgress() {
+      if (state.backendOnline) {
+        const p = await api('/v1/progress');
+        document.getElementById('stat-attempts').textContent = p.attempts;
+        document.getElementById('stat-score').textContent = `${Math.round((p.average_score || 0) * 100)}%`;
+        document.getElementById('stat-due').textContent = p.cards_due;
+      } else {
+        document.getElementById('stat-attempts').textContent = state.localAttempts;
+        const avg = state.localScores.length ? state.localScores.reduce((a, b) => a + b, 0) / state.localScores.length : 0;
+        document.getElementById('stat-score').textContent = `${Math.round(avg * 100)}%`;
+        document.getElementById('stat-due').textContent = state.srsList.length;
+      }
+    }
+
+    function updateTabStyles() {
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        const active = btn.dataset.tab === state.activeTab;
+        btn.className = `tab-btn py-2 px-3 rounded-xl transition flex items-center justify-center gap-1.5 ${
+          active ? 'bg-indigo-600 text-white shadow font-semibold' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
+        }`;
+      });
+    }
+
+    async function switchTab(tab) {
+      state.activeTab = tab;
+      state.lastEvaluation = null;
+      updateTabStyles();
+      await renderActiveTab();
+    }
+
+    async function loadCommonPhrases() {
+      if (state.backendOnline) {
+        const q = state.cefr === 'ALL' ? '' : `?cefr=${state.cefr}`;
+        state.commonList = await api(`/v1/phrases/common${q}`);
+      } else {
+        const scens = state.cefr === 'ALL' ? FALLBACK_SCENARIOS : FALLBACK_SCENARIOS.filter(s => s.cefr === state.cefr);
+        state.commonList = scens.flatMap(s => buildLocalLesson(s).stages[1].exercises);
+      }
+      state.exerciseIndex = 0;
+    }
+
+    async function renderActiveTab() {
+      if (state.activeTab === 'lesson') return renderLessonView();
+      if (state.activeTab === 'shadowing') { state.exerciseIndex = Math.min(state.exerciseIndex, Math.max(0, state.shadowingList.length - 1)); return renderExerciseListMode(state.shadowingList, '🎧 Sesión de Sombra (Input Principal)'); }
+      if (state.activeTab === 'common') { await loadCommonPhrases(); return renderExerciseListMode(state.commonList, '💬 Práctica de Frases Comunes'); }
+      if (state.activeTab === 'roleplay') return renderRoleplayView();
+      if (state.activeTab === 'srs') return renderSrsView();
+    }
+
+    function renderLessonView() {
+      if (!state.lesson) return;
+      const stages = state.lesson.stages;
+      const stage = stages[state.stageIndex];
+      const ex = stage.exercises[state.exerciseIndex];
+      const meta = STAGE_LABELS[stage.type];
+      const stagePills = stages.map((st, idx) => `
+        <button onclick="jumpStage(${idx})" class="px-3 py-1.5 rounded-lg text-xs font-medium border transition ${
+          idx === state.stageIndex ? 'bg-indigo-600 border-indigo-400 text-white' : 'bg-slate-800/70 border-slate-700 text-slate-300 hover:bg-slate-800'
+        }">${STAGE_LABELS[st.type].title}</button>
+      `).join('');
+
+      document.getElementById('stage-container').innerHTML = `
+        <div class="space-y-4">
+          <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-800">
+            <div class="flex flex-wrap gap-1.5">${stagePills}</div>
+            <button onclick="switchTab('roleplay')" class="text-xs px-3 py-1.5 rounded-lg bg-emerald-500/15 border border-emerald-500/40 text-emerald-300 hover:bg-emerald-500/25">
+              5. Ir a Charla IA →
+            </button>
+          </div>
+          ${renderExerciseCard(ex, meta, state.exerciseIndex, stage.exercises.length, 'nextLessonItem')}
+        </div>
+        ${renderMicrophoneControls(ex)}
+      `;
+    }
+
+    function jumpStage(idx) { state.stageIndex = idx; state.exerciseIndex = 0; state.lastEvaluation = null; renderLessonView(); }
+
+    function nextLessonItem(delta) {
+      const stages = state.lesson.stages;
+      const stage = stages[state.stageIndex];
+      let nextIdx = state.exerciseIndex + delta;
+      if (nextIdx >= stage.exercises.length) {
+        if (state.stageIndex + 1 < stages.length) { state.stageIndex++; state.exerciseIndex = 0; }
+        else return switchTab('roleplay');
+      } else if (nextIdx < 0) {
+        if (state.stageIndex > 0) { state.stageIndex--; state.exerciseIndex = stages[state.stageIndex].exercises.length - 1; }
+        else state.exerciseIndex = 0;
+      } else state.exerciseIndex = nextIdx;
+      state.lastEvaluation = null;
+      renderLessonView();
+    }
+
+    function renderExerciseListMode(list, heading) {
+      if (!list || !list.length) {
+        document.getElementById('stage-container').innerHTML = `<div class="text-center text-slate-400 py-16 text-sm">No hay ejercicios para este filtro.</div>`;
+        return;
+      }
+      const ex = list[state.exerciseIndex];
+      const meta = STAGE_LABELS[ex.type];
+      document.getElementById('stage-container').innerHTML = `
+        <div class="space-y-4">
+          <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+            <h3 class="font-semibold text-sm text-white">${heading}</h3>
+            <span class="text-xs text-slate-400">Frase ${state.exerciseIndex + 1} de ${list.length}</span>
+          </div>
+          ${renderExerciseCard(ex, meta, state.exerciseIndex, list.length, 'nextListItem')}
+        </div>
+        ${renderMicrophoneControls(ex)}
+      `;
+    }
+
+    function nextListItem(delta) {
+      const list = state.activeTab === 'shadowing' ? state.shadowingList : state.commonList;
+      state.exerciseIndex = (state.exerciseIndex + delta + list.length) % list.length;
+      state.lastEvaluation = null;
+      renderActiveTab();
+    }
+
+    function renderExerciseCard(ex, meta, idx, total, navFn) {
+      const p = ex.prompt;
+      const glossaryHtml = (p.glossary && p.glossary.length) ? `
+        <div class="bg-slate-950/70 border border-slate-800 rounded-xl p-3 space-y-1.5">
+          <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Glosario y Pronunciación (IPA)</div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            ${p.glossary.map(g => `
+              <div class="text-xs bg-slate-900 border border-slate-800 rounded-lg p-2 flex items-center justify-between">
+                <div>
+                  <span class="font-bold text-indigo-300">${g.word}</span>
+                  ${g.ipa ? `<span class="text-slate-400 font-mono ml-1">/${g.ipa}/</span>` : ''}
+                  <div class="text-slate-300 mt-0.5">${g.meaning}</div>
+                </div>
+                <button onclick="speakText('${g.word.replace(/'/g, "\\'")}')" class="px-2 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-200">🔊</button>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      ` : '';
+
+      const focusHtml = (p.focus_words && p.focus_words.length) ? `
+        <div class="px-3 py-2 rounded-xl bg-rose-500/15 border border-rose-500/30 text-xs text-rose-200">
+          🎯 <strong>Palabras objetivo a reforzar (Feedback SRS):</strong> ${p.focus_words.join(', ')}
+        </div>
+      ` : '';
+
+      return `
+        <div class="space-y-4">
+          <div class="flex items-center justify-between gap-2">
+            <span class="text-xs font-semibold px-2.5 py-1 rounded-full border ${meta.color}">${meta.badge}</span>
+            <div class="flex items-center gap-2 text-xs text-slate-400">
+              <span>Umbral aprobación: <strong>${Math.round(ex.pass_threshold * 100)}%</strong></span>
+              <span>·</span>
+              <span>Item ${idx + 1}/${total}</span>
+            </div>
+          </div>
+
+          <div class="bg-slate-950 border border-slate-800 rounded-2xl p-5 space-y-3 text-center">
+            ${p.visual_hint ? `<div class="text-3xl">${p.visual_hint}</div>` : ''}
+            <p class="text-xs text-indigo-300 font-medium">${p.instruction_es}</p>
+            <div class="text-xl sm:text-2xl font-bold tracking-tight text-white flex items-center justify-center gap-3">
+              <span>${p.display_text || ''}</span>
+              ${p.audio_text ? `
+                <button onclick="speakText('${p.audio_text.replace(/'/g, "\\'")}')" title="Escuchar Speaker" class="px-3 py-1.5 text-sm rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white shadow">
+                  🔊 Escuchar
+                </button>
+              ` : ''}
+            </div>
+            ${p.translation ? `<p class="text-sm text-slate-400">“${p.translation}”</p>` : '<p class="text-xs text-slate-500 italic">Traducción oculta en esta etapa de bajo soporte visual</p>'}
+          </div>
+
+          ${focusHtml}
+          ${glossaryHtml}
+          ${renderEvaluationResult()}
+
+          <div class="flex items-center justify-between pt-1">
+            <button onclick="${navFn}(-1)" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300">← Anterior</button>
+            <button onclick="${navFn}(1)" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300">Siguiente →</button>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderEvaluationResult() {
+      if (!state.lastEvaluation) return '';
+      const { evaluation, feedback, srs } = state.lastEvaluation;
+      const statusBadge = {
+        correct: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40',
+        mispronounced: 'bg-amber-500/20 text-amber-300 border-amber-500/40',
+        missing: 'bg-rose-500/20 text-rose-300 border-rose-500/40 line-through',
+        extra: 'bg-purple-500/20 text-purple-300 border-purple-500/40',
+      };
+      const wordsHtml = evaluation.words.map(w => `
+        <span class="px-2 py-1 rounded-lg border text-xs font-medium ${statusBadge[w.status]}" title="${w.status}">
+          ${w.expected || w.heard}
+          ${w.status === 'mispronounced' ? `<span class="opacity-75">(oído: ${w.heard})</span>` : ''}
+        </span>
+      `).join('');
+
+      const tipsHtml = (feedback.tips || []).map(t => `
+        <li class="text-xs text-slate-300 flex items-start gap-1.5">
+          <span>💡</span><span><strong>${t.word}:</strong> ${t.advice}</span>
+        </li>
+      `).join('');
+
+      const srsInfo = (srs || []).map(u => `${u.kind} (${u.interval_days < 0.05 ? '10 min' : u.interval_days + 'd'})`).join(', ');
+
+      return `
+        <div class="rounded-2xl border p-4 space-y-3 ${
+          evaluation.passed ? 'bg-emerald-950/30 border-emerald-500/40' : 'bg-rose-950/30 border-rose-500/40'
+        }">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider ${evaluation.passed ? 'text-emerald-400' : 'text-rose-400'}">
+                ${feedback.level.toUpperCase()} · Score ${Math.round(evaluation.score * 100)}%
+              </span>
+              <p class="text-sm font-semibold text-white mt-0.5">${feedback.message_es}</p>
+            </div>
+            <div class="text-xs text-slate-400">
+              Precisión: <strong>${Math.round(evaluation.accuracy * 100)}%</strong> · Fluidez: <strong>${Math.round(evaluation.fluency * 100)}%</strong>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-1.5">${wordsHtml}</div>
+          ${tipsHtml ? `<ul class="space-y-1 pt-1">${tipsHtml}</ul>` : ''}
+          ${srsInfo ? `<div class="text-xs text-slate-400 pt-1 border-t border-slate-800/80">🧠 Memoria espaciada actualizada: ${srsInfo}</div>` : ''}
+        </div>
+      `;
+    }
+
+    function renderMicrophoneControls(ex, cardId = null) {
+      const target = ex.expected_text.replace(/'/g, "\\'");
+      const words = ex.expected_text.split(' ');
+      const imperfect = words.length > 2
+        ? words.slice(0, words.length - 1).join(' ').replace(/'/g, "\\'")
+        : 'uh ' + words[0].replace(/'/g, "\\'");
+
+      return `
+        <div class="mt-4 pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div class="flex items-center gap-3">
+            <button id="mic-btn" onclick="recordWithMicrophone('${ex.id}', '${target}', '${cardId || ''}')"
+              class="px-5 py-3 rounded-2xl bg-rose-600 hover:bg-rose-500 text-white font-semibold text-sm shadow-lg shadow-rose-600/30 flex items-center gap-2 transition">
+              <span>🎙️</span><span id="mic-label">Hablar por Micrófono</span>
+            </button>
+            <span class="text-xs text-slate-400 hidden sm:inline">o prueba el motor con voz simulada:</span>
+          </div>
+          <div class="flex flex-wrap items-center gap-2">
+            <button onclick="submitAttempt('${ex.id}', '${target}', '${cardId || ''}')"
+              class="px-3 py-2 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 border border-emerald-500/40 text-emerald-300 text-xs font-medium transition">
+              ✔ Simular Voz Correcta
+            </button>
+            <button onclick="submitAttempt('${ex.id}', '${imperfect}', '${cardId || ''}')"
+              class="px-3 py-2 rounded-xl bg-amber-600/20 hover:bg-amber-600/30 border border-amber-500/40 text-amber-300 text-xs font-medium transition">
+              ⚠ Simular Voz con Error (crea tarjeta SRS)
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    async function recordWithMicrophone(exId, fallbackText, cardId) {
+      const btn = document.getElementById('mic-btn');
+      const label = document.getElementById('mic-label');
+
+      // If OpenAI key is connected and MediaRecorder is available, capture real audio and send to Whisper
+      if (state.keys.openai && navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        try {
+          const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+          const rec = new MediaRecorder(stream);
+          const chunks = [];
+          btn.classList.add('recording-pulse');
+          label.textContent = 'Grabando 3s (Whisper)… habla ahora';
+          rec.ondataavailable = e => chunks.push(e.data);
+          rec.onstop = async () => {
+            stream.getTracks().forEach(t => t.stop());
+            btn.classList.remove('recording-pulse');
+            label.textContent = 'Transcribiendo con Whisper…';
+            const blob = new Blob(chunks, { type: 'audio/webm' });
+            if (state.backendOnline) {
+              const fd = new FormData();
+              fd.append('audio', blob, 'speech.webm');
+              const url = cardId ? `/v1/review/${cardId}/attempts` : `/v1/exercises/${exId}/attempts`;
+              state.lastEvaluation = await api(url, { method: 'POST', body: fd });
+              await refreshProgress();
+              cardId ? await renderSrsView() : await renderActiveTab();
+            } else {
+              const fd = new FormData();
+              fd.append('file', blob, 'speech.webm');
+              fd.append('model', 'whisper-1');
+              fd.append('language', 'en');
+              const r = await fetch('https://api.openai.com/v1/audio/transcriptions', {
+                method: 'POST', headers: { Authorization: `Bearer ${state.keys.openai}` }, body: fd
+              });
+              const data = await r.json();
+              await submitAttempt(exId, data.text || fallbackText, cardId);
+            }
+          };
+          rec.start();
+          setTimeout(() => { if (rec.state === 'recording') rec.stop(); }, 3200);
+          return;
+        } catch (_) {}
+      }
+
+      // Otherwise use Web Speech API
+      const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SR) {
+        const custom = prompt('Simulador de micrófono — escribe lo que pronuncias en inglés:', fallbackText);
+        if (custom !== null) await submitAttempt(exId, custom, cardId);
+        return;
+      }
+      btn.classList.add('recording-pulse');
+      label.textContent = 'Escuchando… habla en inglés';
+      const rec = new SR();
+      rec.lang = 'en-US';
+      rec.interimResults = false;
+      rec.onresult = async (e) => {
+        btn.classList.remove('recording-pulse');
+        label.textContent = 'Hablar por Micrófono';
+        await submitAttempt(exId, e.results[0][0].transcript, cardId);
+      };
+      rec.onerror = async () => {
+        btn.classList.remove('recording-pulse');
+        label.textContent = 'Hablar por Micrófono';
+        const custom = prompt('No se detectó micrófono físico. Simula tu frase hablada:', fallbackText);
+        if (custom !== null) await submitAttempt(exId, custom, cardId);
+      };
+      rec.start();
+    }
+
+    function evaluateLocally(ex, transcript) {
+      const norm = s => s.toLowerCase().replace(/[^\w\s']/g, ' ').split(/\s+/).filter(Boolean);
+      const exp = norm(ex.expected_text), got = norm(transcript), gotSet = new Set(got);
+      const words = exp.map((w, i) => {
+        if (got[i] === w || gotSet.has(w)) return { expected: w, heard: w, status: 'correct' };
+        if (got[i]) return { expected: w, heard: got[i], status: 'mispronounced' };
+        return { expected: w, heard: null, status: 'missing' };
+      });
+      const acc = exp.length ? words.filter(w => w.status === 'correct').length / exp.length : 0;
+      const flu = got.length ? Math.max(0, 1 - Math.max(0, got.length - exp.length) / exp.length) : 0;
+      const score = +(0.8 * acc + 0.2 * flu).toFixed(2);
+      const passed = score >= ex.pass_threshold;
+      const focus = words.filter(w => w.status !== 'correct').map(w => w.expected);
+      const tips = focus.map(w => ({ word: w, issue: 'missing', advice: `Refuerza la pronunciación de '${w}'.` }));
+      state.localAttempts++; state.localScores.push(score);
+      if (focus.length) {
+        const exRecall = { ...ex, type: 'recall', prompt: { ...ex.prompt, focus_words: focus } };
+        state.srsList.unshift({ card_id: `local-${Date.now()}`, kind: 'feedback', exercise: exRecall });
+      }
+      return {
+        evaluation: { expected_text: ex.expected_text, transcript, accuracy: acc, fluency: flu, score, passed, words },
+        feedback: { level: score >= 0.95 ? 'excellent' : (passed ? 'good' : 'retry'), message_es: passed ? '¡Bien hecho!' : 'Casi. Escucha el Speaker y vuelve a intentarlo.', tips, focus_words: focus },
+        srs: [{ kind: 'phrase', interval_days: passed ? 1 : 0.01 }, ...(focus.length ? [{ kind: 'feedback', interval_days: 0.01 }] : [])]
+      };
+    }
+
+    async function submitAttempt(exId, transcript, cardId = '') {
+      if (state.backendOnline && !state.keys.openai) {
+        const fd = new FormData();
+        fd.append('audio', makeWavBlob(), 'speech.wav');
+        fd.append('debug_transcript', transcript);
+        const url = cardId ? `/v1/review/${cardId}/attempts` : `/v1/exercises/${exId}/attempts`;
+        state.lastEvaluation = await api(url, { method: 'POST', body: fd });
+      } else {
+        const stage = state.lesson.stages[state.stageIndex];
+        const ex = stage.exercises[state.exerciseIndex];
+        state.lastEvaluation = evaluateLocally(ex, transcript);
+        if (cardId) state.srsList = state.srsList.filter(c => c.card_id !== cardId);
+      }
+      await refreshProgress();
+      if (cardId) await renderSrsView();
+      else await renderActiveTab();
+    }
+
+    async function renderRoleplayView() {
+      if (!state.currentScenario) return;
+      if (!state.roleplaySession || state.roleplaySession.scenario_id !== state.currentScenario.id) {
+        if (state.backendOnline) {
+          state.roleplaySession = await api(`/v1/roleplay/${state.currentScenario.id}/sessions`, { method: 'POST' });
+        } else {
+          const t0 = state.currentScenario.roleplay.turns[0];
+          state.roleplaySession = { session_id: 'local', scenario_id: state.currentScenario.id, status: 'active', turnIdx: 1, history: [{ speaker: 'ai', text: t0.text }], pending_turn: state.currentScenario.roleplay.turns[1], average_score: 0.95 };
+        }
+      }
+      const rp = state.roleplaySession;
+      const historyHtml = rp.history.map(h => `
+        <div class="flex ${h.speaker === 'user' ? 'justify-end' : 'justify-start'}">
+          <div class="max-w-[80%] rounded-2xl px-4 py-2.5 text-sm ${
+            h.speaker === 'user' ? 'bg-indigo-600 text-white' : 'bg-slate-800 border border-slate-700 text-slate-100'
+          }">
+            <div class="text-[11px] opacity-70 mb-0.5">${h.speaker === 'user' ? 'Tú (' + state.currentScenario.roleplay.user_role + ')' : 'IA (' + state.currentScenario.roleplay.ai_role + ')'}</div>
+            <div class="flex items-center gap-2">
+              <span>${h.text}</span>
+              ${h.speaker === 'ai' ? `<button onclick="speakText('${h.text.replace(/'/g, "\\'")}')" class="text-xs px-1.5 py-0.5 rounded bg-slate-700">🔊</button>` : ''}
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      const pendingHtml = rp.pending_turn ? `
+        <div class="bg-slate-950 border border-indigo-500/40 rounded-2xl p-4 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold uppercase tracking-wider text-indigo-400">🎯 Tu Objetivo en el Guion</span>
+            <span class="text-xs text-slate-400">Responde con el micrófono</span>
+          </div>
+          <p class="text-sm font-semibold text-white">${rp.pending_turn.goal}</p>
+          <div class="space-y-1.5">
+            <div class="text-xs text-slate-400">Frases sugeridas del guion (haz clic para pronunciar):</div>
+            <div class="flex flex-wrap gap-2">
+              ${rp.pending_turn.suggested_lines.map(line => `
+                <button onclick="submitRoleplayTurn('${line.replace(/'/g, "\\'")}')"
+                  class="px-3 py-2 rounded-xl bg-indigo-600/20 hover:bg-indigo-600/30 border border-indigo-500/40 text-indigo-200 text-xs font-medium text-left transition">
+                  🎙️ Decir: “${line}”
+                </button>
+              `).join('')}
+            </div>
+          </div>
+        </div>
+      ` : `
+        <div class="bg-emerald-950/30 border border-emerald-500/40 rounded-2xl p-5 text-center space-y-2">
+          <div class="text-2xl">🎉</div>
+          <h4 class="font-bold text-white">¡Charla completada!</h4>
+          <p class="text-xs text-emerald-300">Score medio de la conversación: <strong>${Math.round((rp.average_score || 1) * 100)}%</strong></p>
+          <button onclick="restartRoleplay()" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold">Reiniciar Charla IA</button>
+        </div>
+      `;
+
+      document.getElementById('stage-container').innerHTML = `
+        <div class="space-y-4">
+          <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+            <div>
+              <h3 class="font-semibold text-sm text-white">🤖 Charla Abierta con IA con Guion — ${state.currentScenario.title_es}</h3>
+              <p class="text-xs text-slate-400">${state.currentScenario.roleplay.setting}</p>
+            </div>
+            <button onclick="restartRoleplay()" class="text-xs px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300">Reiniciar</button>
+          </div>
+          <div class="space-y-2.5 max-h-[260px] overflow-y-auto pr-1">${historyHtml}</div>
+        </div>
+        <div class="mt-4">${pendingHtml}</div>
+      `;
+    }
+
+    async function restartRoleplay() { state.roleplaySession = null; await renderRoleplayView(); }
+
+    async function submitRoleplayTurn(line) {
+      if (state.backendOnline && !state.keys.openai) {
+        const fd = new FormData();
+        fd.append('audio', makeWavBlob(), 'turn.wav');
+        fd.append('debug_transcript', line);
+        state.roleplaySession = await api(`/v1/roleplay/sessions/${state.roleplaySession.session_id}/turns`, { method: 'POST', body: fd });
+      } else {
+        const rp = state.roleplaySession;
+        rp.history.push({ speaker: 'user', text: line });
+        const turns = state.currentScenario.roleplay.turns;
+        let next = rp.turnIdx + 1;
+        while (next < turns.length && turns[next].speaker === 'ai') {
+          rp.history.push({ speaker: 'ai', text: turns[next].text });
+          speakText(turns[next].text);
+          next++;
+        }
+        rp.turnIdx = next;
+        rp.pending_turn = next < turns.length ? turns[next] : null;
+      }
+      await renderRoleplayView();
+    }
+
+    async function renderSrsView() {
+      if (state.backendOnline) state.srsList = await api('/v1/review/due');
+      if (!state.srsList.length) {
+        document.getElementById('stage-container').innerHTML = `
+          <div class="text-center py-14 space-y-3">
+            <div class="text-3xl">🧠✨</div>
+            <h3 class="font-bold text-base text-white">Memoria de Aprendizaje Espaciado (SRS)</h3>
+            <p class="text-xs text-slate-400 max-w-md mx-auto">
+              No tienes tarjetas vencidas en este instante. Practica cualquier ejercicio o simula un intento con error para ver cómo se agendan tarjetas de <strong>lección (phrase)</strong> y <strong>feedback (focus_words)</strong>.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-2">
+              <button onclick="switchTab('lesson')" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold">
+                Ir a practicar una lección
+              </button>
+              ${state.backendOnline ? `
+                <button onclick="fastForwardSrs()" class="px-4 py-2 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/40 text-amber-300 text-xs font-semibold">
+                  ⏩ Adelantar reloj 15 min (activar tarjetas programadas)
+                </button>
+              ` : ''}
+            </div>
+          </div>
+        `;
+        return;
+      }
+      const item = state.srsList[0];
+      const ex = item.exercise;
+      const meta = STAGE_LABELS[ex.type];
+      document.getElementById('stage-container').innerHTML = `
+        <div class="space-y-4">
+          <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+            <div>
+              <h3 class="font-semibold text-sm text-white">🧠 Cola de Repaso Espaciado (${state.srsList.length} pendientes)</h3>
+              <p class="text-xs text-slate-400">Tipo de tarjeta: <strong class="text-amber-300 uppercase">${item.kind}</strong></p>
+            </div>
+          </div>
+          ${renderExerciseCard(ex, meta, 0, state.srsList.length, 'renderSrsView')}
+        </div>
+        ${renderMicrophoneControls(ex, item.card_id)}
+      `;
+    }
+
+    async function fastForwardSrs() {
+      await api('/v1/dev/fast-forward-srs?minutes=15', { method: 'POST' });
+      await refreshProgress();
+      await renderSrsView();
+    }
+
+    init();
+  </script>
+</body>
+</html>

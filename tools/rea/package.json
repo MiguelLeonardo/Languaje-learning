@@ -1,0 +1,13 @@
+{
+  "name": "languaje-learning-rea-tools",
+  "private": true,
+  "description": "Pinned REA (Reverse Engineer Anything) toolchain for the clean-room research phase.",
+  "scripts": {
+    "rea": "rea",
+    "rea:mcp": "rea mcp",
+    "rea:doctor": "rea doctor --client claude_code --json"
+  },
+  "devDependencies": {
+    "rea-agents": "6.8.0"
+  }
+}
