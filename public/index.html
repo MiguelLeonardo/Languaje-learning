@@ -3,269 +3,251 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SpeakFlow — Speaking-First English Learning (A1–C2)</title>
+  <title>SpeakFlow — Aprende Inglés Hablando</title>
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
   <script type="module" src="/firebase-config.js"></script>
   <style>
     @keyframes pulse-ring {
-      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
-      70% { transform: scale(1); box-shadow: 0 0 0 14px rgba(239, 68, 68, 0); }
-      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+      0% { transform: scale(0.96); box-shadow: 0 0 0 0 rgba(244, 63, 94, 0.65); }
+      70% { transform: scale(1); box-shadow: 0 0 0 16px rgba(244, 63, 94, 0); }
+      100% { transform: scale(0.96); box-shadow: 0 0 0 0 rgba(244, 63, 94, 0); }
     }
     .recording-pulse { animation: pulse-ring 1.5s infinite; }
     .tap-word {
       display: inline-block;
-      padding: 0 3px;
+      padding: 1px 4px;
       margin: 0 1px;
       border-radius: 6px;
-      border-bottom: 1.5px dashed rgba(129, 140, 248, 0.65);
+      border-bottom: 1.5px dashed rgba(129, 140, 248, 0.55);
       cursor: pointer;
       transition: all 0.15s ease;
     }
     .tap-word:hover {
-      background: rgba(99, 102, 241, 0.28);
+      background: rgba(99, 102, 241, 0.22);
       color: #e0e7ff;
       border-bottom-color: #818cf8;
       transform: translateY(-1px);
     }
   </style>
 </head>
-<body class="bg-slate-950 text-slate-100 antialiased min-h-screen flex flex-col">
-  <!-- Header -->
-  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-30">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3">
+<body class="bg-slate-950 text-slate-100 antialiased min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white">
+  <!-- Clean Consumer Header -->
+  <header class="border-b border-slate-800/80 bg-slate-950/90 backdrop-blur sticky top-0 z-30">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
       <div class="flex items-center gap-3">
-        <div class="w-9 h-9 rounded-xl bg-indigo-600 flex items-center justify-center font-bold text-lg shadow-lg shadow-indigo-600/30">🎙️</div>
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center font-bold text-lg shadow-md shadow-indigo-600/25">
+          🎙️
+        </div>
         <div>
-          <h1 class="font-bold text-base tracking-tight flex flex-wrap items-center gap-2">
-            SpeakFlow
-            <span class="text-xs font-medium px-2 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Speak-First AI</span>
-            <span id="provider-pill" class="text-xs font-medium px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">Speaker: WebSpeech</span>
-            <span id="firebase-pill" class="text-xs font-medium px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-300 border border-amber-500/30">🔥 Firebase: Local Fallback</span>
-          </h1>
-          <p class="text-xs text-slate-400">100% por micrófono · 6 Módulos CEFR A1–C2 · Toca cualquier palabra para traducir · 5 Etapas con Libreto IA</p>
+          <span class="font-bold text-base tracking-tight text-white">SpeakFlow</span>
+          <span class="hidden sm:inline-block text-xs text-slate-400 ml-2">Inglés conversacional paso a paso</span>
         </div>
       </div>
 
-      <!-- Global Stats & Speaker Keys Button -->
-      <div class="flex flex-wrap items-center gap-2 text-xs">
-        <div class="px-2.5 py-1.5 rounded-lg bg-slate-800/90 border border-slate-700 flex items-center gap-1.5">
-          <span class="text-slate-400">Plan:</span>
-          <span id="stat-tier" class="font-bold text-emerald-400 uppercase">FREE</span>
+      <!-- Clean Learner Progress & Subtle Settings -->
+      <div class="flex items-center gap-2 text-xs">
+        <div class="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 flex items-center gap-1.5" title="Precisión media de pronunciación">
+          <span class="text-emerald-400">🎯</span>
+          <span class="text-slate-400 hidden sm:inline">Precisión</span>
+          <span id="stat-score" class="font-semibold text-white">0%</span>
         </div>
-        <div class="px-2.5 py-1.5 rounded-lg bg-slate-800/90 border border-slate-700 flex items-center gap-1.5">
-          <span class="text-slate-400">Intentos:</span>
-          <span id="stat-attempts" class="font-semibold text-white">0</span>
-        </div>
-        <div class="px-2.5 py-1.5 rounded-lg bg-slate-800/90 border border-slate-700 flex items-center gap-1.5">
-          <span class="text-slate-400">Score:</span>
-          <span id="stat-score" class="font-semibold text-emerald-400">0%</span>
-        </div>
-        <button onclick="switchTab('srs')" class="px-3 py-1.5 rounded-lg bg-amber-500/15 border border-amber-500/40 text-amber-300 hover:bg-amber-500/25 transition flex items-center gap-1.5">
-          <span>🧠 SRS:</span>
-          <span id="stat-due" class="font-bold">0</span>
+        <button onclick="switchTab('srs')" class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 transition flex items-center gap-1.5" title="Frases guardadas para repasar">
+          <span>🔖</span>
+          <span class="hidden sm:inline">Repaso</span>
+          <span id="stat-due" class="font-semibold px-1.5 py-0.2 rounded-full bg-indigo-500/20 text-indigo-300">0</span>
         </button>
-        <button onclick="toggleKeysModal(true)" class="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-semibold shadow transition flex items-center gap-1.5">
-          <span>🔑</span><span>Firebase / GCP / Llaves IA</span>
+        <button onclick="toggleKeysModal(true)" class="p-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-400 hover:text-white transition" title="Ajustes de voz y cuenta">
+          ⚙️
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Instant Tap-to-Translate Overlay (Speak-style Bottom Sheet / Card) -->
-  <div id="translate-overlay" class="hidden fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-xs flex items-end sm:items-center justify-center p-3 sm:p-4" onclick="if(event.target===this) closeTranslateOverlay()">
-    <div class="bg-slate-900 border border-indigo-500/50 rounded-2xl max-w-lg w-full p-5 space-y-4 shadow-2xl">
+  <!-- Instant Tap-to-Translate Overlay (Speak-style Bottom Sheet / Modal) -->
+  <div id="translate-overlay" class="hidden fixed inset-0 z-50 bg-slate-950/75 backdrop-blur-xs flex items-end sm:items-center justify-center p-3 sm:p-4" onclick="if(event.target===this) closeTranslateOverlay()">
+    <div class="bg-slate-900 border border-slate-700/80 rounded-3xl max-w-lg w-full p-5 space-y-4 shadow-2xl">
       <div class="flex items-start justify-between gap-3 border-b border-slate-800 pb-3">
         <div>
-          <span class="text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
-            🌐 Traducción Instantánea · Aprendizaje por Frases (Chunks)
+          <span class="text-[11px] font-semibold uppercase tracking-wider text-indigo-400">
+            Traducción en contexto
           </span>
-          <div class="flex items-center gap-2 mt-2">
-            <h3 id="tr-word" class="text-xl font-bold text-white">word</h3>
-            <span id="tr-ipa" class="text-xs font-mono text-indigo-300 bg-slate-800 px-2 py-0.5 rounded">/ipa/</span>
-            <button id="tr-speak-word" class="px-2.5 py-1 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold">
-              🔊 Palabra
+          <div class="flex items-center gap-2.5 mt-1">
+            <h3 id="tr-word" class="text-2xl font-bold text-white">word</h3>
+            <span id="tr-ipa" class="text-xs font-mono text-slate-300 bg-slate-800 px-2 py-0.5 rounded-md">/ipa/</span>
+            <button id="tr-speak-word" class="px-2.5 py-1 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-medium transition">
+              🔊 Escuchar
             </button>
           </div>
-          <p id="tr-word-meaning" class="text-sm text-emerald-300 font-semibold mt-1"></p>
+          <p id="tr-word-meaning" class="text-sm text-emerald-300 font-medium mt-1.5"></p>
         </div>
-        <button onclick="closeTranslateOverlay()" class="text-slate-400 hover:text-white text-sm px-2 py-1 rounded-lg bg-slate-800">✕</button>
+        <button onclick="closeTranslateOverlay()" class="text-slate-400 hover:text-white text-sm w-8 h-8 rounded-full bg-slate-800/80 flex items-center justify-center">✕</button>
       </div>
 
       <!-- Full Phrase Context -->
-      <div class="bg-slate-950 border border-slate-800 rounded-xl p-3.5 space-y-2">
+      <div class="bg-slate-950/90 border border-slate-800/90 rounded-2xl p-3.5 space-y-1.5">
         <div class="flex items-center justify-between">
-          <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Frase Completa en Contexto</span>
-          <button id="tr-speak-phrase" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-indigo-300 text-xs font-medium">
-            🔊 Escuchar frase completa
+          <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Frase completa</span>
+          <button id="tr-speak-phrase" class="text-xs text-indigo-300 hover:text-indigo-200 font-medium">
+            🔊 Oír frase
           </button>
         </div>
-        <p id="tr-phrase-en" class="text-base font-bold text-white"></p>
-        <p id="tr-phrase-es" class="text-sm text-amber-300 font-medium"></p>
+        <p id="tr-phrase-en" class="text-base font-semibold text-white"></p>
+        <p id="tr-phrase-es" class="text-sm text-slate-300"></p>
       </div>
 
       <!-- Chunk Usage Tip -->
-      <div class="bg-indigo-950/30 border border-indigo-500/30 rounded-xl p-3 text-xs text-indigo-200 space-y-1.5">
-        <div class="font-bold text-indigo-300">💡 Cómo memorizar esta estructura (Speak Method):</div>
-        <p id="tr-usage-tip"></p>
-        <div id="tr-chunks" class="flex flex-wrap gap-1.5 pt-1"></div>
+      <div class="bg-indigo-950/25 border border-indigo-500/25 rounded-2xl p-3.5 text-xs text-indigo-200 space-y-2">
+        <div class="font-semibold text-indigo-300">💡 Consejo de aprendizaje por bloques:</div>
+        <p id="tr-usage-tip" class="leading-relaxed"></p>
+        <div id="tr-chunks" class="flex flex-wrap gap-1.5 pt-0.5"></div>
       </div>
 
       <div class="flex items-center justify-between pt-2 border-t border-slate-800 text-xs">
-        <span id="tr-bookmark-status" class="text-slate-400">Guarda la frase para repasarla con repetición espaciada.</span>
-        <button id="tr-bookmark-btn" onclick="bookmarkTranslatedPhrase()" class="px-3.5 py-2 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/40 text-amber-200 font-semibold transition">
-          ➕ Guardar Frase en Memoria SRS
+        <span id="tr-bookmark-status" class="text-slate-400">Guarda esta expresión para practicarla luego.</span>
+        <button id="tr-bookmark-btn" onclick="bookmarkTranslatedPhrase()" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold transition">
+          🔖 Guardar en mi repaso
         </button>
       </div>
     </div>
   </div>
 
-  <!-- Firebase, Google Cloud Free Tier & Speaker Keys Modal -->
-  <div id="keys-modal" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
-    <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-xl w-full p-5 space-y-4 shadow-2xl my-8">
+  <!-- Clean Settings Modal (Hidden behind gear icon) -->
+  <div id="keys-modal" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto" onclick="if(event.target===this) toggleKeysModal(false)">
+    <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-lg w-full p-6 space-y-4 shadow-2xl my-8">
       <div class="flex items-center justify-between border-b border-slate-800 pb-3">
         <div>
-          <h2 class="font-bold text-base text-white">🔑 Arquitectura Freemium: Firebase SDK + Google Cloud Free Tier + IA</h2>
-          <p class="text-xs text-slate-400">OpenAI y Anthropic no ofrecen capa gratuita; usa Google Cloud / Gemini 2.0 Flash para consumo $0 o conecta llaves Pro.</p>
+          <h2 class="font-bold text-base text-white">⚙️ Ajustes de Voz y Cuenta Cloud</h2>
+          <p class="text-xs text-slate-400">La app funciona gratis por defecto. Opcionalmente conecta tus servicios de Google Cloud o voces neurales.</p>
         </div>
-        <button onclick="toggleKeysModal(false)" class="text-slate-400 hover:text-white text-sm px-2 py-1">✕</button>
+        <button onclick="toggleKeysModal(false)" class="text-slate-400 hover:text-white text-sm w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center">✕</button>
       </div>
 
       <div class="space-y-3 text-xs">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 bg-slate-950 p-3 rounded-xl border border-slate-800">
-          <div>
-            <label class="block font-semibold text-emerald-300 mb-1">Plan Freemium Activo</label>
-            <select id="key-tier" class="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-white">
-              <option value="free">FREE ($0 — Gemini Flash + Google Cloud / WebSpeech · 3 Roleplays/día)</option>
-              <option value="pro">PRO (Ilimitado — ElevenLabs / Whisper / Claude / Gemini)</option>
-            </select>
+        <div class="p-3.5 rounded-2xl bg-slate-950 border border-slate-800 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <span class="font-semibold text-slate-200">Google Cloud & Firebase (Capa Gratuita)</span>
+            <span id="modal-firebase-status" class="text-[11px] text-emerald-400">Modo local activo</span>
           </div>
           <div>
-            <label class="block font-semibold text-amber-300 mb-1">Estado de los 3 Servicios Firebase</label>
-            <div id="modal-firebase-status" class="px-3 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-mono text-[11px]">
-              1. Auth Anónima · 2. Firestore · 3. Hosting/GCP
+            <label class="block text-slate-400 mb-1">Gemini API Key (Google AI Studio)</label>
+            <input id="key-gemini" type="password" placeholder="AIzaSy..." class="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-800 text-white font-mono" />
+          </div>
+          <div>
+            <label class="block text-slate-400 mb-1">Google Cloud Speech / TTS API Key</label>
+            <input id="key-google-cloud" type="password" placeholder="AIzaSy..." class="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-800 text-white font-mono" />
+          </div>
+          <div>
+            <label class="block text-slate-400 mb-1">Configuración Web de Firebase (JSON opcional)</label>
+            <textarea id="key-firebase-json" rows="2" placeholder='{"apiKey":"...","authDomain":"...","projectId":"..."}' class="w-full px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-white font-mono text-[11px]"></textarea>
+          </div>
+        </div>
+
+        <details class="group p-3.5 rounded-2xl bg-slate-950 border border-slate-800">
+          <summary class="cursor-pointer font-semibold text-slate-300 flex items-center justify-between">
+            <span>Voces Neurales Externas (Opcional: OpenAI / ElevenLabs)</span>
+            <span class="text-slate-500 group-open:rotate-180 transition">▼</span>
+          </summary>
+          <div class="space-y-2.5 pt-3">
+            <div>
+              <label class="block text-slate-400 mb-1">OpenAI API Key</label>
+              <input id="key-openai" type="password" placeholder="sk-..." class="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-800 text-white font-mono" />
             </div>
-          </div>
-        </div>
-
-        <div class="p-3 rounded-xl bg-emerald-950/20 border border-emerald-500/30 space-y-2.5">
-          <div class="font-bold text-emerald-300">🌱 Capa Gratuita Recomendada (Google Cloud & Google AI Studio)</div>
-          <div>
-            <label class="block font-semibold text-slate-300 mb-1">Google AI Studio — Gemini 2.0 Flash API Key (Gratis: Roleplay Libre + Traductor)</label>
-            <input id="key-gemini" type="password" placeholder="AIzaSy..." class="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-white font-mono" />
-          </div>
-          <div>
-            <label class="block font-semibold text-slate-300 mb-1">Google Cloud API Key (Gratis: 60 min/mes STT + 4M chars/mes TTS)</label>
-            <input id="key-google-cloud" type="password" placeholder="AIzaSy..." class="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-white font-mono" />
-          </div>
-          <div>
-            <label class="block font-semibold text-slate-300 mb-1">Firebase Web SDK Config JSON (Auth Anónima + Cloud Firestore en vivo)</label>
-            <textarea id="key-firebase-json" rows="2" placeholder='{"apiKey":"...","authDomain":"...","projectId":"..."}' class="w-full px-3 py-1.5 rounded-xl bg-slate-950 border border-slate-700 text-white font-mono text-[11px]"></textarea>
-          </div>
-        </div>
-
-        <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 space-y-2.5">
-          <div class="font-bold text-indigo-300">⚡ Proveedores Premium Opcionales (Plan Pro — Pago por uso)</div>
-          <div>
-            <label class="block font-semibold text-slate-300 mb-1">OpenAI API Key (Whisper Mic STT + Speaker TTS "nova")</label>
-            <input id="key-openai" type="password" placeholder="sk-..." class="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-white font-mono" />
-          </div>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-            <div class="sm:col-span-2">
-              <label class="block font-semibold text-slate-300 mb-1">ElevenLabs API Key (Speaker Neural TTS)</label>
-              <input id="key-elevenlabs" type="password" placeholder="xi-api-key..." class="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-white font-mono" />
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <div class="sm:col-span-2">
+                <label class="block text-slate-400 mb-1">ElevenLabs API Key</label>
+                <input id="key-elevenlabs" type="password" placeholder="xi-api-key..." class="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-800 text-white font-mono" />
+              </div>
+              <div>
+                <label class="block text-slate-400 mb-1">Voice ID</label>
+                <input id="key-eleven-voice" type="text" value="21m00Tcm4TlvDq8ikWAM" class="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-800 text-white font-mono" />
+              </div>
             </div>
             <div>
-              <label class="block font-semibold text-slate-300 mb-1">Voice ID</label>
-              <input id="key-eleven-voice" type="text" value="21m00Tcm4TlvDq8ikWAM" class="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-white font-mono" />
+              <label class="block text-slate-400 mb-1">Anthropic API Key</label>
+              <input id="key-anthropic" type="password" placeholder="sk-ant-..." class="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-800 text-white font-mono" />
             </div>
           </div>
-          <div>
-            <label class="block font-semibold text-slate-300 mb-1">Anthropic API Key (Claude 4.5 Roleplay)</label>
-            <input id="key-anthropic" type="password" placeholder="sk-ant-..." class="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-white font-mono" />
-          </div>
-        </div>
+        </details>
       </div>
 
       <div class="flex items-center justify-between pt-2 border-t border-slate-800 text-xs">
         <button onclick="testSpeakerVoice()" class="px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium">
-          🔊 Probar Voz del Speaker
+          🔊 Probar voz
         </button>
         <div class="flex gap-2">
-          <button onclick="clearKeys()" class="px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300">Limpiar</button>
-          <button onclick="saveKeys()" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold">Guardar y Conectar</button>
+          <button onclick="clearKeys()" class="px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300">Restaurar</button>
+          <button onclick="saveKeys()" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold">Guardar</button>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Main Workspace -->
-  <div class="max-w-6xl mx-auto w-full flex-1 grid grid-cols-1 lg:grid-cols-12 gap-5 p-4">
-    <!-- Left Column: CEFR Levels, Module Themes & Real-world Scenarios -->
+  <div class="max-w-6xl mx-auto w-full flex-1 grid grid-cols-1 lg:grid-cols-12 gap-6 p-4 sm:p-6">
+    <!-- Left Column: Levels, Categories & Lessons -->
     <aside class="lg:col-span-4 space-y-4">
-      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 space-y-3">
+      <div class="bg-slate-900/70 border border-slate-800/90 rounded-2xl p-4 space-y-3">
         <div class="flex items-center justify-between">
-          <h2 class="text-xs font-semibold uppercase tracking-wider text-slate-400">1. Nivel CEFR</h2>
-          <span id="band-badge" class="text-xs px-2 py-0.5 rounded bg-slate-800 text-slate-300">Todos</span>
+          <h2 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Nivel</h2>
+          <span id="band-badge" class="text-xs text-slate-400">Todos</span>
         </div>
         <div id="cefr-buttons" class="grid grid-cols-7 gap-1.5 text-xs font-semibold"></div>
       </div>
 
-      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 space-y-3">
+      <div class="bg-slate-900/70 border border-slate-800/90 rounded-2xl p-4 space-y-3">
         <div class="flex items-center justify-between">
-          <h2 class="text-xs font-semibold uppercase tracking-wider text-slate-400">2. Temáticas de Módulos (6)</h2>
+          <h2 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Temáticas</h2>
           <span id="module-badge" class="text-xs text-indigo-300">Todas</span>
         </div>
         <div id="module-buttons" class="grid grid-cols-2 gap-1.5 text-xs"></div>
       </div>
 
-      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 space-y-3">
+      <div class="bg-slate-900/70 border border-slate-800/90 rounded-2xl p-4 space-y-3">
         <div class="flex items-center justify-between">
-          <h2 class="text-xs font-semibold uppercase tracking-wider text-slate-400">3. Escenarios del Mundo Real</h2>
+          <h2 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Lecciones</h2>
           <span id="scenario-count" class="text-xs text-slate-400"></span>
         </div>
-        <div id="scenario-list" class="space-y-2 max-h-[360px] overflow-y-auto pr-1"></div>
+        <div id="scenario-list" class="space-y-2 max-h-[380px] overflow-y-auto pr-1"></div>
       </div>
     </aside>
 
     <!-- Right Column: Active Mode & Exercise Stage -->
     <main class="lg:col-span-8 flex flex-col gap-4">
-      <nav class="bg-slate-900 border border-slate-800 rounded-2xl p-1.5 grid grid-cols-2 sm:grid-cols-5 gap-1 text-xs font-medium">
-        <button data-tab="lesson" onclick="switchTab('lesson')" class="tab-btn py-2 px-3 rounded-xl transition flex items-center justify-center gap-1.5">
-          <span>📚</span><span>Lección (5 Etapas)</span>
+      <nav class="bg-slate-900/70 border border-slate-800/90 rounded-2xl p-1.5 grid grid-cols-2 sm:grid-cols-5 gap-1 text-xs font-medium">
+        <button data-tab="lesson" onclick="switchTab('lesson')" class="tab-btn py-2.5 px-3 rounded-xl transition flex items-center justify-center gap-1.5">
+          <span>📚</span><span>Lección</span>
         </button>
-        <button data-tab="shadowing" onclick="switchTab('shadowing')" class="tab-btn py-2 px-3 rounded-xl transition flex items-center justify-center gap-1.5">
-          <span>🎧</span><span>Sesión Sombra</span>
+        <button data-tab="shadowing" onclick="switchTab('shadowing')" class="tab-btn py-2.5 px-3 rounded-xl transition flex items-center justify-center gap-1.5">
+          <span>🎧</span><span>Pronunciación</span>
         </button>
-        <button data-tab="common" onclick="switchTab('common')" class="tab-btn py-2 px-3 rounded-xl transition flex items-center justify-center gap-1.5">
-          <span>💬</span><span>Frases Comunes</span>
+        <button data-tab="common" onclick="switchTab('common')" class="tab-btn py-2.5 px-3 rounded-xl transition flex items-center justify-center gap-1.5">
+          <span>💬</span><span>Frases Clave</span>
         </button>
-        <button data-tab="roleplay" onclick="switchTab('roleplay')" class="tab-btn py-2 px-3 rounded-xl transition flex items-center justify-center gap-1.5">
-          <span>🤖</span><span>Charla IA Libre</span>
+        <button data-tab="roleplay" onclick="switchTab('roleplay')" class="tab-btn py-2.5 px-3 rounded-xl transition flex items-center justify-center gap-1.5">
+          <span>🎭</span><span>Conversación</span>
         </button>
-        <button data-tab="srs" onclick="switchTab('srs')" class="tab-btn py-2 px-3 rounded-xl transition flex items-center justify-center gap-1.5">
-          <span>🧠</span><span>Memoria SRS</span>
+        <button data-tab="srs" onclick="switchTab('srs')" class="tab-btn py-2.5 px-3 rounded-xl transition flex items-center justify-center gap-1.5">
+          <span>🔖</span><span>Repaso</span>
         </button>
       </nav>
 
-      <div id="stage-container" class="bg-slate-900 border border-slate-800 rounded-2xl p-5 flex-1 flex flex-col justify-between min-h-[500px]">
-        <div class="text-center text-slate-400 py-16 text-sm">Cargando escenario…</div>
+      <div id="stage-container" class="bg-slate-900/70 border border-slate-800/90 rounded-3xl p-5 sm:p-6 flex-1 flex flex-col justify-between min-h-[500px]">
+        <div class="text-center text-slate-400 py-16 text-sm">Cargando lección…</div>
       </div>
     </main>
   </div>
 
   <script>
     const TOPIC_MODULES = [
-      { id: "ALL", title_es: "Todos los módulos", icon: "🌐" },
-      { id: "food-and-drink", title_es: "Cafeterías y Restaurantes", icon: "🍽️" },
+      { id: "ALL", title_es: "Todas las temáticas", icon: "🌐" },
+      { id: "food-and-drink", title_es: "Restaurantes y Café", icon: "🍽️" },
       { id: "travel-and-transport", title_es: "Viajes y Transporte", icon: "✈️" },
-      { id: "hotel-and-shopping", title_es: "Alojamiento y Compras", icon: "🏨" },
+      { id: "hotel-and-shopping", title_es: "Hotel y Compras", icon: "🏨" },
       { id: "social-and-smalltalk", title_es: "Vida Social", icon: "🤝" },
       { id: "work-and-career", title_es: "Trabajo y Carrera", icon: "💼" },
-      { id: "health-and-emergencies", title_es: "Salud y Emergencias", icon: "🏥" },
+      { id: "health-and-emergencies", title_es: "Salud y Urgencias", icon: "🏥" },
     ];
 
-    // Embedded fallback curriculum (all 18 scenarios across the 6 modules) for static Firebase Hosting mode
     const FALLBACK_SCENARIOS = [
       {
         id: "a1-ordering-coffee", title: "Ordering a coffee", title_es: "Pedir un café", cefr: "A1", band: "basic", topic: "food-and-drink",
@@ -273,48 +255,48 @@
         phrases: [
           { id: "can-i-have", text: "Can I have a coffee, please?", translation: "¿Me da un café, por favor?", visual_hint: "☕", cloze: [4], common: true,
             glossary: [{ word: "have", meaning: "tener / tomar (para pedir algo)", ipa: "hæv" }, { word: "please", meaning: "por favor", ipa: "pliːz" }] },
-          { id: "small-one", text: "A small one, please.", translation: "Uno pequeño, por favor.", visual_hint: "🥤 S", cloze: [1], common: true,
+          { id: "small-one", text: "A small one, please.", translation: "Uno pequeño, por favor.", visual_hint: "🥤", cloze: [1], common: true,
             glossary: [{ word: "small", meaning: "pequeño", ipa: "smɔːl" }] },
           { id: "how-much", text: "How much is it?", translation: "¿Cuánto cuesta?", visual_hint: "💵", cloze: [1], common: true,
-            glossary: [{ word: "much", meaning: "mucho (how much = cuánto)", ipa: "mʌtʃ" }] },
+            glossary: [{ word: "much", meaning: "cuánto (how much)", ipa: "mʌtʃ" }] },
           { id: "thank-you", text: "Thank you very much.", translation: "Muchas gracias.", visual_hint: "🙏", cloze: [2], common: true,
             glossary: [{ word: "very", meaning: "muy", ipa: "ˈveri" }] }
         ],
         roleplay: {
-          ai_role: "barista", user_role: "customer", setting: "A busy coffee shop in the morning.",
+          ai_role: "barista", user_role: "customer", setting: "En una cafetería por la mañana.",
           turns: [
             { speaker: "ai", text: "Hi! What can I get for you?" },
-            { speaker: "user", goal: "Pide un café.", suggested_lines: ["Can I have a coffee, please?", "A coffee, please."] },
+            { speaker: "user", goal: "Pide un café amablemente.", suggested_lines: ["Can I have a coffee, please?", "A coffee, please."] },
             { speaker: "ai", text: "Sure. Small, medium or large?" },
-            { speaker: "user", goal: "Elige el tamaño.", suggested_lines: ["A small one, please.", "Medium, please."] },
+            { speaker: "user", goal: "Elige el tamaño de tu bebida.", suggested_lines: ["A small one, please.", "Medium, please."] },
             { speaker: "ai", text: "Great. Anything else?" },
-            { speaker: "user", goal: "Pregunta el precio.", suggested_lines: ["No, thanks. How much is it?", "How much is it?"] },
+            { speaker: "user", goal: "Pregunta cuánto cuesta.", suggested_lines: ["No, thanks. How much is it?", "How much is it?"] },
             { speaker: "ai", text: "That's three dollars. Have a nice day!" }
           ]
         }
       },
       {
-        id: "a2-restaurant-table", title: "Ordering dinner at a restaurant", title_es: "Cenar en un restaurante", cefr: "A2", band: "basic", topic: "food-and-drink",
+        id: "a2-restaurant-dinner", title: "Dinner at a restaurant", title_es: "Cenar en un restaurante", cefr: "A2", band: "basic", topic: "food-and-drink",
         description: "Pide una mesa, consulta recomendaciones del menú y solicita la cuenta.",
         phrases: [
-          { id: "table-for-two", text: "Could we get a table for two, please?", translation: "¿Nos podría dar una mesa para dos, por favor?", visual_hint: "🍽️👥", cloze: [4, 6], common: true,
+          { id: "table-for-two", text: "Could we get a table for two, please?", translation: "¿Nos podría dar una mesa para dos, por favor?", visual_hint: "🍽️", cloze: [4, 6], common: true,
             glossary: [{ word: "table", meaning: "mesa", ipa: "ˈteɪbəl" }] },
-          { id: "what-recommend", text: "What do you recommend from the menu?", translation: "¿Qué recomienda del menú?", visual_hint: "📖✨", cloze: [3, 6], common: true,
+          { id: "what-recommend", text: "What do you recommend from the menu?", translation: "¿Qué recomienda del menú?", visual_hint: "📖", cloze: [3, 6], common: true,
             glossary: [{ word: "recommend", meaning: "recomendar", ipa: "ˌrekəˈmend" }] },
-          { id: "have-the-salmon", text: "I'll have the grilled salmon with salad.", translation: "Tomaré el salmón a la parrilla con ensalada.", visual_hint: "🐟🥗", cloze: [3, 4], common: true,
+          { id: "have-the-salmon", text: "I'll have the grilled salmon with salad.", translation: "Tomaré el salmón a la parrilla con ensalada.", visual_hint: "🐟", cloze: [3, 4], common: true,
             glossary: [{ word: "grilled", meaning: "a la parrilla", ipa: "ɡrɪld" }] },
-          { id: "check-please", text: "Could we have the check, please?", translation: "¿Nos trae la cuenta, por favor?", visual_hint: "🧾💳", cloze: [4], common: true,
+          { id: "check-please", text: "Could we have the check, please?", translation: "¿Nos trae la cuenta, por favor?", visual_hint: "🧾", cloze: [4], common: true,
             glossary: [{ word: "check", meaning: "la cuenta", ipa: "tʃek" }] }
         ],
         roleplay: {
-          ai_role: "waiter", user_role: "diner", setting: "A cozy neighborhood bistro at dinnertime.",
+          ai_role: "waiter", user_role: "diner", setting: "En un restaurante acogedor a la hora de la cena.",
           turns: [
             { speaker: "ai", text: "Good evening! Welcome to Bistro Nine. How can I help you?" },
             { speaker: "user", goal: "Pide una mesa para dos personas.", suggested_lines: ["Could we get a table for two, please?"] },
             { speaker: "ai", text: "Right this way. Are you ready to order?" },
-            { speaker: "user", goal: "Pregunta qué plato recomienda y pide el salmón.", suggested_lines: ["What do you recommend from the menu?", "I'll have the grilled salmon with salad."] },
+            { speaker: "user", goal: "Pregunta qué recomienda o pide el salmón.", suggested_lines: ["What do you recommend from the menu?", "I'll have the grilled salmon with salad."] },
             { speaker: "ai", text: "Excellent choice! Anything else for you tonight?" },
-            { speaker: "user", goal: "Pide la cuenta amablemente.", suggested_lines: ["Could we have the check, please?"] },
+            { speaker: "user", goal: "Solicita la cuenta.", suggested_lines: ["Could we have the check, please?"] },
             { speaker: "ai", text: "Of course, I'll bring it right over." }
           ]
         }
@@ -323,21 +305,43 @@
         id: "b1-dietary-restrictions", title: "Explaining dietary allergies", title_es: "Alergias y restricciones alimentarias", cefr: "B1", band: "intermediate", topic: "food-and-drink",
         description: "Explica alergias alimentarias, pregunta por ingredientes y pide cambios en tu plato.",
         phrases: [
-          { id: "allergic-peanuts", text: "I'm severely allergic to peanuts and tree nuts.", translation: "Soy severamente alérgico al maní y a los frutos secos.", visual_hint: "🥜⚠️", cloze: [2, 4], common: true,
+          { id: "allergic-peanuts", text: "I'm severely allergic to peanuts and tree nuts.", translation: "Soy severamente alérgico al maní y a los frutos secos.", visual_hint: "🥜", cloze: [2, 4], common: true,
             glossary: [{ word: "allergic", meaning: "alérgico", ipa: "əˈlɜːrdʒɪk" }] },
-          { id: "contain-dairy", text: "Does this sauce contain any dairy or gluten?", translation: "¿Esta salsa contiene lácteos o gluten?", visual_hint: "🥛🌾", cloze: [3, 5], common: true,
+          { id: "contain-dairy", text: "Does this sauce contain any dairy or gluten?", translation: "¿Esta salsa contiene lácteos o gluten?", visual_hint: "🥛", cloze: [3, 5], common: true,
             glossary: [{ word: "dairy", meaning: "lácteos", ipa: "ˈderi" }] },
-          { id: "swap-side", text: "Would it be possible to swap the fries for steamed vegetables?", translation: "¿Sería posible cambiar las papas fritas por verduras al vapor?", visual_hint: "🥦🔄", cloze: [5, 9], common: true,
-            glossary: [{ word: "swap", meaning: "intercambiar / cambiar", ipa: "swɑːp" }] }
+          { id: "swap-side", text: "Would it be possible to swap the fries for steamed vegetables?", translation: "¿Sería posible cambiar las papas fritas por verduras al vapor?", visual_hint: "🥦", cloze: [5, 9], common: true,
+            glossary: [{ word: "swap", meaning: "cambiar / intercambiar", ipa: "swɑːp" }] }
         ],
         roleplay: {
-          ai_role: "restaurant server", user_role: "guest with allergies", setting: "A busy casual dining restaurant.",
+          ai_role: "server", user_role: "guest", setting: "Restaurante casual antes de ordenar.",
           turns: [
             { speaker: "ai", text: "Hi there! Before I take your order, do we have any allergies at the table?" },
             { speaker: "user", goal: "Explica que tienes alergia al maní.", suggested_lines: ["I'm severely allergic to peanuts and tree nuts."] },
             { speaker: "ai", text: "Thanks for letting me know. What dish were you looking at?" },
-            { speaker: "user", goal: "Pregunta si la salsa contiene lácteos y pide cambiar la guarnición.", suggested_lines: ["Does this sauce contain any dairy or gluten?", "Would it be possible to swap the fries for steamed vegetables?"] },
+            { speaker: "user", goal: "Pregunta si lleva lácteos y pide cambiar las papas por verduras.", suggested_lines: ["Does this sauce contain any dairy or gluten?", "Would it be possible to swap the fries for steamed vegetables?"] },
             { speaker: "ai", text: "The sauce is dairy-free, and we can definitely do steamed vegetables for you!" }
+          ]
+        }
+      },
+      {
+        id: "a1-bus-ticket", title: "Buying a bus ticket", title_es: "Comprar un boleto de autobús", cefr: "A1", band: "basic", topic: "travel-and-transport",
+        description: "Compra un boleto en la estación, pregunta el andén y la hora de salida.",
+        phrases: [
+          { id: "one-way-ticket", text: "Can I get a one-way ticket to Boston, please?", translation: "¿Me da un boleto de ida a Boston, por favor?", visual_hint: "🎟️", cloze: [4, 5], common: true,
+            glossary: [{ word: "one-way", meaning: "solo ida", ipa: "wʌn weɪ" }] },
+          { id: "what-time-leave", text: "What time does the next bus leave?", translation: "¿A qué hora sale el próximo autobús?", visual_hint: "🚌", cloze: [4, 6], common: true,
+            glossary: [{ word: "leave", meaning: "salir / partir", ipa: "liːv" }] },
+          { id: "which-gate", text: "Which gate does it leave from?", translation: "¿De qué puerta sale?", visual_hint: "🚏", cloze: [1], common: true,
+            glossary: [{ word: "gate", meaning: "puerta / andén", ipa: "ɡeɪt" }] }
+        ],
+        roleplay: {
+          ai_role: "ticket agent", user_role: "traveler", setting: "Ventanilla de la terminal de autobuses.",
+          turns: [
+            { speaker: "ai", text: "Next in line! Where are you traveling today?" },
+            { speaker: "user", goal: "Pide un boleto de ida a Boston.", suggested_lines: ["Can I get a one-way ticket to Boston, please?"] },
+            { speaker: "ai", text: "Sure, that's twenty-five dollars." },
+            { speaker: "user", goal: "Pregunta a qué hora sale el próximo autobús.", suggested_lines: ["What time does the next bus leave?"] },
+            { speaker: "ai", text: "It leaves at 2:30 from Gate 4." }
           ]
         }
       },
@@ -345,7 +349,7 @@
         id: "a2-asking-directions", title: "Asking for directions", title_es: "Pedir indicaciones", cefr: "A2", band: "basic", topic: "travel-and-transport",
         description: "Pregunta cómo llegar a un lugar y entiende indicaciones simples.",
         phrases: [
-          { id: "excuse-me", text: "Excuse me, is there a pharmacy near here?", translation: "Disculpe, ¿hay una farmacia cerca de aquí?", visual_hint: "💊📍", cloze: [5, 6], common: true,
+          { id: "excuse-me", text: "Excuse me, is there a pharmacy near here?", translation: "Disculpe, ¿hay una farmacia cerca de aquí?", visual_hint: "💊", cloze: [5, 6], common: true,
             glossary: [{ word: "pharmacy", meaning: "farmacia", ipa: "ˈfɑːrməsi" }] },
           { id: "how-do-i-get", text: "How do I get to the train station?", translation: "¿Cómo llego a la estación de tren?", visual_hint: "🚉", cloze: [3], common: true,
             glossary: [{ word: "get to", meaning: "llegar a", ipa: "ɡet tuː" }] },
@@ -355,57 +359,33 @@
             glossary: [{ word: "repeat", meaning: "repetir", ipa: "rɪˈpiːt" }] }
         ],
         roleplay: {
-          ai_role: "local resident", user_role: "tourist", setting: "A street corner in a city you are visiting.",
+          ai_role: "local resident", user_role: "tourist", setting: "En una esquina de una ciudad que visitas.",
           turns: [
             { speaker: "ai", text: "Hi there, you look a little lost. Can I help?" },
             { speaker: "user", goal: "Pregunta cómo llegar a la estación de tren.", suggested_lines: ["How do I get to the train station?"] },
             { speaker: "ai", text: "Go straight for two blocks, then turn left at the bank." },
-            { speaker: "user", goal: "Pide que repita.", suggested_lines: ["Could you repeat that, please?"] },
+            { speaker: "user", goal: "Pide que te repita la indicación.", suggested_lines: ["Could you repeat that, please?"] },
             { speaker: "ai", text: "Two blocks straight, then left at the bank." }
           ]
         }
       },
       {
-        id: "b1-airport-boarding", title: "Airport check-in and boarding", title_es: "Check-in y embarque en el aeropuerto", cefr: "B1", band: "intermediate", topic: "travel-and-transport",
-        description: "Elige asiento, factura tu equipaje y pregunta por la puerta de embarque.",
+        id: "b1-delayed-flight", title: "Handling a delayed flight", title_es: "Gestionar un vuelo retrasado", cefr: "B1", band: "intermediate", topic: "travel-and-transport",
+        description: "Pregunta por el estado de tu vuelo y reprograma una conexión perdida.",
         phrases: [
-          { id: "window-seat", text: "Could I get a window seat if there's one available?", translation: "¿Podría darme un asiento de ventanilla si hay alguno disponible?", visual_hint: "🪟✈️", cloze: [4, 5], common: true,
-            glossary: [{ word: "available", meaning: "disponible", ipa: "əˈveɪləbəl" }] },
-          { id: "carry-on", text: "I only have this carry-on bag and a personal item.", translation: "Solo llevo este equipaje de mano y un artículo personal.", visual_hint: "🧳", cloze: [4, 5], common: true,
-            glossary: [{ word: "carry-on", meaning: "equipaje de mano", ipa: "ˈkæri ɑːn" }] },
-          { id: "boarding-gate", text: "Which gate are we boarding from, and is the flight on time?", translation: "¿Por qué puerta embarcamos y el vuelo está a tiempo?", visual_hint: "🛫🕒", cloze: [1, 4], common: true,
-            glossary: [{ word: "on time", meaning: "puntual / a tiempo", ipa: "ɑːn taɪm" }] }
-        ],
-        roleplay: {
-          ai_role: "airline check-in agent", user_role: "passenger", setting: "International airport check-in counter.",
-          turns: [
-            { speaker: "ai", text: "Good morning! Passport and booking reference, please. Are you checking any bags today?" },
-            { speaker: "user", goal: "Di que solo llevas equipaje de mano.", suggested_lines: ["I only have this carry-on bag and a personal item."] },
-            { speaker: "ai", text: "Do you prefer an aisle or a window seat?" },
-            { speaker: "user", goal: "Pide ventanilla y pregunta por la puerta de embarque.", suggested_lines: ["Could I get a window seat if there's one available?", "Which gate are we boarding from, and is the flight on time?"] },
-            { speaker: "ai", text: "Seat 14A, boarding at Gate B12 right on time!" }
-          ]
-        }
-      },
-      {
-        id: "b2-missed-connection", title: "Rebooking a missed flight connection", title_es: "Reprogramar un vuelo de conexión perdido", cefr: "B2", band: "intermediate", topic: "travel-and-transport",
-        description: "Explica que tu primer vuelo se retrasó y gestiona el cambio al siguiente vuelo.",
-        phrases: [
-          { id: "missed-connection", text: "I just missed my connecting flight because our first leg was delayed.", translation: "Acabo de perder mi vuelo de conexión porque nuestro primer tramo se retrasó.", visual_hint: "🏃‍♂️✈️", cloze: [2, 4, 11], common: true,
+          { id: "missed-connection", text: "I'm worried I might miss my connecting flight.", translation: "Me preocupa perder mi vuelo de conexión.", visual_hint: "✈️", cloze: [4, 6], common: true,
             glossary: [{ word: "connecting flight", meaning: "vuelo de conexión", ipa: "kəˈnektɪŋ flaɪt" }] },
-          { id: "next-flight-out", text: "Could you put me on the next available flight to Chicago?", translation: "¿Podría ponerme en el próximo vuelo disponible a Chicago?", visual_hint: "🎫🔄", cloze: [6, 7], common: true,
-            glossary: [{ word: "put me on", meaning: "ubicarme / asignarme en", ipa: "pʊt mi ɑːn" }] },
-          { id: "checked-luggage", text: "Will my checked luggage automatically transfer to the new flight?", translation: "¿Mi equipaje facturado se transferirá automáticamente al nuevo vuelo?", visual_hint: "🧳🏷️", cloze: [2, 3, 5], common: true,
-            glossary: [{ word: "checked luggage", meaning: "equipaje facturado", ipa: "tʃekt ˈlʌɡɪdʒ" }] }
+          { id: "rebook-next", text: "Could you rebook me on the next available flight?", translation: "¿Podría reubicarme en el próximo vuelo disponible?", visual_hint: "🎫", cloze: [2, 6], common: true,
+            glossary: [{ word: "rebook", meaning: "reprogramar reserva", ipa: "ˌriːˈbʊk" }] }
         ],
         roleplay: {
-          ai_role: "airline transfer desk agent", user_role: "stranded traveler", setting: "Customer service desk at a busy hub airport.",
+          ai_role: "gate agent", user_role: "passenger", setting: "Mostrador de embarque en el aeropuerto.",
           turns: [
-            { speaker: "ai", text: "Hello, how can I assist you at the transfer desk today?" },
-            { speaker: "user", goal: "Explica que perdiste tu conexión por un retraso.", suggested_lines: ["I just missed my connecting flight because our first leg was delayed."] },
-            { speaker: "ai", text: "I'm sorry about that. Let me check the options for your destination." },
-            { speaker: "user", goal: "Pide que te ubiquen en el próximo vuelo y pregunta por tu maleta.", suggested_lines: ["Could you put me on the next available flight to Chicago?", "Will my checked luggage automatically transfer to the new flight?"] },
-            { speaker: "ai", text: "You're confirmed on the 4:15 PM flight, and your bags are already tagged for it." }
+            { speaker: "ai", text: "Hello, our departure is delayed by forty minutes. How can I help?" },
+            { speaker: "user", goal: "Explica que temes perder tu conexión.", suggested_lines: ["I'm worried I might miss my connecting flight."] },
+            { speaker: "ai", text: "Let me look at alternative flights for you." },
+            { speaker: "user", goal: "Pide que te ubiquen en el próximo vuelo disponible.", suggested_lines: ["Could you rebook me on the next available flight?"] },
+            { speaker: "ai", text: "Done! Here is your new boarding pass." }
           ]
         }
       },
@@ -413,23 +393,21 @@
         id: "a1-clothing-store", title: "Shopping for clothes", title_es: "Comprar ropa en una tienda", cefr: "A1", band: "basic", topic: "hotel-and-shopping",
         description: "Pregunta por tallas, usa los probadores y paga con tarjeta.",
         phrases: [
-          { id: "try-this-on", text: "Can I try this jacket on?", translation: "¿Me puedo probar esta chaqueta?", visual_hint: "🧥🪞", cloze: [2, 5], common: true,
+          { id: "try-this-on", text: "Can I try this jacket on?", translation: "¿Me puedo probar esta chaqueta?", visual_hint: "🧥", cloze: [2, 5], common: true,
             glossary: [{ word: "try on", meaning: "probarse ropa", ipa: "traɪ ɑːn" }] },
-          { id: "medium-size", text: "Do you have this in a medium?", translation: "¿Tiene esto en talla mediana?", visual_hint: "🏷️ M", cloze: [6], common: true,
+          { id: "medium-size", text: "Do you have this in a medium?", translation: "¿Tiene esto en talla mediana?", visual_hint: "🏷️", cloze: [6], common: true,
             glossary: [{ word: "medium", meaning: "talla mediana", ipa: "ˈmiːdiəm" }] },
-          { id: "fitting-rooms", text: "Where are the fitting rooms?", translation: "¿Dónde están los probadores?", visual_hint: "🚪👕", cloze: [3, 4], common: true,
-            glossary: [{ word: "fitting rooms", meaning: "probadores", ipa: "ˈfɪtɪŋ ruːmz" }] },
-          { id: "pay-by-card", text: "Can I pay by credit card?", translation: "¿Puedo pagar con tarjeta de crédito?", visual_hint: "💳", cloze: [2, 4], common: true,
-            glossary: [{ word: "credit card", meaning: "tarjeta de crédito", ipa: "ˈkredɪt kɑːrd" }] }
+          { id: "fitting-rooms", text: "Where are the fitting rooms?", translation: "¿Dónde están los probadores?", visual_hint: "🪞", cloze: [3, 4], common: true,
+            glossary: [{ word: "fitting rooms", meaning: "probadores", ipa: "ˈfɪtɪŋ ruːmz" }] }
         ],
         roleplay: {
-          ai_role: "shop assistant", user_role: "shopper", setting: "A clothing store downtown.",
+          ai_role: "shop assistant", user_role: "shopper", setting: "En una tienda de ropa.",
           turns: [
             { speaker: "ai", text: "Hi! Let me know if you need any help finding your size." },
             { speaker: "user", goal: "Pregunta si tienen la prenda en talla mediana.", suggested_lines: ["Do you have this in a medium?"] },
             { speaker: "ai", text: "Yes, here is a medium! Would you like to try it on?" },
-            { speaker: "user", goal: "Pregunta dónde están los probadores y si puedes pagar con tarjeta.", suggested_lines: ["Where are the fitting rooms?", "Can I pay by credit card?"] },
-            { speaker: "ai", text: "Right in the back, and yes, we accept all cards." }
+            { speaker: "user", goal: "Pregunta dónde están los probadores.", suggested_lines: ["Where are the fitting rooms?"] },
+            { speaker: "ai", text: "Right over there on the left." }
           ]
         }
       },
@@ -437,7 +415,7 @@
         id: "b1-hotel-check-in", title: "Checking into a hotel", title_es: "Registrarse en un hotel", cefr: "B1", band: "intermediate", topic: "hotel-and-shopping",
         description: "Confirma tu reserva, resuelve un problema y pregunta por servicios.",
         phrases: [
-          { id: "have-a-reservation", text: "Hi, I have a reservation under the name Garcia.", translation: "Hola, tengo una reserva a nombre de García.", visual_hint: "🏨🧾", cloze: [4, 5], common: true,
+          { id: "have-a-reservation", text: "Hi, I have a reservation under the name Garcia.", translation: "Hola, tengo una reserva a nombre de García.", visual_hint: "🏨", cloze: [4, 5], common: true,
             glossary: [{ word: "reservation", meaning: "reserva", ipa: "ˌrezərˈveɪʃən" }] },
           { id: "breakfast-included", text: "Is breakfast included in the price?", translation: "¿El desayuno está incluido en el precio?", visual_hint: "🍳", cloze: [2], common: true,
             glossary: [{ word: "included", meaning: "incluido", ipa: "ɪnˈkluːdɪd" }] },
@@ -445,10 +423,10 @@
             glossary: [{ word: "possible", meaning: "posible", ipa: "ˈpɑːsəbəl" }] }
         ],
         roleplay: {
-          ai_role: "hotel receptionist", user_role: "guest", setting: "The front desk of a mid-size hotel.",
+          ai_role: "receptionist", user_role: "guest", setting: "Recepción de un hotel.",
           turns: [
             { speaker: "ai", text: "Good evening and welcome. How can I help you?" },
-            { speaker: "user", goal: "Di que tienes una reserva.", suggested_lines: ["Hi, I have a reservation under the name Garcia."] },
+            { speaker: "user", goal: "Indica que tienes una reserva.", suggested_lines: ["Hi, I have a reservation under the name Garcia."] },
             { speaker: "ai", text: "Here's your key. Anything else?" },
             { speaker: "user", goal: "Pregunta si el desayuno está incluido.", suggested_lines: ["Is breakfast included in the price?"] },
             { speaker: "ai", text: "Yes, from seven to ten on the first floor." }
@@ -456,67 +434,61 @@
         }
       },
       {
-        id: "b2-returning-faulty-item", title: "Returning a faulty gadget", title_es: "Devolver un producto defectuoso", cefr: "B2", band: "intermediate", topic: "hotel-and-shopping",
+        id: "b2-returning-damaged-item", title: "Returning a faulty item", title_es: "Devolver un producto defectuoso", cefr: "B2", band: "intermediate", topic: "hotel-and-shopping",
         description: "Explica un fallo técnico y solicita un reembolso o reemplazo.",
         phrases: [
-          { id: "stopped-working", text: "I bought these headphones yesterday, but the left side stopped working.", translation: "Compré estos audífonos ayer, pero el lado izquierdo dejó de funcionar.", visual_hint: "🎧⚡", cloze: [3, 9, 10], common: true,
+          { id: "stopped-working", text: "I bought these headphones yesterday, but the left side stopped working.", translation: "Compré estos audífonos ayer, pero el lado izquierdo dejó de funcionar.", visual_hint: "🎧", cloze: [3, 9, 10], common: true,
             glossary: [{ word: "stopped working", meaning: "dejó de funcionar", ipa: "stɑːpt ˈwɜːrkɪŋ" }] },
-          { id: "have-the-receipt", text: "I still have the original box and the receipt right here.", translation: "Todavía tengo la caja original y el recibo justo aquí.", visual_hint: "🧾📦", cloze: [4, 8], common: true,
-            glossary: [{ word: "receipt", meaning: "recibo / factura", ipa: "rɪˈsiːt" }] },
-          { id: "full-refund", text: "I'd prefer a full refund rather than store credit, if possible.", translation: "Preferiría un reembolso completo en lugar de crédito de la tienda, si es posible.", visual_hint: "💵↩️", cloze: [3, 4, 7], common: true,
+          { id: "full-refund", text: "I'd prefer a full refund rather than store credit, if possible.", translation: "Preferiría un reembolso completo en lugar de crédito de la tienda.", visual_hint: "💳", cloze: [3, 4], common: true,
             glossary: [{ word: "full refund", meaning: "reembolso completo", ipa: "fʊl ˈriːfʌnd" }] }
         ],
         roleplay: {
-          ai_role: "electronics store manager", user_role: "customer", setting: "Customer service counter at an electronics shop.",
+          ai_role: "store manager", user_role: "customer", setting: "Mostrador de atención al cliente.",
           turns: [
             { speaker: "ai", text: "Hello! How can I help you with those headphones today?" },
-            { speaker: "user", goal: "Explica qué falló en los audífonos y muestra el recibo.", suggested_lines: ["I bought these headphones yesterday, but the left side stopped working.", "I still have the original box and the receipt right here."] },
+            { speaker: "user", goal: "Explica qué falló en los audífonos.", suggested_lines: ["I bought these headphones yesterday, but the left side stopped working."] },
             { speaker: "ai", text: "I see. Would you like store credit or an exchange?" },
             { speaker: "user", goal: "Pide un reembolso completo.", suggested_lines: ["I'd prefer a full refund rather than store credit, if possible."] },
-            { speaker: "ai", text: "No problem at all, I'll refund it back to your card right now." }
+            { speaker: "ai", text: "No problem, I'll refund it back to your card right now." }
           ]
         }
       },
       {
-        id: "a1-introducing-yourself", title: "Introducing yourself to a neighbor", title_es: "Presentarte a un vecino nuevo", cefr: "A1", band: "basic", topic: "social-and-smalltalk",
-        description: "Saluda, di tu nombre, de dónde eres y a qué te dedicas.",
+        id: "a2-meeting-new-people", title: "Meeting a new neighbor", title_es: "Conocer a gente nueva", cefr: "A2", band: "basic", topic: "social-and-smalltalk",
+        description: "Preséntate, cuenta de dónde eres y propón tomar un café.",
         phrases: [
-          { id: "moved-in", text: "Hi, I'm Alex. I just moved in next door.", translation: "Hola, soy Alex. Me acabo de mudar al lado.", visual_hint: "👋🏠", cloze: [5, 6], common: true,
-            glossary: [{ word: "moved in", meaning: "mudarse a un lugar", ipa: "muːvd ɪn" }] },
-          { id: "originally-from", text: "I'm originally from Colombia, and I work as a designer.", translation: "Soy originario de Colombia y trabajo como diseñador.", visual_hint: "🌎🎨", cloze: [1, 8], common: true,
-            glossary: [{ word: "originally", meaning: "originalmente / de origen", ipa: "əˈrɪdʒənəli" }] },
-          { id: "nice-meeting", text: "It's really nice meeting you! Let's grab coffee sometime.", translation: "¡Es un gusto conocerte! Tomemos un café algún día.", visual_hint: "☕😊", cloze: [3, 6], common: true,
-            glossary: [{ word: "grab coffee", meaning: "ir por un café (informal)", ipa: "ɡræb ˈkɔːfi" }] }
+          { id: "moved-in", text: "Hi, I'm Alex. I just moved in next door.", translation: "Hola, soy Alex. Me acabo de mudar al lado.", visual_hint: "👋", cloze: [5, 6], common: true,
+            glossary: [{ word: "moved in", meaning: "mudarse", ipa: "muːvd ɪn" }] },
+          { id: "nice-meeting", text: "It's really nice meeting you! Let's grab coffee sometime.", translation: "¡Es un gusto conocerte! Tomemos un café algún día.", visual_hint: "☕", cloze: [3, 6], common: true,
+            glossary: [{ word: "grab coffee", meaning: "ir por un café", ipa: "ɡræb ˈkɔːfi" }] }
         ],
         roleplay: {
-          ai_role: "friendly neighbor", user_role: "new resident", setting: "The hallway of your apartment building.",
+          ai_role: "neighbor", user_role: "new resident", setting: "Pasillo de tu edificio.",
           turns: [
             { speaker: "ai", text: "Oh hi! Are you the new neighbor in apartment 4B?" },
             { speaker: "user", goal: "Preséntate y di que te acabas de mudar.", suggested_lines: ["Hi, I'm Alex. I just moved in next door."] },
-            { speaker: "ai", text: "Welcome to the building! Where are you from?" },
-            { speaker: "user", goal: "Cuenta de dónde eres y propón tomar un café.", suggested_lines: ["I'm originally from Colombia, and I work as a designer.", "It's really nice meeting you! Let's grab coffee sometime."] },
-            { speaker: "ai", text: "I'd love that! Welcome again." }
+            { speaker: "ai", text: "Welcome to the building!" },
+            { speaker: "user", goal: "Propón tomar un café pronto.", suggested_lines: ["It's really nice meeting you! Let's grab coffee sometime."] },
+            { speaker: "ai", text: "I'd love that! See you around." }
           ]
         }
       },
       {
-        id: "b1-weekend-plans", title: "Making weekend plans with friends", title_es: "Hacer planes de fin de semana", cefr: "B1", band: "intermediate", topic: "social-and-smalltalk",
-        description: "Propón una actividad al aire libre y acuerda la hora.",
+        id: "b2-catching-up-plans", title: "Making weekend plans", title_es: "Ponerse al día y hacer planes", cefr: "B2", band: "intermediate", topic: "social-and-smalltalk",
+        description: "Propón una actividad de fin de semana y coordina el horario.",
         phrases: [
-          { id: "up-for-hiking", text: "Are you up for going hiking this Saturday morning?", translation: "¿Te animas a ir de caminata este sábado por la mañana?", visual_hint: "🥾⛰️", cloze: [2, 3, 5], common: true,
-            glossary: [{ word: "up for", meaning: "animarse a / tener ganas de", ipa: "ʌp fɔːr" }] },
-          { id: "pick-you-up", text: "I can pick you up around eight if that works for you.", translation: "Puedo pasar por ti alrededor de las ocho si te parece bien.", visual_hint: "🚗🕗", cloze: [2, 3, 4], common: true,
-            glossary: [{ word: "pick you up", meaning: "pasar a recogerte", ipa: "pɪk ju ʌp" }] },
-          { id: "rain-check", text: "If it rains, we can always grab brunch instead.", translation: "Si llueve, siempre podemos ir a tomar brunch en su lugar.", visual_hint: "🌧️🥞", cloze: [2, 6, 8], common: true,
-            glossary: [{ word: "instead", meaning: "en su lugar / en vez de eso", ipa: "ɪnˈsted" }] }
+          { id: "up-for-hiking", text: "Are you up for going hiking this Saturday morning?", translation: "¿Te animas a ir de caminata este sábado por la mañana?", visual_hint: "🥾", cloze: [2, 3, 5], common: true,
+            glossary: [{ word: "up for", meaning: "animarse a", ipa: "ʌp fɔːr" }] },
+          { id: "pick-you-up", text: "I can pick you up around eight if that works for you.", translation: "Puedo pasar por ti a las ocho si te viene bien.", visual_hint: "🚗", cloze: [2, 3, 4], common: true,
+            glossary: [{ word: "pick you up", meaning: "pasar a recogerte", ipa: "pɪk ju ʌp" }] }
         ],
         roleplay: {
-          ai_role: "close friend", user_role: "friend", setting: "Catching up over a phone call on Thursday evening.",
+          ai_role: "friend", user_role: "friend", setting: "Llamada con un amigo el jueves por la tarde.",
           turns: [
             { speaker: "ai", text: "Hey! Do you have any plans for the weekend yet?" },
-            { speaker: "user", goal: "Propón ir de caminata el sábado por la mañana.", suggested_lines: ["Are you up for going hiking this Saturday morning?"] },
+            { speaker: "user", goal: "Propón ir de caminata el sábado.", suggested_lines: ["Are you up for going hiking this Saturday morning?"] },
             { speaker: "ai", text: "That sounds awesome! What time should we head out?" },
-            { speaker: "user", goal: "Ofrece pasar a recogerle a las ocho.", suggested_lines: ["I can pick you up around eight if that works for you.", "If it rains, we can always grab brunch instead."] },
+            { speaker: "user", goal: "Ofrece pasar por él a las ocho.", suggested_lines: ["I can pick you up around eight if that works for you."] },
             { speaker: "ai", text: "Eight works great. See you Saturday!" }
           ]
         }
@@ -525,20 +497,18 @@
         id: "c2-dinner-debate", title: "Debating at a dinner party", title_es: "Debatir en una cena", cefr: "C2", band: "advanced", topic: "social-and-smalltalk",
         description: "Expresa matices, discrepa con elegancia y usa expresiones idiomáticas.",
         phrases: [
-          { id: "devils-advocate", text: "Just to play devil's advocate, couldn't remote work actually isolate people?", translation: "Solo por llevar la contraria, ¿no podría el teletrabajo aislar a las personas?", visual_hint: "😈⚖️", cloze: [3, 4], common: true,
+          { id: "devils-advocate", text: "Just to play devil's advocate, couldn't remote work actually isolate people?", translation: "Solo por llevar la contraria, ¿no podría el teletrabajo aislar a las personas?", visual_hint: "⚖️", cloze: [3, 4], common: true,
             glossary: [{ word: "devil's advocate", meaning: "abogado del diablo" }] },
-          { id: "see-where", text: "I see where you're coming from, but I'd take that with a grain of salt.", translation: "Entiendo tu punto de vista, pero yo lo tomaría con pinzas.", visual_hint: "🧂", cloze: [4, 12], common: true,
-            glossary: [{ word: "grain of salt", meaning: "con escepticismo" }] },
-          { id: "agree-to-disagree", text: "Fair enough, let's agree to disagree on that one.", translation: "Me parece justo, aceptemos que no estamos de acuerdo en eso.", visual_hint: "🤷", cloze: [3, 4, 5], common: true,
-            glossary: [{ word: "agree to disagree", meaning: "aceptar diferencias sin seguir discutiendo" }] }
+          { id: "agree-to-disagree", text: "Fair enough, let's agree to disagree on that one.", translation: "Me parece justo, aceptemos que pensamos distinto en eso.", visual_hint: "🤝", cloze: [3, 4, 5], common: true,
+            glossary: [{ word: "agree to disagree", meaning: "aceptar diferencias sin discutir" }] }
         ],
         roleplay: {
-          ai_role: "opinionated dinner guest", user_role: "fellow guest", setting: "A relaxed dinner party among friends.",
+          ai_role: "dinner guest", user_role: "guest", setting: "Cena relajada entre amigos.",
           turns: [
             { speaker: "ai", text: "Honestly, I think offices are obsolete. Remote work is better in every way." },
-            { speaker: "user", goal: "Haz de abogado del diablo.", suggested_lines: ["Just to play devil's advocate, couldn't remote work actually isolate people?"] },
+            { speaker: "user", goal: "Plantea un contrapunto con diplomacia.", suggested_lines: ["Just to play devil's advocate, couldn't remote work actually isolate people?"] },
             { speaker: "ai", text: "People can build community online just as well." },
-            { speaker: "user", goal: "Cierra el debate con elegancia.", suggested_lines: ["Fair enough, let's agree to disagree on that one."] },
+            { speaker: "user", goal: "Cierra el debate amistosamente.", suggested_lines: ["Fair enough, let's agree to disagree on that one."] },
             { speaker: "ai", text: "Ha, deal. More wine?" }
           ]
         }
@@ -547,20 +517,18 @@
         id: "b2-job-interview", title: "Job interview small talk", title_es: "Entrevista de trabajo", cefr: "B2", band: "intermediate", topic: "work-and-career",
         description: "Preséntate profesionalmente, habla de tu experiencia y haz preguntas.",
         phrases: [
-          { id: "tell-about-myself", text: "I've been working in customer support for about five years.", translation: "Llevo unos cinco años trabajando en atención al cliente.", visual_hint: "💼🎧", cloze: [1, 2], common: true,
-            glossary: [{ word: "been working", meaning: "present perfect continuous: acción iniciada en el pasado que continúa" }] },
+          { id: "tell-about-myself", text: "I've been working in customer support for about five years.", translation: "Llevo unos cinco años trabajando en atención al cliente.", visual_hint: "💼", cloze: [1, 2], common: true,
+            glossary: [{ word: "been working", meaning: "acción iniciada en el pasado que continúa" }] },
           { id: "strength", text: "One of my main strengths is staying calm under pressure.", translation: "Una de mis principales fortalezas es mantener la calma bajo presión.", visual_hint: "🧘", cloze: [4, 6], common: true,
-            glossary: [{ word: "strengths", meaning: "fortalezas", ipa: "streŋkθs" }] },
-          { id: "next-steps", text: "What are the next steps in the hiring process?", translation: "¿Cuáles son los próximos pasos del proceso de selección?", visual_hint: "➡️", cloze: [7], common: true,
-            glossary: [{ word: "hiring", meaning: "contratación", ipa: "ˈhaɪərɪŋ" }] }
+            glossary: [{ word: "strengths", meaning: "fortalezas", ipa: "streŋkθs" }] }
         ],
         roleplay: {
-          ai_role: "hiring manager", user_role: "candidate", setting: "A video interview for a customer success position.",
+          ai_role: "hiring manager", user_role: "candidate", setting: "Entrevista por videollamada.",
           turns: [
             { speaker: "ai", text: "Thanks for joining us today. Could you tell me a little about yourself?" },
-            { speaker: "user", goal: "Resume tu experiencia.", suggested_lines: ["I've been working in customer support for about five years."] },
+            { speaker: "user", goal: "Resume tu experiencia profesional.", suggested_lines: ["I've been working in customer support for about five years."] },
             { speaker: "ai", text: "What would you say is your biggest strength?" },
-            { speaker: "user", goal: "Describe una fortaleza.", suggested_lines: ["One of my main strengths is staying calm under pressure."] },
+            { speaker: "user", goal: "Menciona una fortaleza clave.", suggested_lines: ["One of my main strengths is staying calm under pressure."] },
             { speaker: "ai", text: "We'll get back to you within a week!" }
           ]
         }
@@ -569,109 +537,99 @@
         id: "c1-negotiating-deadline", title: "Negotiating a deadline", title_es: "Negociar un plazo de entrega", cefr: "C1", band: "advanced", topic: "work-and-career",
         description: "Explica un retraso con diplomacia y negocia una nueva fecha.",
         phrases: [
-          { id: "heads-up", text: "I wanted to give you a heads-up that we're running slightly behind schedule.", translation: "Quería avisarte con antelación de que vamos un poco atrasados.", visual_hint: "⏳📅", cloze: [6, 11], common: true,
+          { id: "heads-up", text: "I wanted to give you a heads-up that we're running slightly behind schedule.", translation: "Quería avisarte con antelación de que vamos un poco atrasados.", visual_hint: "📅", cloze: [6, 11], common: true,
             glossary: [{ word: "heads-up", meaning: "aviso anticipado" }] },
-          { id: "propose", text: "Would you be open to pushing the deadline back by a week?", translation: "¿Estarías dispuesto a aplazar la fecha límite una semana?", visual_hint: "↪️", cloze: [5, 7], common: true,
-            glossary: [{ word: "push back", meaning: "aplazar" }] },
-          { id: "meet-halfway", text: "Perhaps we could meet halfway and ship the core features first.", translation: "Quizás podríamos llegar a un punto medio y entregar primero las funciones principales.", visual_hint: "🤝", cloze: [3, 4], common: true,
+          { id: "meet-halfway", text: "Perhaps we could meet halfway and ship the core features first.", translation: "Quizás podríamos llegar a un punto medio y entregar primero lo esencial.", visual_hint: "🤝", cloze: [3, 4], common: true,
             glossary: [{ word: "meet halfway", meaning: "llegar a un acuerdo intermedio" }] }
         ],
         roleplay: {
-          ai_role: "client project lead", user_role: "agency project manager", setting: "A weekly status call with a client.",
+          ai_role: "project lead", user_role: "manager", setting: "Reunión semanal de seguimiento con el cliente.",
           turns: [
             { speaker: "ai", text: "Morning! Are we still on track for launch on the fifteenth?" },
-            { speaker: "user", goal: "Avisa del retraso con diplomacia.", suggested_lines: ["I wanted to give you a heads-up that we're running slightly behind schedule."] },
+            { speaker: "user", goal: "Da un aviso anticipado del retraso.", suggested_lines: ["I wanted to give you a heads-up that we're running slightly behind schedule."] },
             { speaker: "ai", text: "What are you proposing?" },
-            { speaker: "user", goal: "Ofrece un punto medio.", suggested_lines: ["Perhaps we could meet halfway and ship the core features first."] },
+            { speaker: "user", goal: "Propón entregar las funciones principales primero.", suggested_lines: ["Perhaps we could meet halfway and ship the core features first."] },
             { speaker: "ai", text: "That could work. Send me a revised plan by Friday." }
           ]
         }
       },
       {
-        id: "c2-executive-pitch", title: "Pitching a strategic pivot to executives", title_es: "Presentar un giro estratégico a directivos", cefr: "C2", band: "advanced", topic: "work-and-career",
-        description: "Defiende una propuesta de alto impacto ante el comité ejecutivo.",
+        id: "c2-executive-pitch", title: "Executive strategy pitch", title_es: "Presentación ejecutiva de estrategia", cefr: "C2", band: "advanced", topic: "work-and-career",
+        description: "Defiende una propuesta de alto impacto ante el comité directivo.",
         phrases: [
-          { id: "double-down", text: "Given the shifting market dynamics, we should double down on enterprise retention.", translation: "Dada la cambiante dinámica del mercado, deberíamos apostar fuerte por la retención corporativa.", visual_hint: "📈🎯", cloze: [6, 7], common: true,
-            glossary: [{ word: "double down", meaning: "redoblar la apuesta / enfocarse aún más", ipa: "ˈdʌbəl daʊn" }] },
-          { id: "cost-neutral", text: "By reallocating our Q3 budget, this initiative remains completely cost-neutral.", translation: "Al reasignar nuestro presupuesto del tercer trimestre, esta iniciativa se mantiene sin costo adicional.", visual_hint: "⚖️💼", cloze: [1, 8, 9], common: true,
-            glossary: [{ word: "cost-neutral", meaning: "sin impacto neto en costos", ipa: "kɔːst ˈnuːtrəl" }] },
-          { id: "mitigate-downside", text: "We can mitigate the downside risk by rolling out a pilot first.", translation: "Podemos mitigar el riesgo negativo desplegando primero un programa piloto.", visual_hint: "🛡️🚀", cloze: [2, 4, 7, 8], common: true,
-            glossary: [{ word: "mitigate", meaning: "mitigar / reducir el riesgo", ipa: "ˈmɪtɪɡeɪt" }] }
+          { id: "double-down", text: "Given the shifting market dynamics, we should double down on enterprise retention.", translation: "Dada la cambiante dinámica del mercado, deberíamos apostar fuerte por la retención corporativa.", visual_hint: "📈", cloze: [6, 7], common: true,
+            glossary: [{ word: "double down", meaning: "redoblar la apuesta", ipa: "ˈdʌbəl daʊn" }] },
+          { id: "mitigate-downside", text: "We can mitigate the downside risk by rolling out a pilot first.", translation: "Podemos mitigar el riesgo negativo desplegando primero un piloto.", visual_hint: "🛡️", cloze: [2, 4, 7, 8], common: true,
+            glossary: [{ word: "mitigate", meaning: "mitigar / reducir", ipa: "ˈmɪtɪɡeɪt" }] }
         ],
         roleplay: {
-          ai_role: "chief financial officer", user_role: "VP of product", setting: "Quarterly executive boardroom review.",
+          ai_role: "CFO", user_role: "VP of Product", setting: "Comité trimestral de dirección.",
           turns: [
             { speaker: "ai", text: "Floor is yours. Why are we reconsidering our Q3 roadmap?" },
-            { speaker: "user", goal: "Propón enfocar esfuerzos en retención corporativa.", suggested_lines: ["Given the shifting market dynamics, we should double down on enterprise retention."] },
-            { speaker: "ai", text: "How does that impact our burn rate and downside exposure?" },
-            { speaker: "user", goal: "Explica que es neutral en costos y que lanzarás un piloto para mitigar riesgos.", suggested_lines: ["By reallocating our Q3 budget, this initiative remains completely cost-neutral.", "We can mitigate the downside risk by rolling out a pilot first."] },
+            { speaker: "user", goal: "Propón redoblar esfuerzos en retención corporativa.", suggested_lines: ["Given the shifting market dynamics, we should double down on enterprise retention."] },
+            { speaker: "ai", text: "How do we control the downside risk?" },
+            { speaker: "user", goal: "Explica que lanzarás primero un programa piloto.", suggested_lines: ["We can mitigate the downside risk by rolling out a pilot first."] },
             { speaker: "ai", text: "Compelling case. You have green light for the Q3 pilot." }
           ]
         }
       },
       {
-        id: "a2-pharmacy-symptoms", title: "Describing symptoms at a pharmacy", title_es: "Explicar síntomas en la farmacia", cefr: "A2", band: "basic", topic: "health-and-emergencies",
+        id: "a2-pharmacy-symptoms", title: "At the pharmacy", title_es: "Explicar síntomas en la farmacia", cefr: "A2", band: "basic", topic: "health-and-emergencies",
         description: "Explica un dolor de garganta o fiebre y pregunta cómo tomar el medicamento.",
         phrases: [
-          { id: "sore-throat", text: "I have had a sore throat and a mild fever since yesterday.", translation: "Tengo dolor de garganta y fiebre leve desde ayer.", visual_hint: "🤒🌡️", cloze: [4, 5, 9], common: true,
+          { id: "sore-throat", text: "I have had a sore throat and a mild fever since yesterday.", translation: "Tengo dolor de garganta y fiebre leve desde ayer.", visual_hint: "🤒", cloze: [4, 5, 9], common: true,
             glossary: [{ word: "sore throat", meaning: "dolor de garganta", ipa: "sɔːr θroʊt" }] },
-          { id: "over-the-counter", text: "Do you have something over the counter for a cough?", translation: "¿Tiene algo de venta libre para la tos?", visual_hint: "💊🗣️", cloze: [4, 6, 9], common: true,
-            glossary: [{ word: "over the counter", meaning: "sin receta / de venta libre", ipa: "ˈoʊvər ðə ˈkaʊntər" }] },
-          { id: "how-often-take", text: "How often should I take these tablets, and with food?", translation: "¿Con qué frecuencia debo tomar estas pastillas, y con comida?", visual_hint: "⏰🍽️", cloze: [1, 4, 6], common: true,
-            glossary: [{ word: "tablets", meaning: "pastillas / comprimidos", ipa: "ˈtæbləts" }] }
+          { id: "how-often-take", text: "How often should I take these tablets, and with food?", translation: "¿Con qué frecuencia debo tomar estas pastillas, y con comida?", visual_hint: "💊", cloze: [1, 4, 6], common: true,
+            glossary: [{ word: "tablets", meaning: "pastillas", ipa: "ˈtæbləts" }] }
         ],
         roleplay: {
-          ai_role: "pharmacist", user_role: "patient", setting: "A local neighborhood pharmacy counter.",
+          ai_role: "pharmacist", user_role: "patient", setting: "Mostrador de una farmacia local.",
           turns: [
             { speaker: "ai", text: "Hello! How can I help you feel better today?" },
-            { speaker: "user", goal: "Describe que tienes dolor de garganta y fiebre desde ayer.", suggested_lines: ["I have had a sore throat and a mild fever since yesterday."] },
-            { speaker: "ai", text: "I recommend these lozenges and cold relief tablets." },
-            { speaker: "user", goal: "Pregunta cada cuánto debes tomar las pastillas.", suggested_lines: ["How often should I take these tablets, and with food?"] },
+            { speaker: "user", goal: "Describe tus síntomas desde ayer.", suggested_lines: ["I have had a sore throat and a mild fever since yesterday."] },
+            { speaker: "ai", text: "I recommend these cold relief tablets." },
+            { speaker: "user", goal: "Pregunta cada cuánto debes tomarlas.", suggested_lines: ["How often should I take these tablets, and with food?"] },
             { speaker: "ai", text: "Take one tablet every eight hours after a meal." }
           ]
         }
       },
       {
-        id: "b2-medical-consultation", title: "Visiting a doctor for an injury", title_es: "Consulta médica por una lesión", cefr: "B2", band: "intermediate", topic: "health-and-emergencies",
+        id: "b1-doctors-appointment", title: "Visiting a doctor", title_es: "Consulta médica por una lesión", cefr: "B1", band: "intermediate", topic: "health-and-emergencies",
         description: "Explica cómo ocurrió una lesión deportiva y describe el dolor.",
         phrases: [
-          { id: "twisted-ankle", text: "I twisted my ankle while jogging, and it's been swollen ever since.", translation: "Me torcí el tobillo mientras trotaba y ha estado hinchado desde entonces.", visual_hint: "👟🦶", cloze: [1, 3, 9], common: true,
-            glossary: [{ word: "twisted", meaning: "torcido / esguinzado", ipa: "ˈtwɪstɪd" }, { word: "swollen", meaning: "hinchado", ipa: "ˈswoʊlən" }] },
-          { id: "sharp-pain", text: "It's a sharp pain whenever I try to put weight on it.", translation: "Es un dolor agudo cada vez que intento apoyar peso sobre él.", visual_hint: "⚡🦵", cloze: [2, 3, 8, 9], common: true,
-            glossary: [{ word: "sharp pain", meaning: "dolor punzante / agudo", ipa: "ʃɑːrp peɪn" }] },
-          { id: "need-an-xray", text: "Do you think I need an X-ray to rule out a fracture?", translation: "¿Cree que necesito una radiografía para descartar una fractura?", visual_hint: "🩻🏥", cloze: [6, 8, 9], common: true,
-            glossary: [{ word: "rule out", meaning: "descartar", ipa: "ruːl aʊt" }] }
+          { id: "twisted-ankle", text: "I twisted my ankle while jogging, and it's been swollen ever since.", translation: "Me torcí el tobillo trotando y ha estado hinchado desde entonces.", visual_hint: "👟", cloze: [1, 3, 9], common: true,
+            glossary: [{ word: "swollen", meaning: "hinchado", ipa: "ˈswoʊlən" }] },
+          { id: "sharp-pain", text: "It's a sharp pain whenever I try to put weight on it.", translation: "Es un dolor agudo cada vez que intento apoyar peso.", visual_hint: "⚡", cloze: [2, 3, 8], common: true,
+            glossary: [{ word: "sharp pain", meaning: "dolor agudo", ipa: "ʃɑːrp peɪn" }] }
         ],
         roleplay: {
-          ai_role: "urgent care physician", user_role: "patient", setting: "An urgent care clinic examination room.",
+          ai_role: "doctor", user_role: "patient", setting: "Consultorio médico.",
           turns: [
             { speaker: "ai", text: "Hi, come on in. Tell me what happened to your leg." },
-            { speaker: "user", goal: "Explica que te torciste el tobillo corriendo y está hinchado.", suggested_lines: ["I twisted my ankle while jogging, and it's been swollen ever since."] },
+            { speaker: "user", goal: "Explica que te torciste el tobillo corriendo.", suggested_lines: ["I twisted my ankle while jogging, and it's been swollen ever since."] },
             { speaker: "ai", text: "Can you describe the pain when you stand up?" },
-            { speaker: "user", goal: "Di que sientes un dolor agudo al apoyar peso y pregunta si necesitas radiografía.", suggested_lines: ["It's a sharp pain whenever I try to put weight on it.", "Do you think I need an X-ray to rule out a fracture?"] },
-            { speaker: "ai", text: "Yes, let's get an X-ray right away just to be safe." }
+            { speaker: "user", goal: "Explica que sientes un dolor agudo al apoyar peso.", suggested_lines: ["It's a sharp pain whenever I try to put weight on it."] },
+            { speaker: "ai", text: "Let's get an X-ray right away just to be safe." }
           ]
         }
       },
       {
-        id: "c1-reporting-emergency", title: "Handling an emergency and insurance claim", title_es: "Gestionar una emergencia y seguro de viaje", cefr: "C1", band: "advanced", topic: "health-and-emergencies",
+        id: "c1-insurance-claim", title: "Medical emergency & insurance", title_es: "Urgencia médica y seguro de viaje", cefr: "C1", band: "advanced", topic: "health-and-emergencies",
         description: "Reporta una urgencia médica en el extranjero y coordina la cobertura del seguro.",
         phrases: [
-          { id: "admitted-observation", text: "My travel companion was just admitted to the hospital for overnight observation.", translation: "Mi compañero de viaje acaba de ser ingresado en el hospital para observación nocturna.", visual_hint: "🚑🏥", cloze: [5, 10, 11], common: true,
+          { id: "admitted-observation", text: "My travel companion was just admitted to the hospital for overnight observation.", translation: "Mi compañero de viaje acaba de ser ingresado para observación nocturna.", visual_hint: "🏥", cloze: [5, 10], common: true,
             glossary: [{ word: "admitted", meaning: "ingresado / hospitalizado", ipa: "ədˈmɪtɪd" }] },
-          { id: "direct-billing", text: "Could you confirm whether our policy covers direct billing with this clinic?", translation: "¿Podría confirmar si nuestra póliza cubre facturación directa con esta clínica?", visual_hint: "📋💳", cloze: [5, 7, 8], common: true,
-            glossary: [{ word: "direct billing", meaning: "facturación directa (sin pagar de tu bolsillo)", ipa: "daɪˈrekt ˈbɪlɪŋ" }] },
-          { id: "itemized-invoice", text: "I'll make sure to request an itemized medical report and invoice.", translation: "Me aseguraré de solicitar un informe médico detallado y la factura desglosada.", visual_hint: "📑✅", cloze: [6, 7, 10], common: true,
-            glossary: [{ word: "itemized", meaning: "desglosado / detallado punto por punto", ipa: "ˈaɪtəmaɪzd" }] }
+          { id: "direct-billing", text: "Could you confirm whether our policy covers direct billing with this clinic?", translation: "¿Podría confirmar si nuestra póliza cubre facturación directa con esta clínica?", visual_hint: "📋", cloze: [5, 7, 8], common: true,
+            glossary: [{ word: "direct billing", meaning: "facturación directa", ipa: "daɪˈrekt ˈbɪlɪŋ" }] }
         ],
         roleplay: {
-          ai_role: "travel insurance emergency coordinator", user_role: "policyholder", setting: "Emergency phone line from an overseas hospital lobby.",
+          ai_role: "insurance coordinator", user_role: "traveler", setting: "Línea telefónica de asistencia en viaje.",
           turns: [
             { speaker: "ai", text: "Emergency assistance line. Please tell me your situation." },
-            { speaker: "user", goal: "Informa que tu compañero fue ingresado en observación.", suggested_lines: ["My travel companion was just admitted to the hospital for overnight observation."] },
+            { speaker: "user", goal: "Informa que ingresaron a tu compañero en el hospital.", suggested_lines: ["My travel companion was just admitted to the hospital for overnight observation."] },
             { speaker: "ai", text: "I'm sorry to hear that. Have they asked for a deposit yet?" },
-            { speaker: "user", goal: "Pregunta por facturación directa y ofrece pedir la factura desglosada.", suggested_lines: ["Could you confirm whether our policy covers direct billing with this clinic?", "I'll make sure to request an itemized medical report and invoice."] },
-            { speaker: "ai", text: "Yes, we have direct billing with them. I'll fax the guarantee of payment now." }
+            { speaker: "user", goal: "Pregunta si la póliza cubre facturación directa.", suggested_lines: ["Could you confirm whether our policy covers direct billing with this clinic?"] },
+            { speaker: "ai", text: "Yes, we have direct billing with them. I'll send the guarantee of payment now." }
           ]
         }
       }
@@ -696,6 +654,7 @@
       localAttempts: 0,
       localScores: [],
       lastTranslated: null,
+      showManualInput: false,
       keys: {
         tier: localStorage.getItem('sf_freemium_tier') || 'free',
         gemini: localStorage.getItem('sf_gemini_key') || '',
@@ -708,24 +667,20 @@
     };
 
     const STAGE_LABELS = {
-      shadowing: { title: '1. Sombra', badge: 'Soporte Visual ALTO · Input', color: 'bg-sky-500/20 text-sky-300 border-sky-500/40' },
-      recall: { title: '2. Recordación', badge: 'Soporte Visual ALTO · Glosario', color: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40' },
-      guided: { title: '3. Guiado', badge: 'Soporte Visual MEDIO · Pistas', color: 'bg-amber-500/20 text-amber-300 border-amber-500/40' },
-      completion: { title: '4. Completar', badge: 'Soporte Visual BAJO · Huecos', color: 'bg-purple-500/20 text-purple-300 border-purple-500/40' },
-      roleplay: { title: '5. Charla IA Libre con Libreto', badge: 'Conversación Libre Guiada con Libreto', color: 'bg-rose-500/20 text-rose-300 border-rose-500/40' },
+      shadowing: { title: '1. Escucha', subtitle: 'Escucha e imita el ritmo natural', color: 'bg-sky-500/15 text-sky-300 border-sky-500/30' },
+      recall: { title: '2. Aprende', subtitle: 'Lee en voz alta y explora el vocabulario', color: 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30' },
+      guided: { title: '3. Practica', subtitle: 'Pronuncia la frase con ayuda de las pistas', color: 'bg-amber-500/15 text-amber-300 border-amber-500/30' },
+      completion: { title: '4. Completa', subtitle: 'Di la frase completa de memoria', color: 'bg-purple-500/15 text-purple-300 border-purple-500/30' },
+      roleplay: { title: '5. Conversa', subtitle: 'Conversación libre guiada con libreto', color: 'bg-rose-500/15 text-rose-300 border-rose-500/30' },
     };
 
     window.addEventListener('speakflow:firebase-ready', (e) => {
       const d = e.detail || {};
-      const pill = document.getElementById('firebase-pill');
       const modalSt = document.getElementById('modal-firebase-status');
-      if (d.mode === 'firebase-live') {
-        pill.textContent = `🔥 Firebase Auth (${(d.uid || '').slice(0, 6)}) + Firestore`;
-        pill.className = 'text-xs font-medium px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30';
-        if (modalSt) modalSt.textContent = `LIVE · Project: ${d.projectId} · UID Anónimo: ${d.uid}`;
-      } else {
-        pill.textContent = `🔥 Firebase SDK: Local (${(d.uid || 'anon').slice(0, 8)})`;
-        if (modalSt) modalSt.textContent = `Modo Local (${d.uid}) · Pega tu FIREBASE_CONFIG JSON abajo para activar Firestore Cloud`;
+      if (modalSt) {
+        modalSt.textContent = d.mode === 'firebase-live'
+          ? `Conectado a Firebase (${d.projectId})`
+          : 'Modo local activo';
       }
     });
 
@@ -740,7 +695,6 @@
     }
 
     function toggleKeysModal(show) {
-      document.getElementById('key-tier').value = state.keys.tier || 'free';
       document.getElementById('key-gemini').value = state.keys.gemini;
       document.getElementById('key-google-cloud').value = state.keys.googleCloud;
       document.getElementById('key-openai').value = state.keys.openai;
@@ -752,14 +706,12 @@
     }
 
     async function saveKeys() {
-      state.keys.tier = document.getElementById('key-tier').value;
       state.keys.gemini = document.getElementById('key-gemini').value.trim();
       state.keys.googleCloud = document.getElementById('key-google-cloud').value.trim();
       state.keys.openai = document.getElementById('key-openai').value.trim();
       state.keys.elevenlabs = document.getElementById('key-elevenlabs').value.trim();
       state.keys.elevenVoice = document.getElementById('key-eleven-voice').value.trim() || '21m00Tcm4TlvDq8ikWAM';
       state.keys.anthropic = document.getElementById('key-anthropic').value.trim();
-      localStorage.setItem('sf_freemium_tier', state.keys.tier);
       localStorage.setItem('sf_gemini_key', state.keys.gemini);
       localStorage.setItem('sf_google_cloud_key', state.keys.googleCloud);
       localStorage.setItem('sf_openai_key', state.keys.openai);
@@ -771,37 +723,17 @@
         await window.SpeakFlowFirebase.saveFirebaseConfig(fbJson);
       }
       toggleKeysModal(false);
-      await updateProviderBadge();
     }
 
     async function clearKeys() {
       state.keys = { tier: 'free', gemini: '', googleCloud: '', openai: '', elevenlabs: '', elevenVoice: '21m00Tcm4TlvDq8ikWAM', anthropic: '' };
       ['sf_gemini_key', 'sf_google_cloud_key', 'sf_openai_key', 'sf_elevenlabs_key', 'sf_anthropic_key', 'sf_firebase_config'].forEach(k => localStorage.removeItem(k));
       toggleKeysModal(false);
-      await updateProviderBadge();
-    }
-
-    async function updateProviderBadge() {
-      const pill = document.getElementById('provider-pill');
-      document.getElementById('stat-tier').textContent = (state.keys.tier || 'free').toUpperCase();
-      if (state.backendOnline) {
-        try {
-          const st = await api('/v1/providers/status');
-          const ttsMap = { elevenlabs: 'ElevenLabs', openai_tts: 'OpenAI TTS', google_cloud: 'Google Cloud TTS', webspeech: 'WebSpeech' };
-          const sttMap = { openai_whisper: 'Whisper', google_cloud: 'Google STT', webspeech: 'WebSpeech', deterministic: 'WebSpeech' };
-          const llmMap = { anthropic: 'Claude', gemini: 'Gemini Flash', scripted: 'Libreto IA' };
-          pill.textContent = `Speaker: ${ttsMap[st.tts_provider] || 'WebSpeech'} · Mic: ${sttMap[st.speech_provider] || 'WebSpeech'} · IA: ${llmMap[st.llm_provider] || 'Libreto'}`;
-          return;
-        } catch (_) {}
-      }
-      const tts = state.keys.elevenlabs ? 'ElevenLabs' : (state.keys.openai ? 'OpenAI TTS' : (state.keys.googleCloud ? 'Google TTS' : 'WebSpeech'));
-      const llm = state.keys.anthropic ? 'Claude' : (state.keys.gemini ? 'Gemini Flash' : 'Libreto IA');
-      pill.textContent = `Speaker: ${tts} · IA: ${llm}`;
     }
 
     async function testSpeakerVoice() {
       await saveKeys();
-      await speakText('Welcome to SpeakFlow! Tap any word or phrase to see instant translation.');
+      await speakText('Welcome to SpeakFlow! Tap any word to see its translation.');
     }
 
     function makeWavBlob() {
@@ -865,10 +797,10 @@
       return tokens.map(tok => {
         const clean = tok.replace(/^[^a-zA-Z0-9']+|[^a-zA-Z0-9']+$/g, '');
         if (!clean || tok.includes('____') || tok.includes('_')) {
-          return `<span class="mx-0.5">${tok}</span>`;
+          return `<span class="mx-0.5 text-slate-400">${tok}</span>`;
         }
         const tokEsc = escapeJs(clean);
-        return `<span class="tap-word" title="Toca para traducir '${clean}' y ver la frase en contexto" onclick="openTranslateOverlay('${tokEsc}', '${fullEsc}', '${scenEsc}', '${phrEsc}')">${tok}</span>`;
+        return `<span class="tap-word" title="Ver traducción de '${clean}'" onclick="openTranslateOverlay('${tokEsc}', '${fullEsc}', '${scenEsc}', '${phrEsc}')">${tok}</span>`;
       }).join(' ');
     }
 
@@ -876,13 +808,13 @@
       const overlay = document.getElementById('translate-overlay');
       overlay.classList.remove('hidden');
       document.getElementById('tr-word').textContent = word || phraseText;
-      document.getElementById('tr-ipa').textContent = '/…/';
-      document.getElementById('tr-word-meaning').textContent = 'Traduciendo en contexto…';
+      document.getElementById('tr-ipa').textContent = '…';
+      document.getElementById('tr-word-meaning').textContent = 'Consultando significado…';
       document.getElementById('tr-phrase-en').textContent = phraseText || word;
       document.getElementById('tr-phrase-es').textContent = '';
       document.getElementById('tr-usage-tip').textContent = '';
       document.getElementById('tr-chunks').innerHTML = '';
-      document.getElementById('tr-bookmark-status').textContent = 'Guarda la frase para repasarla con repetición espaciada.';
+      document.getElementById('tr-bookmark-status').textContent = 'Guarda esta expresión para practicarla luego.';
 
       let card = null;
       if (state.backendOnline) {
@@ -905,25 +837,25 @@
         const foundGloss = foundPhrase && (foundPhrase.glossary || []).find(g => g.word.toLowerCase().includes((word || '').toLowerCase()));
         card = {
           selected_text: word || phraseText,
-          word_translation_es: foundGloss ? foundGloss.meaning : (foundPhrase ? foundPhrase.translation : 'Expresión clave de la frase'),
+          word_translation_es: foundGloss ? foundGloss.meaning : (foundPhrase ? foundPhrase.translation : 'Expresión en contexto'),
           ipa: foundGloss && foundGloss.ipa ? foundGloss.ipa : null,
           phrase_text: phraseText || (foundPhrase ? foundPhrase.text : word),
-          phrase_translation_es: foundPhrase ? foundPhrase.translation : 'Frase completa en contexto conversacional',
+          phrase_translation_es: foundPhrase ? foundPhrase.translation : 'Oración completa de la lección',
           chunk_breakdown: [word, phraseText].filter(Boolean),
-          usage_tip_es: `Practica "${word}" dentro de la frase completa "${phraseText}" en lugar de memorizar palabras aisladas.`,
+          usage_tip_es: `Aprende "${word}" dentro del bloque "${phraseText}" para recordarla con fluidez.`,
           scenario_id: scenarioId || scen.id,
           phrase_id: phraseId || (foundPhrase ? foundPhrase.id : 'custom')
         };
       }
       state.lastTranslated = card;
       document.getElementById('tr-word').textContent = card.selected_text;
-      document.getElementById('tr-ipa').textContent = card.ipa ? `/${card.ipa}/` : 'Chunk';
+      document.getElementById('tr-ipa').textContent = card.ipa ? `/${card.ipa}/` : 'Frase';
       document.getElementById('tr-word-meaning').textContent = card.word_translation_es;
       document.getElementById('tr-phrase-en').textContent = card.phrase_text;
       document.getElementById('tr-phrase-es').textContent = `“${card.phrase_translation_es}”`;
       document.getElementById('tr-usage-tip').textContent = card.usage_tip_es;
       document.getElementById('tr-chunks').innerHTML = (card.chunk_breakdown || []).map(c =>
-        `<span class="px-2 py-0.5 rounded-md bg-indigo-500/20 border border-indigo-500/40 text-indigo-200 font-medium">${c}</span>`
+        `<span class="px-2.5 py-0.5 rounded-lg bg-indigo-500/20 border border-indigo-500/30 text-indigo-200 font-medium">${c}</span>`
       ).join('');
       document.getElementById('tr-speak-word').onclick = () => speakText(card.selected_text);
       document.getElementById('tr-speak-phrase').onclick = () => speakText(card.phrase_text);
@@ -955,12 +887,21 @@
           if (window.SpeakFlowFirebase) {
             window.SpeakFlowFirebase.syncSrsCard({ card_id: res.card_id, scenario_id: scenId, phrase_id: phraseId, focus_words: res.focus_words });
           }
-          document.getElementById('tr-bookmark-status').innerHTML = '<span class="text-emerald-400 font-semibold">✔ Guardada en tu cola de Memoria SRS y sincronizada con Firebase.</span>';
+          document.getElementById('tr-bookmark-status').innerHTML = '<span class="text-emerald-400 font-semibold">✔ Guardada en tu lista de repaso.</span>';
           await refreshProgress();
           return;
         } catch (_) {}
       }
-      document.getElementById('tr-bookmark-status').innerHTML = '<span class="text-emerald-400 font-semibold">✔ Frase agregada a tu Memoria SRS local.</span>';
+      if (state.currentScenario && state.currentScenario.phrases && state.currentScenario.phrases[0]) {
+        const p = state.currentScenario.phrases[0];
+        state.srsList.unshift({
+          card_id: `local-${Date.now()}`,
+          kind: 'phrase',
+          exercise: buildLocalLesson(state.currentScenario).stages[1].exercises[0]
+        });
+      }
+      document.getElementById('tr-bookmark-status').innerHTML = '<span class="text-emerald-400 font-semibold">✔ Guardada en tu lista de repaso.</span>';
+      await refreshProgress();
     }
 
     function buildLocalLesson(scenario) {
@@ -974,18 +915,11 @@
       return {
         scenario_id: scenario.id, title: scenario.title, cefr: scenario.cefr, topic: scenario.topic,
         stages: [
-          { type: 'shadowing', support: 'full', exercises: scenario.phrases.map(p => mk(p, 'shadowing', 'full', 0.70, 'Escucha y repite la frase imitando el ritmo y la entonación.', p.text, p.translation, [], p.text)) },
+          { type: 'shadowing', support: 'full', exercises: scenario.phrases.map(p => mk(p, 'shadowing', 'full', 0.70, 'Escucha la frase y repítela imitando el ritmo.', p.text, p.translation, [], p.text)) },
           { type: 'recall', support: 'full', exercises: scenario.phrases.map(p => mk(p, 'recall', 'full', 0.75, 'Lee la frase en voz alta. Toca cualquier palabra para ver su traducción.', p.text, p.translation, p.glossary, p.text)) },
-          { type: 'guided', support: 'partial', exercises: scenario.phrases.map(p => mk(p, 'guided', 'partial', 0.80, 'Di la frase en inglés usando las pistas.', firstHint(p.text), p.translation, [], null)) },
-          { type: 'completion', support: 'low', exercises: scenario.phrases.map(p => mk(p, 'completion', 'low', 0.85, 'Completa la frase diciéndola completa en voz alta.', cloze(p), null, [], null)) },
-        ],
-        roleplay_overview: {
-          ai_role: scenario.roleplay.ai_role,
-          user_role: scenario.roleplay.user_role,
-          setting: scenario.roleplay.setting,
-          goals: scenario.roleplay.turns.filter(t => t.speaker === 'user').map(t => t.goal),
-          target_phrases: scenario.phrases.map(p => p.text)
-        }
+          { type: 'guided', support: 'partial', exercises: scenario.phrases.map(p => mk(p, 'guided', 'partial', 0.80, 'Di la frase en inglés ayudándote con las iniciales.', firstHint(p.text), p.translation, [], null)) },
+          { type: 'completion', support: 'low', exercises: scenario.phrases.map(p => mk(p, 'completion', 'low', 0.85, 'Completa las palabras que faltan diciendo toda la frase.', cloze(p), null, [], null)) },
+        ]
       };
     }
 
@@ -1000,7 +934,6 @@
       } catch (_) {
         state.backendOnline = false;
       }
-      await updateProviderBadge();
       renderCefrButtons();
       renderModuleButtons();
       await loadScenarios();
@@ -1011,24 +944,24 @@
     function renderCefrButtons() {
       const levels = ['ALL', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
       document.getElementById('cefr-buttons').innerHTML = levels.map(lv => `
-        <button onclick="selectCefr('${lv}')" class="py-1.5 rounded-lg border transition ${
-          state.cefr === lv ? 'bg-indigo-600 border-indigo-400 text-white shadow' : 'bg-slate-800/80 border-slate-700 text-slate-300 hover:bg-slate-800'
+        <button onclick="selectCefr('${lv}')" class="py-1.5 rounded-xl border transition ${
+          state.cefr === lv ? 'bg-indigo-600 border-indigo-400 text-white shadow-sm' : 'bg-slate-900 border-slate-800 text-slate-300 hover:bg-slate-800'
         }">${lv === 'ALL' ? 'Todos' : lv}</button>
       `).join('');
-      const bandMap = { ALL: 'A1–C2 (18)', A1: 'Básico', A2: 'Básico', B1: 'Intermedio', B2: 'Intermedio', C1: 'Avanzado', C2: 'Avanzado' };
+      const bandMap = { ALL: 'A1 a C2', A1: 'Inicial', A2: 'Básico', B1: 'Intermedio', B2: 'Intermedio Alto', C1: 'Avanzado', C2: 'Maestría' };
       document.getElementById('band-badge').textContent = bandMap[state.cefr];
     }
 
     function renderModuleButtons() {
       document.getElementById('module-buttons').innerHTML = TOPIC_MODULES.map(m => `
-        <button onclick="selectTopic('${m.id}')" class="px-2.5 py-1.5 rounded-lg border text-left truncate transition ${
-          state.topic === m.id ? 'bg-indigo-600/30 border-indigo-400 text-white font-semibold' : 'bg-slate-800/60 border-slate-800 text-slate-300 hover:bg-slate-800'
+        <button onclick="selectTopic('${m.id}')" class="px-2.5 py-2 rounded-xl border text-left truncate transition ${
+          state.topic === m.id ? 'bg-indigo-600/25 border-indigo-500/60 text-white font-semibold' : 'bg-slate-900 border-slate-800/80 text-slate-300 hover:bg-slate-800/80'
         } ${m.id === 'ALL' ? 'col-span-2 text-center' : ''}">
           <span>${m.icon}</span> <span class="ml-1">${m.title_es}</span>
         </button>
       `).join('');
       const activeMod = TOPIC_MODULES.find(m => m.id === state.topic);
-      document.getElementById('module-badge').textContent = activeMod ? activeMod.icon + ' ' + activeMod.title_es : 'Todas';
+      document.getElementById('module-badge').textContent = activeMod ? activeMod.title_es : 'Todas';
     }
 
     async function selectCefr(lv) {
@@ -1057,7 +990,7 @@
         if (state.topic !== 'ALL') list = list.filter(s => s.topic === state.topic);
         state.scenarios = list.map(s => ({ ...s, phrases: s.phrases.length }));
       }
-      document.getElementById('scenario-count').textContent = `${state.scenarios.length} escenarios`;
+      document.getElementById('scenario-count').textContent = `${state.scenarios.length}`;
       if (state.scenarios.length && (!state.currentScenario || !state.scenarios.some(s => s.id === state.currentScenario.id))) {
         await selectScenario(state.scenarios[0].id);
       } else {
@@ -1067,26 +1000,26 @@
 
     function renderScenarioList() {
       const bandColors = {
-        basic: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30',
-        intermediate: 'bg-amber-500/20 text-amber-300 border-amber-500/30',
-        advanced: 'bg-rose-500/20 text-rose-300 border-rose-500/30',
+        basic: 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30',
+        intermediate: 'bg-amber-500/15 text-amber-300 border-amber-500/30',
+        advanced: 'bg-rose-500/15 text-rose-300 border-rose-500/30',
       };
       const topicIcons = Object.fromEntries(TOPIC_MODULES.map(m => [m.id, m.icon]));
       document.getElementById('scenario-list').innerHTML = state.scenarios.map(s => {
         const active = state.currentScenario && state.currentScenario.id === s.id;
         return `
-          <button onclick="selectScenario('${s.id}')" class="w-full text-left p-3 rounded-xl border transition flex items-start justify-between gap-2 ${
-            active ? 'bg-indigo-600/20 border-indigo-500 text-white' : 'bg-slate-800/50 border-slate-800 hover:border-slate-700 text-slate-200'
+          <button onclick="selectScenario('${s.id}')" class="w-full text-left p-3 rounded-2xl border transition flex items-start justify-between gap-2 ${
+            active ? 'bg-indigo-600/20 border-indigo-500/70 text-white shadow-sm' : 'bg-slate-900/80 border-slate-800/80 hover:border-slate-700 text-slate-200'
           }">
             <div>
               <div class="flex items-center gap-1.5">
-                <span class="text-xs font-bold px-2 py-0.5 rounded border ${bandColors[s.band] || ''}">${s.cefr}</span>
+                <span class="text-[11px] font-bold px-2 py-0.5 rounded-md border ${bandColors[s.band] || ''}">${s.cefr}</span>
                 <span>${topicIcons[s.topic] || '📘'}</span>
                 <span class="font-semibold text-sm">${s.title_es}</span>
               </div>
-              <p class="text-xs text-slate-400 mt-1">${s.title} · ${s.description}</p>
+              <p class="text-xs text-slate-400 mt-1 line-clamp-2">${s.description}</p>
             </div>
-            <span class="text-xs text-slate-400 shrink-0">${s.phrases} frases</span>
+            <span class="text-[11px] text-slate-400 shrink-0 mt-0.5">${s.phrases} frases</span>
           </button>
         `;
       }).join('');
@@ -1098,11 +1031,11 @@
         state.lesson = await api(`/v1/lessons/${id}`);
         state.shadowingList = await api(`/v1/shadowing/${id}`);
       } else {
-        state.currentScenario = FALLBACK_SCENARIOS.find(s => s.id === id);
+        state.currentScenario = FALLBACK_SCENARIOS.find(s => s.id === id) || FALLBACK_SCENARIOS[0];
         state.lesson = buildLocalLesson(state.currentScenario);
         state.shadowingList = state.lesson.stages[0].exercises;
       }
-      state.stageIndex = 0; state.exerciseIndex = 0; state.lastEvaluation = null; state.roleplaySession = null;
+      state.stageIndex = 0; state.exerciseIndex = 0; state.lastEvaluation = null; state.roleplaySession = null; state.showManualInput = false;
       renderScenarioList();
       await renderActiveTab();
     }
@@ -1110,11 +1043,9 @@
     async function refreshProgress() {
       if (state.backendOnline) {
         const p = await api('/v1/progress');
-        document.getElementById('stat-attempts').textContent = p.attempts;
         document.getElementById('stat-score').textContent = `${Math.round((p.average_score || 0) * 100)}%`;
         document.getElementById('stat-due').textContent = p.cards_due;
       } else {
-        document.getElementById('stat-attempts').textContent = state.localAttempts;
         const avg = state.localScores.length ? state.localScores.reduce((a, b) => a + b, 0) / state.localScores.length : 0;
         document.getElementById('stat-score').textContent = `${Math.round(avg * 100)}%`;
         document.getElementById('stat-due').textContent = state.srsList.length;
@@ -1124,8 +1055,8 @@
     function updateTabStyles() {
       document.querySelectorAll('.tab-btn').forEach(btn => {
         const active = btn.dataset.tab === state.activeTab;
-        btn.className = `tab-btn py-2 px-3 rounded-xl transition flex items-center justify-center gap-1.5 ${
-          active ? 'bg-indigo-600 text-white shadow font-semibold' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
+        btn.className = `tab-btn py-2.5 px-3 rounded-xl transition flex items-center justify-center gap-1.5 ${
+          active ? 'bg-indigo-600 text-white shadow-sm font-semibold' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
         }`;
       });
     }
@@ -1133,6 +1064,7 @@
     async function switchTab(tab) {
       state.activeTab = tab;
       state.lastEvaluation = null;
+      state.showManualInput = false;
       updateTabStyles();
       await renderActiveTab();
     }
@@ -1150,8 +1082,8 @@
 
     async function renderActiveTab() {
       if (state.activeTab === 'lesson') return renderLessonView();
-      if (state.activeTab === 'shadowing') { state.exerciseIndex = Math.min(state.exerciseIndex, Math.max(0, state.shadowingList.length - 1)); return renderExerciseListMode(state.shadowingList, '🎧 Sesión de Sombra (Input Principal)'); }
-      if (state.activeTab === 'common') { await loadCommonPhrases(); return renderExerciseListMode(state.commonList, '💬 Práctica de Frases Comunes'); }
+      if (state.activeTab === 'shadowing') { state.exerciseIndex = Math.min(state.exerciseIndex, Math.max(0, state.shadowingList.length - 1)); return renderExerciseListMode(state.shadowingList, '🎧 Práctica de Pronunciación (Shadowing)'); }
+      if (state.activeTab === 'common') { await loadCommonPhrases(); return renderExerciseListMode(state.commonList, '💬 Expresiones Clave del Día a Día'); }
       if (state.activeTab === 'roleplay') return renderRoleplayView(false);
       if (state.activeTab === 'srs') return renderSrsView();
     }
@@ -1161,16 +1093,15 @@
       const stages = state.lesson.stages;
       const stagePills = [
         ...stages.map((st, idx) => `
-          <button onclick="jumpStage(${idx})" class="px-2.5 py-1.5 rounded-lg text-xs font-medium border transition ${
-            idx === state.stageIndex ? 'bg-indigo-600 border-indigo-400 text-white' : 'bg-slate-800/70 border-slate-700 text-slate-300 hover:bg-slate-800'
+          <button onclick="jumpStage(${idx})" class="px-3 py-1.5 rounded-xl text-xs font-medium border transition ${
+            idx === state.stageIndex ? 'bg-indigo-600 border-indigo-400 text-white shadow-xs' : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-slate-200'
           }">${STAGE_LABELS[st.type].title}</button>
         `),
-        `<button onclick="jumpStage(4)" class="px-2.5 py-1.5 rounded-lg text-xs font-medium border transition ${
-          state.stageIndex === 4 ? 'bg-rose-600 border-rose-400 text-white shadow' : 'bg-rose-500/15 border-rose-500/40 text-rose-300 hover:bg-rose-500/25'
-        }">5. Charla IA Libre con Libreto</button>`
+        `<button onclick="jumpStage(4)" class="px-3 py-1.5 rounded-xl text-xs font-medium border transition ${
+          state.stageIndex === 4 ? 'bg-rose-600 border-rose-400 text-white shadow-xs' : 'bg-rose-500/10 border-rose-500/30 text-rose-300 hover:bg-rose-500/20'
+        }">5. Conversa</button>`
       ].join('');
 
-      // Stage 5 inside Lesson: Free AI Conversation Guided by Script (Libreto)
       if (state.stageIndex === 4) {
         return renderRoleplayView(true, stagePills);
       }
@@ -1180,17 +1111,18 @@
       const meta = STAGE_LABELS[stage.type];
 
       document.getElementById('stage-container').innerHTML = `
-        <div class="space-y-4">
-          <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-800">
+        <div class="space-y-5">
+          <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-800/80">
             <div class="flex flex-wrap gap-1.5">${stagePills}</div>
+            <span class="text-xs text-slate-400">${state.currentScenario ? state.currentScenario.title_es : ''}</span>
           </div>
           ${renderExerciseCard(ex, meta, state.exerciseIndex, stage.exercises.length, 'nextLessonItem')}
         </div>
-        ${renderMicrophoneControls(ex)}
+        ${renderMicrophoneControls(ex, null, 'nextLessonItem')}
       `;
     }
 
-    function jumpStage(idx) { state.stageIndex = idx; state.exerciseIndex = 0; state.lastEvaluation = null; renderLessonView(); }
+    function jumpStage(idx) { state.stageIndex = idx; state.exerciseIndex = 0; state.lastEvaluation = null; state.showManualInput = false; renderLessonView(); }
 
     function nextLessonItem(delta) {
       const stages = state.lesson.stages;
@@ -1205,25 +1137,26 @@
         else state.exerciseIndex = 0;
       } else state.exerciseIndex = nextIdx;
       state.lastEvaluation = null;
+      state.showManualInput = false;
       renderLessonView();
     }
 
     function renderExerciseListMode(list, heading) {
       if (!list || !list.length) {
-        document.getElementById('stage-container').innerHTML = `<div class="text-center text-slate-400 py-16 text-sm">No hay ejercicios para este filtro.</div>`;
+        document.getElementById('stage-container').innerHTML = `<div class="text-center text-slate-400 py-16 text-sm">No hay frases en esta categoría.</div>`;
         return;
       }
       const ex = list[state.exerciseIndex];
       const meta = STAGE_LABELS[ex.type];
       document.getElementById('stage-container').innerHTML = `
-        <div class="space-y-4">
-          <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+        <div class="space-y-5">
+          <div class="flex items-center justify-between pb-3 border-b border-slate-800/80">
             <h3 class="font-semibold text-sm text-white">${heading}</h3>
             <span class="text-xs text-slate-400">Frase ${state.exerciseIndex + 1} de ${list.length}</span>
           </div>
           ${renderExerciseCard(ex, meta, state.exerciseIndex, list.length, 'nextListItem')}
         </div>
-        ${renderMicrophoneControls(ex)}
+        ${renderMicrophoneControls(ex, null, 'nextListItem')}
       `;
     }
 
@@ -1231,100 +1164,87 @@
       const list = state.activeTab === 'shadowing' ? state.shadowingList : state.commonList;
       state.exerciseIndex = (state.exerciseIndex + delta + list.length) % list.length;
       state.lastEvaluation = null;
+      state.showManualInput = false;
       renderActiveTab();
     }
 
-    function renderExerciseCard(ex, meta, idx, total, navFn) {
+    function renderExerciseCard(ex, meta, idx, total) {
       const p = ex.prompt;
       const fullPhrase = ex.expected_text || p.display_text || '';
       const fullEsc = escapeJs(fullPhrase);
       const scenEsc = escapeJs(ex.scenario_id || '');
       const phrEsc = escapeJs(ex.phrase_id || '');
+      const progressPct = Math.round(((idx + 1) / Math.max(1, total)) * 100);
 
       const glossaryHtml = (p.glossary && p.glossary.length) ? `
-        <div class="bg-slate-950/70 border border-slate-800 rounded-xl p-3 space-y-1.5">
-          <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Glosario y Pronunciación (Toca para ver en contexto)</div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            ${p.glossary.map(g => `
-              <div onclick="openTranslateOverlay('${escapeJs(g.word)}', '${fullEsc}', '${scenEsc}', '${phrEsc}')" class="cursor-pointer text-xs bg-slate-900 hover:bg-slate-800/80 border border-slate-800 hover:border-indigo-500/40 rounded-lg p-2 flex items-center justify-between transition">
-                <div>
-                  <span class="font-bold text-indigo-300 underline decoration-dotted">${g.word}</span>
-                  ${g.ipa ? `<span class="text-slate-400 font-mono ml-1">/${g.ipa}/</span>` : ''}
-                  <div class="text-slate-300 mt-0.5">${g.meaning}</div>
-                </div>
-                <button onclick="event.stopPropagation(); speakText('${escapeJs(g.word)}')" class="px-2 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-200">🔊</button>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
+          ${p.glossary.map(g => `
+            <div onclick="openTranslateOverlay('${escapeJs(g.word)}', '${fullEsc}', '${scenEsc}', '${phrEsc}')" class="cursor-pointer text-xs bg-slate-950/60 hover:bg-slate-900 border border-slate-800/80 hover:border-indigo-500/40 rounded-xl p-3 flex items-center justify-between transition">
+              <div>
+                <span class="font-bold text-indigo-300">${g.word}</span>
+                ${g.ipa ? `<span class="text-slate-400 font-mono ml-1.5">/${g.ipa}/</span>` : ''}
+                <div class="text-slate-300 mt-0.5">${g.meaning}</div>
               </div>
-            `).join('')}
-          </div>
-        </div>
-      ` : '';
-
-      const focusHtml = (p.focus_words && p.focus_words.length) ? `
-        <div class="px-3 py-2 rounded-xl bg-rose-500/15 border border-rose-500/30 text-xs text-rose-200">
-          🎯 <strong>Palabras objetivo a reforzar (Feedback SRS):</strong> ${p.focus_words.join(', ')}
+              <button onclick="event.stopPropagation(); speakText('${escapeJs(g.word)}')" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 flex items-center justify-center">🔊</button>
+            </div>
+          `).join('')}
         </div>
       ` : '';
 
       return `
         <div class="space-y-4">
-          <div class="flex flex-wrap items-center justify-between gap-2">
-            <span class="text-xs font-semibold px-2.5 py-1 rounded-full border ${meta.color}">${meta.badge}</span>
+          <div class="flex items-center justify-between gap-4">
+            <span class="text-xs font-medium px-3 py-1 rounded-full border ${meta.color}">${meta.subtitle}</span>
             <div class="flex items-center gap-2 text-xs text-slate-400">
-              <span class="text-indigo-300">💡 Toca cualquier palabra para traducir</span>
-              <span>·</span>
-              <span>Umbral: <strong>${Math.round(ex.pass_threshold * 100)}%</strong></span>
-              <span>·</span>
-              <span>${idx + 1}/${total}</span>
+              <span>${idx + 1} de ${total}</span>
+              <div class="w-20 h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-indigo-500 rounded-full transition-all" style="width:${progressPct}%"></div>
+              </div>
             </div>
           </div>
 
-          <div class="bg-slate-950 border border-slate-800 rounded-2xl p-5 space-y-3 text-center">
+          <div class="bg-slate-950/90 border border-slate-800/90 rounded-3xl p-6 sm:p-8 space-y-4 text-center">
             ${p.visual_hint ? `<div class="text-3xl">${p.visual_hint}</div>` : ''}
-            <p class="text-xs text-indigo-300 font-medium">${p.instruction_es}</p>
-            <div class="text-xl sm:text-2xl font-bold tracking-tight text-white flex flex-wrap items-center justify-center gap-2">
-              <span>${renderTappablePhrase(p.display_text || '', fullPhrase, ex.scenario_id, ex.phrase_id)}</span>
+            <p class="text-xs text-slate-400">${p.instruction_es}</p>
+            <div class="text-2xl sm:text-3xl font-bold tracking-tight text-white leading-snug">
+              ${renderTappablePhrase(p.display_text || '', fullPhrase, ex.scenario_id, ex.phrase_id)}
             </div>
-            <div class="flex flex-wrap items-center justify-center gap-2 pt-1">
-              <button onclick="speakText('${fullEsc}')" class="px-3 py-1.5 text-xs rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold shadow">
-                🔊 Escuchar Speaker
+            ${p.translation ? `<p class="text-base text-slate-300 font-medium">“${p.translation}”</p>` : ''}
+
+            <div class="flex flex-wrap items-center justify-center gap-2 pt-2">
+              <button onclick="speakText('${fullEsc}')" class="px-3.5 py-2 text-xs rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-100 font-medium transition flex items-center gap-1.5">
+                <span>🔊</span><span>Escuchar pronunciación</span>
               </button>
-              <button onclick="openTranslateOverlay('${fullEsc}', '${fullEsc}', '${scenEsc}', '${phrEsc}')" class="px-3 py-1.5 text-xs rounded-xl bg-slate-800 hover:bg-slate-700 border border-indigo-500/30 text-indigo-200 font-medium">
-                🌐 Traducir frase completa
+              <button onclick="openTranslateOverlay('${fullEsc}', '${fullEsc}', '${scenEsc}', '${phrEsc}')" class="px-3.5 py-2 text-xs rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-indigo-300 font-medium transition flex items-center gap-1.5">
+                <span>🌐</span><span>Ver traducción y explicación</span>
               </button>
             </div>
-            ${p.translation ? `<p class="text-sm text-slate-400">“${p.translation}”</p>` : '<p class="text-xs text-slate-500 italic">Traducción oculta en esta etapa · Toca cualquier palabra o "🌐 Traducir frase" si necesitas ayuda</p>'}
+            <p class="text-[11px] text-slate-500">Toca cualquier palabra en inglés para ver su traducción instantánea</p>
           </div>
 
-          ${focusHtml}
           ${glossaryHtml}
           ${renderEvaluationResult(ex)}
-
-          <div class="flex items-center justify-between pt-1">
-            <button onclick="${navFn}(-1)" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300">← Anterior</button>
-            <button onclick="${navFn}(1)" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300">Siguiente →</button>
-          </div>
         </div>
       `;
     }
 
     function renderEvaluationResult(ex = null) {
       if (!state.lastEvaluation) return '';
-      const { evaluation, feedback, srs } = state.lastEvaluation;
+      const { evaluation, feedback } = state.lastEvaluation;
       const fullEsc = escapeJs(evaluation.expected_text || '');
       const scenEsc = escapeJs(ex ? ex.scenario_id : '');
       const phrEsc = escapeJs(ex ? ex.phrase_id : '');
       const statusBadge = {
-        correct: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40',
-        mispronounced: 'bg-amber-500/20 text-amber-300 border-amber-500/40',
-        missing: 'bg-rose-500/20 text-rose-300 border-rose-500/40 line-through',
-        extra: 'bg-purple-500/20 text-purple-300 border-purple-500/40',
+        correct: 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30',
+        mispronounced: 'bg-amber-500/15 text-amber-300 border-amber-500/30',
+        missing: 'bg-rose-500/15 text-rose-300 border-rose-500/30 line-through',
+        extra: 'bg-purple-500/15 text-purple-300 border-purple-500/30',
       };
       const wordsHtml = evaluation.words.map(w => {
         const token = w.expected || w.heard || '';
         return `
-          <span onclick="openTranslateOverlay('${escapeJs(token)}', '${fullEsc}', '${scenEsc}', '${phrEsc}')" class="cursor-pointer px-2 py-1 rounded-lg border text-xs font-medium ${statusBadge[w.status]}" title="Toca para traducir '${token}'">
+          <span onclick="openTranslateOverlay('${escapeJs(token)}', '${fullEsc}', '${scenEsc}', '${phrEsc}')" class="cursor-pointer px-2.5 py-1 rounded-lg border text-xs font-medium ${statusBadge[w.status]}">
             ${token}
-            ${w.status === 'mispronounced' ? `<span class="opacity-75">(oído: ${w.heard})</span>` : ''}
           </span>
         `;
       }).join('');
@@ -1335,58 +1255,68 @@
         </li>
       `).join('');
 
-      const srsInfo = (srs || []).map(u => `${u.kind} (${u.interval_days < 0.05 ? '10 min' : u.interval_days + 'd'})`).join(', ');
-
       return `
-        <div class="rounded-2xl border p-4 space-y-3 ${
-          evaluation.passed ? 'bg-emerald-950/30 border-emerald-500/40' : 'bg-rose-950/30 border-rose-500/40'
+        <div class="rounded-2xl border p-4 space-y-2.5 ${
+          evaluation.passed ? 'bg-emerald-950/25 border-emerald-500/35' : 'bg-amber-950/25 border-amber-500/35'
         }">
-          <div class="flex flex-wrap items-center justify-between gap-2">
-            <div>
-              <span class="text-xs font-bold uppercase tracking-wider ${evaluation.passed ? 'text-emerald-400' : 'text-rose-400'}">
-                ${feedback.level.toUpperCase()} · Score ${Math.round(evaluation.score * 100)}%
-              </span>
-              <p class="text-sm font-semibold text-white mt-0.5">${feedback.message_es}</p>
-            </div>
-            <div class="text-xs text-slate-400">
-              Precisión: <strong>${Math.round(evaluation.accuracy * 100)}%</strong> · Fluidez: <strong>${Math.round(evaluation.fluency * 100)}%</strong>
-            </div>
+          <div class="flex items-center justify-between gap-2">
+            <p class="text-sm font-semibold text-white">${feedback.message_es}</p>
+            <span class="text-xs font-bold px-2.5 py-1 rounded-full ${evaluation.passed ? 'bg-emerald-500/20 text-emerald-300' : 'bg-amber-500/20 text-amber-300'}">
+              ${Math.round(evaluation.score * 100)}%
+            </span>
           </div>
           <div class="flex flex-wrap gap-1.5">${wordsHtml}</div>
           ${tipsHtml ? `<ul class="space-y-1 pt-1">${tipsHtml}</ul>` : ''}
-          ${srsInfo ? `<div class="text-xs text-slate-400 pt-1 border-t border-slate-800/80">🧠 Memoria espaciada actualizada: ${srsInfo}</div>` : ''}
         </div>
       `;
     }
 
-    function renderMicrophoneControls(ex, cardId = null) {
+    function renderMicrophoneControls(ex, cardId = null, navFn = null) {
       const target = escapeJs(ex.expected_text);
-      const words = ex.expected_text.split(' ');
-      const imperfect = words.length > 2
-        ? escapeJs(words.slice(0, words.length - 1).join(' '))
-        : 'uh ' + escapeJs(words[0]);
-
       return `
-        <div class="mt-4 pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <div class="flex items-center gap-3">
-            <button id="mic-btn" onclick="recordWithMicrophone('${ex.id}', '${target}', '${cardId || ''}')"
-              class="px-5 py-3 rounded-2xl bg-rose-600 hover:bg-rose-500 text-white font-semibold text-sm shadow-lg shadow-rose-600/30 flex items-center gap-2 transition">
-              <span>🎙️</span><span id="mic-label">Hablar por Micrófono</span>
-            </button>
-            <span class="text-xs text-slate-400 hidden sm:inline">o prueba el motor con voz simulada:</span>
+        <div class="mt-5 pt-4 border-t border-slate-800/80 space-y-3">
+          <div class="flex items-center justify-between gap-3">
+            ${navFn ? `<button onclick="${navFn}(-1)" class="px-3.5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-300 transition">← Anterior</button>` : '<div></div>'}
+
+            <div class="flex items-center gap-2">
+              <button id="mic-btn" onclick="recordWithMicrophone('${ex.id}', '${target}', '${cardId || ''}')"
+                class="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-500 hover:to-pink-500 text-white font-semibold text-sm shadow-lg shadow-rose-600/25 flex items-center gap-2.5 transition">
+                <span>🎙️</span><span id="mic-label">Toca para hablar</span>
+              </button>
+              <button onclick="toggleManualInput()" title="Escribir respuesta si no puedes usar el micrófono"
+                class="p-3.5 rounded-2xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 hover:text-white text-xs transition">
+                ⌨️
+              </button>
+            </div>
+
+            ${navFn ? `<button onclick="${navFn}(1)" class="px-3.5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-300 transition">Siguiente →</button>` : '<div></div>'}
           </div>
-          <div class="flex flex-wrap items-center gap-2">
-            <button onclick="submitAttempt('${ex.id}', '${target}', '${cardId || ''}')"
-              class="px-3 py-2 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 border border-emerald-500/40 text-emerald-300 text-xs font-medium transition">
-              ✔ Simular Voz Correcta
-            </button>
-            <button onclick="submitAttempt('${ex.id}', '${imperfect}', '${cardId || ''}')"
-              class="px-3 py-2 rounded-xl bg-amber-600/20 hover:bg-amber-600/30 border border-amber-500/40 text-amber-300 text-xs font-medium transition">
-              ⚠ Simular Voz con Error (crea tarjeta SRS)
+
+          <div id="manual-input-box" class="${state.showManualInput ? 'flex' : 'hidden'} items-center gap-2 pt-1">
+            <input id="manual-speech-input" type="text" value="${ex.expected_text.replace(/"/g, '&quot;')}"
+              placeholder="Escribe la frase en inglés para practicar…"
+              class="flex-1 px-3.5 py-2 rounded-xl bg-slate-950 border border-slate-800 text-xs text-white"
+              onkeydown="if(event.key==='Enter') submitManualInput('${ex.id}', '${cardId || ''}')" />
+            <button onclick="submitManualInput('${ex.id}', '${cardId || ''}')"
+              class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold">
+              Evaluar
             </button>
           </div>
         </div>
       `;
+    }
+
+    function toggleManualInput() {
+      state.showManualInput = !state.showManualInput;
+      const box = document.getElementById('manual-input-box');
+      if (box) box.classList.toggle('hidden', !state.showManualInput);
+      if ( box && state.showManualInput) box.classList.add('flex');
+    }
+
+    async function submitManualInput(exId, cardId = '') {
+      const inp = document.getElementById('manual-speech-input');
+      if (!inp || !inp.value.trim()) return;
+      await submitAttempt(exId, inp.value.trim(), cardId);
     }
 
     async function recordWithMicrophone(exId, fallbackText, cardId) {
@@ -1399,12 +1329,12 @@
           const rec = new MediaRecorder(stream);
           const chunks = [];
           btn.classList.add('recording-pulse');
-          label.textContent = 'Grabando 3s… habla ahora';
+          label.textContent = 'Escuchando…';
           rec.ondataavailable = e => chunks.push(e.data);
           rec.onstop = async () => {
             stream.getTracks().forEach(t => t.stop());
             btn.classList.remove('recording-pulse');
-            label.textContent = 'Transcribiendo audio…';
+            label.textContent = 'Evaluando…';
             const blob = new Blob(chunks, { type: 'audio/webm' });
             const fd = new FormData();
             fd.append('audio', blob, 'speech.webm');
@@ -1421,25 +1351,26 @@
 
       const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
       if (!SR) {
-        const custom = prompt('Simulador de micrófono — escribe lo que pronuncias en inglés:', fallbackText);
-        if (custom !== null) await submitAttempt(exId, custom, cardId);
+        state.showManualInput = true;
+        toggleManualInput();
         return;
       }
       btn.classList.add('recording-pulse');
-      label.textContent = 'Escuchando… habla en inglés';
+      label.textContent = 'Escuchando… habla ahora';
       const rec = new SR();
       rec.lang = 'en-US';
       rec.interimResults = false;
       rec.onresult = async (e) => {
         btn.classList.remove('recording-pulse');
-        label.textContent = 'Hablar por Micrófono';
+        label.textContent = 'Toca para hablar';
         await submitAttempt(exId, e.results[0][0].transcript, cardId);
       };
-      rec.onerror = async () => {
+      rec.onerror = () => {
         btn.classList.remove('recording-pulse');
-        label.textContent = 'Hablar por Micrófono';
-        const custom = prompt('No se detectó micrófono físico. Simula tu frase hablada:', fallbackText);
-        if (custom !== null) await submitAttempt(exId, custom, cardId);
+        label.textContent = 'Toca para hablar';
+        state.showManualInput = true;
+        const box = document.getElementById('manual-input-box');
+        if (box) { box.classList.remove('hidden'); box.classList.add('flex'); }
       };
       rec.start();
     }
@@ -1457,7 +1388,7 @@
       const score = +(0.8 * acc + 0.2 * flu).toFixed(2);
       const passed = score >= ex.pass_threshold;
       const focus = words.filter(w => w.status !== 'correct').map(w => w.expected);
-      const tips = focus.map(w => ({ word: w, issue: 'missing', advice: `Refuerza la pronunciación de '${w}'.` }));
+      const tips = focus.map(w => ({ word: w, issue: 'missing', advice: `Escucha de nuevo y pronuncia '${w}'.` }));
       state.localAttempts++; state.localScores.push(score);
       if (focus.length) {
         const exRecall = { ...ex, type: 'recall', prompt: { ...ex.prompt, focus_words: focus } };
@@ -1465,8 +1396,8 @@
       }
       return {
         evaluation: { expected_text: ex.expected_text, transcript, accuracy: acc, fluency: flu, score, passed, words },
-        feedback: { level: score >= 0.95 ? 'excellent' : (passed ? 'good' : 'retry'), message_es: passed ? '¡Bien hecho!' : 'Casi. Escucha el Speaker y vuelve a intentarlo.', tips, focus_words: focus },
-        srs: [{ kind: 'phrase', interval_days: passed ? 1 : 0.01 }, ...(focus.length ? [{ kind: 'feedback', interval_days: 0.01 }] : [])]
+        feedback: { level: score >= 0.95 ? 'excellent' : (passed ? 'good' : 'retry'), message_es: passed ? '¡Muy buena pronunciación!' : 'Escucha el audio e inténtalo una vez más.', tips, focus_words: focus },
+        srs: []
       };
     }
 
@@ -1525,10 +1456,10 @@
       const checklistHtml = targetPhrases.map(tp => {
         const used = usedSet.has(tp);
         return `
-          <span onclick="openTranslateOverlay('${escapeJs(tp)}', '${escapeJs(tp)}', '${escapeJs(state.currentScenario.id)}', '')" class="cursor-pointer text-xs px-2.5 py-1 rounded-lg border flex items-center gap-1.5 transition ${
-            used ? 'bg-emerald-500/20 border-emerald-500/40 text-emerald-200' : 'bg-slate-900 border-slate-800 text-slate-300 hover:border-indigo-500/40'
+          <span onclick="openTranslateOverlay('${escapeJs(tp)}', '${escapeJs(tp)}', '${escapeJs(state.currentScenario.id)}', '')" class="cursor-pointer text-xs px-2.5 py-1 rounded-xl border flex items-center gap-1.5 transition ${
+            used ? 'bg-emerald-500/15 border-emerald-500/35 text-emerald-200' : 'bg-slate-900 border-slate-800 text-slate-300 hover:border-indigo-500/40'
           }">
-            <span>${used ? '✅' : '⬜'}</span>
+            <span>${used ? '✅' : '○'}</span>
             <span>${tp}</span>
           </span>
         `;
@@ -1536,68 +1467,60 @@
 
       const historyHtml = rp.history.map(h => `
         <div class="flex ${h.speaker === 'user' ? 'justify-end' : 'justify-start'}">
-          <div class="max-w-[85%] rounded-2xl px-4 py-2.5 text-sm ${
-            h.speaker === 'user' ? 'bg-indigo-600/90 text-white' : 'bg-slate-800 border border-slate-700 text-slate-100'
+          <div class="max-w-[85%] rounded-2xl px-4 py-3 text-sm ${
+            h.speaker === 'user' ? 'bg-indigo-600 text-white' : 'bg-slate-800/90 border border-slate-700/80 text-slate-100'
           }">
-            <div class="text-[11px] opacity-75 mb-0.5 flex items-center justify-between gap-2">
-              <span>${h.speaker === 'user' ? 'Tú (' + state.currentScenario.roleplay.user_role + ')' : 'IA (' + state.currentScenario.roleplay.ai_role + ')'}</span>
-              ${h.style ? `<span class="px-1.5 py-0.2 rounded bg-black/25 text-[10px]">${h.style === 'freeform' ? '✨ Libre' : '📜 Libreto'}</span>` : ''}
+            <div class="text-[11px] opacity-70 mb-1">
+              ${h.speaker === 'user' ? 'Tú' : state.currentScenario.roleplay.ai_role}
             </div>
             <div class="flex flex-wrap items-center gap-2">
               <span>${renderTappablePhrase(h.text, h.text, state.currentScenario.id, '')}</span>
-              <button onclick="speakText('${escapeJs(h.text)}')" class="text-xs px-1.5 py-0.5 rounded bg-slate-700 hover:bg-slate-600">🔊</button>
+              <button onclick="speakText('${escapeJs(h.text)}')" class="text-xs px-2 py-0.5 rounded-lg bg-black/20 hover:bg-black/30">🔊</button>
             </div>
           </div>
         </div>
       `).join('');
 
-      const turnEval = rp.last_turn_evaluation;
+      const turnEval = rp.last_turn_evaluation || (rp.feedback ? { passed: rp.accepted, feedback: rp.feedback, natural_alternative: rp.natural_alternative } : null);
       const evalBanner = turnEval ? `
-        <div class="rounded-xl border p-3 text-xs space-y-1 ${
-          turnEval.passed ? 'bg-emerald-950/30 border-emerald-500/40 text-emerald-200' : 'bg-amber-950/30 border-amber-500/40 text-amber-200'
+        <div class="rounded-2xl border p-3.5 text-xs space-y-1 ${
+          turnEval.passed !== false ? 'bg-emerald-950/25 border-emerald-500/35 text-emerald-200' : 'bg-amber-950/25 border-amber-500/35 text-amber-200'
         }">
-          <div class="flex items-center justify-between">
-            <span class="font-bold uppercase">
-              ${turnEval.response_style === 'freeform' ? '✨ Respuesta Libre Aceptada' : '📜 Línea del Libreto'} · Score ${Math.round(turnEval.score * 100)}%
-            </span>
-            <span>Umbral: 70%</span>
-          </div>
-          <p>${turnEval.feedback.message_es}</p>
-          ${turnEval.natural_alternative ? `<p class="text-indigo-200 pt-1">💡 <strong>Alternativa nativa del libreto:</strong> “${turnEval.natural_alternative}”</p>` : ''}
+          <p class="font-medium">${turnEval.feedback ? turnEval.feedback.message_es : ''}</p>
+          ${turnEval.natural_alternative ? `<p class="text-indigo-200">💡 <strong>Sugerencia nativa:</strong> “${turnEval.natural_alternative}”</p>` : ''}
         </div>
       ` : '';
 
       const pendingHtml = rp.pending_turn ? `
-        <div class="bg-slate-950 border border-rose-500/40 rounded-2xl p-4 space-y-3">
-          <div class="flex flex-wrap items-center justify-between gap-2">
-            <span class="text-xs font-bold uppercase tracking-wider text-rose-300">🎬 Misión Actual del Libreto</span>
-            <span class="text-xs text-slate-400">Puedes improvisar libremente o usar una frase sugerida</span>
+        <div class="bg-slate-950/90 border border-slate-800 rounded-2xl p-4 space-y-3">
+          <div class="flex items-center justify-between gap-2">
+            <span class="text-xs font-semibold text-rose-300">🎯 Tu turno en la conversación</span>
+            <span class="text-[11px] text-slate-400">Responde con tu propia frase o usa una sugerencia</span>
           </div>
           <p class="text-sm font-semibold text-white">${rp.pending_turn.goal}</p>
 
-          <!-- Free-form Spoken or Typed Improvisation -->
-          <div class="flex flex-col sm:flex-row gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row gap-2">
             <button id="rp-mic-btn" onclick="recordRoleplayFreeform('${escapeJs(rp.pending_turn.suggested_lines[0] || '')}')"
               class="px-4 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-semibold text-xs shadow flex items-center justify-center gap-2 shrink-0">
-              <span>🎙️</span><span id="rp-mic-label">Hablar Libremente (Micrófono)</span>
+              <span>🎙️</span><span id="rp-mic-label">Hablar con la IA</span>
             </button>
             <div class="flex-1 flex gap-1.5">
-              <input id="rp-free-input" type="text" placeholder="O improvisa tu propia respuesta en inglés para cumplir la misión…"
-                class="flex-1 px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-xs text-white"
+              <input id="rp-free-input" type="text" placeholder="O escribe tu respuesta en inglés…"
+                class="flex-1 px-3.5 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs text-white"
                 onkeydown="if(event.key==='Enter') submitFreeformInput()" />
-              <button onclick="submitFreeformInput()" class="px-3.5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold">
-                Enviar Libre
+              <button onclick="submitFreeformInput()" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold">
+                Enviar
               </button>
             </div>
           </div>
 
-          <div class="space-y-1.5 pt-1 border-t border-slate-900">
-            <div class="text-xs text-slate-400">Líneas sugeridas del libreto (toca cualquier palabra para traducir o el botón 🎙️ para decirla):</div>
+          <div class="space-y-1.5 pt-2 border-t border-slate-900">
+            <div class="text-[11px] text-slate-400">Ideas del libreto (toca cualquier palabra para traducir o 🎙️ para decirla):</div>
             <div class="flex flex-col sm:flex-row flex-wrap gap-2">
               ${rp.pending_turn.suggested_lines.map(line => `
-                <div class="px-3 py-2 rounded-xl bg-indigo-600/15 border border-indigo-500/40 text-indigo-100 text-xs flex items-center justify-between gap-2">
+                <div class="px-3 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 text-xs flex items-center justify-between gap-2">
                   <span>“${renderTappablePhrase(line, line, state.currentScenario.id, '')}”</span>
-                  <button onclick="submitRoleplayTurn('${escapeJs(line)}')" class="px-2.5 py-1 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-semibold shrink-0">
+                  <button onclick="submitRoleplayTurn('${escapeJs(line)}')" class="px-2.5 py-1 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-medium shrink-0">
                     🎙️ Decir
                   </button>
                 </div>
@@ -1606,27 +1529,27 @@
           </div>
         </div>
       ` : `
-        <div class="bg-emerald-950/30 border border-emerald-500/40 rounded-2xl p-5 text-center space-y-2">
+        <div class="bg-emerald-950/25 border border-emerald-500/35 rounded-2xl p-6 text-center space-y-2">
           <div class="text-2xl">🎉</div>
-          <h4 class="font-bold text-white">¡Etapa 5: Conversación Libre con Libreto Completada!</h4>
-          <p class="text-xs text-emerald-300">Score medio: <strong>${Math.round((rp.average_score || 1) * 100)}%</strong> · Frases de la lección usadas: <strong>${(rp.used_lesson_phrases || []).length}/${targetPhrases.length}</strong></p>
-          <button onclick="restartRoleplay(${inlineInLesson})" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold">Reiniciar Conversación con Libreto</button>
+          <h4 class="font-bold text-white">¡Conversación completada!</h4>
+          <p class="text-xs text-emerald-300">Fluidez alcanzada: <strong>${Math.round((rp.average_score || 1) * 100)}%</strong></p>
+          <button onclick="restartRoleplay(${inlineInLesson})" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold">Practicar de nuevo</button>
         </div>
       `;
 
       document.getElementById('stage-container').innerHTML = `
         <div class="space-y-4">
-          ${inlineInLesson ? `<div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-800"><div class="flex flex-wrap gap-1.5">${lessonStagePills}</div></div>` : ''}
-          <div class="flex items-center justify-between pb-2 border-b border-slate-800">
+          ${inlineInLesson ? `<div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-800/80"><div class="flex flex-wrap gap-1.5">${lessonStagePills}</div></div>` : ''}
+          <div class="flex items-center justify-between pb-2 border-b border-slate-800/80">
             <div>
-              <h3 class="font-semibold text-sm text-white">🤖 Etapa 5: Conversación IA Libre Guiada con Libreto — ${state.currentScenario.title_es}</h3>
-              <p class="text-xs text-slate-400">Escenario: ${state.currentScenario.roleplay.setting} · Toca cualquier palabra para traducir</p>
+              <h3 class="font-semibold text-sm text-white">🎭 Conversación con Libreto — ${state.currentScenario.title_es}</h3>
+              <p class="text-xs text-slate-400">${state.currentScenario.roleplay.setting}</p>
             </div>
-            <button onclick="restartRoleplay(${inlineInLesson})" class="text-xs px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300">Reiniciar</button>
+            <button onclick="restartRoleplay(${inlineInLesson})" class="text-xs px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300">Reiniciar</button>
           </div>
 
-          <div class="bg-slate-950/70 border border-slate-800 rounded-xl p-3 space-y-1.5">
-            <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">📜 Frases del Libreto de esta Lección (toca para traducir)</div>
+          <div class="bg-slate-950/60 border border-slate-800/80 rounded-2xl p-3 space-y-1.5">
+            <div class="text-[11px] font-medium text-slate-400">Expresiones de la lección para usar en esta charla:</div>
             <div class="flex flex-wrap gap-1.5">${checklistHtml}</div>
           </div>
 
@@ -1653,25 +1576,25 @@
       const btn = document.getElementById('rp-mic-btn');
       const label = document.getElementById('rp-mic-label');
       if (!SR) {
-        const custom = prompt('Habla libremente con la IA (escribe tu respuesta improvisada en inglés):', fallbackLine);
-        if (custom && custom.trim()) await submitRoleplayTurn(custom.trim());
+        const inp = document.getElementById('rp-free-input');
+        if (inp) { inp.value = fallbackLine; inp.focus(); }
         return;
       }
       btn.classList.add('recording-pulse');
-      label.textContent = 'Escuchando tu respuesta libre…';
+      label.textContent = 'Escuchando…';
       const rec = new SR();
       rec.lang = 'en-US';
       rec.interimResults = false;
       rec.onresult = async (e) => {
         btn.classList.remove('recording-pulse');
-        label.textContent = 'Hablar Libremente (Micrófono)';
+        label.textContent = 'Hablar con la IA';
         await submitRoleplayTurn(e.results[0][0].transcript);
       };
-      rec.onerror = async () => {
+      rec.onerror = () => {
         btn.classList.remove('recording-pulse');
-        label.textContent = 'Hablar Libremente (Micrófono)';
-        const custom = prompt('Escribe tu respuesta libre en inglés:', fallbackLine);
-        if (custom && custom.trim()) await submitRoleplayTurn(custom.trim());
+        label.textContent = 'Hablar con la IA';
+        const inp = document.getElementById('rp-free-input');
+        if (inp) { inp.value = fallbackLine; inp.focus(); }
       };
       rec.start();
     }
@@ -1687,14 +1610,13 @@
         const rp = state.roleplaySession;
         const suggested = (rp.pending_turn && rp.pending_turn.suggested_lines) || [];
         const isScripted = suggested.some(s => s.toLowerCase() === line.toLowerCase());
-        rp.history.push({ speaker: 'user', text: line, style: isScripted ? 'scripted' : 'freeform', score: 0.92 });
+        rp.history.push({ speaker: 'user', text: line });
         rp.last_turn_evaluation = {
           transcript: line,
           score: 0.92,
           passed: true,
-          response_style: isScripted ? 'scripted' : 'freeform',
           natural_alternative: isScripted ? null : (suggested[0] || null),
-          feedback: { message_es: isScripted ? '¡Excelente pronunciación siguiendo el libreto!' : '¡Muy buena respuesta libre! Cumpliste el objetivo del turno.' }
+          feedback: { message_es: isScripted ? '¡Muy bien dicho!' : '¡Respuesta natural y clara!' }
         };
         const turns = state.currentScenario.roleplay.turns;
         let next = rp.turnIdx + 1;
@@ -1723,21 +1645,16 @@
       if (state.backendOnline) state.srsList = await api('/v1/review/due');
       if (!state.srsList.length) {
         document.getElementById('stage-container').innerHTML = `
-          <div class="text-center py-14 space-y-3">
-            <div class="text-3xl">🧠✨</div>
-            <h3 class="font-bold text-base text-white">Memoria de Aprendizaje Espaciado (SRS)</h3>
-            <p class="text-xs text-slate-400 max-w-md mx-auto">
-              No tienes tarjetas vencidas ahora mismo. Toca cualquier palabra en una lección y pulsa <strong>"➕ Guardar Frase en Memoria SRS"</strong> o simula un intento con error para programar repasos.
+          <div class="text-center py-16 space-y-4">
+            <div class="text-4xl">🔖</div>
+            <h3 class="font-bold text-lg text-white">Estás al día con tu repaso</h3>
+            <p class="text-xs text-slate-400 max-w-md mx-auto leading-relaxed">
+              Toca cualquier palabra o frase durante una lección y elige <strong>"Guardar en mi repaso"</strong> para practicar aquí las expresiones que quieras dominar.
             </p>
-            <div class="flex flex-wrap items-center justify-center gap-2">
-              <button onclick="switchTab('lesson')" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold">
-                Ir a practicar una lección
+            <div class="pt-2">
+              <button onclick="switchTab('lesson')" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold transition">
+                Volver a la lección
               </button>
-              ${state.backendOnline ? `
-                <button onclick="fastForwardSrs()" class="px-4 py-2 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/40 text-amber-300 text-xs font-semibold">
-                  ⏩ Adelantar reloj 15 min (activar tarjetas programadas)
-                </button>
-              ` : ''}
             </div>
           </div>
         `;
@@ -1747,23 +1664,14 @@
       const ex = item.exercise;
       const meta = STAGE_LABELS[ex.type];
       document.getElementById('stage-container').innerHTML = `
-        <div class="space-y-4">
-          <div class="flex items-center justify-between pb-3 border-b border-slate-800">
-            <div>
-              <h3 class="font-semibold text-sm text-white">🧠 Cola de Repaso Espaciado (${state.srsList.length} pendientes)</h3>
-              <p class="text-xs text-slate-400">Tipo de tarjeta: <strong class="text-amber-300 uppercase">${item.kind}</strong> · Toca cualquier palabra para traducir</p>
-            </div>
+        <div class="space-y-5">
+          <div class="flex items-center justify-between pb-3 border-b border-slate-800/80">
+            <h3 class="font-semibold text-sm text-white">🔖 Frases por repasar (${state.srsList.length})</h3>
           </div>
-          ${renderExerciseCard(ex, meta, 0, state.srsList.length, 'renderSrsView')}
+          ${renderExerciseCard(ex, meta, 0, state.srsList.length)}
         </div>
-        ${renderMicrophoneControls(ex, item.card_id)}
+        ${renderMicrophoneControls(ex, item.card_id, null)}
       `;
-    }
-
-    async function fastForwardSrs() {
-      await api('/v1/dev/fast-forward-srs?minutes=15', { method: 'POST' });
-      await refreshProgress();
-      await renderSrsView();
     }
 
     init();
