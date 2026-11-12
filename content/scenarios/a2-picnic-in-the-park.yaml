@@ -71,6 +71,36 @@ phrases:
   - word: remind
     meaning: recordar a alguien
     ipa: rɪˈmaɪnd
+- id: idm-a2pp-set-up
+  text: Let's set up the blanket under that big tree over there.
+  translation: Pongamos la manta bajo ese árbol grande de allá (preparar o montar).
+  visual_hint: 🧺🌳
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: set up
+    meaning: montar, preparar
+    ipa: set
+  kind: phrasal_verb
+  apply_sentence: We need to ____ the tent before it gets dark.
+  apply_answer: set up
+  apply_translation: Tenemos que montar la tienda antes de que oscurezca.
+- id: idm-a2pp-bring-along
+  text: Don't forget to bring along some drinks and a big bag.
+  translation: No olvides traer algunas bebidas y una bolsa grande (llevar contigo).
+  visual_hint: 🥤🎒
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: bring along
+    meaning: llevar consigo
+    ipa: brɪŋ
+  kind: phrasal_verb
+  apply_sentence: You can ____ a friend to the party if you want.
+  apply_answer: bring along
+  apply_translation: Puedes traer a un amigo a la fiesta si quieres.
 roleplay:
   ai_role: friend (Sam)
   user_role: organizer

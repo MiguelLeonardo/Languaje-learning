@@ -72,6 +72,37 @@ phrases:
   - word: understanding
     meaning: comprensión
     ipa: ˌʌndərˈstændɪŋ
+- id: visa-red-tape
+  text: The border office has so much red tape that everything takes hours.
+  translation: La oficina fronteriza tiene tanta burocracia que todo tarda horas. (red tape = burocracia)
+  visual_hint: 📎🛂
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: red tape
+    meaning: burocracia
+    ipa: red teɪp
+  kind: idiom
+  apply_sentence: Getting a work permit involves a lot of ____.
+  apply_answer: red tape
+  apply_translation: Obtener un permiso de trabajo implica mucha burocracia.
+- id: visa-bend-over-backwards
+  text: The airline bent over backwards to rebook me after the storm.
+  translation: La aerolínea hizo todo lo posible por reubicarme tras la tormenta. (bend over backwards = esforzarse
+    al máximo)
+  visual_hint: 🙇🌩️
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: bent over backwards
+    meaning: hacer lo imposible
+    ipa: bend ˈəʊvə ˈbækwədz
+  kind: idiom
+  apply_sentence: The hotel staff will ____ to make guests comfortable.
+  apply_answer: bend over backwards
+  apply_translation: El personal del hotel hará lo imposible para que los huéspedes estén cómodos.
 roleplay:
   ai_role: border control officer
   user_role: departing traveler

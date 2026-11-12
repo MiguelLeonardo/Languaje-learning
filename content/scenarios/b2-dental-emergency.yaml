@@ -98,6 +98,36 @@ phrases:
   - word: travel insurance
     meaning: seguro de viaje
     ipa: ˈtrævəl ɪnˈʃʊrəns
+- id: idm-grin-and-bear-it-b2
+  text: I'll just have to grin and bear it until Monday.
+  translation: Tendré que aguantarme hasta el lunes. (grin and bear it = soportar con paciencia)
+  visual_hint: 🦷😬
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: grin and bear it
+    meaning: aguantarse
+    ipa: ɡrɪn ænd beər ɪt
+  kind: idiom
+  apply_sentence: The queue is slow, but we'll have to ____.
+  apply_answer: grin and bear it
+  apply_translation: La fila es lenta, pero tendremos que aguantarnos.
+- id: idm-put-off-b2
+  text: I shouldn't have put off going to the dentist.
+  translation: No debí haber postergado ir al dentista. (put off = posponer)
+  visual_hint: 🦷⏳
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: put off
+    meaning: posponer
+    ipa: pʊt ɒf
+  kind: phrasal_verb
+  apply_sentence: Don't ____ your homework until the last minute.
+  apply_answer: put off
+  apply_translation: No pospongas tu tarea hasta el último minuto.
 roleplay:
   ai_role: dentist
   user_role: patient

@@ -86,6 +86,26 @@ def build_exercise(
     if kind == ExerciseType.SHADOWING:
         prompt = ExercisePrompt(instruction_es=instruction, display_text=phrase.text, translation=phrase.translation,
                                 visual_hint=phrase.visual_hint, audio_text=phrase.text)
+    elif kind == ExerciseType.RECALL and phrase.apply_sentence:
+        completed = phrase.apply_sentence.replace("____", phrase.apply_answer or "")
+        prompt = ExercisePrompt(
+            instruction_es="Completa la nueva oración con la expresión practicada y dila en voz alta.",
+            display_text=phrase.apply_sentence,
+            translation=phrase.apply_translation,
+            glossary=phrase.glossary,
+            visual_hint=phrase.visual_hint,
+            audio_text=None,
+        )
+        return Exercise(
+            id=exercise_id(scenario.id, phrase.id, kind),
+            type=kind,
+            support=support,
+            scenario_id=scenario.id,
+            phrase_id=phrase.id,
+            prompt=prompt,
+            expected_text=completed,
+            pass_threshold=threshold,
+        )
     elif kind == ExerciseType.RECALL:
         prompt = ExercisePrompt(instruction_es=instruction, display_text=phrase.text, translation=phrase.translation,
                                 glossary=phrase.glossary, visual_hint=phrase.visual_hint, audio_text=phrase.text)
@@ -142,9 +162,15 @@ class LessonPlan(BaseModel):
 
 
 def build_lesson(scenario: Scenario) -> LessonPlan:
+    def phrases_for(k: ExerciseType) -> list[Phrase]:
+        if k == ExerciseType.RECALL:
+            applied = [p for p in scenario.phrases if p.apply_sentence]
+            return applied or scenario.phrases
+        return scenario.phrases
+
     stages = [
         LessonStage(type=k, support=STAGE_CONFIG[k][0],
-                    exercises=[build_exercise(scenario, p, k) for p in scenario.phrases])
+                    exercises=[build_exercise(scenario, p, k) for p in phrases_for(k)])
         for k in LESSON_ORDER
     ]
     script = RoleplayScriptOverview(

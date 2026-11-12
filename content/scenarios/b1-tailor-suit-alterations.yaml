@@ -71,6 +71,36 @@ phrases:
   - word: try them on
     meaning: probármelos
     ipa: traɪ ðem ɑːn
+- id: idm-take-in-waist
+  text: Could you take in the jacket waist slightly so it looks sharper?
+  translation: ¿Podría meterle un poco a la cintura del saco para que se vea más entallado?
+  visual_hint: 🧵✂️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: take in
+    meaning: ajustar / meter (ropa)
+    ipa: teɪk ɪn
+  kind: phrasal_verb
+  apply_sentence: I lost weight, so I need my tailor to ____ these dress trousers.
+  apply_answer: take in
+  apply_translation: Bajé de peso, así que necesito que mi sastre le meta a estos pantalones de vestir.
+- id: idm-cut-it-close
+  text: If we pick up the suit two hours before the flight, we cut it close.
+  translation: Si recogemos el traje dos horas antes del vuelo, vamos muy justos de tiempo.
+  visual_hint: 🪡⏱️
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: cut it close
+    meaning: ir muy justo / al límite de tiempo
+    ipa: kʌt ɪt kloʊs
+  kind: idiom
+  apply_sentence: Leaving alterations until Friday morning would really ____.
+  apply_answer: cut it close
+  apply_translation: Dejar los arreglos para el viernes por la mañana sería andar muy justo con el tiempo.
 roleplay:
   ai_role: master tailor
   user_role: customer

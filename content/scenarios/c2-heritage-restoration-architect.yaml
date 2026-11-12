@@ -77,6 +77,36 @@ phrases:
   - word: sympathetic
     meaning: respetuosa / armónica con el entorno
     ipa: ˌsɪmpəˈθetɪk
+- id: idm-shore-up-masonry
+  text: Lime mortar repairs will shore up the Georgian facade without trapping damp.
+  translation: Las reparaciones con mortero de cal reforzarán la fachada georgiana sin atrapar humedad.
+  visual_hint: 🏛️🧱
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: shore up
+    meaning: apuntalar / reforzar estructuralmente
+    ipa: ʃɔːr ʌp
+  kind: phrasal_verb
+  apply_sentence: Engineers had to ____ the vaulted cellar before opening the courtyard.
+  apply_answer: shore up
+  apply_translation: Los ingenieros tuvieron que apuntalar la bóveda del sótano antes de abrir el patio.
+- id: idm-turn-blind-eye
+  text: Conservation officers will never turn a blind eye to unauthorized PVC windows.
+  translation: Los inspectores de patrimonio nunca harán la vista gorda ante ventanas de PVC sin permiso.
+  visual_hint: 👁️📜
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: turn a blind eye
+    meaning: hacer la vista gorda
+    ipa: tɜːrn ə blaɪnd aɪ
+  kind: idiom
+  apply_sentence: You cannot ____ to listed-building covenants during an adaptive reuse.
+  apply_answer: turn a blind eye
+  apply_translation: No puedes hacer la vista gorda ante las normas de patrimonio durante una rehabilitación.
 roleplay:
   ai_role: conservation architect
   user_role: property steward

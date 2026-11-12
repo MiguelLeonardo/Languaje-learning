@@ -72,6 +72,36 @@ phrases:
   - word: unanimous
     meaning: unánime
     ipa: juːˈnænɪməs
+- id: the-tip-of-the-iceberg
+  text: This one flavor is merely the tip of the iceberg.
+  translation: 'Este sabor es solo la punta del iceberg. (the tip of the iceberg: solo una pequeña parte)'
+  visual_hint: 🧊🫒
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: the tip of the iceberg
+    meaning: 'the tip of the iceberg: la punta del iceberg'
+    ipa: ˈaɪsbɜːɡ
+  kind: idiom
+  apply_sentence: Those complaints were only ____.
+  apply_answer: the tip of the iceberg
+  apply_translation: Esas quejas eran solo la punta del iceberg.
+- id: bite-the-bullet
+  text: We had to bite the bullet and reject the cheaper oil.
+  translation: 'Tuvimos que apechugar y rechazar el aceite más barato. (bite the bullet: afrontar algo difícil)'
+  visual_hint: 😬🫒
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: bite the bullet
+    meaning: 'bite the bullet: apechugar'
+    ipa: ˈbʊlɪt
+  kind: idiom
+  apply_sentence: I'll have to ____ and tell her the truth.
+  apply_answer: bite the bullet
+  apply_translation: Tendré que apechugar y decirle la verdad.
 roleplay:
   ai_role: panel chair
   user_role: sensory judge

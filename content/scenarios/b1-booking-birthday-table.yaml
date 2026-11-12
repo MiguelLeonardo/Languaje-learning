@@ -71,6 +71,36 @@ phrases:
   - word: confirmation
     meaning: confirmación
     ipa: ˌkɑːnfərˈmeɪʃən
+- id: the-more-the-merrier
+  text: Bring your cousins too, the more the merrier!
+  translation: '¡Trae también a tus primos, cuantos más, mejor! (the more the merrier: cuantos más mejor)'
+  visual_hint: 🎂🎉
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: the more the merrier
+    meaning: 'the more the merrier: cuantos más, mejor'
+    ipa: ˈmeri
+  kind: idiom
+  apply_sentence: Can I invite Anna?" "Sure, ____!
+  apply_answer: the more the merrier
+  apply_translation: ¿Puedo invitar a Anna? Claro, ¡cuantos más, mejor!
+- id: just-in-case
+  text: I'll bring a spare candle just in case.
+  translation: 'Traeré una vela de repuesto por si acaso. (just in case: por si acaso)'
+  visual_hint: 🕯️🛡️
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: just in case
+    meaning: 'just in case: por si acaso'
+    ipa: keɪs
+  kind: expression
+  apply_sentence: Take an umbrella ____ it rains.
+  apply_answer: just in case
+  apply_translation: Lleva un paraguas por si acaso llueve.
 roleplay:
   ai_role: restaurant host
   user_role: caller

@@ -93,6 +93,37 @@ phrases:
   - word: side
     meaning: acompañamiento / guarnición
     ipa: saɪd
+- id: go-dutch
+  text: Let's go Dutch and split the bill tonight.
+  translation: 'Paguemos cada uno lo suyo esta noche. (go Dutch: pagar a medias)'
+  visual_hint: 🍽️💶
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: go Dutch
+    meaning: 'go Dutch: pagar cada uno lo suyo'
+    ipa: dʌtʃ
+  kind: idiom
+  apply_sentence: We always ____ when we eat out with friends.
+  apply_answer: go Dutch
+  apply_translation: Siempre pagamos cada uno lo suyo cuando salimos a comer con amigos.
+- id: fully-booked
+  text: Sorry, we are fully booked until nine o'clock tonight.
+  translation: 'Lo siento, estamos completamente reservados hasta las nueve de esta noche. (fully booked: sin mesas
+    libres)'
+  visual_hint: 📅🚫
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: fully booked
+    meaning: 'fully booked: totalmente reservado'
+    ipa: bʊkt
+  kind: expression
+  apply_sentence: The hotel was ____ during the summer festival.
+  apply_answer: fully booked
+  apply_translation: El hotel estaba completamente lleno durante el festival de verano.
 roleplay:
   ai_role: restaurant waiter
   user_role: diner

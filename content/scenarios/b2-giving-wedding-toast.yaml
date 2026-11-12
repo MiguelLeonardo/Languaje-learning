@@ -72,6 +72,36 @@ phrases:
   - word: newlyweds
     meaning: recién casados
     ipa: ˈnuːliwedz
+- id: idm-b2wt-tie-the-knot
+  text: Today my best friend finally decided to tie the knot with Laura.
+  translation: Hoy mi mejor amigo por fin decidió casarse con Laura (casarse).
+  visual_hint: 💍🥂
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: tie the knot
+    meaning: casarse
+    ipa: naːt
+  kind: idiom
+  apply_sentence: Our cousins will ____ the knot in June.
+  apply_answer: tie
+  apply_translation: Nuestros primos se casarán en junio.
+- id: idm-b2wt-raise-glass
+  text: Please raise your glasses and join me in toasting the happy couple.
+  translation: Por favor levanten sus copas y brinden conmigo por la feliz pareja.
+  visual_hint: 🥂💐
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: raise a glass
+    meaning: brindar
+    ipa: reɪz
+  kind: phrasal_verb
+  apply_sentence: Let's ____ our glasses to a wonderful year ahead.
+  apply_answer: raise
+  apply_translation: Levantemos nuestras copas por un año maravilloso.
 roleplay:
   ai_role: wedding guests & couple
   user_role: best friend giving toast

@@ -74,6 +74,36 @@ phrases:
   - word: addendum
     meaning: anexo contractual
     ipa: əˈdendəm
+- id: idm-flag-up-wiring
+  text: The inspector flagged up outdated aluminum wiring behind the kitchen panel.
+  translation: El inspector señaló cableado de aluminio obsoleto detrás del tablero de la cocina.
+  visual_hint: 🏠🚩
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: flag up
+    meaning: señalar / advertir (un problema)
+    ipa: flæɡ ʌp
+  kind: phrasal_verb
+  apply_sentence: Be sure to ____ any moisture readings near the foundation during the walkthrough.
+  apply_answer: flag up
+  apply_translation: Asegúrate de señalar cualquier lectura de humedad cerca de los cimientos durante el recorrido.
+- id: idm-sweep-under-rug
+  text: We can't sweep roof flashing defects under the rug before closing.
+  translation: No podemos barrer los defectos del tapajuntas del techo bajo la alfombra antes de escriturar.
+  visual_hint: 🧹🏠
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: sweep under the rug
+    meaning: ocultar bajo la alfombra / disimular
+    ipa: swiːp ˈʌndər ðə rʌɡ
+  kind: idiom
+  apply_sentence: A reputable seller never tries to ____ past drainage issues.
+  apply_answer: sweep under the rug
+  apply_translation: Un vendedor serio nunca intenta ocultar bajo la alfombra problemas previos de drenaje.
 roleplay:
   ai_role: licensed home inspector
   user_role: homebuyer

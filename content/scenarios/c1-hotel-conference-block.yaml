@@ -78,6 +78,36 @@ phrases:
   - word: revisions
     meaning: modificaciones / ajustes
     ipa: rɪˈvɪʒənz
+- id: idm-hammer-out-terms
+  text: Let's hammer out the attrition clause before we sign the group contract.
+  translation: Cerremos los detalles de la cláusula de penalización antes de firmar el contrato grupal.
+  visual_hint: 🔨📄
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: hammer out
+    meaning: negociar y cerrar en detalle
+    ipa: ˈhæmər aʊt
+  kind: phrasal_verb
+  apply_sentence: Both teams met for an hour to ____ complimentary meeting room terms.
+  apply_answer: hammer out
+  apply_translation: Ambos equipos se reunieron una hora para definir en detalle las salas sin costo.
+- id: idm-silver-lining
+  text: 'The higher room minimum has a silver lining: it unlocks free suite upgrades.'
+  translation: 'El mínimo más alto de habitaciones tiene un lado positivo: desbloquea suites gratis.'
+  visual_hint: 🌤️🏨
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: silver lining
+    meaning: el lado positivo / rayo de esperanza
+    ipa: ˈsɪlvər ˈlaɪnɪŋ
+  kind: idiom
+  apply_sentence: Even though dates shifted, the ____ was securing a much lower rate.
+  apply_answer: silver lining
+  apply_translation: Aunque cambiaron las fechas, el lado positivo fue asegurar una tarifa mucho menor.
 roleplay:
   ai_role: hotel sales director
   user_role: summit producer

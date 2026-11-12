@@ -74,6 +74,37 @@ phrases:
   - word: profile
     meaning: perfil de usuario
     ipa: ˈproʊfaɪl
+- id: global-nothing-to-hide
+  text: I have nothing to hide, and my travel record is spotless.
+  translation: No tengo nada que ocultar, y mi historial de viajes es impecable. (nothing to hide = nada que esconder)
+  visual_hint: 🧾🛂
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: nothing to hide
+    meaning: nada que ocultar
+    ipa: ˈnʌθɪŋ tə haɪd
+  kind: idiom
+  apply_sentence: The traveler opened his luggage because he had ____.
+  apply_answer: nothing to hide
+  apply_translation: El viajero abrió su equipaje porque no tenía nada que ocultar.
+- id: global-jump-through-hoops
+  text: Applicants jump through hoops just to prove their address history.
+  translation: Los solicitantes pasan por mil trámites solo para probar su historial de domicilios. (jump through
+    hoops = cumplir muchos requisitos)
+  visual_hint: 🤹📋
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: jump through hoops
+    meaning: pasar por muchos trámites
+    ipa: dʒʌmp θruː huːps
+  kind: idiom
+  apply_sentence: Visitors have to ____ to get a quick entry permit.
+  apply_answer: jump through hoops
+  apply_translation: Los visitantes tienen que pasar por mil trámites para conseguir un permiso de entrada rápido.
 roleplay:
   ai_role: customs & border officer
   user_role: applicant

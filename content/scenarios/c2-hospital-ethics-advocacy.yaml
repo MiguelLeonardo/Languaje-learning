@@ -76,6 +76,36 @@ phrases:
   - word: collaboratively
     meaning: de forma colaborativa
     ipa: kəˈlæbərətɪvli
+- id: idm-the-tip-of-the-iceberg-c2
+  text: Honestly, this disagreement is just the tip of the iceberg.
+  translation: Sinceramente, este desacuerdo es solo la punta del iceberg. (the tip of the iceberg)
+  visual_hint: 🧊🏥
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: the tip of the iceberg
+    meaning: la punta del iceberg
+    ipa: ˈaɪsbɜːɡ
+  kind: idiom
+  apply_sentence: Those complaints are only ____ of a bigger problem.
+  apply_answer: the tip of the iceberg
+  apply_translation: Esas quejas son solo la punta del iceberg de un problema mayor.
+- id: idm-walk-on-eggshells-c2
+  text: Nurses shouldn't have to walk on eggshells around the chief.
+  translation: Las enfermeras no deberían andar con pies de plomo con el jefe. (walk on eggshells)
+  visual_hint: 🥚😰
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: walk on eggshells
+    meaning: andar con pies de plomo
+    ipa: ˈeɡʃelz
+  kind: idiom
+  apply_sentence: After the argument, we all had to ____ around him.
+  apply_answer: walk on eggshells
+  apply_translation: Tras la discusión, todos tuvimos que andar con pies de plomo con él.
 roleplay:
   ai_role: attending hospitalist
   user_role: family healthcare proxy

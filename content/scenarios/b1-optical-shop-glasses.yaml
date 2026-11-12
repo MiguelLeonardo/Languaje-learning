@@ -71,6 +71,36 @@ phrases:
   - word: snugly
     meaning: cómodamente ajustados
     ipa: ˈsnʌɡli
+- id: idm-come-apart-hinge
+  text: The right arm of my glasses started to come apart at the hinge.
+  translation: La patilla derecha de mis lentes empezó a soltarse en la bisagra.
+  visual_hint: 👓🔧
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: come apart
+    meaning: desarmarse / soltarse
+    ipa: kʌm əˈpɑːrt
+  kind: phrasal_verb
+  apply_sentence: Cheap plastic frames tend to ____ after a few months.
+  apply_answer: come apart
+  apply_translation: Los armazones de plástico barato tienden a desarmarse después de unos meses.
+- id: idm-in-the-meantime
+  text: In the meantime, could you lend me a spare case while you fix them?
+  translation: Mientras tanto, ¿podría prestarme un estuche de repuesto mientras los repara?
+  visual_hint: ⏳☕
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: in the meantime
+    meaning: mientras tanto
+    ipa: ɪn ðə ˈmiːntaɪm
+  kind: expression
+  apply_sentence: Your lenses will be ready at four; ____, feel free to grab a coffee.
+  apply_answer: in the meantime
+  apply_translation: Sus lentes estarán listos a las cuatro; mientras tanto, puede tomar un café.
 roleplay:
   ai_role: optician
   user_role: customer

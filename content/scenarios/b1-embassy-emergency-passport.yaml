@@ -72,6 +72,36 @@ phrases:
   - word: weight off my shoulders
     meaning: un gran peso de encima / alivio
     ipa: weɪt ɔːf maɪ ˈʃoʊldərz
+- id: idm-red-tape-b1
+  text: There is so much red tape to get a new passport.
+  translation: Hay tanta burocracia para conseguir un pasaporte nuevo. (red tape = burocracia)
+  visual_hint: 🛂📎
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: red tape
+    meaning: burocracia
+    ipa: red teɪp
+  kind: idiom
+  apply_sentence: Opening a business here means dealing with endless ____.
+  apply_answer: red tape
+  apply_translation: Abrir un negocio aquí implica lidiar con burocracia interminable.
+- id: idm-get-the-ball-rolling-b1
+  text: Let's get the ball rolling with the application today.
+  translation: Pongamos en marcha la solicitud hoy. (get the ball rolling = empezar)
+  visual_hint: ⚽🛂
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: get the ball rolling
+    meaning: poner en marcha
+    ipa: bɔːl ˈrəʊlɪŋ
+  kind: idiom
+  apply_sentence: We should ____ on the project this week.
+  apply_answer: get the ball rolling
+  apply_translation: Deberíamos poner en marcha el proyecto esta semana.
 roleplay:
   ai_role: consular officer
   user_role: citizen abroad

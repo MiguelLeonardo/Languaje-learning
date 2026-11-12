@@ -71,6 +71,36 @@ phrases:
   - word: less than
     meaning: menos de
     ipa: les ðæn
+- id: idm-keep-track
+  text: Please keep track of every receipt from your trip.
+  translation: 'Por favor, lleva el control de cada recibo de tu viaje. (keep track: llevar la cuenta)'
+  visual_hint: 🧾🧮
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: keep track
+    meaning: llevar el control
+    ipa: kiːp træk
+  kind: expression
+  apply_sentence: It is hard to ____ of all my small expenses.
+  apply_answer: keep track
+  apply_translation: Es difícil llevar la cuenta de todos mis gastos pequeños.
+- id: idm-pay-back
+  text: The company will pay back your travel costs soon.
+  translation: 'La empresa te reembolsará los gastos de viaje pronto. (pay back: devolver dinero)'
+  visual_hint: 💸🔙
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: pay back
+    meaning: devolver dinero
+    ipa: peɪ bæk
+  kind: phrasal_verb
+  apply_sentence: I will ____ the money I borrowed for lunch.
+  apply_answer: pay back
+  apply_translation: Te devolveré el dinero que pedí prestado para el almuerzo.
 roleplay:
   ai_role: accounting specialist
   user_role: employee

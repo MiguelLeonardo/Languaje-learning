@@ -85,6 +85,36 @@ phrases:
   - word: take
     meaning: llevar
     ipa: teɪk
+- id: idm-try-on-jacket
+  text: Excuse me, where can I try on this blue jacket?
+  translation: Disculpe, ¿dónde puedo probarme esta chaqueta azul?
+  visual_hint: 🧥🪞
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: try on
+    meaning: probarse (ropa)
+    ipa: traɪ ɒn
+  kind: phrasal_verb
+  apply_sentence: I always ____ new shirts before I buy them.
+  apply_answer: try on
+  apply_translation: Siempre me pruebo las camisas nuevas antes de comprarlas.
+- id: idm-fit-like-glove
+  text: Does this medium sweater fit like a glove and feel soft?
+  translation: ¿Este suéter mediano queda como anillo al dedo y se siente suave?
+  visual_hint: 🧤✨
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: fit like a glove
+    meaning: quedar como anillo al dedo
+    ipa: fɪt laɪk ə ɡlʌv
+  kind: idiom
+  apply_sentence: These jeans ____, so I will take them right now.
+  apply_answer: fit like a glove
+  apply_translation: Estos jeans quedan perfectos, así que me los llevaré ahora mismo.
 roleplay:
   ai_role: shop assistant
   user_role: shopper

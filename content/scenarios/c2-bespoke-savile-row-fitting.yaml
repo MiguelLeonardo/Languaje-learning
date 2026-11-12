@@ -74,6 +74,36 @@ phrases:
   - word: reconvene
     meaning: volver a reunirse
     ipa: ˌriːkənˈviːn
+- id: idm-taper-off-lapel
+  text: Ask the cutter to let the lapel roll taper off gracefully toward the button.
+  translation: Pide al cortador que deje que la vuelta de la solapa se afine suavemente hacia el botón.
+  visual_hint: 🪡🤵
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: taper off
+    meaning: afinarse / reducirse gradualmente
+    ipa: ˈteɪpər ɒf
+  kind: phrasal_verb
+  apply_sentence: Notice how the shoulder seam should ____ cleanly without puckering.
+  apply_answer: taper off
+  apply_translation: Fíjate cómo la costura del hombro debe afinarse limpiamente sin arrugarse.
+- id: idm-cut-above-rest
+  text: Hand-padded canvas chest pieces are a cut above the rest in longevity.
+  translation: Las entretelas de lona picadas a mano están muy por encima del resto en durabilidad.
+  visual_hint: ✂️👑
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: a cut above the rest
+    meaning: muy por encima del resto
+    ipa: ə kʌt əˈbʌv ðə rest
+  kind: idiom
+  apply_sentence: With horn buttons and Milanese buttonholes, this overcoat is ____.
+  apply_answer: a cut above the rest
+  apply_translation: Con botones de cuerno y ojales milaneses, este abrigo está muy por encima del resto.
 roleplay:
   ai_role: master cutter
   user_role: client

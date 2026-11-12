@@ -72,6 +72,36 @@ phrases:
   - word: quiet
     meaning: tranquilo / silencioso
     ipa: ˈkwaɪət
+- id: idm-check-in
+  text: I will check in with the team at nine.
+  translation: 'Me comunicaré con el equipo a las nueve. (check in: reportarse)'
+  visual_hint: 🏡✅
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: check in
+    meaning: reportarse
+    ipa: tʃɛk ɪn
+  kind: phrasal_verb
+  apply_sentence: Please ____ with me every afternoon about your tasks.
+  apply_answer: check in
+  apply_translation: Por favor, repórtate conmigo cada tarde sobre tus tareas.
+- id: idm-up-and-running
+  text: My internet is up and running again, sorry about that.
+  translation: 'Mi internet ya funciona otra vez, perdón por eso. (up and running: funcionando)'
+  visual_hint: 📶💻
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: up and running
+    meaning: funcionando
+    ipa: ʌp ænd ˈrʌnɪŋ
+  kind: expression
+  apply_sentence: The new printer is finally ____ in the office.
+  apply_answer: up and running
+  apply_translation: La impresora nueva por fin está funcionando en la oficina.
 roleplay:
   ai_role: team lead
   user_role: remote employee

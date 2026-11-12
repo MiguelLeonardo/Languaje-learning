@@ -77,6 +77,36 @@ phrases:
   - word: guarantee letter
     meaning: carta garantía de pago hospitalario
     ipa: ˌɡærənˈtiː ˈletər
+- id: idm-go-the-extra-mile-c1
+  text: I'd ask you to go the extra mile to get this approved.
+  translation: Le pido que haga un esfuerzo extra para que esto se apruebe. (go the extra mile = esforzarse más)
+  visual_hint: 🏃🧲
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: go the extra mile
+    meaning: esforzarse más de lo esperado
+    ipa: ɪkˈstrə maɪl
+  kind: idiom
+  apply_sentence: Dr. Lee will always ____ for her patients.
+  apply_answer: go the extra mile
+  apply_translation: La doctora Lee siempre hace un esfuerzo extra por sus pacientes.
+- id: idm-the-ball-is-in-your-court-c1
+  text: I've sent the documents, so now the ball is in your court.
+  translation: Ya envié los documentos, así que ahora le toca a usted. (the ball is in your court)
+  visual_hint: 🎾📋
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: the ball is in your court
+    meaning: te toca actuar a ti
+    ipa: kɔːt
+  kind: idiom
+  apply_sentence: I've done my part, so now ____.
+  apply_answer: the ball is in your court
+  apply_translation: Ya hice mi parte, así que ahora te toca a ti.
 roleplay:
   ai_role: medical review coordinator
   user_role: insured patient

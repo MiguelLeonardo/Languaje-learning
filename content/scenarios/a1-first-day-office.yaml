@@ -90,6 +90,36 @@ phrases:
   - word: lunch
     meaning: almuerzo
     ipa: lʌntʃ
+- id: idm-piece-of-cake
+  text: The computer login is a piece of cake today.
+  translation: 'Entrar al ordenador hoy es muy fácil. (a piece of cake: algo muy fácil)'
+  visual_hint: 🍰😎
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: a piece of cake
+    meaning: pan comido, muy fácil
+    ipa: piːs əv keɪk
+  kind: idiom
+  apply_sentence: This new report is a ____, I finished it fast.
+  apply_answer: piece of cake
+  apply_translation: Este informe nuevo es pan comido, lo terminé rápido.
+- id: idm-sit-down
+  text: Please sit down here, this is your new desk.
+  translation: 'Siéntate aquí, por favor, este es tu escritorio nuevo. (sit down: sentarse)'
+  visual_hint: 🪑👋
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: sit down
+    meaning: sentarse
+    ipa: sɪt daʊn
+  kind: phrasal_verb
+  apply_sentence: Let's ____ and drink some coffee with the team.
+  apply_answer: sit down
+  apply_translation: Sentémonos a tomar café con el equipo.
 roleplay:
   ai_role: office manager
   user_role: new team member

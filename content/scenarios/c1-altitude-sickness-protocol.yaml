@@ -79,6 +79,36 @@ phrases:
   - word: symptom-free
     meaning: libre de síntomas
     ipa: ˈsɪmptəm friː
+- id: idm-take-a-toll-c1
+  text: Climbing too fast can take a toll on anyone.
+  translation: Subir demasiado rápido puede pasar factura a cualquiera. (take a toll = pasar factura)
+  visual_hint: ⛰️😮‍💨
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: take a toll
+    meaning: pasar factura
+    ipa: tɒl
+  kind: idiom
+  apply_sentence: Long hours can ____ on your health.
+  apply_answer: take a toll
+  apply_translation: Las jornadas largas pueden pasar factura a tu salud.
+- id: idm-play-it-by-ear-c1
+  text: We'll play it by ear and descend if symptoms worsen.
+  translation: Improvisaremos y bajaremos si empeoran los síntomas. (play it by ear = improvisar)
+  visual_hint: 🏔️👂
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: play it by ear
+    meaning: improvisar
+    ipa: pleɪ ɪt baɪ ɪər
+  kind: idiom
+  apply_sentence: I have no schedule, so we'll ____ tomorrow.
+  apply_answer: play it by ear
+  apply_translation: No tengo horario, así que improvisaremos mañana.
 roleplay:
   ai_role: high-altitude physician
   user_role: trekker

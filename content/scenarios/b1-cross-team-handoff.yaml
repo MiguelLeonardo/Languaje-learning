@@ -72,6 +72,36 @@ phrases:
   - word: tricky
     meaning: complicado / con truco
     ipa: ˈtrɪki
+- id: idm-hand-over
+  text: I will hand over the design files to your team today.
+  translation: 'Hoy le entregaré los archivos de diseño a tu equipo. (hand over: entregar)'
+  visual_hint: 📁🤲
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: hand over
+    meaning: entregar
+    ipa: hænd ˈoʊvər
+  kind: phrasal_verb
+  apply_sentence: She had to ____ her projects before going on leave.
+  apply_answer: hand over
+  apply_translation: Tuvo que entregar sus proyectos antes de irse de baja.
+- id: idm-on-the-same-page
+  text: Let's make sure we are all on the same page.
+  translation: 'Asegurémonos de que todos estamos de acuerdo. (on the same page: entender igual)'
+  visual_hint: 📄🤝
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: on the same page
+    meaning: estar en sintonía
+    ipa: ɑːn ðə seɪm peɪdʒ
+  kind: idiom
+  apply_sentence: Before the launch, we need to be ____ about the schedule.
+  apply_answer: on the same page
+  apply_translation: Antes del lanzamiento, tenemos que estar de acuerdo con el calendario.
 roleplay:
   ai_role: lead frontend developer
   user_role: product designer

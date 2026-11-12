@@ -71,6 +71,36 @@ phrases:
   - word: block
     meaning: bloquear / frenar
     ipa: blɑːk
+- id: idm-better-safe-than-sorry-a2
+  text: I'll buy the drops anyway; better safe than sorry.
+  translation: Compraré las gotas igual; más vale prevenir que lamentar. (better safe than sorry)
+  visual_hint: 👁️💧
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: better safe than sorry
+    meaning: más vale prevenir que curar
+    ipa: ˈbetər seɪf ðæn ˈsɒri
+  kind: idiom
+  apply_sentence: Take an umbrella; ____.
+  apply_answer: better safe than sorry
+  apply_translation: Lleva un paraguas; más vale prevenir que lamentar.
+- id: idm-ran-out-of-a2
+  text: I ran out of my eye drops at the hotel.
+  translation: Me quedé sin mis gotas para los ojos en el hotel. (run out of = quedarse sin)
+  visual_hint: 🧴❌
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: ran out of
+    meaning: quedarse sin
+    ipa: ræn aʊt ʌv
+  kind: phrasal_verb
+  apply_sentence: Yesterday we ____ milk, so I went shopping.
+  apply_answer: ran out of
+  apply_translation: Ayer nos quedamos sin leche, así que fui de compras.
 roleplay:
   ai_role: pharmacist
   user_role: customer

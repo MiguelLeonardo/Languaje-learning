@@ -101,6 +101,37 @@ phrases:
   - word: slated to
     meaning: programado para
     ipa: ˈsleɪtɪd tə
+- id: lounge-pull-out-all-stops
+  text: The agent promised to pull out all the stops for my keynote.
+  translation: La agente prometió hacer todo lo posible para mi conferencia. (pull out all the stops = esforzarse
+    al máximo)
+  visual_hint: 🎹🛫
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: pull out all the stops
+    meaning: dar el máximo
+    ipa: pʊl aʊt ɔːl ðə stɒps
+  kind: idiom
+  apply_sentence: Our hosts will ____ to welcome the delegates tonight.
+  apply_answer: pull out all the stops
+  apply_translation: Nuestros anfitriones harán todo lo posible por recibir a los delegados esta noche.
+- id: lounge-tall-order
+  text: Rebooking four legs in two hours is a tall order.
+  translation: Reprogramar cuatro tramos en dos horas es una tarea difícil. (a tall order = algo muy exigente)
+  visual_hint: 🧗📋
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: a tall order
+    meaning: una tarea muy exigente
+    ipa: tɔːl ˈɔːdə
+  kind: idiom
+  apply_sentence: Clearing every document in ten minutes is a ____.
+  apply_answer: tall order
+  apply_translation: Revisar todos los documentos en diez minutos es una tarea muy exigente.
 roleplay:
   ai_role: concierge desk supervisor
   user_role: international keynote speaker

@@ -71,6 +71,36 @@ phrases:
   - word: tomorrow
     meaning: mañana
     ipa: təˈmɔːroʊ
+- id: idm-wake-up-early
+  text: We need to wake up early so we don't miss breakfast.
+  translation: Necesitamos despertarnos temprano para no perder el desayuno.
+  visual_hint: ⏰🥐
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: wake up
+    meaning: despertarse
+    ipa: weɪk ʌp
+  kind: phrasal_verb
+  apply_sentence: I usually ____ at seven when I stay at a hotel.
+  apply_answer: wake up
+  apply_translation: Normalmente me despierto a las siete cuando me hospedo en un hotel.
+- id: idm-on-the-house
+  text: The receptionist said the morning coffee is on the house today.
+  translation: El recepcionista dijo que el café de la mañana corre por cuenta de la casa hoy.
+  visual_hint: ☕🎁
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: on the house
+    meaning: por cuenta de la casa / gratis
+    ipa: ɒn ðə haʊs
+  kind: idiom
+  apply_sentence: Because of the delay, our dessert was ____.
+  apply_answer: on the house
+  apply_translation: Por el retraso, nuestro postre corrió por cuenta de la casa.
 roleplay:
   ai_role: receptionist
   user_role: hotel guest

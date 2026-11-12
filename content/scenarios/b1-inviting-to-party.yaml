@@ -95,6 +95,36 @@ phrases:
   - word: buzzer code
     meaning: código del interfón / timbre
     ipa: ˈbʌzər koʊd
+- id: idm-b1ip-drop-by
+  text: Feel free to drop by any time after four o'clock.
+  translation: Siéntete libre de pasar por casa cuando quieras después de las cuatro (visitar sin avisar).
+  visual_hint: 🍖🔥
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: drop by
+    meaning: pasar de visita
+    ipa: drɒp
+  kind: phrasal_verb
+  apply_sentence: I might ____ your place later to return the book.
+  apply_answer: drop by
+  apply_translation: Quizás pase por tu casa más tarde a devolverte el libro.
+- id: idm-b1ip-the-more
+  text: The more, the merrier, so bring anyone you want along.
+  translation: Cuantos más, mejor, así que trae a quien quieras (mientras más gente, más diversión).
+  visual_hint: 🎈👥
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: the more the merrier
+    meaning: cuantos más, mejor
+    ipa: ˈmeri
+  kind: idiom
+  apply_sentence: Bring your cousins too, ____ the merrier.
+  apply_answer: the more
+  apply_translation: Trae también a tus primos, cuantos más, mejor.
 roleplay:
   ai_role: friend (Chloe)
   user_role: host

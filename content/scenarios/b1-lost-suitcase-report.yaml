@@ -71,6 +71,36 @@ phrases:
   - word: tracking
     meaning: seguimiento / rastreo
     ipa: ˈtrækɪŋ
+- id: suitcase-fingers-crossed
+  text: Fingers crossed my suitcase arrives on tomorrow's first flight.
+  translation: Ojalá mi maleta llegue en el primer vuelo de mañana. (fingers crossed = ojalá)
+  visual_hint: 🤞🧳
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: fingers crossed
+    meaning: cruzar los dedos, ojalá
+    ipa: ˈfɪŋɡəz krɒst
+  kind: idiom
+  apply_sentence: We have no seats yet, but ____ the airline finds us one.
+  apply_answer: fingers crossed
+  apply_translation: Aún no tenemos asientos, pero ojalá la aerolínea nos encuentre uno.
+- id: suitcase-show-up
+  text: If my bag doesn't show up tonight, please call the hotel.
+  translation: Si mi maleta no aparece esta noche, por favor llame al hotel. (show up = aparecer)
+  visual_hint: 🧳❓
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: show up
+    meaning: aparecer
+    ipa: ʃəʊ ʌp
+  kind: phrasal_verb
+  apply_sentence: The driver didn't ____ at the arrival gate.
+  apply_answer: show up
+  apply_translation: El conductor no apareció en la puerta de llegadas.
 roleplay:
   ai_role: baggage service agent
   user_role: passenger

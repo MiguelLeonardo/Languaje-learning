@@ -71,6 +71,36 @@ phrases:
   - word: Monday
     meaning: lunes
     ipa: ˈmʌndeɪ
+- id: idm-a1if-this-is
+  text: Anna, this is my best friend, Carlos. He's very kind.
+  translation: Anna, este es mi mejor amigo, Carlos. Es muy amable. (presentación)
+  visual_hint: 👫👋
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: this is
+    meaning: este/esta es (presentación)
+    ipa: ðɪs
+  kind: expression
+  apply_sentence: Mum, ____ my teacher, Mr. Brown.
+  apply_answer: this is
+  apply_translation: Mamá, este es mi profesor, el Sr. Brown.
+- id: idm-a1if-get-along
+  text: I think you two will get along really well together.
+  translation: Creo que ustedes dos se llevarán muy bien (tener buena relación).
+  visual_hint: 🐱🐶
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: get along
+    meaning: llevarse bien
+    ipa: əˈlɒŋ
+  kind: phrasal_verb
+  apply_sentence: My cat and dog ____ very well.
+  apply_answer: get along
+  apply_translation: Mi gato y mi perro se llevan muy bien.
 roleplay:
   ai_role: colleague (Tom)
   user_role: friend

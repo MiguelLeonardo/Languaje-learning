@@ -71,6 +71,36 @@ phrases:
   - word: sign up
     meaning: inscribirse / suscribirse
     ipa: saɪn ʌp
+- id: an-acquired-taste
+  text: Fruity natural-process coffee is an acquired taste for many.
+  translation: El café frutal de proceso natural es un gusto que se adquiere. (an acquired taste)
+  visual_hint: ☕🍓
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: an acquired taste
+    meaning: 'an acquired taste: gusto que se adquiere'
+    ipa: əˈkwaɪəd
+  kind: idiom
+  apply_sentence: Black licorice is definitely ____ for most people.
+  apply_answer: an acquired taste
+  apply_translation: El regaliz negro es sin duda un gusto adquirido para la mayoría.
+- id: dial-in
+  text: We need to dial in the grind for this espresso.
+  translation: 'Necesitamos ajustar bien la molienda para este espresso. (dial in: afinar)'
+  visual_hint: ⚙️☕
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: dial in
+    meaning: 'dial in: ajustar con precisión'
+    ipa: ˈdaɪəl
+  kind: phrasal_verb
+  apply_sentence: It took weeks to ____ the new recipe.
+  apply_answer: dial in
+  apply_translation: Tardamos semanas en afinar la nueva receta.
 roleplay:
   ai_role: head roaster
   user_role: coffee enthusiast

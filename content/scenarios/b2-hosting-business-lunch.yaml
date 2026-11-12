@@ -95,6 +95,36 @@ phrases:
   - word: on us
     meaning: invitamos nosotros / corre por nuestra cuenta
     ipa: ɑːn ʌs
+- id: break-the-ice
+  text: A relaxed appetizer is a good way to break the ice.
+  translation: 'Un aperitivo relajado es buena forma de romper el hielo. (break the ice: romper el hielo)'
+  visual_hint: 🧊🤝
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: break the ice
+    meaning: 'break the ice: romper el hielo'
+    ipa: aɪs
+  kind: idiom
+  apply_sentence: He told a joke to ____ at the meeting.
+  apply_answer: break the ice
+  apply_translation: Contó un chiste para romper el hielo en la reunión.
+- id: pick-up-the-tab
+  text: Please let me pick up the tab; I'm hosting today.
+  translation: 'Permítame pagar la cuenta; hoy soy el anfitrión. (pick up the tab: pagar la cuenta)'
+  visual_hint: 🧾💼
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: pick up the tab
+    meaning: 'pick up the tab: pagar la cuenta'
+    ipa: tæb
+  kind: idiom
+  apply_sentence: My boss offered to ____ for the whole team.
+  apply_answer: pick up the tab
+  apply_translation: Mi jefe se ofreció a pagar la cuenta de todo el equipo.
 roleplay:
   ai_role: head waiter
   user_role: business host

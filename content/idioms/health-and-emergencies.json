@@ -1,0 +1,842 @@
+{
+ "a1-buying-sunscreen": [
+  {
+   "id": "idm-put-on-a1",
+   "kind": "phrasal_verb",
+   "text": "Please put on sunscreen before you go to the beach.",
+   "translation": "Por favor, ponte protector solar antes de ir a la playa. (put on = aplicarse/ponerse)",
+   "apply_sentence": "It is cold today, so ____ your jacket.",
+   "apply_answer": "put on",
+   "apply_translation": "Hace frío hoy, así que ponte tu chaqueta.",
+   "glossary_word": "put on",
+   "glossary_meaning": "ponerse (ropa, crema)",
+   "glossary_ipa": "pʊt ɒn",
+   "visual_hint": "🧴☀️"
+  },
+  {
+   "id": "idm-pick-out-a1",
+   "kind": "phrasal_verb",
+   "text": "Can you help me pick out a good lotion?",
+   "translation": "¿Puede ayudarme a elegir una buena loción? (pick out = elegir)",
+   "apply_sentence": "I want to ____ a gift for my mother.",
+   "apply_answer": "pick out",
+   "apply_translation": "Quiero elegir un regalo para mi madre.",
+   "glossary_word": "pick out",
+   "glossary_meaning": "elegir, escoger",
+   "glossary_ipa": "pɪk aʊt",
+   "visual_hint": "🛍️🧴"
+  }
+ ],
+ "a1-calling-ambulance-address": [
+  {
+   "id": "idm-hurry-up-a1",
+   "kind": "phrasal_verb",
+   "text": "Please hurry up, my father needs help right now!",
+   "translation": "¡Por favor, dese prisa, mi padre necesita ayuda ahora mismo! (hurry up = apresurarse)",
+   "apply_sentence": "Please ____, the bus is leaving.",
+   "apply_answer": "hurry up",
+   "apply_translation": "Por favor, apúrate, el autobús se va.",
+   "glossary_word": "hurry up",
+   "glossary_meaning": "darse prisa",
+   "glossary_ipa": "ˈhʌri ʌp",
+   "visual_hint": "🚑⏱️"
+  },
+  {
+   "id": "idm-right-away-a1",
+   "kind": "expression",
+   "text": "Please come right away, it is an emergency.",
+   "translation": "Por favor, vengan enseguida, es una emergencia. (right away = inmediatamente)",
+   "apply_sentence": "I will call the doctor ____.",
+   "apply_answer": "right away",
+   "apply_translation": "Llamaré al médico enseguida.",
+   "glossary_word": "right away",
+   "glossary_meaning": "inmediatamente",
+   "glossary_ipa": "raɪt əˈweɪ",
+   "visual_hint": "⚡🏠"
+  }
+ ],
+ "a1-calling-help-desk": [
+  {
+   "id": "idm-looking-for-a1",
+   "kind": "phrasal_verb",
+   "text": "I am looking for someone who can give first aid.",
+   "translation": "Busco a alguien que pueda dar primeros auxilios. (look for = buscar)",
+   "apply_sentence": "She is ____ her keys in the bag.",
+   "apply_answer": "looking for",
+   "apply_translation": "Ella está buscando sus llaves en el bolso.",
+   "glossary_word": "looking for",
+   "glossary_meaning": "buscar",
+   "glossary_ipa": "ˈlʊkɪŋ fɔːr",
+   "visual_hint": "🔎🩹"
+  },
+  {
+   "id": "idm-take-care-of-a1",
+   "kind": "phrasal_verb",
+   "text": "Can you take care of my friend, please?",
+   "translation": "¿Puede cuidar de mi amigo, por favor? (take care of = cuidar)",
+   "apply_sentence": "I always ____ my little sister after school.",
+   "apply_answer": "take care of",
+   "apply_translation": "Siempre cuido de mi hermanita después de la escuela.",
+   "glossary_word": "take care of",
+   "glossary_meaning": "cuidar de",
+   "glossary_ipa": "teɪk keər ʌv",
+   "visual_hint": "🤝🩹"
+  }
+ ],
+ "a1-headache-and-water": [
+  {
+   "id": "idm-feel-under-the-weather-a1",
+   "kind": "idiom",
+   "text": "I feel under the weather, I need some water.",
+   "translation": "Me siento mal, necesito agua. (feel under the weather = sentirse indispuesto)",
+   "apply_sentence": "Sorry, I can't go out; I ____ today.",
+   "apply_answer": "feel under the weather",
+   "apply_translation": "Perdón, no puedo salir; hoy me siento indispuesto.",
+   "glossary_word": "feel under the weather",
+   "glossary_meaning": "sentirse indispuesto",
+   "glossary_ipa": "ˈʌndər ðə ˈweðər",
+   "visual_hint": "🤒💧"
+  },
+  {
+   "id": "idm-sit-down-a1",
+   "kind": "phrasal_verb",
+   "text": "Can I sit down for a minute, please?",
+   "translation": "¿Puedo sentarme un minuto, por favor? (sit down = sentarse)",
+   "apply_sentence": "Please ____ and have some tea.",
+   "apply_answer": "sit down",
+   "apply_translation": "Por favor, siéntate y toma un poco de té.",
+   "glossary_word": "sit down",
+   "glossary_meaning": "sentarse",
+   "glossary_ipa": "sɪt daʊn",
+   "visual_hint": "🪑😵"
+  }
+ ],
+ "a1-lost-wallet-police": [
+  {
+   "id": "idm-fill-out-a1",
+   "kind": "phrasal_verb",
+   "text": "Do I need to fill out this form?",
+   "translation": "¿Tengo que rellenar este formulario? (fill out = rellenar)",
+   "apply_sentence": "Please ____ the form with your name.",
+   "apply_answer": "fill out",
+   "apply_translation": "Por favor, rellena el formulario con tu nombre.",
+   "glossary_word": "fill out",
+   "glossary_meaning": "rellenar",
+   "glossary_ipa": "fɪl aʊt",
+   "visual_hint": "📝👮"
+  },
+  {
+   "id": "idm-call-me-back-a1",
+   "kind": "phrasal_verb",
+   "text": "Can you call me back if you find it?",
+   "translation": "¿Puede llamarme si lo encuentra? (call back = devolver la llamada)",
+   "apply_sentence": "I am busy now, can you ____ later?",
+   "apply_answer": "call me back",
+   "apply_translation": "Estoy ocupado ahora, ¿puedes llamarme más tarde?",
+   "glossary_word": "call me back",
+   "glossary_meaning": "devolver la llamada",
+   "glossary_ipa": "kɔːl bæk",
+   "visual_hint": "📞👛"
+  }
+ ],
+ "a2-eye-drops-allergy": [
+  {
+   "id": "idm-better-safe-than-sorry-a2",
+   "kind": "idiom",
+   "text": "I'll buy the drops anyway; better safe than sorry.",
+   "translation": "Compraré las gotas igual; más vale prevenir que lamentar. (better safe than sorry)",
+   "apply_sentence": "Take an umbrella; ____.",
+   "apply_answer": "better safe than sorry",
+   "apply_translation": "Lleva un paraguas; más vale prevenir que lamentar.",
+   "glossary_word": "better safe than sorry",
+   "glossary_meaning": "más vale prevenir que curar",
+   "glossary_ipa": "ˈbetər seɪf ðæn ˈsɒri",
+   "visual_hint": "👁️💧"
+  },
+  {
+   "id": "idm-ran-out-of-a2",
+   "kind": "phrasal_verb",
+   "text": "I ran out of my eye drops at the hotel.",
+   "translation": "Me quedé sin mis gotas para los ojos en el hotel. (run out of = quedarse sin)",
+   "apply_sentence": "Yesterday we ____ milk, so I went shopping.",
+   "apply_answer": "ran out of",
+   "apply_translation": "Ayer nos quedamos sin leche, así que fui de compras.",
+   "glossary_word": "ran out of",
+   "glossary_meaning": "quedarse sin",
+   "glossary_ipa": "ræn aʊt ʌv",
+   "visual_hint": "🧴❌"
+  }
+ ],
+ "a2-hotel-doctor-visit": [
+  {
+   "id": "idm-make-an-appointment-a2",
+   "kind": "expression",
+   "text": "Can you help me make an appointment with a doctor?",
+   "translation": "¿Puede ayudarme a pedir una cita con un médico? (make an appointment = pedir cita)",
+   "apply_sentence": "I want to ____ with the dentist next week.",
+   "apply_answer": "make an appointment",
+   "apply_translation": "Quiero pedir una cita con el dentista la próxima semana.",
+   "glossary_word": "make an appointment",
+   "glossary_meaning": "pedir una cita",
+   "glossary_ipa": "meɪk ən əˈpɔɪntmənt",
+   "visual_hint": "📅🩺"
+  },
+  {
+   "id": "idm-as-soon-as-possible-a2",
+   "kind": "expression",
+   "text": "I need to see a doctor as soon as possible.",
+   "translation": "Necesito ver a un médico lo antes posible. (as soon as possible)",
+   "apply_sentence": "Please send me the photos ____.",
+   "apply_answer": "as soon as possible",
+   "apply_translation": "Por favor, envíame las fotos lo antes posible.",
+   "glossary_word": "as soon as possible",
+   "glossary_meaning": "lo antes posible",
+   "glossary_ipa": "æz suːn æz ˈpɒsəbl",
+   "visual_hint": "🏨⏰"
+  }
+ ],
+ "a2-pharmacy-symptoms": [
+  {
+   "id": "idm-come-down-with-a2",
+   "kind": "phrasal_verb",
+   "text": "I'm afraid I might come down with a cold.",
+   "translation": "Me temo que podría resfriarme. (come down with = enfermar de)",
+   "apply_sentence": "Wear a coat or you will ____ the flu.",
+   "apply_answer": "come down with",
+   "apply_translation": "Ponte un abrigo o te dará la gripe.",
+   "glossary_word": "come down with",
+   "glossary_meaning": "enfermar de",
+   "glossary_ipa": "kʌm daʊn wɪð",
+   "visual_hint": "🤧💊"
+  },
+  {
+   "id": "idm-get-better-a2",
+   "kind": "expression",
+   "text": "I hope these pills help me get better soon.",
+   "translation": "Espero que estas pastillas me ayuden a mejorar pronto. (get better = mejorar)",
+   "apply_sentence": "Drink water and rest, and you will ____ soon.",
+   "apply_answer": "get better",
+   "apply_translation": "Bebe agua y descansa, y mejorarás pronto.",
+   "glossary_word": "get better",
+   "glossary_meaning": "mejorarse",
+   "glossary_ipa": "get ˈbetər",
+   "visual_hint": "💊📈"
+  }
+ ],
+ "a2-reporting-stolen-phone": [
+  {
+   "id": "idm-keep-an-eye-on-a2",
+   "kind": "idiom",
+   "text": "I didn't keep an eye on my phone for a second.",
+   "translation": "No vigilé mi teléfono ni un segundo. (keep an eye on = vigilar)",
+   "apply_sentence": "Can you ____ my suitcase for a minute?",
+   "apply_answer": "keep an eye on",
+   "apply_translation": "¿Puedes vigilar mi maleta un minuto?",
+   "glossary_word": "keep an eye on",
+   "glossary_meaning": "vigilar",
+   "glossary_ipa": "kiːp ən aɪ ɒn",
+   "visual_hint": "👀📱"
+  },
+  {
+   "id": "idm-take-down-a2",
+   "kind": "phrasal_verb",
+   "text": "Can you take down my name and number, please?",
+   "translation": "¿Puede anotar mi nombre y número, por favor? (take down = anotar)",
+   "apply_sentence": "Please ____ this address before you forget it.",
+   "apply_answer": "take down",
+   "apply_translation": "Por favor, anota esta dirección antes de que la olvides.",
+   "glossary_word": "take down",
+   "glossary_meaning": "anotar",
+   "glossary_ipa": "teɪk daʊn",
+   "visual_hint": "✍️👮"
+  }
+ ],
+ "a2-stomach-flu-remedy": [
+  {
+   "id": "idm-feel-like-a2",
+   "kind": "idiom",
+   "text": "I don't feel like eating anything today.",
+   "translation": "Hoy no tengo ganas de comer nada. (feel like = tener ganas de)",
+   "apply_sentence": "Do you ____ going out tonight?",
+   "apply_answer": "feel like",
+   "apply_translation": "¿Tienes ganas de salir esta noche?",
+   "glossary_word": "feel like",
+   "glossary_meaning": "tener ganas de",
+   "glossary_ipa": "fiːl laɪk",
+   "visual_hint": "🤢🍽️"
+  },
+  {
+   "id": "idm-throw-up-a2",
+   "kind": "phrasal_verb",
+   "text": "I feel sick and I might throw up.",
+   "translation": "Me siento mal y podría vomitar. (throw up = vomitar)",
+   "apply_sentence": "The boat moved so much that I thought I would ____.",
+   "apply_answer": "throw up",
+   "apply_translation": "El barco se movía tanto que pensé que vomitaría.",
+   "glossary_word": "throw up",
+   "glossary_meaning": "vomitar",
+   "glossary_ipa": "θrəʊ ʌp",
+   "visual_hint": "🤮🚤"
+  }
+ ],
+ "b1-bee-sting-swelling": [
+  {
+   "id": "idm-swell-up-b1",
+   "kind": "phrasal_verb",
+   "text": "My hand started to swell up right after the sting.",
+   "translation": "Mi mano empezó a hincharse justo después de la picadura. (swell up = hincharse)",
+   "apply_sentence": "If you hit your knee, it can ____ quickly.",
+   "apply_answer": "swell up",
+   "apply_translation": "Si te golpeas la rodilla, puede hincharse rápido.",
+   "glossary_word": "swell up",
+   "glossary_meaning": "hincharse",
+   "glossary_ipa": "swel ʌp",
+   "visual_hint": "🐝✋"
+  },
+  {
+   "id": "idm-dodged-a-bullet-b1",
+   "kind": "idiom",
+   "text": "I think we dodged a bullet, it could have been worse.",
+   "translation": "Creo que nos libramos por poco; pudo ser peor. (dodge a bullet = librarse de milagro)",
+   "apply_sentence": "We really ____ when the storm turned away.",
+   "apply_answer": "dodged a bullet",
+   "apply_translation": "De verdad nos libramos por poco cuando la tormenta se desvió.",
+   "glossary_word": "dodged a bullet",
+   "glossary_meaning": "librarse por poco",
+   "glossary_ipa": "dɒdʒ ə ˈbʊlɪt",
+   "visual_hint": "🎯😮‍💨"
+  }
+ ],
+ "b1-doctors-appointment": [
+  {
+   "id": "idm-fit-me-in-b1",
+   "kind": "phrasal_verb",
+   "text": "Could you fit me in this afternoon, please?",
+   "translation": "¿Podría hacerme un hueco esta tarde, por favor? (fit in = encajar en la agenda)",
+   "apply_sentence": "The dentist can ____ before lunch.",
+   "apply_answer": "fit me in",
+   "apply_translation": "El dentista puede hacerme un hueco antes del almuerzo.",
+   "glossary_word": "fit me in",
+   "glossary_meaning": "hacer un hueco",
+   "glossary_ipa": "fɪt miː ɪn",
+   "visual_hint": "🩺🗓️"
+  },
+  {
+   "id": "idm-go-away-b1",
+   "kind": "phrasal_verb",
+   "text": "The pain just won't go away, even with medicine.",
+   "translation": "El dolor simplemente no se va, ni con medicina. (go away = desaparecer)",
+   "apply_sentence": "I hope this rain will ____ before the picnic.",
+   "apply_answer": "go away",
+   "apply_translation": "Espero que esta lluvia desaparezca antes del picnic.",
+   "glossary_word": "go away",
+   "glossary_meaning": "desaparecer",
+   "glossary_ipa": "ɡəʊ əˈweɪ",
+   "visual_hint": "😣💊"
+  }
+ ],
+ "b1-embassy-emergency-passport": [
+  {
+   "id": "idm-red-tape-b1",
+   "kind": "idiom",
+   "text": "There is so much red tape to get a new passport.",
+   "translation": "Hay tanta burocracia para conseguir un pasaporte nuevo. (red tape = burocracia)",
+   "apply_sentence": "Opening a business here means dealing with endless ____.",
+   "apply_answer": "red tape",
+   "apply_translation": "Abrir un negocio aquí implica lidiar con burocracia interminable.",
+   "glossary_word": "red tape",
+   "glossary_meaning": "burocracia",
+   "glossary_ipa": "red teɪp",
+   "visual_hint": "🛂📎"
+  },
+  {
+   "id": "idm-get-the-ball-rolling-b1",
+   "kind": "idiom",
+   "text": "Let's get the ball rolling with the application today.",
+   "translation": "Pongamos en marcha la solicitud hoy. (get the ball rolling = empezar)",
+   "apply_sentence": "We should ____ on the project this week.",
+   "apply_answer": "get the ball rolling",
+   "apply_translation": "Deberíamos poner en marcha el proyecto esta semana.",
+   "glossary_word": "get the ball rolling",
+   "glossary_meaning": "poner en marcha",
+   "glossary_ipa": "bɔːl ˈrəʊlɪŋ",
+   "visual_hint": "⚽🛂"
+  }
+ ],
+ "b1-minor-fender-bender": [
+  {
+   "id": "idm-no-harm-done-b1",
+   "kind": "expression",
+   "text": "Nobody is hurt, so no harm done, right?",
+   "translation": "Nadie está herido, así que no pasó nada grave, ¿verdad? (no harm done)",
+   "apply_sentence": "You spilled a little water, but ____.",
+   "apply_answer": "no harm done",
+   "apply_translation": "Derramaste un poco de agua, pero no pasó nada.",
+   "glossary_word": "no harm done",
+   "glossary_meaning": "no pasó nada",
+   "glossary_ipa": "nəʊ hɑːm dʌn",
+   "visual_hint": "🚗😌"
+  },
+  {
+   "id": "idm-pull-over-b1",
+   "kind": "phrasal_verb",
+   "text": "Let's pull over and check the damage first.",
+   "translation": "Orillémonos y revisemos primero el daño. (pull over = orillarse)",
+   "apply_sentence": "The police officer told him to ____ immediately.",
+   "apply_answer": "pull over",
+   "apply_translation": "El policía le dijo que se orillara de inmediato.",
+   "glossary_word": "pull over",
+   "glossary_meaning": "orillarse",
+   "glossary_ipa": "pʊl ˈəʊvər",
+   "visual_hint": "🚗🅿️"
+  }
+ ],
+ "b1-refilling-prescription": [
+  {
+   "id": "idm-lose-track-of-b1",
+   "kind": "idiom",
+   "text": "I always lose track of my pills when I travel.",
+   "translation": "Siempre pierdo la cuenta de mis pastillas cuando viajo. (lose track of = perder la cuenta)",
+   "apply_sentence": "Don't ____ time while you are studying.",
+   "apply_answer": "lose track of",
+   "apply_translation": "No pierdas la noción del tiempo mientras estudias.",
+   "glossary_word": "lose track of",
+   "glossary_meaning": "perder la cuenta de",
+   "glossary_ipa": "luːz træk ʌv",
+   "visual_hint": "💊🧳"
+  },
+  {
+   "id": "idm-just-in-case-b1",
+   "kind": "expression",
+   "text": "I'll carry a spare prescription just in case.",
+   "translation": "Llevaré una receta de repuesto por si acaso. (just in case)",
+   "apply_sentence": "Take a sweater, ____ it gets cold.",
+   "apply_answer": "just in case",
+   "apply_translation": "Lleva un suéter, por si hace frío.",
+   "glossary_word": "just in case",
+   "glossary_meaning": "por si acaso",
+   "glossary_ipa": "dʒʌst ɪn keɪs",
+   "visual_hint": "📄🛡️"
+  }
+ ],
+ "b2-dental-emergency": [
+  {
+   "id": "idm-grin-and-bear-it-b2",
+   "kind": "idiom",
+   "text": "I'll just have to grin and bear it until Monday.",
+   "translation": "Tendré que aguantarme hasta el lunes. (grin and bear it = soportar con paciencia)",
+   "apply_sentence": "The queue is slow, but we'll have to ____.",
+   "apply_answer": "grin and bear it",
+   "apply_translation": "La fila es lenta, pero tendremos que aguantarnos.",
+   "glossary_word": "grin and bear it",
+   "glossary_meaning": "aguantarse",
+   "glossary_ipa": "ɡrɪn ænd beər ɪt",
+   "visual_hint": "🦷😬"
+  },
+  {
+   "id": "idm-put-off-b2",
+   "kind": "phrasal_verb",
+   "text": "I shouldn't have put off going to the dentist.",
+   "translation": "No debí haber postergado ir al dentista. (put off = posponer)",
+   "apply_sentence": "Don't ____ your homework until the last minute.",
+   "apply_answer": "put off",
+   "apply_translation": "No pospongas tu tarea hasta el último minuto.",
+   "glossary_word": "put off",
+   "glossary_meaning": "posponer",
+   "glossary_ipa": "pʊt ɒf",
+   "visual_hint": "🦷⏳"
+  }
+ ],
+ "b2-food-allergy-epipen": [
+  {
+   "id": "idm-out-of-the-woods-b2",
+   "kind": "idiom",
+   "text": "She's not out of the woods yet, the doctors say.",
+   "translation": "Aún no está fuera de peligro, dicen los médicos. (out of the woods = fuera de peligro)",
+   "apply_sentence": "The company is finally ____ after the crisis.",
+   "apply_answer": "out of the woods",
+   "apply_translation": "La empresa por fin está fuera de peligro tras la crisis.",
+   "glossary_word": "out of the woods",
+   "glossary_meaning": "fuera de peligro",
+   "glossary_ipa": "aʊt ʌv ðə wʊdz",
+   "visual_hint": "💉🌲"
+  },
+  {
+   "id": "idm-play-it-safe-b2",
+   "kind": "idiom",
+   "text": "They'll keep her here overnight to play it safe.",
+   "translation": "La dejarán aquí esta noche para no arriesgar. (play it safe = ir a lo seguro)",
+   "apply_sentence": "I'll ____ and take the earlier train.",
+   "apply_answer": "play it safe",
+   "apply_translation": "Iré a lo seguro y tomaré el tren más temprano.",
+   "glossary_word": "play it safe",
+   "glossary_meaning": "ir a lo seguro",
+   "glossary_ipa": "pleɪ ɪt seɪf",
+   "visual_hint": "🏥🛡️"
+  }
+ ],
+ "b2-pediatric-fever-triage": [
+  {
+   "id": "idm-run-a-fever-b2",
+   "kind": "expression",
+   "text": "He started to run a fever late last night.",
+   "translation": "Empezó a tener fiebre anoche tarde. (run a fever = tener fiebre)",
+   "apply_sentence": "Children often ____ when they catch a cold.",
+   "apply_answer": "run a fever",
+   "apply_translation": "Los niños suelen tener fiebre cuando se resfrían.",
+   "glossary_word": "run a fever",
+   "glossary_meaning": "tener fiebre",
+   "glossary_ipa": "rʌn ə ˈfiːvər",
+   "visual_hint": "🌡️👶"
+  },
+  {
+   "id": "idm-go-through-the-roof-b2",
+   "kind": "idiom",
+   "text": "I'm afraid his temperature could go through the roof.",
+   "translation": "Temo que su temperatura se dispare. (go through the roof = dispararse)",
+   "apply_sentence": "Rent will ____ if they build the stadium.",
+   "apply_answer": "go through the roof",
+   "apply_translation": "El alquiler se disparará si construyen el estadio.",
+   "glossary_word": "go through the roof",
+   "glossary_meaning": "dispararse",
+   "glossary_ipa": "ruːf",
+   "visual_hint": "📈🌡️"
+  }
+ ],
+ "b2-physical-therapy-rehab": [
+  {
+   "id": "idm-no-pain-no-gain-b2",
+   "kind": "idiom",
+   "text": "It's hard, but no pain, no gain, right?",
+   "translation": "Es duro, pero sin esfuerzo no hay recompensa, ¿no? (no pain, no gain)",
+   "apply_sentence": "Training is tough, but ____.",
+   "apply_answer": "no pain, no gain",
+   "apply_translation": "El entrenamiento es duro, pero sin esfuerzo no hay recompensa.",
+   "glossary_word": "no pain, no gain",
+   "glossary_meaning": "sin esfuerzo no hay premio",
+   "glossary_ipa": "nəʊ peɪn nəʊ ɡeɪn",
+   "visual_hint": "💪😣"
+  },
+  {
+   "id": "idm-ease-into-b2",
+   "kind": "phrasal_verb",
+   "text": "We should ease into the new exercises very slowly.",
+   "translation": "Deberíamos adaptarnos a los ejercicios nuevos muy despacio. (ease into = adaptarse poco a poco)",
+   "apply_sentence": "Start slowly and ____ the routine.",
+   "apply_answer": "ease into",
+   "apply_translation": "Empieza despacio y adáptate poco a poco a la rutina.",
+   "glossary_word": "ease into",
+   "glossary_meaning": "adaptarse gradualmente",
+   "glossary_ipa": "iːz ˈɪntuː",
+   "visual_hint": "🏋️🐢"
+  }
+ ],
+ "b2-roadside-breakdown-tow": [
+  {
+   "id": "idm-in-the-middle-of-nowhere-b2",
+   "kind": "idiom",
+   "text": "We broke down in the middle of nowhere.",
+   "translation": "Se nos averió el coche en medio de la nada. (in the middle of nowhere = en un lugar remoto)",
+   "apply_sentence": "Their cabin is ____, with no neighbours for miles.",
+   "apply_answer": "in the middle of nowhere",
+   "apply_translation": "Su cabaña está en medio de la nada, sin vecinos en kilómetros.",
+   "glossary_word": "in the middle of nowhere",
+   "glossary_meaning": "en medio de la nada",
+   "glossary_ipa": "ˈnəʊweər",
+   "visual_hint": "🛣️🚗"
+  },
+  {
+   "id": "idm-hit-the-road-b2",
+   "kind": "idiom",
+   "text": "Once the truck arrives, we can hit the road again.",
+   "translation": "Cuando llegue la grúa, podremos ponernos en marcha otra vez. (hit the road = salir de viaje)",
+   "apply_sentence": "It's late, so let's ____ before dark.",
+   "apply_answer": "hit the road",
+   "apply_translation": "Es tarde, así que pongámonos en marcha antes de que oscurezca.",
+   "glossary_word": "hit the road",
+   "glossary_meaning": "ponerse en camino",
+   "glossary_ipa": "rəʊd",
+   "visual_hint": "🚚🛞"
+  }
+ ],
+ "c1-altitude-sickness-protocol": [
+  {
+   "id": "idm-take-a-toll-c1",
+   "kind": "idiom",
+   "text": "Climbing too fast can take a toll on anyone.",
+   "translation": "Subir demasiado rápido puede pasar factura a cualquiera. (take a toll = pasar factura)",
+   "apply_sentence": "Long hours can ____ on your health.",
+   "apply_answer": "take a toll",
+   "apply_translation": "Las jornadas largas pueden pasar factura a tu salud.",
+   "glossary_word": "take a toll",
+   "glossary_meaning": "pasar factura",
+   "glossary_ipa": "tɒl",
+   "visual_hint": "⛰️😮‍💨"
+  },
+  {
+   "id": "idm-play-it-by-ear-c1",
+   "kind": "idiom",
+   "text": "We'll play it by ear and descend if symptoms worsen.",
+   "translation": "Improvisaremos y bajaremos si empeoran los síntomas. (play it by ear = improvisar)",
+   "apply_sentence": "I have no schedule, so we'll ____ tomorrow.",
+   "apply_answer": "play it by ear",
+   "apply_translation": "No tengo horario, así que improvisaremos mañana.",
+   "glossary_word": "play it by ear",
+   "glossary_meaning": "improvisar",
+   "glossary_ipa": "pleɪ ɪt baɪ ɪər",
+   "visual_hint": "🏔️👂"
+  }
+ ],
+ "c1-ergonomic-workplace-assessment": [
+  {
+   "id": "idm-pain-in-the-neck-c1",
+   "kind": "idiom",
+   "text": "Honestly, my monitor setup is a real pain in the neck.",
+   "translation": "Sinceramente, mi configuración de monitor es un verdadero fastidio. (pain in the neck = fastidio)",
+   "apply_sentence": "Filling in these reports is a real ____.",
+   "apply_answer": "pain in the neck",
+   "apply_translation": "Rellenar estos informes es un verdadero fastidio.",
+   "glossary_word": "pain in the neck",
+   "glossary_meaning": "fastidio, molestia",
+   "glossary_ipa": "peɪn ɪn ðə nek",
+   "visual_hint": "💻😖"
+  },
+  {
+   "id": "idm-nip-it-in-the-bud-c1",
+   "kind": "idiom",
+   "text": "It's best to nip it in the bud before it worsens.",
+   "translation": "Es mejor cortarlo de raíz antes de que empeore. (nip it in the bud = cortar de raíz)",
+   "apply_sentence": "Managers should ____ when conflicts first appear.",
+   "apply_answer": "nip it in the bud",
+   "apply_translation": "Los jefes deberían cortar de raíz los conflictos cuando aparecen.",
+   "glossary_word": "nip it in the bud",
+   "glossary_meaning": "cortar de raíz",
+   "glossary_ipa": "bʌd",
+   "visual_hint": "🌱✂️"
+  }
+ ],
+ "c1-insurance-claim": [
+  {
+   "id": "idm-fine-print-c1",
+   "kind": "idiom",
+   "text": "You should read the fine print on this claim carefully.",
+   "translation": "Deberías leer con atención la letra pequeña de esta reclamación. (fine print = letra pequeña)",
+   "apply_sentence": "I never read the ____ before signing.",
+   "apply_answer": "fine print",
+   "apply_translation": "Nunca leo la letra pequeña antes de firmar.",
+   "glossary_word": "fine print",
+   "glossary_meaning": "letra pequeña",
+   "glossary_ipa": "faɪn prɪnt",
+   "visual_hint": "📄🔍"
+  },
+  {
+   "id": "idm-jump-through-hoops-c1",
+   "kind": "idiom",
+   "text": "I had to jump through hoops to get reimbursed.",
+   "translation": "Tuve que pasar por mil trámites para que me reembolsaran. (jump through hoops = cumplir muchos requisitos)",
+   "apply_sentence": "They make applicants ____ before approving anything.",
+   "apply_answer": "jump through hoops",
+   "apply_translation": "Hacen que los solicitantes pasen por mil trámites antes de aprobar nada.",
+   "glossary_word": "jump through hoops",
+   "glossary_meaning": "pasar por mil trámites",
+   "glossary_ipa": "huːps",
+   "visual_hint": "🤹💸"
+  }
+ ],
+ "c1-ophthalmology-corneal-scratch": [
+  {
+   "id": "idm-easier-said-than-done-c1",
+   "kind": "idiom",
+   "text": "Not rubbing the eye is easier said than done.",
+   "translation": "No frotarse el ojo es más fácil de decir que de hacer. (easier said than done)",
+   "apply_sentence": "Quitting sugar is ____.",
+   "apply_answer": "easier said than done",
+   "apply_translation": "Dejar el azúcar es más fácil de decir que de hacer.",
+   "glossary_word": "easier said than done",
+   "glossary_meaning": "más fácil decirlo que hacerlo",
+   "glossary_ipa": "ˈiːziər sed ðæn dʌn",
+   "visual_hint": "👁️🙈"
+  },
+  {
+   "id": "idm-on-the-road-to-recovery-c1",
+   "kind": "idiom",
+   "text": "You're well on the road to recovery now.",
+   "translation": "Ya vas muy bien camino de la recuperación. (on the road to recovery = recuperándose)",
+   "apply_sentence": "After the surgery, he is ____.",
+   "apply_answer": "on the road to recovery",
+   "apply_translation": "Después de la cirugía, va camino de la recuperación.",
+   "glossary_word": "on the road to recovery",
+   "glossary_meaning": "camino de recuperarse",
+   "glossary_ipa": "rɪˈkʌvəri",
+   "visual_hint": "🛣️👁️"
+  }
+ ],
+ "c1-pre-authorization-mri": [
+  {
+   "id": "idm-go-the-extra-mile-c1",
+   "kind": "idiom",
+   "text": "I'd ask you to go the extra mile to get this approved.",
+   "translation": "Le pido que haga un esfuerzo extra para que esto se apruebe. (go the extra mile = esforzarse más)",
+   "apply_sentence": "Dr. Lee will always ____ for her patients.",
+   "apply_answer": "go the extra mile",
+   "apply_translation": "La doctora Lee siempre hace un esfuerzo extra por sus pacientes.",
+   "glossary_word": "go the extra mile",
+   "glossary_meaning": "esforzarse más de lo esperado",
+   "glossary_ipa": "ɪkˈstrə maɪl",
+   "visual_hint": "🏃🧲"
+  },
+  {
+   "id": "idm-the-ball-is-in-your-court-c1",
+   "kind": "idiom",
+   "text": "I've sent the documents, so now the ball is in your court.",
+   "translation": "Ya envié los documentos, así que ahora le toca a usted. (the ball is in your court)",
+   "apply_sentence": "I've done my part, so now ____.",
+   "apply_answer": "the ball is in your court",
+   "apply_translation": "Ya hice mi parte, así que ahora te toca a ti.",
+   "glossary_word": "the ball is in your court",
+   "glossary_meaning": "te toca actuar a ti",
+   "glossary_ipa": "kɔːt",
+   "visual_hint": "🎾📋"
+  }
+ ],
+ "c2-clinical-trial-informed-consent": [
+  {
+   "id": "idm-read-between-the-lines-c2",
+   "kind": "idiom",
+   "text": "Patients must learn to read between the lines of consent forms.",
+   "translation": "Los pacientes deben aprender a leer entre líneas en los consentimientos. (read between the lines)",
+   "apply_sentence": "She can ____ in his polite emails.",
+   "apply_answer": "read between the lines",
+   "apply_translation": "Ella sabe leer entre líneas en sus correos educados.",
+   "glossary_word": "read between the lines",
+   "glossary_meaning": "leer entre líneas",
+   "glossary_ipa": "laɪnz",
+   "visual_hint": "📜🧐"
+  },
+  {
+   "id": "idm-the-devil-is-in-the-details-c2",
+   "kind": "idiom",
+   "text": "With consent forms, the devil is in the details.",
+   "translation": "En los consentimientos, el diablo está en los detalles. (the devil is in the details)",
+   "apply_sentence": "The plan sounds simple, but ____.",
+   "apply_answer": "the devil is in the details",
+   "apply_translation": "El plan parece simple, pero el diablo está en los detalles.",
+   "glossary_word": "the devil is in the details",
+   "glossary_meaning": "la dificultad está en los detalles",
+   "glossary_ipa": "ˈdetelz",
+   "visual_hint": "😈🔬"
+  }
+ ],
+ "c2-hospital-ethics-advocacy": [
+  {
+   "id": "idm-the-tip-of-the-iceberg-c2",
+   "kind": "idiom",
+   "text": "Honestly, this disagreement is just the tip of the iceberg.",
+   "translation": "Sinceramente, este desacuerdo es solo la punta del iceberg. (the tip of the iceberg)",
+   "apply_sentence": "Those complaints are only ____ of a bigger problem.",
+   "apply_answer": "the tip of the iceberg",
+   "apply_translation": "Esas quejas son solo la punta del iceberg de un problema mayor.",
+   "glossary_word": "the tip of the iceberg",
+   "glossary_meaning": "la punta del iceberg",
+   "glossary_ipa": "ˈaɪsbɜːɡ",
+   "visual_hint": "🧊🏥"
+  },
+  {
+   "id": "idm-walk-on-eggshells-c2",
+   "kind": "idiom",
+   "text": "Nurses shouldn't have to walk on eggshells around the chief.",
+   "translation": "Las enfermeras no deberían andar con pies de plomo con el jefe. (walk on eggshells)",
+   "apply_sentence": "After the argument, we all had to ____ around him.",
+   "apply_answer": "walk on eggshells",
+   "apply_translation": "Tras la discusión, todos tuvimos que andar con pies de plomo con él.",
+   "glossary_word": "walk on eggshells",
+   "glossary_meaning": "andar con pies de plomo",
+   "glossary_ipa": "ˈeɡʃelz",
+   "visual_hint": "🥚😰"
+  }
+ ],
+ "c2-immunology-desensitization": [
+  {
+   "id": "idm-bite-the-bullet-c2",
+   "kind": "idiom",
+   "text": "Patients must bite the bullet and endure months of daily doses.",
+   "translation": "Los pacientes deben apretar los dientes y soportar meses de dosis diarias. (bite the bullet)",
+   "apply_sentence": "I decided to ____ and finally tell her the truth.",
+   "apply_answer": "bite the bullet",
+   "apply_translation": "Decidí armarme de valor y por fin decirle la verdad.",
+   "glossary_word": "bite the bullet",
+   "glossary_meaning": "armarse de valor",
+   "glossary_ipa": "ˈbʊlɪt",
+   "visual_hint": "💊😬"
+  },
+  {
+   "id": "idm-slow-and-steady-wins-the-race-c2",
+   "kind": "idiom",
+   "text": "With desensitization, slow and steady wins the race.",
+   "translation": "En la desensibilización, despacio y con constancia se gana la carrera. (slow and steady wins the race)",
+   "apply_sentence": "Don't rush the training; ____.",
+   "apply_answer": "slow and steady wins the race",
+   "apply_translation": "No apresures el entrenamiento; despacio y con constancia se gana.",
+   "glossary_word": "slow and steady wins the race",
+   "glossary_meaning": "con constancia se llega lejos",
+   "glossary_ipa": "ˈstedi",
+   "visual_hint": "🐢🏆"
+  }
+ ],
+ "c2-medical-repatriation-logistics": [
+  {
+   "id": "idm-pull-strings-c2",
+   "kind": "idiom",
+   "text": "We had to pull strings to clear the flight permits.",
+   "translation": "Tuvimos que mover hilos para conseguir los permisos de vuelo. (pull strings = usar influencias)",
+   "apply_sentence": "He managed to ____ to get me a seat.",
+   "apply_answer": "pull strings",
+   "apply_translation": "Consiguió mover hilos para conseguirme un asiento.",
+   "glossary_word": "pull strings",
+   "glossary_meaning": "usar influencias",
+   "glossary_ipa": "pʊl strɪŋz",
+   "visual_hint": "🛩️🪢"
+  },
+  {
+   "id": "idm-touch-and-go-c2",
+   "kind": "idiom",
+   "text": "It was touch and go until the plane finally landed.",
+   "translation": "Estuvo en el aire hasta que el avión por fin aterrizó. (touch and go = situación crítica)",
+   "apply_sentence": "The storm made the landing ____.",
+   "apply_answer": "touch and go",
+   "apply_translation": "La tormenta hizo que el aterrizaje fuera muy arriesgado.",
+   "glossary_word": "touch and go",
+   "glossary_meaning": "situación incierta y crítica",
+   "glossary_ipa": "tʌtʃ ænd ɡəʊ",
+   "visual_hint": "🚁😨"
+  }
+ ],
+ "c2-medical-second-opinion": [
+  {
+   "id": "idm-a-grain-of-salt-c2",
+   "kind": "idiom",
+   "text": "I'd take that first diagnosis with a grain of salt.",
+   "translation": "Yo tomaría ese primer diagnóstico con pinzas. (with a grain of salt = con reservas)",
+   "apply_sentence": "Take online reviews with ____.",
+   "apply_answer": "a grain of salt",
+   "apply_translation": "Toma las reseñas en línea con pinzas.",
+   "glossary_word": "a grain of salt",
+   "glossary_meaning": "con reservas",
+   "glossary_ipa": "ɡreɪn ʌv sɔːlt",
+   "visual_hint": "🧂🩺"
+  },
+  {
+   "id": "idm-leave-no-stone-unturned-c2",
+   "kind": "idiom",
+   "text": "The specialist promised to leave no stone unturned.",
+   "translation": "El especialista prometió no dejar piedra sin remover. (leave no stone unturned)",
+   "apply_sentence": "Police said they would ____ in the search.",
+   "apply_answer": "leave no stone unturned",
+   "apply_translation": "La policía dijo que no dejaría piedra sin remover en la búsqueda.",
+   "glossary_word": "leave no stone unturned",
+   "glossary_meaning": "no dejar piedra sin remover",
+   "glossary_ipa": "stəʊn ʌnˈtɜːnd",
+   "visual_hint": "🪨🔎"
+  }
+ ]
+}

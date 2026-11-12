@@ -74,6 +74,36 @@ phrases:
   - word: urban fabric
     meaning: tejido urbano y social
     ipa: ˈɜːrbən ˈfæbrɪk
+- id: idm-c2ug-priced-out
+  text: Long-term residents are being priced out of their own neighborhoods.
+  translation: Los residentes de toda la vida están siendo expulsados de sus barrios por los precios.
+  visual_hint: 🏙️💸
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: priced out
+    meaning: expulsado por precios
+    ipa: praɪst
+  kind: phrasal_verb
+  apply_sentence: Young families are being ____ out of the city centre.
+  apply_answer: priced
+  apply_translation: Las familias jóvenes están siendo expulsadas del centro por los precios.
+- id: idm-c2ug-double-edged
+  text: Urban renewal is a double-edged sword for working-class communities.
+  translation: La renovación urbana es un arma de doble filo para las comunidades obreras (con pros y contras).
+  visual_hint: 🏘️⚔️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: double-edged sword
+    meaning: arma de doble filo
+    ipa: sɔːd
+  kind: idiom
+  apply_sentence: Fame can be a double-edged ____ for young artists.
+  apply_answer: sword
+  apply_translation: La fama puede ser un arma de doble filo para jóvenes artistas.
 roleplay:
   ai_role: neighborhood association chair
   user_role: urban sociologist

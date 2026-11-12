@@ -71,6 +71,36 @@ phrases:
   - word: waving
     meaning: saludando con la mano
     ipa: ˈweɪvɪŋ
+- id: idm-b1al-stuck-in-traffic
+  text: Sorry I'm late, I got stuck in traffic on the highway.
+  translation: Perdona la tardanza, quedé atascado en el tráfico de la autopista.
+  visual_hint: 🚗⏰
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: get stuck
+    meaning: quedarse atascado
+    ipa: stʌk
+  kind: idiom
+  apply_sentence: I couldn't call you because I was ____ in a tunnel.
+  apply_answer: stuck
+  apply_translation: No pude llamarte porque estaba atrapado en un túnel.
+- id: idm-b1al-running-late
+  text: I'm running late, so please start dinner without me tonight.
+  translation: Voy con retraso, así que empiecen la cena sin mí esta noche.
+  visual_hint: 🏃⌛
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: run late
+    meaning: ir con retraso
+    ipa: ˈrʌnɪŋ
+  kind: expression
+  apply_sentence: We're ____ again, so save us some seats.
+  apply_answer: running late
+  apply_translation: Vamos con retraso otra vez, así que guárdennos asientos.
 roleplay:
   ai_role: friend waiting at restaurant
   user_role: caller

@@ -1,0 +1,842 @@
+{
+ "a1-bus-ticket": [
+  {
+   "id": "bus-pick-up-ticket",
+   "kind": "phrasal_verb",
+   "text": "Please pick up your ticket at the window before the bus leaves.",
+   "translation": "Por favor, recoge tu boleto en la ventanilla antes de que salga el autobús. (pick up = recoger)",
+   "apply_sentence": "Can you ____ my bag from the bus station later?",
+   "apply_answer": "pick up",
+   "apply_translation": "¿Puedes recoger mi bolso de la estación de autobuses más tarde?",
+   "glossary_word": "pick up",
+   "glossary_meaning": "recoger",
+   "glossary_ipa": "pɪk ʌp",
+   "visual_hint": "🎫🚌"
+  },
+  {
+   "id": "bus-right-away",
+   "kind": "expression",
+   "text": "Buy the ticket right away, because the bus is almost full.",
+   "translation": "Compra el boleto de inmediato, porque el autobús está casi lleno. (right away = enseguida)",
+   "apply_sentence": "The driver says we must pay ____ when we get on.",
+   "apply_answer": "right away",
+   "apply_translation": "El conductor dice que debemos pagar enseguida cuando subamos.",
+   "glossary_word": "right away",
+   "glossary_meaning": "enseguida, de inmediato",
+   "glossary_ipa": "raɪt əˈweɪ",
+   "visual_hint": "⚡🚌"
+  }
+ ],
+ "a1-ferry-boat-ticket": [
+  {
+   "id": "ferry-take-a-seat",
+   "kind": "expression",
+   "text": "Take a seat on the top deck and enjoy the view.",
+   "translation": "Siéntate en la cubierta superior y disfruta de la vista. (take a seat = sentarse)",
+   "apply_sentence": "Please ____ here while we wait for the boat.",
+   "apply_answer": "take a seat",
+   "apply_translation": "Por favor, siéntate aquí mientras esperamos el barco.",
+   "glossary_word": "take a seat",
+   "glossary_meaning": "sentarse",
+   "glossary_ipa": "teɪk ə siːt",
+   "visual_hint": "💺⛴️"
+  },
+  {
+   "id": "ferry-have-a-look",
+   "kind": "expression",
+   "text": "Let's have a look at the harbor map before the ferry leaves.",
+   "translation": "Echemos un vistazo al mapa del puerto antes de que salga el ferri. (have a look = echar un vistazo)",
+   "apply_sentence": "Can I ____ at your ticket, please?",
+   "apply_answer": "have a look",
+   "apply_translation": "¿Puedo echar un vistazo a tu boleto, por favor?",
+   "glossary_word": "have a look",
+   "glossary_meaning": "echar un vistazo",
+   "glossary_ipa": "hæv ə lʊk",
+   "visual_hint": "👀🗺️"
+  }
+ ],
+ "a1-subway-metro-card": [
+  {
+   "id": "metro-piece-of-cake",
+   "kind": "idiom",
+   "text": "Buying a metro card is a piece of cake with this machine.",
+   "translation": "Comprar una tarjeta de metro es pan comido con esta máquina. (a piece of cake = algo muy fácil)",
+   "apply_sentence": "Finding the blue line was a ____ for us today.",
+   "apply_answer": "piece of cake",
+   "apply_translation": "Encontrar la línea azul fue pan comido para nosotros hoy.",
+   "glossary_word": "a piece of cake",
+   "glossary_meaning": "pan comido, muy fácil",
+   "glossary_ipa": "ˈpiːs əv keɪk",
+   "visual_hint": "🍰🚇"
+  },
+  {
+   "id": "metro-get-on",
+   "kind": "phrasal_verb",
+   "text": "Get on the blue line and go four stops downtown.",
+   "translation": "Sube a la línea azul y ve cuatro paradas al centro. (get on = subir a)",
+   "apply_sentence": "We ____ the train at the next station.",
+   "apply_answer": "get on",
+   "apply_translation": "Subimos al tren en la próxima estación.",
+   "glossary_word": "get on",
+   "glossary_meaning": "subir (a un transporte)",
+   "glossary_ipa": "ɡet ɒn",
+   "visual_hint": "🚇⬆️"
+  }
+ ],
+ "a1-taxi-to-airport": [
+  {
+   "id": "taxi-hop-in",
+   "kind": "phrasal_verb",
+   "text": "Hop in, and I will put your bags in the trunk.",
+   "translation": "Sube, y yo pondré tus maletas en el maletero. (hop in = subir rápido)",
+   "apply_sentence": "The rain is starting, so ____ the car quickly!",
+   "apply_answer": "hop in",
+   "apply_translation": "¡Empieza a llover, así que sube rápido al coche!",
+   "glossary_word": "hop in",
+   "glossary_meaning": "subir rápido",
+   "glossary_ipa": "hɒp ɪn",
+   "visual_hint": "🚕🧳"
+  },
+  {
+   "id": "taxi-on-time",
+   "kind": "expression",
+   "text": "We need to be on time for my flight to Paris.",
+   "translation": "Tenemos que llegar a tiempo para mi vuelo a París. (on time = puntual)",
+   "apply_sentence": "The bus is always ____ in the morning.",
+   "apply_answer": "on time",
+   "apply_translation": "El autobús siempre llega puntual por la mañana.",
+   "glossary_word": "on time",
+   "glossary_meaning": "a tiempo, puntual",
+   "glossary_ipa": "ɒn taɪm",
+   "visual_hint": "⏰✈️"
+  }
+ ],
+ "a1-train-platform-check": [
+  {
+   "id": "train-get-off",
+   "kind": "phrasal_verb",
+   "text": "Get off at Oxford, and the platform is on the left.",
+   "translation": "Bájate en Oxford, y el andén está a la izquierda. (get off = bajarse)",
+   "apply_sentence": "Where do we ____ the bus for the museum?",
+   "apply_answer": "get off",
+   "apply_translation": "¿Dónde nos bajamos del autobús para ir al museo?",
+   "glossary_word": "get off",
+   "glossary_meaning": "bajarse",
+   "glossary_ipa": "ɡet ɒf",
+   "visual_hint": "🚉⬇️"
+  },
+  {
+   "id": "train-keep-an-eye-on",
+   "kind": "idiom",
+   "text": "Please keep an eye on my bag while I find coach B.",
+   "translation": "Por favor, vigila mi bolso mientras busco el vagón B. (keep an eye on = vigilar)",
+   "apply_sentence": "I ____ the clock so we don't miss the ferry.",
+   "apply_answer": "keep an eye on",
+   "apply_translation": "Vigilo el reloj para no perder el ferri.",
+   "glossary_word": "keep an eye on",
+   "glossary_meaning": "vigilar, estar atento a",
+   "glossary_ipa": "kiːp ən aɪ ɒn",
+   "visual_hint": "👁️🧳"
+  }
+ ],
+ "a2-airport-baggage-claim": [
+  {
+   "id": "baggage-look-out-for",
+   "kind": "phrasal_verb",
+   "text": "Look out for a red tag on my big suitcase.",
+   "translation": "Fíjate en una etiqueta roja en mi maleta grande. (look out for = estar atento a)",
+   "apply_sentence": "Look ____ the yellow signs that point to the exit.",
+   "apply_answer": "out for",
+   "apply_translation": "Fíjate en las señales amarillas que indican la salida.",
+   "glossary_word": "look out for",
+   "glossary_meaning": "estar atento a",
+   "glossary_ipa": "lʊk aʊt fɔː",
+   "visual_hint": "🔎🧳"
+  },
+  {
+   "id": "baggage-hang-on",
+   "kind": "phrasal_verb",
+   "text": "Hang on, I think my ski bag is coming now.",
+   "translation": "Espera un momento, creo que mi bolsa de esquí ya viene. (hang on = esperar un momento)",
+   "apply_sentence": "____ a minute, I need to find my passport.",
+   "apply_answer": "Hang on",
+   "apply_translation": "Espera un momento, necesito encontrar mi pasaporte.",
+   "glossary_word": "hang on",
+   "glossary_meaning": "esperar un momento",
+   "glossary_ipa": "hæŋ ɒn",
+   "visual_hint": "✋🎿"
+  }
+ ],
+ "a2-asking-directions": [
+  {
+   "id": "directions-end-up",
+   "kind": "phrasal_verb",
+   "text": "If you turn left here, you will end up at the river.",
+   "translation": "Si giras a la izquierda aquí, terminarás en el río. (end up = terminar en)",
+   "apply_sentence": "We took the wrong bus and ____ in another town.",
+   "apply_answer": "end up",
+   "apply_translation": "Tomamos el autobús equivocado y terminamos en otro pueblo.",
+   "glossary_word": "end up",
+   "glossary_meaning": "terminar en",
+   "glossary_ipa": "end ʌp",
+   "visual_hint": "🧭🌉"
+  },
+  {
+   "id": "directions-turn-around",
+   "kind": "phrasal_verb",
+   "text": "You went too far, so turn around and walk back.",
+   "translation": "Fuiste demasiado lejos, así que date la vuelta y camina de regreso. (turn around = dar la vuelta)",
+   "apply_sentence": "The taxi driver had to ____ because the road was closed.",
+   "apply_answer": "turn around",
+   "apply_translation": "El taxista tuvo que dar la vuelta porque la calle estaba cerrada.",
+   "glossary_word": "turn around",
+   "glossary_meaning": "dar la vuelta",
+   "glossary_ipa": "tɜːn əˈraʊnd",
+   "visual_hint": "🔄🗺️"
+  }
+ ],
+ "a2-bike-rental-park": [
+  {
+   "id": "bike-take-it-easy",
+   "kind": "idiom",
+   "text": "Take it easy on the path, because it is crowded today.",
+   "translation": "Ve con calma en el camino, porque hoy hay mucha gente. (take it easy = ir con calma)",
+   "apply_sentence": "We can ____ and enjoy the park this afternoon.",
+   "apply_answer": "take it easy",
+   "apply_translation": "Podemos relajarnos y disfrutar del parque esta tarde.",
+   "glossary_word": "take it easy",
+   "glossary_meaning": "tomarlo con calma",
+   "glossary_ipa": "teɪk ɪt ˈiːzi",
+   "visual_hint": "🚲😌"
+  },
+  {
+   "id": "bike-check-out",
+   "kind": "phrasal_verb",
+   "text": "Let's check out the brakes before we leave the shop.",
+   "translation": "Revisemos los frenos antes de salir de la tienda. (check out = revisar)",
+   "apply_sentence": "We should ____ the new bike path near the river.",
+   "apply_answer": "check out",
+   "apply_translation": "Deberíamos conocer el nuevo carril bici cerca del río.",
+   "glossary_word": "check out",
+   "glossary_meaning": "revisar, echar un vistazo",
+   "glossary_ipa": "tʃek aʊt",
+   "visual_hint": "🔧🚲"
+  }
+ ],
+ "a2-train-seat-reservation": [
+  {
+   "id": "train-put-away",
+   "kind": "phrasal_verb",
+   "text": "Please put away your bag so people can walk past.",
+   "translation": "Por favor, guarda tu bolso para que la gente pueda pasar. (put away = guardar)",
+   "apply_sentence": "I will ____ my phone because the conductor is coming.",
+   "apply_answer": "put away",
+   "apply_translation": "Guardaré mi teléfono porque viene el revisor.",
+   "glossary_word": "put away",
+   "glossary_meaning": "guardar",
+   "glossary_ipa": "pʊt əˈweɪ",
+   "visual_hint": "🧳🚆"
+  },
+  {
+   "id": "train-make-sure",
+   "kind": "expression",
+   "text": "Make sure you check the coach number on your ticket.",
+   "translation": "Asegúrate de revisar el número de vagón en tu boleto. (make sure = asegurarse)",
+   "apply_sentence": "Please ____ the window is closed before you sleep.",
+   "apply_answer": "make sure",
+   "apply_translation": "Por favor, asegúrate de que la ventana esté cerrada antes de dormir.",
+   "glossary_word": "make sure",
+   "glossary_meaning": "asegurarse",
+   "glossary_ipa": "meɪk ʃɔː",
+   "visual_hint": "✅🎟️"
+  }
+ ],
+ "a2-uber-pickup-spot": [
+  {
+   "id": "uber-pull-over",
+   "kind": "phrasal_verb",
+   "text": "Can you pull over next to the pharmacy, please?",
+   "translation": "¿Puede detenerse junto a la farmacia, por favor? (pull over = orillarse y parar)",
+   "apply_sentence": "The driver had to ____ because an ambulance was coming.",
+   "apply_answer": "pull over",
+   "apply_translation": "El conductor tuvo que orillarse porque venía una ambulancia.",
+   "glossary_word": "pull over",
+   "glossary_meaning": "orillarse y parar",
+   "glossary_ipa": "pʊl ˈəʊvə",
+   "visual_hint": "🚗🛑"
+  },
+  {
+   "id": "uber-on-the-way",
+   "kind": "expression",
+   "text": "I am on the way, wearing a yellow coat.",
+   "translation": "Voy en camino, con un abrigo amarillo. (on the way = en camino)",
+   "apply_sentence": "The train is ____, so please wait at the station.",
+   "apply_answer": "on the way",
+   "apply_translation": "El tren ya está en camino, así que espera en la estación.",
+   "glossary_word": "on the way",
+   "glossary_meaning": "en camino",
+   "glossary_ipa": "ɒn ðə weɪ",
+   "visual_hint": "📍🧥"
+  }
+ ],
+ "b1-delayed-flight": [
+  {
+   "id": "delay-same-boat",
+   "kind": "idiom",
+   "text": "Don't worry, we are all in the same boat with this delay.",
+   "translation": "No te preocupes, todos estamos en la misma situación con este retraso. (in the same boat = en la misma situación)",
+   "apply_sentence": "The strike affects everyone, so we are all ____.",
+   "apply_answer": "in the same boat",
+   "apply_translation": "La huelga afecta a todos, así que todos estamos en la misma situación.",
+   "glossary_word": "in the same boat",
+   "glossary_meaning": "en el mismo barco",
+   "glossary_ipa": "ɪn ðə seɪm bəʊt",
+   "visual_hint": "⛵✈️"
+  },
+  {
+   "id": "delay-kill-time",
+   "kind": "idiom",
+   "text": "We have five hours to kill time before the next flight.",
+   "translation": "Tenemos cinco horas para matar el tiempo antes del próximo vuelo. (kill time = pasar el rato)",
+   "apply_sentence": "I read a magazine to ____ at the train station.",
+   "apply_answer": "kill time",
+   "apply_translation": "Leí una revista para matar el tiempo en la estación de tren.",
+   "glossary_word": "kill time",
+   "glossary_meaning": "matar el tiempo",
+   "glossary_ipa": "kɪl taɪm",
+   "visual_hint": "⌛📖"
+  }
+ ],
+ "b1-highway-toll-pass": [
+  {
+   "id": "toll-ahead-of-time",
+   "kind": "expression",
+   "text": "I activated the box ahead of time, so the toll lane worked.",
+   "translation": "Activé el dispositivo con anticipación, así que el carril de peaje funcionó. (ahead of time = con antelación)",
+   "apply_sentence": "It is smart to book the ferry ____ in summer.",
+   "apply_answer": "ahead of time",
+   "apply_translation": "Es inteligente reservar el ferri con antelación en verano.",
+   "glossary_word": "ahead of time",
+   "glossary_meaning": "con antelación",
+   "glossary_ipa": "əˈhed əv taɪm",
+   "visual_hint": "🛣️🕐"
+  },
+  {
+   "id": "toll-fill-up",
+   "kind": "phrasal_verb",
+   "text": "Let's fill up with fuel before we reach the congestion zone.",
+   "translation": "Llenemos el tanque antes de llegar a la zona de congestión. (fill up = llenar)",
+   "apply_sentence": "We need to ____ the tank before the long drive.",
+   "apply_answer": "fill up",
+   "apply_translation": "Necesitamos llenar el tanque antes del viaje largo.",
+   "glossary_word": "fill up",
+   "glossary_meaning": "llenar el tanque",
+   "glossary_ipa": "fɪl ʌp",
+   "visual_hint": "⛽🚗"
+  }
+ ],
+ "b1-international-sim-card": [
+  {
+   "id": "sim-set-up",
+   "kind": "phrasal_verb",
+   "text": "Can you help me set up the eSIM on my phone?",
+   "translation": "¿Puedes ayudarme a configurar la eSIM en mi teléfono? (set up = configurar)",
+   "apply_sentence": "The hotel will ____ a taxi for you tomorrow morning.",
+   "apply_answer": "set up",
+   "apply_translation": "El hotel te organizará un taxi mañana por la mañana.",
+   "glossary_word": "set up",
+   "glossary_meaning": "configurar, organizar",
+   "glossary_ipa": "set ʌp",
+   "visual_hint": "📱⚙️"
+  },
+  {
+   "id": "sim-keep-in-touch",
+   "kind": "idiom",
+   "text": "I want to keep in touch with my family using WhatsApp.",
+   "translation": "Quiero mantenerme en contacto con mi familia usando WhatsApp. (keep in touch = mantener contacto)",
+   "apply_sentence": "Let's ____ while you are traveling around Asia.",
+   "apply_answer": "keep in touch",
+   "apply_translation": "Mantengámonos en contacto mientras viajas por Asia.",
+   "glossary_word": "keep in touch",
+   "glossary_meaning": "mantenerse en contacto",
+   "glossary_ipa": "kiːp ɪn tʌtʃ",
+   "visual_hint": "💬🌍"
+  }
+ ],
+ "b1-lost-suitcase-report": [
+  {
+   "id": "suitcase-fingers-crossed",
+   "kind": "idiom",
+   "text": "Fingers crossed my suitcase arrives on tomorrow's first flight.",
+   "translation": "Ojalá mi maleta llegue en el primer vuelo de mañana. (fingers crossed = ojalá)",
+   "apply_sentence": "We have no seats yet, but ____ the airline finds us one.",
+   "apply_answer": "fingers crossed",
+   "apply_translation": "Aún no tenemos asientos, pero ojalá la aerolínea nos encuentre uno.",
+   "glossary_word": "fingers crossed",
+   "glossary_meaning": "cruzar los dedos, ojalá",
+   "glossary_ipa": "ˈfɪŋɡəz krɒst",
+   "visual_hint": "🤞🧳"
+  },
+  {
+   "id": "suitcase-show-up",
+   "kind": "phrasal_verb",
+   "text": "If my bag doesn't show up tonight, please call the hotel.",
+   "translation": "Si mi maleta no aparece esta noche, por favor llame al hotel. (show up = aparecer)",
+   "apply_sentence": "The driver didn't ____ at the arrival gate.",
+   "apply_answer": "show up",
+   "apply_translation": "El conductor no apareció en la puerta de llegadas.",
+   "glossary_word": "show up",
+   "glossary_meaning": "aparecer",
+   "glossary_ipa": "ʃəʊ ʌp",
+   "visual_hint": "🧳❓"
+  }
+ ],
+ "b1-missed-train-connection": [
+  {
+   "id": "connection-cut-it-close",
+   "kind": "idiom",
+   "text": "We cut it close, and the first train was late.",
+   "translation": "Lo dejamos muy justo, y el primer tren llegó tarde. (cut it close = ir muy justo de tiempo)",
+   "apply_sentence": "He always likes to ____ and arrive at the gate last.",
+   "apply_answer": "cut it close",
+   "apply_translation": "A él siempre le gusta ir muy justo y llegar el último a la puerta.",
+   "glossary_word": "cut it close",
+   "glossary_meaning": "ir muy justo",
+   "glossary_ipa": "kʌt ɪt kləʊs",
+   "visual_hint": "⏱️🚆"
+  },
+  {
+   "id": "connection-make-it",
+   "kind": "idiom",
+   "text": "If we run, we can still make it to the platform.",
+   "translation": "Si corremos, todavía podemos llegar al andén. (make it = lograrlo)",
+   "apply_sentence": "Sorry, our flight left early, so we didn't ____ home.",
+   "apply_answer": "make it",
+   "apply_translation": "Lo siento, nuestro vuelo salió temprano, así que no logramos llegar a casa.",
+   "glossary_word": "make it",
+   "glossary_meaning": "lograrlo, llegar a tiempo",
+   "glossary_ipa": "meɪk ɪt",
+   "visual_hint": "🏃🚉"
+  }
+ ],
+ "b2-car-rental-dispute": [
+  {
+   "id": "rental-fine-print",
+   "kind": "idiom",
+   "text": "I should have read the fine print before I signed the contract.",
+   "translation": "Debí haber leído la letra pequeña antes de firmar el contrato. (fine print = detalles del contrato)",
+   "apply_sentence": "Always read the ____ when you book a cheap flight.",
+   "apply_answer": "fine print",
+   "apply_translation": "Siempre lee la letra pequeña cuando reserves un vuelo barato.",
+   "glossary_word": "the fine print",
+   "glossary_meaning": "la letra pequeña",
+   "glossary_ipa": "faɪn prɪnt",
+   "visual_hint": "📄🔍"
+  },
+  {
+   "id": "rental-rip-off",
+   "kind": "idiom",
+   "text": "This extra fee is a rip off, and I won't pay it.",
+   "translation": "Esta tarifa extra es un robo, y no la voy a pagar. (rip off = estafa)",
+   "apply_sentence": "Charging forty euros for a sandwich at the airport is a ____.",
+   "apply_answer": "rip off",
+   "apply_translation": "Cobrar cuarenta euros por un sándwich en el aeropuerto es un robo.",
+   "glossary_word": "rip off",
+   "glossary_meaning": "estafa, cobro excesivo",
+   "glossary_ipa": "rɪp ɒf",
+   "visual_hint": "💸🚗"
+  }
+ ],
+ "b2-harbor-charter-itinerary": [
+  {
+   "id": "harbor-go-with-the-flow",
+   "kind": "idiom",
+   "text": "If the swell grows, we will just go with the flow and adjust.",
+   "translation": "Si el oleaje crece, simplemente nos adaptaremos y ajustaremos. (go with the flow = adaptarse)",
+   "apply_sentence": "On a boat trip, it's best to ____ and not stress.",
+   "apply_answer": "go with the flow",
+   "apply_translation": "En un viaje en barco, lo mejor es dejarse llevar y no estresarse.",
+   "glossary_word": "go with the flow",
+   "glossary_meaning": "dejarse llevar",
+   "glossary_ipa": "ɡəʊ wɪð ðə fləʊ",
+   "visual_hint": "🌊⛵"
+  },
+  {
+   "id": "harbor-steer-clear",
+   "kind": "idiom",
+   "text": "The captain wants to steer clear of the choppy water near the rocks.",
+   "translation": "El capitán quiere evitar el agua picada cerca de las rocas. (steer clear of = evitar)",
+   "apply_sentence": "Tourists should ____ the crowded pier at noon.",
+   "apply_answer": "steer clear of",
+   "apply_translation": "Los turistas deberían evitar el muelle concurrido al mediodía.",
+   "glossary_word": "steer clear of",
+   "glossary_meaning": "evitar",
+   "glossary_ipa": "stɪə klɪər əv",
+   "visual_hint": "🚫🪨"
+  }
+ ],
+ "b2-overbooked-flight-volunteer": [
+  {
+   "id": "overbooked-sweeten-deal",
+   "kind": "idiom",
+   "text": "Could you sweeten the deal with an upgrade and a hotel voucher?",
+   "translation": "¿Podría mejorar la oferta con un ascenso de clase y un vale de hotel? (sweeten the deal = hacer la oferta más atractiva)",
+   "apply_sentence": "The agent tried to ____ with a free meal.",
+   "apply_answer": "sweeten the deal",
+   "apply_translation": "El agente intentó mejorar la oferta con una comida gratis.",
+   "glossary_word": "sweeten the deal",
+   "glossary_meaning": "mejorar la oferta",
+   "glossary_ipa": "ˈswiːtn ðə diːl",
+   "visual_hint": "🍬✈️"
+  },
+  {
+   "id": "overbooked-play-it-by-ear",
+   "kind": "idiom",
+   "text": "I haven't planned tomorrow yet, so I'll play it by ear.",
+   "translation": "Aún no he planeado mañana, así que improvisaré según se dé. (play it by ear = improvisar)",
+   "apply_sentence": "We have no fixed route, so we will ____ in Italy.",
+   "apply_answer": "play it by ear",
+   "apply_translation": "No tenemos ruta fija, así que improvisaremos en Italia.",
+   "glossary_word": "play it by ear",
+   "glossary_meaning": "improvisar",
+   "glossary_ipa": "pleɪ ɪt baɪ ɪə",
+   "visual_hint": "🎧🗓️"
+  }
+ ],
+ "b2-schengen-visa-extension": [
+  {
+   "id": "visa-red-tape",
+   "kind": "idiom",
+   "text": "The border office has so much red tape that everything takes hours.",
+   "translation": "La oficina fronteriza tiene tanta burocracia que todo tarda horas. (red tape = burocracia)",
+   "apply_sentence": "Getting a work permit involves a lot of ____.",
+   "apply_answer": "red tape",
+   "apply_translation": "Obtener un permiso de trabajo implica mucha burocracia.",
+   "glossary_word": "red tape",
+   "glossary_meaning": "burocracia",
+   "glossary_ipa": "red teɪp",
+   "visual_hint": "📎🛂"
+  },
+  {
+   "id": "visa-bend-over-backwards",
+   "kind": "idiom",
+   "text": "The airline bent over backwards to rebook me after the storm.",
+   "translation": "La aerolínea hizo todo lo posible por reubicarme tras la tormenta. (bend over backwards = esforzarse al máximo)",
+   "apply_sentence": "The hotel staff will ____ to make guests comfortable.",
+   "apply_answer": "bend over backwards",
+   "apply_translation": "El personal del hotel hará lo imposible para que los huéspedes estén cómodos.",
+   "glossary_word": "bent over backwards",
+   "glossary_meaning": "hacer lo imposible",
+   "glossary_ipa": "bend ˈəʊvə ˈbækwədz",
+   "visual_hint": "🙇🌩️"
+  }
+ ],
+ "b2-sleeper-train-compartment": [
+  {
+   "id": "sleeper-mix-up",
+   "kind": "expression",
+   "text": "There was a mix up, and two people got the same cabin.",
+   "translation": "Hubo una confusión, y dos personas recibieron la misma cabina. (mix up = confusión)",
+   "apply_sentence": "Sorry for the ____ with your reservation at the hotel.",
+   "apply_answer": "mix up",
+   "apply_translation": "Disculpa la confusión con tu reserva en el hotel.",
+   "glossary_word": "mix up",
+   "glossary_meaning": "confusión, error",
+   "glossary_ipa": "mɪks ʌp",
+   "visual_hint": "🔀🛏️"
+  },
+  {
+   "id": "sleeper-sort-out",
+   "kind": "phrasal_verb",
+   "text": "The conductor said he would sort out the problem tonight.",
+   "translation": "El revisor dijo que resolvería el problema esta noche. (sort out = resolver)",
+   "apply_sentence": "Let's ____ the schedule before we board the ferry.",
+   "apply_answer": "sort out",
+   "apply_translation": "Resolvamos el horario antes de abordar el ferri.",
+   "glossary_word": "sort out",
+   "glossary_meaning": "resolver, arreglar",
+   "glossary_ipa": "sɔːt aʊt",
+   "visual_hint": "🧩🚂"
+  }
+ ],
+ "c1-customs-declaration": [
+  {
+   "id": "customs-by-the-book",
+   "kind": "idiom",
+   "text": "The officer always does everything by the book at this border.",
+   "translation": "El oficial siempre hace todo según el reglamento en esta frontera. (by the book = siguiendo las reglas)",
+   "apply_sentence": "The pilot insisted on doing the checks ____ before takeoff.",
+   "apply_answer": "by the book",
+   "apply_translation": "El piloto insistió en hacer las revisiones al pie de la letra antes del despegue.",
+   "glossary_word": "by the book",
+   "glossary_meaning": "según el reglamento",
+   "glossary_ipa": "baɪ ðə bʊk",
+   "visual_hint": "📘🛃"
+  },
+  {
+   "id": "customs-red-flag",
+   "kind": "idiom",
+   "text": "Mismatched serial numbers could raise a red flag with customs.",
+   "translation": "Números de serie que no coinciden podrían levantar sospechas en la aduana. (red flag = señal de alerta)",
+   "apply_sentence": "A last-minute one-way ticket might be a ____ for security.",
+   "apply_answer": "red flag",
+   "apply_translation": "Un billete de ida de última hora podría ser una señal de alerta para seguridad.",
+   "glossary_word": "red flag",
+   "glossary_meaning": "señal de alerta",
+   "glossary_ipa": "red flæɡ",
+   "visual_hint": "🚩📦"
+  }
+ ],
+ "c1-eu261-flight-compensation": [
+  {
+   "id": "eu261-pass-the-buck",
+   "kind": "idiom",
+   "text": "Please don't pass the buck to the airport; the airline is responsible.",
+   "translation": "Por favor, no eche la culpa al aeropuerto; la aerolínea es responsable. (pass the buck = pasar la responsabilidad)",
+   "apply_sentence": "The agency kept trying to ____ instead of fixing the booking.",
+   "apply_answer": "pass the buck",
+   "apply_translation": "La agencia seguía intentando eludir la responsabilidad en vez de arreglar la reserva.",
+   "glossary_word": "pass the buck",
+   "glossary_meaning": "eludir la responsabilidad",
+   "glossary_ipa": "pɑːs ðə bʌk",
+   "visual_hint": "👉✈️"
+  },
+  {
+   "id": "eu261-black-and-white",
+   "kind": "idiom",
+   "text": "I need your promise in black and white, with a reference number.",
+   "translation": "Necesito su promesa por escrito, con un número de referencia. (in black and white = por escrito)",
+   "apply_sentence": "Get the refund policy ____ before you pay for the ticket.",
+   "apply_answer": "in black and white",
+   "apply_translation": "Consigue la política de reembolso por escrito antes de pagar el billete.",
+   "glossary_word": "in black and white",
+   "glossary_meaning": "por escrito",
+   "glossary_ipa": "ɪn blæk ənd waɪt",
+   "visual_hint": "📝⚖️"
+  }
+ ],
+ "c1-global-entry-interview": [
+  {
+   "id": "global-nothing-to-hide",
+   "kind": "idiom",
+   "text": "I have nothing to hide, and my travel record is spotless.",
+   "translation": "No tengo nada que ocultar, y mi historial de viajes es impecable. (nothing to hide = nada que esconder)",
+   "apply_sentence": "The traveler opened his luggage because he had ____.",
+   "apply_answer": "nothing to hide",
+   "apply_translation": "El viajero abrió su equipaje porque no tenía nada que ocultar.",
+   "glossary_word": "nothing to hide",
+   "glossary_meaning": "nada que ocultar",
+   "glossary_ipa": "ˈnʌθɪŋ tə haɪd",
+   "visual_hint": "🧾🛂"
+  },
+  {
+   "id": "global-jump-through-hoops",
+   "kind": "idiom",
+   "text": "Applicants jump through hoops just to prove their address history.",
+   "translation": "Los solicitantes pasan por mil trámites solo para probar su historial de domicilios. (jump through hoops = cumplir muchos requisitos)",
+   "apply_sentence": "Visitors have to ____ to get a quick entry permit.",
+   "apply_answer": "jump through hoops",
+   "apply_translation": "Los visitantes tienen que pasar por mil trámites para conseguir un permiso de entrada rápido.",
+   "glossary_word": "jump through hoops",
+   "glossary_meaning": "pasar por muchos trámites",
+   "glossary_ipa": "dʒʌmp θruː huːps",
+   "visual_hint": "🤹📋"
+  }
+ ],
+ "c1-maritime-port-clearance": [
+  {
+   "id": "marina-show-the-ropes",
+   "kind": "idiom",
+   "text": "The harbor master will show us the ropes at the marina.",
+   "translation": "El capitán de puerto nos enseñará cómo funcionan las cosas en la marina. (show the ropes = enseñar lo básico)",
+   "apply_sentence": "A veteran skipper showed the new crew ____ on the docks.",
+   "apply_answer": "the ropes",
+   "apply_translation": "Un capitán veterano enseñó a la nueva tripulación cómo funcionaba todo en los muelles.",
+   "glossary_word": "show the ropes",
+   "glossary_meaning": "enseñar cómo funciona algo",
+   "glossary_ipa": "ʃəʊ ðə rəʊps",
+   "visual_hint": "⚓🪢"
+  },
+  {
+   "id": "marina-smooth-sailing",
+   "kind": "idiom",
+   "text": "Once the paperwork is posted, it should be smooth sailing.",
+   "translation": "Una vez publicados los documentos, todo debería ir sobre ruedas. (smooth sailing = sin dificultades)",
+   "apply_sentence": "After customs, the rest of the trip was ____.",
+   "apply_answer": "smooth sailing",
+   "apply_translation": "Después de la aduana, el resto del viaje fue sobre ruedas.",
+   "glossary_word": "smooth sailing",
+   "glossary_meaning": "sin complicaciones",
+   "glossary_ipa": "smuːð ˈseɪlɪŋ",
+   "visual_hint": "⛵😌"
+  }
+ ],
+ "c1-rail-strike-rerouting": [
+  {
+   "id": "strike-think-on-feet",
+   "kind": "idiom",
+   "text": "With the strike, you have to think on your feet.",
+   "translation": "Con la huelga, hay que pensar rápido y improvisar. (think on your feet = reaccionar rápido)",
+   "apply_sentence": "A good guide can ____ when a road closes unexpectedly.",
+   "apply_answer": "think on their feet",
+   "apply_translation": "Un buen guía sabe reaccionar rápido cuando una carretera se cierra inesperadamente.",
+   "glossary_word": "think on your feet",
+   "glossary_meaning": "pensar rápido",
+   "glossary_ipa": "θɪŋk ɒn jɔː fiːt",
+   "visual_hint": "🧠🚆"
+  },
+  {
+   "id": "strike-back-to-square-one",
+   "kind": "idiom",
+   "text": "Our route via Geneva failed, so we are back to square one.",
+   "translation": "Nuestra ruta por Ginebra falló, así que volvimos al punto de partida. (back to square one = empezar de nuevo)",
+   "apply_sentence": "The canceled flight sent us ____ with our travel plans.",
+   "apply_answer": "back to square one",
+   "apply_translation": "El vuelo cancelado nos devolvió al punto de partida con nuestros planes de viaje.",
+   "glossary_word": "back to square one",
+   "glossary_meaning": "volver a empezar",
+   "glossary_ipa": "bæk tə skweə wʌn",
+   "visual_hint": "🔙🚧"
+  }
+ ],
+ "c2-antarctic-expedition-briefing": [
+  {
+   "id": "antarctic-tip-of-iceberg",
+   "kind": "idiom",
+   "text": "This drifting pack ice is only the tip of the iceberg, team.",
+   "translation": "Este hielo a la deriva es solo la punta del iceberg, equipo. (tip of the iceberg = solo una parte pequeña del problema)",
+   "apply_sentence": "Those delays were merely the ____ of the airline's problems.",
+   "apply_answer": "tip of the iceberg",
+   "apply_translation": "Esos retrasos eran solo la punta del iceberg de los problemas de la aerolínea.",
+   "glossary_word": "tip of the iceberg",
+   "glossary_meaning": "la punta del iceberg",
+   "glossary_ipa": "tɪp əv ði ˈaɪsbɜːɡ",
+   "visual_hint": "🧊🐧"
+  },
+  {
+   "id": "antarctic-thin-ice",
+   "kind": "idiom",
+   "text": "Ignore the five-meter buffer and you will be on thin ice.",
+   "translation": "Si ignoras el margen de cinco metros, estarás en terreno peligroso. (on thin ice = en una situación arriesgada)",
+   "apply_sentence": "Skipping the safety audit leaves the operator ____ with regulators.",
+   "apply_answer": "on thin ice",
+   "apply_translation": "Saltarse la auditoría de seguridad deja al operador en terreno peligroso con los reguladores.",
+   "glossary_word": "on thin ice",
+   "glossary_meaning": "en terreno peligroso",
+   "glossary_ipa": "ɒn θɪn aɪs",
+   "visual_hint": "🥶⚠️"
+  }
+ ],
+ "c2-autonomous-mobility-panel": [
+  {
+   "id": "mobility-double-edged-sword",
+   "kind": "idiom",
+   "text": "Autonomous transit is a double-edged sword for suburban commuters.",
+   "translation": "El transporte autónomo es un arma de doble filo para los viajeros suburbanos. (double-edged sword = con ventajas y riesgos)",
+   "apply_sentence": "Dynamic curbside pricing can be a ____ for local shops.",
+   "apply_answer": "double-edged sword",
+   "apply_translation": "El precio dinámico de la acera puede ser un arma de doble filo para los comercios locales.",
+   "glossary_word": "double-edged sword",
+   "glossary_meaning": "arma de doble filo",
+   "glossary_ipa": "ˈdʌbl edʒd sɔːd",
+   "visual_hint": "⚔️🚗"
+  },
+  {
+   "id": "mobility-kick-the-can",
+   "kind": "idiom",
+   "text": "Cities keep kicking the can down the road on congestion pricing.",
+   "translation": "Las ciudades siguen posponiendo el problema del cobro por congestión. (kick the can down the road = aplazar un problema)",
+   "apply_sentence": "We can't keep ____ on safety audits any longer.",
+   "apply_answer": "kicking the can down the road",
+   "apply_translation": "No podemos seguir posponiendo el problema de las auditorías de seguridad por más tiempo.",
+   "glossary_word": "kicking the can down the road",
+   "glossary_meaning": "posponer un problema",
+   "glossary_ipa": "kɪk ðə kæn daʊn ðə rəʊd",
+   "visual_hint": "🥫🛣️"
+  }
+ ],
+ "c2-aviation-vip-lounge": [
+  {
+   "id": "lounge-pull-out-all-stops",
+   "kind": "idiom",
+   "text": "The agent promised to pull out all the stops for my keynote.",
+   "translation": "La agente prometió hacer todo lo posible para mi conferencia. (pull out all the stops = esforzarse al máximo)",
+   "apply_sentence": "Our hosts will ____ to welcome the delegates tonight.",
+   "apply_answer": "pull out all the stops",
+   "apply_translation": "Nuestros anfitriones harán todo lo posible por recibir a los delegados esta noche.",
+   "glossary_word": "pull out all the stops",
+   "glossary_meaning": "dar el máximo",
+   "glossary_ipa": "pʊl aʊt ɔːl ðə stɒps",
+   "visual_hint": "🎹🛫"
+  },
+  {
+   "id": "lounge-tall-order",
+   "kind": "idiom",
+   "text": "Rebooking four legs in two hours is a tall order.",
+   "translation": "Reprogramar cuatro tramos en dos horas es una tarea difícil. (a tall order = algo muy exigente)",
+   "apply_sentence": "Clearing every document in ten minutes is a ____.",
+   "apply_answer": "tall order",
+   "apply_translation": "Revisar todos los documentos en diez minutos es una tarea muy exigente.",
+   "glossary_word": "a tall order",
+   "glossary_meaning": "una tarea muy exigente",
+   "glossary_ipa": "tɔːl ˈɔːdə",
+   "visual_hint": "🧗📋"
+  }
+ ],
+ "c2-charter-fuel-diversion": [
+  {
+   "id": "charter-err-on-caution",
+   "kind": "idiom",
+   "text": "The captain will err on the side of caution and divert.",
+   "translation": "El capitán optará por la prudencia y se desviará. (err on the side of caution = ser prudente)",
+   "apply_sentence": "In a storm, it is wise to ____ about the route.",
+   "apply_answer": "err on the side of caution",
+   "apply_translation": "En una tormenta, es sensato ser prudente con la ruta.",
+   "glossary_word": "err on the side of caution",
+   "glossary_meaning": "pecar de prudente",
+   "glossary_ipa": "ɜː ɒn ðə saɪd əv ˈkɔːʃn",
+   "visual_hint": "🛩️⛈️"
+  },
+  {
+   "id": "charter-bite-the-bullet",
+   "kind": "idiom",
+   "text": "We have to bite the bullet and accept the diversion cost.",
+   "translation": "Tenemos que apretar los dientes y aceptar el costo del desvío. (bite the bullet = afrontar algo difícil)",
+   "apply_sentence": "She decided to ____ and pay the penalty fee.",
+   "apply_answer": "bite the bullet",
+   "apply_translation": "Decidió apretar los dientes y pagar la multa.",
+   "glossary_word": "bite the bullet",
+   "glossary_meaning": "afrontar lo inevitable",
+   "glossary_ipa": "baɪt ðə ˈbʊlɪt",
+   "visual_hint": "💥💶"
+  }
+ ],
+ "c2-diplomatic-pouch-transit": [
+  {
+   "id": "pouch-dot-the-is",
+   "kind": "idiom",
+   "text": "Please dot the i's and cross the t's on the waybill.",
+   "translation": "Por favor, cuide hasta el último detalle en la guía de envío. (dot the i's and cross the t's = cuidar los detalles)",
+   "apply_sentence": "Before the summit, the staff must ____ on every protocol.",
+   "apply_answer": "dot the i's and cross the t's",
+   "apply_translation": "Antes de la cumbre, el personal debe cuidar hasta el último detalle de cada protocolo.",
+   "glossary_word": "dot the i's and cross the t's",
+   "glossary_meaning": "cuidar cada detalle",
+   "glossary_ipa": "dɒt ði aɪz ənd krɒs ðə tiːz",
+   "visual_hint": "✍️📦"
+  },
+  {
+   "id": "pouch-fine-line",
+   "kind": "idiom",
+   "text": "Border officers walk a fine line between security and courtesy.",
+   "translation": "Los agentes fronterizos caminan sobre una línea delgada entre seguridad y cortesía. (walk a fine line = equilibrar con cuidado)",
+   "apply_sentence": "Diplomats must ____ between openness and discretion.",
+   "apply_answer": "walk a fine line",
+   "apply_translation": "Los diplomáticos deben mantener un delicado equilibrio entre apertura y discreción.",
+   "glossary_word": "walk a fine line",
+   "glossary_meaning": "mantener un delicado equilibrio",
+   "glossary_ipa": "wɔːk ə faɪn laɪn",
+   "visual_hint": "🤹🛂"
+  }
+ ]
+}

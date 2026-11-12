@@ -71,6 +71,36 @@ phrases:
   - word: overnight
     meaning: durante la noche
     ipa: ˌoʊvərˈnaɪt
+- id: sleeper-mix-up
+  text: There was a mix up, and two people got the same cabin.
+  translation: Hubo una confusión, y dos personas recibieron la misma cabina. (mix up = confusión)
+  visual_hint: 🔀🛏️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: mix up
+    meaning: confusión, error
+    ipa: mɪks ʌp
+  kind: expression
+  apply_sentence: Sorry for the ____ with your reservation at the hotel.
+  apply_answer: mix up
+  apply_translation: Disculpa la confusión con tu reserva en el hotel.
+- id: sleeper-sort-out
+  text: The conductor said he would sort out the problem tonight.
+  translation: El revisor dijo que resolvería el problema esta noche. (sort out = resolver)
+  visual_hint: 🧩🚂
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: sort out
+    meaning: resolver, arreglar
+    ipa: sɔːt aʊt
+  kind: phrasal_verb
+  apply_sentence: Let's ____ the schedule before we board the ferry.
+  apply_answer: sort out
+  apply_translation: Resolvamos el horario antes de abordar el ferri.
 roleplay:
   ai_role: sleeping car attendant
   user_role: overnight passenger

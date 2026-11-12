@@ -71,6 +71,36 @@ phrases:
   - word: sing
     meaning: cantar
     ipa: sɪŋ
+- id: idm-a1bd-piece-of-cake
+  text: Thank you! The cake was a piece of cake to make.
+  translation: ¡Gracias! Hacer el pastel fue pan comido (muy fácil).
+  visual_hint: 🍰😋
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: a piece of cake
+    meaning: algo muy fácil
+    ipa: keɪk
+  kind: idiom
+  apply_sentence: The party game was a ____ for the kids.
+  apply_answer: piece of cake
+  apply_translation: El juego de la fiesta fue pan comido para los niños.
+- id: idm-a1bd-have-fun
+  text: Come in and have fun at my birthday party today!
+  translation: ¡Pasa y pásalo bien en mi fiesta de cumpleaños hoy! (divertirse)
+  visual_hint: 🎉😄
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: have fun
+    meaning: divertirse
+    ipa: fʌn
+  kind: expression
+  apply_sentence: Please ____ at the concert tonight, kids.
+  apply_answer: have fun
+  apply_translation: Por favor, diviértanse en el concierto esta noche, chicos.
 roleplay:
   ai_role: classmate (Emma)
   user_role: friend

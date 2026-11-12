@@ -71,6 +71,36 @@ phrases:
   - word: spotless
     meaning: impecable / reluciente
     ipa: ˈspɑːtləs
+- id: idm-check-in-smoothly
+  text: Thanks for sending the lockbox code so we can check in smoothly.
+  translation: Gracias por enviar el código de la cajita para poder registrarnos sin problemas.
+  visual_hint: 🔑🏡
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: check in
+    meaning: registrarse / hacer check-in
+    ipa: tʃek ɪn
+  kind: phrasal_verb
+  apply_sentence: What time are we allowed to ____ if our flight lands early?
+  apply_answer: check in
+  apply_translation: ¿A qué hora podemos hacer el registro si nuestro vuelo aterriza temprano?
+- id: idm-touch-base
+  text: I'll touch base with you once we drop our bags at the apartment.
+  translation: Me pondré en contacto contigo en cuanto dejemos las maletas en el apartamento.
+  visual_hint: 📲🤝
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: touch base
+    meaning: ponerse en contacto / hablar brevemente
+    ipa: tʌtʃ beɪs
+  kind: idiom
+  apply_sentence: Let's ____ tomorrow morning to arrange the key handoff.
+  apply_answer: touch base
+  apply_translation: Pongámonos en contacto mañana por la mañana para coordinar la entrega de llaves.
 roleplay:
   ai_role: property host
   user_role: guest

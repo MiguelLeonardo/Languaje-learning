@@ -71,6 +71,36 @@ phrases:
   - word: spot-on
     meaning: exacto / en el clavo
     ipa: spɑːt ɑːn
+- id: hits-the-spot
+  text: This smoky cocktail hits the spot every single time.
+  translation: 'Este cóctel ahumado da en el clavo cada vez. (hit the spot: justo lo que se necesitaba)'
+  visual_hint: 🍸🎯
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: hits the spot
+    meaning: 'hit the spot: venir perfecto, satisfacer'
+    ipa: spɒt
+  kind: idiom
+  apply_sentence: A hot bath after work always ____.
+  apply_answer: hits the spot
+  apply_translation: Un baño caliente después del trabajo siempre viene perfecto.
+- id: a-far-cry-from
+  text: This is a far cry from your usual sugary cocktails.
+  translation: 'Esto dista mucho de tus cócteles azucarados habituales. (a far cry from: muy diferente de)'
+  visual_hint: 🍹↔️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: a far cry from
+    meaning: 'a far cry from: muy distinto de'
+    ipa: kraɪ
+  kind: idiom
+  apply_sentence: His new flat is ____ his tiny old room.
+  apply_answer: a far cry from
+  apply_translation: Su nuevo piso dista mucho de su pequeña habitación anterior.
 roleplay:
   ai_role: head mixologist
   user_role: patron

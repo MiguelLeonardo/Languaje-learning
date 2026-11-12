@@ -1,0 +1,842 @@
+{
+  "a1-answering-office-phone": [
+    {
+      "id": "idm-hold-on",
+      "kind": "phrasal_verb",
+      "text": "Hold on, please. I will get a pen.",
+      "translation": "Espera un momento, por favor. Voy a buscar un bolígrafo. (hold on: esperar)",
+      "apply_sentence": "Can you ____ a minute? The boss is calling me.",
+      "apply_answer": "hold on",
+      "apply_translation": "¿Puedes esperar un minuto? El jefe me está llamando.",
+      "glossary_word": "hold on",
+      "glossary_meaning": "esperar un momento",
+      "glossary_ipa": "hoʊld ɑːn",
+      "visual_hint": "⏳📞"
+    },
+    {
+      "id": "idm-call-back",
+      "kind": "phrasal_verb",
+      "text": "I will call back in ten minutes, I promise.",
+      "translation": "Te volveré a llamar en diez minutos. (call back: devolver la llamada)",
+      "apply_sentence": "Please ____ when you finish, Mr. Lee.",
+      "apply_answer": "call back",
+      "apply_translation": "Por favor, devuelva la llamada cuando termine, Sr. Lee.",
+      "glossary_word": "call back",
+      "glossary_meaning": "devolver la llamada",
+      "glossary_ipa": "kɔːl bæk",
+      "visual_hint": "📞🔁"
+    }
+  ],
+  "a1-first-day-office": [
+    {
+      "id": "idm-piece-of-cake",
+      "kind": "idiom",
+      "text": "The computer login is a piece of cake today.",
+      "translation": "Entrar al ordenador hoy es muy fácil. (a piece of cake: algo muy fácil)",
+      "apply_sentence": "This new report is a ____, I finished it fast.",
+      "apply_answer": "piece of cake",
+      "apply_translation": "Este informe nuevo es pan comido, lo terminé rápido.",
+      "glossary_word": "a piece of cake",
+      "glossary_meaning": "pan comido, muy fácil",
+      "glossary_ipa": "piːs əv keɪk",
+      "visual_hint": "🍰😎"
+    },
+    {
+      "id": "idm-sit-down",
+      "kind": "phrasal_verb",
+      "text": "Please sit down here, this is your new desk.",
+      "translation": "Siéntate aquí, por favor, este es tu escritorio nuevo. (sit down: sentarse)",
+      "apply_sentence": "Let's ____ and drink some coffee with the team.",
+      "apply_answer": "sit down",
+      "apply_translation": "Sentémonos a tomar café con el equipo.",
+      "glossary_word": "sit down",
+      "glossary_meaning": "sentarse",
+      "glossary_ipa": "sɪt daʊn",
+      "visual_hint": "🪑👋"
+    }
+  ],
+  "a1-it-password-reset": [
+    {
+      "id": "idm-log-in",
+      "kind": "phrasal_verb",
+      "text": "I cannot log in to my computer this morning.",
+      "translation": "No puedo iniciar sesión en mi ordenador esta mañana. (log in: iniciar sesión)",
+      "apply_sentence": "Please ____ with your new password and try again.",
+      "apply_answer": "log in",
+      "apply_translation": "Por favor, inicia sesión con tu nueva contraseña e inténtalo de nuevo.",
+      "glossary_word": "log in",
+      "glossary_meaning": "iniciar sesión",
+      "glossary_ipa": "lɔːɡ ɪn",
+      "visual_hint": "💻🔑"
+    },
+    {
+      "id": "idm-right-away",
+      "kind": "expression",
+      "text": "Can you reset my password right away, please?",
+      "translation": "¿Puedes restablecer mi contraseña enseguida, por favor? (right away: inmediatamente)",
+      "apply_sentence": "The manager needs the printer fixed ____.",
+      "apply_answer": "right away",
+      "apply_translation": "El gerente necesita que arreglen la impresora enseguida.",
+      "glossary_word": "right away",
+      "glossary_meaning": "enseguida",
+      "glossary_ipa": "raɪt əˈweɪ",
+      "visual_hint": "⚡🛠️"
+    }
+  ],
+  "a1-leaving-for-the-day": [
+    {
+      "id": "idm-call-it-a-day",
+      "kind": "idiom",
+      "text": "It is six o'clock, so let's call it a day.",
+      "translation": "Son las seis, así que terminemos por hoy. (call it a day: dejar de trabajar)",
+      "apply_sentence": "I am tired, so I will ____ now.",
+      "apply_answer": "call it a day",
+      "apply_translation": "Estoy cansado, así que lo dejo por hoy.",
+      "glossary_word": "call it a day",
+      "glossary_meaning": "terminar la jornada",
+      "glossary_ipa": "kɔːl ɪt ə deɪ",
+      "visual_hint": "🌆😴"
+    },
+    {
+      "id": "idm-see-you-tomorrow",
+      "kind": "expression",
+      "text": "Thanks for your help, and see you tomorrow morning!",
+      "translation": "¡Gracias por tu ayuda y hasta mañana por la mañana!",
+      "apply_sentence": "Bye, Anna! ____ at nine for the meeting.",
+      "apply_answer": "See you tomorrow",
+      "apply_translation": "¡Adiós, Anna! Hasta mañana a las nueve para la reunión.",
+      "glossary_word": "see you tomorrow",
+      "glossary_meaning": "hasta mañana",
+      "glossary_ipa": "siː juː təˈmɑːroʊ",
+      "visual_hint": "👋🌙"
+    }
+  ],
+  "a1-office-printer-paper": [
+    {
+      "id": "idm-run-out-of",
+      "kind": "phrasal_verb",
+      "text": "We ran out of paper for the printer again.",
+      "translation": "Se nos acabó el papel de la impresora otra vez. (run out of: quedarse sin)",
+      "apply_sentence": "Oh no, we ____ coffee again on Monday morning.",
+      "apply_answer": "ran out of",
+      "apply_translation": "Ay no, otra vez se nos acabó el café el lunes por la mañana.",
+      "glossary_word": "run out of",
+      "glossary_meaning": "quedarse sin",
+      "glossary_ipa": "rʌn aʊt əv",
+      "visual_hint": "📄😟"
+    },
+    {
+      "id": "idm-pick-up",
+      "kind": "phrasal_verb",
+      "text": "Can you pick up some pens from the store?",
+      "translation": "¿Puedes recoger unos bolígrafos de la tienda? (pick up: recoger)",
+      "apply_sentence": "I will ____ the new chairs from the shop today.",
+      "apply_answer": "pick up",
+      "apply_translation": "Voy a recoger las sillas nuevas de la tienda hoy.",
+      "glossary_word": "pick up",
+      "glossary_meaning": "recoger",
+      "glossary_ipa": "pɪk ʌp",
+      "visual_hint": "🛍️🖊️"
+    }
+  ],
+  "a2-requesting-vacation-days": [
+    {
+      "id": "idm-take-time-off",
+      "kind": "expression",
+      "text": "I would like to take time off next Friday.",
+      "translation": "Me gustaría tomarme tiempo libre el próximo viernes. (take time off: pedir días libres)",
+      "apply_sentence": "She wants to ____ in August to visit her family.",
+      "apply_answer": "take time off",
+      "apply_translation": "Ella quiere tomarse días libres en agosto para visitar a su familia.",
+      "glossary_word": "take time off",
+      "glossary_meaning": "tomarse días libres",
+      "glossary_ipa": "teɪk taɪm ɔːf",
+      "visual_hint": "🏖️📅"
+    },
+    {
+      "id": "idm-fill-in",
+      "kind": "phrasal_verb",
+      "text": "Who can fill in for me while I am away?",
+      "translation": "¿Quién puede sustituirme mientras estoy fuera? (fill in: suplir a alguien)",
+      "apply_sentence": "Tom will ____ for Maria at the front desk.",
+      "apply_answer": "fill in",
+      "apply_translation": "Tom sustituirá a María en recepción.",
+      "glossary_word": "fill in",
+      "glossary_meaning": "sustituir",
+      "glossary_ipa": "fɪl ɪn",
+      "visual_hint": "🔄🧑‍💼"
+    }
+  ],
+  "a2-scheduling-meeting": [
+    {
+      "id": "idm-get-together",
+      "kind": "phrasal_verb",
+      "text": "Let's get together on Tuesday for a short team call.",
+      "translation": "Reunámonos el martes para una breve llamada de equipo. (get together: reunirse)",
+      "apply_sentence": "The team will ____ every Monday to plan the week.",
+      "apply_answer": "get together",
+      "apply_translation": "El equipo se reúne cada lunes para planear la semana.",
+      "glossary_word": "get together",
+      "glossary_meaning": "reunirse",
+      "glossary_ipa": "ɡɛt təˈɡɛðər",
+      "visual_hint": "👥📆"
+    },
+    {
+      "id": "idm-works-for-me",
+      "kind": "expression",
+      "text": "Three o'clock works for me, if it works for you.",
+      "translation": "Las tres me viene bien, si a ti te viene bien. (works for me: me va bien)",
+      "apply_sentence": "Thursday morning ____, but Friday is too busy.",
+      "apply_answer": "works for me",
+      "apply_translation": "El jueves por la mañana me va bien, pero el viernes estoy muy ocupado.",
+      "glossary_word": "works for me",
+      "glossary_meaning": "me viene bien",
+      "glossary_ipa": "wɜːrks fɔːr miː",
+      "visual_hint": "👍🕒"
+    }
+  ],
+  "a2-submitting-expense-report": [
+    {
+      "id": "idm-keep-track",
+      "kind": "expression",
+      "text": "Please keep track of every receipt from your trip.",
+      "translation": "Por favor, lleva el control de cada recibo de tu viaje. (keep track: llevar la cuenta)",
+      "apply_sentence": "It is hard to ____ of all my small expenses.",
+      "apply_answer": "keep track",
+      "apply_translation": "Es difícil llevar la cuenta de todos mis gastos pequeños.",
+      "glossary_word": "keep track",
+      "glossary_meaning": "llevar el control",
+      "glossary_ipa": "kiːp træk",
+      "visual_hint": "🧾🧮"
+    },
+    {
+      "id": "idm-pay-back",
+      "kind": "phrasal_verb",
+      "text": "The company will pay back your travel costs soon.",
+      "translation": "La empresa te reembolsará los gastos de viaje pronto. (pay back: devolver dinero)",
+      "apply_sentence": "I will ____ the money I borrowed for lunch.",
+      "apply_answer": "pay back",
+      "apply_translation": "Te devolveré el dinero que pedí prestado para el almuerzo.",
+      "glossary_word": "pay back",
+      "glossary_meaning": "devolver dinero",
+      "glossary_ipa": "peɪ bæk",
+      "visual_hint": "💸🔙"
+    }
+  ],
+  "a2-welcoming-client-visitor": [
+    {
+      "id": "idm-make-yourself-at-home",
+      "kind": "idiom",
+      "text": "Please come in and make yourself at home.",
+      "translation": "Pase, por favor, y siéntase como en casa. (make yourself at home: sentirse cómodo)",
+      "apply_sentence": "Take a seat and ____ while I get some water.",
+      "apply_answer": "make yourself at home",
+      "apply_translation": "Siéntese y póngase cómodo mientras traigo agua.",
+      "glossary_word": "make yourself at home",
+      "glossary_meaning": "sentirse como en casa",
+      "glossary_ipa": "meɪk jɔːrˈsɛlf æt hoʊm",
+      "visual_hint": "🏠🤝"
+    },
+    {
+      "id": "idm-show-around",
+      "kind": "phrasal_verb",
+      "text": "I can show you around our office before the meeting.",
+      "translation": "Puedo enseñarle nuestra oficina antes de la reunión. (show around: hacer un recorrido)",
+      "apply_sentence": "Sam will show the new interns ____ this afternoon.",
+      "apply_answer": "around",
+      "apply_translation": "Sam enseñará las instalaciones a los nuevos becarios esta tarde.",
+      "glossary_word": "show around",
+      "glossary_meaning": "hacer un recorrido",
+      "glossary_ipa": "ʃoʊ əˈraʊnd",
+      "visual_hint": "🏢🚶"
+    }
+  ],
+  "a2-working-from-home-note": [
+    {
+      "id": "idm-check-in",
+      "kind": "phrasal_verb",
+      "text": "I will check in with the team at nine.",
+      "translation": "Me comunicaré con el equipo a las nueve. (check in: reportarse)",
+      "apply_sentence": "Please ____ with me every afternoon about your tasks.",
+      "apply_answer": "check in",
+      "apply_translation": "Por favor, repórtate conmigo cada tarde sobre tus tareas.",
+      "glossary_word": "check in",
+      "glossary_meaning": "reportarse",
+      "glossary_ipa": "tʃɛk ɪn",
+      "visual_hint": "🏡✅"
+    },
+    {
+      "id": "idm-up-and-running",
+      "kind": "expression",
+      "text": "My internet is up and running again, sorry about that.",
+      "translation": "Mi internet ya funciona otra vez, perdón por eso. (up and running: funcionando)",
+      "apply_sentence": "The new printer is finally ____ in the office.",
+      "apply_answer": "up and running",
+      "apply_translation": "La impresora nueva por fin está funcionando en la oficina.",
+      "glossary_word": "up and running",
+      "glossary_meaning": "funcionando",
+      "glossary_ipa": "ʌp ænd ˈrʌnɪŋ",
+      "visual_hint": "📶💻"
+    }
+  ],
+  "b1-asking-for-feedback": [
+    {
+      "id": "idm-constructive-criticism",
+      "kind": "expression",
+      "text": "I would really welcome some constructive criticism on my talk.",
+      "translation": "Agradecería mucho algunas críticas constructivas sobre mi charla. (constructive criticism: críticas útiles)",
+      "apply_sentence": "Good managers give ____ instead of just complaining.",
+      "apply_answer": "constructive criticism",
+      "apply_translation": "Los buenos jefes dan críticas constructivas en vez de solo quejarse.",
+      "glossary_word": "constructive criticism",
+      "glossary_meaning": "crítica constructiva",
+      "glossary_ipa": "kənˈstrʌktɪv ˈkrɪtɪsɪzəm",
+      "visual_hint": "🗣️🔧"
+    },
+    {
+      "id": "idm-take-on-board",
+      "kind": "idiom",
+      "text": "I will take on board your suggestions for next time.",
+      "translation": "Tendré en cuenta tus sugerencias la próxima vez. (take on board: aceptar y considerar)",
+      "apply_sentence": "The team chose to ____ the client's new ideas.",
+      "apply_answer": "take on board",
+      "apply_translation": "El equipo decidió tener en cuenta las nuevas ideas del cliente.",
+      "glossary_word": "take on board",
+      "glossary_meaning": "tener en cuenta",
+      "glossary_ipa": "teɪk ɑːn bɔːrd",
+      "visual_hint": "📝👂"
+    }
+  ],
+  "b1-cross-team-handoff": [
+    {
+      "id": "idm-hand-over",
+      "kind": "phrasal_verb",
+      "text": "I will hand over the design files to your team today.",
+      "translation": "Hoy le entregaré los archivos de diseño a tu equipo. (hand over: entregar)",
+      "apply_sentence": "She had to ____ her projects before going on leave.",
+      "apply_answer": "hand over",
+      "apply_translation": "Tuvo que entregar sus proyectos antes de irse de baja.",
+      "glossary_word": "hand over",
+      "glossary_meaning": "entregar",
+      "glossary_ipa": "hænd ˈoʊvər",
+      "visual_hint": "📁🤲"
+    },
+    {
+      "id": "idm-on-the-same-page",
+      "kind": "idiom",
+      "text": "Let's make sure we are all on the same page.",
+      "translation": "Asegurémonos de que todos estamos de acuerdo. (on the same page: entender igual)",
+      "apply_sentence": "Before the launch, we need to be ____ about the schedule.",
+      "apply_answer": "on the same page",
+      "apply_translation": "Antes del lanzamiento, tenemos que estar de acuerdo con el calendario.",
+      "glossary_word": "on the same page",
+      "glossary_meaning": "estar en sintonía",
+      "glossary_ipa": "ɑːn ðə seɪm peɪdʒ",
+      "visual_hint": "📄🤝"
+    }
+  ],
+  "b1-handling-audio-glitch": [
+    {
+      "id": "idm-cut-out",
+      "kind": "phrasal_verb",
+      "text": "Your voice keeps cutting out, so I can't hear you.",
+      "translation": "Tu voz se corta todo el rato y no te oigo. (cut out: interrumpirse)",
+      "apply_sentence": "The sound keeps ____ whenever someone shares the screen.",
+      "apply_answer": "cutting out",
+      "apply_translation": "El sonido se corta cada vez que alguien comparte la pantalla.",
+      "glossary_word": "cut out",
+      "glossary_meaning": "interrumpirse",
+      "glossary_ipa": "kʌt aʊt",
+      "visual_hint": "🎧❌"
+    },
+    {
+      "id": "idm-bear-with-me",
+      "kind": "idiom",
+      "text": "Bear with me while I check my microphone settings.",
+      "translation": "Ten paciencia mientras reviso la configuración del micrófono. (bear with me: ten paciencia)",
+      "apply_sentence": "Please ____, I am trying to restart the app.",
+      "apply_answer": "bear with me",
+      "apply_translation": "Ten paciencia, por favor, estoy intentando reiniciar la aplicación.",
+      "glossary_word": "bear with me",
+      "glossary_meaning": "ten paciencia conmigo",
+      "glossary_ipa": "bɛr wɪð miː",
+      "visual_hint": "🎤⏳"
+    }
+  ],
+  "b1-onboarding-new-colleague": [
+    {
+      "id": "idm-learn-the-ropes",
+      "kind": "idiom",
+      "text": "Don't worry, you'll soon learn the ropes around here.",
+      "translation": "No te preocupes, pronto aprenderás cómo funcionan las cosas aquí. (learn the ropes: aprender lo básico)",
+      "apply_sentence": "It takes a few weeks to ____ in a new job.",
+      "apply_answer": "learn the ropes",
+      "apply_translation": "Se tarda unas semanas en aprender cómo funciona un trabajo nuevo.",
+      "glossary_word": "learn the ropes",
+      "glossary_meaning": "aprender los trucos",
+      "glossary_ipa": "lɜːrn ðə roʊps",
+      "visual_hint": "🧭🧑‍💼"
+    },
+    {
+      "id": "idm-feel-free",
+      "kind": "expression",
+      "text": "Feel free to ask me anything about the tools.",
+      "translation": "Siéntete libre de preguntarme lo que quieras sobre las herramientas. (feel free: no dudes en)",
+      "apply_sentence": "____ to use my notes if they help you.",
+      "apply_answer": "Feel free",
+      "apply_translation": "Siéntete libre de usar mis notas si te ayudan.",
+      "glossary_word": "feel free",
+      "glossary_meaning": "no dudes en",
+      "glossary_ipa": "fiːl friː",
+      "visual_hint": "🙌💬"
+    }
+  ],
+  "b1-project-status-update": [
+    {
+      "id": "idm-on-track",
+      "kind": "idiom",
+      "text": "Our project is on track to finish by Friday.",
+      "translation": "Nuestro proyecto va bien para terminar el viernes. (on track: según lo previsto)",
+      "apply_sentence": "Thanks to the extra help, we are still ____ for the release.",
+      "apply_answer": "on track",
+      "apply_translation": "Gracias a la ayuda extra, seguimos en camino para el lanzamiento.",
+      "glossary_word": "on track",
+      "glossary_meaning": "según lo previsto",
+      "glossary_ipa": "ɑːn træk",
+      "visual_hint": "📈✅"
+    },
+    {
+      "id": "idm-run-into",
+      "kind": "phrasal_verb",
+      "text": "Yesterday I ran into a problem with the database.",
+      "translation": "Ayer me topé con un problema con la base de datos. (run into: encontrarse con)",
+      "apply_sentence": "Last week we ____ trouble with the server.",
+      "apply_answer": "ran into",
+      "apply_translation": "La semana pasada nos topamos con problemas con el servidor.",
+      "glossary_word": "run into",
+      "glossary_meaning": "toparse con",
+      "glossary_ipa": "rʌn ˈɪntuː",
+      "visual_hint": "🚧🗄️"
+    }
+  ],
+  "b2-de-escalating-client-call": [
+    {
+      "id": "idm-put-out-fires",
+      "kind": "idiom",
+      "text": "We are working around the clock, putting out fires.",
+      "translation": "Trabajamos sin parar, apagando incendios. (put out fires: resolver crisis urgentes)",
+      "apply_sentence": "Our team spends half the week ____ for other departments.",
+      "apply_answer": "putting out fires",
+      "apply_translation": "Nuestro equipo pasa media semana apagando incendios para otros departamentos.",
+      "glossary_word": "put out the fire",
+      "glossary_meaning": "resolver una crisis urgente",
+      "glossary_ipa": "pʊt aʊt ðə ˈfaɪər",
+      "visual_hint": "🔥🚒"
+    },
+    {
+      "id": "idm-bear-the-brunt",
+      "kind": "idiom",
+      "text": "I know your customers bore the brunt of this outage.",
+      "translation": "Sé que tus clientes cargaron con lo peor de esta caída. (bear the brunt: sufrir lo peor)",
+      "apply_sentence": "Support staff ____ of the angry calls last week.",
+      "apply_answer": "bore the brunt",
+      "apply_translation": "El personal de soporte cargó con lo peor de las llamadas enfadadas la semana pasada.",
+      "glossary_word": "bore the brunt",
+      "glossary_meaning": "sufrir lo peor",
+      "glossary_ipa": "bɔːr ðə brʌnt",
+      "visual_hint": "😤📞"
+    }
+  ],
+  "b2-job-interview": [
+    {
+      "id": "idm-break-the-ice",
+      "kind": "idiom",
+      "text": "Let me break the ice by saying I love your office.",
+      "translation": "Déjame romper el hielo diciendo que me encanta tu oficina. (break the ice: aliviar la tensión)",
+      "apply_sentence": "A quick joke helped ____ at the start of the panel.",
+      "apply_answer": "break the ice",
+      "apply_translation": "Un chiste rápido ayudó a romper el hielo al inicio del panel.",
+      "glossary_word": "break the ice",
+      "glossary_meaning": "romper el hielo",
+      "glossary_ipa": "breɪk ði aɪs",
+      "visual_hint": "🧊😄"
+    },
+    {
+      "id": "idm-hit-the-ground-running",
+      "kind": "idiom",
+      "text": "I'm ready to hit the ground running if you hire me.",
+      "translation": "Estoy listo para empezar a toda marcha si me contratan. (hit the ground running: empezar con energía)",
+      "apply_sentence": "The new director wanted to ____ during her first week.",
+      "apply_answer": "hit the ground running",
+      "apply_translation": "La nueva directora quería empezar a toda marcha durante su primera semana.",
+      "glossary_word": "hit the ground running",
+      "glossary_meaning": "empezar con fuerza",
+      "glossary_ipa": "hɪt ðə ɡraʊnd ˈrʌnɪŋ",
+      "visual_hint": "🏃💼"
+    }
+  ],
+  "b2-leading-retrospective": [
+    {
+      "id": "idm-lessons-learned",
+      "kind": "expression",
+      "text": "Let's talk about the lessons learned from this sprint.",
+      "translation": "Hablemos de las lecciones aprendidas en este sprint. (lessons learned: aprendizajes)",
+      "apply_sentence": "Each project ends with a review of ____ by the group.",
+      "apply_answer": "lessons learned",
+      "apply_translation": "Cada proyecto termina con una revisión de las lecciones aprendidas por el grupo.",
+      "glossary_word": "lessons learned",
+      "glossary_meaning": "lecciones aprendidas",
+      "glossary_ipa": "ˈlɛsənz lɜːrnd",
+      "visual_hint": "📚🔁"
+    },
+    {
+      "id": "idm-get-the-ball-rolling",
+      "kind": "idiom",
+      "text": "Who wants to get the ball rolling with the first topic?",
+      "translation": "¿Quién quiere empezar con el primer tema? (get the ball rolling: iniciar algo)",
+      "apply_sentence": "I'll ____ by sharing my own mistake from the sprint.",
+      "apply_answer": "get the ball rolling",
+      "apply_translation": "Yo daré el primer paso compartiendo mi propio error del sprint.",
+      "glossary_word": "get the ball rolling",
+      "glossary_meaning": "poner en marcha",
+      "glossary_ipa": "ɡɛt ðə bɔːl ˈroʊlɪŋ",
+      "visual_hint": "⚽🚀"
+    }
+  ],
+  "b2-pitching-internal-automation": [
+    {
+      "id": "idm-streamline",
+      "kind": "expression",
+      "text": "This tool will streamline our reporting and save hours every week.",
+      "translation": "Esta herramienta agilizará nuestros informes y ahorrará horas cada semana. (streamline: simplificar)",
+      "apply_sentence": "We want to ____ the approval process for expenses.",
+      "apply_answer": "streamline",
+      "apply_translation": "Queremos agilizar el proceso de aprobación de gastos.",
+      "glossary_word": "streamline",
+      "glossary_meaning": "simplificar procesos",
+      "glossary_ipa": "ˈstriːmlaɪn",
+      "visual_hint": "⚙️⏱️"
+    },
+    {
+      "id": "idm-cut-corners",
+      "kind": "idiom",
+      "text": "The audit showed they were cutting corners on quality.",
+      "translation": "La auditoría mostró que escatimaban en calidad. (cut corners: hacer las cosas a medias)",
+      "apply_sentence": "The contractor was fired for ____ on safety.",
+      "apply_answer": "cutting corners",
+      "apply_translation": "El contratista fue despedido por escatimar en seguridad.",
+      "glossary_word": "cut corners",
+      "glossary_meaning": "hacer las cosas a medias",
+      "glossary_ipa": "kʌt ˈkɔːrnərz",
+      "visual_hint": "✂️⚠️"
+    }
+  ],
+  "b2-salary-review-discussion": [
+    {
+      "id": "idm-go-the-extra-mile",
+      "kind": "idiom",
+      "text": "This year I went the extra mile on three major projects.",
+      "translation": "Este año me esforcé más de lo esperado en tres proyectos importantes. (go the extra mile: esforzarse más)",
+      "apply_sentence": "Our best employee ____ for the client last week.",
+      "apply_answer": "went the extra mile",
+      "apply_translation": "Nuestra mejor empleada se esforzó más por el cliente la semana pasada.",
+      "glossary_word": "go the extra mile",
+      "glossary_meaning": "esforzarse más",
+      "glossary_ipa": "ɡoʊ ði ˈɛkstrə maɪl",
+      "visual_hint": "🏅🛤️"
+    },
+    {
+      "id": "idm-pull-my-weight",
+      "kind": "idiom",
+      "text": "I believe I've more than pulled my weight on this team.",
+      "translation": "Creo que he hecho más que mi parte en este equipo. (pull your weight: cumplir con tu parte)",
+      "apply_sentence": "Everyone on the team ____ their weight during the busy period.",
+      "apply_answer": "pulled",
+      "apply_translation": "Todos en el equipo cumplieron su parte durante el periodo ajetreado.",
+      "glossary_word": "pull my weight",
+      "glossary_meaning": "hacer tu parte",
+      "glossary_ipa": "pʊl maɪ weɪt",
+      "visual_hint": "💪📊"
+    }
+  ],
+  "c1-delivering-performance-review": [
+    {
+      "id": "idm-room-for-improvement",
+      "kind": "expression",
+      "text": "There is still room for improvement in how you delegate tasks.",
+      "translation": "Todavía hay margen de mejora en cómo delegas tareas. (room for improvement: se puede mejorar)",
+      "apply_sentence": "Your writing is solid, but there is ____ in the structure.",
+      "apply_answer": "room for improvement",
+      "apply_translation": "Tu redacción es sólida, pero hay margen de mejora en la estructura.",
+      "glossary_word": "room for improvement",
+      "glossary_meaning": "margen de mejora",
+      "glossary_ipa": "ruːm fɔːr ɪmˈpruːvmənt",
+      "visual_hint": "📈🔍"
+    },
+    {
+      "id": "idm-sugarcoat",
+      "kind": "idiom",
+      "text": "I won't sugarcoat it: the last two deadlines slipped badly.",
+      "translation": "No voy a endulzarlo: los dos últimos plazos se retrasaron mucho. (sugarcoat: suavizar la verdad)",
+      "apply_sentence": "Our mentor never tried to ____ the bad news for us.",
+      "apply_answer": "sugarcoat",
+      "apply_translation": "Nuestro mentor nunca intentó endulzarnos las malas noticias.",
+      "glossary_word": "sugarcoat",
+      "glossary_meaning": "endulzar la verdad",
+      "glossary_ipa": "ˈʃʊɡərkoʊt",
+      "visual_hint": "🍬🙊"
+    }
+  ],
+  "c1-managing-up-priorities": [
+    {
+      "id": "idm-juggle-priorities",
+      "kind": "idiom",
+      "text": "The executives expect us to juggle priorities that clearly conflict.",
+      "translation": "Los directivos esperan que equilibremos prioridades que claramente chocan. (juggle: manejar varias cosas)",
+      "apply_sentence": "She has to ____ three launches at the same time.",
+      "apply_answer": "juggle",
+      "apply_translation": "Ella tiene que hacer malabares con tres lanzamientos a la vez.",
+      "glossary_word": "juggle priorities",
+      "glossary_meaning": "hacer malabares con prioridades",
+      "glossary_ipa": "ˈdʒʌɡəl ˈpraɪɔːrətiz",
+      "visual_hint": "🤹📋"
+    },
+    {
+      "id": "idm-on-the-back-burner",
+      "kind": "idiom",
+      "text": "We should put the redesign on the back burner for now.",
+      "translation": "Deberíamos dejar el rediseño en segundo plano por ahora. (back burner: aplazado)",
+      "apply_sentence": "Because of budget cuts, the hiring plan went ____ last month.",
+      "apply_answer": "on the back burner",
+      "apply_translation": "Por los recortes de presupuesto, el plan de contratación quedó en segundo plano el mes pasado.",
+      "glossary_word": "on the back burner",
+      "glossary_meaning": "en segundo plano",
+      "glossary_ipa": "ɑːn ðə bæk ˈbɜːrnər",
+      "visual_hint": "🍳⏸️"
+    }
+  ],
+  "c1-negotiating-deadline": [
+    {
+      "id": "idm-meet-halfway",
+      "kind": "idiom",
+      "text": "Could we meet halfway and deliver in two phases?",
+      "translation": "¿Podríamos llegar a un punto medio y entregar en dos fases? (meet halfway: ceder ambos)",
+      "apply_sentence": "Neither side wanted to ____ during the contract talks.",
+      "apply_answer": "meet halfway",
+      "apply_translation": "Ninguna parte quiso llegar a un punto medio durante las negociaciones del contrato.",
+      "glossary_word": "meet you halfway",
+      "glossary_meaning": "llegar a un punto medio",
+      "glossary_ipa": "miːt ˈhæfˈweɪ",
+      "visual_hint": "🤝⚖️"
+    },
+    {
+      "id": "idm-down-to-the-wire",
+      "kind": "idiom",
+      "text": "Last time it went down to the wire, and we burned out.",
+      "translation": "La última vez se decidió en el último minuto y nos agotamos. (down to the wire: hasta el último momento)",
+      "apply_sentence": "The budget approval came ____, just before midnight.",
+      "apply_answer": "down to the wire",
+      "apply_translation": "La aprobación del presupuesto llegó en el último minuto, justo antes de medianoche.",
+      "glossary_word": "down to the wire",
+      "glossary_meaning": "hasta el último segundo",
+      "glossary_ipa": "daʊn tuː ðə ˈwaɪər",
+      "visual_hint": "⏰😰"
+    }
+  ],
+  "c1-post-mortem-incident-lead": [
+    {
+      "id": "idm-root-cause",
+      "kind": "expression",
+      "text": "Our goal is to get to the root cause, not to point fingers.",
+      "translation": "Nuestro objetivo es llegar a la causa raíz, no señalar con el dedo. (root cause: origen del problema)",
+      "apply_sentence": "We need to find the ____ before we patch the system.",
+      "apply_answer": "root cause",
+      "apply_translation": "Necesitamos encontrar la causa raíz antes de parchear el sistema.",
+      "glossary_word": "root cause",
+      "glossary_meaning": "causa raíz",
+      "glossary_ipa": "ruːt kɔːz",
+      "visual_hint": "🌱🔎"
+    },
+    {
+      "id": "idm-fall-through-the-cracks",
+      "kind": "idiom",
+      "text": "Several alerts fell through the cracks during the night shift.",
+      "translation": "Varias alertas se perdieron sin atención durante el turno de noche. (fall through the cracks: pasar inadvertido)",
+      "apply_sentence": "Without a checklist, small tasks ____.",
+      "apply_answer": "fell through the cracks",
+      "apply_translation": "Sin una lista de verificación, las tareas pequeñas pasaron inadvertidas.",
+      "glossary_word": "fall through the cracks",
+      "glossary_meaning": "pasar desapercibido",
+      "glossary_ipa": "fɔːl θruː ðə kræks",
+      "visual_hint": "🕳️📟"
+    }
+  ],
+  "c1-vendor-sla-renegotiation": [
+    {
+      "id": "idm-hold-accountable",
+      "kind": "expression",
+      "text": "We need to hold both teams accountable for the repeated downtime.",
+      "translation": "Necesitamos hacer responsables a ambos equipos de las caídas repetidas. (hold accountable: exigir responsabilidad)",
+      "apply_sentence": "Every manager should be held ____ for their own budget.",
+      "apply_answer": "accountable",
+      "apply_translation": "Todo gerente debería responder por su propio presupuesto.",
+      "glossary_word": "hold accountable",
+      "glossary_meaning": "exigir responsabilidad",
+      "glossary_ipa": "hoʊld əˈkaʊntəbəl",
+      "visual_hint": "⚖️📉"
+    },
+    {
+      "id": "idm-read-the-fine-print",
+      "kind": "idiom",
+      "text": "Before we sign, let's read the fine print on penalties.",
+      "translation": "Antes de firmar, leamos la letra pequeña sobre las penalizaciones. (fine print: cláusulas ocultas)",
+      "apply_sentence": "Always ____ in a vendor contract before agreeing.",
+      "apply_answer": "read the fine print",
+      "apply_translation": "Siempre lee la letra pequeña en un contrato con proveedores antes de aceptar.",
+      "glossary_word": "read the fine print",
+      "glossary_meaning": "leer la letra pequeña",
+      "glossary_ipa": "riːd ðə faɪn prɪnt",
+      "visual_hint": "📜🔍"
+    }
+  ],
+  "c2-crisis-comms-press-briefing": [
+    {
+      "id": "idm-tip-of-the-iceberg",
+      "kind": "idiom",
+      "text": "I suspect today's disclosure is only the tip of the iceberg.",
+      "translation": "Sospecho que la divulgación de hoy es solo la punta del iceberg. (tip of the iceberg: solo una parte)",
+      "apply_sentence": "These complaints are just the ____ of a larger problem.",
+      "apply_answer": "tip of the iceberg",
+      "apply_translation": "Estas quejas son solo la punta del iceberg de un problema mayor.",
+      "glossary_word": "the tip of the iceberg",
+      "glossary_meaning": "la punta del iceberg",
+      "glossary_ipa": "tɪp əv ði ˈaɪsbɜːrɡ",
+      "visual_hint": "🧊🔝"
+    },
+    {
+      "id": "idm-weather-the-storm",
+      "kind": "idiom",
+      "text": "We are confident the company will weather the storm.",
+      "translation": "Confiamos en que la empresa superará la tormenta. (weather the storm: sobrellevar la crisis)",
+      "apply_sentence": "With cash reserves, the firm could ____ of the scandal.",
+      "apply_answer": "weather the storm",
+      "apply_translation": "Con reservas de efectivo, la firma pudo sobrellevar la tormenta del escándalo.",
+      "glossary_word": "weather the storm",
+      "glossary_meaning": "superar la crisis",
+      "glossary_ipa": "ˈwɛðər ðə stɔːrm",
+      "visual_hint": "⛈️🛡️"
+    }
+  ],
+  "c2-executive-pitch": [
+    {
+      "id": "idm-bite-the-bullet",
+      "kind": "idiom",
+      "text": "It's time to bite the bullet and fund the migration.",
+      "translation": "Es hora de armarse de valor y financiar la migración. (bite the bullet: afrontar algo difícil)",
+      "apply_sentence": "The board finally decided to ____ and cut costs.",
+      "apply_answer": "bite the bullet",
+      "apply_translation": "La junta por fin decidió armarse de valor y recortar costes.",
+      "glossary_word": "bite the bullet",
+      "glossary_meaning": "afrontar lo difícil",
+      "glossary_ipa": "baɪt ðə ˈbʊlɪt",
+      "visual_hint": "🔫😬"
+    },
+    {
+      "id": "idm-move-the-needle",
+      "kind": "idiom",
+      "text": "Small tweaks won't move the needle on our margins.",
+      "translation": "Pequeños ajustes no cambiarán de forma notable nuestros márgenes. (move the needle: marcar diferencia)",
+      "apply_sentence": "Only a bold strategy can ____ on market share.",
+      "apply_answer": "move the needle",
+      "apply_translation": "Solo una estrategia audaz puede marcar la diferencia en la cuota de mercado.",
+      "glossary_word": "move the needle",
+      "glossary_meaning": "marcar una diferencia real",
+      "glossary_ipa": "muːv ðə ˈniːdəl",
+      "visual_hint": "📊🪡"
+    }
+  ],
+  "c2-global-reorg-townhall": [
+    {
+      "id": "idm-shake-up",
+      "kind": "expression",
+      "text": "This reorganization is a major shake-up, and I understand the unease.",
+      "translation": "Esta reorganización es un gran cambio, y entiendo la inquietud. (shake-up: reestructuración drástica)",
+      "apply_sentence": "The CEO announced a ____ of the leadership team.",
+      "apply_answer": "shake-up",
+      "apply_translation": "El director ejecutivo anunció una reestructuración del equipo directivo.",
+      "glossary_word": "shake-up",
+      "glossary_meaning": "sacudida, reestructuración",
+      "glossary_ipa": "ʃeɪk ʌp",
+      "visual_hint": "🌪️🏢"
+    },
+    {
+      "id": "idm-keep-the-lights-on",
+      "kind": "idiom",
+      "text": "Some teams simply keep the lights on while others build.",
+      "translation": "Algunos equipos solo mantienen la operación mientras otros construyen. (keep the lights on: sostener lo básico)",
+      "apply_sentence": "With fewer people, we can barely ____ in support.",
+      "apply_answer": "keep the lights on",
+      "apply_translation": "Con menos gente, apenas podemos mantener lo básico en soporte.",
+      "glossary_word": "keep the lights on",
+      "glossary_meaning": "mantener lo básico",
+      "glossary_ipa": "kiːp ðə laɪts ɑːn",
+      "visual_hint": "💡🏭"
+    }
+  ],
+  "c2-ma-due-diligence-brief": [
+    {
+      "id": "idm-moving-goalposts",
+      "kind": "idiom",
+      "text": "It feels like you keep moving the goalposts on our valuation.",
+      "translation": "Parece que siguen cambiando las reglas sobre nuestra valoración. (move the goalposts: cambiar condiciones)",
+      "apply_sentence": "The buyer started ____ once the numbers looked strong.",
+      "apply_answer": "moving the goalposts",
+      "apply_translation": "El comprador empezó a cambiar las reglas cuando las cifras se vieron sólidas.",
+      "glossary_word": "moving the goalposts",
+      "glossary_meaning": "cambiar las reglas",
+      "glossary_ipa": "ˈmuːvɪŋ ðə ˈɡoʊlpoʊsts",
+      "visual_hint": "🥅↔️"
+    },
+    {
+      "id": "idm-red-flag",
+      "kind": "idiom",
+      "text": "Nothing in our books should raise a red flag.",
+      "translation": "Nada en nuestros libros debería levantar una señal de alarma. (red flag: señal de peligro)",
+      "apply_sentence": "The sudden change in auditors was a ____ for investors.",
+      "apply_answer": "red flag",
+      "apply_translation": "El cambio repentino de auditores fue una señal de alarma para los inversores.",
+      "glossary_word": "red flag",
+      "glossary_meaning": "señal de alarma",
+      "glossary_ipa": "rɛd flæɡ",
+      "visual_hint": "🚩🔎"
+    }
+  ],
+  "c2-shareholder-activist-qa": [
+    {
+      "id": "idm-beat-around-the-bush",
+      "kind": "idiom",
+      "text": "I won't beat around the bush: our margins did decline.",
+      "translation": "No me andaré con rodeos: nuestros márgenes sí bajaron. (beat around the bush: andarse con rodeos)",
+      "apply_sentence": "Please don't ____ and tell us what really happened.",
+      "apply_answer": "beat around the bush",
+      "apply_translation": "Deja de andarte con rodeos y dinos qué pasó realmente.",
+      "glossary_word": "beat around the bush",
+      "glossary_meaning": "andarse por las ramas",
+      "glossary_ipa": "biːt əˈraʊnd ðə bʊʃ",
+      "visual_hint": "🌳🗣️"
+    },
+    {
+      "id": "idm-bottom-line",
+      "kind": "idiom",
+      "text": "Ultimately, the bottom line is that shareholder value is growing.",
+      "translation": "En definitiva, lo esencial es que el valor para el accionista crece. (bottom line: lo fundamental)",
+      "apply_sentence": "Whatever the plan, the ____ is profit this year.",
+      "apply_answer": "bottom line",
+      "apply_translation": "Sea cual sea el plan, lo fundamental es el beneficio este año.",
+      "glossary_word": "the bottom line",
+      "glossary_meaning": "lo esencial",
+      "glossary_ipa": "ˈbɑːtəm laɪn",
+      "visual_hint": "💰🎯"
+    }
+  ]
+}

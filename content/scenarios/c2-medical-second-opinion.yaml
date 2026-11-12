@@ -103,6 +103,36 @@ phrases:
   - word: stay aligned
     meaning: mantenerse coordinados
     ipa: steɪ əˈlaɪnd
+- id: idm-a-grain-of-salt-c2
+  text: I'd take that first diagnosis with a grain of salt.
+  translation: Yo tomaría ese primer diagnóstico con pinzas. (with a grain of salt = con reservas)
+  visual_hint: 🧂🩺
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: a grain of salt
+    meaning: con reservas
+    ipa: ɡreɪn ʌv sɔːlt
+  kind: idiom
+  apply_sentence: Take online reviews with ____.
+  apply_answer: a grain of salt
+  apply_translation: Toma las reseñas en línea con pinzas.
+- id: idm-leave-no-stone-unturned-c2
+  text: The specialist promised to leave no stone unturned.
+  translation: El especialista prometió no dejar piedra sin remover. (leave no stone unturned)
+  visual_hint: 🪨🔎
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: leave no stone unturned
+    meaning: no dejar piedra sin remover
+    ipa: stəʊn ʌnˈtɜːnd
+  kind: idiom
+  apply_sentence: Police said they would ____ in the search.
+  apply_answer: leave no stone unturned
+  apply_translation: La policía dijo que no dejaría piedra sin remover en la búsqueda.
 roleplay:
   ai_role: orthopedic specialist
   user_role: patient

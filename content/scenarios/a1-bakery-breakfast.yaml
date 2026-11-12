@@ -71,6 +71,36 @@ phrases:
   - word: lovely
     meaning: linda / agradable
     ipa: ˈlʌvli
+- id: pick-up
+  text: I pick up fresh bread every morning at this bakery.
+  translation: 'Recojo pan fresco cada mañana en esta panadería. (pick up: recoger)'
+  visual_hint: 🥖🛍️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: pick up
+    meaning: 'pick up: recoger'
+    ipa: pɪk ʌp
+  kind: phrasal_verb
+  apply_sentence: Can you ____ my bag from the table, please?
+  apply_answer: pick up
+  apply_translation: ¿Puedes recoger mi bolso de la mesa, por favor?
+- id: a-piece-of-cake
+  text: Speaking English at the bakery is a piece of cake now.
+  translation: 'Hablar inglés en la panadería ya es pan comido. (a piece of cake: algo muy fácil)'
+  visual_hint: 🍰👍
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: a piece of cake
+    meaning: 'a piece of cake: algo muy fácil'
+    ipa: keɪk
+  kind: idiom
+  apply_sentence: The test was ____, so I finished early.
+  apply_answer: a piece of cake
+  apply_translation: El examen fue pan comido, así que terminé temprano.
 roleplay:
   ai_role: baker
   user_role: customer

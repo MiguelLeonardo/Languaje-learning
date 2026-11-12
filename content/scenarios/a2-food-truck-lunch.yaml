@@ -71,6 +71,36 @@ phrases:
   - word: benches
     meaning: bancas
     ipa: ˈbentʃɪz
+- id: grab-a-bite
+  text: Let's grab a bite at the food truck before class.
+  translation: 'Comamos algo en el camión de comida antes de la clase. (grab a bite: comer algo rápido)'
+  visual_hint: 🌮🚚
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: grab a bite
+    meaning: 'grab a bite: comer algo rápido'
+    ipa: baɪt
+  kind: expression
+  apply_sentence: Do you want to ____ after the museum?
+  apply_answer: grab a bite
+  apply_translation: ¿Quieres comer algo después del museo?
+- id: easy-on
+  text: Go easy on the salsa, it's too spicy for me.
+  translation: 'Ve despacio con la salsa, es demasiado picante para mí. (go easy on: no pasarse con)'
+  visual_hint: 🌶️😅
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: easy on
+    meaning: 'go easy on: no pasarse con'
+    ipa: ˈiːzi
+  kind: expression
+  apply_sentence: Go ____ the sugar, please; I'm watching my health.
+  apply_answer: easy on
+  apply_translation: Ve con cuidado con el azúcar, por favor; cuido mi salud.
 roleplay:
   ai_role: food truck chef
   user_role: customer

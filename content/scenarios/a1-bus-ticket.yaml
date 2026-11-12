@@ -85,6 +85,36 @@ phrases:
   - word: today
     meaning: hoy
     ipa: təˈdeɪ
+- id: bus-pick-up-ticket
+  text: Please pick up your ticket at the window before the bus leaves.
+  translation: Por favor, recoge tu boleto en la ventanilla antes de que salga el autobús. (pick up = recoger)
+  visual_hint: 🎫🚌
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: pick up
+    meaning: recoger
+    ipa: pɪk ʌp
+  kind: phrasal_verb
+  apply_sentence: Can you ____ my bag from the bus station later?
+  apply_answer: pick up
+  apply_translation: ¿Puedes recoger mi bolso de la estación de autobuses más tarde?
+- id: bus-right-away
+  text: Buy the ticket right away, because the bus is almost full.
+  translation: Compra el boleto de inmediato, porque el autobús está casi lleno. (right away = enseguida)
+  visual_hint: ⚡🚌
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: right away
+    meaning: enseguida, de inmediato
+    ipa: raɪt əˈweɪ
+  kind: expression
+  apply_sentence: The driver says we must pay ____ when we get on.
+  apply_answer: right away
+  apply_translation: El conductor dice que debemos pagar enseguida cuando subamos.
 roleplay:
   ai_role: ticket agent
   user_role: commuter

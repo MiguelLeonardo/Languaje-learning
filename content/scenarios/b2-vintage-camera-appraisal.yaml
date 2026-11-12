@@ -72,6 +72,36 @@ phrases:
   - word: test roll
     meaning: rollo de prueba
     ipa: test roʊl
+- id: idm-turn-out-authentic
+  text: It turns out this 1968 rangefinder still has its original leather case.
+  translation: Resulta que esta cámara telemétrica de 1968 aún conserva su estuche de cuero original.
+  visual_hint: 📷✨
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: turn out
+    meaning: resultar ser
+    ipa: tɜːrn aʊt
+  kind: phrasal_verb
+  apply_sentence: What looked like dust on the lens didn't ____ to be fungus after all.
+  apply_answer: turn out
+  apply_translation: Lo que parecía polvo en el lente no resultó ser hongo después de todo.
+- id: idm-rule-of-thumb
+  text: As a rule of thumb, never buy a vintage shutter without testing slow speeds.
+  translation: Por regla general, nunca compres un obturador antiguo sin probar las velocidades lentas.
+  visual_hint: 👍📸
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: rule of thumb
+    meaning: regla general / regla práctica
+    ipa: ruːl ʌv θʌm
+  kind: idiom
+  apply_sentence: A good ____ with classic optics is to inspect the glass against bright light.
+  apply_answer: rule of thumb
+  apply_translation: Una buena regla práctica con ópticas clásicas es revisar el cristal a contraluz.
 roleplay:
   ai_role: camera shop specialist
   user_role: photographer

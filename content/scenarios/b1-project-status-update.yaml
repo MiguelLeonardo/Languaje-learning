@@ -95,6 +95,36 @@ phrases:
   - word: on my end
     meaning: por mi lado / de mi parte
     ipa: ɑːn maɪ end
+- id: idm-on-track
+  text: Our project is on track to finish by Friday.
+  translation: 'Nuestro proyecto va bien para terminar el viernes. (on track: según lo previsto)'
+  visual_hint: 📈✅
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: on track
+    meaning: según lo previsto
+    ipa: ɑːn træk
+  kind: idiom
+  apply_sentence: Thanks to the extra help, we are still ____ for the release.
+  apply_answer: on track
+  apply_translation: Gracias a la ayuda extra, seguimos en camino para el lanzamiento.
+- id: idm-run-into
+  text: Yesterday I ran into a problem with the database.
+  translation: 'Ayer me topé con un problema con la base de datos. (run into: encontrarse con)'
+  visual_hint: 🚧🗄️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: run into
+    meaning: toparse con
+    ipa: rʌn ˈɪntuː
+  kind: phrasal_verb
+  apply_sentence: Last week we ____ trouble with the server.
+  apply_answer: ran into
+  apply_translation: La semana pasada nos topamos con problemas con el servidor.
 roleplay:
   ai_role: scrum master
   user_role: team member

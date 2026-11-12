@@ -80,6 +80,36 @@ phrases:
   - word: front desk
     meaning: recepción
     ipa: frʌnt desk
+- id: idm-sort-out-booking
+  text: Let me sort out this reservation mix-up with the manager right away.
+  translation: Déjeme resolver esta confusión con la reserva con el gerente de inmediato.
+  visual_hint: 🏨📝
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: sort out
+    meaning: resolver / aclarar / arreglar
+    ipa: sɔːrt aʊt
+  kind: phrasal_verb
+  apply_sentence: It took five minutes to ____ the room upgrade at the front desk.
+  apply_answer: sort out
+  apply_translation: Tomó cinco minutos resolver la mejora de habitación en recepción.
+- id: idm-ahead-of-schedule
+  text: Our train arrived ahead of schedule, so is an early check-in possible?
+  translation: Nuestro tren llegó antes de lo previsto, ¿es posible un check-in anticipado?
+  visual_hint: 🚆⏰
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: ahead of schedule
+    meaning: antes de lo previsto / adelantado
+    ipa: əˈhed ʌv ˈskedʒuːl
+  kind: expression
+  apply_sentence: Because we finished packing ____, we reached the hotel early.
+  apply_answer: ahead of schedule
+  apply_translation: Como terminamos de empacar antes de lo previsto, llegamos temprano al hotel.
 roleplay:
   ai_role: hotel receptionist
   user_role: guest

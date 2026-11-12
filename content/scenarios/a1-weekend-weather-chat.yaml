@@ -71,6 +71,36 @@ phrases:
   - word: weekend
     meaning: fin de semana
     ipa: ˈwiːkend
+- id: idm-a1ww-nice-day
+  text: What a nice day! I hope it stays sunny this weekend.
+  translation: ¡Qué lindo día! Espero que siga soleado este fin de semana.
+  visual_hint: ☀️🌤️
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: what a nice day
+    meaning: qué buen día
+    ipa: naɪs
+  kind: expression
+  apply_sentence: Today is ____, so let's go outside.
+  apply_answer: a nice day
+  apply_translation: Hoy es un lindo día, así que salgamos.
+- id: idm-a1ww-rain-cats
+  text: Oh no, it's raining cats and dogs outside right now!
+  translation: ¡Oh no, está lloviendo a cántaros ahora mismo! (llover muchísimo)
+  visual_hint: 🌧️🐱
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: raining cats and dogs
+    meaning: llover a cántaros
+    ipa: reɪn
+  kind: idiom
+  apply_sentence: We stayed home because it was ____ all day.
+  apply_answer: raining cats and dogs
+  apply_translation: Nos quedamos en casa porque llovió a cántaros todo el día.
 roleplay:
   ai_role: neighbor
   user_role: resident

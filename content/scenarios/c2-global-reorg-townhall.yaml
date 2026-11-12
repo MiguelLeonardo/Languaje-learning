@@ -79,6 +79,37 @@ phrases:
   - word: drop-in
     meaning: de puertas abiertas / sin cita previa
     ipa: drɑːp ɪn
+- id: idm-shake-up
+  text: This reorganization is a major shake-up, and I understand the unease.
+  translation: 'Esta reorganización es un gran cambio, y entiendo la inquietud. (shake-up: reestructuración drástica)'
+  visual_hint: 🌪️🏢
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: shake-up
+    meaning: sacudida, reestructuración
+    ipa: ʃeɪk ʌp
+  kind: expression
+  apply_sentence: The CEO announced a ____ of the leadership team.
+  apply_answer: shake-up
+  apply_translation: El director ejecutivo anunció una reestructuración del equipo directivo.
+- id: idm-keep-the-lights-on
+  text: Some teams simply keep the lights on while others build.
+  translation: 'Algunos equipos solo mantienen la operación mientras otros construyen. (keep the lights on: sostener
+    lo básico)'
+  visual_hint: 💡🏭
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: keep the lights on
+    meaning: mantener lo básico
+    ipa: kiːp ðə laɪts ɑːn
+  kind: idiom
+  apply_sentence: With fewer people, we can barely ____ in support.
+  apply_answer: keep the lights on
+  apply_translation: Con menos gente, apenas podemos mantener lo básico en soporte.
 roleplay:
   ai_role: global employee
   user_role: chief operating officer

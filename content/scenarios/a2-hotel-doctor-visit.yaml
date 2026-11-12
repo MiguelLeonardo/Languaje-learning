@@ -71,6 +71,36 @@ phrases:
   - word: arranging
     meaning: coordinar / gestionar
     ipa: əˈreɪndʒɪŋ
+- id: idm-make-an-appointment-a2
+  text: Can you help me make an appointment with a doctor?
+  translation: ¿Puede ayudarme a pedir una cita con un médico? (make an appointment = pedir cita)
+  visual_hint: 📅🩺
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: make an appointment
+    meaning: pedir una cita
+    ipa: meɪk ən əˈpɔɪntmənt
+  kind: expression
+  apply_sentence: I want to ____ with the dentist next week.
+  apply_answer: make an appointment
+  apply_translation: Quiero pedir una cita con el dentista la próxima semana.
+- id: idm-as-soon-as-possible-a2
+  text: I need to see a doctor as soon as possible.
+  translation: Necesito ver a un médico lo antes posible. (as soon as possible)
+  visual_hint: 🏨⏰
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: as soon as possible
+    meaning: lo antes posible
+    ipa: æz suːn æz ˈpɒsəbl
+  kind: expression
+  apply_sentence: Please send me the photos ____.
+  apply_answer: as soon as possible
+  apply_translation: Por favor, envíame las fotos lo antes posible.
 roleplay:
   ai_role: hotel concierge
   user_role: guest

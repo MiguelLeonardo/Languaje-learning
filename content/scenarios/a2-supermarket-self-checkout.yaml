@@ -71,6 +71,36 @@ phrases:
   - word: card reader
     meaning: lector de tarjetas
     ipa: kɑːrd ˈriːdər
+- id: idm-hold-on-sec
+  text: Could you hold on a second while I clear the double scan on screen?
+  translation: ¿Podría esperar un segundo mientras borro el escaneo doble en pantalla?
+  visual_hint: 🛒✋
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: hold on
+    meaning: esperar un momento
+    ipa: hoʊld ɒn
+  kind: phrasal_verb
+  apply_sentence: Please ____ while the attendant checks the barcode price.
+  apply_answer: hold on
+  apply_translation: Por favor espere un momento mientras el encargado revisa el precio del código.
+- id: idm-piece-of-cake
+  text: Once you tap the fruit icon, weighing apples is a piece of cake.
+  translation: Una vez que tocas el ícono de fruta, pesar manzanas es pan comido.
+  visual_hint: 🍎🍰
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: a piece of cake
+    meaning: pan comido (muy fácil)
+    ipa: piːs ʌv keɪk
+  kind: idiom
+  apply_sentence: Using the self-checkout lane is ____ after your first try.
+  apply_answer: a piece of cake
+  apply_translation: Usar la caja de autopago es pan comido después del primer intento.
 roleplay:
   ai_role: store attendant
   user_role: shopper

@@ -74,6 +74,36 @@ phrases:
   - word: sharps disposal
     meaning: contenedor de residuos punzocortantes
     ipa: ʃɑːrps dɪˈspoʊzəl
+- id: idm-out-of-the-woods-b2
+  text: She's not out of the woods yet, the doctors say.
+  translation: Aún no está fuera de peligro, dicen los médicos. (out of the woods = fuera de peligro)
+  visual_hint: 💉🌲
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: out of the woods
+    meaning: fuera de peligro
+    ipa: aʊt ʌv ðə wʊdz
+  kind: idiom
+  apply_sentence: The company is finally ____ after the crisis.
+  apply_answer: out of the woods
+  apply_translation: La empresa por fin está fuera de peligro tras la crisis.
+- id: idm-play-it-safe-b2
+  text: They'll keep her here overnight to play it safe.
+  translation: La dejarán aquí esta noche para no arriesgar. (play it safe = ir a lo seguro)
+  visual_hint: 🏥🛡️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: play it safe
+    meaning: ir a lo seguro
+    ipa: pleɪ ɪt seɪf
+  kind: idiom
+  apply_sentence: I'll ____ and take the earlier train.
+  apply_answer: play it safe
+  apply_translation: Iré a lo seguro y tomaré el tren más temprano.
 roleplay:
   ai_role: ER attending physician
   user_role: patient

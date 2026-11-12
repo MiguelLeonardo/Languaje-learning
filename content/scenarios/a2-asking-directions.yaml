@@ -81,6 +81,36 @@ phrases:
   - word: map
     meaning: mapa
     ipa: mæp
+- id: directions-end-up
+  text: If you turn left here, you will end up at the river.
+  translation: Si giras a la izquierda aquí, terminarás en el río. (end up = terminar en)
+  visual_hint: 🧭🌉
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: end up
+    meaning: terminar en
+    ipa: end ʌp
+  kind: phrasal_verb
+  apply_sentence: We took the wrong bus and ____ in another town.
+  apply_answer: end up
+  apply_translation: Tomamos el autobús equivocado y terminamos en otro pueblo.
+- id: directions-turn-around
+  text: You went too far, so turn around and walk back.
+  translation: Fuiste demasiado lejos, así que date la vuelta y camina de regreso. (turn around = dar la vuelta)
+  visual_hint: 🔄🗺️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: turn around
+    meaning: dar la vuelta
+    ipa: tɜːn əˈraʊnd
+  kind: phrasal_verb
+  apply_sentence: The taxi driver had to ____ because the road was closed.
+  apply_answer: turn around
+  apply_translation: El taxista tuvo que dar la vuelta porque la calle estaba cerrada.
 roleplay:
   ai_role: local resident
   user_role: tourist

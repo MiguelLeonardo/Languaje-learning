@@ -71,6 +71,36 @@ phrases:
   - word: coming
     meaning: viniendo / llegando
     ipa: ˈkʌmɪŋ
+- id: metro-piece-of-cake
+  text: Buying a metro card is a piece of cake with this machine.
+  translation: Comprar una tarjeta de metro es pan comido con esta máquina. (a piece of cake = algo muy fácil)
+  visual_hint: 🍰🚇
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: a piece of cake
+    meaning: pan comido, muy fácil
+    ipa: ˈpiːs əv keɪk
+  kind: idiom
+  apply_sentence: Finding the blue line was a ____ for us today.
+  apply_answer: piece of cake
+  apply_translation: Encontrar la línea azul fue pan comido para nosotros hoy.
+- id: metro-get-on
+  text: Get on the blue line and go four stops downtown.
+  translation: Sube a la línea azul y ve cuatro paradas al centro. (get on = subir a)
+  visual_hint: 🚇⬆️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: get on
+    meaning: subir (a un transporte)
+    ipa: ɡet ɒn
+  kind: phrasal_verb
+  apply_sentence: We ____ the train at the next station.
+  apply_answer: get on
+  apply_translation: Subimos al tren en la próxima estación.
 roleplay:
   ai_role: station clerk
   user_role: traveler

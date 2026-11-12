@@ -71,6 +71,36 @@ phrases:
   - word: highway
     meaning: autopista
     ipa: ˈhaɪweɪ
+- id: uber-pull-over
+  text: Can you pull over next to the pharmacy, please?
+  translation: ¿Puede detenerse junto a la farmacia, por favor? (pull over = orillarse y parar)
+  visual_hint: 🚗🛑
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: pull over
+    meaning: orillarse y parar
+    ipa: pʊl ˈəʊvə
+  kind: phrasal_verb
+  apply_sentence: The driver had to ____ because an ambulance was coming.
+  apply_answer: pull over
+  apply_translation: El conductor tuvo que orillarse porque venía una ambulancia.
+- id: uber-on-the-way
+  text: I am on the way, wearing a yellow coat.
+  translation: Voy en camino, con un abrigo amarillo. (on the way = en camino)
+  visual_hint: 📍🧥
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: on the way
+    meaning: en camino
+    ipa: ɒn ðə weɪ
+  kind: expression
+  apply_sentence: The train is ____, so please wait at the station.
+  apply_answer: on the way
+  apply_translation: El tren ya está en camino, así que espera en la estación.
 roleplay:
   ai_role: rideshare driver
   user_role: passenger

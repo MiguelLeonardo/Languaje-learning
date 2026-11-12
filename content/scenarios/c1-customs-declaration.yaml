@@ -97,6 +97,36 @@ phrases:
   - word: firsthand
     meaning: de primera mano / directamente
     ipa: ˌfɜːrstˈhænd
+- id: customs-by-the-book
+  text: The officer always does everything by the book at this border.
+  translation: El oficial siempre hace todo según el reglamento en esta frontera. (by the book = siguiendo las reglas)
+  visual_hint: 📘🛃
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: by the book
+    meaning: según el reglamento
+    ipa: baɪ ðə bʊk
+  kind: idiom
+  apply_sentence: The pilot insisted on doing the checks ____ before takeoff.
+  apply_answer: by the book
+  apply_translation: El piloto insistió en hacer las revisiones al pie de la letra antes del despegue.
+- id: customs-red-flag
+  text: Mismatched serial numbers could raise a red flag with customs.
+  translation: Números de serie que no coinciden podrían levantar sospechas en la aduana. (red flag = señal de alerta)
+  visual_hint: 🚩📦
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: red flag
+    meaning: señal de alerta
+    ipa: red flæɡ
+  kind: idiom
+  apply_sentence: A last-minute one-way ticket might be a ____ for security.
+  apply_answer: red flag
+  apply_translation: Un billete de ida de última hora podría ser una señal de alerta para seguridad.
 roleplay:
   ai_role: customs officer
   user_role: conference exhibitor

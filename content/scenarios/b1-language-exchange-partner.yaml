@@ -72,6 +72,36 @@ phrases:
   - word: helpful
     meaning: útil / de gran ayuda
     ipa: ˈhelpfəl
+- id: idm-b1le-brush-up
+  text: I want to brush up on my Spanish before my trip.
+  translation: Quiero repasar mi español antes de mi viaje (mejorar lo ya sabido).
+  visual_hint: 🗣️🔤
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: brush up on
+    meaning: repasar, refrescar
+    ipa: brʌʃ
+  kind: phrasal_verb
+  apply_sentence: I need to ____ my French before the interview.
+  apply_answer: brush up on
+  apply_translation: Necesito repasar mi francés antes de la entrevista.
+- id: idm-b1le-lost-in-translation
+  text: Sometimes jokes get lost in translation, but we can laugh anyway.
+  translation: A veces los chistes pierden su sentido al traducirse, pero igual podemos reír.
+  visual_hint: 🌍💬
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: lost in translation
+    meaning: se pierde al traducir
+    ipa: lɒst
+  kind: idiom
+  apply_sentence: The humor of that film was ____ in translation.
+  apply_answer: lost
+  apply_translation: El humor de esa película se perdió en la traducción.
 roleplay:
   ai_role: language partner (Claire)
   user_role: learner

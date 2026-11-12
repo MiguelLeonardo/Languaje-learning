@@ -72,6 +72,36 @@ phrases:
   - word: here's to
     meaning: brindemos por
     ipa: hɪrz tuː
+- id: idm-b1hg-make-yourself
+  text: Come in and make yourself at home, the kitchen's through there.
+  translation: Pasa y siéntete como en casa, la cocina está por allá (ponte cómodo).
+  visual_hint: 🏡🎁
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: make yourself at home
+    meaning: ponte cómodo
+    ipa: həʊm
+  kind: expression
+  apply_sentence: Please take off your coat and ____ at home.
+  apply_answer: make yourself
+  apply_translation: Por favor quítate el abrigo y siéntete como en casa.
+- id: idm-b1hg-show-around
+  text: Let me show you around before everyone else arrives, okay?
+  translation: Déjame mostrarte la casa antes de que llegue todos los demás (hacer un recorrido).
+  visual_hint: 🔑🚪
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: show around
+    meaning: mostrar el lugar
+    ipa: ʃəʊ
+  kind: phrasal_verb
+  apply_sentence: The manager will ____ the new office this afternoon.
+  apply_answer: show you around
+  apply_translation: El gerente te mostrará la nueva oficina esta tarde.
 roleplay:
   ai_role: new homeowner
   user_role: guest

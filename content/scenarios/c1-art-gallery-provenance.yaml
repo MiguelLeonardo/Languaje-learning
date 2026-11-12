@@ -72,6 +72,36 @@ phrases:
   - word: formal hold
     meaning: reserva formal de compra
     ipa: ˈfɔːrməl hoʊld
+- id: idm-pin-down-provenance
+  text: The archivist helped us pin down the painting's exact exhibition history.
+  translation: El archivista nos ayudó a precisar el historial exacto de exposiciones de la pintura.
+  visual_hint: 🖼️🔎
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: pin down
+    meaning: precisar / confirmar con exactitud
+    ipa: pɪn daʊn
+  kind: phrasal_verb
+  apply_sentence: Collectors want to ____ every prior owner before bidding on a rare canvas.
+  apply_answer: pin down
+  apply_translation: Los coleccionistas quieren precisar cada dueño anterior antes de pujar por un lienzo raro.
+- id: idm-par-for-the-course
+  text: Requesting an independent condition report is par for the course at this level.
+  translation: Solicitar un informe de estado independiente es lo normal (lo esperado) a este nivel.
+  visual_hint: 🏛️📜
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: par for the course
+    meaning: lo normal / lo habitual en estos casos
+    ipa: pɑːr fɔːr ðə kɔːrs
+  kind: idiom
+  apply_sentence: Extended escrow periods for museum-grade works are ____.
+  apply_answer: par for the course
+  apply_translation: Los plazos de depósito prolongados para obras de nivel museo son algo habitual.
 roleplay:
   ai_role: gallery director
   user_role: art collector

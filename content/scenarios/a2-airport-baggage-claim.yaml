@@ -71,6 +71,36 @@ phrases:
   - word: suitcase
     meaning: maleta
     ipa: ˈsuːtkeɪs
+- id: baggage-look-out-for
+  text: Look out for a red tag on my big suitcase.
+  translation: Fíjate en una etiqueta roja en mi maleta grande. (look out for = estar atento a)
+  visual_hint: 🔎🧳
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: look out for
+    meaning: estar atento a
+    ipa: lʊk aʊt fɔː
+  kind: phrasal_verb
+  apply_sentence: Look ____ the yellow signs that point to the exit.
+  apply_answer: out for
+  apply_translation: Fíjate en las señales amarillas que indican la salida.
+- id: baggage-hang-on
+  text: Hang on, I think my ski bag is coming now.
+  translation: Espera un momento, creo que mi bolsa de esquí ya viene. (hang on = esperar un momento)
+  visual_hint: ✋🎿
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: hang on
+    meaning: esperar un momento
+    ipa: hæŋ ɒn
+  kind: phrasal_verb
+  apply_sentence: ____ a minute, I need to find my passport.
+  apply_answer: Hang on
+  apply_translation: Espera un momento, necesito encontrar mi pasaporte.
 roleplay:
   ai_role: airport staff
   user_role: arriving passenger

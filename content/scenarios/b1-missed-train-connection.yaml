@@ -71,6 +71,36 @@ phrases:
   - word: board
     meaning: abordar / subir
     ipa: bɔːrd
+- id: connection-cut-it-close
+  text: We cut it close, and the first train was late.
+  translation: Lo dejamos muy justo, y el primer tren llegó tarde. (cut it close = ir muy justo de tiempo)
+  visual_hint: ⏱️🚆
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: cut it close
+    meaning: ir muy justo
+    ipa: kʌt ɪt kləʊs
+  kind: idiom
+  apply_sentence: He always likes to ____ and arrive at the gate last.
+  apply_answer: cut it close
+  apply_translation: A él siempre le gusta ir muy justo y llegar el último a la puerta.
+- id: connection-make-it
+  text: If we run, we can still make it to the platform.
+  translation: Si corremos, todavía podemos llegar al andén. (make it = lograrlo)
+  visual_hint: 🏃🚉
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: make it
+    meaning: lograrlo, llegar a tiempo
+    ipa: meɪk ɪt
+  kind: idiom
+  apply_sentence: Sorry, our flight left early, so we didn't ____ home.
+  apply_answer: make it
+  apply_translation: Lo siento, nuestro vuelo salió temprano, así que no logramos llegar a casa.
 roleplay:
   ai_role: train conductor
   user_role: traveler

@@ -74,6 +74,38 @@ phrases:
   - word: chart
     meaning: carta náutica
     ipa: tʃɑːrt
+- id: antarctic-tip-of-iceberg
+  text: This drifting pack ice is only the tip of the iceberg, team.
+  translation: Este hielo a la deriva es solo la punta del iceberg, equipo. (tip of the iceberg = solo una parte
+    pequeña del problema)
+  visual_hint: 🧊🐧
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: tip of the iceberg
+    meaning: la punta del iceberg
+    ipa: tɪp əv ði ˈaɪsbɜːɡ
+  kind: idiom
+  apply_sentence: Those delays were merely the ____ of the airline's problems.
+  apply_answer: tip of the iceberg
+  apply_translation: Esos retrasos eran solo la punta del iceberg de los problemas de la aerolínea.
+- id: antarctic-thin-ice
+  text: Ignore the five-meter buffer and you will be on thin ice.
+  translation: Si ignoras el margen de cinco metros, estarás en terreno peligroso. (on thin ice = en una situación
+    arriesgada)
+  visual_hint: 🥶⚠️
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: on thin ice
+    meaning: en terreno peligroso
+    ipa: ɒn θɪn aɪs
+  kind: idiom
+  apply_sentence: Skipping the safety audit leaves the operator ____ with regulators.
+  apply_answer: on thin ice
+  apply_translation: Saltarse la auditoría de seguridad deja al operador en terreno peligroso con los reguladores.
 roleplay:
   ai_role: ice-pilot captain
   user_role: expedition leader

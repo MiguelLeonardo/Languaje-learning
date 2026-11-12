@@ -71,6 +71,37 @@ phrases:
   - word: roadside assistance
     meaning: asistencia en carretera
     ipa: ˈroʊdsaɪd əˈsɪstəns
+- id: toll-ahead-of-time
+  text: I activated the box ahead of time, so the toll lane worked.
+  translation: Activé el dispositivo con anticipación, así que el carril de peaje funcionó. (ahead of time = con
+    antelación)
+  visual_hint: 🛣️🕐
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: ahead of time
+    meaning: con antelación
+    ipa: əˈhed əv taɪm
+  kind: expression
+  apply_sentence: It is smart to book the ferry ____ in summer.
+  apply_answer: ahead of time
+  apply_translation: Es inteligente reservar el ferri con antelación en verano.
+- id: toll-fill-up
+  text: Let's fill up with fuel before we reach the congestion zone.
+  translation: Llenemos el tanque antes de llegar a la zona de congestión. (fill up = llenar)
+  visual_hint: ⛽🚗
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: fill up
+    meaning: llenar el tanque
+    ipa: fɪl ʌp
+  kind: phrasal_verb
+  apply_sentence: We need to ____ the tank before the long drive.
+  apply_answer: fill up
+  apply_translation: Necesitamos llenar el tanque antes del viaje largo.
 roleplay:
   ai_role: rental counter agent
   user_role: driver

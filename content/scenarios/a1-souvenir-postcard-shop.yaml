@@ -71,6 +71,36 @@ phrases:
   - word: mailbox
     meaning: buzón de correo
     ipa: ˈmeɪlbɑːks
+- id: idm-look-around-shop
+  text: Feel free to look around the shop while I wrap your magnets.
+  translation: Siéntase libre de dar un vistazo por la tienda mientras envuelvo sus imanes.
+  visual_hint: 🧲🛍️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: look around
+    meaning: dar un vistazo / curiosear
+    ipa: lʊk əˈraʊnd
+  kind: phrasal_verb
+  apply_sentence: We like to ____ small gift shops when we visit a new town.
+  apply_answer: look around
+  apply_translation: Nos gusta curiosear por pequeñas tiendas de regalos cuando visitamos un pueblo nuevo.
+- id: idm-keep-the-change
+  text: Here is twenty dollars for the postcards—please keep the change.
+  translation: Aquí tiene veinte dólares por las postales; por favor quédese con el cambio.
+  visual_hint: 💵😊
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: keep the change
+    meaning: quedarse con el cambio
+    ipa: kiːp ðə tʃeɪndʒ
+  kind: expression
+  apply_sentence: The taxi ride was nine dollars, so I told the driver to ____.
+  apply_answer: keep the change
+  apply_translation: El viaje en taxi costó nueve dólares, así que le dije al conductor que se quedara con el cambio.
 roleplay:
   ai_role: shopkeeper
   user_role: tourist

@@ -72,6 +72,36 @@ phrases:
   - word: relief
     meaning: alivio
     ipa: rɪˈliːf
+- id: idm-swell-up-b1
+  text: My hand started to swell up right after the sting.
+  translation: Mi mano empezó a hincharse justo después de la picadura. (swell up = hincharse)
+  visual_hint: 🐝✋
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: swell up
+    meaning: hincharse
+    ipa: swel ʌp
+  kind: phrasal_verb
+  apply_sentence: If you hit your knee, it can ____ quickly.
+  apply_answer: swell up
+  apply_translation: Si te golpeas la rodilla, puede hincharse rápido.
+- id: idm-dodged-a-bullet-b1
+  text: I think we dodged a bullet, it could have been worse.
+  translation: Creo que nos libramos por poco; pudo ser peor. (dodge a bullet = librarse de milagro)
+  visual_hint: 🎯😮‍💨
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: dodged a bullet
+    meaning: librarse por poco
+    ipa: dɒdʒ ə ˈbʊlɪt
+  kind: idiom
+  apply_sentence: We really ____ when the storm turned away.
+  apply_answer: dodged a bullet
+  apply_translation: De verdad nos libramos por poco cuando la tormenta se desvió.
 roleplay:
   ai_role: urgent care nurse
   user_role: patient

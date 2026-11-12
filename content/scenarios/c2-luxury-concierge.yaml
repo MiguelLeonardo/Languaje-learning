@@ -99,6 +99,36 @@ phrases:
   - word: retainer
     meaning: anticipo / depósito de reserva
     ipa: rɪˈteɪnər
+- id: idm-pull-off-gala
+  text: Only a seasoned concierge can pull off a private museum dinner in forty-eight hours.
+  translation: Solo un conserje experto puede lograr sacar adelante una cena privada en museo en 48 horas.
+  visual_hint: 🥂✨
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: pull off
+    meaning: lograr sacar adelante algo difícil
+    ipa: pʊl ɒf
+  kind: phrasal_verb
+  apply_sentence: With three florists on standby, they managed to ____ the rooftop surprise flawlessly.
+  apply_answer: pull off
+  apply_translation: Con tres floristas en espera, lograron sacar adelante la sorpresa en la azotea sin fallos.
+- id: idm-leave-no-stone
+  text: Our team will leave no stone unturned to secure backstage opera access.
+  translation: Nuestro equipo no dejará piedra sin mover para conseguir acceso tras bambalinas a la ópera.
+  visual_hint: 🎭💎
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: leave no stone unturned
+    meaning: no dejar piedra sin mover
+    ipa: liːv noʊ stoʊn ʌnˈtɜːrnd
+  kind: idiom
+  apply_sentence: When VIP guests request vintage champagne, we ____ to source it.
+  apply_answer: leave no stone unturned
+  apply_translation: Cuando huéspedes VIP piden champán de añada, no dejamos piedra sin mover para conseguirlo.
 roleplay:
   ai_role: chief concierge
   user_role: event host

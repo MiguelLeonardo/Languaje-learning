@@ -74,6 +74,36 @@ phrases:
   - word: trading
     meaning: intercambiar (anécdotas)
     ipa: ˈtreɪdɪŋ
+- id: idm-c1da-change-subject
+  text: Why don't we steer clear of politics and talk about the trip instead?
+  translation: ¿Por qué no evitamos la política y hablamos mejor del viaje? (mantenerse alejado)
+  visual_hint: 🍷🙊
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: steer clear of
+    meaning: evitar
+    ipa: stɪər
+  kind: idiom
+  apply_sentence: You'd better ____ clear of that topic at dinner.
+  apply_answer: steer
+  apply_translation: Será mejor que evites ese tema en la cena.
+- id: idm-c1da-clear-the-air
+  text: Let's clear the air before dessert so nobody feels uncomfortable.
+  translation: Aclaremos las cosas antes del postre para que nadie se sienta incómodo (eliminar tensión).
+  visual_hint: 🌬️🕊️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: clear the air
+    meaning: disipar tensiones
+    ipa: eər
+  kind: idiom
+  apply_sentence: After the argument, we sat down to ____ the air.
+  apply_answer: clear
+  apply_translation: Después de la discusión, nos sentamos a aclarar las cosas.
 roleplay:
   ai_role: opinionated dinner guest
   user_role: diplomatic host

@@ -69,6 +69,36 @@ phrases:
   - word: pick you up
     meaning: recogerte
     ipa: pɪk juː ʌp
+- id: idm-b2cu-long-time-no-see
+  text: Long time no see! We really should catch up properly soon.
+  translation: ¡Cuánto tiempo sin vernos! Deberíamos ponernos al día pronto (saludo informal).
+  visual_hint: ☕👋
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: long time no see
+    meaning: cuánto tiempo sin verte
+    ipa: lɒŋ
+  kind: expression
+  apply_sentence: Hey Sam, ____ no see! How have you been?
+  apply_answer: long time
+  apply_translation: Hola Sam, ¡cuánto tiempo sin vernos! ¿Cómo has estado?
+- id: idm-b2cu-keep-in-touch
+  text: Let's keep in touch this time; I'll text you next week.
+  translation: Mantengamos el contacto esta vez; te escribo la próxima semana.
+  visual_hint: 📱🤝
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: lose touch
+    meaning: perder el contacto
+    ipa: tʌtʃ
+  kind: idiom
+  apply_sentence: It's hard to ____ with old classmates abroad.
+  apply_answer: keep in touch
+  apply_translation: Es difícil mantener el contacto con antiguos compañeros en el extranjero.
 roleplay:
   ai_role: close friend
   user_role: friend

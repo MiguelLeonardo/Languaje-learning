@@ -71,6 +71,36 @@ phrases:
   - word: tonight
     meaning: esta noche
     ipa: təˈnaɪt
+- id: idm-put-on-a1
+  text: Please put on sunscreen before you go to the beach.
+  translation: Por favor, ponte protector solar antes de ir a la playa. (put on = aplicarse/ponerse)
+  visual_hint: 🧴☀️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: put on
+    meaning: ponerse (ropa, crema)
+    ipa: pʊt ɒn
+  kind: phrasal_verb
+  apply_sentence: It is cold today, so ____ your jacket.
+  apply_answer: put on
+  apply_translation: Hace frío hoy, así que ponte tu chaqueta.
+- id: idm-pick-out-a1
+  text: Can you help me pick out a good lotion?
+  translation: ¿Puede ayudarme a elegir una buena loción? (pick out = elegir)
+  visual_hint: 🛍️🧴
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: pick out
+    meaning: elegir, escoger
+    ipa: pɪk aʊt
+  kind: phrasal_verb
+  apply_sentence: I want to ____ a gift for my mother.
+  apply_answer: pick out
+  apply_translation: Quiero elegir un regalo para mi madre.
 roleplay:
   ai_role: pharmacist
   user_role: beachgoer

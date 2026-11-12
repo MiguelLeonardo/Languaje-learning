@@ -80,6 +80,37 @@ phrases:
   - word: wiki
     meaning: base de conocimiento interna
     ipa: ˈwɪki
+- id: idm-root-cause
+  text: Our goal is to get to the root cause, not to point fingers.
+  translation: 'Nuestro objetivo es llegar a la causa raíz, no señalar con el dedo. (root cause: origen del problema)'
+  visual_hint: 🌱🔎
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: root cause
+    meaning: causa raíz
+    ipa: ruːt kɔːz
+  kind: expression
+  apply_sentence: We need to find the ____ before we patch the system.
+  apply_answer: root cause
+  apply_translation: Necesitamos encontrar la causa raíz antes de parchear el sistema.
+- id: idm-fall-through-the-cracks
+  text: Several alerts fell through the cracks during the night shift.
+  translation: 'Varias alertas se perdieron sin atención durante el turno de noche. (fall through the cracks: pasar
+    inadvertido)'
+  visual_hint: 🕳️📟
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: fall through the cracks
+    meaning: pasar desapercibido
+    ipa: fɔːl θruː ðə kræks
+  kind: idiom
+  apply_sentence: Without a checklist, small tasks ____.
+  apply_answer: fell through the cracks
+  apply_translation: Sin una lista de verificación, las tareas pequeñas pasaron inadvertidas.
 roleplay:
   ai_role: platform engineer
   user_role: incident commander

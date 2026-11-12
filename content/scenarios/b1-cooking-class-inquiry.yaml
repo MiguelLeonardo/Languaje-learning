@@ -71,6 +71,36 @@ phrases:
   - word: simmer
     meaning: hervir a fuego lento
     ipa: ˈsɪmər
+- id: from-scratch
+  text: We made the pasta dough completely from scratch today.
+  translation: 'Hicimos la masa de pasta completamente desde cero hoy. (from scratch: desde cero)'
+  visual_hint: 🍝👩‍🍳
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: from scratch
+    meaning: 'from scratch: desde cero'
+    ipa: skrætʃ
+  kind: expression
+  apply_sentence: She builds her computers ____ every year.
+  apply_answer: from scratch
+  apply_translation: Ella construye sus computadoras desde cero cada año.
+- id: rule-of-thumb
+  text: A good rule of thumb is to taste as you cook.
+  translation: 'Una buena regla general es probar mientras cocinas. (rule of thumb: regla general)'
+  visual_hint: 👍🥄
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: rule of thumb
+    meaning: 'rule of thumb: regla general'
+    ipa: θʌm
+  kind: idiom
+  apply_sentence: My ____ is to save ten percent of my salary.
+  apply_answer: rule of thumb
+  apply_translation: Mi regla general es ahorrar el diez por ciento de mi sueldo.
 roleplay:
   ai_role: chef instructor
   user_role: student

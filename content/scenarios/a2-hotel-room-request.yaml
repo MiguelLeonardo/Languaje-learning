@@ -94,6 +94,36 @@ phrases:
   - word: six thirty
     meaning: seis y media
     ipa: sɪks ˈθɜːrti
+- id: idm-drop-off-towels
+  text: Could housekeeping drop off two extra bath towels in room 402?
+  translation: ¿Podría el servicio de limpieza pasar a dejar dos toallas extra en la habitación 402?
+  visual_hint: 🧺🚪
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: drop off
+    meaning: pasar a dejar / entregar
+    ipa: drɒp ɒf
+  kind: phrasal_verb
+  apply_sentence: Please ____ the clean pillows whenever someone is free.
+  apply_answer: drop off
+  apply_translation: Por favor pasen a dejar las almohadas limpias cuando alguien esté libre.
+- id: idm-make-yourself-home
+  text: Everything is ready for you, so please make yourself at home.
+  translation: Todo está listo para usted, así que por favor siéntase como en casa.
+  visual_hint: 🛋️😊
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: make yourself at home
+    meaning: sentirse como en casa
+    ipa: meɪk jɔːrˈself æt hoʊm
+  kind: idiom
+  apply_sentence: The host smiled and told us to ____ in the lounge.
+  apply_answer: make yourself at home
+  apply_translation: El anfitrión sonrió y nos dijo que nos sintiéramos como en casa en la sala.
 roleplay:
   ai_role: front desk agent
   user_role: hotel guest

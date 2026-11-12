@@ -71,6 +71,36 @@ phrases:
   - word: pages
     meaning: páginas / hojas
     ipa: ˈpeɪdʒɪz
+- id: idm-run-out-of
+  text: We ran out of paper for the printer again.
+  translation: 'Se nos acabó el papel de la impresora otra vez. (run out of: quedarse sin)'
+  visual_hint: 📄😟
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: run out of
+    meaning: quedarse sin
+    ipa: rʌn aʊt əv
+  kind: phrasal_verb
+  apply_sentence: Oh no, we ____ coffee again on Monday morning.
+  apply_answer: ran out of
+  apply_translation: Ay no, otra vez se nos acabó el café el lunes por la mañana.
+- id: idm-pick-up
+  text: Can you pick up some pens from the store?
+  translation: '¿Puedes recoger unos bolígrafos de la tienda? (pick up: recoger)'
+  visual_hint: 🛍️🖊️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: pick up
+    meaning: recoger
+    ipa: pɪk ʌp
+  kind: phrasal_verb
+  apply_sentence: I will ____ the new chairs from the shop today.
+  apply_answer: pick up
+  apply_translation: Voy a recoger las sillas nuevas de la tienda hoy.
 roleplay:
   ai_role: coworker (Sarah)
   user_role: team member

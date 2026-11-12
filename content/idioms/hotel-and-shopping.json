@@ -1,0 +1,842 @@
+{
+  "a1-bookstore-dictionary": [
+    {
+      "id": "idm-pick-up-guide",
+      "kind": "phrasal_verb",
+      "text": "I want to pick up a pocket city guide before my trip.",
+      "translation": "Quiero pasar a comprar (pick up = recoger/comprar de paso) una guía de bolsillo antes de mi viaje.",
+      "apply_sentence": "Can we ____ some travel books at the corner shop?",
+      "apply_answer": "pick up",
+      "apply_translation": "¿Podemos pasar a comprar unos libros de viaje en la tienda de la esquina?",
+      "glossary_word": "pick up",
+      "glossary_meaning": "pasar a comprar / recoger",
+      "glossary_ipa": "pɪk ʌp",
+      "visual_hint": "📚🛍️"
+    },
+    {
+      "id": "idm-at-a-glance",
+      "kind": "expression",
+      "text": "This fold-out map shows all the main streets at a glance.",
+      "translation": "Este mapa desplegable muestra todas las calles principales de un vistazo.",
+      "apply_sentence": "You can see the museum hours ____ on the front page.",
+      "apply_answer": "at a glance",
+      "apply_translation": "Puedes ver el horario del museo de un vistazo en la primera página.",
+      "glossary_word": "at a glance",
+      "glossary_meaning": "de un vistazo",
+      "glossary_ipa": "æt ə ɡlæns",
+      "visual_hint": "🗺️👀"
+    }
+  ],
+  "a1-clothing-store": [
+    {
+      "id": "idm-try-on-jacket",
+      "kind": "phrasal_verb",
+      "text": "Excuse me, where can I try on this blue jacket?",
+      "translation": "Disculpe, ¿dónde puedo probarme esta chaqueta azul?",
+      "apply_sentence": "I always ____ new shirts before I buy them.",
+      "apply_answer": "try on",
+      "apply_translation": "Siempre me pruebo las camisas nuevas antes de comprarlas.",
+      "glossary_word": "try on",
+      "glossary_meaning": "probarse (ropa)",
+      "glossary_ipa": "traɪ ɒn",
+      "visual_hint": "🧥🪞"
+    },
+    {
+      "id": "idm-fit-like-glove",
+      "kind": "idiom",
+      "text": "Does this medium sweater fit like a glove and feel soft?",
+      "translation": "¿Este suéter mediano queda como anillo al dedo y se siente suave?",
+      "apply_sentence": "These jeans ____, so I will take them right now.",
+      "apply_answer": "fit like a glove",
+      "apply_translation": "Estos jeans quedan perfectos, así que me los llevaré ahora mismo.",
+      "glossary_word": "fit like a glove",
+      "glossary_meaning": "quedar como anillo al dedo",
+      "glossary_ipa": "fɪt laɪk ə ɡlʌv",
+      "visual_hint": "🧤✨"
+    }
+  ],
+  "a1-hotel-breakfast-hours": [
+    {
+      "id": "idm-wake-up-early",
+      "kind": "phrasal_verb",
+      "text": "We need to wake up early so we don't miss breakfast.",
+      "translation": "Necesitamos despertarnos temprano para no perder el desayuno.",
+      "apply_sentence": "I usually ____ at seven when I stay at a hotel.",
+      "apply_answer": "wake up",
+      "apply_translation": "Normalmente me despierto a las siete cuando me hospedo en un hotel.",
+      "glossary_word": "wake up",
+      "glossary_meaning": "despertarse",
+      "glossary_ipa": "weɪk ʌp",
+      "visual_hint": "⏰🥐"
+    },
+    {
+      "id": "idm-on-the-house",
+      "kind": "idiom",
+      "text": "The receptionist said the morning coffee is on the house today.",
+      "translation": "El recepcionista dijo que el café de la mañana corre por cuenta de la casa hoy.",
+      "apply_sentence": "Because of the delay, our dessert was ____.",
+      "apply_answer": "on the house",
+      "apply_translation": "Por el retraso, nuestro postre corrió por cuenta de la casa.",
+      "glossary_word": "on the house",
+      "glossary_meaning": "por cuenta de la casa / gratis",
+      "glossary_ipa": "ɒn ðə haʊs",
+      "visual_hint": "☕🎁"
+    }
+  ],
+  "a1-shoe-store-size": [
+    {
+      "id": "idm-put-on-sneakers",
+      "kind": "phrasal_verb",
+      "text": "Please sit down and put on the left sneaker first.",
+      "translation": "Por favor siéntese y póngase primero el tenis izquierdo.",
+      "apply_sentence": "I ____ my running shoes every morning before work.",
+      "apply_answer": "put on",
+      "apply_translation": "Me pongo mis tenis para correr cada mañana antes del trabajo.",
+      "glossary_word": "put on",
+      "glossary_meaning": "ponerse (ropa o calzado)",
+      "glossary_ipa": "pʊt ɒn",
+      "visual_hint": "👟🪑"
+    },
+    {
+      "id": "idm-sold-out-size",
+      "kind": "phrasal_verb",
+      "text": "Sorry, the black running shoes are sold out in size nine.",
+      "translation": "Lo siento, los tenis negros están agotados en talla nueve.",
+      "apply_sentence": "Those popular boots ____ fast during the winter sale.",
+      "apply_answer": "sold out",
+      "apply_translation": "Esas botas populares se agotaron rápido durante la rebaja de invierno.",
+      "glossary_word": "sold out",
+      "glossary_meaning": "agotado / vendido por completo",
+      "glossary_ipa": "soʊld aʊt",
+      "visual_hint": "👟🚫"
+    }
+  ],
+  "a1-souvenir-postcard-shop": [
+    {
+      "id": "idm-look-around-shop",
+      "kind": "phrasal_verb",
+      "text": "Feel free to look around the shop while I wrap your magnets.",
+      "translation": "Siéntase libre de dar un vistazo por la tienda mientras envuelvo sus imanes.",
+      "apply_sentence": "We like to ____ small gift shops when we visit a new town.",
+      "apply_answer": "look around",
+      "apply_translation": "Nos gusta curiosear por pequeñas tiendas de regalos cuando visitamos un pueblo nuevo.",
+      "glossary_word": "look around",
+      "glossary_meaning": "dar un vistazo / curiosear",
+      "glossary_ipa": "lʊk əˈraʊnd",
+      "visual_hint": "🧲🛍️"
+    },
+    {
+      "id": "idm-keep-the-change",
+      "kind": "expression",
+      "text": "Here is twenty dollars for the postcards—please keep the change.",
+      "translation": "Aquí tiene veinte dólares por las postales; por favor quédese con el cambio.",
+      "apply_sentence": "The taxi ride was nine dollars, so I told the driver to ____.",
+      "apply_answer": "keep the change",
+      "apply_translation": "El viaje en taxi costó nueve dólares, así que le dije al conductor que se quedara con el cambio.",
+      "glossary_word": "keep the change",
+      "glossary_meaning": "quedarse con el cambio",
+      "glossary_ipa": "kiːp ðə tʃeɪndʒ",
+      "visual_hint": "💵😊"
+    }
+  ],
+  "a2-changing-hotel-rooms": [
+    {
+      "id": "idm-put-up-with",
+      "kind": "phrasal_verb",
+      "text": "I can't put up with the street noise outside my window all night.",
+      "translation": "No puedo aguantar el ruido de la calle afuera de mi ventana toda la noche.",
+      "apply_sentence": "Guests shouldn't have to ____ a broken air conditioner in summer.",
+      "apply_answer": "put up with",
+      "apply_translation": "Los huéspedes no deberían tener que soportar un aire acondicionado dañado en verano.",
+      "glossary_word": "put up with",
+      "glossary_meaning": "aguantar / soportar",
+      "glossary_ipa": "pʊt ʌp wɪð",
+      "visual_hint": "🔊🏨"
+    },
+    {
+      "id": "idm-sleep-like-a-log",
+      "kind": "idiom",
+      "text": "In a quiet room at the back, I will sleep like a log.",
+      "translation": "En una habitación tranquila al fondo, dormiré como un tronco.",
+      "apply_sentence": "After walking ten miles today, we are going to ____.",
+      "apply_answer": "sleep like a log",
+      "apply_translation": "Después de caminar diez millas hoy, vamos a dormir profundamente.",
+      "glossary_word": "sleep like a log",
+      "glossary_meaning": "dormir como un tronco",
+      "glossary_ipa": "sliːp laɪk ə lɔːɡ",
+      "visual_hint": "😴🪵"
+    }
+  ],
+  "a2-electronics-power-adapter": [
+    {
+      "id": "idm-run-out-of",
+      "kind": "phrasal_verb",
+      "text": "My phone is about to run out of battery before my flight.",
+      "translation": "Mi teléfono está a punto de quedarse sin batería antes de mi vuelo.",
+      "apply_sentence": "We always carry a power bank so we never ____ charge.",
+      "apply_answer": "run out of",
+      "apply_translation": "Siempre llevamos una batería portátil para nunca quedarnos sin carga.",
+      "glossary_word": "run out of",
+      "glossary_meaning": "quedarse sin",
+      "glossary_ipa": "rʌn aʊt ʌv",
+      "visual_hint": "🔋⚠️"
+    },
+    {
+      "id": "idm-worth-every-penny",
+      "kind": "idiom",
+      "text": "This sturdy travel adapter is a bit pricey, but it's worth every penny.",
+      "translation": "Este adaptador de viaje resistente es un poco caro, pero vale cada centavo.",
+      "apply_sentence": "Buying a fast charger at the airport was ____.",
+      "apply_answer": "worth every penny",
+      "apply_translation": "Comprar un cargador rápido en el aeropuerto valió cada centavo.",
+      "glossary_word": "worth every penny",
+      "glossary_meaning": "valer cada centavo",
+      "glossary_ipa": "wɜːrθ ˈevri ˈpeni",
+      "visual_hint": "🔌💎"
+    }
+  ],
+  "a2-hotel-room-request": [
+    {
+      "id": "idm-drop-off-towels",
+      "kind": "phrasal_verb",
+      "text": "Could housekeeping drop off two extra bath towels in room 402?",
+      "translation": "¿Podría el servicio de limpieza pasar a dejar dos toallas extra en la habitación 402?",
+      "apply_sentence": "Please ____ the clean pillows whenever someone is free.",
+      "apply_answer": "drop off",
+      "apply_translation": "Por favor pasen a dejar las almohadas limpias cuando alguien esté libre.",
+      "glossary_word": "drop off",
+      "glossary_meaning": "pasar a dejar / entregar",
+      "glossary_ipa": "drɒp ɒf",
+      "visual_hint": "🧺🚪"
+    },
+    {
+      "id": "idm-make-yourself-home",
+      "kind": "idiom",
+      "text": "Everything is ready for you, so please make yourself at home.",
+      "translation": "Todo está listo para usted, así que por favor siéntase como en casa.",
+      "apply_sentence": "The host smiled and told us to ____ in the lounge.",
+      "apply_answer": "make yourself at home",
+      "apply_translation": "El anfitrión sonrió y nos dijo que nos sintiéramos como en casa en la sala.",
+      "glossary_word": "make yourself at home",
+      "glossary_meaning": "sentirse como en casa",
+      "glossary_ipa": "meɪk jɔːrˈself æt hoʊm",
+      "visual_hint": "🛋️😊"
+    }
+  ],
+  "a2-laundry-dry-cleaning": [
+    {
+      "id": "idm-get-rid-of",
+      "kind": "phrasal_verb",
+      "text": "Do you think your stain remover can get rid of this coffee mark?",
+      "translation": "¿Cree que su quitamanchas pueda eliminar esta marca de café?",
+      "apply_sentence": "I washed the shirt twice, yet I couldn't ____ the ink spot.",
+      "apply_answer": "get rid of",
+      "apply_translation": "Lavé la camisa dos veces, pero no pude deshacerme de la mancha de tinta.",
+      "glossary_word": "get rid of",
+      "glossary_meaning": "deshacerse de / eliminar",
+      "glossary_ipa": "ɡet rɪd ʌv",
+      "visual_hint": "☕👕"
+    },
+    {
+      "id": "idm-in-a-rush",
+      "kind": "expression",
+      "text": "I'm in a rush for a wedding tomorrow, so can I pay for express service?",
+      "translation": "Ando con prisa para una boda mañana, así que ¿puedo pagar servicio exprés?",
+      "apply_sentence": "Sorry I can't chat long; I'm ____ to catch the last train.",
+      "apply_answer": "in a rush",
+      "apply_translation": "Disculpa que no pueda charlar mucho; ando con prisa para tomar el último tren.",
+      "glossary_word": "in a rush",
+      "glossary_meaning": "andar con prisa / apurado",
+      "glossary_ipa": "ɪn ə rʌʃ",
+      "visual_hint": "⏱️👔"
+    }
+  ],
+  "a2-supermarket-self-checkout": [
+    {
+      "id": "idm-hold-on-sec",
+      "kind": "phrasal_verb",
+      "text": "Could you hold on a second while I clear the double scan on screen?",
+      "translation": "¿Podría esperar un segundo mientras borro el escaneo doble en pantalla?",
+      "apply_sentence": "Please ____ while the attendant checks the barcode price.",
+      "apply_answer": "hold on",
+      "apply_translation": "Por favor espere un momento mientras el encargado revisa el precio del código.",
+      "glossary_word": "hold on",
+      "glossary_meaning": "esperar un momento",
+      "glossary_ipa": "hoʊld ɒn",
+      "visual_hint": "🛒✋"
+    },
+    {
+      "id": "idm-piece-of-cake",
+      "kind": "idiom",
+      "text": "Once you tap the fruit icon, weighing apples is a piece of cake.",
+      "translation": "Una vez que tocas el ícono de fruta, pesar manzanas es pan comido.",
+      "apply_sentence": "Using the self-checkout lane is ____ after your first try.",
+      "apply_answer": "a piece of cake",
+      "apply_translation": "Usar la caja de autopago es pan comido después del primer intento.",
+      "glossary_word": "a piece of cake",
+      "glossary_meaning": "pan comido (muy fácil)",
+      "glossary_ipa": "piːs ʌv keɪk",
+      "visual_hint": "🍎🍰"
+    }
+  ],
+  "b1-airbnb-host-check-in": [
+    {
+      "id": "idm-check-in-smoothly",
+      "kind": "phrasal_verb",
+      "text": "Thanks for sending the lockbox code so we can check in smoothly.",
+      "translation": "Gracias por enviar el código de la cajita para poder registrarnos sin problemas.",
+      "apply_sentence": "What time are we allowed to ____ if our flight lands early?",
+      "apply_answer": "check in",
+      "apply_translation": "¿A qué hora podemos hacer el registro si nuestro vuelo aterriza temprano?",
+      "glossary_word": "check in",
+      "glossary_meaning": "registrarse / hacer check-in",
+      "glossary_ipa": "tʃek ɪn",
+      "visual_hint": "🔑🏡"
+    },
+    {
+      "id": "idm-touch-base",
+      "kind": "idiom",
+      "text": "I'll touch base with you once we drop our bags at the apartment.",
+      "translation": "Me pondré en contacto contigo en cuanto dejemos las maletas en el apartamento.",
+      "apply_sentence": "Let's ____ tomorrow morning to arrange the key handoff.",
+      "apply_answer": "touch base",
+      "apply_translation": "Pongámonos en contacto mañana por la mañana para coordinar la entrega de llaves.",
+      "glossary_word": "touch base",
+      "glossary_meaning": "ponerse en contacto / hablar brevemente",
+      "glossary_ipa": "tʌtʃ beɪs",
+      "visual_hint": "📲🤝"
+    }
+  ],
+  "b1-hotel-check-in": [
+    {
+      "id": "idm-sort-out-booking",
+      "kind": "phrasal_verb",
+      "text": "Let me sort out this reservation mix-up with the manager right away.",
+      "translation": "Déjeme resolver esta confusión con la reserva con el gerente de inmediato.",
+      "apply_sentence": "It took five minutes to ____ the room upgrade at the front desk.",
+      "apply_answer": "sort out",
+      "apply_translation": "Tomó cinco minutos resolver la mejora de habitación en recepción.",
+      "glossary_word": "sort out",
+      "glossary_meaning": "resolver / aclarar / arreglar",
+      "glossary_ipa": "sɔːrt aʊt",
+      "visual_hint": "🏨📝"
+    },
+    {
+      "id": "idm-ahead-of-schedule",
+      "kind": "expression",
+      "text": "Our train arrived ahead of schedule, so is an early check-in possible?",
+      "translation": "Nuestro tren llegó antes de lo previsto, ¿es posible un check-in anticipado?",
+      "apply_sentence": "Because we finished packing ____, we reached the hotel early.",
+      "apply_answer": "ahead of schedule",
+      "apply_translation": "Como terminamos de empacar antes de lo previsto, llegamos temprano al hotel.",
+      "glossary_word": "ahead of schedule",
+      "glossary_meaning": "antes de lo previsto / adelantado",
+      "glossary_ipa": "əˈhed ʌv ˈskedʒuːl",
+      "visual_hint": "🚆⏰"
+    }
+  ],
+  "b1-optical-shop-glasses": [
+    {
+      "id": "idm-come-apart-hinge",
+      "kind": "phrasal_verb",
+      "text": "The right arm of my glasses started to come apart at the hinge.",
+      "translation": "La patilla derecha de mis lentes empezó a soltarse en la bisagra.",
+      "apply_sentence": "Cheap plastic frames tend to ____ after a few months.",
+      "apply_answer": "come apart",
+      "apply_translation": "Los armazones de plástico barato tienden a desarmarse después de unos meses.",
+      "glossary_word": "come apart",
+      "glossary_meaning": "desarmarse / soltarse",
+      "glossary_ipa": "kʌm əˈpɑːrt",
+      "visual_hint": "👓🔧"
+    },
+    {
+      "id": "idm-in-the-meantime",
+      "kind": "expression",
+      "text": "In the meantime, could you lend me a spare case while you fix them?",
+      "translation": "Mientras tanto, ¿podría prestarme un estuche de repuesto mientras los repara?",
+      "apply_sentence": "Your lenses will be ready at four; ____, feel free to grab a coffee.",
+      "apply_answer": "in the meantime",
+      "apply_translation": "Sus lentes estarán listos a las cuatro; mientras tanto, puede tomar un café.",
+      "glossary_word": "in the meantime",
+      "glossary_meaning": "mientras tanto",
+      "glossary_ipa": "ɪn ðə ˈmiːntaɪm",
+      "visual_hint": "⏳☕"
+    }
+  ],
+  "b1-tailor-suit-alterations": [
+    {
+      "id": "idm-take-in-waist",
+      "kind": "phrasal_verb",
+      "text": "Could you take in the jacket waist slightly so it looks sharper?",
+      "translation": "¿Podría meterle un poco a la cintura del saco para que se vea más entallado?",
+      "apply_sentence": "I lost weight, so I need my tailor to ____ these dress trousers.",
+      "apply_answer": "take in",
+      "apply_translation": "Bajé de peso, así que necesito que mi sastre le meta a estos pantalones de vestir.",
+      "glossary_word": "take in",
+      "glossary_meaning": "ajustar / meter (ropa)",
+      "glossary_ipa": "teɪk ɪn",
+      "visual_hint": "🧵✂️"
+    },
+    {
+      "id": "idm-cut-it-close",
+      "kind": "idiom",
+      "text": "If we pick up the suit two hours before the flight, we cut it close.",
+      "translation": "Si recogemos el traje dos horas antes del vuelo, vamos muy justos de tiempo.",
+      "apply_sentence": "Leaving alterations until Friday morning would really ____.",
+      "apply_answer": "cut it close",
+      "apply_translation": "Dejar los arreglos para el viernes por la mañana sería andar muy justo con el tiempo.",
+      "glossary_word": "cut it close",
+      "glossary_meaning": "ir muy justo / al límite de tiempo",
+      "glossary_ipa": "kʌt ɪt kloʊs",
+      "visual_hint": "🪡⏱️"
+    }
+  ],
+  "b1-tax-free-shopping-form": [
+    {
+      "id": "idm-fill-out-customs",
+      "kind": "phrasal_verb",
+      "text": "Please fill out your passport number on the tax-free refund form.",
+      "translation": "Por favor llene su número de pasaporte en el formulario de devolución de impuestos.",
+      "apply_sentence": "You have to ____ this receipt before heading to airport customs.",
+      "apply_answer": "fill out",
+      "apply_translation": "Tiene que llenar este recibo antes de dirigirse a la aduana del aeropuerto.",
+      "glossary_word": "fill out",
+      "glossary_meaning": "llenar / completar (un formulario)",
+      "glossary_ipa": "fɪl aʊt",
+      "visual_hint": "🧾✍️"
+    },
+    {
+      "id": "idm-break-the-bank",
+      "kind": "idiom",
+      "text": "With the VAT refund, this leather bag won't break the bank.",
+      "translation": "Con la devolución del IVA, este bolso de cuero no me dejará en bancarrota.",
+      "apply_sentence": "Shopping at outlet stores lets you refresh your wardrobe without having to ____.",
+      "apply_answer": "break the bank",
+      "apply_translation": "Comprar en tiendas outlet te permite renovar tu guardarropa sin gastar una fortuna.",
+      "glossary_word": "break the bank",
+      "glossary_meaning": "gastar una fortuna / arruinarse",
+      "glossary_ipa": "breɪk ðə bæŋk",
+      "visual_hint": "👜💸"
+    }
+  ],
+  "b2-custom-jewelry-engraving": [
+    {
+      "id": "idm-stand-out-engraving",
+      "kind": "phrasal_verb",
+      "text": "Adding a subtle date inside makes the engraved watch really stand out.",
+      "translation": "Añadir una fecha sutil adentro hace que el reloj grabado realmente destaque.",
+      "apply_sentence": "Hand-carved initials help a classic gift ____ from ordinary pieces.",
+      "apply_answer": "stand out",
+      "apply_translation": "Las iniciales talladas a mano hacen que un regalo clásico destaque entre piezas comunes.",
+      "glossary_word": "stand out",
+      "glossary_meaning": "destacar / sobresalir",
+      "glossary_ipa": "stænd aʊt",
+      "visual_hint": "⌚✨"
+    },
+    {
+      "id": "idm-from-scratch",
+      "kind": "idiom",
+      "text": "The jeweler designed that custom clasp from scratch for our anniversary.",
+      "translation": "El joyero diseñó ese broche personalizado desde cero para nuestro aniversario.",
+      "apply_sentence": "Instead of using a template, she sketched the monogram ____.",
+      "apply_answer": "from scratch",
+      "apply_translation": "En lugar de usar una plantilla, ella dibujó el monograma desde cero.",
+      "glossary_word": "from scratch",
+      "glossary_meaning": "desde cero",
+      "glossary_ipa": "frəm skrætʃ",
+      "visual_hint": "💍🎨"
+    }
+  ],
+  "b2-disputing-minibar-charge": [
+    {
+      "id": "idm-add-up-bill",
+      "kind": "phrasal_verb",
+      "text": "Wait—the minibar total on my folio doesn't add up to what I used.",
+      "translation": "Espere—el total del minibar en mi factura no cuadra con lo que consumí.",
+      "apply_sentence": "When the numbers on a hotel bill don't ____, ask for an itemized copy.",
+      "apply_answer": "add up",
+      "apply_translation": "Cuando los números en la factura del hotel no cuadran, pida una copia desglosada.",
+      "glossary_word": "add up",
+      "glossary_meaning": "cuadrar / tener sentido (cuentas)",
+      "glossary_ipa": "æd ʌp",
+      "visual_hint": "🧾🔍"
+    },
+    {
+      "id": "idm-set-record-straight",
+      "kind": "idiom",
+      "text": "Let's check the sensor log so we can set the record straight immediately.",
+      "translation": "Revisemos el registro del sensor para aclarar los hechos de inmediato.",
+      "apply_sentence": "I brought my signed receipt to ____ about the duplicate charge.",
+      "apply_answer": "set the record straight",
+      "apply_translation": "Traje mi recibo firmado para aclarar las cosas sobre el cargo duplicado.",
+      "glossary_word": "set the record straight",
+      "glossary_meaning": "aclarar los hechos / dejar las cosas claras",
+      "glossary_ipa": "set ðə ˈrekərd streɪt",
+      "visual_hint": "📋✅"
+    }
+  ],
+  "b2-furniture-delivery-window": [
+    {
+      "id": "idm-call-off-delivery",
+      "kind": "phrasal_verb",
+      "text": "If the freight elevator is down, we'll have to call off today's delivery.",
+      "translation": "Si el montacargas está averiado, tendremos que cancelar la entrega de hoy.",
+      "apply_sentence": "Heavy rain forced the movers to ____ the afternoon drop-off.",
+      "apply_answer": "call off",
+      "apply_translation": "La lluvia fuerte obligó a los de la mudanza a cancelar la entrega de la tarde.",
+      "glossary_word": "call off",
+      "glossary_meaning": "cancelar / suspender",
+      "glossary_ipa": "kɔːl ɒf",
+      "visual_hint": "🛋️🚫"
+    },
+    {
+      "id": "idm-up-in-the-air",
+      "kind": "idiom",
+      "text": "Our exact delivery slot is still up in the air until building security confirms.",
+      "translation": "Nuestro horario exacto de entrega sigue en el aire hasta que seguridad del edificio confirme.",
+      "apply_sentence": "With traffic delayed on the bridge, the arrival time remains ____.",
+      "apply_answer": "up in the air",
+      "apply_translation": "Con el tráfico retrasado en el puente, la hora de llegada sigue en el aire.",
+      "glossary_word": "up in the air",
+      "glossary_meaning": "en el aire / sin definir",
+      "glossary_ipa": "ʌp ɪn ði er",
+      "visual_hint": "🚚❓"
+    }
+  ],
+  "b2-returning-damaged-item": [
+    {
+      "id": "idm-back-up-claim",
+      "kind": "phrasal_verb",
+      "text": "I took unboxing photos to back up my claim that the mug arrived cracked.",
+      "translation": "Tomé fotos al abrir la caja para respaldar mi reclamo de que la taza llegó agrietada.",
+      "apply_sentence": "Having the shipping video will ____ your request for a full refund.",
+      "apply_answer": "back up",
+      "apply_translation": "Tener el video del envío respaldará tu solicitud de reembolso total.",
+      "glossary_word": "back up",
+      "glossary_meaning": "respaldar / apoyar con pruebas",
+      "glossary_ipa": "bæk ʌp",
+      "visual_hint": "📦📸"
+    },
+    {
+      "id": "idm-meet-halfway",
+      "kind": "idiom",
+      "text": "If a full refund isn't possible, could you meet me halfway with store credit?",
+      "translation": "Si no es posible un reembolso completo, ¿podríamos llegar a un punto medio con crédito en tienda?",
+      "apply_sentence": "Both the buyer and seller agreed to ____ to resolve the dispute quickly.",
+      "apply_answer": "meet halfway",
+      "apply_translation": "Tanto el comprador como el vendedor acordaron llegar a un punto medio para resolver rápido.",
+      "glossary_word": "meet halfway",
+      "glossary_meaning": "llegar a un punto medio / ceder ambos",
+      "glossary_ipa": "miːt ˌhæfˈweɪ",
+      "visual_hint": "🤝💳"
+    }
+  ],
+  "b2-vintage-camera-appraisal": [
+    {
+      "id": "idm-turn-out-authentic",
+      "kind": "phrasal_verb",
+      "text": "It turns out this 1968 rangefinder still has its original leather case.",
+      "translation": "Resulta que esta cámara telemétrica de 1968 aún conserva su estuche de cuero original.",
+      "apply_sentence": "What looked like dust on the lens didn't ____ to be fungus after all.",
+      "apply_answer": "turn out",
+      "apply_translation": "Lo que parecía polvo en el lente no resultó ser hongo después de todo.",
+      "glossary_word": "turn out",
+      "glossary_meaning": "resultar ser",
+      "glossary_ipa": "tɜːrn aʊt",
+      "visual_hint": "📷✨"
+    },
+    {
+      "id": "idm-rule-of-thumb",
+      "kind": "idiom",
+      "text": "As a rule of thumb, never buy a vintage shutter without testing slow speeds.",
+      "translation": "Por regla general, nunca compres un obturador antiguo sin probar las velocidades lentas.",
+      "apply_sentence": "A good ____ with classic optics is to inspect the glass against bright light.",
+      "apply_answer": "rule of thumb",
+      "apply_translation": "Una buena regla práctica con ópticas clásicas es revisar el cristal a contraluz.",
+      "glossary_word": "rule of thumb",
+      "glossary_meaning": "regla general / regla práctica",
+      "glossary_ipa": "ruːl ʌv θʌm",
+      "visual_hint": "👍📸"
+    }
+  ],
+  "c1-art-gallery-provenance": [
+    {
+      "id": "idm-pin-down-provenance",
+      "kind": "phrasal_verb",
+      "text": "The archivist helped us pin down the painting's exact exhibition history.",
+      "translation": "El archivista nos ayudó a precisar el historial exacto de exposiciones de la pintura.",
+      "apply_sentence": "Collectors want to ____ every prior owner before bidding on a rare canvas.",
+      "apply_answer": "pin down",
+      "apply_translation": "Los coleccionistas quieren precisar cada dueño anterior antes de pujar por un lienzo raro.",
+      "glossary_word": "pin down",
+      "glossary_meaning": "precisar / confirmar con exactitud",
+      "glossary_ipa": "pɪn daʊn",
+      "visual_hint": "🖼️🔎"
+    },
+    {
+      "id": "idm-par-for-the-course",
+      "kind": "idiom",
+      "text": "Requesting an independent condition report is par for the course at this level.",
+      "translation": "Solicitar un informe de estado independiente es lo normal (lo esperado) a este nivel.",
+      "apply_sentence": "Extended escrow periods for museum-grade works are ____.",
+      "apply_answer": "par for the course",
+      "apply_translation": "Los plazos de depósito prolongados para obras de nivel museo son algo habitual.",
+      "glossary_word": "par for the course",
+      "glossary_meaning": "lo normal / lo habitual en estos casos",
+      "glossary_ipa": "pɑːr fɔːr ðə kɔːrs",
+      "visual_hint": "🏛️📜"
+    }
+  ],
+  "c1-boutique-wholesale-order": [
+    {
+      "id": "idm-scale-back-order",
+      "kind": "phrasal_verb",
+      "text": "We may scale back the autumn knitwear order if freight tariffs rise again.",
+      "translation": "Quizás reduzcamos el pedido de tejido de otoño si los aranceles de flete vuelven a subir.",
+      "apply_sentence": "Several boutiques chose to ____ their initial minimum quantities this season.",
+      "apply_answer": "scale back",
+      "apply_translation": "Varias boutiques optaron por reducir sus cantidades mínimas iniciales esta temporada.",
+      "glossary_word": "scale back",
+      "glossary_meaning": "reducir / recortar escala",
+      "glossary_ipa": "skeɪl bæk",
+      "visual_hint": "🧥📉"
+    },
+    {
+      "id": "idm-ball-in-your-court",
+      "kind": "idiom",
+      "text": "We've matched your target margin, so the ball is in your court now.",
+      "translation": "Igualamos tu margen objetivo, así que ahora la pelota está en tu cancha.",
+      "apply_sentence": "Once the showroom sends the revised lookbook, the ____ to finalize.",
+      "apply_answer": "ball is in your court",
+      "apply_translation": "En cuanto el showroom envíe el catálogo revisado, te toca a ti decidir para cerrar.",
+      "glossary_word": "ball is in your court",
+      "glossary_meaning": "estar la pelota en tu cancha (te toca decidir)",
+      "glossary_ipa": "bɔːl ɪz ɪn jɔːr kɔːrt",
+      "visual_hint": "🎾💼"
+    }
+  ],
+  "c1-home-inspection-walkthrough": [
+    {
+      "id": "idm-flag-up-wiring",
+      "kind": "phrasal_verb",
+      "text": "The inspector flagged up outdated aluminum wiring behind the kitchen panel.",
+      "translation": "El inspector señaló cableado de aluminio obsoleto detrás del tablero de la cocina.",
+      "apply_sentence": "Be sure to ____ any moisture readings near the foundation during the walkthrough.",
+      "apply_answer": "flag up",
+      "apply_translation": "Asegúrate de señalar cualquier lectura de humedad cerca de los cimientos durante el recorrido.",
+      "glossary_word": "flag up",
+      "glossary_meaning": "señalar / advertir (un problema)",
+      "glossary_ipa": "flæɡ ʌp",
+      "visual_hint": "🏠🚩"
+    },
+    {
+      "id": "idm-sweep-under-rug",
+      "kind": "idiom",
+      "text": "We can't sweep roof flashing defects under the rug before closing.",
+      "translation": "No podemos barrer los defectos del tapajuntas del techo bajo la alfombra antes de escriturar.",
+      "apply_sentence": "A reputable seller never tries to ____ past drainage issues.",
+      "apply_answer": "sweep under the rug",
+      "apply_translation": "Un vendedor serio nunca intenta ocultar bajo la alfombra problemas previos de drenaje.",
+      "glossary_word": "sweep under the rug",
+      "glossary_meaning": "ocultar bajo la alfombra / disimular",
+      "glossary_ipa": "swiːp ˈʌndər ðə rʌɡ",
+      "visual_hint": "🧹🏠"
+    }
+  ],
+  "c1-hotel-conference-block": [
+    {
+      "id": "idm-hammer-out-terms",
+      "kind": "phrasal_verb",
+      "text": "Let's hammer out the attrition clause before we sign the group contract.",
+      "translation": "Cerremos los detalles de la cláusula de penalización antes de firmar el contrato grupal.",
+      "apply_sentence": "Both teams met for an hour to ____ complimentary meeting room terms.",
+      "apply_answer": "hammer out",
+      "apply_translation": "Ambos equipos se reunieron una hora para definir en detalle las salas sin costo.",
+      "glossary_word": "hammer out",
+      "glossary_meaning": "negociar y cerrar en detalle",
+      "glossary_ipa": "ˈhæmər aʊt",
+      "visual_hint": "🔨📄"
+    },
+    {
+      "id": "idm-silver-lining",
+      "kind": "idiom",
+      "text": "The higher room minimum has a silver lining: it unlocks free suite upgrades.",
+      "translation": "El mínimo más alto de habitaciones tiene un lado positivo: desbloquea suites gratis.",
+      "apply_sentence": "Even though dates shifted, the ____ was securing a much lower rate.",
+      "apply_answer": "silver lining",
+      "apply_translation": "Aunque cambiaron las fechas, el lado positivo fue asegurar una tarifa mucho menor.",
+      "glossary_word": "silver lining",
+      "glossary_meaning": "el lado positivo / rayo de esperanza",
+      "glossary_ipa": "ˈsɪlvər ˈlaɪnɪŋ",
+      "visual_hint": "🌤️🏨"
+    }
+  ],
+  "c1-lease-negotiation": [
+    {
+      "id": "idm-iron-out-clause",
+      "kind": "phrasal_verb",
+      "text": "We just need to iron out the subletting clause in paragraph twelve.",
+      "translation": "Solo necesitamos pulir la cláusula de subarriendo en el párrafo doce.",
+      "apply_sentence": "Our attorneys will ____ the maintenance cap before Friday's signing.",
+      "apply_answer": "iron out",
+      "apply_translation": "Nuestros abogados pulirán el tope de mantenimiento antes de la firma del viernes.",
+      "glossary_word": "iron out",
+      "glossary_meaning": "pulir / limar asperezas",
+      "glossary_ipa": "ˈaɪərn aʊt",
+      "visual_hint": "📝✨"
+    },
+    {
+      "id": "idm-read-between-lines",
+      "kind": "idiom",
+      "text": "If you read between the lines, the landlord expects a two-year commitment.",
+      "translation": "Si lees entre líneas, el propietario espera un compromiso de dos años.",
+      "apply_sentence": "Always ____ when a commercial lease mentions 'customary escalations'.",
+      "apply_answer": "read between the lines",
+      "apply_translation": "Siempre lee entre líneas cuando un contrato menciona 'incrementos habituales'.",
+      "glossary_word": "read between the lines",
+      "glossary_meaning": "leer entre líneas",
+      "glossary_ipa": "riːd bɪˈtwiːn ðə laɪnz",
+      "visual_hint": "📖🧐"
+    }
+  ],
+  "c2-auction-house-bidding": [
+    {
+      "id": "idm-size-up-bidders",
+      "kind": "phrasal_verb",
+      "text": "Seasoned collectors quietly size up competing telephone bidders before lot ten.",
+      "translation": "Los coleccionistas experimentados evalúan en silencio a los postores por teléfono antes del lote diez.",
+      "apply_sentence": "It takes experience to ____ the room's appetite before raising your paddle.",
+      "apply_answer": "size up",
+      "apply_translation": "Se requiere experiencia para medir el pulso de la sala antes de levantar la paleta.",
+      "glossary_word": "size up",
+      "glossary_meaning": "evaluar / tantear / medir",
+      "glossary_ipa": "saɪz ʌp",
+      "visual_hint": "🔨🧐"
+    },
+    {
+      "id": "idm-tip-of-the-iceberg",
+      "kind": "idiom",
+      "text": "The hammer price is often just the tip of the iceberg once buyer's premium applies.",
+      "translation": "El precio de martillo suele ser solo la punta del iceberg al sumar la comisión del comprador.",
+      "apply_sentence": "Restoration and crating fees proved to be ____ for that monumental sculpture.",
+      "apply_answer": "the tip of the iceberg",
+      "apply_translation": "Los costos de restauración y embalaje resultaron ser solo la punta del iceberg.",
+      "glossary_word": "the tip of the iceberg",
+      "glossary_meaning": "la punta del iceberg",
+      "glossary_ipa": "ðə tɪp ʌv ði ˈaɪsbɜːrɡ",
+      "visual_hint": "🧊💸"
+    }
+  ],
+  "c2-bespoke-savile-row-fitting": [
+    {
+      "id": "idm-taper-off-lapel",
+      "kind": "phrasal_verb",
+      "text": "Ask the cutter to let the lapel roll taper off gracefully toward the button.",
+      "translation": "Pide al cortador que deje que la vuelta de la solapa se afine suavemente hacia el botón.",
+      "apply_sentence": "Notice how the shoulder seam should ____ cleanly without puckering.",
+      "apply_answer": "taper off",
+      "apply_translation": "Fíjate cómo la costura del hombro debe afinarse limpiamente sin arrugarse.",
+      "glossary_word": "taper off",
+      "glossary_meaning": "afinarse / reducirse gradualmente",
+      "glossary_ipa": "ˈteɪpər ɒf",
+      "visual_hint": "🪡🤵"
+    },
+    {
+      "id": "idm-cut-above-rest",
+      "kind": "idiom",
+      "text": "Hand-padded canvas chest pieces are a cut above the rest in longevity.",
+      "translation": "Las entretelas de lona picadas a mano están muy por encima del resto en durabilidad.",
+      "apply_sentence": "With horn buttons and Milanese buttonholes, this overcoat is ____.",
+      "apply_answer": "a cut above the rest",
+      "apply_translation": "Con botones de cuerno y ojales milaneses, este abrigo está muy por encima del resto.",
+      "glossary_word": "a cut above the rest",
+      "glossary_meaning": "muy por encima del resto",
+      "glossary_ipa": "ə kʌt əˈbʌv ðə rest",
+      "visual_hint": "✂️👑"
+    }
+  ],
+  "c2-commercial-flagship-lease": [
+    {
+      "id": "idm-ring-fence-capex",
+      "kind": "phrasal_verb",
+      "text": "We should ring-fence landlord build-out allowances inside an escrow schedule.",
+      "translation": "Deberíamos blindar las aportaciones de obra del arrendador dentro de un calendario en depósito.",
+      "apply_sentence": "Legal counsel moved to ____ tenant improvement funds from general operating covenants.",
+      "apply_answer": "ring-fence",
+      "apply_translation": "El equipo legal buscó blindar los fondos de adecuación frente a cláusulas operativas.",
+      "glossary_word": "ring-fence",
+      "glossary_meaning": "blindar / proteger financieramente",
+      "glossary_ipa": "rɪŋ fens",
+      "visual_hint": "🏢🛡️"
+    },
+    {
+      "id": "idm-bite-the-bullet",
+      "kind": "idiom",
+      "text": "Rather than losing the corner frontage, the brand chose to bite the bullet on rent.",
+      "translation": "Antes que perder el escaparate en esquina, la marca decidió afrontar el trago amargo de la renta.",
+      "apply_sentence": "Sometimes flagship tenants must ____ on percentage rent to secure prime footfall.",
+      "apply_answer": "bite the bullet",
+      "apply_translation": "A veces los inquilinos insignia deben asumir el costo difícil para asegurar tráfico clave.",
+      "glossary_word": "bite the bullet",
+      "glossary_meaning": "afrontar el trago amargo / apechugar",
+      "glossary_ipa": "baɪt ðə ˈbʊlɪt",
+      "visual_hint": "🏬💪"
+    }
+  ],
+  "c2-heritage-restoration-architect": [
+    {
+      "id": "idm-shore-up-masonry",
+      "kind": "phrasal_verb",
+      "text": "Lime mortar repairs will shore up the Georgian facade without trapping damp.",
+      "translation": "Las reparaciones con mortero de cal reforzarán la fachada georgiana sin atrapar humedad.",
+      "apply_sentence": "Engineers had to ____ the vaulted cellar before opening the courtyard.",
+      "apply_answer": "shore up",
+      "apply_translation": "Los ingenieros tuvieron que apuntalar la bóveda del sótano antes de abrir el patio.",
+      "glossary_word": "shore up",
+      "glossary_meaning": "apuntalar / reforzar estructuralmente",
+      "glossary_ipa": "ʃɔːr ʌp",
+      "visual_hint": "🏛️🧱"
+    },
+    {
+      "id": "idm-turn-blind-eye",
+      "kind": "idiom",
+      "text": "Conservation officers will never turn a blind eye to unauthorized PVC windows.",
+      "translation": "Los inspectores de patrimonio nunca harán la vista gorda ante ventanas de PVC sin permiso.",
+      "apply_sentence": "You cannot ____ to listed-building covenants during an adaptive reuse.",
+      "apply_answer": "turn a blind eye",
+      "apply_translation": "No puedes hacer la vista gorda ante las normas de patrimonio durante una rehabilitación.",
+      "glossary_word": "turn a blind eye",
+      "glossary_meaning": "hacer la vista gorda",
+      "glossary_ipa": "tɜːrn ə blaɪnd aɪ",
+      "visual_hint": "👁️📜"
+    }
+  ],
+  "c2-luxury-concierge": [
+    {
+      "id": "idm-pull-off-gala",
+      "kind": "phrasal_verb",
+      "text": "Only a seasoned concierge can pull off a private museum dinner in forty-eight hours.",
+      "translation": "Solo un conserje experto puede lograr sacar adelante una cena privada en museo en 48 horas.",
+      "apply_sentence": "With three florists on standby, they managed to ____ the rooftop surprise flawlessly.",
+      "apply_answer": "pull off",
+      "apply_translation": "Con tres floristas en espera, lograron sacar adelante la sorpresa en la azotea sin fallos.",
+      "glossary_word": "pull off",
+      "glossary_meaning": "lograr sacar adelante algo difícil",
+      "glossary_ipa": "pʊl ɒf",
+      "visual_hint": "🥂✨"
+    },
+    {
+      "id": "idm-leave-no-stone",
+      "kind": "idiom",
+      "text": "Our team will leave no stone unturned to secure backstage opera access.",
+      "translation": "Nuestro equipo no dejará piedra sin mover para conseguir acceso tras bambalinas a la ópera.",
+      "apply_sentence": "When VIP guests request vintage champagne, we ____ to source it.",
+      "apply_answer": "leave no stone unturned",
+      "apply_translation": "Cuando huéspedes VIP piden champán de añada, no dejamos piedra sin mover para conseguirlo.",
+      "glossary_word": "leave no stone unturned",
+      "glossary_meaning": "no dejar piedra sin mover",
+      "glossary_ipa": "liːv noʊ stoʊn ʌnˈtɜːrnd",
+      "visual_hint": "🎭💎"
+    }
+  ]
+}

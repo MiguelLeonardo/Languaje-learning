@@ -77,6 +77,37 @@ phrases:
   - word: redlined
     meaning: con control de cambios jurídicos
     ipa: ˈredlaɪnd
+- id: idm-hold-accountable
+  text: We need to hold both teams accountable for the repeated downtime.
+  translation: 'Necesitamos hacer responsables a ambos equipos de las caídas repetidas. (hold accountable: exigir
+    responsabilidad)'
+  visual_hint: ⚖️📉
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: hold accountable
+    meaning: exigir responsabilidad
+    ipa: hoʊld əˈkaʊntəbəl
+  kind: expression
+  apply_sentence: Every manager should be held ____ for their own budget.
+  apply_answer: accountable
+  apply_translation: Todo gerente debería responder por su propio presupuesto.
+- id: idm-read-the-fine-print
+  text: Before we sign, let's read the fine print on penalties.
+  translation: 'Antes de firmar, leamos la letra pequeña sobre las penalizaciones. (fine print: cláusulas ocultas)'
+  visual_hint: 📜🔍
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: read the fine print
+    meaning: leer la letra pequeña
+    ipa: riːd ðə faɪn prɪnt
+  kind: idiom
+  apply_sentence: Always ____ in a vendor contract before agreeing.
+  apply_answer: read the fine print
+  apply_translation: Siempre lee la letra pequeña en un contrato con proveedores antes de aceptar.
 roleplay:
   ai_role: vendor account executive
   user_role: head of infrastructure

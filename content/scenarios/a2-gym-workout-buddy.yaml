@@ -71,6 +71,36 @@ phrases:
   - word: book my spot
     meaning: reservar mi lugar
     ipa: bʊk maɪ spɑːt
+- id: idm-a2gw-work-out
+  text: I try to work out three times a week after work.
+  translation: Intento hacer ejercicio tres veces por semana después del trabajo.
+  visual_hint: 🏋️💪
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: work out
+    meaning: hacer ejercicio
+    ipa: wɜːk
+  kind: phrasal_verb
+  apply_sentence: My brother likes to ____ every morning in the garden.
+  apply_answer: work out
+  apply_translation: A mi hermano le gusta hacer ejercicio cada mañana en el jardín.
+- id: idm-a2gw-no-pain
+  text: Keep going! No pain, no gain, my friend, remember that.
+  translation: ¡Sigue! Sin esfuerzo no hay recompensa, amigo (hay que sacrificarse).
+  visual_hint: 😅🏃
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: no pain, no gain
+    meaning: sin esfuerzo no hay recompensa
+    ipa: peɪn
+  kind: idiom
+  apply_sentence: Studying is hard, but ____, no gain.
+  apply_answer: no pain
+  apply_translation: Estudiar es difícil, pero sin dolor no hay ganancia.
 roleplay:
   ai_role: gym member
   user_role: fitness class participant

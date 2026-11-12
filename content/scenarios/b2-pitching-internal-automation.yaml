@@ -77,6 +77,36 @@ phrases:
   - word: report back
     meaning: informar los resultados
     ipa: rɪˈpɔːrt bæk
+- id: idm-streamline
+  text: This tool will streamline our reporting and save hours every week.
+  translation: 'Esta herramienta agilizará nuestros informes y ahorrará horas cada semana. (streamline: simplificar)'
+  visual_hint: ⚙️⏱️
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: streamline
+    meaning: simplificar procesos
+    ipa: ˈstriːmlaɪn
+  kind: expression
+  apply_sentence: We want to ____ the approval process for expenses.
+  apply_answer: streamline
+  apply_translation: Queremos agilizar el proceso de aprobación de gastos.
+- id: idm-cut-corners
+  text: The audit showed they were cutting corners on quality.
+  translation: 'La auditoría mostró que escatimaban en calidad. (cut corners: hacer las cosas a medias)'
+  visual_hint: ✂️⚠️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: cut corners
+    meaning: hacer las cosas a medias
+    ipa: kʌt ˈkɔːrnərz
+  kind: idiom
+  apply_sentence: The contractor was fired for ____ on safety.
+  apply_answer: cutting corners
+  apply_translation: El contratista fue despedido por escatimar en seguridad.
 roleplay:
   ai_role: operations director
   user_role: process lead

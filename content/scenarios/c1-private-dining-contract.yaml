@@ -73,6 +73,36 @@ phrases:
   - word: countersign
     meaning: refrendar / firmar contrato
     ipa: ˈkaʊntərsaɪn
+- id: read-the-fine-print
+  text: We should read the fine print before we sign.
+  translation: 'Deberíamos leer la letra pequeña antes de firmar. (the fine print: letra pequeña)'
+  visual_hint: 📄🔍
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: read the fine print
+    meaning: 'read the fine print: leer la letra pequeña'
+    ipa: faɪn prɪnt
+  kind: idiom
+  apply_sentence: Always ____ on any rental contract.
+  apply_answer: read the fine print
+  apply_translation: Lee siempre la letra pequeña en cualquier contrato de alquiler.
+- id: iron-out
+  text: We need to iron out the details of the minimum spend.
+  translation: 'Debemos resolver los detalles del gasto mínimo. (iron out: resolver)'
+  visual_hint: 📝🧩
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: iron out
+    meaning: 'iron out: resolver, pulir'
+    ipa: ˈaɪən
+  kind: phrasal_verb
+  apply_sentence: Let's ____ the last problems before Friday.
+  apply_answer: iron out
+  apply_translation: Resolvamos los últimos problemas antes del viernes.
 roleplay:
   ai_role: private events director
   user_role: corporate host

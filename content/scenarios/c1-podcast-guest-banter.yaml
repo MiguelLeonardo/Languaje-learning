@@ -76,6 +76,36 @@ phrases:
   - word: thoughtful
     meaning: reflexiva / profunda
     ipa: ˈθɔːtfəl
+- id: idm-c1pg-hit-nail
+  text: You hit the nail on the head with that observation, honestly.
+  translation: Diste justo en el clavo con esa observación (acertar totalmente).
+  visual_hint: 🎙️🎯
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: hit the nail on the head
+    meaning: dar en el clavo
+    ipa: neɪl
+  kind: idiom
+  apply_sentence: Her comment really ____ the nail on the head.
+  apply_answer: hit
+  apply_translation: Su comentario dio justo en el clavo.
+- id: idm-c1pg-take-with-grain
+  text: Take my predictions with a grain of salt; I'm often wrong.
+  translation: Toma mis predicciones con cautela; a menudo me equivoco (con escepticismo).
+  visual_hint: 🧂😅
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: a grain of salt
+    meaning: con escepticismo
+    ipa: greɪn
+  kind: idiom
+  apply_sentence: I take online reviews with a ____ of salt.
+  apply_answer: grain
+  apply_translation: Tomo las reseñas en línea con pinzas.
 roleplay:
   ai_role: podcast host
   user_role: featured guest

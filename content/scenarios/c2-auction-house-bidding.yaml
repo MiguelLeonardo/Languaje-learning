@@ -76,6 +76,37 @@ phrases:
   - word: three lots prior
     meaning: tres lotes antes
     ipa: θriː lɑːts ˈpraɪər
+- id: idm-size-up-bidders
+  text: Seasoned collectors quietly size up competing telephone bidders before lot ten.
+  translation: Los coleccionistas experimentados evalúan en silencio a los postores por teléfono antes del lote
+    diez.
+  visual_hint: 🔨🧐
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: size up
+    meaning: evaluar / tantear / medir
+    ipa: saɪz ʌp
+  kind: phrasal_verb
+  apply_sentence: It takes experience to ____ the room's appetite before raising your paddle.
+  apply_answer: size up
+  apply_translation: Se requiere experiencia para medir el pulso de la sala antes de levantar la paleta.
+- id: idm-tip-of-the-iceberg
+  text: The hammer price is often just the tip of the iceberg once buyer's premium applies.
+  translation: El precio de martillo suele ser solo la punta del iceberg al sumar la comisión del comprador.
+  visual_hint: 🧊💸
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: the tip of the iceberg
+    meaning: la punta del iceberg
+    ipa: ðə tɪp ʌv ði ˈaɪsbɜːrɡ
+  kind: idiom
+  apply_sentence: Restoration and crating fees proved to be ____ for that monumental sculpture.
+  apply_answer: the tip of the iceberg
+  apply_translation: Los costos de restauración y embalaje resultaron ser solo la punta del iceberg.
 roleplay:
   ai_role: senior auction specialist
   user_role: private collector

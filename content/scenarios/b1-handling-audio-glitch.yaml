@@ -72,6 +72,36 @@ phrases:
   - word: bearing with me
     meaning: tenerme paciencia
     ipa: ˈberɪŋ wɪð miː
+- id: idm-cut-out
+  text: Your voice keeps cutting out, so I can't hear you.
+  translation: 'Tu voz se corta todo el rato y no te oigo. (cut out: interrumpirse)'
+  visual_hint: 🎧❌
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: cut out
+    meaning: interrumpirse
+    ipa: kʌt aʊt
+  kind: phrasal_verb
+  apply_sentence: The sound keeps ____ whenever someone shares the screen.
+  apply_answer: cutting out
+  apply_translation: El sonido se corta cada vez que alguien comparte la pantalla.
+- id: idm-bear-with-me
+  text: Bear with me while I check my microphone settings.
+  translation: 'Ten paciencia mientras reviso la configuración del micrófono. (bear with me: ten paciencia)'
+  visual_hint: 🎤⏳
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: bear with me
+    meaning: ten paciencia conmigo
+    ipa: bɛr wɪð miː
+  kind: idiom
+  apply_sentence: Please ____, I am trying to restart the app.
+  apply_answer: bear with me
+  apply_translation: Ten paciencia, por favor, estoy intentando reiniciar la aplicación.
 roleplay:
   ai_role: client on Zoom
   user_role: presenter

@@ -73,6 +73,37 @@ phrases:
   - word: shuttle
     meaning: autobús de enlace / transporte
     ipa: ˈʃʌtəl
+- id: overbooked-sweeten-deal
+  text: Could you sweeten the deal with an upgrade and a hotel voucher?
+  translation: ¿Podría mejorar la oferta con un ascenso de clase y un vale de hotel? (sweeten the deal = hacer la
+    oferta más atractiva)
+  visual_hint: 🍬✈️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: sweeten the deal
+    meaning: mejorar la oferta
+    ipa: ˈswiːtn ðə diːl
+  kind: idiom
+  apply_sentence: The agent tried to ____ with a free meal.
+  apply_answer: sweeten the deal
+  apply_translation: El agente intentó mejorar la oferta con una comida gratis.
+- id: overbooked-play-it-by-ear
+  text: I haven't planned tomorrow yet, so I'll play it by ear.
+  translation: Aún no he planeado mañana, así que improvisaré según se dé. (play it by ear = improvisar)
+  visual_hint: 🎧🗓️
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: play it by ear
+    meaning: improvisar
+    ipa: pleɪ ɪt baɪ ɪə
+  kind: idiom
+  apply_sentence: We have no fixed route, so we will ____ in Italy.
+  apply_answer: play it by ear
+  apply_translation: No tenemos ruta fija, así que improvisaremos en Italia.
 roleplay:
   ai_role: gate agent
   user_role: flexible traveler

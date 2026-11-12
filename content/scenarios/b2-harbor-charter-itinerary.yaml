@@ -72,6 +72,36 @@ phrases:
   - word: gratuity
     meaning: propina
     ipa: ɡrəˈtuːəti
+- id: harbor-go-with-the-flow
+  text: If the swell grows, we will just go with the flow and adjust.
+  translation: Si el oleaje crece, simplemente nos adaptaremos y ajustaremos. (go with the flow = adaptarse)
+  visual_hint: 🌊⛵
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: go with the flow
+    meaning: dejarse llevar
+    ipa: ɡəʊ wɪð ðə fləʊ
+  kind: idiom
+  apply_sentence: On a boat trip, it's best to ____ and not stress.
+  apply_answer: go with the flow
+  apply_translation: En un viaje en barco, lo mejor es dejarse llevar y no estresarse.
+- id: harbor-steer-clear
+  text: The captain wants to steer clear of the choppy water near the rocks.
+  translation: El capitán quiere evitar el agua picada cerca de las rocas. (steer clear of = evitar)
+  visual_hint: 🚫🪨
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: steer clear of
+    meaning: evitar
+    ipa: stɪə klɪər əv
+  kind: idiom
+  apply_sentence: Tourists should ____ the crowded pier at noon.
+  apply_answer: steer clear of
+  apply_translation: Los turistas deberían evitar el muelle concurrido al mediodía.
 roleplay:
   ai_role: charter skipper
   user_role: group organizer

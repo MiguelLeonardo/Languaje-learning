@@ -71,6 +71,36 @@ phrases:
   - word: version
     meaning: versión
     ipa: ˈvɜːrʒən
+- id: idm-keep-an-eye-on-a2
+  text: I didn't keep an eye on my phone for a second.
+  translation: No vigilé mi teléfono ni un segundo. (keep an eye on = vigilar)
+  visual_hint: 👀📱
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: keep an eye on
+    meaning: vigilar
+    ipa: kiːp ən aɪ ɒn
+  kind: idiom
+  apply_sentence: Can you ____ my suitcase for a minute?
+  apply_answer: keep an eye on
+  apply_translation: ¿Puedes vigilar mi maleta un minuto?
+- id: idm-take-down-a2
+  text: Can you take down my name and number, please?
+  translation: ¿Puede anotar mi nombre y número, por favor? (take down = anotar)
+  visual_hint: ✍️👮
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: take down
+    meaning: anotar
+    ipa: teɪk daʊn
+  kind: phrasal_verb
+  apply_sentence: Please ____ this address before you forget it.
+  apply_answer: take down
+  apply_translation: Por favor, anota esta dirección antes de que la olvides.
 roleplay:
   ai_role: desk officer
   user_role: tourist

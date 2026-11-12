@@ -76,6 +76,36 @@ phrases:
   - word: en route
     meaning: en camino
     ipa: ɑːn ruːt
+- id: idm-in-the-middle-of-nowhere-b2
+  text: We broke down in the middle of nowhere.
+  translation: Se nos averió el coche en medio de la nada. (in the middle of nowhere = en un lugar remoto)
+  visual_hint: 🛣️🚗
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: in the middle of nowhere
+    meaning: en medio de la nada
+    ipa: ˈnəʊweər
+  kind: idiom
+  apply_sentence: Their cabin is ____, with no neighbours for miles.
+  apply_answer: in the middle of nowhere
+  apply_translation: Su cabaña está en medio de la nada, sin vecinos en kilómetros.
+- id: idm-hit-the-road-b2
+  text: Once the truck arrives, we can hit the road again.
+  translation: Cuando llegue la grúa, podremos ponernos en marcha otra vez. (hit the road = salir de viaje)
+  visual_hint: 🚚🛞
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: hit the road
+    meaning: ponerse en camino
+    ipa: rəʊd
+  kind: idiom
+  apply_sentence: It's late, so let's ____ before dark.
+  apply_answer: hit the road
+  apply_translation: Es tarde, así que pongámonos en marcha antes de que oscurezca.
 roleplay:
   ai_role: roadside dispatch agent
   user_role: driver

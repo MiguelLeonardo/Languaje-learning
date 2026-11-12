@@ -95,6 +95,36 @@ phrases:
   - word: botanical
     meaning: botánico / herbal
     ipa: bəˈtænɪkəl
+- id: let-it-breathe
+  text: Decant it first and let it breathe for an hour.
+  translation: 'Decántelo primero y deje que respire una hora. (let it breathe: dejar que se oxigene)'
+  visual_hint: 🍷💨
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: let it breathe
+    meaning: 'let it breathe: dejar que el vino respire'
+    ipa: briːð
+  kind: expression
+  apply_sentence: Open the bottle early and ____ before serving.
+  apply_answer: let it breathe
+  apply_translation: Abre la botella pronto y deja que respire antes de servir.
+- id: worth-its-weight-in-gold
+  text: A good pairing like this is worth its weight in gold.
+  translation: 'Un buen maridaje como este vale su peso en oro. (worth its weight in gold: muy valioso)'
+  visual_hint: 🍷🥇
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: worth its weight in gold
+    meaning: 'worth its weight in gold: vale su peso en oro'
+    ipa: ɡəʊld
+  kind: idiom
+  apply_sentence: That old map was ____ on our trip.
+  apply_answer: worth its weight in gold
+  apply_translation: Ese mapa viejo valió su peso en oro en nuestro viaje.
 roleplay:
   ai_role: sommelier
   user_role: guest

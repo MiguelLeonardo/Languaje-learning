@@ -71,6 +71,36 @@ phrases:
   - word: hiccup
     meaning: pequeño contratiempo
     ipa: ˈhɪkʌp
+- id: idm-add-up-bill
+  text: Wait—the minibar total on my folio doesn't add up to what I used.
+  translation: Espere—el total del minibar en mi factura no cuadra con lo que consumí.
+  visual_hint: 🧾🔍
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: add up
+    meaning: cuadrar / tener sentido (cuentas)
+    ipa: æd ʌp
+  kind: phrasal_verb
+  apply_sentence: When the numbers on a hotel bill don't ____, ask for an itemized copy.
+  apply_answer: add up
+  apply_translation: Cuando los números en la factura del hotel no cuadran, pida una copia desglosada.
+- id: idm-set-record-straight
+  text: Let's check the sensor log so we can set the record straight immediately.
+  translation: Revisemos el registro del sensor para aclarar los hechos de inmediato.
+  visual_hint: 📋✅
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: set the record straight
+    meaning: aclarar los hechos / dejar las cosas claras
+    ipa: set ðə ˈrekərd streɪt
+  kind: idiom
+  apply_sentence: I brought my signed receipt to ____ about the duplicate charge.
+  apply_answer: set the record straight
+  apply_translation: Traje mi recibo firmado para aclarar las cosas sobre el cargo duplicado.
 roleplay:
   ai_role: front desk supervisor
   user_role: departing guest

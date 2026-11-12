@@ -71,6 +71,36 @@ phrases:
   - word: racks
     meaning: soportes / aparcabicis
     ipa: ræks
+- id: bike-take-it-easy
+  text: Take it easy on the path, because it is crowded today.
+  translation: Ve con calma en el camino, porque hoy hay mucha gente. (take it easy = ir con calma)
+  visual_hint: 🚲😌
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: take it easy
+    meaning: tomarlo con calma
+    ipa: teɪk ɪt ˈiːzi
+  kind: idiom
+  apply_sentence: We can ____ and enjoy the park this afternoon.
+  apply_answer: take it easy
+  apply_translation: Podemos relajarnos y disfrutar del parque esta tarde.
+- id: bike-check-out
+  text: Let's check out the brakes before we leave the shop.
+  translation: Revisemos los frenos antes de salir de la tienda. (check out = revisar)
+  visual_hint: 🔧🚲
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: check out
+    meaning: revisar, echar un vistazo
+    ipa: tʃek aʊt
+  kind: phrasal_verb
+  apply_sentence: We should ____ the new bike path near the river.
+  apply_answer: check out
+  apply_translation: Deberíamos conocer el nuevo carril bici cerca del río.
 roleplay:
   ai_role: bike shop clerk
   user_role: visitor

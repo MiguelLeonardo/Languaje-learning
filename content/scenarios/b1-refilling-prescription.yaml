@@ -72,6 +72,36 @@ phrases:
   - word: essential
     meaning: esenciales / indispensables
     ipa: ɪˈsenʃəl
+- id: idm-lose-track-of-b1
+  text: I always lose track of my pills when I travel.
+  translation: Siempre pierdo la cuenta de mis pastillas cuando viajo. (lose track of = perder la cuenta)
+  visual_hint: 💊🧳
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: lose track of
+    meaning: perder la cuenta de
+    ipa: luːz træk ʌv
+  kind: idiom
+  apply_sentence: Don't ____ time while you are studying.
+  apply_answer: lose track of
+  apply_translation: No pierdas la noción del tiempo mientras estudias.
+- id: idm-just-in-case-b1
+  text: I'll carry a spare prescription just in case.
+  translation: Llevaré una receta de repuesto por si acaso. (just in case)
+  visual_hint: 📄🛡️
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: just in case
+    meaning: por si acaso
+    ipa: dʒʌst ɪn keɪs
+  kind: expression
+  apply_sentence: Take a sweater, ____ it gets cold.
+  apply_answer: just in case
+  apply_translation: Lleva un suéter, por si hace frío.
 roleplay:
   ai_role: clinic physician
   user_role: traveler

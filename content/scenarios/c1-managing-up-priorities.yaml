@@ -80,6 +80,37 @@ phrases:
   - word: sets up
     meaning: prepara el terreno para el éxito
     ipa: sets ʌp
+- id: idm-juggle-priorities
+  text: The executives expect us to juggle priorities that clearly conflict.
+  translation: 'Los directivos esperan que equilibremos prioridades que claramente chocan. (juggle: manejar varias
+    cosas)'
+  visual_hint: 🤹📋
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: juggle priorities
+    meaning: hacer malabares con prioridades
+    ipa: ˈdʒʌɡəl ˈpraɪɔːrətiz
+  kind: idiom
+  apply_sentence: She has to ____ three launches at the same time.
+  apply_answer: juggle
+  apply_translation: Ella tiene que hacer malabares con tres lanzamientos a la vez.
+- id: idm-on-the-back-burner
+  text: We should put the redesign on the back burner for now.
+  translation: 'Deberíamos dejar el rediseño en segundo plano por ahora. (back burner: aplazado)'
+  visual_hint: 🍳⏸️
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: on the back burner
+    meaning: en segundo plano
+    ipa: ɑːn ðə bæk ˈbɜːrnər
+  kind: idiom
+  apply_sentence: Because of budget cuts, the hiring plan went ____ last month.
+  apply_answer: on the back burner
+  apply_translation: Por los recortes de presupuesto, el plan de contratación quedó en segundo plano el mes pasado.
 roleplay:
   ai_role: VP of Marketing & VP of Sales
   user_role: product director

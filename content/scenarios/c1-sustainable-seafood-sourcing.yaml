@@ -72,6 +72,36 @@ phrases:
   - word: underutilized
     meaning: poco aprovechadas
     ipa: ˌʌndərˈjuːtəlaɪzd
+- id: a-drop-in-the-ocean
+  text: Our efforts are just a drop in the ocean, honestly.
+  translation: 'Nuestros esfuerzos son solo una gota en el océano, la verdad. (a drop in the ocean: muy poco)'
+  visual_hint: 🌊💧
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: a drop in the ocean
+    meaning: 'a drop in the ocean: una gota en el mar'
+    ipa: ˈəʊʃn
+  kind: idiom
+  apply_sentence: Those complaints were only ____.
+  apply_answer: a drop in the ocean
+  apply_translation: Esas quejas eran solo una gota en el océano.
+- id: swimming-against-the-tide
+  text: Sourcing only line-caught fish means swimming against the tide.
+  translation: 'Comprar solo pescado de línea es ir contracorriente. (swimming against the tide: ir contracorriente)'
+  visual_hint: 🐟🌊
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: swimming against the tide
+    meaning: 'swim against the tide: ir contracorriente'
+    ipa: taɪd
+  kind: idiom
+  apply_sentence: He felt he was ____ in that conservative office.
+  apply_answer: swimming against the tide
+  apply_translation: Sentía que iba contracorriente en esa oficina conservadora.
 roleplay:
   ai_role: seafood chef
   user_role: conscious diner

@@ -71,6 +71,37 @@ phrases:
   - word: around the corner
     meaning: a la vuelta de la esquina
     ipa: əˈraʊnd ðə ˈkɔːrnər
+- id: idm-learn-the-ropes
+  text: Don't worry, you'll soon learn the ropes around here.
+  translation: 'No te preocupes, pronto aprenderás cómo funcionan las cosas aquí. (learn the ropes: aprender lo
+    básico)'
+  visual_hint: 🧭🧑‍💼
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: learn the ropes
+    meaning: aprender los trucos
+    ipa: lɜːrn ðə roʊps
+  kind: idiom
+  apply_sentence: It takes a few weeks to ____ in a new job.
+  apply_answer: learn the ropes
+  apply_translation: Se tarda unas semanas en aprender cómo funciona un trabajo nuevo.
+- id: idm-feel-free
+  text: Feel free to ask me anything about the tools.
+  translation: 'Siéntete libre de preguntarme lo que quieras sobre las herramientas. (feel free: no dudes en)'
+  visual_hint: 🙌💬
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: feel free
+    meaning: no dudes en
+    ipa: fiːl friː
+  kind: expression
+  apply_sentence: ____ to use my notes if they help you.
+  apply_answer: Feel free
+  apply_translation: Siéntete libre de usar mis notas si te ayudan.
 roleplay:
   ai_role: new hire (Lucas)
   user_role: onboarding buddy

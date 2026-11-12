@@ -71,6 +71,37 @@ phrases:
   - word: coaching
     meaning: mentoría / guía
     ipa: ˈkoʊtʃɪŋ
+- id: idm-constructive-criticism
+  text: I would really welcome some constructive criticism on my talk.
+  translation: 'Agradecería mucho algunas críticas constructivas sobre mi charla. (constructive criticism: críticas
+    útiles)'
+  visual_hint: 🗣️🔧
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: constructive criticism
+    meaning: crítica constructiva
+    ipa: kənˈstrʌktɪv ˈkrɪtɪsɪzəm
+  kind: expression
+  apply_sentence: Good managers give ____ instead of just complaining.
+  apply_answer: constructive criticism
+  apply_translation: Los buenos jefes dan críticas constructivas en vez de solo quejarse.
+- id: idm-take-on-board
+  text: I will take on board your suggestions for next time.
+  translation: 'Tendré en cuenta tus sugerencias la próxima vez. (take on board: aceptar y considerar)'
+  visual_hint: 📝👂
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: take on board
+    meaning: tener en cuenta
+    ipa: teɪk ɑːn bɔːrd
+  kind: idiom
+  apply_sentence: The team chose to ____ the client's new ideas.
+  apply_answer: take on board
+  apply_translation: El equipo decidió tener en cuenta las nuevas ideas del cliente.
 roleplay:
   ai_role: department director
   user_role: presenter

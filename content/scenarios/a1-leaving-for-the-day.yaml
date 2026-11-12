@@ -71,6 +71,36 @@ phrases:
   - word: catch
     meaning: alcanzar / tomar (transporte)
     ipa: kætʃ
+- id: idm-call-it-a-day
+  text: It is six o'clock, so let's call it a day.
+  translation: 'Son las seis, así que terminemos por hoy. (call it a day: dejar de trabajar)'
+  visual_hint: 🌆😴
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: call it a day
+    meaning: terminar la jornada
+    ipa: kɔːl ɪt ə deɪ
+  kind: idiom
+  apply_sentence: I am tired, so I will ____ now.
+  apply_answer: call it a day
+  apply_translation: Estoy cansado, así que lo dejo por hoy.
+- id: idm-see-you-tomorrow
+  text: Thanks for your help, and see you tomorrow morning!
+  translation: ¡Gracias por tu ayuda y hasta mañana por la mañana!
+  visual_hint: 👋🌙
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: see you tomorrow
+    meaning: hasta mañana
+    ipa: siː juː təˈmɑːroʊ
+  kind: expression
+  apply_sentence: Bye, Anna! ____ at nine for the meeting.
+  apply_answer: See you tomorrow
+  apply_translation: ¡Adiós, Anna! Hasta mañana a las nueve para la reunión.
 roleplay:
   ai_role: team lead (Mark)
   user_role: employee

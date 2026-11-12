@@ -101,6 +101,36 @@ phrases:
   - word: sign off on
     meaning: aprobar con firma
     ipa: saɪn ɔːf ɑːn
+- id: idm-iron-out-clause
+  text: We just need to iron out the subletting clause in paragraph twelve.
+  translation: Solo necesitamos pulir la cláusula de subarriendo en el párrafo doce.
+  visual_hint: 📝✨
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: iron out
+    meaning: pulir / limar asperezas
+    ipa: ˈaɪərn aʊt
+  kind: phrasal_verb
+  apply_sentence: Our attorneys will ____ the maintenance cap before Friday's signing.
+  apply_answer: iron out
+  apply_translation: Nuestros abogados pulirán el tope de mantenimiento antes de la firma del viernes.
+- id: idm-read-between-lines
+  text: If you read between the lines, the landlord expects a two-year commitment.
+  translation: Si lees entre líneas, el propietario espera un compromiso de dos años.
+  visual_hint: 📖🧐
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: read between the lines
+    meaning: leer entre líneas
+    ipa: riːd bɪˈtwiːn ðə laɪnz
+  kind: idiom
+  apply_sentence: Always ____ when a commercial lease mentions 'customary escalations'.
+  apply_answer: read between the lines
+  apply_translation: Siempre lee entre líneas cuando un contrato menciona 'incrementos habituales'.
 roleplay:
   ai_role: leasing agent
   user_role: prospective tenant

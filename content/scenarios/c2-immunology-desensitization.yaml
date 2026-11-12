@@ -80,6 +80,37 @@ phrases:
   - word: timeline
     meaning: cronograma clínico
     ipa: ˈtaɪmlaɪn
+- id: idm-bite-the-bullet-c2
+  text: Patients must bite the bullet and endure months of daily doses.
+  translation: Los pacientes deben apretar los dientes y soportar meses de dosis diarias. (bite the bullet)
+  visual_hint: 💊😬
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: bite the bullet
+    meaning: armarse de valor
+    ipa: ˈbʊlɪt
+  kind: idiom
+  apply_sentence: I decided to ____ and finally tell her the truth.
+  apply_answer: bite the bullet
+  apply_translation: Decidí armarme de valor y por fin decirle la verdad.
+- id: idm-slow-and-steady-wins-the-race-c2
+  text: With desensitization, slow and steady wins the race.
+  translation: En la desensibilización, despacio y con constancia se gana la carrera. (slow and steady wins the
+    race)
+  visual_hint: 🐢🏆
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: slow and steady wins the race
+    meaning: con constancia se llega lejos
+    ipa: ˈstedi
+  kind: idiom
+  apply_sentence: Don't rush the training; ____.
+  apply_answer: slow and steady wins the race
+  apply_translation: No apresures el entrenamiento; despacio y con constancia se gana.
 roleplay:
   ai_role: clinical immunologist
   user_role: patient

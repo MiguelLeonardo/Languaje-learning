@@ -77,6 +77,36 @@ phrases:
   - word: Heads of Terms
     meaning: acuerdo marco de términos principales
     ipa: hedz əv tɜːrmz
+- id: idm-ring-fence-capex
+  text: We should ring-fence landlord build-out allowances inside an escrow schedule.
+  translation: Deberíamos blindar las aportaciones de obra del arrendador dentro de un calendario en depósito.
+  visual_hint: 🏢🛡️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: ring-fence
+    meaning: blindar / proteger financieramente
+    ipa: rɪŋ fens
+  kind: phrasal_verb
+  apply_sentence: Legal counsel moved to ____ tenant improvement funds from general operating covenants.
+  apply_answer: ring-fence
+  apply_translation: El equipo legal buscó blindar los fondos de adecuación frente a cláusulas operativas.
+- id: idm-bite-the-bullet
+  text: Rather than losing the corner frontage, the brand chose to bite the bullet on rent.
+  translation: Antes que perder el escaparate en esquina, la marca decidió afrontar el trago amargo de la renta.
+  visual_hint: 🏬💪
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: bite the bullet
+    meaning: afrontar el trago amargo / apechugar
+    ipa: baɪt ðə ˈbʊlɪt
+  kind: idiom
+  apply_sentence: Sometimes flagship tenants must ____ on percentage rent to secure prime footfall.
+  apply_answer: bite the bullet
+  apply_translation: A veces los inquilinos insignia deben asumir el costo difícil para asegurar tráfico clave.
 roleplay:
   ai_role: commercial REIT director
   user_role: retail expansion VP

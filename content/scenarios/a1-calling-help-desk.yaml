@@ -90,6 +90,36 @@ phrases:
   - word: pharmacy
     meaning: farmacia
     ipa: ˈfɑːrməsi
+- id: idm-looking-for-a1
+  text: I am looking for someone who can give first aid.
+  translation: Busco a alguien que pueda dar primeros auxilios. (look for = buscar)
+  visual_hint: 🔎🩹
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: looking for
+    meaning: buscar
+    ipa: ˈlʊkɪŋ fɔːr
+  kind: phrasal_verb
+  apply_sentence: She is ____ her keys in the bag.
+  apply_answer: looking for
+  apply_translation: Ella está buscando sus llaves en el bolso.
+- id: idm-take-care-of-a1
+  text: Can you take care of my friend, please?
+  translation: ¿Puede cuidar de mi amigo, por favor? (take care of = cuidar)
+  visual_hint: 🤝🩹
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: take care of
+    meaning: cuidar de
+    ipa: teɪk keər ʌv
+  kind: phrasal_verb
+  apply_sentence: I always ____ my little sister after school.
+  apply_answer: take care of
+  apply_translation: Siempre cuido de mi hermanita después de la escuela.
 roleplay:
   ai_role: receptionist
   user_role: visitor

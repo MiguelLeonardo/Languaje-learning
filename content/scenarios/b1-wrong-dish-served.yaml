@@ -71,6 +71,36 @@ phrases:
   - word: came out
     meaning: salió / quedó
     ipa: keɪm aʊt
+- id: no-big-deal
+  text: No big deal, I know the kitchen is busy.
+  translation: 'No pasa nada, sé que la cocina está ocupada. (no big deal: no es para tanto)'
+  visual_hint: 🍝🙂
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: no big deal
+    meaning: 'no big deal: no es para tanto'
+    ipa: dɪl
+  kind: idiom
+  apply_sentence: I forgot my pen, but it is ____.
+  apply_answer: no big deal
+  apply_translation: Olvidé mi bolígrafo, pero no es para tanto.
+- id: mix-up
+  text: There was a mix-up with my order, I think.
+  translation: 'Creo que hubo una confusión con mi pedido. (a mix-up: una confusión)'
+  visual_hint: 🔄🍽️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: mix-up
+    meaning: 'mix-up: confusión, equivocación'
+    ipa: mɪks ʌp
+  kind: expression
+  apply_sentence: Sorry, there was a ____ with the hotel booking.
+  apply_answer: mix-up
+  apply_translation: Lo siento, hubo una confusión con la reserva del hotel.
 roleplay:
   ai_role: waiter
   user_role: diner

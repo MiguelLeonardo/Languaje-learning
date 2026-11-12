@@ -71,6 +71,36 @@ phrases:
   - word: shoebox
     meaning: caja de zapatos
     ipa: ˈʃuːbɑːks
+- id: idm-put-on-sneakers
+  text: Please sit down and put on the left sneaker first.
+  translation: Por favor siéntese y póngase primero el tenis izquierdo.
+  visual_hint: 👟🪑
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: put on
+    meaning: ponerse (ropa o calzado)
+    ipa: pʊt ɒn
+  kind: phrasal_verb
+  apply_sentence: I ____ my running shoes every morning before work.
+  apply_answer: put on
+  apply_translation: Me pongo mis tenis para correr cada mañana antes del trabajo.
+- id: idm-sold-out-size
+  text: Sorry, the black running shoes are sold out in size nine.
+  translation: Lo siento, los tenis negros están agotados en talla nueve.
+  visual_hint: 👟🚫
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: sold out
+    meaning: agotado / vendido por completo
+    ipa: soʊld aʊt
+  kind: phrasal_verb
+  apply_sentence: Those popular boots ____ fast during the winter sale.
+  apply_answer: sold out
+  apply_translation: Esas botas populares se agotaron rápido durante la rebaja de invierno.
 roleplay:
   ai_role: shoe sales associate
   user_role: shopper

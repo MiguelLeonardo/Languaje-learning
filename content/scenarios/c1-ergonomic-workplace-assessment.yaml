@@ -80,6 +80,36 @@ phrases:
   - word: eye level
     meaning: a la altura de los ojos
     ipa: aɪ ˈlevəl
+- id: idm-pain-in-the-neck-c1
+  text: Honestly, my monitor setup is a real pain in the neck.
+  translation: Sinceramente, mi configuración de monitor es un verdadero fastidio. (pain in the neck = fastidio)
+  visual_hint: 💻😖
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: pain in the neck
+    meaning: fastidio, molestia
+    ipa: peɪn ɪn ðə nek
+  kind: idiom
+  apply_sentence: Filling in these reports is a real ____.
+  apply_answer: pain in the neck
+  apply_translation: Rellenar estos informes es un verdadero fastidio.
+- id: idm-nip-it-in-the-bud-c1
+  text: It's best to nip it in the bud before it worsens.
+  translation: Es mejor cortarlo de raíz antes de que empeore. (nip it in the bud = cortar de raíz)
+  visual_hint: 🌱✂️
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: nip it in the bud
+    meaning: cortar de raíz
+    ipa: bʌd
+  kind: idiom
+  apply_sentence: Managers should ____ when conflicts first appear.
+  apply_answer: nip it in the bud
+  apply_translation: Los jefes deberían cortar de raíz los conflictos cuando aparecen.
 roleplay:
   ai_role: occupational health physician
   user_role: remote professional

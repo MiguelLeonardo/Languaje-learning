@@ -72,6 +72,36 @@ phrases:
   - word: calmly
     meaning: con calma
     ipa: ˈkɑːmli
+- id: idm-no-harm-done-b1
+  text: Nobody is hurt, so no harm done, right?
+  translation: Nadie está herido, así que no pasó nada grave, ¿verdad? (no harm done)
+  visual_hint: 🚗😌
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: no harm done
+    meaning: no pasó nada
+    ipa: nəʊ hɑːm dʌn
+  kind: expression
+  apply_sentence: You spilled a little water, but ____.
+  apply_answer: no harm done
+  apply_translation: Derramaste un poco de agua, pero no pasó nada.
+- id: idm-pull-over-b1
+  text: Let's pull over and check the damage first.
+  translation: Orillémonos y revisemos primero el daño. (pull over = orillarse)
+  visual_hint: 🚗🅿️
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: pull over
+    meaning: orillarse
+    ipa: pʊl ˈəʊvər
+  kind: phrasal_verb
+  apply_sentence: The police officer told him to ____ immediately.
+  apply_answer: pull over
+  apply_translation: El policía le dijo que se orillara de inmediato.
 roleplay:
   ai_role: other driver
   user_role: driver

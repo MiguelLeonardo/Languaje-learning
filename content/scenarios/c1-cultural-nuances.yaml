@@ -97,6 +97,36 @@ phrases:
   - word: go a long way
     meaning: ayudar muchísimo / rendir mucho
     ipa: ɡoʊ ə lɔːŋ weɪ
+- id: idm-c1cn-lost-sense
+  text: British humor can be dry, and it often goes over people's heads.
+  translation: El humor británico puede ser seco y a menudo la gente no lo capta (no entenderlo).
+  visual_hint: 🌍😏
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: go over someone's head
+    meaning: no ser captado
+    ipa: hed
+  kind: idiom
+  apply_sentence: The sarcasm in his remark went right ____ her head.
+  apply_answer: over
+  apply_translation: El sarcasmo de su comentario ni lo captó ella.
+- id: idm-c1cn-tongue-in-cheek
+  text: He said it tongue in cheek, so don't take it literally.
+  translation: Lo dijo en broma, así que no lo tomes al pie de la letra (con ironía).
+  visual_hint: 😜💬
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: tongue in cheek
+    meaning: en tono irónico
+    ipa: tʌŋ
+  kind: idiom
+  apply_sentence: The ad was clearly meant ____ in cheek.
+  apply_answer: tongue
+  apply_translation: El anuncio estaba claramente hecho en broma.
 roleplay:
   ai_role: international colleague
   user_role: speaker

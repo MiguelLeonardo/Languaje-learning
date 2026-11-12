@@ -92,6 +92,36 @@ phrases:
   - word: soon
     meaning: pronto
     ipa: suːn
+- id: idm-a1gn-move-in
+  text: Hello! I will move in next door on Monday.
+  translation: ¡Hola! Me mudaré a la casa de al lado el lunes (instalarse en una vivienda).
+  visual_hint: 🏠📦
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: move in
+    meaning: mudarse a una casa
+    ipa: muːv
+  kind: phrasal_verb
+  apply_sentence: Our new friends will ____ upstairs next week.
+  apply_answer: move in
+  apply_translation: Nuestros nuevos amigos se mudarán al piso de arriba la próxima semana.
+- id: idm-a1gn-nice-to-meet
+  text: It's nice to meet you, and welcome to the building!
+  translation: Mucho gusto en conocerte, ¡y bienvenido al edificio! (fórmula de saludo)
+  visual_hint: 🤝😊
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: nice to meet you
+    meaning: mucho gusto
+    ipa: miːt
+  kind: expression
+  apply_sentence: Hi Tom, it's ____ you at last.
+  apply_answer: nice to meet
+  apply_translation: Hola Tom, es un placer conocerte por fin.
 roleplay:
   ai_role: new neighbor
   user_role: resident

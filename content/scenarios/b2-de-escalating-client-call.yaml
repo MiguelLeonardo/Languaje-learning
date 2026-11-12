@@ -82,6 +82,36 @@ phrases:
   - word: telemetry
     meaning: métricas de monitoreo en tiempo real
     ipa: təˈlemətri
+- id: idm-put-out-fires
+  text: We are working around the clock, putting out fires.
+  translation: 'Trabajamos sin parar, apagando incendios. (put out fires: resolver crisis urgentes)'
+  visual_hint: 🔥🚒
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: put out the fire
+    meaning: resolver una crisis urgente
+    ipa: pʊt aʊt ðə ˈfaɪər
+  kind: idiom
+  apply_sentence: Our team spends half the week ____ for other departments.
+  apply_answer: putting out fires
+  apply_translation: Nuestro equipo pasa media semana apagando incendios para otros departamentos.
+- id: idm-bear-the-brunt
+  text: I know your customers bore the brunt of this outage.
+  translation: 'Sé que tus clientes cargaron con lo peor de esta caída. (bear the brunt: sufrir lo peor)'
+  visual_hint: 😤📞
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: bore the brunt
+    meaning: sufrir lo peor
+    ipa: bɔːr ðə brʌnt
+  kind: idiom
+  apply_sentence: Support staff ____ of the angry calls last week.
+  apply_answer: bore the brunt
+  apply_translation: El personal de soporte cargó con lo peor de las llamadas enfadadas la semana pasada.
 roleplay:
   ai_role: enterprise client director
   user_role: account manager

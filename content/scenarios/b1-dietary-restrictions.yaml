@@ -87,6 +87,36 @@ phrases:
   - word: dressing
     meaning: aderezo / aliño
     ipa: ˈdresɪŋ
+- id: steer-clear-of
+  text: I have to steer clear of nuts completely.
+  translation: 'Tengo que evitar por completo los frutos secos. (steer clear of: evitar)'
+  visual_hint: 🥜🚫
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: steer clear of
+    meaning: 'steer clear of: evitar'
+    ipa: klɪə
+  kind: phrasal_verb
+  apply_sentence: Doctors say I should ____ fried food.
+  apply_answer: steer clear of
+  apply_translation: Los médicos dicen que debería evitar la comida frita.
+- id: play-it-safe
+  text: I'd rather play it safe and ask about the ingredients.
+  translation: 'Prefiero ir sobre seguro y preguntar por los ingredientes. (play it safe: ir a lo seguro)'
+  visual_hint: 🛡️🥗
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: play it safe
+    meaning: 'play it safe: ir a lo seguro'
+    ipa: seɪf
+  kind: idiom
+  apply_sentence: It looks cloudy, so let's ____ and take coats.
+  apply_answer: play it safe
+  apply_translation: Se ve nublado, así que vayamos a lo seguro y llevemos abrigos.
 roleplay:
   ai_role: head server
   user_role: guest with allergies

@@ -71,6 +71,36 @@ phrases:
   - word: helps
     meaning: ayuda
     ipa: helps
+- id: idm-feel-under-the-weather-a1
+  text: I feel under the weather, I need some water.
+  translation: Me siento mal, necesito agua. (feel under the weather = sentirse indispuesto)
+  visual_hint: 🤒💧
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: feel under the weather
+    meaning: sentirse indispuesto
+    ipa: ˈʌndər ðə ˈweðər
+  kind: idiom
+  apply_sentence: Sorry, I can't go out; I ____ today.
+  apply_answer: feel under the weather
+  apply_translation: Perdón, no puedo salir; hoy me siento indispuesto.
+- id: idm-sit-down-a1
+  text: Can I sit down for a minute, please?
+  translation: ¿Puedo sentarme un minuto, por favor? (sit down = sentarse)
+  visual_hint: 🪑😵
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: sit down
+    meaning: sentarse
+    ipa: sɪt daʊn
+  kind: phrasal_verb
+  apply_sentence: Please ____ and have some tea.
+  apply_answer: sit down
+  apply_translation: Por favor, siéntate y toma un poco de té.
 roleplay:
   ai_role: tour guide
   user_role: visitor

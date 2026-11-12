@@ -71,6 +71,36 @@ phrases:
   - word: serving
     meaning: servir
     ipa: ˈsɜːrvɪŋ
+- id: melts-in-your-mouth
+  text: This aged cheese just melts in your mouth, honestly.
+  translation: 'Este queso curado se derrite en la boca, de verdad. (melts in your mouth: deliciosamente suave)'
+  visual_hint: 🧀😍
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: melts in your mouth
+    meaning: 'melt in your mouth: derretirse en la boca'
+    ipa: melt
+  kind: idiom
+  apply_sentence: Try this cake; it just ____ and tastes amazing.
+  apply_answer: melts in your mouth
+  apply_translation: Prueba este pastel; se derrite en la boca y sabe increíble.
+- id: a-matter-of-taste
+  text: Blue cheese is a matter of taste, I suppose.
+  translation: 'El queso azul es cuestión de gustos, supongo. (a matter of taste: cuestión de gustos)'
+  visual_hint: 🧀🤔
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: a matter of taste
+    meaning: 'a matter of taste: cuestión de gustos'
+    ipa: ˈmætər
+  kind: idiom
+  apply_sentence: Which color is better is ____, really.
+  apply_answer: a matter of taste
+  apply_translation: Qué color es mejor es cuestión de gustos, la verdad.
 roleplay:
   ai_role: cheesemonger
   user_role: customer

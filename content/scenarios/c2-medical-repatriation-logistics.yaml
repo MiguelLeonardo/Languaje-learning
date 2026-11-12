@@ -81,6 +81,36 @@ phrases:
   - word: wheels-up
     meaning: hora exacta de despegue
     ipa: wiːlz ʌp
+- id: idm-pull-strings-c2
+  text: We had to pull strings to clear the flight permits.
+  translation: Tuvimos que mover hilos para conseguir los permisos de vuelo. (pull strings = usar influencias)
+  visual_hint: 🛩️🪢
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: pull strings
+    meaning: usar influencias
+    ipa: pʊl strɪŋz
+  kind: idiom
+  apply_sentence: He managed to ____ to get me a seat.
+  apply_answer: pull strings
+  apply_translation: Consiguió mover hilos para conseguirme un asiento.
+- id: idm-touch-and-go-c2
+  text: It was touch and go until the plane finally landed.
+  translation: Estuvo en el aire hasta que el avión por fin aterrizó. (touch and go = situación crítica)
+  visual_hint: 🚁😨
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: touch and go
+    meaning: situación incierta y crítica
+    ipa: tʌtʃ ænd ɡəʊ
+  kind: idiom
+  apply_sentence: The storm made the landing ____.
+  apply_answer: touch and go
+  apply_translation: La tormenta hizo que el aterrizaje fuera muy arriesgado.
 roleplay:
   ai_role: flight medical director
   user_role: patient advocate

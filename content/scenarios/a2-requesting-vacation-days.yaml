@@ -71,6 +71,36 @@ phrases:
   - word: coast
     meaning: costa
     ipa: koʊst
+- id: idm-take-time-off
+  text: I would like to take time off next Friday.
+  translation: 'Me gustaría tomarme tiempo libre el próximo viernes. (take time off: pedir días libres)'
+  visual_hint: 🏖️📅
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: take time off
+    meaning: tomarse días libres
+    ipa: teɪk taɪm ɔːf
+  kind: expression
+  apply_sentence: She wants to ____ in August to visit her family.
+  apply_answer: take time off
+  apply_translation: Ella quiere tomarse días libres en agosto para visitar a su familia.
+- id: idm-fill-in
+  text: Who can fill in for me while I am away?
+  translation: '¿Quién puede sustituirme mientras estoy fuera? (fill in: suplir a alguien)'
+  visual_hint: 🔄🧑‍💼
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: fill in
+    meaning: sustituir
+    ipa: fɪl ɪn
+  kind: phrasal_verb
+  apply_sentence: Tom will ____ for Maria at the front desk.
+  apply_answer: fill in
+  apply_translation: Tom sustituirá a María en recepción.
 roleplay:
   ai_role: team manager
   user_role: employee

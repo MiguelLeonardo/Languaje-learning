@@ -74,6 +74,36 @@ phrases:
   - word: informs
     meaning: nutre / guía con fundamento
     ipa: ɪnˈfɔːrmz
+- id: throw-the-baby-out-with-the-bathwater
+  text: We shouldn't throw the baby out with the bathwater.
+  translation: No deberíamos tirar lo bueno junto con lo malo. (throw the baby out with the bathwater)
+  visual_hint: 🛁🧪
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: throw the baby out with the bathwater
+    meaning: 'throw the baby out with the bathwater: descartar lo bueno'
+    ipa: ˈbɑːθwɔːtə
+  kind: idiom
+  apply_sentence: Criticize the plan, yet don't ____ entirely.
+  apply_answer: throw the baby out with the bathwater
+  apply_translation: Critica el plan, pero no deseches todo, lo bueno con lo malo.
+- id: reinvent-the-wheel
+  text: Modernists aren't trying to reinvent the wheel, merely refine it.
+  translation: Los modernistas no intentan reinventar la rueda, solo refinarla. (reinvent the wheel)
+  visual_hint: ⚙️🔬
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: reinvent the wheel
+    meaning: 'reinvent the wheel: reinventar lo ya inventado'
+    ipa: wiːl
+  kind: idiom
+  apply_sentence: We don't need to ____ every time we start a project.
+  apply_answer: reinvent the wheel
+  apply_translation: No necesitamos reinventar la rueda cada vez que empezamos un proyecto.
 roleplay:
   ai_role: traditionalist chef
   user_role: culinary panelist

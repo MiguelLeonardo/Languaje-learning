@@ -71,6 +71,36 @@ phrases:
   - word: thirsty
     meaning: sedientos / con sed
     ipa: ˈθɜːrsti
+- id: idm-a1tp-take-for-a-walk
+  text: I take out my dog every morning before school.
+  translation: Saco a pasear a mi perro cada mañana antes de la escuela (sacar de casa).
+  visual_hint: 🐕🚶
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: take out
+    meaning: sacar (a pasear)
+    ipa: teɪk
+  kind: phrasal_verb
+  apply_sentence: Dad likes to ____ the dog after dinner.
+  apply_answer: take out
+  apply_translation: A papá le gusta sacar al perro después de la cena.
+- id: idm-a1tp-pick-up
+  text: Please pick up your dog's mess in the park.
+  translation: Por favor recoge la caca de tu perro en el parque (levantar del suelo).
+  visual_hint: 🐾🧹
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: pick up
+    meaning: recoger
+    ipa: pɪk
+  kind: phrasal_verb
+  apply_sentence: Can you ____ my keys from the floor?
+  apply_answer: pick up
+  apply_translation: ¿Puedes recoger mis llaves del suelo?
 roleplay:
   ai_role: dog owner
   user_role: park visitor

@@ -95,6 +95,36 @@ phrases:
   - word: talk to you
     meaning: hablamos / conversamos
     ipa: tɔːk tə juː
+- id: idm-get-together
+  text: Let's get together on Tuesday for a short team call.
+  translation: 'Reunámonos el martes para una breve llamada de equipo. (get together: reunirse)'
+  visual_hint: 👥📆
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: get together
+    meaning: reunirse
+    ipa: ɡɛt təˈɡɛðər
+  kind: phrasal_verb
+  apply_sentence: The team will ____ every Monday to plan the week.
+  apply_answer: get together
+  apply_translation: El equipo se reúne cada lunes para planear la semana.
+- id: idm-works-for-me
+  text: Three o'clock works for me, if it works for you.
+  translation: 'Las tres me viene bien, si a ti te viene bien. (works for me: me va bien)'
+  visual_hint: 👍🕒
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: works for me
+    meaning: me viene bien
+    ipa: wɜːrks fɔːr miː
+  kind: expression
+  apply_sentence: Thursday morning ____, but Friday is too busy.
+  apply_answer: works for me
+  apply_translation: El jueves por la mañana me va bien, pero el viernes estoy muy ocupado.
 roleplay:
   ai_role: colleague (David)
   user_role: project coordinator

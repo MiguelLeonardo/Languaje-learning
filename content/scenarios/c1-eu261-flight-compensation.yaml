@@ -73,6 +73,37 @@ phrases:
   - word: transparently
     meaning: con transparencia
     ipa: trænsˈpærəntli
+- id: eu261-pass-the-buck
+  text: Please don't pass the buck to the airport; the airline is responsible.
+  translation: Por favor, no eche la culpa al aeropuerto; la aerolínea es responsable. (pass the buck = pasar la
+    responsabilidad)
+  visual_hint: 👉✈️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: pass the buck
+    meaning: eludir la responsabilidad
+    ipa: pɑːs ðə bʌk
+  kind: idiom
+  apply_sentence: The agency kept trying to ____ instead of fixing the booking.
+  apply_answer: pass the buck
+  apply_translation: La agencia seguía intentando eludir la responsabilidad en vez de arreglar la reserva.
+- id: eu261-black-and-white
+  text: I need your promise in black and white, with a reference number.
+  translation: Necesito su promesa por escrito, con un número de referencia. (in black and white = por escrito)
+  visual_hint: 📝⚖️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: in black and white
+    meaning: por escrito
+    ipa: ɪn blæk ənd waɪt
+  kind: idiom
+  apply_sentence: Get the refund policy ____ before you pay for the ticket.
+  apply_answer: in black and white
+  apply_translation: Consigue la política de reembolso por escrito antes de pagar el billete.
 roleplay:
   ai_role: customer relations supervisor
   user_role: passenger

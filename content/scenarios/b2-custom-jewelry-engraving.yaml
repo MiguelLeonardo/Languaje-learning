@@ -72,6 +72,36 @@ phrases:
   - word: retirement
     meaning: jubilación
     ipa: rɪˈtaɪərmənt
+- id: idm-stand-out-engraving
+  text: Adding a subtle date inside makes the engraved watch really stand out.
+  translation: Añadir una fecha sutil adentro hace que el reloj grabado realmente destaque.
+  visual_hint: ⌚✨
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: stand out
+    meaning: destacar / sobresalir
+    ipa: stænd aʊt
+  kind: phrasal_verb
+  apply_sentence: Hand-carved initials help a classic gift ____ from ordinary pieces.
+  apply_answer: stand out
+  apply_translation: Las iniciales talladas a mano hacen que un regalo clásico destaque entre piezas comunes.
+- id: idm-from-scratch
+  text: The jeweler designed that custom clasp from scratch for our anniversary.
+  translation: El joyero diseñó ese broche personalizado desde cero para nuestro aniversario.
+  visual_hint: 💍🎨
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: from scratch
+    meaning: desde cero
+    ipa: frəm skrætʃ
+  kind: idiom
+  apply_sentence: Instead of using a template, she sketched the monogram ____.
+  apply_answer: from scratch
+  apply_translation: En lugar de usar una plantilla, ella dibujó el monograma desde cero.
 roleplay:
   ai_role: watchmaker & jeweler
   user_role: buyer

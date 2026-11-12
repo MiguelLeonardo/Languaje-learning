@@ -71,6 +71,36 @@ phrases:
   - word: help
     meaning: ayuda
     ipa: help
+- id: train-get-off
+  text: Get off at Oxford, and the platform is on the left.
+  translation: Bájate en Oxford, y el andén está a la izquierda. (get off = bajarse)
+  visual_hint: 🚉⬇️
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: get off
+    meaning: bajarse
+    ipa: ɡet ɒf
+  kind: phrasal_verb
+  apply_sentence: Where do we ____ the bus for the museum?
+  apply_answer: get off
+  apply_translation: ¿Dónde nos bajamos del autobús para ir al museo?
+- id: train-keep-an-eye-on
+  text: Please keep an eye on my bag while I find coach B.
+  translation: Por favor, vigila mi bolso mientras busco el vagón B. (keep an eye on = vigilar)
+  visual_hint: 👁️🧳
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: keep an eye on
+    meaning: vigilar, estar atento a
+    ipa: kiːp ən aɪ ɒn
+  kind: idiom
+  apply_sentence: I ____ the clock so we don't miss the ferry.
+  apply_answer: keep an eye on
+  apply_translation: Vigilo el reloj para no perder el ferri.
 roleplay:
   ai_role: station guard
   user_role: passenger

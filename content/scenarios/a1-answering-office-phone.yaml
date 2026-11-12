@@ -71,6 +71,36 @@ phrases:
   - word: call back
     meaning: devolver la llamada
     ipa: kɔːl bæk
+- id: idm-hold-on
+  text: Hold on, please. I will get a pen.
+  translation: 'Espera un momento, por favor. Voy a buscar un bolígrafo. (hold on: esperar)'
+  visual_hint: ⏳📞
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: hold on
+    meaning: esperar un momento
+    ipa: hoʊld ɑːn
+  kind: phrasal_verb
+  apply_sentence: Can you ____ a minute? The boss is calling me.
+  apply_answer: hold on
+  apply_translation: ¿Puedes esperar un minuto? El jefe me está llamando.
+- id: idm-call-back
+  text: I will call back in ten minutes, I promise.
+  translation: 'Te volveré a llamar en diez minutos. (call back: devolver la llamada)'
+  visual_hint: 📞🔁
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: call back
+    meaning: devolver la llamada
+    ipa: kɔːl bæk
+  kind: phrasal_verb
+  apply_sentence: Please ____ when you finish, Mr. Lee.
+  apply_answer: call back
+  apply_translation: Por favor, devuelva la llamada cuando termine, Sr. Lee.
 roleplay:
   ai_role: caller (Mr. Evans)
   user_role: assistant

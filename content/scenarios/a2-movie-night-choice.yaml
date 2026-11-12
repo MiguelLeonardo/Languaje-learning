@@ -71,6 +71,36 @@ phrases:
   - word: while
     meaning: mientras
     ipa: waɪl
+- id: idm-a2mn-my-cup-of-tea
+  text: Horror films aren't really my cup of tea, honestly.
+  translation: Las películas de terror no son lo mío, la verdad (no me gustan).
+  visual_hint: 🍿🎬
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: my cup of tea
+    meaning: algo que me gusta
+    ipa: kʌp
+  kind: idiom
+  apply_sentence: Cooking shows are not my ____ of tea.
+  apply_answer: cup
+  apply_translation: Los programas de cocina no son lo mío.
+- id: idm-a2mn-sold-out
+  text: Sorry, the late show is sold out, so let's pick another one.
+  translation: Lo siento, la función de la noche está agotada, elijamos otra (sin entradas).
+  visual_hint: 🎟️🚫
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: sold out
+    meaning: agotado
+    ipa: səʊld
+  kind: expression
+  apply_sentence: The concert was ____ in just ten minutes.
+  apply_answer: sold out
+  apply_translation: El concierto se agotó en solo diez minutos.
 roleplay:
   ai_role: friend (Liam)
   user_role: moviegoer

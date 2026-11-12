@@ -71,6 +71,36 @@ phrases:
   - word: ride
     meaning: viaje / traslado
     ipa: raɪd
+- id: taxi-hop-in
+  text: Hop in, and I will put your bags in the trunk.
+  translation: Sube, y yo pondré tus maletas en el maletero. (hop in = subir rápido)
+  visual_hint: 🚕🧳
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: hop in
+    meaning: subir rápido
+    ipa: hɒp ɪn
+  kind: phrasal_verb
+  apply_sentence: The rain is starting, so ____ the car quickly!
+  apply_answer: hop in
+  apply_translation: ¡Empieza a llover, así que sube rápido al coche!
+- id: taxi-on-time
+  text: We need to be on time for my flight to Paris.
+  translation: Tenemos que llegar a tiempo para mi vuelo a París. (on time = puntual)
+  visual_hint: ⏰✈️
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: on time
+    meaning: a tiempo, puntual
+    ipa: ɒn taɪm
+  kind: expression
+  apply_sentence: The bus is always ____ in the morning.
+  apply_answer: on time
+  apply_translation: El autobús siempre llega puntual por la mañana.
 roleplay:
   ai_role: taxi driver
   user_role: passenger

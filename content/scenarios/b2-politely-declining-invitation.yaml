@@ -75,6 +75,36 @@ phrases:
   - word: lifetime
     meaning: toda una vida
     ipa: ˈlaɪftaɪm
+- id: idm-b2di-take-rain-check
+  text: I'm afraid I can't make it, but can I take a rain check?
+  translation: Me temo que no puedo ir, pero ¿lo dejamos para otra ocasión? (posponer una invitación)
+  visual_hint: ✉️🌧️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: take a rain check
+    meaning: dejar para otra ocasión
+    ipa: reɪn
+  kind: idiom
+  apply_sentence: Dinner tonight is impossible, so let's take a ____ check.
+  apply_answer: rain
+  apply_translation: La cena de hoy es imposible, así que dejémoslo para otro día.
+- id: idm-b2di-tied-up
+  text: I'd love to come, but I'm completely tied up that weekend.
+  translation: Me encantaría ir, pero estoy totalmente ocupado ese fin de semana.
+  visual_hint: 🗓️🙏
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: be tied up
+    meaning: estar muy ocupado
+    ipa: taɪd
+  kind: idiom
+  apply_sentence: Sorry, I'm ____ up at work until late tonight.
+  apply_answer: tied
+  apply_translation: Lo siento, estoy ocupado en el trabajo hasta tarde esta noche.
 roleplay:
   ai_role: engaged friend
   user_role: invited friend

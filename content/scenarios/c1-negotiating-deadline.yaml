@@ -79,6 +79,37 @@ phrases:
   - word: lock in
     meaning: asegurar / fijar
     ipa: lɑːk ɪn
+- id: idm-meet-halfway
+  text: Could we meet halfway and deliver in two phases?
+  translation: '¿Podríamos llegar a un punto medio y entregar en dos fases? (meet halfway: ceder ambos)'
+  visual_hint: 🤝⚖️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: meet you halfway
+    meaning: llegar a un punto medio
+    ipa: miːt ˈhæfˈweɪ
+  kind: idiom
+  apply_sentence: Neither side wanted to ____ during the contract talks.
+  apply_answer: meet halfway
+  apply_translation: Ninguna parte quiso llegar a un punto medio durante las negociaciones del contrato.
+- id: idm-down-to-the-wire
+  text: Last time it went down to the wire, and we burned out.
+  translation: 'La última vez se decidió en el último minuto y nos agotamos. (down to the wire: hasta el último
+    momento)'
+  visual_hint: ⏰😰
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: down to the wire
+    meaning: hasta el último segundo
+    ipa: daʊn tuː ðə ˈwaɪər
+  kind: idiom
+  apply_sentence: The budget approval came ____, just before midnight.
+  apply_answer: down to the wire
+  apply_translation: La aprobación del presupuesto llegó en el último minuto, justo antes de medianoche.
 roleplay:
   ai_role: client project lead
   user_role: agency project manager

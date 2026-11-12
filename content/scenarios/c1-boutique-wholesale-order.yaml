@@ -77,6 +77,36 @@ phrases:
   - word: purchase order
     meaning: orden de compra
     ipa: ˈpɜːrtʃəs ˈɔːrdər
+- id: idm-scale-back-order
+  text: We may scale back the autumn knitwear order if freight tariffs rise again.
+  translation: Quizás reduzcamos el pedido de tejido de otoño si los aranceles de flete vuelven a subir.
+  visual_hint: 🧥📉
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: scale back
+    meaning: reducir / recortar escala
+    ipa: skeɪl bæk
+  kind: phrasal_verb
+  apply_sentence: Several boutiques chose to ____ their initial minimum quantities this season.
+  apply_answer: scale back
+  apply_translation: Varias boutiques optaron por reducir sus cantidades mínimas iniciales esta temporada.
+- id: idm-ball-in-your-court
+  text: We've matched your target margin, so the ball is in your court now.
+  translation: Igualamos tu margen objetivo, así que ahora la pelota está en tu cancha.
+  visual_hint: 🎾💼
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: ball is in your court
+    meaning: estar la pelota en tu cancha (te toca decidir)
+    ipa: bɔːl ɪz ɪn jɔːr kɔːrt
+  kind: idiom
+  apply_sentence: Once the showroom sends the revised lookbook, the ____ to finalize.
+  apply_answer: ball is in your court
+  apply_translation: En cuanto el showroom envíe el catálogo revisado, te toca a ti decidir para cerrar.
 roleplay:
   ai_role: showroom sales director
   user_role: boutique buyer

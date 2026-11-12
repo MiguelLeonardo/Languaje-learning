@@ -71,6 +71,36 @@ phrases:
   - word: order number
     meaning: número de pedido
     ipa: ˈɔːrdər ˈnʌmbər
+- id: run-out-of
+  text: They always run out of fries at lunchtime, sir.
+  translation: 'Siempre se quedan sin papas fritas a la hora del almuerzo, señor. (run out of: quedarse sin)'
+  visual_hint: 🍟😕
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: run out of
+    meaning: 'run out of: quedarse sin'
+    ipa: rʌn aʊt
+  kind: phrasal_verb
+  apply_sentence: Let's buy more rice before we ____ it.
+  apply_answer: run out of
+  apply_translation: Compremos más arroz antes de quedarnos sin él.
+- id: hurry-up
+  text: Hurry up, my burger combo is getting cold!
+  translation: '¡Date prisa, mi combo de hamburguesa se está enfriando! (hurry up: apresurarse)'
+  visual_hint: 🍔⏰
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: hurry up
+    meaning: 'hurry up: darse prisa'
+    ipa: ˈhʌri
+  kind: phrasal_verb
+  apply_sentence: Please ____, the bus leaves in five minutes.
+  apply_answer: hurry up
+  apply_translation: Por favor, date prisa, el autobús sale en cinco minutos.
 roleplay:
   ai_role: cashier
   user_role: customer

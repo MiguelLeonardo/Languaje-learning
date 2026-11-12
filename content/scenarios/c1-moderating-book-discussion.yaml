@@ -73,6 +73,36 @@ phrases:
   - word: shortlist
     meaning: lista corta de finalistas
     ipa: ˈʃɔːrtlɪst
+- id: idm-c1bd-read-between-lines
+  text: If you read between the lines, the narrator is hiding something.
+  translation: Si lees entre líneas, el narrador esconde algo (captar lo implícito).
+  visual_hint: 📖🔍
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: read between the lines
+    meaning: leer entre líneas
+    ipa: laɪnz
+  kind: idiom
+  apply_sentence: You have to ____ between the lines to get his point.
+  apply_answer: read
+  apply_translation: Hay que leer entre líneas para entender su punto.
+- id: idm-c1bd-on-the-same-page
+  text: Before we begin, let's make sure we're all on the same page.
+  translation: Antes de empezar, asegurémonos de que todos estamos de acuerdo (entendemos lo mismo).
+  visual_hint: 📚🤝
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: on the same page
+    meaning: en sintonía
+    ipa: peɪdʒ
+  kind: idiom
+  apply_sentence: I want to be sure we're all on the same ____.
+  apply_answer: page
+  apply_translation: Quiero asegurarme de que todos estamos en la misma sintonía.
 roleplay:
   ai_role: book club member
   user_role: discussion moderator

@@ -71,6 +71,36 @@ phrases:
   - word: water
     meaning: agua / mar
     ipa: ˈwɔːtər
+- id: ferry-take-a-seat
+  text: Take a seat on the top deck and enjoy the view.
+  translation: Siéntate en la cubierta superior y disfruta de la vista. (take a seat = sentarse)
+  visual_hint: 💺⛴️
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: take a seat
+    meaning: sentarse
+    ipa: teɪk ə siːt
+  kind: expression
+  apply_sentence: Please ____ here while we wait for the boat.
+  apply_answer: take a seat
+  apply_translation: Por favor, siéntate aquí mientras esperamos el barco.
+- id: ferry-have-a-look
+  text: Let's have a look at the harbor map before the ferry leaves.
+  translation: Echemos un vistazo al mapa del puerto antes de que salga el ferri. (have a look = echar un vistazo)
+  visual_hint: 👀🗺️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: have a look
+    meaning: echar un vistazo
+    ipa: hæv ə lʊk
+  kind: expression
+  apply_sentence: Can I ____ at your ticket, please?
+  apply_answer: have a look
+  apply_translation: ¿Puedo echar un vistazo a tu boleto, por favor?
 roleplay:
   ai_role: ticket agent
   user_role: tourist

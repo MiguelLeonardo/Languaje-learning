@@ -71,6 +71,36 @@ phrases:
   - word: helpful
     meaning: servicial / amable
     ipa: ˈhelpfəl
+- id: idm-put-up-with
+  text: I can't put up with the street noise outside my window all night.
+  translation: No puedo aguantar el ruido de la calle afuera de mi ventana toda la noche.
+  visual_hint: 🔊🏨
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: put up with
+    meaning: aguantar / soportar
+    ipa: pʊt ʌp wɪð
+  kind: phrasal_verb
+  apply_sentence: Guests shouldn't have to ____ a broken air conditioner in summer.
+  apply_answer: put up with
+  apply_translation: Los huéspedes no deberían tener que soportar un aire acondicionado dañado en verano.
+- id: idm-sleep-like-a-log
+  text: In a quiet room at the back, I will sleep like a log.
+  translation: En una habitación tranquila al fondo, dormiré como un tronco.
+  visual_hint: 😴🪵
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: sleep like a log
+    meaning: dormir como un tronco
+    ipa: sliːp laɪk ə lɔːɡ
+  kind: idiom
+  apply_sentence: After walking ten miles today, we are going to ____.
+  apply_answer: sleep like a log
+  apply_translation: Después de caminar diez millas hoy, vamos a dormir profundamente.
 roleplay:
   ai_role: front desk clerk
   user_role: guest

@@ -71,6 +71,36 @@ phrases:
   - word: pickup
     meaning: recogida
     ipa: ˈpɪkʌp
+- id: idm-get-rid-of
+  text: Do you think your stain remover can get rid of this coffee mark?
+  translation: ¿Cree que su quitamanchas pueda eliminar esta marca de café?
+  visual_hint: ☕👕
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: get rid of
+    meaning: deshacerse de / eliminar
+    ipa: ɡet rɪd ʌv
+  kind: phrasal_verb
+  apply_sentence: I washed the shirt twice, yet I couldn't ____ the ink spot.
+  apply_answer: get rid of
+  apply_translation: Lavé la camisa dos veces, pero no pude deshacerme de la mancha de tinta.
+- id: idm-in-a-rush
+  text: I'm in a rush for a wedding tomorrow, so can I pay for express service?
+  translation: Ando con prisa para una boda mañana, así que ¿puedo pagar servicio exprés?
+  visual_hint: ⏱️👔
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: in a rush
+    meaning: andar con prisa / apurado
+    ipa: ɪn ə rʌʃ
+  kind: expression
+  apply_sentence: Sorry I can't chat long; I'm ____ to catch the last train.
+  apply_answer: in a rush
+  apply_translation: Disculpa que no pueda charlar mucho; ando con prisa para tomar el último tren.
 roleplay:
   ai_role: dry cleaner
   user_role: customer

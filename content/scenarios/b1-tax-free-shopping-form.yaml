@@ -72,6 +72,36 @@ phrases:
   - word: steps
     meaning: pasos
     ipa: steps
+- id: idm-fill-out-customs
+  text: Please fill out your passport number on the tax-free refund form.
+  translation: Por favor llene su número de pasaporte en el formulario de devolución de impuestos.
+  visual_hint: 🧾✍️
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: fill out
+    meaning: llenar / completar (un formulario)
+    ipa: fɪl aʊt
+  kind: phrasal_verb
+  apply_sentence: You have to ____ this receipt before heading to airport customs.
+  apply_answer: fill out
+  apply_translation: Tiene que llenar este recibo antes de dirigirse a la aduana del aeropuerto.
+- id: idm-break-the-bank
+  text: With the VAT refund, this leather bag won't break the bank.
+  translation: Con la devolución del IVA, este bolso de cuero no me dejará en bancarrota.
+  visual_hint: 👜💸
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: break the bank
+    meaning: gastar una fortuna / arruinarse
+    ipa: breɪk ðə bæŋk
+  kind: idiom
+  apply_sentence: Shopping at outlet stores lets you refresh your wardrobe without having to ____.
+  apply_answer: break the bank
+  apply_translation: Comprar en tiendas outlet te permite renovar tu guardarropa sin gastar una fortuna.
 roleplay:
   ai_role: customer service clerk
   user_role: international shopper

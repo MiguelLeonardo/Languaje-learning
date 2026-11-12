@@ -71,6 +71,36 @@ phrases:
   - word: last orders
     meaning: últimos pedidos
     ipa: læst ˈɔːrdərz
+- id: fingers-crossed
+  text: Fingers crossed a table opens up before the kitchen closes.
+  translation: 'Ojalá se libere una mesa antes de que cierre la cocina. (fingers crossed: ojalá)'
+  visual_hint: 🤞⏳
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: fingers crossed
+    meaning: 'fingers crossed: ojalá, deseando suerte'
+    ipa: ˈfɪŋɡəz
+  kind: expression
+  apply_sentence: I have my interview today, so ____!
+  apply_answer: fingers crossed
+  apply_translation: Hoy tengo mi entrevista, ¡así que ojalá salga bien!
+- id: beggars-can-t-be-choosers
+  text: A seat at the bar is fine; beggars can't be choosers.
+  translation: Un asiento en la barra está bien; a caballo regalado no se le mira el diente. (beggars can't be choosers)
+  visual_hint: 🪑🙏
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: beggars can't be choosers
+    meaning: 'beggars can''t be choosers: no se puede exigir'
+    ipa: ˈbeɡəz
+  kind: idiom
+  apply_sentence: The room is small, but ____, I guess.
+  apply_answer: beggars can't be choosers
+  apply_translation: La habitación es pequeña, pero no se puede exigir más, supongo.
 roleplay:
   ai_role: maître d'
   user_role: diner

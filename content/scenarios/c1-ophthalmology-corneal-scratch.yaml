@@ -76,6 +76,36 @@ phrases:
   - word: heals
     meaning: cicatriza / sana
     ipa: hiːlz
+- id: idm-easier-said-than-done-c1
+  text: Not rubbing the eye is easier said than done.
+  translation: No frotarse el ojo es más fácil de decir que de hacer. (easier said than done)
+  visual_hint: 👁️🙈
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: easier said than done
+    meaning: más fácil decirlo que hacerlo
+    ipa: ˈiːziər sed ðæn dʌn
+  kind: idiom
+  apply_sentence: Quitting sugar is ____.
+  apply_answer: easier said than done
+  apply_translation: Dejar el azúcar es más fácil de decir que de hacer.
+- id: idm-on-the-road-to-recovery-c1
+  text: You're well on the road to recovery now.
+  translation: Ya vas muy bien camino de la recuperación. (on the road to recovery = recuperándose)
+  visual_hint: 🛣️👁️
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: on the road to recovery
+    meaning: camino de recuperarse
+    ipa: rɪˈkʌvəri
+  kind: idiom
+  apply_sentence: After the surgery, he is ____.
+  apply_answer: on the road to recovery
+  apply_translation: Después de la cirugía, va camino de la recuperación.
 roleplay:
   ai_role: ophthalmologist
   user_role: patient

@@ -71,6 +71,36 @@ phrases:
   - word: driver
     meaning: repartidor / conductor
     ipa: ˈdraɪvər
+- id: on-its-way
+  text: Your pizza is on its way to the hotel now.
+  translation: 'Su pizza va en camino al hotel ahora. (on its way: en camino)'
+  visual_hint: 🍕🛵
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: on its way
+    meaning: 'on its way: en camino'
+    ipa: weɪ
+  kind: expression
+  apply_sentence: Don't worry, the taxi is ____ to your house.
+  apply_answer: on its way
+  apply_translation: No te preocupes, el taxi va en camino a tu casa.
+- id: give-me-a-call
+  text: Please give me a call when you reach the lobby.
+  translation: 'Por favor llámame cuando llegues al vestíbulo. (give me a call: llámame)'
+  visual_hint: 📞🏨
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: give me a call
+    meaning: 'give me a call: llámame'
+    ipa: kɔːl
+  kind: expression
+  apply_sentence: If you get lost, ____ and I will come.
+  apply_answer: give me a call
+  apply_translation: Si te pierdes, llámame y yo iré.
 roleplay:
   ai_role: pizza order taker
   user_role: hotel guest

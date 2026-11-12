@@ -71,6 +71,36 @@ phrases:
   - word: until
     meaning: hasta
     ipa: ənˈtɪl
+- id: help-yourself
+  text: Please help yourself to the eggs and fruit.
+  translation: 'Sírvase usted mismo los huevos y la fruta. (help yourself: sírvete)'
+  visual_hint: 🍳🙌
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: help yourself
+    meaning: 'help yourself: sírvete tú mismo'
+    ipa: help
+  kind: expression
+  apply_sentence: There is cake in the kitchen, so ____ to some.
+  apply_answer: help yourself
+  apply_translation: Hay pastel en la cocina, así que sírvete un poco.
+- id: an-early-bird
+  text: I am an early bird, so I eat breakfast at six.
+  translation: 'Soy madrugador, así que desayuno a las seis. (an early bird: madrugador)'
+  visual_hint: 🐦🌄
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: an early bird
+    meaning: 'an early bird: madrugador'
+    ipa: ˈɜːli bɜːd
+  kind: idiom
+  apply_sentence: My grandfather is ____ and goes jogging at dawn.
+  apply_answer: an early bird
+  apply_translation: Mi abuelo es madrugador y sale a correr al amanecer.
 roleplay:
   ai_role: breakfast host
   user_role: guest

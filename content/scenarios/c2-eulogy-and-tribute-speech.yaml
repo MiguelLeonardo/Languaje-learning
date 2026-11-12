@@ -73,6 +73,36 @@ phrases:
   - word: gratitude
     meaning: gratitud
     ipa: ˈɡrætɪtuːd
+- id: idm-c2et-stood-test-time
+  text: Her work has stood the test of time, long after the applause.
+  translation: Su obra ha resistido el paso del tiempo, mucho después de los aplausos.
+  visual_hint: 🏆⏳
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: stand the test of time
+    meaning: resistir el paso del tiempo
+    ipa: test
+  kind: idiom
+  apply_sentence: Great novels always stand the ____ of time.
+  apply_answer: test
+  apply_translation: Las grandes novelas siempre resisten el paso del tiempo.
+- id: idm-c2et-leave-mark
+  text: She leaves behind a legacy that will be hard to follow.
+  translation: Deja un legado que será difícil de igualar (difícil de superar).
+  visual_hint: 🕯️🌹
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: a hard act to follow
+    meaning: difícil de igualar
+    ipa: ˈlegəsi
+  kind: idiom
+  apply_sentence: Following such a predecessor is a ____ act to follow.
+  apply_answer: hard
+  apply_translation: Seguir a tal predecesor es un acto difícil de igualar.
 roleplay:
   ai_role: retiring professor (Dr. Lin)
   user_role: former mentee

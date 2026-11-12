@@ -80,6 +80,37 @@ phrases:
   - word: advocacy
     meaning: respaldo activo / defensa
     ipa: ˈædvəkəsi
+- id: idm-go-the-extra-mile
+  text: This year I went the extra mile on three major projects.
+  translation: 'Este año me esforcé más de lo esperado en tres proyectos importantes. (go the extra mile: esforzarse
+    más)'
+  visual_hint: 🏅🛤️
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: go the extra mile
+    meaning: esforzarse más
+    ipa: ɡoʊ ði ˈɛkstrə maɪl
+  kind: idiom
+  apply_sentence: Our best employee ____ for the client last week.
+  apply_answer: went the extra mile
+  apply_translation: Nuestra mejor empleada se esforzó más por el cliente la semana pasada.
+- id: idm-pull-my-weight
+  text: I believe I've more than pulled my weight on this team.
+  translation: 'Creo que he hecho más que mi parte en este equipo. (pull your weight: cumplir con tu parte)'
+  visual_hint: 💪📊
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: pull my weight
+    meaning: hacer tu parte
+    ipa: pʊl maɪ weɪt
+  kind: idiom
+  apply_sentence: Everyone on the team ____ their weight during the busy period.
+  apply_answer: pulled
+  apply_translation: Todos en el equipo cumplieron su parte durante el periodo ajetreado.
 roleplay:
   ai_role: engineering VP
   user_role: senior contributor

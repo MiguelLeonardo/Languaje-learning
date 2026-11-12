@@ -74,6 +74,36 @@ phrases:
   - word: openly
     meaning: abiertamente / con franqueza
     ipa: ˈoʊpənli
+- id: idm-b2rc-pull-weight
+  text: We all need to pull our weight around the apartment, honestly.
+  translation: Todos debemos hacer nuestra parte en el apartamento, sinceramente (cumplir con lo que toca).
+  visual_hint: 🧹🏠
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: pull your weight
+    meaning: hacer tu parte
+    ipa: pʊl
+  kind: idiom
+  apply_sentence: Everyone on the team has to ____ their weight.
+  apply_answer: pull
+  apply_translation: Todos en el equipo deben hacer su parte.
+- id: idm-b2rc-meet-halfway
+  text: 'Let''s meet halfway: I''ll cook, and you''ll do the dishes.'
+  translation: 'Lleguemos a un acuerdo: yo cocino y tú lavas los platos (ceder ambos).'
+  visual_hint: 🤝⚖️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: meet halfway
+    meaning: llegar a un punto medio
+    ipa: ˈhaːfweɪ
+  kind: idiom
+  apply_sentence: Neither of us agreed, so we had to ____ halfway.
+  apply_answer: meet
+  apply_translation: Ninguno estaba de acuerdo, así que tuvimos que llegar a un punto medio.
 roleplay:
   ai_role: flatmate (Jordan)
   user_role: roommate

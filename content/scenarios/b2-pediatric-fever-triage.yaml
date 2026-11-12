@@ -72,6 +72,36 @@ phrases:
   - word: gentle
     meaning: cuidadoso / amable
     ipa: ˈdʒentəl
+- id: idm-run-a-fever-b2
+  text: He started to run a fever late last night.
+  translation: Empezó a tener fiebre anoche tarde. (run a fever = tener fiebre)
+  visual_hint: 🌡️👶
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: run a fever
+    meaning: tener fiebre
+    ipa: rʌn ə ˈfiːvər
+  kind: expression
+  apply_sentence: Children often ____ when they catch a cold.
+  apply_answer: run a fever
+  apply_translation: Los niños suelen tener fiebre cuando se resfrían.
+- id: idm-go-through-the-roof-b2
+  text: I'm afraid his temperature could go through the roof.
+  translation: Temo que su temperatura se dispare. (go through the roof = dispararse)
+  visual_hint: 📈🌡️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: go through the roof
+    meaning: dispararse
+    ipa: ruːf
+  kind: idiom
+  apply_sentence: Rent will ____ if they build the stadium.
+  apply_answer: go through the roof
+  apply_translation: El alquiler se disparará si construyen el estadio.
 roleplay:
   ai_role: pediatric triage nurse
   user_role: parent

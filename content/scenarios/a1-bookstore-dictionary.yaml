@@ -71,6 +71,36 @@ phrases:
   - word: counter
     meaning: mostrador
     ipa: ˈkaʊntər
+- id: idm-pick-up-guide
+  text: I want to pick up a pocket city guide before my trip.
+  translation: Quiero pasar a comprar (pick up = recoger/comprar de paso) una guía de bolsillo antes de mi viaje.
+  visual_hint: 📚🛍️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: pick up
+    meaning: pasar a comprar / recoger
+    ipa: pɪk ʌp
+  kind: phrasal_verb
+  apply_sentence: Can we ____ some travel books at the corner shop?
+  apply_answer: pick up
+  apply_translation: ¿Podemos pasar a comprar unos libros de viaje en la tienda de la esquina?
+- id: idm-at-a-glance
+  text: This fold-out map shows all the main streets at a glance.
+  translation: Este mapa desplegable muestra todas las calles principales de un vistazo.
+  visual_hint: 🗺️👀
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: at a glance
+    meaning: de un vistazo
+    ipa: æt ə ɡlæns
+  kind: expression
+  apply_sentence: You can see the museum hours ____ on the front page.
+  apply_answer: at a glance
+  apply_translation: Puedes ver el horario del museo de un vistazo en la primera página.
 roleplay:
   ai_role: bookseller
   user_role: reader

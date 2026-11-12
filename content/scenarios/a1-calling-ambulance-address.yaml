@@ -71,6 +71,36 @@ phrases:
   - word: corner
     meaning: esquina
     ipa: ˈkɔːrnər
+- id: idm-hurry-up-a1
+  text: Please hurry up, my father needs help right now!
+  translation: ¡Por favor, dese prisa, mi padre necesita ayuda ahora mismo! (hurry up = apresurarse)
+  visual_hint: 🚑⏱️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: hurry up
+    meaning: darse prisa
+    ipa: ˈhʌri ʌp
+  kind: phrasal_verb
+  apply_sentence: Please ____, the bus is leaving.
+  apply_answer: hurry up
+  apply_translation: Por favor, apúrate, el autobús se va.
+- id: idm-right-away-a1
+  text: Please come right away, it is an emergency.
+  translation: Por favor, vengan enseguida, es una emergencia. (right away = inmediatamente)
+  visual_hint: ⚡🏠
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: right away
+    meaning: inmediatamente
+    ipa: raɪt əˈweɪ
+  kind: expression
+  apply_sentence: I will call the doctor ____.
+  apply_answer: right away
+  apply_translation: Llamaré al médico enseguida.
 roleplay:
   ai_role: emergency operator
   user_role: caller

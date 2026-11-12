@@ -76,6 +76,36 @@ phrases:
   - word: muffin
     meaning: panecillo / muffin
     ipa: ˈmʌfɪn
+- id: wake-up
+  text: I need coffee to wake up in the morning.
+  translation: 'Necesito café para despertarme por la mañana. (wake up: despertarse)'
+  visual_hint: ☕🌅
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: wake up
+    meaning: 'wake up: despertarse'
+    ipa: weɪk
+  kind: phrasal_verb
+  apply_sentence: I ____ at seven every day for school.
+  apply_answer: wake up
+  apply_translation: Me despierto a las siete todos los días para ir a la escuela.
+- id: right-away
+  text: Sure, I will bring your coffee right away.
+  translation: 'Claro, le traigo su café enseguida. (right away: de inmediato)'
+  visual_hint: ☕⚡
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: right away
+    meaning: 'right away: de inmediato'
+    ipa: raɪt əˈweɪ
+  kind: expression
+  apply_sentence: Please call me back ____ if you can.
+  apply_answer: right away
+  apply_translation: Por favor, llámame de vuelta enseguida si puedes.
 roleplay:
   ai_role: barista
   user_role: customer

@@ -77,6 +77,36 @@ phrases:
   - word: savoring
     meaning: degustar / apreciar con matices
     ipa: ˈseɪvərɪŋ
+- id: idm-c2sm-tip-iceberg
+  text: That headline is just the tip of the iceberg, believe me.
+  translation: Ese titular es solo la punta del iceberg, créeme (una pequeña parte visible).
+  visual_hint: 📰🧊
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: the tip of the iceberg
+    meaning: la punta del iceberg
+    ipa: ˈaɪsbɜːg
+  kind: idiom
+  apply_sentence: The scandal was only the ____ of the iceberg.
+  apply_answer: tip
+  apply_translation: El escándalo era solo la punta del iceberg.
+- id: idm-c2sm-spin
+  text: Politicians always put a spin on the facts to suit them.
+  translation: Los políticos siempre le dan un giro a los hechos para su conveniencia (manipular el relato).
+  visual_hint: 📺🌀
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: put a spin on
+    meaning: manipular la presentación
+    ipa: spɪn
+  kind: idiom
+  apply_sentence: The company tried to put a positive ____ on the loss.
+  apply_answer: spin
+  apply_translation: La empresa intentó darle un giro positivo a la pérdida.
 roleplay:
   ai_role: cultural critic
   user_role: media essayist

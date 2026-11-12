@@ -81,6 +81,36 @@ phrases:
   - word: aligned
     meaning: en pleno acuerdo
     ipa: əˈlaɪnd
+- id: idm-moving-goalposts
+  text: It feels like you keep moving the goalposts on our valuation.
+  translation: 'Parece que siguen cambiando las reglas sobre nuestra valoración. (move the goalposts: cambiar condiciones)'
+  visual_hint: 🥅↔️
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: moving the goalposts
+    meaning: cambiar las reglas
+    ipa: ˈmuːvɪŋ ðə ˈɡoʊlpoʊsts
+  kind: idiom
+  apply_sentence: The buyer started ____ once the numbers looked strong.
+  apply_answer: moving the goalposts
+  apply_translation: El comprador empezó a cambiar las reglas cuando las cifras se vieron sólidas.
+- id: idm-red-flag
+  text: Nothing in our books should raise a red flag.
+  translation: 'Nada en nuestros libros debería levantar una señal de alarma. (red flag: señal de peligro)'
+  visual_hint: 🚩🔎
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: red flag
+    meaning: señal de alarma
+    ipa: rɛd flæɡ
+  kind: idiom
+  apply_sentence: The sudden change in auditors was a ____ for investors.
+  apply_answer: red flag
+  apply_translation: El cambio repentino de auditores fue una señal de alarma para los inversores.
 roleplay:
   ai_role: managing director (acquirer)
   user_role: chief strategy officer

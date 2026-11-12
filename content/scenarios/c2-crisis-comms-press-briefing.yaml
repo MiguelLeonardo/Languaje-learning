@@ -78,6 +78,36 @@ phrases:
   - word: verifiable
     meaning: verificable
     ipa: ˈverɪfaɪəbəl
+- id: idm-tip-of-the-iceberg
+  text: I suspect today's disclosure is only the tip of the iceberg.
+  translation: 'Sospecho que la divulgación de hoy es solo la punta del iceberg. (tip of the iceberg: solo una parte)'
+  visual_hint: 🧊🔝
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: the tip of the iceberg
+    meaning: la punta del iceberg
+    ipa: tɪp əv ði ˈaɪsbɜːrɡ
+  kind: idiom
+  apply_sentence: These complaints are just the ____ of a larger problem.
+  apply_answer: tip of the iceberg
+  apply_translation: Estas quejas son solo la punta del iceberg de un problema mayor.
+- id: idm-weather-the-storm
+  text: We are confident the company will weather the storm.
+  translation: 'Confiamos en que la empresa superará la tormenta. (weather the storm: sobrellevar la crisis)'
+  visual_hint: ⛈️🛡️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: weather the storm
+    meaning: superar la crisis
+    ipa: ˈwɛðər ðə stɔːrm
+  kind: idiom
+  apply_sentence: With cash reserves, the firm could ____ of the scandal.
+  apply_answer: weather the storm
+  apply_translation: Con reservas de efectivo, la firma pudo sobrellevar la tormenta del escándalo.
 roleplay:
   ai_role: financial journalist
   user_role: chief communications officer

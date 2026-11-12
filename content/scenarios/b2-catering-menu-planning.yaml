@@ -71,6 +71,37 @@ phrases:
   - word: tasting
     meaning: degustación
     ipa: ˈteɪstɪŋ
+- id: a-ballpark-figure
+  text: Could you give us a ballpark figure for the headcount?
+  translation: '¿Podría darnos una cifra aproximada de asistentes? (a ballpark figure: cifra aproximada)'
+  visual_hint: 🔢🍽️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: a ballpark figure
+    meaning: 'a ballpark figure: cifra aproximada'
+    ipa: ˈbɔːlpɑːk
+  kind: expression
+  apply_sentence: I only need ____, not an exact price.
+  apply_answer: a ballpark figure
+  apply_translation: Solo necesito una cifra aproximada, no un precio exacto.
+- id: cover-all-the-bases
+  text: Let's cover all the bases and label every allergen clearly.
+  translation: 'Cubramos todos los frentes y etiquetemos claramente cada alérgeno. (cover all the bases: no dejar
+    nada al azar)'
+  visual_hint: ✅🥪
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: cover all the bases
+    meaning: 'cover all the bases: prever todo'
+    ipa: beɪsɪz
+  kind: idiom
+  apply_sentence: Our lawyer wanted to ____ before signing the contract.
+  apply_answer: cover all the bases
+  apply_translation: Nuestro abogado quiso cubrir todos los frentes antes de firmar el contrato.
 roleplay:
   ai_role: catering manager
   user_role: event organizer

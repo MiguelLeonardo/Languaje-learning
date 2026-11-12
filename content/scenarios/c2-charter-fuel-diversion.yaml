@@ -77,6 +77,36 @@ phrases:
   - word: take precedence
     meaning: tener prioridad absoluta
     ipa: teɪk ˈpresɪdəns
+- id: charter-err-on-caution
+  text: The captain will err on the side of caution and divert.
+  translation: El capitán optará por la prudencia y se desviará. (err on the side of caution = ser prudente)
+  visual_hint: 🛩️⛈️
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: err on the side of caution
+    meaning: pecar de prudente
+    ipa: ɜː ɒn ðə saɪd əv ˈkɔːʃn
+  kind: idiom
+  apply_sentence: In a storm, it is wise to ____ about the route.
+  apply_answer: err on the side of caution
+  apply_translation: En una tormenta, es sensato ser prudente con la ruta.
+- id: charter-bite-the-bullet
+  text: We have to bite the bullet and accept the diversion cost.
+  translation: Tenemos que apretar los dientes y aceptar el costo del desvío. (bite the bullet = afrontar algo difícil)
+  visual_hint: 💥💶
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: bite the bullet
+    meaning: afrontar lo inevitable
+    ipa: baɪt ðə ˈbʊlɪt
+  kind: idiom
+  apply_sentence: She decided to ____ and pay the penalty fee.
+  apply_answer: bite the bullet
+  apply_translation: Decidió apretar los dientes y pagar la multa.
 roleplay:
   ai_role: flight dispatcher
   user_role: charter director

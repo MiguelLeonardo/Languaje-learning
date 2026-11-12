@@ -73,6 +73,36 @@ phrases:
   - word: lock in
     meaning: confirmar / asegurar hora
     ipa: lɑːk ɪn
+- id: idm-b2nm-touch-base
+  text: It was great meeting you. Let's touch base next week about it.
+  translation: Fue un gusto conocerte. Hablemos la próxima semana al respecto (ponerse en contacto).
+  visual_hint: 💼🤝
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: touch base
+    meaning: ponerse en contacto
+    ipa: beɪs
+  kind: idiom
+  apply_sentence: I'll ____ base with the team on Friday.
+  apply_answer: touch
+  apply_translation: Me pondré en contacto con el equipo el viernes.
+- id: idm-b2nm-pick-your-brain
+  text: Would you mind if I picked your brain about the industry?
+  translation: ¿Te importaría si te hago unas preguntas sobre el sector? (pedir consejo a un experto)
+  visual_hint: 🧠💡
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: pick someone's brain
+    meaning: consultar a un experto
+    ipa: breɪn
+  kind: idiom
+  apply_sentence: I'd love to ____ your brain about starting a business.
+  apply_answer: pick
+  apply_translation: Me encantaría pedirte consejo sobre cómo iniciar un negocio.
 roleplay:
   ai_role: product designer
   user_role: conference attendee

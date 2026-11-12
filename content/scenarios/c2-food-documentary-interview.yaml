@@ -73,6 +73,36 @@ phrases:
   - word: stewardship
     meaning: custodia / cuidado responsable
     ipa: ˈstuːərdʃɪp
+- id: stood-the-test-of-time
+  text: Heirloom seeds like these have stood the test of time.
+  translation: 'Semillas ancestrales como estas han resistido el paso del tiempo. (stood the test of time: perdurar)'
+  visual_hint: 🌱⌛
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: stood the test of time
+    meaning: 'stand the test of time: perdurar'
+    ipa: test
+  kind: idiom
+  apply_sentence: Few novels have ____ like this one.
+  apply_answer: stood the test of time
+  apply_translation: Pocas novelas han resistido el paso del tiempo como esta.
+- id: pass-the-torch
+  text: One day I will pass the torch to my granddaughter.
+  translation: 'Algún día pasaré el testigo a mi nieta. (pass the torch: transmitir el legado)'
+  visual_hint: 🔥👵
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: pass the torch
+    meaning: 'pass the torch: pasar el relevo'
+    ipa: tɔːtʃ
+  kind: idiom
+  apply_sentence: The founder will ____ to a younger team.
+  apply_answer: pass the torch
+  apply_translation: El fundador pasará el testigo a un equipo más joven.
 roleplay:
   ai_role: agronomist & seed keeper
   user_role: documentary host

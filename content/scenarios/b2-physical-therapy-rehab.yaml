@@ -73,6 +73,36 @@ phrases:
   - word: light
     meaning: suave / moderado
     ipa: laɪt
+- id: idm-no-pain-no-gain-b2
+  text: It's hard, but no pain, no gain, right?
+  translation: Es duro, pero sin esfuerzo no hay recompensa, ¿no? (no pain, no gain)
+  visual_hint: 💪😣
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: no pain, no gain
+    meaning: sin esfuerzo no hay premio
+    ipa: nəʊ peɪn nəʊ ɡeɪn
+  kind: idiom
+  apply_sentence: Training is tough, but ____.
+  apply_answer: no pain, no gain
+  apply_translation: El entrenamiento es duro, pero sin esfuerzo no hay recompensa.
+- id: idm-ease-into-b2
+  text: We should ease into the new exercises very slowly.
+  translation: Deberíamos adaptarnos a los ejercicios nuevos muy despacio. (ease into = adaptarse poco a poco)
+  visual_hint: 🏋️🐢
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: ease into
+    meaning: adaptarse gradualmente
+    ipa: iːz ˈɪntuː
+  kind: phrasal_verb
+  apply_sentence: Start slowly and ____ the routine.
+  apply_answer: ease into
+  apply_translation: Empieza despacio y adáptate poco a poco a la rutina.
 roleplay:
   ai_role: sports physiotherapist
   user_role: patient

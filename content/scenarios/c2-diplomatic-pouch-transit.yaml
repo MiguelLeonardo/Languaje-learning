@@ -74,6 +74,38 @@ phrases:
   - word: adherence
     meaning: apego / cumplimiento estricto
     ipa: ədˈhɪrəns
+- id: pouch-dot-the-is
+  text: Please dot the i's and cross the t's on the waybill.
+  translation: Por favor, cuide hasta el último detalle en la guía de envío. (dot the i's and cross the t's = cuidar
+    los detalles)
+  visual_hint: ✍️📦
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: dot the i's and cross the t's
+    meaning: cuidar cada detalle
+    ipa: dɒt ði aɪz ənd krɒs ðə tiːz
+  kind: idiom
+  apply_sentence: Before the summit, the staff must ____ on every protocol.
+  apply_answer: dot the i's and cross the t's
+  apply_translation: Antes de la cumbre, el personal debe cuidar hasta el último detalle de cada protocolo.
+- id: pouch-fine-line
+  text: Border officers walk a fine line between security and courtesy.
+  translation: Los agentes fronterizos caminan sobre una línea delgada entre seguridad y cortesía. (walk a fine
+    line = equilibrar con cuidado)
+  visual_hint: 🤹🛂
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: walk a fine line
+    meaning: mantener un delicado equilibrio
+    ipa: wɔːk ə faɪn laɪn
+  kind: idiom
+  apply_sentence: Diplomats must ____ between openness and discretion.
+  apply_answer: walk a fine line
+  apply_translation: Los diplomáticos deben mantener un delicado equilibrio entre apertura y discreción.
 roleplay:
   ai_role: aviation security supervisor
   user_role: diplomatic courier

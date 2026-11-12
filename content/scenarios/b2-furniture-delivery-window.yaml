@@ -72,6 +72,36 @@ phrases:
   - word: arrival
     meaning: llegada
     ipa: əˈraɪvəl
+- id: idm-call-off-delivery
+  text: If the freight elevator is down, we'll have to call off today's delivery.
+  translation: Si el montacargas está averiado, tendremos que cancelar la entrega de hoy.
+  visual_hint: 🛋️🚫
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: call off
+    meaning: cancelar / suspender
+    ipa: kɔːl ɒf
+  kind: phrasal_verb
+  apply_sentence: Heavy rain forced the movers to ____ the afternoon drop-off.
+  apply_answer: call off
+  apply_translation: La lluvia fuerte obligó a los de la mudanza a cancelar la entrega de la tarde.
+- id: idm-up-in-the-air
+  text: Our exact delivery slot is still up in the air until building security confirms.
+  translation: Nuestro horario exacto de entrega sigue en el aire hasta que seguridad del edificio confirme.
+  visual_hint: 🚚❓
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: up in the air
+    meaning: en el aire / sin definir
+    ipa: ʌp ɪn ði er
+  kind: idiom
+  apply_sentence: With traffic delayed on the bridge, the arrival time remains ____.
+  apply_answer: up in the air
+  apply_translation: Con el tráfico retrasado en el puente, la hora de llegada sigue en el aire.
 roleplay:
   ai_role: logistics coordinator
   user_role: apartment resident

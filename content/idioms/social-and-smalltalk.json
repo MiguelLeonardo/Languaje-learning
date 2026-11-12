@@ -1,0 +1,842 @@
+{
+ "a1-birthday-wishes": [
+  {
+   "id": "idm-a1bd-piece-of-cake",
+   "kind": "idiom",
+   "text": "Thank you! The cake was a piece of cake to make.",
+   "translation": "¡Gracias! Hacer el pastel fue pan comido (muy fácil).",
+   "apply_sentence": "The party game was a ____ for the kids.",
+   "apply_answer": "piece of cake",
+   "apply_translation": "El juego de la fiesta fue pan comido para los niños.",
+   "glossary_word": "a piece of cake",
+   "glossary_meaning": "algo muy fácil",
+   "glossary_ipa": "keɪk",
+   "visual_hint": "🍰😋"
+  },
+  {
+   "id": "idm-a1bd-have-fun",
+   "kind": "expression",
+   "text": "Come in and have fun at my birthday party today!",
+   "translation": "¡Pasa y pásalo bien en mi fiesta de cumpleaños hoy! (divertirse)",
+   "apply_sentence": "Please ____ at the concert tonight, kids.",
+   "apply_answer": "have fun",
+   "apply_translation": "Por favor, diviértanse en el concierto esta noche, chicos.",
+   "glossary_word": "have fun",
+   "glossary_meaning": "divertirse",
+   "glossary_ipa": "fʌn",
+   "visual_hint": "🎉😄"
+  }
+ ],
+ "a1-greeting-neighbors": [
+  {
+   "id": "idm-a1gn-move-in",
+   "kind": "phrasal_verb",
+   "text": "Hello! I will move in next door on Monday.",
+   "translation": "¡Hola! Me mudaré a la casa de al lado el lunes (instalarse en una vivienda).",
+   "apply_sentence": "Our new friends will ____ upstairs next week.",
+   "apply_answer": "move in",
+   "apply_translation": "Nuestros nuevos amigos se mudarán al piso de arriba la próxima semana.",
+   "glossary_word": "move in",
+   "glossary_meaning": "mudarse a una casa",
+   "glossary_ipa": "muːv",
+   "visual_hint": "🏠📦"
+  },
+  {
+   "id": "idm-a1gn-nice-to-meet",
+   "kind": "expression",
+   "text": "It's nice to meet you, and welcome to the building!",
+   "translation": "Mucho gusto en conocerte, ¡y bienvenido al edificio! (fórmula de saludo)",
+   "apply_sentence": "Hi Tom, it's ____ you at last.",
+   "apply_answer": "nice to meet",
+   "apply_translation": "Hola Tom, es un placer conocerte por fin.",
+   "glossary_word": "nice to meet you",
+   "glossary_meaning": "mucho gusto",
+   "glossary_ipa": "miːt",
+   "visual_hint": "🤝😊"
+  }
+ ],
+ "a1-introducing-a-friend": [
+  {
+   "id": "idm-a1if-this-is",
+   "kind": "expression",
+   "text": "Anna, this is my best friend, Carlos. He's very kind.",
+   "translation": "Anna, este es mi mejor amigo, Carlos. Es muy amable. (presentación)",
+   "apply_sentence": "Mum, ____ my teacher, Mr. Brown.",
+   "apply_answer": "this is",
+   "apply_translation": "Mamá, este es mi profesor, el Sr. Brown.",
+   "glossary_word": "this is",
+   "glossary_meaning": "este/esta es (presentación)",
+   "glossary_ipa": "ðɪs",
+   "visual_hint": "👫👋"
+  },
+  {
+   "id": "idm-a1if-get-along",
+   "kind": "phrasal_verb",
+   "text": "I think you two will get along really well together.",
+   "translation": "Creo que ustedes dos se llevarán muy bien (tener buena relación).",
+   "apply_sentence": "My cat and dog ____ very well.",
+   "apply_answer": "get along",
+   "apply_translation": "Mi gato y mi perro se llevan muy bien.",
+   "glossary_word": "get along",
+   "glossary_meaning": "llevarse bien",
+   "glossary_ipa": "əˈlɒŋ",
+   "visual_hint": "🐱🐶"
+  }
+ ],
+ "a1-talking-about-pets": [
+  {
+   "id": "idm-a1tp-take-for-a-walk",
+   "kind": "phrasal_verb",
+   "text": "I take out my dog every morning before school.",
+   "translation": "Saco a pasear a mi perro cada mañana antes de la escuela (sacar de casa).",
+   "apply_sentence": "Dad likes to ____ the dog after dinner.",
+   "apply_answer": "take out",
+   "apply_translation": "A papá le gusta sacar al perro después de la cena.",
+   "glossary_word": "take out",
+   "glossary_meaning": "sacar (a pasear)",
+   "glossary_ipa": "teɪk",
+   "visual_hint": "🐕🚶"
+  },
+  {
+   "id": "idm-a1tp-pick-up",
+   "kind": "phrasal_verb",
+   "text": "Please pick up your dog's mess in the park.",
+   "translation": "Por favor recoge la caca de tu perro en el parque (levantar del suelo).",
+   "apply_sentence": "Can you ____ my keys from the floor?",
+   "apply_answer": "pick up",
+   "apply_translation": "¿Puedes recoger mis llaves del suelo?",
+   "glossary_word": "pick up",
+   "glossary_meaning": "recoger",
+   "glossary_ipa": "pɪk",
+   "visual_hint": "🐾🧹"
+  }
+ ],
+ "a1-weekend-weather-chat": [
+  {
+   "id": "idm-a1ww-nice-day",
+   "kind": "expression",
+   "text": "What a nice day! I hope it stays sunny this weekend.",
+   "translation": "¡Qué lindo día! Espero que siga soleado este fin de semana.",
+   "apply_sentence": "Today is ____, so let's go outside.",
+   "apply_answer": "a nice day",
+   "apply_translation": "Hoy es un lindo día, así que salgamos.",
+   "glossary_word": "what a nice day",
+   "glossary_meaning": "qué buen día",
+   "glossary_ipa": "naɪs",
+   "visual_hint": "☀️🌤️"
+  },
+  {
+   "id": "idm-a1ww-rain-cats",
+   "kind": "idiom",
+   "text": "Oh no, it's raining cats and dogs outside right now!",
+   "translation": "¡Oh no, está lloviendo a cántaros ahora mismo! (llover muchísimo)",
+   "apply_sentence": "We stayed home because it was ____ all day.",
+   "apply_answer": "raining cats and dogs",
+   "apply_translation": "Nos quedamos en casa porque llovió a cántaros todo el día.",
+   "glossary_word": "raining cats and dogs",
+   "glossary_meaning": "llover a cántaros",
+   "glossary_ipa": "reɪn",
+   "visual_hint": "🌧️🐱"
+  }
+ ],
+ "a2-book-club-recommendation": [
+  {
+   "id": "idm-a2bc-page-turner",
+   "kind": "idiom",
+   "text": "This novel is a real page-turner. I read it in two days.",
+   "translation": "Esta novela es muy absorbente; la leí en dos días (libro que engancha).",
+   "apply_sentence": "The detective story was a real ____ for me.",
+   "apply_answer": "page-turner",
+   "apply_translation": "La historia de detectives fue muy absorbente para mí.",
+   "glossary_word": "page-turner",
+   "glossary_meaning": "libro que engancha",
+   "glossary_ipa": "peɪdʒ",
+   "visual_hint": "📖🔥"
+  },
+  {
+   "id": "idm-a2bc-cover-to-cover",
+   "kind": "idiom",
+   "text": "I read the whole book from cover to cover last weekend.",
+   "translation": "Leí todo el libro de principio a fin el fin de semana pasado.",
+   "apply_sentence": "She studied the manual from ____ before the exam.",
+   "apply_answer": "cover to cover",
+   "apply_translation": "Estudió el manual de principio a fin antes del examen.",
+   "glossary_word": "from cover to cover",
+   "glossary_meaning": "de principio a fin",
+   "glossary_ipa": "ˈkʌvər",
+   "visual_hint": "📚✅"
+  }
+ ],
+ "a2-gym-workout-buddy": [
+  {
+   "id": "idm-a2gw-work-out",
+   "kind": "phrasal_verb",
+   "text": "I try to work out three times a week after work.",
+   "translation": "Intento hacer ejercicio tres veces por semana después del trabajo.",
+   "apply_sentence": "My brother likes to ____ every morning in the garden.",
+   "apply_answer": "work out",
+   "apply_translation": "A mi hermano le gusta hacer ejercicio cada mañana en el jardín.",
+   "glossary_word": "work out",
+   "glossary_meaning": "hacer ejercicio",
+   "glossary_ipa": "wɜːk",
+   "visual_hint": "🏋️💪"
+  },
+  {
+   "id": "idm-a2gw-no-pain",
+   "kind": "idiom",
+   "text": "Keep going! No pain, no gain, my friend, remember that.",
+   "translation": "¡Sigue! Sin esfuerzo no hay recompensa, amigo (hay que sacrificarse).",
+   "apply_sentence": "Studying is hard, but ____, no gain.",
+   "apply_answer": "no pain",
+   "apply_translation": "Estudiar es difícil, pero sin dolor no hay ganancia.",
+   "glossary_word": "no pain, no gain",
+   "glossary_meaning": "sin esfuerzo no hay recompensa",
+   "glossary_ipa": "peɪn",
+   "visual_hint": "😅🏃"
+  }
+ ],
+ "a2-meeting-new-people": [
+  {
+   "id": "idm-a2mp-hang-out",
+   "kind": "phrasal_verb",
+   "text": "In my free time I like to hang out with friends.",
+   "translation": "En mi tiempo libre me gusta pasar el rato con amigos (salir con amigos).",
+   "apply_sentence": "We usually ____ at the mall on Saturdays.",
+   "apply_answer": "hang out",
+   "apply_translation": "Normalmente pasamos el rato en el centro comercial los sábados.",
+   "glossary_word": "hang out",
+   "glossary_meaning": "pasar el rato",
+   "glossary_ipa": "hæŋ",
+   "visual_hint": "👯☕"
+  },
+  {
+   "id": "idm-a2mp-into",
+   "kind": "expression",
+   "text": "I'm really into photography and I take pictures every day.",
+   "translation": "Me gusta mucho la fotografía y tomo fotos todos los días (ser aficionado).",
+   "apply_sentence": "My sister is really ____ jazz music these days.",
+   "apply_answer": "into",
+   "apply_translation": "A mi hermana le apasiona mucho el jazz estos días.",
+   "glossary_word": "be into",
+   "glossary_meaning": "estar aficionado a",
+   "glossary_ipa": "ˈɪntuː",
+   "visual_hint": "📷❤️"
+  }
+ ],
+ "a2-movie-night-choice": [
+  {
+   "id": "idm-a2mn-my-cup-of-tea",
+   "kind": "idiom",
+   "text": "Horror films aren't really my cup of tea, honestly.",
+   "translation": "Las películas de terror no son lo mío, la verdad (no me gustan).",
+   "apply_sentence": "Cooking shows are not my ____ of tea.",
+   "apply_answer": "cup",
+   "apply_translation": "Los programas de cocina no son lo mío.",
+   "glossary_word": "my cup of tea",
+   "glossary_meaning": "algo que me gusta",
+   "glossary_ipa": "kʌp",
+   "visual_hint": "🍿🎬"
+  },
+  {
+   "id": "idm-a2mn-sold-out",
+   "kind": "expression",
+   "text": "Sorry, the late show is sold out, so let's pick another one.",
+   "translation": "Lo siento, la función de la noche está agotada, elijamos otra (sin entradas).",
+   "apply_sentence": "The concert was ____ in just ten minutes.",
+   "apply_answer": "sold out",
+   "apply_translation": "El concierto se agotó en solo diez minutos.",
+   "glossary_word": "sold out",
+   "glossary_meaning": "agotado",
+   "glossary_ipa": "səʊld",
+   "visual_hint": "🎟️🚫"
+  }
+ ],
+ "a2-picnic-in-the-park": [
+  {
+   "id": "idm-a2pp-set-up",
+   "kind": "phrasal_verb",
+   "text": "Let's set up the blanket under that big tree over there.",
+   "translation": "Pongamos la manta bajo ese árbol grande de allá (preparar o montar).",
+   "apply_sentence": "We need to ____ the tent before it gets dark.",
+   "apply_answer": "set up",
+   "apply_translation": "Tenemos que montar la tienda antes de que oscurezca.",
+   "glossary_word": "set up",
+   "glossary_meaning": "montar, preparar",
+   "glossary_ipa": "set",
+   "visual_hint": "🧺🌳"
+  },
+  {
+   "id": "idm-a2pp-bring-along",
+   "kind": "phrasal_verb",
+   "text": "Don't forget to bring along some drinks and a big bag.",
+   "translation": "No olvides traer algunas bebidas y una bolsa grande (llevar contigo).",
+   "apply_sentence": "You can ____ a friend to the party if you want.",
+   "apply_answer": "bring along",
+   "apply_translation": "Puedes traer a un amigo a la fiesta si quieres.",
+   "glossary_word": "bring along",
+   "glossary_meaning": "llevar consigo",
+   "glossary_ipa": "brɪŋ",
+   "visual_hint": "🥤🎒"
+  }
+ ],
+ "b1-apologizing-for-lateness": [
+  {
+   "id": "idm-b1al-stuck-in-traffic",
+   "kind": "idiom",
+   "text": "Sorry I'm late, I got stuck in traffic on the highway.",
+   "translation": "Perdona la tardanza, quedé atascado en el tráfico de la autopista.",
+   "apply_sentence": "I couldn't call you because I was ____ in a tunnel.",
+   "apply_answer": "stuck",
+   "apply_translation": "No pude llamarte porque estaba atrapado en un túnel.",
+   "glossary_word": "get stuck",
+   "glossary_meaning": "quedarse atascado",
+   "glossary_ipa": "stʌk",
+   "visual_hint": "🚗⏰"
+  },
+  {
+   "id": "idm-b1al-running-late",
+   "kind": "expression",
+   "text": "I'm running late, so please start dinner without me tonight.",
+   "translation": "Voy con retraso, así que empiecen la cena sin mí esta noche.",
+   "apply_sentence": "We're ____ again, so save us some seats.",
+   "apply_answer": "running late",
+   "apply_translation": "Vamos con retraso otra vez, así que guárdennos asientos.",
+   "glossary_word": "run late",
+   "glossary_meaning": "ir con retraso",
+   "glossary_ipa": "ˈrʌnɪŋ",
+   "visual_hint": "🏃⌛"
+  }
+ ],
+ "b1-housewarming-gift": [
+  {
+   "id": "idm-b1hg-make-yourself",
+   "kind": "expression",
+   "text": "Come in and make yourself at home, the kitchen's through there.",
+   "translation": "Pasa y siéntete como en casa, la cocina está por allá (ponte cómodo).",
+   "apply_sentence": "Please take off your coat and ____ at home.",
+   "apply_answer": "make yourself",
+   "apply_translation": "Por favor quítate el abrigo y siéntete como en casa.",
+   "glossary_word": "make yourself at home",
+   "glossary_meaning": "ponte cómodo",
+   "glossary_ipa": "həʊm",
+   "visual_hint": "🏡🎁"
+  },
+  {
+   "id": "idm-b1hg-show-around",
+   "kind": "phrasal_verb",
+   "text": "Let me show you around before everyone else arrives, okay?",
+   "translation": "Déjame mostrarte la casa antes de que llegue todos los demás (hacer un recorrido).",
+   "apply_sentence": "The manager will ____ the new office this afternoon.",
+   "apply_answer": "show you around",
+   "apply_translation": "El gerente te mostrará la nueva oficina esta tarde.",
+   "glossary_word": "show around",
+   "glossary_meaning": "mostrar el lugar",
+   "glossary_ipa": "ʃəʊ",
+   "visual_hint": "🔑🚪"
+  }
+ ],
+ "b1-inviting-to-party": [
+  {
+   "id": "idm-b1ip-drop-by",
+   "kind": "phrasal_verb",
+   "text": "Feel free to drop by any time after four o'clock.",
+   "translation": "Siéntete libre de pasar por casa cuando quieras después de las cuatro (visitar sin avisar).",
+   "apply_sentence": "I might ____ your place later to return the book.",
+   "apply_answer": "drop by",
+   "apply_translation": "Quizás pase por tu casa más tarde a devolverte el libro.",
+   "glossary_word": "drop by",
+   "glossary_meaning": "pasar de visita",
+   "glossary_ipa": "drɒp",
+   "visual_hint": "🍖🔥"
+  },
+  {
+   "id": "idm-b1ip-the-more",
+   "kind": "idiom",
+   "text": "The more, the merrier, so bring anyone you want along.",
+   "translation": "Cuantos más, mejor, así que trae a quien quieras (mientras más gente, más diversión).",
+   "apply_sentence": "Bring your cousins too, ____ the merrier.",
+   "apply_answer": "the more",
+   "apply_translation": "Trae también a tus primos, cuantos más, mejor.",
+   "glossary_word": "the more the merrier",
+   "glossary_meaning": "cuantos más, mejor",
+   "glossary_ipa": "ˈmeri",
+   "visual_hint": "🎈👥"
+  }
+ ],
+ "b1-joining-running-club": [
+  {
+   "id": "idm-b1rc-warm-up",
+   "kind": "phrasal_verb",
+   "text": "We always warm up for ten minutes before we start running.",
+   "translation": "Siempre calentamos diez minutos antes de empezar a correr (preparar el cuerpo).",
+   "apply_sentence": "You should ____ before you play football.",
+   "apply_answer": "warm up",
+   "apply_translation": "Deberías calentar antes de jugar al fútbol.",
+   "glossary_word": "warm up",
+   "glossary_meaning": "calentar",
+   "glossary_ipa": "wɔːm",
+   "visual_hint": "🏃‍♀️🔥"
+  },
+  {
+   "id": "idm-b1rc-first-things",
+   "kind": "idiom",
+   "text": "Don't worry, you'll get the hang of it in a few weeks.",
+   "translation": "No te preocupes, le agarrarás el truco en unas semanas (aprender a hacerlo).",
+   "apply_sentence": "It took me days to ____ of this new phone.",
+   "apply_answer": "get the hang",
+   "apply_translation": "Me tomó días agarrarle el truco a este teléfono nuevo.",
+   "glossary_word": "get the hang of it",
+   "glossary_meaning": "agarrar el truco",
+   "glossary_ipa": "hæŋ",
+   "visual_hint": "👟📈"
+  }
+ ],
+ "b1-language-exchange-partner": [
+  {
+   "id": "idm-b1le-brush-up",
+   "kind": "phrasal_verb",
+   "text": "I want to brush up on my Spanish before my trip.",
+   "translation": "Quiero repasar mi español antes de mi viaje (mejorar lo ya sabido).",
+   "apply_sentence": "I need to ____ my French before the interview.",
+   "apply_answer": "brush up on",
+   "apply_translation": "Necesito repasar mi francés antes de la entrevista.",
+   "glossary_word": "brush up on",
+   "glossary_meaning": "repasar, refrescar",
+   "glossary_ipa": "brʌʃ",
+   "visual_hint": "🗣️🔤"
+  },
+  {
+   "id": "idm-b1le-lost-in-translation",
+   "kind": "idiom",
+   "text": "Sometimes jokes get lost in translation, but we can laugh anyway.",
+   "translation": "A veces los chistes pierden su sentido al traducirse, pero igual podemos reír.",
+   "apply_sentence": "The humor of that film was ____ in translation.",
+   "apply_answer": "lost",
+   "apply_translation": "El humor de esa película se perdió en la traducción.",
+   "glossary_word": "lost in translation",
+   "glossary_meaning": "se pierde al traducir",
+   "glossary_ipa": "lɒst",
+   "visual_hint": "🌍💬"
+  }
+ ],
+ "b2-catching-up-plans": [
+  {
+   "id": "idm-b2cu-long-time-no-see",
+   "kind": "expression",
+   "text": "Long time no see! We really should catch up properly soon.",
+   "translation": "¡Cuánto tiempo sin vernos! Deberíamos ponernos al día pronto (saludo informal).",
+   "apply_sentence": "Hey Sam, ____ no see! How have you been?",
+   "apply_answer": "long time",
+   "apply_translation": "Hola Sam, ¡cuánto tiempo sin vernos! ¿Cómo has estado?",
+   "glossary_word": "long time no see",
+   "glossary_meaning": "cuánto tiempo sin verte",
+   "glossary_ipa": "lɒŋ",
+   "visual_hint": "☕👋"
+  },
+  {
+   "id": "idm-b2cu-keep-in-touch",
+   "kind": "idiom",
+   "text": "Let's keep in touch this time; I'll text you next week.",
+   "translation": "Mantengamos el contacto esta vez; te escribo la próxima semana.",
+   "apply_sentence": "It's hard to ____ with old classmates abroad.",
+   "apply_answer": "keep in touch",
+   "apply_translation": "Es difícil mantener el contacto con antiguos compañeros en el extranjero.",
+   "glossary_word": "lose touch",
+   "glossary_meaning": "perder el contacto",
+   "glossary_ipa": "tʌtʃ",
+   "visual_hint": "📱🤝"
+  }
+ ],
+ "b2-giving-wedding-toast": [
+  {
+   "id": "idm-b2wt-tie-the-knot",
+   "kind": "idiom",
+   "text": "Today my best friend finally decided to tie the knot with Laura.",
+   "translation": "Hoy mi mejor amigo por fin decidió casarse con Laura (casarse).",
+   "apply_sentence": "Our cousins will ____ the knot in June.",
+   "apply_answer": "tie",
+   "apply_translation": "Nuestros primos se casarán en junio.",
+   "glossary_word": "tie the knot",
+   "glossary_meaning": "casarse",
+   "glossary_ipa": "naːt",
+   "visual_hint": "💍🥂"
+  },
+  {
+   "id": "idm-b2wt-raise-glass",
+   "kind": "phrasal_verb",
+   "text": "Please raise your glasses and join me in toasting the happy couple.",
+   "translation": "Por favor levanten sus copas y brinden conmigo por la feliz pareja.",
+   "apply_sentence": "Let's ____ our glasses to a wonderful year ahead.",
+   "apply_answer": "raise",
+   "apply_translation": "Levantemos nuestras copas por un año maravilloso.",
+   "glossary_word": "raise a glass",
+   "glossary_meaning": "brindar",
+   "glossary_ipa": "reɪz",
+   "visual_hint": "🥂💐"
+  }
+ ],
+ "b2-networking-mixer-followup": [
+  {
+   "id": "idm-b2nm-touch-base",
+   "kind": "idiom",
+   "text": "It was great meeting you. Let's touch base next week about it.",
+   "translation": "Fue un gusto conocerte. Hablemos la próxima semana al respecto (ponerse en contacto).",
+   "apply_sentence": "I'll ____ base with the team on Friday.",
+   "apply_answer": "touch",
+   "apply_translation": "Me pondré en contacto con el equipo el viernes.",
+   "glossary_word": "touch base",
+   "glossary_meaning": "ponerse en contacto",
+   "glossary_ipa": "beɪs",
+   "visual_hint": "💼🤝"
+  },
+  {
+   "id": "idm-b2nm-pick-your-brain",
+   "kind": "idiom",
+   "text": "Would you mind if I picked your brain about the industry?",
+   "translation": "¿Te importaría si te hago unas preguntas sobre el sector? (pedir consejo a un experto)",
+   "apply_sentence": "I'd love to ____ your brain about starting a business.",
+   "apply_answer": "pick",
+   "apply_translation": "Me encantaría pedirte consejo sobre cómo iniciar un negocio.",
+   "glossary_word": "pick someone's brain",
+   "glossary_meaning": "consultar a un experto",
+   "glossary_ipa": "breɪn",
+   "visual_hint": "🧠💡"
+  }
+ ],
+ "b2-politely-declining-invitation": [
+  {
+   "id": "idm-b2di-take-rain-check",
+   "kind": "idiom",
+   "text": "I'm afraid I can't make it, but can I take a rain check?",
+   "translation": "Me temo que no puedo ir, pero ¿lo dejamos para otra ocasión? (posponer una invitación)",
+   "apply_sentence": "Dinner tonight is impossible, so let's take a ____ check.",
+   "apply_answer": "rain",
+   "apply_translation": "La cena de hoy es imposible, así que dejémoslo para otro día.",
+   "glossary_word": "take a rain check",
+   "glossary_meaning": "dejar para otra ocasión",
+   "glossary_ipa": "reɪn",
+   "visual_hint": "✉️🌧️"
+  },
+  {
+   "id": "idm-b2di-tied-up",
+   "kind": "idiom",
+   "text": "I'd love to come, but I'm completely tied up that weekend.",
+   "translation": "Me encantaría ir, pero estoy totalmente ocupado ese fin de semana.",
+   "apply_sentence": "Sorry, I'm ____ up at work until late tonight.",
+   "apply_answer": "tied",
+   "apply_translation": "Lo siento, estoy ocupado en el trabajo hasta tarde esta noche.",
+   "glossary_word": "be tied up",
+   "glossary_meaning": "estar muy ocupado",
+   "glossary_ipa": "taɪd",
+   "visual_hint": "🗓️🙏"
+  }
+ ],
+ "b2-resolving-roommate-chores": [
+  {
+   "id": "idm-b2rc-pull-weight",
+   "kind": "idiom",
+   "text": "We all need to pull our weight around the apartment, honestly.",
+   "translation": "Todos debemos hacer nuestra parte en el apartamento, sinceramente (cumplir con lo que toca).",
+   "apply_sentence": "Everyone on the team has to ____ their weight.",
+   "apply_answer": "pull",
+   "apply_translation": "Todos en el equipo deben hacer su parte.",
+   "glossary_word": "pull your weight",
+   "glossary_meaning": "hacer tu parte",
+   "glossary_ipa": "pʊl",
+   "visual_hint": "🧹🏠"
+  },
+  {
+   "id": "idm-b2rc-meet-halfway",
+   "kind": "idiom",
+   "text": "Let's meet halfway: I'll cook, and you'll do the dishes.",
+   "translation": "Lleguemos a un acuerdo: yo cocino y tú lavas los platos (ceder ambos).",
+   "apply_sentence": "Neither of us agreed, so we had to ____ halfway.",
+   "apply_answer": "meet",
+   "apply_translation": "Ninguno estaba de acuerdo, así que tuvimos que llegar a un punto medio.",
+   "glossary_word": "meet halfway",
+   "glossary_meaning": "llegar a un punto medio",
+   "glossary_ipa": "ˈhaːfweɪ",
+   "visual_hint": "🤝⚖️"
+  }
+ ],
+ "c1-cultural-nuances": [
+  {
+   "id": "idm-c1cn-lost-sense",
+   "kind": "idiom",
+   "text": "British humor can be dry, and it often goes over people's heads.",
+   "translation": "El humor británico puede ser seco y a menudo la gente no lo capta (no entenderlo).",
+   "apply_sentence": "The sarcasm in his remark went right ____ her head.",
+   "apply_answer": "over",
+   "apply_translation": "El sarcasmo de su comentario ni lo captó ella.",
+   "glossary_word": "go over someone's head",
+   "glossary_meaning": "no ser captado",
+   "glossary_ipa": "hed",
+   "visual_hint": "🌍😏"
+  },
+  {
+   "id": "idm-c1cn-tongue-in-cheek",
+   "kind": "idiom",
+   "text": "He said it tongue in cheek, so don't take it literally.",
+   "translation": "Lo dijo en broma, así que no lo tomes al pie de la letra (con ironía).",
+   "apply_sentence": "The ad was clearly meant ____ in cheek.",
+   "apply_answer": "tongue",
+   "apply_translation": "El anuncio estaba claramente hecho en broma.",
+   "glossary_word": "tongue in cheek",
+   "glossary_meaning": "en tono irónico",
+   "glossary_ipa": "tʌŋ",
+   "visual_hint": "😜💬"
+  }
+ ],
+ "c1-defusing-awkward-topic": [
+  {
+   "id": "idm-c1da-change-subject",
+   "kind": "idiom",
+   "text": "Why don't we steer clear of politics and talk about the trip instead?",
+   "translation": "¿Por qué no evitamos la política y hablamos mejor del viaje? (mantenerse alejado)",
+   "apply_sentence": "You'd better ____ clear of that topic at dinner.",
+   "apply_answer": "steer",
+   "apply_translation": "Será mejor que evites ese tema en la cena.",
+   "glossary_word": "steer clear of",
+   "glossary_meaning": "evitar",
+   "glossary_ipa": "stɪər",
+   "visual_hint": "🍷🙊"
+  },
+  {
+   "id": "idm-c1da-clear-the-air",
+   "kind": "idiom",
+   "text": "Let's clear the air before dessert so nobody feels uncomfortable.",
+   "translation": "Aclaremos las cosas antes del postre para que nadie se sienta incómodo (eliminar tensión).",
+   "apply_sentence": "After the argument, we sat down to ____ the air.",
+   "apply_answer": "clear",
+   "apply_translation": "Después de la discusión, nos sentamos a aclarar las cosas.",
+   "glossary_word": "clear the air",
+   "glossary_meaning": "disipar tensiones",
+   "glossary_ipa": "eər",
+   "visual_hint": "🌬️🕊️"
+  }
+ ],
+ "c1-mentoring-career-pivot": [
+  {
+   "id": "idm-c1mc-leap-of-faith",
+   "kind": "idiom",
+   "text": "Leaving your job is a leap of faith, but it might pay off.",
+   "translation": "Dejar tu empleo es un salto de fe, pero podría valer la pena (arriesgarse).",
+   "apply_sentence": "Moving abroad alone was a real ____ of faith.",
+   "apply_answer": "leap",
+   "apply_translation": "Mudarse al extranjero solo fue un verdadero salto de fe.",
+   "glossary_word": "leap of faith",
+   "glossary_meaning": "salto de fe",
+   "glossary_ipa": "liːp",
+   "visual_hint": "🪂🧭"
+  },
+  {
+   "id": "idm-c1mc-weigh-up",
+   "kind": "phrasal_verb",
+   "text": "You should weigh up the pros and cons before deciding anything.",
+   "translation": "Deberías sopesar los pros y contras antes de decidir nada (evaluar opciones).",
+   "apply_sentence": "She had to ____ up her options carefully.",
+   "apply_answer": "weigh",
+   "apply_translation": "Tuvo que sopesar cuidadosamente sus opciones.",
+   "glossary_word": "weigh up",
+   "glossary_meaning": "sopesar",
+   "glossary_ipa": "weɪ",
+   "visual_hint": "⚖️💼"
+  }
+ ],
+ "c1-moderating-book-discussion": [
+  {
+   "id": "idm-c1bd-read-between-lines",
+   "kind": "idiom",
+   "text": "If you read between the lines, the narrator is hiding something.",
+   "translation": "Si lees entre líneas, el narrador esconde algo (captar lo implícito).",
+   "apply_sentence": "You have to ____ between the lines to get his point.",
+   "apply_answer": "read",
+   "apply_translation": "Hay que leer entre líneas para entender su punto.",
+   "glossary_word": "read between the lines",
+   "glossary_meaning": "leer entre líneas",
+   "glossary_ipa": "laɪnz",
+   "visual_hint": "📖🔍"
+  },
+  {
+   "id": "idm-c1bd-on-the-same-page",
+   "kind": "idiom",
+   "text": "Before we begin, let's make sure we're all on the same page.",
+   "translation": "Antes de empezar, asegurémonos de que todos estamos de acuerdo (entendemos lo mismo).",
+   "apply_sentence": "I want to be sure we're all on the same ____.",
+   "apply_answer": "page",
+   "apply_translation": "Quiero asegurarme de que todos estamos en la misma sintonía.",
+   "glossary_word": "on the same page",
+   "glossary_meaning": "en sintonía",
+   "glossary_ipa": "peɪdʒ",
+   "visual_hint": "📚🤝"
+  }
+ ],
+ "c1-podcast-guest-banter": [
+  {
+   "id": "idm-c1pg-hit-nail",
+   "kind": "idiom",
+   "text": "You hit the nail on the head with that observation, honestly.",
+   "translation": "Diste justo en el clavo con esa observación (acertar totalmente).",
+   "apply_sentence": "Her comment really ____ the nail on the head.",
+   "apply_answer": "hit",
+   "apply_translation": "Su comentario dio justo en el clavo.",
+   "glossary_word": "hit the nail on the head",
+   "glossary_meaning": "dar en el clavo",
+   "glossary_ipa": "neɪl",
+   "visual_hint": "🎙️🎯"
+  },
+  {
+   "id": "idm-c1pg-take-with-grain",
+   "kind": "idiom",
+   "text": "Take my predictions with a grain of salt; I'm often wrong.",
+   "translation": "Toma mis predicciones con cautela; a menudo me equivoco (con escepticismo).",
+   "apply_sentence": "I take online reviews with a ____ of salt.",
+   "apply_answer": "grain",
+   "apply_translation": "Tomo las reseñas en línea con pinzas.",
+   "glossary_word": "a grain of salt",
+   "glossary_meaning": "con escepticismo",
+   "glossary_ipa": "greɪn",
+   "visual_hint": "🧂😅"
+  }
+ ],
+ "c2-dinner-debate": [
+  {
+   "id": "idm-c2dd-devils-advocate",
+   "kind": "idiom",
+   "text": "Allow me to play devil's advocate for a moment, if I may.",
+   "translation": "Permítame hacer de abogado del diablo un momento, si me lo permite (defender lo contrario).",
+   "apply_sentence": "He loves to play ____ advocate at every dinner.",
+   "apply_answer": "devil's",
+   "apply_translation": "Le encanta hacer de abogado del diablo en cada cena.",
+   "glossary_word": "play devil's advocate",
+   "glossary_meaning": "hacer de abogado del diablo",
+   "glossary_ipa": "ˈdevlz",
+   "visual_hint": "🍷⚖️"
+  },
+  {
+   "id": "idm-c2dd-bite-bullet",
+   "kind": "idiom",
+   "text": "Sooner or later, we'll have to bite the bullet and decide.",
+   "translation": "Tarde o temprano tendremos que apechugar y decidir (aceptar algo difícil).",
+   "apply_sentence": "She decided to ____ the bullet and admit the mistake.",
+   "apply_answer": "bite",
+   "apply_translation": "Decidió apechugar y admitir el error.",
+   "glossary_word": "bite the bullet",
+   "glossary_meaning": "apechugar",
+   "glossary_ipa": "ˈbʊlɪt",
+   "visual_hint": "🔫😬"
+  }
+ ],
+ "c2-eulogy-and-tribute-speech": [
+  {
+   "id": "idm-c2et-stood-test-time",
+   "kind": "idiom",
+   "text": "Her work has stood the test of time, long after the applause.",
+   "translation": "Su obra ha resistido el paso del tiempo, mucho después de los aplausos.",
+   "apply_sentence": "Great novels always stand the ____ of time.",
+   "apply_answer": "test",
+   "apply_translation": "Las grandes novelas siempre resisten el paso del tiempo.",
+   "glossary_word": "stand the test of time",
+   "glossary_meaning": "resistir el paso del tiempo",
+   "glossary_ipa": "test",
+   "visual_hint": "🏆⏳"
+  },
+  {
+   "id": "idm-c2et-leave-mark",
+   "kind": "idiom",
+   "text": "She leaves behind a legacy that will be hard to follow.",
+   "translation": "Deja un legado que será difícil de igualar (difícil de superar).",
+   "apply_sentence": "Following such a predecessor is a ____ act to follow.",
+   "apply_answer": "hard",
+   "apply_translation": "Seguir a tal predecesor es un acto difícil de igualar.",
+   "glossary_word": "a hard act to follow",
+   "glossary_meaning": "difícil de igualar",
+   "glossary_ipa": "ˈlegəsi",
+   "visual_hint": "🕯️🌹"
+  }
+ ],
+ "c2-philosophical-ethics-salon": [
+  {
+   "id": "idm-c2pe-moot-point",
+   "kind": "idiom",
+   "text": "Whether he was truly free is, I'd argue, a moot point.",
+   "translation": "Si de verdad era libre es, diría yo, una cuestión discutible (sin relevancia práctica).",
+   "apply_sentence": "Whether it rains is a ____ point now; we've cancelled.",
+   "apply_answer": "moot",
+   "apply_translation": "Si llueve es un asunto irrelevante ahora; lo cancelamos.",
+   "glossary_word": "a moot point",
+   "glossary_meaning": "un punto discutible",
+   "glossary_ipa": "muːt",
+   "visual_hint": "🧠🤔"
+  },
+  {
+   "id": "idm-c2pe-split-hairs",
+   "kind": "idiom",
+   "text": "Some will say we are splitting hairs, but the distinction matters.",
+   "translation": "Algunos dirán que nos ponemos quisquillosos, pero la distinción importa (exceso de detalle).",
+   "apply_sentence": "Let's not ____ hairs over a single word.",
+   "apply_answer": "split",
+   "apply_translation": "No nos pongamos quisquillosos por una sola palabra.",
+   "glossary_word": "split hairs",
+   "glossary_meaning": "buscarle tres pies al gato",
+   "glossary_ipa": "heəz",
+   "visual_hint": "✂️💭"
+  }
+ ],
+ "c2-satire-and-media-literacy": [
+  {
+   "id": "idm-c2sm-tip-iceberg",
+   "kind": "idiom",
+   "text": "That headline is just the tip of the iceberg, believe me.",
+   "translation": "Ese titular es solo la punta del iceberg, créeme (una pequeña parte visible).",
+   "apply_sentence": "The scandal was only the ____ of the iceberg.",
+   "apply_answer": "tip",
+   "apply_translation": "El escándalo era solo la punta del iceberg.",
+   "glossary_word": "the tip of the iceberg",
+   "glossary_meaning": "la punta del iceberg",
+   "glossary_ipa": "ˈaɪsbɜːg",
+   "visual_hint": "📰🧊"
+  },
+  {
+   "id": "idm-c2sm-spin",
+   "kind": "idiom",
+   "text": "Politicians always put a spin on the facts to suit them.",
+   "translation": "Los políticos siempre le dan un giro a los hechos para su conveniencia (manipular el relato).",
+   "apply_sentence": "The company tried to put a positive ____ on the loss.",
+   "apply_answer": "spin",
+   "apply_translation": "La empresa intentó darle un giro positivo a la pérdida.",
+   "glossary_word": "put a spin on",
+   "glossary_meaning": "manipular la presentación",
+   "glossary_ipa": "spɪn",
+   "visual_hint": "📺🌀"
+  }
+ ],
+ "c2-urban-gentrification-panel": [
+  {
+   "id": "idm-c2ug-priced-out",
+   "kind": "phrasal_verb",
+   "text": "Long-term residents are being priced out of their own neighborhoods.",
+   "translation": "Los residentes de toda la vida están siendo expulsados de sus barrios por los precios.",
+   "apply_sentence": "Young families are being ____ out of the city centre.",
+   "apply_answer": "priced",
+   "apply_translation": "Las familias jóvenes están siendo expulsadas del centro por los precios.",
+   "glossary_word": "priced out",
+   "glossary_meaning": "expulsado por precios",
+   "glossary_ipa": "praɪst",
+   "visual_hint": "🏙️💸"
+  },
+  {
+   "id": "idm-c2ug-double-edged",
+   "kind": "idiom",
+   "text": "Urban renewal is a double-edged sword for working-class communities.",
+   "translation": "La renovación urbana es un arma de doble filo para las comunidades obreras (con pros y contras).",
+   "apply_sentence": "Fame can be a double-edged ____ for young artists.",
+   "apply_answer": "sword",
+   "apply_translation": "La fama puede ser un arma de doble filo para jóvenes artistas.",
+   "glossary_word": "double-edged sword",
+   "glossary_meaning": "arma de doble filo",
+   "glossary_ipa": "sɔːd",
+   "visual_hint": "🏘️⚔️"
+  }
+ ]
+}

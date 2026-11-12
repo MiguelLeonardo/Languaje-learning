@@ -78,6 +78,38 @@ phrases:
   - word: precede
     meaning: preceder / ir antes de
     ipa: prɪˈsiːd
+- id: mobility-double-edged-sword
+  text: Autonomous transit is a double-edged sword for suburban commuters.
+  translation: El transporte autónomo es un arma de doble filo para los viajeros suburbanos. (double-edged sword
+    = con ventajas y riesgos)
+  visual_hint: ⚔️🚗
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: double-edged sword
+    meaning: arma de doble filo
+    ipa: ˈdʌbl edʒd sɔːd
+  kind: idiom
+  apply_sentence: Dynamic curbside pricing can be a ____ for local shops.
+  apply_answer: double-edged sword
+  apply_translation: El precio dinámico de la acera puede ser un arma de doble filo para los comercios locales.
+- id: mobility-kick-the-can
+  text: Cities keep kicking the can down the road on congestion pricing.
+  translation: Las ciudades siguen posponiendo el problema del cobro por congestión. (kick the can down the road
+    = aplazar un problema)
+  visual_hint: 🥫🛣️
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: kicking the can down the road
+    meaning: posponer un problema
+    ipa: kɪk ðə kæn daʊn ðə rəʊd
+  kind: idiom
+  apply_sentence: We can't keep ____ on safety audits any longer.
+  apply_answer: kicking the can down the road
+  apply_translation: No podemos seguir posponiendo el problema de las auditorías de seguridad por más tiempo.
 roleplay:
   ai_role: urban transport commissioner
   user_role: mobility researcher

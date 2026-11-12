@@ -73,6 +73,37 @@ phrases:
   - word: bulletin
     meaning: boletín / reporte
     ipa: ˈbʊlətɪn
+- id: marina-show-the-ropes
+  text: The harbor master will show us the ropes at the marina.
+  translation: El capitán de puerto nos enseñará cómo funcionan las cosas en la marina. (show the ropes = enseñar
+    lo básico)
+  visual_hint: ⚓🪢
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: show the ropes
+    meaning: enseñar cómo funciona algo
+    ipa: ʃəʊ ðə rəʊps
+  kind: idiom
+  apply_sentence: A veteran skipper showed the new crew ____ on the docks.
+  apply_answer: the ropes
+  apply_translation: Un capitán veterano enseñó a la nueva tripulación cómo funcionaba todo en los muelles.
+- id: marina-smooth-sailing
+  text: Once the paperwork is posted, it should be smooth sailing.
+  translation: Una vez publicados los documentos, todo debería ir sobre ruedas. (smooth sailing = sin dificultades)
+  visual_hint: ⛵😌
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: smooth sailing
+    meaning: sin complicaciones
+    ipa: smuːð ˈseɪlɪŋ
+  kind: idiom
+  apply_sentence: After customs, the rest of the trip was ____.
+  apply_answer: smooth sailing
+  apply_translation: Después de la aduana, el resto del viaje fue sobre ruedas.
 roleplay:
   ai_role: harbormaster
   user_role: vessel captain

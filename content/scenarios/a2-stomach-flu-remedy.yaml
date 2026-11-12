@@ -71,6 +71,36 @@ phrases:
   - word: improve
     meaning: mejorar
     ipa: ɪmˈpruːv
+- id: idm-feel-like-a2
+  text: I don't feel like eating anything today.
+  translation: Hoy no tengo ganas de comer nada. (feel like = tener ganas de)
+  visual_hint: 🤢🍽️
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: feel like
+    meaning: tener ganas de
+    ipa: fiːl laɪk
+  kind: idiom
+  apply_sentence: Do you ____ going out tonight?
+  apply_answer: feel like
+  apply_translation: ¿Tienes ganas de salir esta noche?
+- id: idm-throw-up-a2
+  text: I feel sick and I might throw up.
+  translation: Me siento mal y podría vomitar. (throw up = vomitar)
+  visual_hint: 🤮🚤
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: throw up
+    meaning: vomitar
+    ipa: θrəʊ ʌp
+  kind: phrasal_verb
+  apply_sentence: The boat moved so much that I thought I would ____.
+  apply_answer: throw up
+  apply_translation: El barco se movía tanto que pensé que vomitaría.
 roleplay:
   ai_role: pharmacist
   user_role: traveler

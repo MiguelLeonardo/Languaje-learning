@@ -71,6 +71,36 @@ phrases:
   - word: contactless
     meaning: sin contacto
     ipa: ˈkɑːntæktləs
+- id: my-treat
+  text: It's my treat, so order whatever you like.
+  translation: 'Invito yo, así que pide lo que quieras. (my treat: yo invito)'
+  visual_hint: 🍺🤝
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: my treat
+    meaning: 'my treat: yo invito'
+    ipa: triːt
+  kind: expression
+  apply_sentence: Dinner tonight is ____ because you paid last time.
+  apply_answer: my treat
+  apply_translation: La cena de esta noche va por mi cuenta porque tú pagaste la última vez.
+- id: on-the-house
+  text: The waiter said the ginger beer was on the house.
+  translation: 'El camarero dijo que la cerveza de jengibre era cortesía de la casa. (on the house: gratis)'
+  visual_hint: 🍹🎁
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: on the house
+    meaning: 'on the house: gratis, invita la casa'
+    ipa: haʊs
+  kind: idiom
+  apply_sentence: Because we waited long, dessert was ____.
+  apply_answer: on the house
+  apply_translation: Como esperamos mucho, el postre fue cortesía de la casa.
 roleplay:
   ai_role: bartender
   user_role: visitor

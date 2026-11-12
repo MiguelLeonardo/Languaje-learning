@@ -71,6 +71,36 @@ phrases:
   - word: own
     meaning: propia
     ipa: oʊn
+- id: a-bunch-of
+  text: I would like a bunch of ripe bananas, please.
+  translation: 'Quisiera un racimo de plátanos maduros, por favor. (a bunch of: un manojo/racimo de)'
+  visual_hint: 🍌🛒
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: a bunch of
+    meaning: 'a bunch of: un manojo de'
+    ipa: bʌntʃ
+  kind: expression
+  apply_sentence: She gave me ____ flowers for my birthday.
+  apply_answer: a bunch of
+  apply_translation: Ella me dio un ramo de flores por mi cumpleaños.
+- id: have-a-look
+  text: Can I have a look at those sweet oranges?
+  translation: '¿Puedo echar un vistazo a esas naranjas dulces? (have a look: echar un vistazo)'
+  visual_hint: 🍊👀
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: have a look
+    meaning: 'have a look: echar un vistazo'
+    ipa: lʊk
+  kind: expression
+  apply_sentence: Let me ____ at your photos from the trip.
+  apply_answer: have a look
+  apply_translation: Déjame echar un vistazo a tus fotos del viaje.
 roleplay:
   ai_role: vendor
   user_role: shopper

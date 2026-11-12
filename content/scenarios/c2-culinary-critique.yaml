@@ -101,6 +101,36 @@ phrases:
   - word: bridging
     meaning: tendiendo un puente / uniendo
     ipa: ˈbrɪdʒɪŋ
+- id: less-is-more
+  text: In plating, less is more; he understood that perfectly.
+  translation: 'En el emplatado, menos es más; él lo entendió perfectamente. (less is more: la sencillez es mejor)'
+  visual_hint: 🍽️✨
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: less is more
+    meaning: 'less is more: menos es más'
+    ipa: les
+  kind: idiom
+  apply_sentence: With minimalist design, ____, as the architect says.
+  apply_answer: less is more
+  apply_translation: En el diseño minimalista, menos es más, como dice el arquitecto.
+- id: damn-with-faint-praise
+  text: Calling it 'competent' is to damn with faint praise.
+  translation: Llamarlo 'competente' es condenar con un elogio tibio. (damn with faint praise)
+  visual_hint: 📝😏
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: damn with faint praise
+    meaning: 'damn with faint praise: elogiar tan poco que es crítica'
+    ipa: feɪnt
+  kind: idiom
+  apply_sentence: To call her debut 'adequate' is to ____.
+  apply_answer: damn with faint praise
+  apply_translation: Llamar 'adecuado' a su debut es condenarlo con un elogio tibio.
 roleplay:
   ai_role: executive chef
   user_role: culinary critic

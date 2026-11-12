@@ -99,6 +99,36 @@ phrases:
   - word: released
     meaning: liberado
     ipa: rɪˈliːst
+- id: rental-fine-print
+  text: I should have read the fine print before I signed the contract.
+  translation: Debí haber leído la letra pequeña antes de firmar el contrato. (fine print = detalles del contrato)
+  visual_hint: 📄🔍
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: the fine print
+    meaning: la letra pequeña
+    ipa: faɪn prɪnt
+  kind: idiom
+  apply_sentence: Always read the ____ when you book a cheap flight.
+  apply_answer: fine print
+  apply_translation: Siempre lee la letra pequeña cuando reserves un vuelo barato.
+- id: rental-rip-off
+  text: This extra fee is a rip off, and I won't pay it.
+  translation: Esta tarifa extra es un robo, y no la voy a pagar. (rip off = estafa)
+  visual_hint: 💸🚗
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: rip off
+    meaning: estafa, cobro excesivo
+    ipa: rɪp ɒf
+  kind: idiom
+  apply_sentence: Charging forty euros for a sandwich at the airport is a ____.
+  apply_answer: rip off
+  apply_translation: Cobrar cuarenta euros por un sándwich en el aeropuerto es un robo.
 roleplay:
   ai_role: rental return agent
   user_role: traveler

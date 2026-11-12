@@ -85,6 +85,36 @@ phrases:
   - word: hiking
     meaning: senderismo / caminata
     ipa: ˈhaɪkɪŋ
+- id: idm-a2mp-hang-out
+  text: In my free time I like to hang out with friends.
+  translation: En mi tiempo libre me gusta pasar el rato con amigos (salir con amigos).
+  visual_hint: 👯☕
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: hang out
+    meaning: pasar el rato
+    ipa: hæŋ
+  kind: phrasal_verb
+  apply_sentence: We usually ____ at the mall on Saturdays.
+  apply_answer: hang out
+  apply_translation: Normalmente pasamos el rato en el centro comercial los sábados.
+- id: idm-a2mp-into
+  text: I'm really into photography and I take pictures every day.
+  translation: Me gusta mucho la fotografía y tomo fotos todos los días (ser aficionado).
+  visual_hint: 📷❤️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: be into
+    meaning: estar aficionado a
+    ipa: ˈɪntuː
+  kind: expression
+  apply_sentence: My sister is really ____ jazz music these days.
+  apply_answer: into
+  apply_translation: A mi hermana le apasiona mucho el jazz estos días.
 roleplay:
   ai_role: new neighbor
   user_role: resident

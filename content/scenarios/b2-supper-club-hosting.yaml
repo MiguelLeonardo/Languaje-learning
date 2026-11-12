@@ -72,6 +72,36 @@ phrases:
   - word: raise a glass
     meaning: brindar / alzar la copa
     ipa: reɪz ə ɡlæs
+- id: dig-in
+  text: Everyone, dig in before the lamb gets cold!
+  translation: '¡Todos, a comer antes de que el cordero se enfríe! (dig in: empezar a comer)'
+  visual_hint: 🍖🍴
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: dig in
+    meaning: 'dig in: ponerse a comer'
+    ipa: dɪɡ
+  kind: phrasal_verb
+  apply_sentence: Don't wait for me, just ____ while it's hot.
+  apply_answer: dig in
+  apply_translation: No me esperes, empieza a comer mientras está caliente.
+- id: the-icing-on-the-cake
+  text: The citrus tart was the icing on the cake.
+  translation: 'La tarta de cítricos fue la guinda del pastel. (the icing on the cake: la guinda)'
+  visual_hint: 🍰🎂
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: the icing on the cake
+    meaning: 'the icing on the cake: la guinda'
+    ipa: ˈaɪsɪŋ
+  kind: idiom
+  apply_sentence: Getting a free ticket was ____ for him.
+  apply_answer: the icing on the cake
+  apply_translation: Conseguir una entrada gratis fue la guinda del pastel para él.
 roleplay:
   ai_role: guest (Elena)
   user_role: dinner host

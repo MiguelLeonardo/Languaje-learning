@@ -87,6 +87,36 @@ phrases:
   - word: supervisor
     meaning: supervisor / encargado
     ipa: ˈsuːpərvaɪzər
+- id: idm-back-up-claim
+  text: I took unboxing photos to back up my claim that the mug arrived cracked.
+  translation: Tomé fotos al abrir la caja para respaldar mi reclamo de que la taza llegó agrietada.
+  visual_hint: 📦📸
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: back up
+    meaning: respaldar / apoyar con pruebas
+    ipa: bæk ʌp
+  kind: phrasal_verb
+  apply_sentence: Having the shipping video will ____ your request for a full refund.
+  apply_answer: back up
+  apply_translation: Tener el video del envío respaldará tu solicitud de reembolso total.
+- id: idm-meet-halfway
+  text: If a full refund isn't possible, could you meet me halfway with store credit?
+  translation: Si no es posible un reembolso completo, ¿podríamos llegar a un punto medio con crédito en tienda?
+  visual_hint: 🤝💳
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: meet halfway
+    meaning: llegar a un punto medio / ceder ambos
+    ipa: miːt ˌhæfˈweɪ
+  kind: idiom
+  apply_sentence: Both the buyer and seller agreed to ____ to resolve the dispute quickly.
+  apply_answer: meet halfway
+  apply_translation: Tanto el comprador como el vendedor acordaron llegar a un punto medio para resolver rápido.
 roleplay:
   ai_role: store supervisor
   user_role: customer

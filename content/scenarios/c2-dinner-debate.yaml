@@ -99,6 +99,36 @@ phrases:
   - word: empirical
     meaning: empírica
     ipa: ɪmˈpɪrɪkəl
+- id: idm-c2dd-devils-advocate
+  text: Allow me to play devil's advocate for a moment, if I may.
+  translation: Permítame hacer de abogado del diablo un momento, si me lo permite (defender lo contrario).
+  visual_hint: 🍷⚖️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: play devil's advocate
+    meaning: hacer de abogado del diablo
+    ipa: ˈdevlz
+  kind: idiom
+  apply_sentence: He loves to play ____ advocate at every dinner.
+  apply_answer: devil's
+  apply_translation: Le encanta hacer de abogado del diablo en cada cena.
+- id: idm-c2dd-bite-bullet
+  text: Sooner or later, we'll have to bite the bullet and decide.
+  translation: Tarde o temprano tendremos que apechugar y decidir (aceptar algo difícil).
+  visual_hint: 🔫😬
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: bite the bullet
+    meaning: apechugar
+    ipa: ˈbʊlɪt
+  kind: idiom
+  apply_sentence: She decided to ____ the bullet and admit the mistake.
+  apply_answer: bite
+  apply_translation: Decidió apechugar y admitir el error.
 roleplay:
   ai_role: opinionated dinner guest
   user_role: fellow guest

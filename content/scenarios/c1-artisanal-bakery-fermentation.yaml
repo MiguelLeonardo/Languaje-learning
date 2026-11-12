@@ -71,6 +71,36 @@ phrases:
   - word: boule
     meaning: hogaza redonda
     ipa: buːl
+- id: bread-and-butter
+  text: That crusty country loaf is our bread and butter.
+  translation: 'Esa hogaza rústica es nuestro sustento principal. (bread and butter: sustento básico)'
+  visual_hint: 🍞🧈
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: bread and butter
+    meaning: 'bread and butter: sustento principal'
+    ipa: bred
+  kind: idiom
+  apply_sentence: Teaching is my ____, but I also write.
+  apply_answer: bread and butter
+  apply_translation: Enseñar es mi sustento principal, pero también escribo.
+- id: good-things-come-to-those-who-wait
+  text: Good things come to those who wait, especially with sourdough.
+  translation: Lo bueno se hace esperar, sobre todo con la masa madre. (good things come to those who wait)
+  visual_hint: ⏳🥖
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: good things come to those who wait
+    meaning: 'good things come to those who wait: paciencia'
+    ipa: weɪt
+  kind: idiom
+  apply_sentence: Don't rush; ____, after all.
+  apply_answer: good things come to those who wait
+  apply_translation: No te apresures; al fin y al cabo, lo bueno llega a quien sabe esperar.
 roleplay:
   ai_role: master baker
   user_role: bread baker

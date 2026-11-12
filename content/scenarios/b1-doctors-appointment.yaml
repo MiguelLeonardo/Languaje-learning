@@ -88,6 +88,36 @@ phrases:
   - word: rest
     meaning: descansar
     ipa: rest
+- id: idm-fit-me-in-b1
+  text: Could you fit me in this afternoon, please?
+  translation: ¿Podría hacerme un hueco esta tarde, por favor? (fit in = encajar en la agenda)
+  visual_hint: 🩺🗓️
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: fit me in
+    meaning: hacer un hueco
+    ipa: fɪt miː ɪn
+  kind: phrasal_verb
+  apply_sentence: The dentist can ____ before lunch.
+  apply_answer: fit me in
+  apply_translation: El dentista puede hacerme un hueco antes del almuerzo.
+- id: idm-go-away-b1
+  text: The pain just won't go away, even with medicine.
+  translation: El dolor simplemente no se va, ni con medicina. (go away = desaparecer)
+  visual_hint: 😣💊
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: go away
+    meaning: desaparecer
+    ipa: ɡəʊ əˈweɪ
+  kind: phrasal_verb
+  apply_sentence: I hope this rain will ____ before the picnic.
+  apply_answer: go away
+  apply_translation: Espero que esta lluvia desaparezca antes del picnic.
 roleplay:
   ai_role: urgent care doctor
   user_role: patient

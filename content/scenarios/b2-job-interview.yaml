@@ -96,6 +96,36 @@ phrases:
   - word: role
     meaning: puesto / rol
     ipa: roʊl
+- id: idm-break-the-ice
+  text: Let me break the ice by saying I love your office.
+  translation: 'Déjame romper el hielo diciendo que me encanta tu oficina. (break the ice: aliviar la tensión)'
+  visual_hint: 🧊😄
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: break the ice
+    meaning: romper el hielo
+    ipa: breɪk ði aɪs
+  kind: idiom
+  apply_sentence: A quick joke helped ____ at the start of the panel.
+  apply_answer: break the ice
+  apply_translation: Un chiste rápido ayudó a romper el hielo al inicio del panel.
+- id: idm-hit-the-ground-running
+  text: I'm ready to hit the ground running if you hire me.
+  translation: 'Estoy listo para empezar a toda marcha si me contratan. (hit the ground running: empezar con energía)'
+  visual_hint: 🏃💼
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: hit the ground running
+    meaning: empezar con fuerza
+    ipa: hɪt ðə ɡraʊnd ˈrʌnɪŋ
+  kind: idiom
+  apply_sentence: The new director wanted to ____ during her first week.
+  apply_answer: hit the ground running
+  apply_translation: La nueva directora quería empezar a toda marcha durante su primera semana.
 roleplay:
   ai_role: hiring manager
   user_role: candidate

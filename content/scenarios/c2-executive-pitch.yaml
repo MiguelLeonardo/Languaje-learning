@@ -93,6 +93,36 @@ phrases:
   - word: rollout
     meaning: despliegue / lanzamiento
     ipa: ˈroʊlaʊt
+- id: idm-bite-the-bullet
+  text: It's time to bite the bullet and fund the migration.
+  translation: 'Es hora de armarse de valor y financiar la migración. (bite the bullet: afrontar algo difícil)'
+  visual_hint: 🔫😬
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: bite the bullet
+    meaning: afrontar lo difícil
+    ipa: baɪt ðə ˈbʊlɪt
+  kind: idiom
+  apply_sentence: The board finally decided to ____ and cut costs.
+  apply_answer: bite the bullet
+  apply_translation: La junta por fin decidió armarse de valor y recortar costes.
+- id: idm-move-the-needle
+  text: Small tweaks won't move the needle on our margins.
+  translation: 'Pequeños ajustes no cambiarán de forma notable nuestros márgenes. (move the needle: marcar diferencia)'
+  visual_hint: 📊🪡
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: move the needle
+    meaning: marcar una diferencia real
+    ipa: muːv ðə ˈniːdəl
+  kind: idiom
+  apply_sentence: Only a bold strategy can ____ on market share.
+  apply_answer: move the needle
+  apply_translation: Solo una estrategia audaz puede marcar la diferencia en la cuota de mercado.
 roleplay:
   ai_role: chief financial officer
   user_role: product director

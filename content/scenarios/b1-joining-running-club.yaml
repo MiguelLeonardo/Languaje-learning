@@ -71,6 +71,36 @@ phrases:
   - word: fly by
     meaning: pasar volando (el tiempo)
     ipa: flaɪ baɪ
+- id: idm-b1rc-warm-up
+  text: We always warm up for ten minutes before we start running.
+  translation: Siempre calentamos diez minutos antes de empezar a correr (preparar el cuerpo).
+  visual_hint: 🏃‍♀️🔥
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: warm up
+    meaning: calentar
+    ipa: wɔːm
+  kind: phrasal_verb
+  apply_sentence: You should ____ before you play football.
+  apply_answer: warm up
+  apply_translation: Deberías calentar antes de jugar al fútbol.
+- id: idm-b1rc-first-things
+  text: Don't worry, you'll get the hang of it in a few weeks.
+  translation: No te preocupes, le agarrarás el truco en unas semanas (aprender a hacerlo).
+  visual_hint: 👟📈
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: get the hang of it
+    meaning: agarrar el truco
+    ipa: hæŋ
+  kind: idiom
+  apply_sentence: It took me days to ____ of this new phone.
+  apply_answer: get the hang
+  apply_translation: Me tomó días agarrarle el truco a este teléfono nuevo.
 roleplay:
   ai_role: run club pacer
   user_role: new runner

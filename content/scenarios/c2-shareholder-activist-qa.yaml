@@ -82,6 +82,36 @@ phrases:
   - word: intrinsic value
     meaning: valor intrínseco fundamental
     ipa: ɪnˈtrɪnzɪk ˈvæljuː
+- id: idm-beat-around-the-bush
+  text: 'I won''t beat around the bush: our margins did decline.'
+  translation: 'No me andaré con rodeos: nuestros márgenes sí bajaron. (beat around the bush: andarse con rodeos)'
+  visual_hint: 🌳🗣️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: beat around the bush
+    meaning: andarse por las ramas
+    ipa: biːt əˈraʊnd ðə bʊʃ
+  kind: idiom
+  apply_sentence: Please don't ____ and tell us what really happened.
+  apply_answer: beat around the bush
+  apply_translation: Deja de andarte con rodeos y dinos qué pasó realmente.
+- id: idm-bottom-line
+  text: Ultimately, the bottom line is that shareholder value is growing.
+  translation: 'En definitiva, lo esencial es que el valor para el accionista crece. (bottom line: lo fundamental)'
+  visual_hint: 💰🎯
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: the bottom line
+    meaning: lo esencial
+    ipa: ˈbɑːtəm laɪn
+  kind: idiom
+  apply_sentence: Whatever the plan, the ____ is profit this year.
+  apply_answer: bottom line
+  apply_translation: Sea cual sea el plan, lo fundamental es el beneficio este año.
 roleplay:
   ai_role: institutional shareholder
   user_role: chief executive officer

@@ -76,6 +76,36 @@ phrases:
   - word: thoroughly
     meaning: a fondo / exhaustivamente
     ipa: ˈθɜːroʊli
+- id: idm-read-between-the-lines-c2
+  text: Patients must learn to read between the lines of consent forms.
+  translation: Los pacientes deben aprender a leer entre líneas en los consentimientos. (read between the lines)
+  visual_hint: 📜🧐
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: read between the lines
+    meaning: leer entre líneas
+    ipa: laɪnz
+  kind: idiom
+  apply_sentence: She can ____ in his polite emails.
+  apply_answer: read between the lines
+  apply_translation: Ella sabe leer entre líneas en sus correos educados.
+- id: idm-the-devil-is-in-the-details-c2
+  text: With consent forms, the devil is in the details.
+  translation: En los consentimientos, el diablo está en los detalles. (the devil is in the details)
+  visual_hint: 😈🔬
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: the devil is in the details
+    meaning: la dificultad está en los detalles
+    ipa: ˈdetelz
+  kind: idiom
+  apply_sentence: The plan sounds simple, but ____.
+  apply_answer: the devil is in the details
+  apply_translation: El plan parece simple, pero el diablo está en los detalles.
 roleplay:
   ai_role: principal investigator
   user_role: prospective participant

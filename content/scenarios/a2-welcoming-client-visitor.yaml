@@ -71,6 +71,36 @@ phrases:
   - word: the rest of
     meaning: el resto de
     ipa: ðə rest əv
+- id: idm-make-yourself-at-home
+  text: Please come in and make yourself at home.
+  translation: 'Pase, por favor, y siéntase como en casa. (make yourself at home: sentirse cómodo)'
+  visual_hint: 🏠🤝
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: make yourself at home
+    meaning: sentirse como en casa
+    ipa: meɪk jɔːrˈsɛlf æt hoʊm
+  kind: idiom
+  apply_sentence: Take a seat and ____ while I get some water.
+  apply_answer: make yourself at home
+  apply_translation: Siéntese y póngase cómodo mientras traigo agua.
+- id: idm-show-around
+  text: I can show you around our office before the meeting.
+  translation: 'Puedo enseñarle nuestra oficina antes de la reunión. (show around: hacer un recorrido)'
+  visual_hint: 🏢🚶
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: show around
+    meaning: hacer un recorrido
+    ipa: ʃoʊ əˈraʊnd
+  kind: phrasal_verb
+  apply_sentence: Sam will show the new interns ____ this afternoon.
+  apply_answer: around
+  apply_translation: Sam enseñará las instalaciones a los nuevos becarios esta tarde.
 roleplay:
   ai_role: visiting client (Ms. Chen)
   user_role: account coordinator

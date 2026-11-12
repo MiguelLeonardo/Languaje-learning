@@ -72,6 +72,36 @@ phrases:
   - word: sounding board
     meaning: interlocutor de confianza para rebotar ideas
     ipa: ˈsaʊndɪŋ bɔːrd
+- id: idm-c1mc-leap-of-faith
+  text: Leaving your job is a leap of faith, but it might pay off.
+  translation: Dejar tu empleo es un salto de fe, pero podría valer la pena (arriesgarse).
+  visual_hint: 🪂🧭
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: leap of faith
+    meaning: salto de fe
+    ipa: liːp
+  kind: idiom
+  apply_sentence: Moving abroad alone was a real ____ of faith.
+  apply_answer: leap
+  apply_translation: Mudarse al extranjero solo fue un verdadero salto de fe.
+- id: idm-c1mc-weigh-up
+  text: You should weigh up the pros and cons before deciding anything.
+  translation: Deberías sopesar los pros y contras antes de decidir nada (evaluar opciones).
+  visual_hint: ⚖️💼
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: weigh up
+    meaning: sopesar
+    ipa: weɪ
+  kind: phrasal_verb
+  apply_sentence: She had to ____ up her options carefully.
+  apply_answer: weigh
+  apply_translation: Tuvo que sopesar cuidadosamente sus opciones.
 roleplay:
   ai_role: close friend (Dani)
   user_role: supportive mentor

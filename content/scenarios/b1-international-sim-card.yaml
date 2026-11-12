@@ -71,6 +71,36 @@ phrases:
   - word: avoid
     meaning: evitar
     ipa: əˈvɔɪd
+- id: sim-set-up
+  text: Can you help me set up the eSIM on my phone?
+  translation: ¿Puedes ayudarme a configurar la eSIM en mi teléfono? (set up = configurar)
+  visual_hint: 📱⚙️
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: set up
+    meaning: configurar, organizar
+    ipa: set ʌp
+  kind: phrasal_verb
+  apply_sentence: The hotel will ____ a taxi for you tomorrow morning.
+  apply_answer: set up
+  apply_translation: El hotel te organizará un taxi mañana por la mañana.
+- id: sim-keep-in-touch
+  text: I want to keep in touch with my family using WhatsApp.
+  translation: Quiero mantenerme en contacto con mi familia usando WhatsApp. (keep in touch = mantener contacto)
+  visual_hint: 💬🌍
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: keep in touch
+    meaning: mantenerse en contacto
+    ipa: kiːp ɪn tʌtʃ
+  kind: idiom
+  apply_sentence: Let's ____ while you are traveling around Asia.
+  apply_answer: keep in touch
+  apply_translation: Mantengámonos en contacto mientras viajas por Asia.
 roleplay:
   ai_role: telecom kiosk agent
   user_role: traveler

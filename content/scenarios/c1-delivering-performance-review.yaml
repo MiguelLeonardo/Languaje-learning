@@ -80,6 +80,36 @@ phrases:
   - word: more than ready
     meaning: más que preparado
     ipa: mɔːr ðæn ˈredi
+- id: idm-room-for-improvement
+  text: There is still room for improvement in how you delegate tasks.
+  translation: 'Todavía hay margen de mejora en cómo delegas tareas. (room for improvement: se puede mejorar)'
+  visual_hint: 📈🔍
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: room for improvement
+    meaning: margen de mejora
+    ipa: ruːm fɔːr ɪmˈpruːvmənt
+  kind: expression
+  apply_sentence: Your writing is solid, but there is ____ in the structure.
+  apply_answer: room for improvement
+  apply_translation: Tu redacción es sólida, pero hay margen de mejora en la estructura.
+- id: idm-sugarcoat
+  text: 'I won''t sugarcoat it: the last two deadlines slipped badly.'
+  translation: 'No voy a endulzarlo: los dos últimos plazos se retrasaron mucho. (sugarcoat: suavizar la verdad)'
+  visual_hint: 🍬🙊
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: sugarcoat
+    meaning: endulzar la verdad
+    ipa: ˈʃʊɡərkoʊt
+  kind: idiom
+  apply_sentence: Our mentor never tried to ____ the bad news for us.
+  apply_answer: sugarcoat
+  apply_translation: Nuestro mentor nunca intentó endulzarnos las malas noticias.
 roleplay:
   ai_role: senior engineer (Alex)
   user_role: engineering manager

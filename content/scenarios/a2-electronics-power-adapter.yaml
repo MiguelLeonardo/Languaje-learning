@@ -71,6 +71,36 @@ phrases:
   - word: pouch
     meaning: estuche / bolsita
     ipa: paʊtʃ
+- id: idm-run-out-of
+  text: My phone is about to run out of battery before my flight.
+  translation: Mi teléfono está a punto de quedarse sin batería antes de mi vuelo.
+  visual_hint: 🔋⚠️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: run out of
+    meaning: quedarse sin
+    ipa: rʌn aʊt ʌv
+  kind: phrasal_verb
+  apply_sentence: We always carry a power bank so we never ____ charge.
+  apply_answer: run out of
+  apply_translation: Siempre llevamos una batería portátil para nunca quedarnos sin carga.
+- id: idm-worth-every-penny
+  text: This sturdy travel adapter is a bit pricey, but it's worth every penny.
+  translation: Este adaptador de viaje resistente es un poco caro, pero vale cada centavo.
+  visual_hint: 🔌💎
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: worth every penny
+    meaning: valer cada centavo
+    ipa: wɜːrθ ˈevri ˈpeni
+  kind: idiom
+  apply_sentence: Buying a fast charger at the airport was ____.
+  apply_answer: worth every penny
+  apply_translation: Comprar un cargador rápido en el aeropuerto valió cada centavo.
 roleplay:
   ai_role: electronics clerk
   user_role: traveler

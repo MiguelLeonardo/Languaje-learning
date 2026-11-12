@@ -71,6 +71,36 @@ phrases:
   - word: suspect
     meaning: sospechar
     ipa: səˈspekt
+- id: idm-a2bc-page-turner
+  text: This novel is a real page-turner. I read it in two days.
+  translation: Esta novela es muy absorbente; la leí en dos días (libro que engancha).
+  visual_hint: 📖🔥
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: page-turner
+    meaning: libro que engancha
+    ipa: peɪdʒ
+  kind: idiom
+  apply_sentence: The detective story was a real ____ for me.
+  apply_answer: page-turner
+  apply_translation: La historia de detectives fue muy absorbente para mí.
+- id: idm-a2bc-cover-to-cover
+  text: I read the whole book from cover to cover last weekend.
+  translation: Leí todo el libro de principio a fin el fin de semana pasado.
+  visual_hint: 📚✅
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: from cover to cover
+    meaning: de principio a fin
+    ipa: ˈkʌvər
+  kind: idiom
+  apply_sentence: She studied the manual from ____ before the exam.
+  apply_answer: cover to cover
+  apply_translation: Estudió el manual de principio a fin antes del examen.
 roleplay:
   ai_role: friend (Nora)
   user_role: reader

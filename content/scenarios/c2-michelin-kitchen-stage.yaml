@@ -73,6 +73,36 @@ phrases:
   - word: sets apart
     meaning: distingue / diferencia
     ipa: sets əˈpɑːrt
+- id: in-the-weeds
+  text: We were in the weeds during the second seating.
+  translation: 'Estábamos desbordados durante el segundo turno. (in the weeds: desbordado de trabajo)'
+  visual_hint: 👨‍🍳🌿
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: in the weeds
+    meaning: 'in the weeds: agobiado de trabajo'
+    ipa: wiːdz
+  kind: idiom
+  apply_sentence: With three deadlines, I'm completely ____ this week.
+  apply_answer: in the weeds
+  apply_translation: Con tres plazos, estoy completamente desbordado esta semana.
+- id: hit-the-ground-running
+  text: New cooks need to hit the ground running here.
+  translation: Los cocineros nuevos deben arrancar a toda marcha aquí. (hit the ground running)
+  visual_hint: 🏃‍♂️⭐
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: hit the ground running
+    meaning: 'hit the ground running: empezar a tope'
+    ipa: ɡraʊnd
+  kind: idiom
+  apply_sentence: The new manager had to ____ on day one.
+  apply_answer: hit the ground running
+  apply_translation: La nueva gerente tuvo que arrancar a toda marcha desde el primer día.
 roleplay:
   ai_role: chef de cuisine
   user_role: visiting culinary director

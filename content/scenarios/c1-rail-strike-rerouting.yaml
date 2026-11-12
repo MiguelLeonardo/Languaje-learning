@@ -72,6 +72,37 @@ phrases:
   - word: workaround
     meaning: solución alternativa
     ipa: ˈwɜːrkəraʊnd
+- id: strike-think-on-feet
+  text: With the strike, you have to think on your feet.
+  translation: Con la huelga, hay que pensar rápido y improvisar. (think on your feet = reaccionar rápido)
+  visual_hint: 🧠🚆
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: think on your feet
+    meaning: pensar rápido
+    ipa: θɪŋk ɒn jɔː fiːt
+  kind: idiom
+  apply_sentence: A good guide can ____ when a road closes unexpectedly.
+  apply_answer: think on their feet
+  apply_translation: Un buen guía sabe reaccionar rápido cuando una carretera se cierra inesperadamente.
+- id: strike-back-to-square-one
+  text: Our route via Geneva failed, so we are back to square one.
+  translation: Nuestra ruta por Ginebra falló, así que volvimos al punto de partida. (back to square one = empezar
+    de nuevo)
+  visual_hint: 🔙🚧
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: back to square one
+    meaning: volver a empezar
+    ipa: bæk tə skweə wʌn
+  kind: idiom
+  apply_sentence: The canceled flight sent us ____ with our travel plans.
+  apply_answer: back to square one
+  apply_translation: El vuelo cancelado nos devolvió al punto de partida con nuestros planes de viaje.
 roleplay:
   ai_role: international rail agent
   user_role: business traveler

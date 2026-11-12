@@ -75,6 +75,36 @@ phrases:
   - word: candid
     meaning: franca / sincera
     ipa: ˈkændɪd
+- id: idm-lessons-learned
+  text: Let's talk about the lessons learned from this sprint.
+  translation: 'Hablemos de las lecciones aprendidas en este sprint. (lessons learned: aprendizajes)'
+  visual_hint: 📚🔁
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: lessons learned
+    meaning: lecciones aprendidas
+    ipa: ˈlɛsənz lɜːrnd
+  kind: expression
+  apply_sentence: Each project ends with a review of ____ by the group.
+  apply_answer: lessons learned
+  apply_translation: Cada proyecto termina con una revisión de las lecciones aprendidas por el grupo.
+- id: idm-get-the-ball-rolling
+  text: Who wants to get the ball rolling with the first topic?
+  translation: '¿Quién quiere empezar con el primer tema? (get the ball rolling: iniciar algo)'
+  visual_hint: ⚽🚀
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: get the ball rolling
+    meaning: poner en marcha
+    ipa: ɡɛt ðə bɔːl ˈroʊlɪŋ
+  kind: idiom
+  apply_sentence: I'll ____ by sharing my own mistake from the sprint.
+  apply_answer: get the ball rolling
+  apply_translation: Yo daré el primer paso compartiendo mi propio error del sprint.
 roleplay:
   ai_role: software engineer
   user_role: scrum facilitator

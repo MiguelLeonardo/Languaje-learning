@@ -73,6 +73,37 @@ phrases:
   - word: sent
     meaning: enviado
     ipa: sent
+- id: delay-same-boat
+  text: Don't worry, we are all in the same boat with this delay.
+  translation: No te preocupes, todos estamos en la misma situación con este retraso. (in the same boat = en la
+    misma situación)
+  visual_hint: ⛵✈️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: in the same boat
+    meaning: en el mismo barco
+    ipa: ɪn ðə seɪm bəʊt
+  kind: idiom
+  apply_sentence: The strike affects everyone, so we are all ____.
+  apply_answer: in the same boat
+  apply_translation: La huelga afecta a todos, así que todos estamos en la misma situación.
+- id: delay-kill-time
+  text: We have five hours to kill time before the next flight.
+  translation: Tenemos cinco horas para matar el tiempo antes del próximo vuelo. (kill time = pasar el rato)
+  visual_hint: ⌛📖
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: kill time
+    meaning: matar el tiempo
+    ipa: kɪl taɪm
+  kind: idiom
+  apply_sentence: I read a magazine to ____ at the train station.
+  apply_answer: kill time
+  apply_translation: Leí una revista para matar el tiempo en la estación de tren.
 roleplay:
   ai_role: airline gate agent
   user_role: passenger

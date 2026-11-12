@@ -90,6 +90,36 @@ phrases:
   - word: empty stomach
     meaning: estómago vacío / en ayunas
     ipa: ˈempti ˈstʌmək
+- id: idm-come-down-with-a2
+  text: I'm afraid I might come down with a cold.
+  translation: Me temo que podría resfriarme. (come down with = enfermar de)
+  visual_hint: 🤧💊
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: come down with
+    meaning: enfermar de
+    ipa: kʌm daʊn wɪð
+  kind: phrasal_verb
+  apply_sentence: Wear a coat or you will ____ the flu.
+  apply_answer: come down with
+  apply_translation: Ponte un abrigo o te dará la gripe.
+- id: idm-get-better-a2
+  text: I hope these pills help me get better soon.
+  translation: Espero que estas pastillas me ayuden a mejorar pronto. (get better = mejorar)
+  visual_hint: 💊📈
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: get better
+    meaning: mejorarse
+    ipa: get ˈbetər
+  kind: expression
+  apply_sentence: Drink water and rest, and you will ____ soon.
+  apply_answer: get better
+  apply_translation: Bebe agua y descansa, y mejorarás pronto.
 roleplay:
   ai_role: pharmacist
   user_role: customer

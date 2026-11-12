@@ -88,6 +88,36 @@ phrases:
   - word: audit trail
     meaning: registro de auditoría / respaldo
     ipa: ˈɔːdɪt treɪl
+- id: idm-fine-print-c1
+  text: You should read the fine print on this claim carefully.
+  translation: Deberías leer con atención la letra pequeña de esta reclamación. (fine print = letra pequeña)
+  visual_hint: 📄🔍
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: fine print
+    meaning: letra pequeña
+    ipa: faɪn prɪnt
+  kind: idiom
+  apply_sentence: I never read the ____ before signing.
+  apply_answer: fine print
+  apply_translation: Nunca leo la letra pequeña antes de firmar.
+- id: idm-jump-through-hoops-c1
+  text: I had to jump through hoops to get reimbursed.
+  translation: Tuve que pasar por mil trámites para que me reembolsaran. (jump through hoops = cumplir muchos requisitos)
+  visual_hint: 🤹💸
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: jump through hoops
+    meaning: pasar por mil trámites
+    ipa: huːps
+  kind: idiom
+  apply_sentence: They make applicants ____ before approving anything.
+  apply_answer: jump through hoops
+  apply_translation: Hacen que los solicitantes pasen por mil trámites antes de aprobar nada.
 roleplay:
   ai_role: insurance claims specialist
   user_role: policyholder

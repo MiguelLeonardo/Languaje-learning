@@ -76,6 +76,36 @@ phrases:
   - word: rigorous
     meaning: riguroso
     ipa: ˈrɪɡərəs
+- id: idm-c2pe-moot-point
+  text: Whether he was truly free is, I'd argue, a moot point.
+  translation: Si de verdad era libre es, diría yo, una cuestión discutible (sin relevancia práctica).
+  visual_hint: 🧠🤔
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: a moot point
+    meaning: un punto discutible
+    ipa: muːt
+  kind: idiom
+  apply_sentence: Whether it rains is a ____ point now; we've cancelled.
+  apply_answer: moot
+  apply_translation: Si llueve es un asunto irrelevante ahora; lo cancelamos.
+- id: idm-c2pe-split-hairs
+  text: Some will say we are splitting hairs, but the distinction matters.
+  translation: Algunos dirán que nos ponemos quisquillosos, pero la distinción importa (exceso de detalle).
+  visual_hint: ✂️💭
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: split hairs
+    meaning: buscarle tres pies al gato
+    ipa: heəz
+  kind: idiom
+  apply_sentence: Let's not ____ hairs over a single word.
+  apply_answer: split
+  apply_translation: No nos pongamos quisquillosos por una sola palabra.
 roleplay:
   ai_role: philosophy professor
   user_role: salon participant

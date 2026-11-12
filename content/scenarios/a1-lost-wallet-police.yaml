@@ -71,6 +71,36 @@ phrases:
   - word: finds
     meaning: encuentra
     ipa: faɪndz
+- id: idm-fill-out-a1
+  text: Do I need to fill out this form?
+  translation: ¿Tengo que rellenar este formulario? (fill out = rellenar)
+  visual_hint: 📝👮
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: fill out
+    meaning: rellenar
+    ipa: fɪl aʊt
+  kind: phrasal_verb
+  apply_sentence: Please ____ the form with your name.
+  apply_answer: fill out
+  apply_translation: Por favor, rellena el formulario con tu nombre.
+- id: idm-call-me-back-a1
+  text: Can you call me back if you find it?
+  translation: ¿Puede llamarme si lo encuentra? (call back = devolver la llamada)
+  visual_hint: 📞👛
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: call me back
+    meaning: devolver la llamada
+    ipa: kɔːl bæk
+  kind: phrasal_verb
+  apply_sentence: I am busy now, can you ____ later?
+  apply_answer: call me back
+  apply_translation: Estoy ocupado ahora, ¿puedes llamarme más tarde?
 roleplay:
   ai_role: police officer
   user_role: visitor

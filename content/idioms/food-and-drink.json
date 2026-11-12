@@ -1,0 +1,842 @@
+{
+  "a1-bakery-breakfast": [
+    {
+      "id": "pick-up",
+      "kind": "phrasal_verb",
+      "text": "I pick up fresh bread every morning at this bakery.",
+      "translation": "Recojo pan fresco cada mañana en esta panadería. (pick up: recoger)",
+      "apply_sentence": "Can you ____ my bag from the table, please?",
+      "apply_answer": "pick up",
+      "apply_translation": "¿Puedes recoger mi bolso de la mesa, por favor?",
+      "glossary_word": "pick up",
+      "glossary_meaning": "pick up: recoger",
+      "glossary_ipa": "pɪk ʌp",
+      "visual_hint": "🥖🛍️"
+    },
+    {
+      "id": "a-piece-of-cake",
+      "kind": "idiom",
+      "text": "Speaking English at the bakery is a piece of cake now.",
+      "translation": "Hablar inglés en la panadería ya es pan comido. (a piece of cake: algo muy fácil)",
+      "apply_sentence": "The test was ____, so I finished early.",
+      "apply_answer": "a piece of cake",
+      "apply_translation": "El examen fue pan comido, así que terminé temprano.",
+      "glossary_word": "a piece of cake",
+      "glossary_meaning": "a piece of cake: algo muy fácil",
+      "glossary_ipa": "keɪk",
+      "visual_hint": "🍰👍"
+    }
+  ],
+  "a1-fast-food-combo": [
+    {
+      "id": "run-out-of",
+      "kind": "phrasal_verb",
+      "text": "They always run out of fries at lunchtime, sir.",
+      "translation": "Siempre se quedan sin papas fritas a la hora del almuerzo, señor. (run out of: quedarse sin)",
+      "apply_sentence": "Let's buy more rice before we ____ it.",
+      "apply_answer": "run out of",
+      "apply_translation": "Compremos más arroz antes de quedarnos sin él.",
+      "glossary_word": "run out of",
+      "glossary_meaning": "run out of: quedarse sin",
+      "glossary_ipa": "rʌn aʊt",
+      "visual_hint": "🍟😕"
+    },
+    {
+      "id": "hurry-up",
+      "kind": "phrasal_verb",
+      "text": "Hurry up, my burger combo is getting cold!",
+      "translation": "¡Date prisa, mi combo de hamburguesa se está enfriando! (hurry up: apresurarse)",
+      "apply_sentence": "Please ____, the bus leaves in five minutes.",
+      "apply_answer": "hurry up",
+      "apply_translation": "Por favor, date prisa, el autobús sale en cinco minutos.",
+      "glossary_word": "hurry up",
+      "glossary_meaning": "hurry up: darse prisa",
+      "glossary_ipa": "ˈhʌri",
+      "visual_hint": "🍔⏰"
+    }
+  ],
+  "a1-fruit-market-stand": [
+    {
+      "id": "a-bunch-of",
+      "kind": "expression",
+      "text": "I would like a bunch of ripe bananas, please.",
+      "translation": "Quisiera un racimo de plátanos maduros, por favor. (a bunch of: un manojo/racimo de)",
+      "apply_sentence": "She gave me ____ flowers for my birthday.",
+      "apply_answer": "a bunch of",
+      "apply_translation": "Ella me dio un ramo de flores por mi cumpleaños.",
+      "glossary_word": "a bunch of",
+      "glossary_meaning": "a bunch of: un manojo de",
+      "glossary_ipa": "bʌntʃ",
+      "visual_hint": "🍌🛒"
+    },
+    {
+      "id": "have-a-look",
+      "kind": "expression",
+      "text": "Can I have a look at those sweet oranges?",
+      "translation": "¿Puedo echar un vistazo a esas naranjas dulces? (have a look: echar un vistazo)",
+      "apply_sentence": "Let me ____ at your photos from the trip.",
+      "apply_answer": "have a look",
+      "apply_translation": "Déjame echar un vistazo a tus fotos del viaje.",
+      "glossary_word": "have a look",
+      "glossary_meaning": "have a look: echar un vistazo",
+      "glossary_ipa": "lʊk",
+      "visual_hint": "🍊👀"
+    }
+  ],
+  "a1-ice-cream-shop": [
+    {
+      "id": "cool-down",
+      "kind": "phrasal_verb",
+      "text": "Ice cream helps me cool down on hot days.",
+      "translation": "El helado me ayuda a refrescarme en los días calurosos. (cool down: refrescarse)",
+      "apply_sentence": "Sit in the shade and ____ for a minute.",
+      "apply_answer": "cool down",
+      "apply_translation": "Siéntate a la sombra y refréscate un minuto.",
+      "glossary_word": "cool down",
+      "glossary_meaning": "cool down: refrescarse, calmarse",
+      "glossary_ipa": "kuːl",
+      "visual_hint": "🍦☀️"
+    },
+    {
+      "id": "a-sweet-tooth",
+      "kind": "idiom",
+      "text": "I have a sweet tooth, so chocolate please!",
+      "translation": "Me encantan los dulces, ¡así que chocolate, por favor! (a sweet tooth: gusto por lo dulce)",
+      "apply_sentence": "My brother has ____, so he loves candy.",
+      "apply_answer": "a sweet tooth",
+      "apply_translation": "Mi hermano es muy goloso, así que le encantan los caramelos.",
+      "glossary_word": "a sweet tooth",
+      "glossary_meaning": "a sweet tooth: ser goloso",
+      "glossary_ipa": "tuːθ",
+      "visual_hint": "🍫😋"
+    }
+  ],
+  "a1-ordering-coffee": [
+    {
+      "id": "wake-up",
+      "kind": "phrasal_verb",
+      "text": "I need coffee to wake up in the morning.",
+      "translation": "Necesito café para despertarme por la mañana. (wake up: despertarse)",
+      "apply_sentence": "I ____ at seven every day for school.",
+      "apply_answer": "wake up",
+      "apply_translation": "Me despierto a las siete todos los días para ir a la escuela.",
+      "glossary_word": "wake up",
+      "glossary_meaning": "wake up: despertarse",
+      "glossary_ipa": "weɪk",
+      "visual_hint": "☕🌅"
+    },
+    {
+      "id": "right-away",
+      "kind": "expression",
+      "text": "Sure, I will bring your coffee right away.",
+      "translation": "Claro, le traigo su café enseguida. (right away: de inmediato)",
+      "apply_sentence": "Please call me back ____ if you can.",
+      "apply_answer": "right away",
+      "apply_translation": "Por favor, llámame de vuelta enseguida si puedes.",
+      "glossary_word": "right away",
+      "glossary_meaning": "right away: de inmediato",
+      "glossary_ipa": "raɪt əˈweɪ",
+      "visual_hint": "☕⚡"
+    }
+  ],
+  "a2-breakfast-buffet": [
+    {
+      "id": "help-yourself",
+      "kind": "expression",
+      "text": "Please help yourself to the eggs and fruit.",
+      "translation": "Sírvase usted mismo los huevos y la fruta. (help yourself: sírvete)",
+      "apply_sentence": "There is cake in the kitchen, so ____ to some.",
+      "apply_answer": "help yourself",
+      "apply_translation": "Hay pastel en la cocina, así que sírvete un poco.",
+      "glossary_word": "help yourself",
+      "glossary_meaning": "help yourself: sírvete tú mismo",
+      "glossary_ipa": "help",
+      "visual_hint": "🍳🙌"
+    },
+    {
+      "id": "an-early-bird",
+      "kind": "idiom",
+      "text": "I am an early bird, so I eat breakfast at six.",
+      "translation": "Soy madrugador, así que desayuno a las seis. (an early bird: madrugador)",
+      "apply_sentence": "My grandfather is ____ and goes jogging at dawn.",
+      "apply_answer": "an early bird",
+      "apply_translation": "Mi abuelo es madrugador y sale a correr al amanecer.",
+      "glossary_word": "an early bird",
+      "glossary_meaning": "an early bird: madrugador",
+      "glossary_ipa": "ˈɜːli bɜːd",
+      "visual_hint": "🐦🌄"
+    }
+  ],
+  "a2-food-truck-lunch": [
+    {
+      "id": "grab-a-bite",
+      "kind": "expression",
+      "text": "Let's grab a bite at the food truck before class.",
+      "translation": "Comamos algo en el camión de comida antes de la clase. (grab a bite: comer algo rápido)",
+      "apply_sentence": "Do you want to ____ after the museum?",
+      "apply_answer": "grab a bite",
+      "apply_translation": "¿Quieres comer algo después del museo?",
+      "glossary_word": "grab a bite",
+      "glossary_meaning": "grab a bite: comer algo rápido",
+      "glossary_ipa": "baɪt",
+      "visual_hint": "🌮🚚"
+    },
+    {
+      "id": "easy-on",
+      "kind": "expression",
+      "text": "Go easy on the salsa, it's too spicy for me.",
+      "translation": "Ve despacio con la salsa, es demasiado picante para mí. (go easy on: no pasarse con)",
+      "apply_sentence": "Go ____ the sugar, please; I'm watching my health.",
+      "apply_answer": "easy on",
+      "apply_translation": "Ve con cuidado con el azúcar, por favor; cuido mi salud.",
+      "glossary_word": "easy on",
+      "glossary_meaning": "go easy on: no pasarse con",
+      "glossary_ipa": "ˈiːzi",
+      "visual_hint": "🌶️😅"
+    }
+  ],
+  "a2-pizzeria-delivery": [
+    {
+      "id": "on-its-way",
+      "kind": "expression",
+      "text": "Your pizza is on its way to the hotel now.",
+      "translation": "Su pizza va en camino al hotel ahora. (on its way: en camino)",
+      "apply_sentence": "Don't worry, the taxi is ____ to your house.",
+      "apply_answer": "on its way",
+      "apply_translation": "No te preocupes, el taxi va en camino a tu casa.",
+      "glossary_word": "on its way",
+      "glossary_meaning": "on its way: en camino",
+      "glossary_ipa": "weɪ",
+      "visual_hint": "🍕🛵"
+    },
+    {
+      "id": "give-me-a-call",
+      "kind": "expression",
+      "text": "Please give me a call when you reach the lobby.",
+      "translation": "Por favor llámame cuando llegues al vestíbulo. (give me a call: llámame)",
+      "apply_sentence": "If you get lost, ____ and I will come.",
+      "apply_answer": "give me a call",
+      "apply_translation": "Si te pierdes, llámame y yo iré.",
+      "glossary_word": "give me a call",
+      "glossary_meaning": "give me a call: llámame",
+      "glossary_ipa": "kɔːl",
+      "visual_hint": "📞🏨"
+    }
+  ],
+  "a2-pub-fish-and-chips": [
+    {
+      "id": "my-treat",
+      "kind": "expression",
+      "text": "It's my treat, so order whatever you like.",
+      "translation": "Invito yo, así que pide lo que quieras. (my treat: yo invito)",
+      "apply_sentence": "Dinner tonight is ____ because you paid last time.",
+      "apply_answer": "my treat",
+      "apply_translation": "La cena de esta noche va por mi cuenta porque tú pagaste la última vez.",
+      "glossary_word": "my treat",
+      "glossary_meaning": "my treat: yo invito",
+      "glossary_ipa": "triːt",
+      "visual_hint": "🍺🤝"
+    },
+    {
+      "id": "on-the-house",
+      "kind": "idiom",
+      "text": "The waiter said the ginger beer was on the house.",
+      "translation": "El camarero dijo que la cerveza de jengibre era cortesía de la casa. (on the house: gratis)",
+      "apply_sentence": "Because we waited long, dessert was ____.",
+      "apply_answer": "on the house",
+      "apply_translation": "Como esperamos mucho, el postre fue cortesía de la casa.",
+      "glossary_word": "on the house",
+      "glossary_meaning": "on the house: gratis, invita la casa",
+      "glossary_ipa": "haʊs",
+      "visual_hint": "🍹🎁"
+    }
+  ],
+  "a2-restaurant-dinner": [
+    {
+      "id": "go-dutch",
+      "kind": "idiom",
+      "text": "Let's go Dutch and split the bill tonight.",
+      "translation": "Paguemos cada uno lo suyo esta noche. (go Dutch: pagar a medias)",
+      "apply_sentence": "We always ____ when we eat out with friends.",
+      "apply_answer": "go Dutch",
+      "apply_translation": "Siempre pagamos cada uno lo suyo cuando salimos a comer con amigos.",
+      "glossary_word": "go Dutch",
+      "glossary_meaning": "go Dutch: pagar cada uno lo suyo",
+      "glossary_ipa": "dʌtʃ",
+      "visual_hint": "🍽️💶"
+    },
+    {
+      "id": "fully-booked",
+      "kind": "expression",
+      "text": "Sorry, we are fully booked until nine o'clock tonight.",
+      "translation": "Lo siento, estamos completamente reservados hasta las nueve de esta noche. (fully booked: sin mesas libres)",
+      "apply_sentence": "The hotel was ____ during the summer festival.",
+      "apply_answer": "fully booked",
+      "apply_translation": "El hotel estaba completamente lleno durante el festival de verano.",
+      "glossary_word": "fully booked",
+      "glossary_meaning": "fully booked: totalmente reservado",
+      "glossary_ipa": "bʊkt",
+      "visual_hint": "📅🚫"
+    }
+  ],
+  "b1-booking-birthday-table": [
+    {
+      "id": "the-more-the-merrier",
+      "kind": "idiom",
+      "text": "Bring your cousins too, the more the merrier!",
+      "translation": "¡Trae también a tus primos, cuantos más, mejor! (the more the merrier: cuantos más mejor)",
+      "apply_sentence": "Can I invite Anna?\" \"Sure, ____!",
+      "apply_answer": "the more the merrier",
+      "apply_translation": "¿Puedo invitar a Anna? Claro, ¡cuantos más, mejor!",
+      "glossary_word": "the more the merrier",
+      "glossary_meaning": "the more the merrier: cuantos más, mejor",
+      "glossary_ipa": "ˈmeri",
+      "visual_hint": "🎂🎉"
+    },
+    {
+      "id": "just-in-case",
+      "kind": "expression",
+      "text": "I'll bring a spare candle just in case.",
+      "translation": "Traeré una vela de repuesto por si acaso. (just in case: por si acaso)",
+      "apply_sentence": "Take an umbrella ____ it rains.",
+      "apply_answer": "just in case",
+      "apply_translation": "Lleva un paraguas por si acaso llueve.",
+      "glossary_word": "just in case",
+      "glossary_meaning": "just in case: por si acaso",
+      "glossary_ipa": "keɪs",
+      "visual_hint": "🕯️🛡️"
+    }
+  ],
+  "b1-cooking-class-inquiry": [
+    {
+      "id": "from-scratch",
+      "kind": "expression",
+      "text": "We made the pasta dough completely from scratch today.",
+      "translation": "Hicimos la masa de pasta completamente desde cero hoy. (from scratch: desde cero)",
+      "apply_sentence": "She builds her computers ____ every year.",
+      "apply_answer": "from scratch",
+      "apply_translation": "Ella construye sus computadoras desde cero cada año.",
+      "glossary_word": "from scratch",
+      "glossary_meaning": "from scratch: desde cero",
+      "glossary_ipa": "skrætʃ",
+      "visual_hint": "🍝👩‍🍳"
+    },
+    {
+      "id": "rule-of-thumb",
+      "kind": "idiom",
+      "text": "A good rule of thumb is to taste as you cook.",
+      "translation": "Una buena regla general es probar mientras cocinas. (rule of thumb: regla general)",
+      "apply_sentence": "My ____ is to save ten percent of my salary.",
+      "apply_answer": "rule of thumb",
+      "apply_translation": "Mi regla general es ahorrar el diez por ciento de mi sueldo.",
+      "glossary_word": "rule of thumb",
+      "glossary_meaning": "rule of thumb: regla general",
+      "glossary_ipa": "θʌm",
+      "visual_hint": "👍🥄"
+    }
+  ],
+  "b1-dietary-restrictions": [
+    {
+      "id": "steer-clear-of",
+      "kind": "phrasal_verb",
+      "text": "I have to steer clear of nuts completely.",
+      "translation": "Tengo que evitar por completo los frutos secos. (steer clear of: evitar)",
+      "apply_sentence": "Doctors say I should ____ fried food.",
+      "apply_answer": "steer clear of",
+      "apply_translation": "Los médicos dicen que debería evitar la comida frita.",
+      "glossary_word": "steer clear of",
+      "glossary_meaning": "steer clear of: evitar",
+      "glossary_ipa": "klɪə",
+      "visual_hint": "🥜🚫"
+    },
+    {
+      "id": "play-it-safe",
+      "kind": "idiom",
+      "text": "I'd rather play it safe and ask about the ingredients.",
+      "translation": "Prefiero ir sobre seguro y preguntar por los ingredientes. (play it safe: ir a lo seguro)",
+      "apply_sentence": "It looks cloudy, so let's ____ and take coats.",
+      "apply_answer": "play it safe",
+      "apply_translation": "Se ve nublado, así que vayamos a lo seguro y llevemos abrigos.",
+      "glossary_word": "play it safe",
+      "glossary_meaning": "play it safe: ir a lo seguro",
+      "glossary_ipa": "seɪf",
+      "visual_hint": "🛡️🥗"
+    }
+  ],
+  "b1-farmers-market-cheese": [
+    {
+      "id": "melts-in-your-mouth",
+      "kind": "idiom",
+      "text": "This aged cheese just melts in your mouth, honestly.",
+      "translation": "Este queso curado se derrite en la boca, de verdad. (melts in your mouth: deliciosamente suave)",
+      "apply_sentence": "Try this cake; it just ____ and tastes amazing.",
+      "apply_answer": "melts in your mouth",
+      "apply_translation": "Prueba este pastel; se derrite en la boca y sabe increíble.",
+      "glossary_word": "melts in your mouth",
+      "glossary_meaning": "melt in your mouth: derretirse en la boca",
+      "glossary_ipa": "melt",
+      "visual_hint": "🧀😍"
+    },
+    {
+      "id": "a-matter-of-taste",
+      "kind": "idiom",
+      "text": "Blue cheese is a matter of taste, I suppose.",
+      "translation": "El queso azul es cuestión de gustos, supongo. (a matter of taste: cuestión de gustos)",
+      "apply_sentence": "Which color is better is ____, really.",
+      "apply_answer": "a matter of taste",
+      "apply_translation": "Qué color es mejor es cuestión de gustos, la verdad.",
+      "glossary_word": "a matter of taste",
+      "glossary_meaning": "a matter of taste: cuestión de gustos",
+      "glossary_ipa": "ˈmætər",
+      "visual_hint": "🧀🤔"
+    }
+  ],
+  "b1-wrong-dish-served": [
+    {
+      "id": "no-big-deal",
+      "kind": "idiom",
+      "text": "No big deal, I know the kitchen is busy.",
+      "translation": "No pasa nada, sé que la cocina está ocupada. (no big deal: no es para tanto)",
+      "apply_sentence": "I forgot my pen, but it is ____.",
+      "apply_answer": "no big deal",
+      "apply_translation": "Olvidé mi bolígrafo, pero no es para tanto.",
+      "glossary_word": "no big deal",
+      "glossary_meaning": "no big deal: no es para tanto",
+      "glossary_ipa": "dɪl",
+      "visual_hint": "🍝🙂"
+    },
+    {
+      "id": "mix-up",
+      "kind": "expression",
+      "text": "There was a mix-up with my order, I think.",
+      "translation": "Creo que hubo una confusión con mi pedido. (a mix-up: una confusión)",
+      "apply_sentence": "Sorry, there was a ____ with the hotel booking.",
+      "apply_answer": "mix-up",
+      "apply_translation": "Lo siento, hubo una confusión con la reserva del hotel.",
+      "glossary_word": "mix-up",
+      "glossary_meaning": "mix-up: confusión, equivocación",
+      "glossary_ipa": "mɪks ʌp",
+      "visual_hint": "🔄🍽️"
+    }
+  ],
+  "b2-catering-menu-planning": [
+    {
+      "id": "a-ballpark-figure",
+      "kind": "expression",
+      "text": "Could you give us a ballpark figure for the headcount?",
+      "translation": "¿Podría darnos una cifra aproximada de asistentes? (a ballpark figure: cifra aproximada)",
+      "apply_sentence": "I only need ____, not an exact price.",
+      "apply_answer": "a ballpark figure",
+      "apply_translation": "Solo necesito una cifra aproximada, no un precio exacto.",
+      "glossary_word": "a ballpark figure",
+      "glossary_meaning": "a ballpark figure: cifra aproximada",
+      "glossary_ipa": "ˈbɔːlpɑːk",
+      "visual_hint": "🔢🍽️"
+    },
+    {
+      "id": "cover-all-the-bases",
+      "kind": "idiom",
+      "text": "Let's cover all the bases and label every allergen clearly.",
+      "translation": "Cubramos todos los frentes y etiquetemos claramente cada alérgeno. (cover all the bases: no dejar nada al azar)",
+      "apply_sentence": "Our lawyer wanted to ____ before signing the contract.",
+      "apply_answer": "cover all the bases",
+      "apply_translation": "Nuestro abogado quiso cubrir todos los frentes antes de firmar el contrato.",
+      "glossary_word": "cover all the bases",
+      "glossary_meaning": "cover all the bases: prever todo",
+      "glossary_ipa": "beɪsɪz",
+      "visual_hint": "✅🥪"
+    }
+  ],
+  "b2-hosting-business-lunch": [
+    {
+      "id": "break-the-ice",
+      "kind": "idiom",
+      "text": "A relaxed appetizer is a good way to break the ice.",
+      "translation": "Un aperitivo relajado es buena forma de romper el hielo. (break the ice: romper el hielo)",
+      "apply_sentence": "He told a joke to ____ at the meeting.",
+      "apply_answer": "break the ice",
+      "apply_translation": "Contó un chiste para romper el hielo en la reunión.",
+      "glossary_word": "break the ice",
+      "glossary_meaning": "break the ice: romper el hielo",
+      "glossary_ipa": "aɪs",
+      "visual_hint": "🧊🤝"
+    },
+    {
+      "id": "pick-up-the-tab",
+      "kind": "idiom",
+      "text": "Please let me pick up the tab; I'm hosting today.",
+      "translation": "Permítame pagar la cuenta; hoy soy el anfitrión. (pick up the tab: pagar la cuenta)",
+      "apply_sentence": "My boss offered to ____ for the whole team.",
+      "apply_answer": "pick up the tab",
+      "apply_translation": "Mi jefe se ofreció a pagar la cuenta de todo el equipo.",
+      "glossary_word": "pick up the tab",
+      "glossary_meaning": "pick up the tab: pagar la cuenta",
+      "glossary_ipa": "tæb",
+      "visual_hint": "🧾💼"
+    }
+  ],
+  "b2-restaurant-waitlist-negotiation": [
+    {
+      "id": "fingers-crossed",
+      "kind": "expression",
+      "text": "Fingers crossed a table opens up before the kitchen closes.",
+      "translation": "Ojalá se libere una mesa antes de que cierre la cocina. (fingers crossed: ojalá)",
+      "apply_sentence": "I have my interview today, so ____!",
+      "apply_answer": "fingers crossed",
+      "apply_translation": "Hoy tengo mi entrevista, ¡así que ojalá salga bien!",
+      "glossary_word": "fingers crossed",
+      "glossary_meaning": "fingers crossed: ojalá, deseando suerte",
+      "glossary_ipa": "ˈfɪŋɡəz",
+      "visual_hint": "🤞⏳"
+    },
+    {
+      "id": "beggars-can-t-be-choosers",
+      "kind": "idiom",
+      "text": "A seat at the bar is fine; beggars can't be choosers.",
+      "translation": "Un asiento en la barra está bien; a caballo regalado no se le mira el diente. (beggars can't be choosers)",
+      "apply_sentence": "The room is small, but ____, I guess.",
+      "apply_answer": "beggars can't be choosers",
+      "apply_translation": "La habitación es pequeña, pero no se puede exigir más, supongo.",
+      "glossary_word": "beggars can't be choosers",
+      "glossary_meaning": "beggars can't be choosers: no se puede exigir",
+      "glossary_ipa": "ˈbeɡəz",
+      "visual_hint": "🪑🙏"
+    }
+  ],
+  "b2-specialty-coffee-roastery": [
+    {
+      "id": "an-acquired-taste",
+      "kind": "idiom",
+      "text": "Fruity natural-process coffee is an acquired taste for many.",
+      "translation": "El café frutal de proceso natural es un gusto que se adquiere. (an acquired taste)",
+      "apply_sentence": "Black licorice is definitely ____ for most people.",
+      "apply_answer": "an acquired taste",
+      "apply_translation": "El regaliz negro es sin duda un gusto adquirido para la mayoría.",
+      "glossary_word": "an acquired taste",
+      "glossary_meaning": "an acquired taste: gusto que se adquiere",
+      "glossary_ipa": "əˈkwaɪəd",
+      "visual_hint": "☕🍓"
+    },
+    {
+      "id": "dial-in",
+      "kind": "phrasal_verb",
+      "text": "We need to dial in the grind for this espresso.",
+      "translation": "Necesitamos ajustar bien la molienda para este espresso. (dial in: afinar)",
+      "apply_sentence": "It took weeks to ____ the new recipe.",
+      "apply_answer": "dial in",
+      "apply_translation": "Tardamos semanas en afinar la nueva receta.",
+      "glossary_word": "dial in",
+      "glossary_meaning": "dial in: ajustar con precisión",
+      "glossary_ipa": "ˈdaɪəl",
+      "visual_hint": "⚙️☕"
+    }
+  ],
+  "b2-supper-club-hosting": [
+    {
+      "id": "dig-in",
+      "kind": "phrasal_verb",
+      "text": "Everyone, dig in before the lamb gets cold!",
+      "translation": "¡Todos, a comer antes de que el cordero se enfríe! (dig in: empezar a comer)",
+      "apply_sentence": "Don't wait for me, just ____ while it's hot.",
+      "apply_answer": "dig in",
+      "apply_translation": "No me esperes, empieza a comer mientras está caliente.",
+      "glossary_word": "dig in",
+      "glossary_meaning": "dig in: ponerse a comer",
+      "glossary_ipa": "dɪɡ",
+      "visual_hint": "🍖🍴"
+    },
+    {
+      "id": "the-icing-on-the-cake",
+      "kind": "idiom",
+      "text": "The citrus tart was the icing on the cake.",
+      "translation": "La tarta de cítricos fue la guinda del pastel. (the icing on the cake: la guinda)",
+      "apply_sentence": "Getting a free ticket was ____ for him.",
+      "apply_answer": "the icing on the cake",
+      "apply_translation": "Conseguir una entrada gratis fue la guinda del pastel para él.",
+      "glossary_word": "the icing on the cake",
+      "glossary_meaning": "the icing on the cake: la guinda",
+      "glossary_ipa": "ˈaɪsɪŋ",
+      "visual_hint": "🍰🎂"
+    }
+  ],
+  "c1-artisanal-bakery-fermentation": [
+    {
+      "id": "bread-and-butter",
+      "kind": "idiom",
+      "text": "That crusty country loaf is our bread and butter.",
+      "translation": "Esa hogaza rústica es nuestro sustento principal. (bread and butter: sustento básico)",
+      "apply_sentence": "Teaching is my ____, but I also write.",
+      "apply_answer": "bread and butter",
+      "apply_translation": "Enseñar es mi sustento principal, pero también escribo.",
+      "glossary_word": "bread and butter",
+      "glossary_meaning": "bread and butter: sustento principal",
+      "glossary_ipa": "bred",
+      "visual_hint": "🍞🧈"
+    },
+    {
+      "id": "good-things-come-to-those-who-wait",
+      "kind": "idiom",
+      "text": "Good things come to those who wait, especially with sourdough.",
+      "translation": "Lo bueno se hace esperar, sobre todo con la masa madre. (good things come to those who wait)",
+      "apply_sentence": "Don't rush; ____, after all.",
+      "apply_answer": "good things come to those who wait",
+      "apply_translation": "No te apresures; al fin y al cabo, lo bueno llega a quien sabe esperar.",
+      "glossary_word": "good things come to those who wait",
+      "glossary_meaning": "good things come to those who wait: paciencia",
+      "glossary_ipa": "weɪt",
+      "visual_hint": "⏳🥖"
+    }
+  ],
+  "c1-mixology-bespoke-cocktail": [
+    {
+      "id": "hits-the-spot",
+      "kind": "idiom",
+      "text": "This smoky cocktail hits the spot every single time.",
+      "translation": "Este cóctel ahumado da en el clavo cada vez. (hit the spot: justo lo que se necesitaba)",
+      "apply_sentence": "A hot bath after work always ____.",
+      "apply_answer": "hits the spot",
+      "apply_translation": "Un baño caliente después del trabajo siempre viene perfecto.",
+      "glossary_word": "hits the spot",
+      "glossary_meaning": "hit the spot: venir perfecto, satisfacer",
+      "glossary_ipa": "spɒt",
+      "visual_hint": "🍸🎯"
+    },
+    {
+      "id": "a-far-cry-from",
+      "kind": "idiom",
+      "text": "This is a far cry from your usual sugary cocktails.",
+      "translation": "Esto dista mucho de tus cócteles azucarados habituales. (a far cry from: muy diferente de)",
+      "apply_sentence": "His new flat is ____ his tiny old room.",
+      "apply_answer": "a far cry from",
+      "apply_translation": "Su nuevo piso dista mucho de su pequeña habitación anterior.",
+      "glossary_word": "a far cry from",
+      "glossary_meaning": "a far cry from: muy distinto de",
+      "glossary_ipa": "kraɪ",
+      "visual_hint": "🍹↔️"
+    }
+  ],
+  "c1-private-dining-contract": [
+    {
+      "id": "read-the-fine-print",
+      "kind": "idiom",
+      "text": "We should read the fine print before we sign.",
+      "translation": "Deberíamos leer la letra pequeña antes de firmar. (the fine print: letra pequeña)",
+      "apply_sentence": "Always ____ on any rental contract.",
+      "apply_answer": "read the fine print",
+      "apply_translation": "Lee siempre la letra pequeña en cualquier contrato de alquiler.",
+      "glossary_word": "read the fine print",
+      "glossary_meaning": "read the fine print: leer la letra pequeña",
+      "glossary_ipa": "faɪn prɪnt",
+      "visual_hint": "📄🔍"
+    },
+    {
+      "id": "iron-out",
+      "kind": "phrasal_verb",
+      "text": "We need to iron out the details of the minimum spend.",
+      "translation": "Debemos resolver los detalles del gasto mínimo. (iron out: resolver)",
+      "apply_sentence": "Let's ____ the last problems before Friday.",
+      "apply_answer": "iron out",
+      "apply_translation": "Resolvamos los últimos problemas antes del viernes.",
+      "glossary_word": "iron out",
+      "glossary_meaning": "iron out: resolver, pulir",
+      "glossary_ipa": "ˈaɪən",
+      "visual_hint": "📝🧩"
+    }
+  ],
+  "c1-sustainable-seafood-sourcing": [
+    {
+      "id": "a-drop-in-the-ocean",
+      "kind": "idiom",
+      "text": "Our efforts are just a drop in the ocean, honestly.",
+      "translation": "Nuestros esfuerzos son solo una gota en el océano, la verdad. (a drop in the ocean: muy poco)",
+      "apply_sentence": "Those complaints were only ____.",
+      "apply_answer": "a drop in the ocean",
+      "apply_translation": "Esas quejas eran solo una gota en el océano.",
+      "glossary_word": "a drop in the ocean",
+      "glossary_meaning": "a drop in the ocean: una gota en el mar",
+      "glossary_ipa": "ˈəʊʃn",
+      "visual_hint": "🌊💧"
+    },
+    {
+      "id": "swimming-against-the-tide",
+      "kind": "idiom",
+      "text": "Sourcing only line-caught fish means swimming against the tide.",
+      "translation": "Comprar solo pescado de línea es ir contracorriente. (swimming against the tide: ir contracorriente)",
+      "apply_sentence": "He felt he was ____ in that conservative office.",
+      "apply_answer": "swimming against the tide",
+      "apply_translation": "Sentía que iba contracorriente en esa oficina conservadora.",
+      "glossary_word": "swimming against the tide",
+      "glossary_meaning": "swim against the tide: ir contracorriente",
+      "glossary_ipa": "taɪd",
+      "visual_hint": "🐟🌊"
+    }
+  ],
+  "c1-wine-tasting-pairing": [
+    {
+      "id": "let-it-breathe",
+      "kind": "expression",
+      "text": "Decant it first and let it breathe for an hour.",
+      "translation": "Decántelo primero y deje que respire una hora. (let it breathe: dejar que se oxigene)",
+      "apply_sentence": "Open the bottle early and ____ before serving.",
+      "apply_answer": "let it breathe",
+      "apply_translation": "Abre la botella pronto y deja que respire antes de servir.",
+      "glossary_word": "let it breathe",
+      "glossary_meaning": "let it breathe: dejar que el vino respire",
+      "glossary_ipa": "briːð",
+      "visual_hint": "🍷💨"
+    },
+    {
+      "id": "worth-its-weight-in-gold",
+      "kind": "idiom",
+      "text": "A good pairing like this is worth its weight in gold.",
+      "translation": "Un buen maridaje como este vale su peso en oro. (worth its weight in gold: muy valioso)",
+      "apply_sentence": "That old map was ____ on our trip.",
+      "apply_answer": "worth its weight in gold",
+      "apply_translation": "Ese mapa viejo valió su peso en oro en nuestro viaje.",
+      "glossary_word": "worth its weight in gold",
+      "glossary_meaning": "worth its weight in gold: vale su peso en oro",
+      "glossary_ipa": "ɡəʊld",
+      "visual_hint": "🍷🥇"
+    }
+  ],
+  "c2-culinary-critique": [
+    {
+      "id": "less-is-more",
+      "kind": "idiom",
+      "text": "In plating, less is more; he understood that perfectly.",
+      "translation": "En el emplatado, menos es más; él lo entendió perfectamente. (less is more: la sencillez es mejor)",
+      "apply_sentence": "With minimalist design, ____, as the architect says.",
+      "apply_answer": "less is more",
+      "apply_translation": "En el diseño minimalista, menos es más, como dice el arquitecto.",
+      "glossary_word": "less is more",
+      "glossary_meaning": "less is more: menos es más",
+      "glossary_ipa": "les",
+      "visual_hint": "🍽️✨"
+    },
+    {
+      "id": "damn-with-faint-praise",
+      "kind": "idiom",
+      "text": "Calling it 'competent' is to damn with faint praise.",
+      "translation": "Llamarlo 'competente' es condenar con un elogio tibio. (damn with faint praise)",
+      "apply_sentence": "To call her debut 'adequate' is to ____.",
+      "apply_answer": "damn with faint praise",
+      "apply_translation": "Llamar 'adecuado' a su debut es condenarlo con un elogio tibio.",
+      "glossary_word": "damn with faint praise",
+      "glossary_meaning": "damn with faint praise: elogiar tan poco que es crítica",
+      "glossary_ipa": "feɪnt",
+      "visual_hint": "📝😏"
+    }
+  ],
+  "c2-food-documentary-interview": [
+    {
+      "id": "stood-the-test-of-time",
+      "kind": "idiom",
+      "text": "Heirloom seeds like these have stood the test of time.",
+      "translation": "Semillas ancestrales como estas han resistido el paso del tiempo. (stood the test of time: perdurar)",
+      "apply_sentence": "Few novels have ____ like this one.",
+      "apply_answer": "stood the test of time",
+      "apply_translation": "Pocas novelas han resistido el paso del tiempo como esta.",
+      "glossary_word": "stood the test of time",
+      "glossary_meaning": "stand the test of time: perdurar",
+      "glossary_ipa": "test",
+      "visual_hint": "🌱⌛"
+    },
+    {
+      "id": "pass-the-torch",
+      "kind": "idiom",
+      "text": "One day I will pass the torch to my granddaughter.",
+      "translation": "Algún día pasaré el testigo a mi nieta. (pass the torch: transmitir el legado)",
+      "apply_sentence": "The founder will ____ to a younger team.",
+      "apply_answer": "pass the torch",
+      "apply_translation": "El fundador pasará el testigo a un equipo más joven.",
+      "glossary_word": "pass the torch",
+      "glossary_meaning": "pass the torch: pasar el relevo",
+      "glossary_ipa": "tɔːtʃ",
+      "visual_hint": "🔥👵"
+    }
+  ],
+  "c2-michelin-kitchen-stage": [
+    {
+      "id": "in-the-weeds",
+      "kind": "idiom",
+      "text": "We were in the weeds during the second seating.",
+      "translation": "Estábamos desbordados durante el segundo turno. (in the weeds: desbordado de trabajo)",
+      "apply_sentence": "With three deadlines, I'm completely ____ this week.",
+      "apply_answer": "in the weeds",
+      "apply_translation": "Con tres plazos, estoy completamente desbordado esta semana.",
+      "glossary_word": "in the weeds",
+      "glossary_meaning": "in the weeds: agobiado de trabajo",
+      "glossary_ipa": "wiːdz",
+      "visual_hint": "👨‍🍳🌿"
+    },
+    {
+      "id": "hit-the-ground-running",
+      "kind": "idiom",
+      "text": "New cooks need to hit the ground running here.",
+      "translation": "Los cocineros nuevos deben arrancar a toda marcha aquí. (hit the ground running)",
+      "apply_sentence": "The new manager had to ____ on day one.",
+      "apply_answer": "hit the ground running",
+      "apply_translation": "La nueva gerente tuvo que arrancar a toda marcha desde el primer día.",
+      "glossary_word": "hit the ground running",
+      "glossary_meaning": "hit the ground running: empezar a tope",
+      "glossary_ipa": "ɡraʊnd",
+      "visual_hint": "🏃‍♂️⭐"
+    }
+  ],
+  "c2-molecular-gastronomy-symposium": [
+    {
+      "id": "throw-the-baby-out-with-the-bathwater",
+      "kind": "idiom",
+      "text": "We shouldn't throw the baby out with the bathwater.",
+      "translation": "No deberíamos tirar lo bueno junto con lo malo. (throw the baby out with the bathwater)",
+      "apply_sentence": "Criticize the plan, yet don't ____ entirely.",
+      "apply_answer": "throw the baby out with the bathwater",
+      "apply_translation": "Critica el plan, pero no deseches todo, lo bueno con lo malo.",
+      "glossary_word": "throw the baby out with the bathwater",
+      "glossary_meaning": "throw the baby out with the bathwater: descartar lo bueno",
+      "glossary_ipa": "ˈbɑːθwɔːtə",
+      "visual_hint": "🛁🧪"
+    },
+    {
+      "id": "reinvent-the-wheel",
+      "kind": "idiom",
+      "text": "Modernists aren't trying to reinvent the wheel, merely refine it.",
+      "translation": "Los modernistas no intentan reinventar la rueda, solo refinarla. (reinvent the wheel)",
+      "apply_sentence": "We don't need to ____ every time we start a project.",
+      "apply_answer": "reinvent the wheel",
+      "apply_translation": "No necesitamos reinventar la rueda cada vez que empezamos un proyecto.",
+      "glossary_word": "reinvent the wheel",
+      "glossary_meaning": "reinvent the wheel: reinventar lo ya inventado",
+      "glossary_ipa": "wiːl",
+      "visual_hint": "⚙️🔬"
+    }
+  ],
+  "c2-olive-oil-terroir-panel": [
+    {
+      "id": "the-tip-of-the-iceberg",
+      "kind": "idiom",
+      "text": "This one flavor is merely the tip of the iceberg.",
+      "translation": "Este sabor es solo la punta del iceberg. (the tip of the iceberg: solo una pequeña parte)",
+      "apply_sentence": "Those complaints were only ____.",
+      "apply_answer": "the tip of the iceberg",
+      "apply_translation": "Esas quejas eran solo la punta del iceberg.",
+      "glossary_word": "the tip of the iceberg",
+      "glossary_meaning": "the tip of the iceberg: la punta del iceberg",
+      "glossary_ipa": "ˈaɪsbɜːɡ",
+      "visual_hint": "🧊🫒"
+    },
+    {
+      "id": "bite-the-bullet",
+      "kind": "idiom",
+      "text": "We had to bite the bullet and reject the cheaper oil.",
+      "translation": "Tuvimos que apechugar y rechazar el aceite más barato. (bite the bullet: afrontar algo difícil)",
+      "apply_sentence": "I'll have to ____ and tell her the truth.",
+      "apply_answer": "bite the bullet",
+      "apply_translation": "Tendré que apechugar y decirle la verdad.",
+      "glossary_word": "bite the bullet",
+      "glossary_meaning": "bite the bullet: apechugar",
+      "glossary_ipa": "ˈbʊlɪt",
+      "visual_hint": "😬🫒"
+    }
+  ]
+}

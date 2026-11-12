@@ -35,6 +35,19 @@ class Phrase(BaseModel):
     visual_hint: str = ""  # emoji or image description/URL
     cloze: list[int] = Field(default_factory=list, description="word indexes hidden in completion stage")
     common: bool = True  # belongs to the "common phrases" bank
+    kind: str = "phrase"  # phrase | idiom | phrasal_verb | expression
+    apply_sentence: str | None = Field(
+        default=None, description="new sentence with ____ to fill with the practiced expression"
+    )
+    apply_answer: str | None = None
+    apply_translation: str | None = None
+
+    @model_validator(mode="after")
+    def _apply_consistent(self) -> "Phrase":
+        if self.apply_sentence is not None:
+            if self.apply_sentence.count("____") != 1 or not self.apply_answer:
+                raise ValueError(f"phrase {self.id}: apply_sentence needs exactly one ____ and an apply_answer")
+        return self
 
     @model_validator(mode="after")
     def _cloze_in_range(self) -> "Phrase":
