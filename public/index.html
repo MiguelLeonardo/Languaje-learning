@@ -47963,6 +47963,9 @@
       },
       practiceHistory: JSON.parse(localStorage.getItem('sf_practice_history') || '[]'),
       historyExpanded: false,
+      lastUserAudioUrl: null,
+      lastUserAudioBlob: null,
+      wordTrainerState: { activeIndex: null, status: 'idle', lastHeard: '' },
     };
 
     function isTestEnv() {
@@ -48712,14 +48715,17 @@
               <button onclick="clearScenarioHistory('${scenId}')" class="text-slate-500 hover:text-rose-400 text-[10px] transition">Borrar historial</button>
             </div>
             <div class="space-y-1.5 max-h-48 overflow-y-auto pr-1">
-              ${scenarioAttempts.map((att) => {
+              ${scenarioAttempts.map((att, attIdx) => {
                 const sColor = att.score >= 80 ? 'text-emerald-400' : (att.score >= 60 ? 'text-amber-400' : 'text-rose-400');
                 const tDiff = Math.max(1, Math.round((Date.now() - att.timestamp) / 1000));
                 const tStr = tDiff < 60 ? `${tDiff}s` : `${Math.round(tDiff/60)}m`;
                 const errCount = (att.errors || []).length;
+                const vNum = scenarioAttempts.length - attIdx;
+                const vTag = att.isCorrectedVersion ? `v${vNum} (Corregida)` : `v${vNum}`;
                 return `
                   <div class="p-2 rounded-xl bg-slate-950/70 border border-slate-800/80 flex items-center justify-between text-xs">
                     <div class="flex items-center gap-2 truncate">
+                      <span class="px-1.5 py-0.5 rounded ${att.isCorrectedVersion ? 'bg-indigo-500/30 text-indigo-200 border border-indigo-500/40' : 'bg-slate-800 text-slate-300'} text-[10px] font-mono font-bold">${vTag}</span>
                       <span class="font-bold ${sColor} text-xs">${att.score}%</span>
                       <span class="text-slate-400 text-[11px] truncate">“${att.transcript || att.expected}”</span>
                     </div>
@@ -48736,6 +48742,9 @@
         `;
       }
 
+      const latestVNum = scenarioAttempts.length;
+      const latestVLabel = latest.isCorrectedVersion ? `Versión ${latestVNum} (Corregida)` : `Versión ${latestVNum}`;
+
       panel.innerHTML = `
         <div class="space-y-2">
           <div class="flex flex-wrap items-center justify-between gap-2">
@@ -48745,7 +48754,8 @@
               </span>
               <div>
                 <div class="flex items-center gap-1.5">
-                  <span class="font-bold text-white text-xs">Última versión registrada</span>
+                  <span class="font-bold text-white text-xs">${latestVLabel}</span>
+                  ${latest.isCorrectedVersion ? '<span class="px-2 py-0.2 rounded-md bg-indigo-500/20 border border-indigo-500/30 text-indigo-300 text-[10px] font-bold">✨ Corregida</span>' : ''}
                   <span class="text-slate-500 text-[11px]">• ${timeStr}</span>
                   ${latest.stageLabel ? `<span class="px-2 py-0.2 rounded-md bg-slate-800 text-slate-300 text-[10px]">${latest.stageLabel}</span>` : ''}
                 </div>
@@ -48828,8 +48838,7 @@
 
     async function switchTab(tab) {
       state.activeTab = tab;
-      state.lastEvaluation = null;
-      state.showManualInput = false;
+      clearEvaluationState();
       if (tab === 'roleplay') state.roleplayPhase = 'briefing';
       const srsBtnText = document.getElementById('btn-toggle-srs-text');
       if (srsBtnText) {
@@ -48902,7 +48911,31 @@
       }, 900);
     }
 
-    function jumpStage(idx) { state.stageIndex = idx; state.exerciseIndex = 0; state.lastEvaluation = null; state.showManualInput = false; if (idx === 4) state.roleplayPhase = 'briefing'; renderLessonView(); }
+    function clearEvaluationState() {
+      state.lastEvaluation = null;
+      state.showManualInput = false;
+      state.wordTrainerState = { activeIndex: null, status: 'idle', lastHeard: '' };
+      if (state._userAudioPlayer && !state._userAudioPlayer.paused) {
+        try { state._userAudioPlayer.pause(); } catch (_) {}
+      }
+      if (state._activeWordTrainerRec) {
+        try { state._activeWordTrainerRec.stop(); } catch (_) {}
+        state._activeWordTrainerRec = null;
+      }
+      if (state.lastUserAudioUrl) {
+        try { URL.revokeObjectURL(state.lastUserAudioUrl); } catch (_) {}
+        state.lastUserAudioUrl = null;
+        state.lastUserAudioBlob = null;
+      }
+    }
+
+    function jumpStage(idx) {
+      clearEvaluationState();
+      state.stageIndex = idx;
+      state.exerciseIndex = 0;
+      if (idx === 4) state.roleplayPhase = 'briefing';
+      renderLessonView();
+    }
 
     function nextLessonItem(delta) {
       const stages = state.lesson.stages;
@@ -48916,8 +48949,7 @@
         if (state.stageIndex > 0) { state.stageIndex--; state.exerciseIndex = stages[state.stageIndex].exercises.length - 1; }
         else state.exerciseIndex = 0;
       } else state.exerciseIndex = nextIdx;
-      state.lastEvaluation = null;
-      state.showManualInput = false;
+      clearEvaluationState();
       renderLessonView();
     }
 
@@ -48944,8 +48976,7 @@
     function nextListItem(delta) {
       const list = state.activeTab === 'shadowing' ? state.shadowingList : state.commonList;
       state.exerciseIndex = (state.exerciseIndex + delta + list.length) % list.length;
-      state.lastEvaluation = null;
-      state.showManualInput = false;
+      clearEvaluationState();
       renderActiveTab();
     }
 
@@ -49042,6 +49073,228 @@
       `;
     }
 
+    function togglePlayUserAudio() {
+      if (!state.lastUserAudioUrl) {
+        showMicNotice('No hay grabación de tu voz disponible para reproducir.');
+        return;
+      }
+      const icon = document.getElementById('user-audio-icon');
+      const label = document.getElementById('user-audio-label');
+
+      if (state._userAudioPlayer && !state._userAudioPlayer.paused) {
+        state._userAudioPlayer.pause();
+        state._userAudioPlayer.currentTime = 0;
+        if (icon) icon.textContent = '🎧';
+        if (label) label.textContent = 'Escuchar mi pronunciación';
+        return;
+      }
+
+      if (window.speechSynthesis) window.speechSynthesis.cancel();
+      try {
+        state._userAudioPlayer = new Audio(state.lastUserAudioUrl);
+        if (icon) icon.textContent = '⏸️';
+        if (label) label.textContent = 'Pausar mi audio';
+
+        state._userAudioPlayer.onended = () => {
+          if (icon) icon.textContent = '🎧';
+          if (label) label.textContent = 'Escuchar mi pronunciación';
+        };
+        state._userAudioPlayer.onerror = () => {
+          if (icon) icon.textContent = '🎧';
+          if (label) label.textContent = 'Escuchar mi pronunciación';
+        };
+        state._userAudioPlayer.play().catch(e => {
+          console.warn('User audio play error:', e);
+          if (icon) icon.textContent = '🎧';
+          if (label) label.textContent = 'Escuchar mi pronunciación';
+        });
+      } catch (err) {
+        console.warn('Audio play exception:', err);
+      }
+    }
+
+    function focusWordTrainer(idx) {
+      state.wordTrainerState = { activeIndex: idx, status: 'idle', lastHeard: '' };
+      renderActiveTab().then(() => {
+        setTimeout(() => {
+          const row = document.getElementById(`word-row-${idx}`);
+          if (row) {
+            row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            row.classList.add('ring-2', 'ring-amber-400');
+          }
+        }, 50);
+      });
+    }
+
+    function levenshteinDistance(a, b) {
+      if (!a) return (b || '').length;
+      if (!b) return a.length;
+      const matrix = [];
+      for (let i = 0; i <= b.length; i++) matrix[i] = [i];
+      for (let j = 0; j <= a.length; j++) matrix[0][j] = j;
+      for (let i = 1; i <= b.length; i++) {
+        for (let j = 1; j <= a.length; j++) {
+          if (b.charAt(i - 1) === a.charAt(j - 1)) {
+            matrix[i][j] = matrix[i - 1][j - 1];
+          } else {
+            matrix[i][j] = Math.min(
+              matrix[i - 1][j - 1] + 1,
+              Math.min(matrix[i][j - 1] + 1, matrix[i - 1][j] + 1)
+            );
+          }
+        }
+      }
+      return matrix[b.length][a.length];
+    }
+
+    async function recordSingleWord(wordIndex, targetWord, exId) {
+      if (state._activeWordTrainerRec) {
+        try { state._activeWordTrainerRec.stop(); } catch (_) {}
+        state._activeWordTrainerRec = null;
+        state.wordTrainerState = { activeIndex: null, status: 'idle', lastHeard: '' };
+        await renderActiveTab();
+        return;
+      }
+
+      await VoiceSession.ensureMicPermission();
+      const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SR) {
+        showMicNotice('Tu navegador no soporta reconocimiento de voz. Usa Chrome o Edge.');
+        return;
+      }
+
+      if (window.speechSynthesis) window.speechSynthesis.cancel();
+      if (state._userAudioPlayer && !state._userAudioPlayer.paused) {
+        state._userAudioPlayer.pause();
+      }
+
+      state.wordTrainerState = { activeIndex: wordIndex, status: 'recording', lastHeard: '' };
+      const btn = document.getElementById(`btn-re-record-${wordIndex}`);
+      if (btn) {
+        btn.className = 'px-3 py-1.5 rounded-lg bg-rose-600 animate-pulse text-white text-xs font-bold flex items-center gap-1.5 shadow transition';
+        btn.innerHTML = '<span>🎙️</span><span>Detener toma</span>';
+      }
+
+      const rec = new SR();
+      state._activeWordTrainerRec = rec;
+      rec.lang = state.speechLang || 'en-US';
+      rec.continuous = false;
+      rec.interimResults = false;
+      rec.maxAlternatives = 4;
+
+      let heardTranscript = '';
+      let alternatives = [];
+      rec.onresult = (e) => {
+        if (e.results && e.results[0]) {
+          heardTranscript = (e.results[0][0].transcript || '').trim();
+          for (let i = 0; i < e.results[0].length; i++) {
+            alternatives.push((e.results[0][i].transcript || '').trim());
+          }
+        }
+      };
+
+      rec.onerror = (e) => {
+        console.warn('Word trainer recognition error:', e.error);
+      };
+
+      rec.onend = async () => {
+        state._activeWordTrainerRec = null;
+        const clean = s => (s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+        const expClean = clean(targetWord);
+        const heardClean = clean(heardTranscript);
+        const altsClean = alternatives.map(clean);
+
+        const isMatch = expClean === heardClean ||
+          heardClean.includes(expClean) ||
+          (expClean.length >= 4 && expClean.includes(heardClean) && heardClean.length >= 3) ||
+          altsClean.some(a => a === expClean || a.includes(expClean)) ||
+          levenshteinDistance(expClean, heardClean) <= (expClean.length > 5 ? 2 : 1);
+
+        if (isMatch) {
+          await handleCorrectedWordTake(wordIndex, targetWord, exId);
+        } else {
+          state.wordTrainerState = {
+            activeIndex: wordIndex,
+            status: 'retry',
+            lastHeard: heardTranscript || 'no detectado'
+          };
+          await renderActiveTab();
+        }
+      };
+
+      try {
+        rec.start();
+      } catch (err) {
+        state._activeWordTrainerRec = null;
+        state.wordTrainerState = { activeIndex: null, status: 'idle', lastHeard: '' };
+        await renderActiveTab();
+      }
+    }
+
+    async function handleCorrectedWordTake(wordIndex, targetWord, exId) {
+      if (!state.lastEvaluation || !state.lastEvaluation.evaluation) return;
+      const ev = state.lastEvaluation.evaluation;
+      const fb = state.lastEvaluation.feedback || {};
+
+      if (ev.words && ev.words[wordIndex]) {
+        ev.words[wordIndex].status = 'correct';
+        ev.words[wordIndex].heard = targetWord;
+      }
+
+      const totalWords = (ev.words || []).length || 1;
+      const correctCount = (ev.words || []).filter(w => w.status === 'correct').length;
+      ev.accuracy = +(correctCount / totalWords).toFixed(2);
+      ev.fluency = Math.max(ev.fluency || 0.8, 0.85);
+      ev.score = +(0.8 * ev.accuracy + 0.2 * ev.fluency).toFixed(2);
+
+      const stageObj = (state.lesson && state.lesson.stages) ? state.lesson.stages[Math.min(state.stageIndex, 3)] : null;
+      const curEx = stageObj ? stageObj.exercises[state.exerciseIndex] : null;
+      const passThreshold = (curEx && curEx.pass_threshold) ? curEx.pass_threshold : 0.7;
+      ev.passed = ev.score >= passThreshold;
+
+      const norm = s => (s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+      if (fb.tips) {
+        fb.tips = fb.tips.filter(t => norm(t.word) !== norm(targetWord));
+      }
+      if (ev.passed) {
+        fb.message_es = '¡Excelente pronunciación! Versión corregida completada con éxito.';
+      } else {
+        fb.message_es = `¡Buena toma para "${targetWord}"! Corrige las palabras restantes para superar la lección.`;
+      }
+
+      state.wordTrainerState = { activeIndex: wordIndex, status: 'success', lastHeard: targetWord };
+
+      const scenId = state.currentScenario ? state.currentScenario.id : '';
+      const scenarioAttempts = state.practiceHistory.filter(h => h.scenarioId === scenId);
+      const versionNum = scenarioAttempts.length + 1;
+
+      recordAttemptHistory({
+        id: 'att-' + Date.now(),
+        timestamp: Date.now(),
+        scenarioId: scenId,
+        phraseId: curEx ? curEx.phrase_id : '',
+        stageType: curEx ? curEx.type : 'exercise',
+        stageLabel: (curEx && STAGE_LABELS[curEx.type]) ? STAGE_LABELS[curEx.type].title : '',
+        score: Math.round(ev.score * 100),
+        passed: ev.passed,
+        transcript: (ev.words || []).map(w => w.heard || w.expected).join(' '),
+        expected: ev.expected_text || (curEx ? curEx.expected_text : ''),
+        errors: (ev.words || []).filter(w => w.status !== 'correct').map(w => ({
+          token: w.expected || w.heard || '',
+          status: w.status,
+          heard: w.heard || null
+        })),
+        feedback: `Versión ${versionNum} (Corregida: "${targetWord}" perfeccionada)`,
+        isCorrectedVersion: true
+      });
+
+      if (ev.passed) {
+        await refreshProgress();
+      }
+
+      await renderActiveTab();
+    }
+
     function renderEvaluationResult(ex = null, navFn = null) {
       if (!state.lastEvaluation) return '';
       const { evaluation, feedback } = state.lastEvaluation;
@@ -49127,7 +49380,7 @@
         </div>
       `) : '';
 
-      // 2. Revealed Full Correct Model Sentence with target highlighted
+      // 2. Revealed Full Correct Model Sentence with target highlighted & Audio playback controls
       const correctSentence = (ex ? (ex.expected_text || (ex.prompt && ex.prompt.display_text) || '') : '') || evaluation.expected_text || '';
       const correctEsc = escapeJs(correctSentence);
       const translationText = (ex && ex.prompt && ex.prompt.translation) || (origPhrase ? origPhrase.translation : '');
@@ -49141,13 +49394,18 @@
 
       const revealedSentenceHtml = `
         <div class="p-4 sm:p-5 rounded-2xl bg-slate-900/90 border border-slate-700/80 space-y-2.5 text-left shadow-lg">
-          <div class="flex items-center justify-between gap-2">
+          <div class="flex flex-wrap items-center justify-between gap-2">
             <span class="text-[11px] font-black uppercase tracking-wider text-indigo-300 flex items-center gap-1.5">
               <span>📖</span><span>Frase Correcta Completa:</span>
             </span>
-            <button onclick="speakText('${correctEsc}')" class="px-3 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-md">
-              <span>🔊</span><span>Escuchar modelo</span>
-            </button>
+            <div class="flex flex-wrap items-center gap-2">
+              <button onclick="speakText('${correctEsc}')" class="px-3 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-md">
+                <span>🔊</span><span>Escuchar modelo</span>
+              </button>
+              <button id="btn-play-user-audio" onclick="togglePlayUserAudio()" class="px-3 py-1.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-md ${state.lastUserAudioUrl ? '' : 'opacity-50 cursor-not-allowed'}" ${state.lastUserAudioUrl ? '' : 'disabled'}>
+                <span id="user-audio-icon">🎧</span><span id="user-audio-label">Escuchar mi pronunciación</span>
+              </button>
+            </div>
           </div>
           <div class="text-base sm:text-xl font-bold text-white leading-relaxed">
             ${sentenceHtml}
@@ -49159,18 +49417,109 @@
       // 3. Word-by-word pronunciation accuracy badges
       const statusBadge = {
         correct: 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30',
-        mispronounced: 'bg-amber-500/15 text-amber-300 border-amber-500/30',
-        missing: 'bg-rose-500/15 text-rose-300 border-rose-500/30 line-through',
+        mispronounced: 'bg-amber-500/15 text-amber-300 border-amber-500/30 ring-1 ring-amber-500/40',
+        missing: 'bg-rose-500/15 text-rose-300 border-rose-500/30 line-through ring-1 ring-rose-500/40',
         extra: 'bg-purple-500/15 text-purple-300 border-purple-500/30',
       };
-      const wordsHtml = (evaluation.words || []).map(w => {
+      const wordsHtml = (evaluation.words || []).map((w, idx) => {
         const token = w.expected || w.heard || '';
+        const isWeak = w.status !== 'correct';
+        const clickAction = isWeak
+          ? `onclick="focusWordTrainer(${idx})"`
+          : `onclick="openTranslateOverlay('${escapeJs(token)}', '${fullEsc}', '${scenEsc}', '${phrEsc}')"`;
+        const titleText = isWeak
+          ? `Toca para corregir '${escapeJs(token)}'`
+          : `Toca para ver traducción`;
         return `
-          <span onclick="openTranslateOverlay('${escapeJs(token)}', '${fullEsc}', '${scenEsc}', '${phrEsc}')" class="cursor-pointer px-2.5 py-1 rounded-lg border text-xs font-medium ${statusBadge[w.status] || 'border-slate-700'}">
-            ${token}
+          <span ${clickAction} title="${titleText}" class="cursor-pointer px-2.5 py-1 rounded-lg border text-xs font-medium transition hover:scale-105 ${statusBadge[w.status] || 'border-slate-700'}">
+            ${token}${isWeak ? ' <span class="text-[10px]">🎯</span>' : ''}
           </span>
         `;
       }).join('');
+
+      // 4. Interactive Word-by-Word Trainer
+      const weakWords = (evaluation.words || [])
+        .map((w, idx) => ({ ...w, idx }))
+        .filter(w => w.status !== 'correct');
+
+      let wordTrainerHtml = '';
+      if (weakWords.length > 0) {
+        wordTrainerHtml = `
+          <div id="word-trainer-card" class="p-4 rounded-2xl bg-slate-900/90 border border-amber-500/30 space-y-3">
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="p-1.5 rounded-xl bg-amber-500/20 text-amber-300 text-sm">🎯</span>
+                <div>
+                  <span class="text-xs font-black uppercase tracking-wider text-amber-400">Entrenador Palabra por Palabra</span>
+                  <p class="text-[11px] text-slate-300">Escucha y regraba cada palabra hasta conseguir una buena toma para crear tu Versión Corregida.</p>
+                </div>
+              </div>
+              <span class="text-[11px] font-extrabold px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40">
+                ${weakWords.length} por corregir
+              </span>
+            </div>
+
+            <div class="space-y-2 pt-1">
+              ${weakWords.map(({ expected, heard, status, idx }) => {
+                const isCurrent = state.wordTrainerState && state.wordTrainerState.activeIndex === idx;
+                const tState = isCurrent ? state.wordTrainerState : {};
+                const isRec = tState.status === 'recording';
+                const isRetry = tState.status === 'retry';
+                const isSuccess = tState.status === 'success';
+
+                let rowStatusHtml = '';
+                if (isRec) {
+                  rowStatusHtml = `<span class="animate-pulse text-rose-400 font-bold">🎙️ Escuchando "${escapeJs(expected)}"... ¡Pronuncia ahora!</span>`;
+                } else if (isRetry) {
+                  rowStatusHtml = `<span class="text-amber-300 font-medium">⚠️ Escuchamos "${escapeJs(tState.lastHeard || '')}". Toca regrabar e intenta de nuevo.</span>`;
+                } else if (isSuccess) {
+                  rowStatusHtml = `<span class="text-emerald-400 font-bold">✔ ¡Toma perfecta!</span>`;
+                } else {
+                  rowStatusHtml = `<span class="text-slate-400">${status === 'missing' ? 'Palabra omitida en la toma anterior' : `Pronunciada como “${escapeJs(heard || '')}”`}</span>`;
+                }
+
+                return `
+                  <div id="word-row-${idx}" class="p-3 rounded-xl bg-slate-950/80 border ${isCurrent ? 'border-amber-400/80 ring-2 ring-amber-400/30' : 'border-slate-800'} flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 transition">
+                    <div class="flex items-center gap-3">
+                      <span class="text-base font-extrabold text-amber-200 font-mono px-3 py-1 rounded-lg bg-amber-500/15 border border-amber-500/30">
+                        ${expected}
+                      </span>
+                      <div class="text-xs">
+                        <div class="font-semibold text-white">${rowStatusHtml}</div>
+                        <div class="text-[10px] text-slate-400">Objetivo fonético individual</div>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-2 self-end sm:self-auto shrink-0">
+                      <button onclick="speakText('${escapeJs(expected)}', 0.82)"
+                        title="Escuchar palabra modelo despacio"
+                        class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold flex items-center gap-1.5 transition">
+                        <span>🔊</span><span>Escuchar</span>
+                      </button>
+                      <button id="btn-re-record-${idx}" onclick="recordSingleWord(${idx}, '${escapeJs(expected)}', '${ex ? ex.id : ''}')"
+                        class="px-3 py-1.5 rounded-lg ${isRec ? 'bg-rose-600 animate-pulse text-white' : 'bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950'} text-xs font-extrabold flex items-center gap-1.5 shadow-md transition">
+                        <span>🎙️</span><span>${isRec ? 'Detener toma' : 'Regrabar palabra'}</span>
+                      </button>
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+        `;
+      } else {
+        wordTrainerHtml = `
+          <div class="p-3.5 rounded-2xl bg-emerald-950/40 border border-emerald-500/40 flex items-center justify-between gap-2 shadow-inner">
+            <div class="flex items-center gap-2.5">
+              <span class="text-emerald-400 text-lg">✨</span>
+              <div>
+                <span class="text-xs font-extrabold text-emerald-300">¡Versión corregida completada con éxito!</span>
+                <p class="text-[11px] text-slate-300">Todas las palabras han alcanzado la pronunciación óptima.</p>
+              </div>
+            </div>
+            <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[11px] font-bold">100% Precisión</span>
+          </div>
+        `;
+      }
 
       const tipsHtml = (feedback.tips || []).map(t => `
         <li class="text-xs text-slate-300 flex items-start gap-1.5">
@@ -49182,7 +49531,7 @@
         <div class="pt-3 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-3">
           <button onclick="recordWithMicrophone('${ex ? ex.id : ''}', '${fullEsc}', '')"
             class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold flex items-center justify-center gap-2 transition">
-            <span>🎙️</span><span>Repetir pronunciación</span>
+            <span>🎙️</span><span>Repetir pronunciación completa</span>
           </button>
           <button id="btn-continue-exercise" onclick="${navFn}(1)"
             class="w-full sm:w-auto px-8 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-extrabold text-sm shadow-xl shadow-emerald-500/25 flex items-center justify-center gap-2 transition transform hover:scale-[1.02] active:scale-95">
@@ -49211,6 +49560,7 @@
           </div>
 
           <div class="flex flex-wrap gap-1.5 pt-1">${wordsHtml}</div>
+          ${wordTrainerHtml}
           ${tipsHtml ? `<ul class="space-y-1 pt-1">${tipsHtml}</ul>` : ''}
           ${continueBtnHtml}
         </div>
@@ -49422,6 +49772,11 @@
             if (btn) btn.classList.remove('recording-pulse');
             if (label) label.textContent = 'Evaluando…';
             const blob = new Blob(chunks, { type: 'audio/webm' });
+            if (state.lastUserAudioUrl) {
+              try { URL.revokeObjectURL(state.lastUserAudioUrl); } catch (_) {}
+            }
+            state.lastUserAudioUrl = URL.createObjectURL(blob);
+            state.lastUserAudioBlob = blob;
             const fd = new FormData();
             fd.append('audio', blob, 'speech.webm');
             const url = cardId ? `/v1/review/${cardId}/attempts` : `/v1/exercises/${exId}/attempts`;
@@ -49466,9 +49821,44 @@
       }
       clearTimeout(state._autoTimer);
       if (window.speechSynthesis) window.speechSynthesis.cancel();
+      if (state._userAudioPlayer && !state._userAudioPlayer.paused) {
+        state._userAudioPlayer.pause();
+      }
       showMicNotice('');
       if (btn) btn.classList.add('recording-pulse');
       if (label) label.textContent = 'Escuchando… habla con calma (toca para terminar)';
+
+      // Parallel user audio recorder for playback
+      let audioChunks = [];
+      let userAudioRecorder = null;
+      if (VoiceSession.stream && window.MediaRecorder) {
+        try {
+          userAudioRecorder = new MediaRecorder(VoiceSession.stream);
+          userAudioRecorder.ondataavailable = (e) => {
+            if (e.data && e.data.size > 0) audioChunks.push(e.data);
+          };
+          userAudioRecorder.onstop = () => {
+            try {
+              const mime = userAudioRecorder.mimeType || 'audio/webm';
+              const blob = new Blob(audioChunks, { type: mime });
+              if (state.lastUserAudioUrl) {
+                try { URL.revokeObjectURL(state.lastUserAudioUrl); } catch (_) {}
+              }
+              state.lastUserAudioUrl = URL.createObjectURL(blob);
+              state.lastUserAudioBlob = blob;
+              const pBtn = document.getElementById('btn-play-user-audio');
+              if (pBtn) {
+                pBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                pBtn.removeAttribute('disabled');
+              }
+            } catch (_) {}
+          };
+          userAudioRecorder.start();
+          state._userMediaRecorder = userAudioRecorder;
+        } catch (e) {
+          console.warn('Audio capture setup warning:', e);
+        }
+      }
 
       const rec = new SR();
       state._activeExerciseRec = rec;
@@ -49482,6 +49872,10 @@
         if (ended) return;
         clearTimeout(state._micSilenceTimer);
         clearTimeout(state._micMaxTimer);
+        if (state._userMediaRecorder && state._userMediaRecorder.state === 'recording') {
+          try { state._userMediaRecorder.stop(); } catch (_) {}
+          state._userMediaRecorder = null;
+        }
         try { rec.stop(); } catch (_) {}
       };
 
@@ -49509,6 +49903,10 @@
         state._activeExerciseRec = null;
         clearTimeout(state._micSilenceTimer);
         clearTimeout(state._micMaxTimer);
+        if (state._userMediaRecorder && state._userMediaRecorder.state === 'recording') {
+          try { state._userMediaRecorder.stop(); } catch (_) {}
+          state._userMediaRecorder = null;
+        }
         if (btn) btn.classList.remove('recording-pulse');
         if (label) label.textContent = 'Toca para hablar';
         const transcript = (finalTranscript + ' ' + lastInterim).trim();
@@ -49523,6 +49921,10 @@
       };
       try { rec.start(); } catch (_) {
         state._activeExerciseRec = null;
+        if (state._userMediaRecorder && state._userMediaRecorder.state === 'recording') {
+          try { state._userMediaRecorder.stop(); } catch (_) {}
+          state._userMediaRecorder = null;
+        }
         if (btn) btn.classList.remove('recording-pulse');
         if (label) label.textContent = 'Toca para hablar';
       }
