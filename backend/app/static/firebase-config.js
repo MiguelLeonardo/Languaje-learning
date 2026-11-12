@@ -17,13 +17,13 @@ import { getAuth, signInAnonymously, GoogleAuthProvider, signInWithPopup } from 
 import { initializeFirestore, getFirestore, enableNetwork, doc, setDoc, getDoc } from "firebase/firestore";
 
 export const DEFAULT_PROJECT_CONFIG = {
-  apiKey: "",
+  apiKey: "AIzaSyCzMgjgyy3m9PZVCYoUgPYERActP9Wpji8",
   authDomain: "shadowing-efcab.firebaseapp.com",
   projectId: "shadowing-efcab",
   storageBucket: "shadowing-efcab.firebasestorage.app",
-  messagingSenderId: "",
-  appId: "",
-  measurementId: "",
+  messagingSenderId: "679028690937",
+  appId: "1:679028690937:web:97def90cf97255ed2af728",
+  measurementId: "G-KK84CSKQCP",
 };
 
 export function parseFirebaseConfigInput(rawInput) {
