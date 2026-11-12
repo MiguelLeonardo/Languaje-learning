@@ -340,49 +340,81 @@
 
   <!-- Main Workspace -->
   <div class="max-w-6xl mx-auto w-full flex-1 p-4 sm:p-6 flex flex-col">
-    <!-- VIEW 1: Hub de Selección de Nivel y Temáticas (Catálogo) -->
-    <section id="view-catalog" class="space-y-6">
-      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-slate-900/80 border border-slate-800/90 rounded-3xl p-5 sm:p-6">
+    <!-- VIEW 1: Pantalla de Configuración (Idioma, Nivel y Temática) -->
+    <section id="view-setup" class="space-y-6 max-w-4xl mx-auto w-full">
+      <div class="bg-slate-900/80 border border-slate-800/90 rounded-3xl p-5 sm:p-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <span class="text-[11px] font-semibold uppercase tracking-wider text-indigo-400">Currículo Conversacional (Solo Voz)</span>
-          <h1 class="text-xl sm:text-2xl font-bold text-white mt-1">Elige tu Nivel y Temática</h1>
-          <p class="text-xs text-slate-400 mt-1">180 escenarios estructurados con progresión de habla natural y conversación libre con IA.</p>
+          <span class="text-[11px] font-semibold uppercase tracking-wider text-indigo-400">Paso 1 de 2 — Configuración Personalizada</span>
+          <h1 class="text-xl sm:text-2xl font-bold text-white mt-1">Configura tu Idioma, Nivel y Temática</h1>
+          <p class="text-xs text-slate-400 mt-1">Personaliza tu ruta de práctica con modismos, phrasal verbs y conversación en vivo.</p>
         </div>
-        <div class="flex items-center gap-2">
-          <span class="text-xs text-slate-400">Filtro activo:</span>
+        <div class="flex items-center gap-2 shrink-0">
           <span id="current-filter-badge" class="px-3.5 py-1.5 rounded-full bg-indigo-500/15 border border-indigo-500/30 text-indigo-300 text-xs font-semibold">Todos los niveles</span>
         </div>
       </div>
 
-      <!-- Selector 1: Nivel CEFR -->
+      <!-- Selector 1: Idioma / Acento -->
       <div class="bg-slate-900/60 border border-slate-800/90 rounded-3xl p-5 space-y-3">
         <div class="flex items-center justify-between">
-          <h2 class="text-xs font-semibold uppercase tracking-wider text-slate-400">1. Selecciona tu Nivel de Inglés</h2>
+          <h2 class="text-xs font-semibold uppercase tracking-wider text-slate-400">1. Selecciona el Idioma a Practicar</h2>
+          <span id="lang-badge" class="text-xs text-indigo-300 font-medium">Inglés (EE. UU.)</span>
+        </div>
+        <div id="lang-buttons" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs font-semibold"></div>
+      </div>
+
+      <!-- Selector 2: Nivel CEFR -->
+      <div class="bg-slate-900/60 border border-slate-800/90 rounded-3xl p-5 space-y-3">
+        <div class="flex items-center justify-between">
+          <h2 class="text-xs font-semibold uppercase tracking-wider text-slate-400">2. Selecciona tu Nivel</h2>
           <span id="band-badge" class="text-xs text-indigo-300 font-medium">Todos</span>
         </div>
         <div id="cefr-buttons" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2 text-xs font-semibold"></div>
       </div>
 
-      <!-- Selector 2: Temáticas / Módulos -->
+      <!-- Selector 3: Temáticas / Módulos -->
       <div class="bg-slate-900/60 border border-slate-800/90 rounded-3xl p-5 space-y-3">
         <div class="flex items-center justify-between">
-          <h2 class="text-xs font-semibold uppercase tracking-wider text-slate-400">2. Selecciona una Temática</h2>
+          <h2 class="text-xs font-semibold uppercase tracking-wider text-slate-400">3. Selecciona una Temática</h2>
           <span id="module-badge" class="text-xs text-indigo-300 font-medium">Todas</span>
         </div>
         <div id="module-buttons" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-2 text-xs"></div>
       </div>
 
-      <!-- Grid de Lecciones Disponibles -->
-      <div class="space-y-3">
-        <div class="flex items-center justify-between px-1">
-          <div class="flex items-center gap-2">
-            <h2 class="text-sm font-bold text-white">Lecciones disponibles</h2>
-            <span id="scenario-count-badge" class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-indigo-300 font-mono font-semibold">180</span>
-          </div>
-          <span class="text-xs text-slate-400">Toca cualquier lección para comenzar tu práctica progresiva</span>
+      <!-- CTA para ir a la Pantalla 2 (Módulos Filtrados) -->
+      <div class="bg-gradient-to-r from-indigo-950/60 via-slate-900 to-violet-950/60 border border-indigo-500/40 rounded-3xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl">
+        <div class="space-y-1 text-center sm:text-left">
+          <div class="text-sm font-bold text-white">Tu selección está lista</div>
+          <p id="setup-summary-text" class="text-xs text-slate-300">180 módulos disponibles según tu filtro.</p>
         </div>
-        <div id="scenario-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5"></div>
+        <button onclick="goToCatalogView()"
+          class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-extrabold text-sm shadow-xl shadow-indigo-600/30 flex items-center justify-center gap-2 transition transform hover:scale-[1.02] active:scale-95">
+          <span>Ver Módulos Filtrados</span>
+          <span id="setup-count-pill" class="px-2 py-0.5 rounded-lg bg-white/20 text-xs font-mono">180</span>
+          <span>→</span>
+        </button>
       </div>
+    </section>
+
+    <!-- VIEW 2: Módulos y Lecciones Filtradas -->
+    <section id="view-catalog" class="hidden space-y-6">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-slate-900/80 border border-slate-800/90 rounded-3xl p-5 sm:p-6">
+        <div class="flex flex-wrap items-center gap-3">
+          <button onclick="goToSetupView()" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold flex items-center gap-2 transition">
+            <span>←</span><span>Cambiar Idioma, Nivel o Temática</span>
+          </button>
+          <div>
+            <h1 class="text-lg sm:text-xl font-bold text-white">Módulos Disponibles</h1>
+            <p id="catalog-filter-summary" class="text-xs text-indigo-300 mt-0.5">Todos los niveles • Todas las temáticas</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-xs text-slate-400">Mostrando</span>
+          <span id="scenario-count-badge" class="text-xs px-3 py-1 rounded-full bg-indigo-500/20 border border-indigo-500/30 text-indigo-300 font-mono font-bold">180</span>
+          <span class="text-xs text-slate-400">lecciones</span>
+        </div>
+      </div>
+
+      <div id="scenario-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5"></div>
     </section>
 
     <!-- VIEW 2: Pantalla de Ejercicios Progresiva (Solo Voz) -->
@@ -390,7 +422,7 @@
       <!-- Barra superior de la lección con botón para volver a la selección -->
       <div class="flex flex-wrap items-center justify-between gap-3 bg-slate-900/80 border border-slate-800/90 rounded-2xl p-3 px-4">
         <button onclick="goToCatalogView()" class="px-3.5 py-2 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-200 text-xs font-semibold flex items-center gap-2 transition">
-          <span>←</span><span>Temáticas y Niveles</span>
+          <span>←</span><span>Volver a Módulos</span>
         </button>
         <div id="active-lesson-breadcrumbs" class="flex items-center gap-2 text-xs truncate">
           <!-- e.g. [B1] ✈️ Viajes: Reservar vuelo -->
@@ -48070,7 +48102,7 @@
       if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
         const u = new SpeechSynthesisUtterance(text);
-        u.lang = 'en-US';
+        u.lang = state.speechLang || 'en-US';
         u.rate = 0.95;
         let finished = false;
         const markDone = () => {
@@ -48241,6 +48273,7 @@
       } catch (_) {
         state.backendOnline = false;
       }
+      renderLangButtons();
       renderCefrButtons();
       renderModuleButtons();
       await loadScenarios();
@@ -48291,13 +48324,51 @@
       updateFilterSummaryBadge();
     }
 
+    const SPEECH_LANGS = [
+      { id: 'en-US', flag: '🇺🇸', name: 'Inglés (Estados Unidos)', desc: 'Pronunciación y expresiones cotidianas de EE. UU.' },
+      { id: 'en-GB', flag: '🇬🇧', name: 'Inglés (Reino Unido)', desc: 'Pronunciación británica y modismos del Reino Unido' },
+    ];
+
+    function renderLangButtons() {
+      const container = document.getElementById('lang-buttons');
+      if (container) {
+        container.innerHTML = SPEECH_LANGS.map(l => `
+          <button onclick="selectLang('${l.id}')" class="p-3 rounded-2xl border text-left transition flex items-center gap-3 ${
+            state.speechLang === l.id ? 'bg-indigo-600/25 border-indigo-500/60 text-white font-bold ring-1 ring-indigo-500/50' : 'bg-slate-900 border-slate-800/80 text-slate-300 hover:bg-slate-800/80 hover:text-white'
+          }">
+            <span class="text-2xl">${l.flag}</span>
+            <div class="min-w-0">
+              <div class="text-xs font-bold truncate">${l.name}</div>
+              <div class="text-[11px] font-normal text-slate-400 truncate">${l.desc}</div>
+            </div>
+          </button>
+        `).join('');
+      }
+      const active = SPEECH_LANGS.find(l => l.id === state.speechLang) || SPEECH_LANGS[0];
+      const badge = document.getElementById('lang-badge');
+      if (badge) badge.textContent = active.name;
+      updateFilterSummaryBadge();
+    }
+
+    function selectLang(langId) {
+      state.speechLang = langId;
+      localStorage.setItem('sf_speech_lang', langId);
+      if (VoiceSession && VoiceSession.recognition) {
+        VoiceSession.recognition.lang = langId;
+      }
+      renderLangButtons();
+    }
+
     function updateFilterSummaryBadge() {
-      const b = document.getElementById('current-filter-badge');
-      if (!b) return;
       const mod = TOPIC_MODULES.find(m => m.id === state.topic);
       const modText = (mod && mod.id !== 'ALL') ? mod.title_es : 'Todas las temáticas';
       const cefrText = state.cefr !== 'ALL' ? `Nivel ${state.cefr}` : 'Todos los niveles';
-      b.textContent = `${cefrText} • ${modText}`;
+      const lang = SPEECH_LANGS.find(l => l.id === state.speechLang) || SPEECH_LANGS[0];
+      const summary = `${lang.flag} ${lang.id === 'en-GB' ? 'Inglés UK' : 'Inglés US'} • ${cefrText} • ${modText}`;
+      const b = document.getElementById('current-filter-badge');
+      if (b) b.textContent = summary;
+      const catSum = document.getElementById('catalog-filter-summary');
+      if (catSum) catSum.textContent = summary;
     }
 
     async function selectCefr(lv) {
@@ -48328,6 +48399,10 @@
       }
       const countBadge = document.getElementById('scenario-count-badge');
       if (countBadge) countBadge.textContent = `${state.scenarios.length}`;
+      const setupPill = document.getElementById('setup-count-pill');
+      if (setupPill) setupPill.textContent = `${state.scenarios.length}`;
+      const setupTxt = document.getElementById('setup-summary-text');
+      if (setupTxt) setupTxt.textContent = `${state.scenarios.length} módulos encontrados con tu configuración actual.`;
       if (state.scenarios.length && (!state.currentScenario || !state.scenarios.some(s => s.id === state.currentScenario.id))) {
         await selectScenario(state.scenarios[0].id, false);
       } else {
@@ -48393,9 +48468,18 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
+    function goToSetupView() {
+      if (typeof VoiceSession !== 'undefined') VoiceSession.stopListening();
+      state.viewMode = 'setup';
+      updateViewVisibility();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
     function goToCatalogView() {
+      if (typeof VoiceSession !== 'undefined') VoiceSession.stopListening();
       state.viewMode = 'catalog';
       updateViewVisibility();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function openSrsView() {
@@ -48405,14 +48489,22 @@
     }
 
     function updateViewVisibility() {
+      const setup = document.getElementById('view-setup');
       const cat = document.getElementById('view-catalog');
       const ex = document.getElementById('view-exercise');
       const navBtn = document.getElementById('nav-catalog-btn');
-      if (state.viewMode === 'catalog') {
-        if (cat) cat.classList.remove('hidden');
+      if (state.viewMode === 'setup') {
+        if (setup) setup.classList.remove('hidden');
+        if (cat) cat.classList.add('hidden');
         if (ex) ex.classList.add('hidden');
         if (navBtn) navBtn.classList.add('hidden');
+      } else if (state.viewMode === 'catalog') {
+        if (setup) setup.classList.add('hidden');
+        if (cat) cat.classList.remove('hidden');
+        if (ex) ex.classList.add('hidden');
+        if (navBtn) navBtn.classList.remove('hidden');
       } else {
+        if (setup) setup.classList.add('hidden');
         if (cat) cat.classList.add('hidden');
         if (ex) ex.classList.remove('hidden');
         if (navBtn) navBtn.classList.remove('hidden');
@@ -48765,7 +48857,7 @@
         const rec = new SR();
         rec.continuous = true;
         rec.interimResults = true;
-        rec.lang = 'en-US';
+        rec.lang = state.speechLang || 'en-US';
 
         rec.onresult = (e) => {
           if (this.isAiSpeaking) return;
@@ -48795,7 +48887,7 @@
             clearTimeout(this.silenceTimeout);
             this.silenceTimeout = setTimeout(() => {
               this.commitTurn();
-            }, 1400);
+            }, 4000);
           }
         };
 
@@ -48888,16 +48980,30 @@
     async function recordWithMicrophone(exId, fallbackText, cardId) {
       const btn = document.getElementById('mic-btn');
       const label = document.getElementById('mic-label');
+
+      // If already recording, clicking stops and evaluates immediately
+      if (state._activeExerciseRec) {
+        clearTimeout(state._micSilenceTimer);
+        clearTimeout(state._micMaxTimer);
+        const active = state._activeExerciseRec;
+        state._activeExerciseRec = null;
+        try { active.stop(); } catch (_) {}
+        return;
+      }
+
       await VoiceSession.ensureMicPermission();
 
       if ((state.keys.openai || state.keys.googleCloud) && VoiceSession.stream && state.backendOnline) {
         try {
           const rec = new MediaRecorder(VoiceSession.stream);
+          state._activeExerciseRec = rec;
           const chunks = [];
           if (btn) btn.classList.add('recording-pulse');
-          if (label) label.textContent = 'Escuchando…';
+          if (label) label.textContent = 'Escuchando… (toca para enviar)';
           rec.ondataavailable = e => chunks.push(e.data);
           rec.onstop = async () => {
+            state._activeExerciseRec = null;
+            clearTimeout(state._micMaxTimer);
             if (btn) btn.classList.remove('recording-pulse');
             if (label) label.textContent = 'Evaluando…';
             const blob = new Blob(chunks, { type: 'audio/webm' });
@@ -48909,7 +49015,7 @@
             cardId ? await renderSrsView() : await renderActiveTab();
           };
           rec.start();
-          setTimeout(() => { if (rec.state === 'recording') rec.stop(); }, 3200);
+          state._micMaxTimer = setTimeout(() => { if (rec.state === 'recording') rec.stop(); }, 10000);
           return;
         } catch (_) {}
       }
@@ -48923,12 +49029,26 @@
       if (window.speechSynthesis) window.speechSynthesis.cancel();
       showMicNotice('');
       if (btn) btn.classList.add('recording-pulse');
-      if (label) label.textContent = 'Escuchando… habla en inglés';
+      if (label) label.textContent = 'Escuchando… habla con calma (toca para terminar)';
+
       const rec = new SR();
-      rec.lang = 'en-US';
+      state._activeExerciseRec = rec;
+      rec.lang = state.speechLang || 'en-US';
+      rec.continuous = true;
       rec.interimResults = true;
       rec.maxAlternatives = 1;
-      let finalTranscript = '', lastInterim = '', failed = '';
+
+      let finalTranscript = '', lastInterim = '', failed = '', ended = false;
+      const stopRec = () => {
+        if (ended) return;
+        clearTimeout(state._micSilenceTimer);
+        clearTimeout(state._micMaxTimer);
+        try { rec.stop(); } catch (_) {}
+      };
+
+      // Generous initial wait (10s) before timing out if no speech is detected
+      state._micMaxTimer = setTimeout(stopRec, 10000);
+
       rec.onresult = (e) => {
         let interim = '';
         for (let i = e.resultIndex; i < e.results.length; ++i) {
@@ -48936,13 +49056,23 @@
           else interim += e.results[i][0].transcript;
         }
         lastInterim = interim;
-        if (label) label.textContent = `“${(finalTranscript + ' ' + interim).trim()}”`;
+        const current = (finalTranscript + ' ' + interim).trim();
+        if (label && current) label.textContent = `“${current}” (toca para enviar)`;
+
+        // Generous 3.8s silence delay after user stops speaking so natural pauses don't cut off
+        clearTimeout(state._micSilenceTimer);
+        clearTimeout(state._micMaxTimer);
+        state._micSilenceTimer = setTimeout(stopRec, 3800);
       };
       rec.onerror = (e) => { failed = e.error || 'error'; };
       rec.onend = async () => {
+        ended = true;
+        state._activeExerciseRec = null;
+        clearTimeout(state._micSilenceTimer);
+        clearTimeout(state._micMaxTimer);
         if (btn) btn.classList.remove('recording-pulse');
         if (label) label.textContent = 'Toca para hablar';
-        const transcript = (finalTranscript || lastInterim).trim();
+        const transcript = (finalTranscript + ' ' + lastInterim).trim();
         if (!transcript) {
           const msg = (failed === 'not-allowed' || failed === 'service-not-allowed')
             ? 'No tenemos permiso para usar el micrófono. Habilítalo en el navegador e inténtalo de nuevo.'
@@ -48953,6 +49083,7 @@
         await submitAttempt(exId, transcript, cardId);
       };
       try { rec.start(); } catch (_) {
+        state._activeExerciseRec = null;
         if (btn) btn.classList.remove('recording-pulse');
         if (label) label.textContent = 'Toca para hablar';
       }
@@ -49203,7 +49334,7 @@
 
           <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-1">
             <p class="text-[11px] text-slate-400 text-center sm:text-left">
-              Diálogo live continuo. Al pausar de hablar, la IA procesará tu respuesta.
+              Diálogo live continuo. Al hacer una pausa larga (4 s), la IA procesará tu respuesta.
             </p>
             <button onclick="VoiceSession.commitTurn()"
               class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs shadow-md transition flex items-center justify-center gap-1.5">
