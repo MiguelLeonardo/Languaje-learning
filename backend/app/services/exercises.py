@@ -95,6 +95,7 @@ def build_exercise(
             glossary=phrase.glossary,
             visual_hint=phrase.visual_hint,
             audio_text=None,
+            focus_words=[phrase.apply_answer] if phrase.apply_answer else [],
         )
         return Exercise(
             id=exercise_id(scenario.id, phrase.id, kind),

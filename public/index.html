@@ -47969,7 +47969,44 @@
       }
     };
 
-    const IS_TEST_ENV = ['localhost', '127.0.0.1'].includes(location.hostname) || new URLSearchParams(location.search).get('test') === '1' || localStorage.getItem('sf_test_env') === '1';
+    function isTestEnv() {
+      return ['localhost', '127.0.0.1'].includes(location.hostname) ||
+             new URLSearchParams(location.search).get('test') === '1' ||
+             localStorage.getItem('sf_test_env') === '1';
+    }
+    const IS_TEST_ENV = isTestEnv();
+
+    function showDevToast(msg) {
+      let toast = document.getElementById('dev-nav-toast');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'dev-nav-toast';
+        toast.className = 'fixed bottom-6 right-6 z-50 px-4 py-2.5 rounded-2xl bg-slate-900/95 border border-indigo-500/50 text-indigo-200 text-xs font-bold shadow-2xl backdrop-blur-md transition-all duration-300 pointer-events-none flex items-center gap-2 transform translate-y-2 opacity-0';
+        document.body.appendChild(toast);
+      }
+      toast.innerHTML = msg;
+      toast.classList.remove('opacity-0', 'translate-y-2');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      clearTimeout(toast._timer);
+      toast._timer = setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'translate-y-2');
+      }, 2000);
+    }
+
+    function toggleTestEnv() {
+      const active = isTestEnv();
+      if (active) {
+        localStorage.removeItem('sf_test_env');
+        showDevToast('🔒 Modo Producción (Botones de navegación ocultos)');
+      } else {
+        localStorage.setItem('sf_test_env', '1');
+        showDevToast('🛠️ Modo Dev / Test: Botones de navegación activados');
+      }
+      if (state.viewMode === 'exercise') {
+        renderActiveTab();
+      }
+    }
 
     const STAGE_LABELS = {
       shadowing: { title: '1. Escucha', subtitle: 'Escucha e imita el ritmo natural', color: 'bg-sky-500/15 text-sky-300 border-sky-500/30' },
@@ -48078,6 +48115,42 @@
       return res.json();
     }
 
+    // ─── Voice Guide Natural Intonation & Rhythm ──────────────────────────────
+    let _voicesList = [];
+    function loadVoices() {
+      if (typeof window === 'undefined' || !('speechSynthesis' in window)) return [];
+      _voicesList = window.speechSynthesis.getVoices() || [];
+      return _voicesList;
+    }
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      loadVoices();
+      window.speechSynthesis.onvoiceschanged = () => loadVoices();
+    }
+
+    function selectBestNaturalVoice(targetLang = 'en-US') {
+      const voices = _voicesList.length ? _voicesList : loadVoices();
+      if (!voices.length) return null;
+      const langNorm = (targetLang || 'en-US').toLowerCase().replace('_', '-');
+      const langPrefix = langNorm.split('-')[0];
+
+      const englishVoices = voices.filter(v => (v.lang || '').toLowerCase().replace('_', '-').startsWith(langPrefix));
+      const pool = englishVoices.length ? englishVoices : voices;
+
+      const isNatural = v => /natural|neural|online|multilingual/i.test(v.name);
+      const isTopNamed = v => /jenny|guy|aria|ryan|christopher|samantha|daniel|karen|ava|zoe|serena/i.test(v.name);
+      const isEnhanced = v => /enhanced|premium/i.test(v.name);
+      const isGoogle = v => /google/i.test(v.name);
+
+      const exactPool = pool.filter(v => (v.lang || '').toLowerCase().replace('_', '-') === langNorm);
+      const candidates = exactPool.length ? exactPool : pool;
+
+      return candidates.find(isNatural) ||
+             candidates.find(isTopNamed) ||
+             candidates.find(isEnhanced) ||
+             candidates.find(isGoogle) ||
+             candidates[0] || null;
+    }
+
     async function speakText(text, onComplete = null) {
       if (!text) { if (onComplete) onComplete(); return; }
       if (state.backendOnline && (state.keys.elevenlabs || state.keys.openai || state.keys.googleCloud)) {
@@ -48101,9 +48174,32 @@
       }
       if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
-        const u = new SpeechSynthesisUtterance(text);
-        u.lang = state.speechLang || 'en-US';
-        u.rate = 0.95;
+        const spoken = text
+          .replace(/_+/g, '')
+          .replace(/\[\s*✏️.*?\s*\]/g, '')
+          .replace(/\[\s*\?\s*\]/g, '')
+          .replace(/\s{2,}/g, ' ')
+          .trim();
+        if (!spoken) { if (onComplete) onComplete(); return; }
+
+        const u = new SpeechSynthesisUtterance(spoken);
+        const targetLang = state.speechLang || 'en-US';
+        u.lang = targetLang;
+
+        const bestVoice = selectBestNaturalVoice(targetLang);
+        if (bestVoice) {
+          u.voice = bestVoice;
+        }
+
+        // Adaptive Rhythm & Intonation:
+        // - Short idioms / single words: rate 0.88 for clear phonetic articulation
+        // - Full conversational sentences: rate 0.93 for natural cadence
+        const wordCount = spoken.split(/\s+/).length;
+        u.rate = wordCount <= 3 ? 0.88 : 0.93;
+
+        // Warm, friendly teacher intonation with question inflection
+        u.pitch = spoken.endsWith('?') ? 1.05 : 1.03;
+
         let finished = false;
         const markDone = () => {
           if (finished) return;
@@ -48123,7 +48219,7 @@
       return (str || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/"/g, '&quot;');
     }
 
-    function renderTappablePhrase(displayText, fullPhraseText, scenarioId = '', phraseId = '') {
+    function renderTappablePhrase(displayText, fullPhraseText, scenarioId = '', phraseId = '', focusHint = '') {
       if (!displayText) return '';
       const fullEsc = escapeJs(fullPhraseText || displayText);
       const scenEsc = escapeJs(scenarioId || (state.currentScenario ? state.currentScenario.id : ''));
@@ -48131,8 +48227,25 @@
       const tokens = displayText.split(/\s+/);
       return tokens.map(tok => {
         const clean = tok.replace(/^[^a-zA-Z0-9']+|[^a-zA-Z0-9']+$/g, '');
-        if (!clean || tok.includes('____') || tok.includes('_')) {
-          return `<span class="mx-0.5 text-slate-400">${tok}</span>`;
+
+        // 1. High-visibility blanks: ____ in Aplica (Stage 2) and Completa (Stage 4)
+        if (tok.includes('____') || /_{3,}/.test(tok)) {
+          const punctuation = tok.replace(/_+/g, '');
+          const label = focusHint ? `✏️ ${escapeJs(focusHint)}` : '✏️ ____';
+          return `<span class="inline-flex items-center justify-center px-3.5 py-1 mx-1.5 rounded-xl bg-gradient-to-r from-amber-500/25 to-yellow-500/20 border-2 border-dashed border-amber-400 text-amber-200 font-mono font-black text-sm shadow-md ring-2 ring-amber-400/20 animate-pulse tracking-wide">[ ${label} ]</span>${punctuation}`;
+        }
+
+        // 2. High-visibility guided initials: B____ or l__ in Practica (Stage 3)
+        if (/^[a-zA-Z]_+/.test(tok)) {
+          const m = tok.match(/^([a-zA-Z])(_+)(.*)$/);
+          if (m) {
+            const [, initial, blanks, trailingPunct] = m;
+            return `<span class="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-lg bg-slate-900 border border-indigo-400/50 font-mono text-xs shadow-inner"><span class="text-indigo-300 font-black text-base underline decoration-indigo-400 decoration-2">${initial}</span><span class="tracking-widest text-slate-400 font-bold ml-0.5">${blanks}</span></span>${trailingPunct}`;
+          }
+        }
+
+        if (!clean || tok.includes('_')) {
+          return `<span class="mx-0.5 text-slate-400 font-mono">${tok}</span>`;
         }
         const tokEsc = escapeJs(clean);
         return `<span class="tap-word" title="Ver traducción de '${clean}'" onclick="openTranslateOverlay('${tokEsc}', '${fullEsc}', '${scenEsc}', '${phrEsc}')">${tok}</span>`;
@@ -48595,11 +48708,11 @@
       const stages = state.lesson.stages;
       const stagePills = [
         ...stages.map((st, idx) => `
-          <button ${IS_TEST_ENV ? `onclick="jumpStage(${idx})"` : 'disabled'} class="px-3 py-1.5 rounded-xl text-xs font-medium border transition ${
+          <button ${isTestEnv() ? `onclick="jumpStage(${idx})"` : 'disabled'} class="px-3 py-1.5 rounded-xl text-xs font-medium border transition ${
             idx === state.stageIndex ? 'bg-indigo-600 border-indigo-400 text-white shadow-xs' : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-slate-200'
           }">${STAGE_LABELS[st.type].title}</button>
         `),
-        `<button ${IS_TEST_ENV ? 'onclick="jumpStage(4)"' : 'disabled'} class="px-3 py-1.5 rounded-xl text-xs font-medium border transition ${
+        `<button ${isTestEnv() ? 'onclick="jumpStage(4)"' : 'disabled'} class="px-3 py-1.5 rounded-xl text-xs font-medium border transition ${
           state.stageIndex === 4 ? 'bg-rose-600 border-rose-400 text-white shadow-xs' : 'bg-rose-500/10 border-rose-500/30 text-rose-300 hover:bg-rose-500/20'
         }">5. Conversa</button>`
       ].join('');
@@ -48688,6 +48801,100 @@
       const phrEsc = escapeJs(ex.phrase_id || '');
       const progressPct = Math.round(((idx + 1) / Math.max(1, total)) * 100);
 
+      // Find original phrase metadata (for idioms, phrasal verbs, target expression details)
+      const currentScen = state.currentScenario;
+      const origPhrase = (currentScen && currentScen.phrases)
+        ? currentScen.phrases.find(item => item.id === ex.phrase_id)
+        : null;
+
+      // Extract target focus expression and its translation/meaning
+      let focusText = '';
+      let focusMeaning = '';
+      let focusKind = (origPhrase && origPhrase.kind) || 'expresión clave';
+
+      if (ex.type === 'recall' && (p.display_text || '').includes('____')) {
+        focusText = (origPhrase && origPhrase.apply_answer) || (p.focus_words && p.focus_words[0]) || '';
+        if (!focusText && p.glossary && p.glossary.length) focusText = p.glossary[0].word;
+        focusMeaning = (origPhrase && origPhrase.glossary && origPhrase.glossary[0])
+          ? origPhrase.glossary[0].meaning
+          : (p.glossary && p.glossary[0] ? p.glossary[0].meaning : '');
+      } else if (ex.type === 'guided') {
+        if (origPhrase && origPhrase.glossary && origPhrase.glossary.length) {
+          focusText = origPhrase.glossary[0].word;
+          focusMeaning = origPhrase.glossary[0].meaning;
+        } else if (p.glossary && p.glossary.length) {
+          focusText = p.glossary[0].word;
+          focusMeaning = p.glossary[0].meaning;
+        }
+      } else if (ex.type === 'completion') {
+        if (origPhrase && origPhrase.glossary && origPhrase.glossary.length) {
+          focusText = origPhrase.glossary[0].word;
+          focusMeaning = origPhrase.glossary[0].meaning;
+        } else if (p.glossary && p.glossary.length) {
+          focusText = p.glossary[0].word;
+          focusMeaning = p.glossary[0].meaning;
+        }
+      }
+
+      const kindLabels = {
+        idiom: 'Modismo / Idiom',
+        phrasal_verb: 'Phrasal Verb',
+        colloquial: 'Expresión Coloquial',
+        daily_phrase: 'Frase Cotidiana'
+      };
+      const kindLabel = kindLabels[focusKind] || 'Expresión en Enfoque';
+
+      // Build Spotlight Header Banner for Aplica, Practica, Completa
+      let spotlightHtml = '';
+      if (ex.type === 'recall' && (p.display_text || '').includes('____') && focusText) {
+        spotlightHtml = `
+          <div class="mb-4 p-4 rounded-2xl bg-gradient-to-r from-emerald-950/60 via-slate-900 to-teal-950/60 border-2 border-emerald-500/40 shadow-xl shadow-emerald-500/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-left">
+            <div class="flex items-center gap-3">
+              <span class="text-2xl p-2 rounded-xl bg-emerald-500/20 border border-emerald-500/30">🎯</span>
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">${kindLabel}</span>
+                  <span class="text-xs text-slate-400 font-medium">Aplica esta expresión en el espacio en blanco:</span>
+                </div>
+                <div class="flex items-center gap-2 mt-1">
+                  <span class="font-mono font-black text-white text-base sm:text-lg tracking-wide">${focusText}</span>
+                  ${focusMeaning ? `<span class="text-xs text-emerald-300/90 font-medium">• “${focusMeaning}”</span>` : ''}
+                </div>
+              </div>
+            </div>
+            <button onclick="event.stopPropagation(); speakText('${escapeJs(focusText)}')" class="shrink-0 px-3.5 py-2 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/40 text-emerald-200 text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
+              <span>🔊</span><span>Escuchar objetivo</span>
+            </button>
+          </div>
+        `;
+      } else if (ex.type === 'guided') {
+        spotlightHtml = `
+          <div class="mb-4 p-3.5 rounded-2xl bg-amber-950/40 border border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-2 text-left">
+            <div class="flex items-center gap-2.5">
+              <span class="text-lg p-1.5 rounded-lg bg-amber-500/20 text-amber-300">💡</span>
+              <div>
+                <span class="text-[10px] font-black uppercase tracking-wider text-amber-400">Pista de iniciales:</span>
+                <span class="text-xs text-slate-300 ml-1.5">Pronuncia la frase completa en voz alta guiándote por la primera letra de cada palabra.</span>
+              </div>
+            </div>
+            ${focusText ? `<div class="shrink-0 text-xs font-mono px-2.5 py-1 rounded-lg bg-slate-900 border border-amber-500/30 text-amber-200 font-bold">${focusText}</div>` : ''}
+          </div>
+        `;
+      } else if (ex.type === 'completion') {
+        spotlightHtml = `
+          <div class="mb-4 p-3.5 rounded-2xl bg-indigo-950/40 border border-indigo-500/30 flex flex-col sm:flex-row items-center justify-between gap-2 text-left">
+            <div class="flex items-center gap-2.5">
+              <span class="text-lg p-1.5 rounded-lg bg-indigo-500/20 text-indigo-300">🧩</span>
+              <div>
+                <span class="text-[10px] font-black uppercase tracking-wider text-indigo-400">Completa y pronuncia:</span>
+                <span class="text-xs text-slate-300 ml-1.5">Pronuncia la oración entera de corrido diciendo en voz alta las palabras que faltan.</span>
+              </div>
+            </div>
+            ${focusText ? `<div class="shrink-0 text-xs font-mono px-2.5 py-1 rounded-lg bg-slate-900 border border-indigo-500/30 text-indigo-200 font-bold">${focusText}</div>` : ''}
+          </div>
+        `;
+      }
+
       const glossaryHtml = (p.glossary && p.glossary.length) ? `
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
           ${p.glossary.map(g => `
@@ -48716,10 +48923,11 @@
           </div>
 
           <div class="bg-slate-950/90 border border-slate-800/90 rounded-3xl p-6 sm:p-8 space-y-4 text-center">
+            ${spotlightHtml}
             ${p.visual_hint ? `<div class="text-3xl">${p.visual_hint}</div>` : ''}
             <p class="text-xs text-slate-400">${p.instruction_es}</p>
             <div class="text-2xl sm:text-3xl font-bold tracking-tight text-white leading-snug">
-              ${renderTappablePhrase(p.display_text || '', fullPhrase, ex.scenario_id, ex.phrase_id)}
+              ${renderTappablePhrase(p.display_text || '', fullPhrase, ex.scenario_id, ex.phrase_id, focusText)}
             </div>
             ${p.translation ? `<p class="text-base text-slate-300 font-medium">“${p.translation}”</p>` : ''}
 
@@ -48807,7 +49015,7 @@
       return `
         <div class="mt-5 pt-4 border-t border-slate-800/80 space-y-3">
           <div class="flex items-center justify-between gap-3">
-            ${(navFn && IS_TEST_ENV) ? `<button onclick="${navFn}(-1)" class="px-3.5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-400 hover:text-slate-200 transition">← Anterior</button>` : '<div></div>'}
+            ${(navFn && isTestEnv()) ? `<button onclick="${navFn}(-1)" class="px-3.5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-400 hover:text-slate-200 transition">← Anterior</button>` : '<div></div>'}
 
             <div class="flex items-center justify-center">
               <button id="mic-btn" onclick="recordWithMicrophone('${ex.id}', '${target}', '${cardId || ''}')"
@@ -48816,7 +49024,7 @@
               </button>
             </div>
 
-            ${(navFn && IS_TEST_ENV) ? `<button onclick="${navFn}(1)" class="px-3.5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-400 hover:text-slate-200 transition">Siguiente →</button>` : '<div></div>'}
+            ${(navFn && isTestEnv()) ? `<button onclick="${navFn}(1)" class="px-3.5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-400 hover:text-slate-200 transition">Siguiente →</button>` : '<div></div>'}
           </div>
           <p id="mic-notice" class="hidden text-center text-xs font-semibold text-amber-300 bg-amber-500/10 border border-amber-500/30 rounded-xl px-3 py-2"></p>
           <p class="text-center text-[11px] text-slate-500 flex items-center justify-center gap-1.5">
@@ -49563,6 +49771,63 @@
         if (outEl) outEl.textContent = respuesta;
       }
     }
+
+    // ─── Secret Developer & Power-User Keyboard Navigation Shortcuts ──────────
+    document.addEventListener('keydown', (e) => {
+      const tag = (e.target && e.target.tagName) ? e.target.tagName.toLowerCase() : '';
+      if (tag === 'input' || tag === 'textarea') return;
+
+      const isCtrlOrCmd = e.ctrlKey || e.metaKey;
+
+      // Shortcut: Ctrl + Shift + D (Toggle Test/Dev navigation buttons in production)
+      if (isCtrlOrCmd && e.shiftKey && (e.key === 'D' || e.key === 'd')) {
+        e.preventDefault();
+        toggleTestEnv();
+        return;
+      }
+
+      // Shortcut: Ctrl + ArrowRight (Next exercise / phrase / stage)
+      if (isCtrlOrCmd && e.key === 'ArrowRight') {
+        e.preventDefault();
+        if (state.viewMode !== 'exercise') return;
+        if (state.activeTab === 'lesson') {
+          showDevToast('⏭ Siguiente (Ctrl + →)');
+          nextLessonItem(1);
+        } else if (state.activeTab === 'shadowing' || state.activeTab === 'common') {
+          showDevToast('⏭ Siguiente (Ctrl + →)');
+          nextListItem(1);
+        } else if (state.activeTab === 'srs') {
+          showDevToast('⏭ Siguiente (Ctrl + →)');
+          advanceSrsItem();
+        }
+        return;
+      }
+
+      // Shortcut: Ctrl + ArrowLeft (Previous exercise / phrase / stage)
+      if (isCtrlOrCmd && e.key === 'ArrowLeft') {
+        e.preventDefault();
+        if (state.viewMode !== 'exercise') return;
+        if (state.activeTab === 'lesson') {
+          showDevToast('⏮ Anterior (Ctrl + ←)');
+          nextLessonItem(-1);
+        } else if (state.activeTab === 'shadowing' || state.activeTab === 'common') {
+          showDevToast('⏮ Anterior (Ctrl + ←)');
+          nextListItem(-1);
+        }
+        return;
+      }
+
+      // Shortcut: Ctrl + 1..5 (Direct Stage Jump in lesson)
+      if (isCtrlOrCmd && ['1', '2', '3', '4', '5'].includes(e.key) && state.viewMode === 'exercise' && state.activeTab === 'lesson') {
+        e.preventDefault();
+        const stageIdx = parseInt(e.key, 10) - 1;
+        const stageKeys = Object.keys(STAGE_LABELS);
+        const name = stageIdx === 4 ? '5. Conversa' : STAGE_LABELS[stageKeys[stageIdx]]?.title;
+        showDevToast(`🚀 Salto a ${name} (Ctrl + ${e.key})`);
+        jumpStage(stageIdx);
+        return;
+      }
+    });
 
     init();
   </script>
