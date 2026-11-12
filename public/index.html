@@ -35681,6 +35681,7 @@
       localScores: [],
       lastTranslated: null,
       showManualInput: false,
+      roleplayPhase: 'briefing',
       keys: {
         tier: localStorage.getItem('sf_freemium_tier') || 'free',
         gemini: localStorage.getItem('sf_gemini_key') || '',
@@ -35697,7 +35698,7 @@
       recall: { title: '2. Aprende', subtitle: 'Lee en voz alta y explora el vocabulario', color: 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30' },
       guided: { title: '3. Practica', subtitle: 'Pronuncia la frase con ayuda de las pistas', color: 'bg-amber-500/15 text-amber-300 border-amber-500/30' },
       completion: { title: '4. Completa', subtitle: 'Di la frase completa de memoria', color: 'bg-purple-500/15 text-purple-300 border-purple-500/30' },
-      roleplay: { title: '5. Conversa', subtitle: 'Conversación libre guiada con libreto', color: 'bg-rose-500/15 text-rose-300 border-rose-500/30' },
+      roleplay: { title: '5. Conversa', subtitle: 'Conversación live guiada con libreto', color: 'bg-rose-500/15 text-rose-300 border-rose-500/30' },
     };
 
     window.addEventListener('speakflow:firebase-ready', (e) => {
@@ -35799,8 +35800,8 @@
       return res.json();
     }
 
-    async function speakText(text) {
-      if (!text) return;
+    async function speakText(text, onComplete = null) {
+      if (!text) { if (onComplete) onComplete(); return; }
       if (state.backendOnline && (state.keys.elevenlabs || state.keys.openai || state.keys.googleCloud)) {
         try {
           const res = await fetch('/v1/tts', {
@@ -35811,6 +35812,10 @@
           if (res.ok) {
             const blob = await res.blob();
             const audio = new Audio(URL.createObjectURL(blob));
+            if (onComplete) {
+              audio.onended = () => onComplete();
+              audio.onerror = () => onComplete();
+            }
             await audio.play();
             return;
           }
@@ -35821,7 +35826,17 @@
         const u = new SpeechSynthesisUtterance(text);
         u.lang = 'en-US';
         u.rate = 0.95;
+        let finished = false;
+        const markDone = () => {
+          if (finished) return;
+          finished = true;
+          if (onComplete) onComplete();
+        };
+        u.onend = markDone;
+        u.onerror = markDone;
         window.speechSynthesis.speak(u);
+      } else {
+        if (onComplete) setTimeout(onComplete, Math.min(4500, Math.max(1200, text.length * 65)));
       }
     }
 
@@ -36178,7 +36193,7 @@
         state.lesson = buildLocalLesson(state.currentScenario);
         state.shadowingList = state.lesson.stages[0].exercises;
       }
-      state.stageIndex = 0; state.exerciseIndex = 0; state.lastEvaluation = null; state.roleplaySession = null; state.showManualInput = false;
+      state.stageIndex = 0; state.exerciseIndex = 0; state.lastEvaluation = null; state.roleplaySession = null; state.showManualInput = false; state.roleplayPhase = 'briefing';
       renderScenarioList();
       updateActiveLessonBreadcrumbs();
       if (renderActive) await renderActiveTab();
@@ -36209,6 +36224,7 @@
       state.activeTab = tab;
       state.lastEvaluation = null;
       state.showManualInput = false;
+      if (tab === 'roleplay') state.roleplayPhase = 'briefing';
       updateTabStyles();
       await renderActiveTab();
     }
@@ -36266,7 +36282,7 @@
       `;
     }
 
-    function jumpStage(idx) { state.stageIndex = idx; state.exerciseIndex = 0; state.lastEvaluation = null; state.showManualInput = false; renderLessonView(); }
+    function jumpStage(idx) { state.stageIndex = idx; state.exerciseIndex = 0; state.lastEvaluation = null; state.showManualInput = false; if (idx === 4) state.roleplayPhase = 'briefing'; renderLessonView(); }
 
     function nextLessonItem(delta) {
       const stages = state.lesson.stages;
@@ -36457,22 +36473,172 @@
       `;
     }
 
+    // ─── VoiceSession: Persistent Microphone, Live Streaming Recognition & Live AI Duplex ───
+    const VoiceSession = {
+      stream: null,
+      recognition: null,
+      isListening: false,
+      isAiSpeaking: false,
+      silenceTimeout: null,
+      accumulatedFinal: '',
+      currentInterim: '',
+
+      async ensureMicPermission() {
+        if (this.stream && this.stream.active) return true;
+        try {
+          if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            this.stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            return true;
+          }
+        } catch (err) {
+          console.warn('Microphone permission check:', err);
+        }
+        return false;
+      },
+
+      getRecognizer() {
+        const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+        if (!SR) return null;
+        if (this.recognition) return this.recognition;
+
+        const rec = new SR();
+        rec.continuous = true;
+        rec.interimResults = true;
+        rec.lang = 'en-US';
+
+        rec.onresult = (e) => {
+          if (this.isAiSpeaking) return;
+          let interim = '';
+          for (let i = e.resultIndex; i < e.results.length; ++i) {
+            const res = e.results[i];
+            if (res.isFinal) {
+              const val = res[0].transcript.trim();
+              if (val) this.accumulatedFinal += (this.accumulatedFinal ? ' ' : '') + val;
+            } else {
+              interim += res[0].transcript;
+            }
+          }
+          this.currentInterim = interim;
+          const display = (this.accumulatedFinal + (interim ? ' ' + interim : '')).trim();
+
+          const streamEl = document.getElementById('live-transcript-stream');
+          if (streamEl) {
+            if (display) {
+              streamEl.innerHTML = `<span class="text-white font-medium">“${escapeJs(this.accumulatedFinal)}</span> <span class="text-indigo-400 italic font-semibold">${escapeJs(interim)}”</span>`;
+            } else {
+              streamEl.innerHTML = `<span class="text-slate-400 animate-pulse">🎙️ Te escucho... habla en inglés</span>`;
+            }
+          }
+
+          if (display) {
+            clearTimeout(this.silenceTimeout);
+            this.silenceTimeout = setTimeout(() => {
+              this.commitTurn();
+            }, 1400);
+          }
+        };
+
+        rec.onerror = (e) => {
+          console.warn('Live SpeechRecognition error:', e.error);
+          if (e.error === 'not-allowed' || e.error === 'service-not-allowed') {
+            this.isListening = false;
+            this.updateBadge('error');
+          }
+        };
+
+        rec.onend = () => {
+          if (this.isListening && !this.isAiSpeaking && state.roleplayPhase === 'live') {
+            try { rec.start(); } catch (_) {}
+          }
+        };
+
+        this.recognition = rec;
+        return rec;
+      },
+
+      startListening() {
+        const rec = this.getRecognizer();
+        this.accumulatedFinal = '';
+        this.currentInterim = '';
+        clearTimeout(this.silenceTimeout);
+        this.isListening = true;
+        this.isAiSpeaking = false;
+        this.updateBadge('listening');
+        const streamEl = document.getElementById('live-transcript-stream');
+        if (streamEl) {
+          streamEl.innerHTML = `<span class="text-slate-400 animate-pulse">🎙️ Te escucho... di tu respuesta en inglés</span>`;
+        }
+        if (rec) {
+          try { rec.start(); } catch (_) {}
+        }
+      },
+
+      stopListening() {
+        this.isListening = false;
+        clearTimeout(this.silenceTimeout);
+        if (this.recognition) {
+          try { this.recognition.stop(); } catch (_) {}
+        }
+      },
+
+      commitTurn() {
+        const fullText = (this.accumulatedFinal + (this.currentInterim ? ' ' + this.currentInterim : '')).trim();
+        if (!fullText) return;
+        this.stopListening();
+        this.accumulatedFinal = '';
+        this.currentInterim = '';
+        this.updateBadge('evaluating');
+        const streamEl = document.getElementById('live-transcript-stream');
+        if (streamEl) {
+          streamEl.innerHTML = `<span class="text-emerald-300 font-semibold">✔ “${escapeJs(fullText)}”</span>`;
+        }
+        submitRoleplayTurn(fullText);
+      },
+
+      speakAiUtterance(text, onEnded) {
+        this.stopListening();
+        this.isAiSpeaking = true;
+        this.updateBadge('ai_speaking');
+        speakText(text, () => {
+          this.isAiSpeaking = false;
+          if (onEnded) onEnded();
+        });
+      },
+
+      updateBadge(status) {
+        const badge = document.getElementById('live-dialog-status-badge');
+        if (!badge) return;
+        if (status === 'listening') {
+          badge.className = 'flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs font-bold animate-pulse';
+          badge.innerHTML = '<span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span><span>EN VIVO — HABLA AHORA</span>';
+        } else if (status === 'ai_speaking') {
+          badge.className = 'flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/20 text-sky-300 border border-sky-500/40 text-xs font-bold';
+          badge.innerHTML = '<span class="w-2.5 h-2.5 rounded-full bg-sky-400 animate-ping"></span><span>IA HABLANDO...</span>';
+        } else if (status === 'evaluating') {
+          badge.className = 'flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 text-xs font-bold';
+          badge.innerHTML = '<span>⏳ EVALUANDO Y RESPONDIENDO...</span>';
+        } else {
+          badge.className = 'flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 text-slate-400 border border-slate-700 text-xs font-semibold';
+          badge.innerHTML = '<span>DIÁLOGO EN PAUSA</span>';
+        }
+      }
+    };
+
     async function recordWithMicrophone(exId, fallbackText, cardId) {
       const btn = document.getElementById('mic-btn');
       const label = document.getElementById('mic-label');
+      await VoiceSession.ensureMicPermission();
 
-      if ((state.keys.openai || state.keys.googleCloud) && navigator.mediaDevices && navigator.mediaDevices.getUserMedia && state.backendOnline) {
+      if ((state.keys.openai || state.keys.googleCloud) && VoiceSession.stream && state.backendOnline) {
         try {
-          const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-          const rec = new MediaRecorder(stream);
+          const rec = new MediaRecorder(VoiceSession.stream);
           const chunks = [];
-          btn.classList.add('recording-pulse');
-          label.textContent = 'Escuchando…';
+          if (btn) btn.classList.add('recording-pulse');
+          if (label) label.textContent = 'Escuchando…';
           rec.ondataavailable = e => chunks.push(e.data);
           rec.onstop = async () => {
-            stream.getTracks().forEach(t => t.stop());
-            btn.classList.remove('recording-pulse');
-            label.textContent = 'Evaluando…';
+            if (btn) btn.classList.remove('recording-pulse');
+            if (label) label.textContent = 'Evaluando…';
             const blob = new Blob(chunks, { type: 'audio/webm' });
             const fd = new FormData();
             fd.append('audio', blob, 'speech.webm');
@@ -36489,30 +36655,44 @@
 
       const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
       if (!SR) {
-        label.textContent = 'Habla ahora (simulación activa)';
-        btn.classList.add('recording-pulse');
+        if (label) label.textContent = 'Habla ahora (simulación activa)';
+        if (btn) btn.classList.add('recording-pulse');
         setTimeout(async () => {
-          btn.classList.remove('recording-pulse');
-          label.textContent = 'Toca para hablar';
+          if (btn) btn.classList.remove('recording-pulse');
+          if (label) label.textContent = 'Toca para hablar';
           await submitAttempt(exId, fallbackText, cardId);
         }, 1200);
         return;
       }
-      btn.classList.add('recording-pulse');
-      label.textContent = 'Escuchando… habla ahora';
+
+      if (btn) btn.classList.add('recording-pulse');
+      if (label) label.textContent = 'Escuchando… habla en inglés';
       const rec = new SR();
       rec.lang = 'en-US';
-      rec.interimResults = false;
-      rec.onresult = async (e) => {
-        btn.classList.remove('recording-pulse');
-        label.textContent = 'Toca para hablar';
-        await submitAttempt(exId, e.results[0][0].transcript, cardId);
+      rec.interimResults = true;
+      let finalTranscript = '';
+      rec.onresult = (e) => {
+        let interim = '';
+        for (let i = e.resultIndex; i < e.results.length; ++i) {
+          if (e.results[i].isFinal) finalTranscript += e.results[i][0].transcript;
+          else interim += e.results[i][0].transcript;
+        }
+        if (label) label.textContent = `“${finalTranscript || interim}”`;
       };
       rec.onerror = () => {
-        btn.classList.remove('recording-pulse');
-        label.textContent = 'Toca para hablar';
+        if (btn) btn.classList.remove('recording-pulse');
+        if (label) label.textContent = 'Toca para hablar';
       };
-      rec.start();
+      rec.onend = async () => {
+        if (btn) btn.classList.remove('recording-pulse');
+        if (label) label.textContent = 'Toca para hablar';
+        const transcript = finalTranscript.trim() || fallbackText;
+        await submitAttempt(exId, transcript, cardId);
+      };
+      try { rec.start(); } catch (_) {
+        if (btn) btn.classList.remove('recording-pulse');
+        if (label) label.textContent = 'Toca para hablar';
+      }
     }
 
     function evaluateLocally(ex, transcript) {
@@ -36567,9 +36747,10 @@
       else await renderActiveTab();
     }
 
-    // ─── Stage 5: Free AI Conversation Guided by Script (Libreto) ──────────────
+    // ─── Stage 5: Conversación en Vivo (Briefing Previo + Diálogo Live de IA) ──────────────
     async function renderRoleplayView(inlineInLesson = false, lessonStagePills = '') {
       if (!state.currentScenario) return;
+
       if (!state.roleplaySession || state.roleplaySession.scenario_id !== state.currentScenario.id) {
         if (state.backendOnline) {
           state.roleplaySession = await api(`/v1/roleplay/${state.currentScenario.id}/sessions`, { method: 'POST' });
@@ -36589,10 +36770,105 @@
           };
         }
       }
+
       const rp = state.roleplaySession;
       const targetPhrases = rp.target_phrases || state.currentScenario.phrases.map(p => p.text);
       const usedSet = new Set(rp.used_lesson_phrases || []);
 
+      // ─── Phase 1: Pantalla Previa de Preparación (Libreto y Situación) ───
+      if (state.roleplayPhase !== 'live') {
+        VoiceSession.stopListening();
+        document.getElementById('stage-container').innerHTML = `
+          <div class="space-y-6">
+            ${inlineInLesson && lessonStagePills ? `<div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-800/80"><div class="flex flex-wrap gap-1.5">${lessonStagePills}</div></div>` : ''}
+
+            <!-- Situation & Roles Card -->
+            <div class="bg-slate-900/90 border border-slate-800/90 rounded-3xl p-6 sm:p-7 space-y-4 shadow-xl">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="text-xs font-bold font-mono px-3 py-1 rounded-full bg-rose-500/15 text-rose-300 border border-rose-500/30">
+                  🎭 ETAPA 5 — PREPARACIÓN DE CONVERSACIÓN LIVE
+                </span>
+                <span class="text-xs text-slate-400 font-mono">${state.currentScenario.cefr} • ${state.currentScenario.title}</span>
+              </div>
+
+              <div>
+                <h3 class="text-xl sm:text-2xl font-bold text-white">${state.currentScenario.title_es}</h3>
+                <p class="text-sm text-slate-300 mt-1.5 leading-relaxed">${state.currentScenario.roleplay.setting}</p>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800 flex items-center gap-3">
+                  <span class="text-2xl">🤖</span>
+                  <div>
+                    <span class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Interlocutor IA</span>
+                    <div class="text-sm font-bold text-white">${state.currentScenario.roleplay.ai_role}</div>
+                  </div>
+                </div>
+                <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800 flex items-center gap-3">
+                  <span class="text-2xl">🎙️</span>
+                  <div>
+                    <span class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Tu modalidad</span>
+                    <div class="text-sm font-bold text-emerald-300">Voz 100% en vivo (Sin botones)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Libreto: Lista de frases a recordar en esta situación -->
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h4 class="text-base font-bold text-white flex items-center gap-2">
+                    <span>📋</span><span>Libreto: Frases a recordar en esta situación</span>
+                  </h4>
+                  <p class="text-xs text-slate-400 mt-0.5">
+                    Escucha y repasa estas expresiones clave antes de iniciar la charla. Durante la conversación en vivo deberás decirlas con tu micrófono.
+                  </p>
+                </div>
+                <span class="text-xs font-semibold px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300">${state.currentScenario.phrases.length} expresiones</span>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                ${state.currentScenario.phrases.map(p => `
+                  <div class="p-4 rounded-2xl bg-slate-950/80 border border-slate-800/80 hover:border-indigo-500/40 transition flex flex-col justify-between gap-2.5">
+                    <div class="space-y-1">
+                      <div class="flex items-center justify-between gap-2">
+                        <span class="text-base">${p.visual_hint || '💬'}</span>
+                        <button onclick="speakText('${escapeJs(p.text)}')" class="text-xs px-2.5 py-1 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 flex items-center gap-1 font-medium transition">
+                          <span>🔊</span><span>Escuchar</span>
+                        </button>
+                      </div>
+                      <div class="text-sm font-bold text-white leading-snug">
+                        ${renderTappablePhrase(p.text, p.text, state.currentScenario.id, p.id)}
+                      </div>
+                      <p class="text-xs text-slate-400 leading-relaxed">“${p.translation}”</p>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+
+            <!-- Start Live Conversation CTA -->
+            <div class="p-6 rounded-3xl bg-gradient-to-r from-rose-950/40 via-slate-900 to-indigo-950/40 border border-rose-500/30 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl">
+              <div class="space-y-1 text-center sm:text-left">
+                <div class="font-bold text-base text-white flex items-center justify-center sm:justify-start gap-2">
+                  <span>⚡</span><span>Diálogo Live Interactivo</span>
+                </div>
+                <p class="text-xs text-slate-300">
+                  La IA comenzará hablándote en inglés. Tu micrófono capturará y transcribirá tu respuesta en tiempo real.
+                </p>
+              </div>
+              <button onclick="startLiveRoleplay(${inlineInLesson})"
+                class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-500 hover:to-pink-500 text-white font-extrabold text-sm shadow-xl shadow-rose-600/30 flex items-center justify-center gap-2.5 transition transform hover:scale-[1.02] active:scale-95">
+                <span class="text-lg">🎙️</span><span>Iniciar Conversación Live</span><span>→</span>
+              </button>
+            </div>
+          </div>
+        `;
+        return;
+      }
+
+      // ─── Phase 2: Conversación Live de IA en Vivo ───
       const checklistHtml = targetPhrases.map(tp => {
         const used = usedSet.has(tp);
         return `
@@ -36607,11 +36883,11 @@
 
       const historyHtml = rp.history.map(h => `
         <div class="flex ${h.speaker === 'user' ? 'justify-end' : 'justify-start'}">
-          <div class="max-w-[85%] rounded-2xl px-4 py-3 text-sm ${
+          <div class="max-w-[85%] rounded-2xl px-4 py-3 text-sm shadow-md ${
             h.speaker === 'user' ? 'bg-indigo-600 text-white' : 'bg-slate-800/90 border border-slate-700/80 text-slate-100'
           }">
             <div class="text-[11px] opacity-70 mb-1">
-              ${h.speaker === 'user' ? 'Tú' : state.currentScenario.roleplay.ai_role}
+              ${h.speaker === 'user' ? 'Tú (Voz en vivo)' : state.currentScenario.roleplay.ai_role}
             </div>
             <div class="flex flex-wrap items-center gap-2">
               <span>${renderTappablePhrase(h.text, h.text, state.currentScenario.id, '')}</span>
@@ -36623,7 +36899,7 @@
 
       const turnEval = rp.last_turn_evaluation || (rp.feedback ? { passed: rp.accepted, feedback: rp.feedback, natural_alternative: rp.natural_alternative } : null);
       const evalBanner = turnEval ? `
-        <div class="rounded-2xl border p-4 text-xs space-y-2.5 ${
+        <div class="rounded-2xl border p-4 text-xs space-y-2 ${
           turnEval.passed !== false ? 'bg-emerald-950/25 border-emerald-500/35 text-emerald-200' : 'bg-amber-950/25 border-amber-500/35 text-amber-200'
         }">
           <div class="flex items-center justify-between">
@@ -36632,47 +36908,37 @@
               ${turnEval.passed !== false ? '✔ Correcto' : 'Ajuste'}
             </span>
           </div>
-          ${turnEval.natural_alternative ? `<p class="text-indigo-200">💡 <strong>Alternativa nativa sugerida:</strong> “${turnEval.natural_alternative}”</p>` : ''}
-          ${rp.pending_turn ? `
-            <div class="pt-2 flex justify-end">
-              <button onclick="document.getElementById('rp-turn-card')?.scrollIntoView({behavior:'smooth'})" class="px-5 py-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-bold text-xs flex items-center gap-1.5 shadow transition">
-                <span>Continuar al siguiente turno</span><span>→</span>
-              </button>
-            </div>
-          ` : ''}
+          ${turnEval.natural_alternative ? `<p class="text-indigo-200">💡 <strong>Alternativa sugerida:</strong> “${turnEval.natural_alternative}”</p>` : ''}
         </div>
       ` : '';
 
       const pendingHtml = rp.pending_turn ? `
-        <div id="rp-turn-card" class="bg-slate-950/90 border border-slate-800 rounded-3xl p-5 space-y-4">
+        <div class="bg-slate-950/90 border border-indigo-500/40 rounded-3xl p-5 space-y-4 shadow-xl">
           <div class="flex items-center justify-between gap-2">
             <span class="text-xs font-bold text-rose-300 uppercase tracking-wider">🎯 Tu turno en la conversación</span>
-            <span class="text-[11px] text-slate-400">Responde hablando con tu voz o usa una sugerencia</span>
+            <span class="text-[11px] text-slate-400">Responde con tu voz en inglés</span>
           </div>
           <p class="text-base font-bold text-white">${rp.pending_turn.goal}</p>
 
-          <div class="flex flex-col sm:flex-row items-center gap-3 pt-1">
-            <button id="rp-mic-btn" onclick="recordRoleplayFreeform('${escapeJs(rp.pending_turn.suggested_lines[0] || '')}')"
-              class="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-500 hover:to-pink-500 text-white font-bold text-sm shadow-xl shadow-rose-600/30 flex items-center justify-center gap-2.5 transition transform hover:scale-[1.02] active:scale-95">
-              <span class="text-lg">🎙️</span><span id="rp-mic-label">Hablar con la IA en voz alta</span>
-            </button>
-            <span class="text-[11px] text-slate-400 text-center sm:text-left">
-              Habla libremente en inglés para responder al turno.
-            </span>
+          <!-- Live Speech Streaming Transcript Recabada por Micrófono -->
+          <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800 space-y-2">
+            <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse"></span>
+              <span>Transcripción en vivo recabada:</span>
+            </div>
+            <div id="live-transcript-stream" class="text-sm font-medium text-white min-h-[44px] flex items-center p-3 rounded-xl bg-slate-950 border border-slate-800/80">
+              <span class="text-slate-400 animate-pulse">🎙️ Te escucho... di tu respuesta en inglés</span>
+            </div>
           </div>
 
-          <div class="space-y-2 pt-3 border-t border-slate-800/80">
-            <div class="text-[11px] text-slate-400 font-medium">Ideas del libreto (toca para traducir o di cualquiera con el micrófono):</div>
-            <div class="flex flex-col sm:flex-row flex-wrap gap-2">
-              ${rp.pending_turn.suggested_lines.map(line => `
-                <div class="px-3.5 py-2.5 rounded-2xl bg-slate-900 border border-slate-800 text-slate-200 text-xs flex items-center justify-between gap-3">
-                  <span class="font-medium">“${renderTappablePhrase(line, line, state.currentScenario.id, '')}”</span>
-                  <button onclick="submitRoleplayTurn('${escapeJs(line)}')" class="px-3 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs flex items-center gap-1.5 shrink-0 transition">
-                    <span>🎙️</span><span>Decir</span>
-                  </button>
-                </div>
-              `).join('')}
-            </div>
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-1">
+            <p class="text-[11px] text-slate-400 text-center sm:text-left">
+              Diálogo live continuo. Al pausar de hablar, la IA procesará tu respuesta.
+            </p>
+            <button onclick="VoiceSession.commitTurn()"
+              class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs shadow-md transition flex items-center justify-center gap-1.5">
+              <span>Enviar respuesta ahora</span><span>→</span>
+            </button>
           </div>
         </div>
       ` : `
@@ -36689,62 +36955,92 @@
 
       document.getElementById('stage-container').innerHTML = `
         <div class="space-y-4">
-          ${inlineInLesson ? `<div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-800/80"><div class="flex flex-wrap gap-1.5">${lessonStagePills}</div></div>` : ''}
-          <div class="flex items-center justify-between pb-2 border-b border-slate-800/80">
-            <div>
-              <h3 class="font-semibold text-sm text-white">🎭 Conversación con Libreto — ${state.currentScenario.title_es}</h3>
-              <p class="text-xs text-slate-400">${state.currentScenario.roleplay.setting}</p>
+          ${inlineInLesson && lessonStagePills ? `<div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-800/80"><div class="flex flex-wrap gap-1.5">${lessonStagePills}</div></div>` : ''}
+
+          <!-- Live Top Bar -->
+          <div class="flex flex-wrap items-center justify-between gap-3 pb-2 border-b border-slate-800/80">
+            <div class="flex items-center gap-2.5">
+              <div id="live-dialog-status-badge" class="flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs font-bold animate-pulse">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span><span>EN VIVO — HABLA AHORA</span>
+              </div>
+              <span class="text-xs text-slate-400 font-medium hidden sm:inline">${state.currentScenario.title_es}</span>
             </div>
-            <button onclick="restartRoleplay(${inlineInLesson})" class="text-xs px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300">Reiniciar</button>
+            <div class="flex items-center gap-2">
+              <button onclick="exitLiveRoleplay(${inlineInLesson})" class="text-xs px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 transition flex items-center gap-1.5">
+                <span>📋</span><span>Ver Libreto / Pausar</span>
+              </button>
+              <button onclick="restartRoleplay(${inlineInLesson})" class="text-xs px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 hover:bg-slate-800 text-slate-400 hover:text-slate-200">
+                Reiniciar
+              </button>
+            </div>
           </div>
 
+          <!-- Target Phrases Checklist -->
           <div class="bg-slate-950/60 border border-slate-800/80 rounded-2xl p-3 space-y-1.5">
-            <div class="text-[11px] font-medium text-slate-400">Expresiones de la lección para usar en esta charla:</div>
+            <div class="text-[11px] font-medium text-slate-400 flex items-center justify-between">
+              <span>Frases del libreto a incluir en la charla:</span>
+              <span class="text-[10px] text-indigo-400 font-semibold">${usedSet.size}/${targetPhrases.length} usadas</span>
+            </div>
             <div class="flex flex-wrap gap-1.5">${checklistHtml}</div>
           </div>
 
-          <div class="space-y-2.5 max-h-[240px] overflow-y-auto pr-1">${historyHtml}</div>
+          <!-- History -->
+          <div class="space-y-2.5 max-h-[280px] overflow-y-auto pr-1">${historyHtml}</div>
           ${evalBanner}
         </div>
         <div class="mt-4">${pendingHtml}</div>
       `;
     }
 
-    async function restartRoleplay(inlineInLesson = false) {
-      state.roleplaySession = null;
+    async function startLiveRoleplay(inlineInLesson = false) {
+      await VoiceSession.ensureMicPermission();
+      state.roleplayPhase = 'live';
+
+      if (!state.roleplaySession || state.roleplaySession.scenario_id !== state.currentScenario.id) {
+        if (state.backendOnline) {
+          state.roleplaySession = await api(`/v1/roleplay/${state.currentScenario.id}/sessions`, { method: 'POST' });
+        } else {
+          const t0 = state.currentScenario.roleplay.turns[0];
+          state.roleplaySession = {
+            session_id: 'local-' + Date.now(),
+            scenario_id: state.currentScenario.id,
+            status: 'active',
+            turnIdx: 1,
+            history: [{ speaker: 'ai', text: t0.text }],
+            pending_turn: state.currentScenario.roleplay.turns[1],
+            average_score: 0.95,
+            target_phrases: state.currentScenario.phrases.map(p => p.text),
+            used_lesson_phrases: [],
+            last_turn_evaluation: null
+          };
+        }
+      }
+
       await renderRoleplayView(inlineInLesson);
+
+      const rp = state.roleplaySession;
+      if (rp.history.length === 1 && rp.history[0].speaker === 'ai') {
+        VoiceSession.speakAiUtterance(rp.history[0].text, () => {
+          if (state.roleplayPhase === 'live' && rp.pending_turn) {
+            VoiceSession.startListening();
+          }
+        });
+      } else if (rp.pending_turn) {
+        VoiceSession.startListening();
+      }
     }
 
-    async function recordRoleplayFreeform(fallbackLine) {
-      const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-      const btn = document.getElementById('rp-mic-btn');
-      const label = document.getElementById('rp-mic-label');
-      if (!SR) {
-        if (label) label.textContent = 'Escuchando tu voz…';
-        if (btn) btn.classList.add('recording-pulse');
-        setTimeout(async () => {
-          if (btn) btn.classList.remove('recording-pulse');
-          if (label) label.textContent = 'Hablar con la IA en voz alta';
-          await submitRoleplayTurn(fallbackLine);
-        }, 1200);
-        return;
-      }
-      btn.classList.add('recording-pulse');
-      label.textContent = 'Escuchando… habla en inglés';
-      const rec = new SR();
-      rec.lang = 'en-US';
-      rec.interimResults = false;
-      rec.onresult = async (e) => {
-        btn.classList.remove('recording-pulse');
-        label.textContent = 'Hablar con la IA en voz alta';
-        const transcript = e.results[0][0].transcript;
-        await submitRoleplayTurn(transcript);
-      };
-      rec.onerror = () => {
-        btn.classList.remove('recording-pulse');
-        label.textContent = 'Hablar con la IA en voz alta';
-      };
-      rec.start();
+    function exitLiveRoleplay(inlineInLesson = false) {
+      VoiceSession.stopListening();
+      state.roleplayPhase = 'briefing';
+      renderRoleplayView(inlineInLesson);
+    }
+
+    async function restartRoleplay(inlineInLesson = false) {
+      VoiceSession.stopListening();
+      state.roleplaySession = null;
+      state.roleplayPhase = 'briefing';
+      await renderRoleplayView(inlineInLesson);
     }
 
     async function submitRoleplayTurn(line) {
@@ -36759,23 +37055,37 @@
         const suggested = (rp.pending_turn && rp.pending_turn.suggested_lines) || [];
         const isScripted = suggested.some(s => s.toLowerCase() === line.toLowerCase());
         rp.history.push({ speaker: 'user', text: line });
+
+        // Check if user employed any phrases from the scenario
+        const lineNorm = line.toLowerCase();
+        state.currentScenario.phrases.forEach(p => {
+          const pWords = p.text.toLowerCase().split(/\s+/).slice(0, 3).join(' ');
+          if (lineNorm.includes(p.text.toLowerCase()) || lineNorm.includes(pWords)) {
+            if (!rp.used_lesson_phrases.includes(p.text)) rp.used_lesson_phrases.push(p.text);
+          }
+        });
+
         rp.last_turn_evaluation = {
           transcript: line,
           score: 0.92,
           passed: true,
           natural_alternative: isScripted ? null : (suggested[0] || null),
-          feedback: { message_es: isScripted ? '¡Muy bien dicho!' : '¡Respuesta natural y clara!' }
+          feedback: { message_es: isScripted ? '¡Muy bien dicho!' : '¡Respuesta natural en inglés!' }
         };
+
         const turns = state.currentScenario.roleplay.turns;
         let next = rp.turnIdx + 1;
+        const aiReplies = [];
         while (next < turns.length && turns[next].speaker === 'ai') {
           rp.history.push({ speaker: 'ai', text: turns[next].text });
-          speakText(turns[next].text);
+          aiReplies.push(turns[next].text);
           next++;
         }
         rp.turnIdx = next;
         rp.pending_turn = next < turns.length ? turns[next] : null;
+        rp._latestAiSpeech = aiReplies.join('. ');
       }
+
       if (window.SpeakFlowFirebase && state.roleplaySession) {
         window.SpeakFlowFirebase.syncRoleplay({
           session_id: state.roleplaySession.session_id,
@@ -36784,9 +37094,23 @@
           average_score: state.roleplaySession.average_score
         });
       }
+
       await refreshProgress();
       if (inline) await renderLessonView();
       else await renderRoleplayView(false);
+
+      // In Live mode, speak the AI's reply and auto-resume listening for next turn
+      const rp = state.roleplaySession;
+      if (state.roleplayPhase === 'live') {
+        const lastTurn = rp.history[rp.history.length - 1];
+        if (lastTurn && lastTurn.speaker === 'ai' && rp.pending_turn) {
+          VoiceSession.speakAiUtterance(lastTurn.text, () => {
+            if (state.roleplayPhase === 'live' && rp.pending_turn) {
+              VoiceSession.startListening();
+            }
+          });
+        }
+      }
     }
 
     async function advanceSrsItem() {
