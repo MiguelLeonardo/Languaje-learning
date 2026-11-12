@@ -7,6 +7,7 @@
   "scripts": {
     "firebase:verify": "node scripts/verify-firebase-npm.mjs",
     "conexion:test": "node scripts/test-conexion-key.mjs",
+    "deploy:firebase": "firebase deploy --only hosting --project shadowing-efcab",
     "rea:analyze": "./tools/rea/node_modules/.bin/rea analyze-javascript-application public --json"
   },
   "dependencies": {
