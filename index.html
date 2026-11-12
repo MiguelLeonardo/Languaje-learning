@@ -48231,8 +48231,7 @@
         // 1. High-visibility blanks: ____ in Aplica (Stage 2) and Completa (Stage 4)
         if (tok.includes('____') || /_{3,}/.test(tok)) {
           const punctuation = tok.replace(/_+/g, '');
-          const label = focusHint ? `✏️ ${escapeJs(focusHint)}` : '✏️ ____';
-          return `<span class="inline-flex items-center justify-center px-3.5 py-1 mx-1.5 rounded-xl bg-gradient-to-r from-amber-500/25 to-yellow-500/20 border-2 border-dashed border-amber-400 text-amber-200 font-mono font-black text-sm shadow-md ring-2 ring-amber-400/20 animate-pulse tracking-wide">[ ${label} ]</span>${punctuation}`;
+          return `<span class="inline-flex items-center justify-center px-3.5 py-1 mx-1.5 rounded-xl bg-amber-500/20 border-2 border-dashed border-amber-400 text-amber-300 font-mono font-black text-sm shadow-md ring-2 ring-amber-400/20 animate-pulse tracking-wider">[ ✏️ ____ ]</span>${punctuation}`;
         }
 
         // 2. High-visibility guided initials: B____ or l__ in Practica (Stage 3)
@@ -48801,101 +48800,33 @@
       const phrEsc = escapeJs(ex.phrase_id || '');
       const progressPct = Math.round(((idx + 1) / Math.max(1, total)) * 100);
 
-      // Find original phrase metadata (for idioms, phrasal verbs, target expression details)
-      const currentScen = state.currentScenario;
-      const origPhrase = (currentScen && currentScen.phrases)
-        ? currentScen.phrases.find(item => item.id === ex.phrase_id)
-        : null;
-
-      // Extract target focus expression and its translation/meaning
-      let focusText = '';
-      let focusMeaning = '';
-      let focusKind = (origPhrase && origPhrase.kind) || 'expresión clave';
-
-      if (ex.type === 'recall' && (p.display_text || '').includes('____')) {
-        focusText = (origPhrase && origPhrase.apply_answer) || (p.focus_words && p.focus_words[0]) || '';
-        if (!focusText && p.glossary && p.glossary.length) focusText = p.glossary[0].word;
-        focusMeaning = (origPhrase && origPhrase.glossary && origPhrase.glossary[0])
-          ? origPhrase.glossary[0].meaning
-          : (p.glossary && p.glossary[0] ? p.glossary[0].meaning : '');
-      } else if (ex.type === 'guided') {
-        if (origPhrase && origPhrase.glossary && origPhrase.glossary.length) {
-          focusText = origPhrase.glossary[0].word;
-          focusMeaning = origPhrase.glossary[0].meaning;
-        } else if (p.glossary && p.glossary.length) {
-          focusText = p.glossary[0].word;
-          focusMeaning = p.glossary[0].meaning;
-        }
-      } else if (ex.type === 'completion') {
-        if (origPhrase && origPhrase.glossary && origPhrase.glossary.length) {
-          focusText = origPhrase.glossary[0].word;
-          focusMeaning = origPhrase.glossary[0].meaning;
-        } else if (p.glossary && p.glossary.length) {
-          focusText = p.glossary[0].word;
-          focusMeaning = p.glossary[0].meaning;
+      // Clean guidance banners for active challenges (WITHOUT spoiling the answer before recording)
+      let guidanceBannerHtml = '';
+      if (!state.lastEvaluation) {
+        if (ex.type === 'recall') {
+          guidanceBannerHtml = `
+            <div class="mb-4 inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-semibold shadow-xs">
+              <span>🎯</span><span>Aplica la expresión aprendida en el espacio en blanco y pronuncia la oración completa.</span>
+            </div>
+          `;
+        } else if (ex.type === 'guided') {
+          guidanceBannerHtml = `
+            <div class="mb-4 inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold shadow-xs">
+              <span>💡</span><span>Pronuncia la frase completa guiándote solo por la primera letra de cada palabra.</span>
+            </div>
+          `;
+        } else if (ex.type === 'completion') {
+          guidanceBannerHtml = `
+            <div class="mb-4 inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-semibold shadow-xs">
+              <span>🧩</span><span>Reto de memoria: pronuncia la oración completa diciendo las palabras que faltan.</span>
+            </div>
+          `;
         }
       }
 
-      const kindLabels = {
-        idiom: 'Modismo / Idiom',
-        phrasal_verb: 'Phrasal Verb',
-        colloquial: 'Expresión Coloquial',
-        daily_phrase: 'Frase Cotidiana'
-      };
-      const kindLabel = kindLabels[focusKind] || 'Expresión en Enfoque';
-
-      // Build Spotlight Header Banner for Aplica, Practica, Completa
-      let spotlightHtml = '';
-      if (ex.type === 'recall' && (p.display_text || '').includes('____') && focusText) {
-        spotlightHtml = `
-          <div class="mb-4 p-4 rounded-2xl bg-gradient-to-r from-emerald-950/60 via-slate-900 to-teal-950/60 border-2 border-emerald-500/40 shadow-xl shadow-emerald-500/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-left">
-            <div class="flex items-center gap-3">
-              <span class="text-2xl p-2 rounded-xl bg-emerald-500/20 border border-emerald-500/30">🎯</span>
-              <div>
-                <div class="flex items-center gap-2">
-                  <span class="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">${kindLabel}</span>
-                  <span class="text-xs text-slate-400 font-medium">Aplica esta expresión en el espacio en blanco:</span>
-                </div>
-                <div class="flex items-center gap-2 mt-1">
-                  <span class="font-mono font-black text-white text-base sm:text-lg tracking-wide">${focusText}</span>
-                  ${focusMeaning ? `<span class="text-xs text-emerald-300/90 font-medium">• “${focusMeaning}”</span>` : ''}
-                </div>
-              </div>
-            </div>
-            <button onclick="event.stopPropagation(); speakText('${escapeJs(focusText)}')" class="shrink-0 px-3.5 py-2 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/40 text-emerald-200 text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
-              <span>🔊</span><span>Escuchar objetivo</span>
-            </button>
-          </div>
-        `;
-      } else if (ex.type === 'guided') {
-        spotlightHtml = `
-          <div class="mb-4 p-3.5 rounded-2xl bg-amber-950/40 border border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-2 text-left">
-            <div class="flex items-center gap-2.5">
-              <span class="text-lg p-1.5 rounded-lg bg-amber-500/20 text-amber-300">💡</span>
-              <div>
-                <span class="text-[10px] font-black uppercase tracking-wider text-amber-400">Pista de iniciales:</span>
-                <span class="text-xs text-slate-300 ml-1.5">Pronuncia la frase completa en voz alta guiándote por la primera letra de cada palabra.</span>
-              </div>
-            </div>
-            ${focusText ? `<div class="shrink-0 text-xs font-mono px-2.5 py-1 rounded-lg bg-slate-900 border border-amber-500/30 text-amber-200 font-bold">${focusText}</div>` : ''}
-          </div>
-        `;
-      } else if (ex.type === 'completion') {
-        spotlightHtml = `
-          <div class="mb-4 p-3.5 rounded-2xl bg-indigo-950/40 border border-indigo-500/30 flex flex-col sm:flex-row items-center justify-between gap-2 text-left">
-            <div class="flex items-center gap-2.5">
-              <span class="text-lg p-1.5 rounded-lg bg-indigo-500/20 text-indigo-300">🧩</span>
-              <div>
-                <span class="text-[10px] font-black uppercase tracking-wider text-indigo-400">Completa y pronuncia:</span>
-                <span class="text-xs text-slate-300 ml-1.5">Pronuncia la oración entera de corrido diciendo en voz alta las palabras que faltan.</span>
-              </div>
-            </div>
-            ${focusText ? `<div class="shrink-0 text-xs font-mono px-2.5 py-1 rounded-lg bg-slate-900 border border-indigo-500/30 text-indigo-200 font-bold">${focusText}</div>` : ''}
-          </div>
-        `;
-      }
-
-      const glossaryHtml = (p.glossary && p.glossary.length) ? `
+      // Glossary cards: only shown before recording in stage 1 (shadowing); in recall/guided/completion they are revealed AFTER evaluation
+      const showGlossaryNow = ex.type === 'shadowing' || state.lastEvaluation;
+      const glossaryHtml = (showGlossaryNow && p.glossary && p.glossary.length) ? `
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
           ${p.glossary.map(g => `
             <div onclick="openTranslateOverlay('${escapeJs(g.word)}', '${fullEsc}', '${scenEsc}', '${phrEsc}')" class="cursor-pointer text-xs bg-slate-950/60 hover:bg-slate-900 border border-slate-800/80 hover:border-indigo-500/40 rounded-xl p-3 flex items-center justify-between transition">
@@ -48910,6 +48841,12 @@
         </div>
       ` : '';
 
+      // Translation visibility: in completion (Stage 4), hide translation before recording for pure memory recall
+      const showTranslation = ex.type !== 'completion' || state.lastEvaluation;
+
+      // Audio model button: in active practice (recall, guided, completion), hide before recording so user answers by voice first
+      const allowListenBeforeEval = ex.type === 'shadowing' || state.lastEvaluation;
+
       return `
         <div class="space-y-4">
           <div class="flex items-center justify-between gap-4">
@@ -48923,20 +48860,20 @@
           </div>
 
           <div class="bg-slate-950/90 border border-slate-800/90 rounded-3xl p-6 sm:p-8 space-y-4 text-center">
-            ${spotlightHtml}
+            ${guidanceBannerHtml}
             ${p.visual_hint ? `<div class="text-3xl">${p.visual_hint}</div>` : ''}
             <p class="text-xs text-slate-400">${p.instruction_es}</p>
             <div class="text-2xl sm:text-3xl font-bold tracking-tight text-white leading-snug">
-              ${renderTappablePhrase(p.display_text || '', fullPhrase, ex.scenario_id, ex.phrase_id, focusText)}
+              ${renderTappablePhrase(p.display_text || '', fullPhrase, ex.scenario_id, ex.phrase_id)}
             </div>
-            ${p.translation ? `<p class="text-base text-slate-300 font-medium">“${p.translation}”</p>` : ''}
+            ${(showTranslation && p.translation) ? `<p class="text-base text-slate-300 font-medium">“${p.translation}”</p>` : ''}
 
             <div class="flex flex-wrap items-center justify-center gap-2 pt-2">
-              ${(ex.type === 'recall' && (p.display_text || '').includes('____')) ? '' : `<button onclick="speakText('${fullEsc}')" class="px-3.5 py-2 text-xs rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-100 font-medium transition flex items-center gap-1.5">
+              ${allowListenBeforeEval ? `<button onclick="speakText('${fullEsc}')" class="px-3.5 py-2 text-xs rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-100 font-medium transition flex items-center gap-1.5">
                 <span>🔊</span><span>Escuchar pronunciación</span>
-              </button>`}
+              </button>` : ''}
               <button onclick="openTranslateOverlay('${fullEsc}', '${fullEsc}', '${scenEsc}', '${phrEsc}')" class="px-3.5 py-2 text-xs rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-indigo-300 font-medium transition flex items-center gap-1.5">
-                <span>🌐</span><span>Ver traducción y explicación</span>
+                <span>🌐</span><span>Ver traducción y ayuda</span>
               </button>
             </div>
             <p class="text-[11px] text-slate-500">Toca cualquier palabra en inglés para ver su traducción instantánea</p>
@@ -48951,19 +48888,128 @@
     function renderEvaluationResult(ex = null, navFn = null) {
       if (!state.lastEvaluation) return '';
       const { evaluation, feedback } = state.lastEvaluation;
-      const fullEsc = escapeJs(evaluation.expected_text || '');
+      const fullEsc = escapeJs(evaluation.expected_text || (ex ? ex.expected_text : '') || '');
       const scenEsc = escapeJs(ex ? ex.scenario_id : '');
       const phrEsc = escapeJs(ex ? ex.phrase_id : '');
+
+      // Identify the expected target expression/phrase
+      const currentScen = state.currentScenario;
+      const origPhrase = (currentScen && currentScen.phrases)
+        ? currentScen.phrases.find(item => item.id === (ex ? ex.phrase_id : ''))
+        : null;
+
+      let expectedFocus = '';
+      let focusMeaning = '';
+      if (ex && ex.type === 'recall') {
+        expectedFocus = (origPhrase && origPhrase.apply_answer) || (ex.prompt && ex.prompt.focus_words && ex.prompt.focus_words[0]) || '';
+        if (!expectedFocus && origPhrase && origPhrase.glossary && origPhrase.glossary[0]) expectedFocus = origPhrase.glossary[0].word;
+      } else if (origPhrase && origPhrase.apply_answer) {
+        expectedFocus = origPhrase.apply_answer;
+      } else if (origPhrase && origPhrase.glossary && origPhrase.glossary[0]) {
+        expectedFocus = origPhrase.glossary[0].word;
+      } else if (ex && ex.prompt && ex.prompt.focus_words && ex.prompt.focus_words[0]) {
+        expectedFocus = ex.prompt.focus_words[0];
+      }
+
+      if (origPhrase && origPhrase.glossary && origPhrase.glossary[0]) {
+        focusMeaning = origPhrase.glossary[0].meaning;
+      }
+
+      // Check whether user spoke and matched the expected target expression
+      const heardText = evaluation.transcript || state.lastEvaluation.transcript || '';
+      const norm = s => (s || '').toLowerCase().replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
+      const heardNorm = norm(heardText);
+      const focusNorm = norm(expectedFocus);
+
+      let focusAchieved = false;
+      if (focusNorm) {
+        if (heardNorm.includes(focusNorm)) {
+          focusAchieved = true;
+        } else {
+          const fWords = focusNorm.split(' ');
+          const correctWords = new Set((evaluation.words || []).filter(w => w.status === 'correct').map(w => norm(w.expected)));
+          if (fWords.length && fWords.every(fw => correctWords.has(fw))) {
+            focusAchieved = true;
+          }
+        }
+      } else {
+        focusAchieved = evaluation.passed;
+      }
+
+      // 1. Target Objective Status Banner
+      const focusStatusHtml = expectedFocus ? (focusAchieved ? `
+        <div class="p-4 rounded-2xl bg-emerald-950/40 border-2 border-emerald-500/50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-lg shadow-emerald-500/10">
+          <div class="flex items-center gap-3">
+            <span class="text-3xl p-1.5 rounded-xl bg-emerald-500/20 text-emerald-300">🎯</span>
+            <div>
+              <span class="text-[11px] font-black uppercase tracking-wider text-emerald-400">¡Objetivo conseguido!</span>
+              <p class="text-sm font-bold text-white mt-0.5">
+                Pronunciaste la expresión esperada:
+                <span class="text-emerald-300 font-mono font-black underline decoration-emerald-400">“${expectedFocus}”</span>
+                ${focusMeaning ? `<span class="text-xs text-slate-300 ml-1.5">(${focusMeaning})</span>` : ''}
+              </p>
+            </div>
+          </div>
+          <span class="shrink-0 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 font-extrabold text-xs">✔ Frase lograda</span>
+        </div>
+      ` : `
+        <div class="p-4 rounded-2xl bg-amber-950/40 border-2 border-amber-500/50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-lg shadow-amber-500/10">
+          <div class="flex items-center gap-3">
+            <span class="text-3xl p-1.5 rounded-xl bg-amber-500/20 text-amber-300">⚠️</span>
+            <div>
+              <span class="text-[11px] font-black uppercase tracking-wider text-amber-400">Objetivo pendiente</span>
+              <p class="text-sm font-bold text-white mt-0.5">
+                No se detectó la frase esperada:
+                <span class="text-amber-300 font-mono font-black">“${expectedFocus}”</span>
+                ${focusMeaning ? `<span class="text-xs text-slate-300 ml-1.5">(${focusMeaning})</span>` : ''}
+              </p>
+              ${heardText ? `<p class="text-xs text-slate-400 mt-1">Escuchamos: <span class="text-slate-200 italic font-medium">“${heardText}”</span></p>` : ''}
+            </div>
+          </div>
+          <span class="shrink-0 px-3 py-1 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-300 font-extrabold text-xs">⚠️ No utilizada</span>
+        </div>
+      `) : '';
+
+      // 2. Revealed Full Correct Model Sentence with target highlighted
+      const correctSentence = (ex ? (ex.expected_text || (ex.prompt && ex.prompt.display_text) || '') : '') || evaluation.expected_text || '';
+      const correctEsc = escapeJs(correctSentence);
+      const translationText = (ex && ex.prompt && ex.prompt.translation) || (origPhrase ? origPhrase.translation : '');
+
+      let sentenceHtml = correctSentence;
+      if (expectedFocus) {
+        const escapedExpr = expectedFocus.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const re = new RegExp(`(${escapedExpr})`, 'gi');
+        sentenceHtml = correctSentence.replace(re, `<span class="px-2.5 py-0.5 rounded-xl bg-indigo-500/30 border border-indigo-400 text-indigo-200 font-mono font-black shadow-inner">$1</span>`);
+      }
+
+      const revealedSentenceHtml = `
+        <div class="p-4 sm:p-5 rounded-2xl bg-slate-900/90 border border-slate-700/80 space-y-2.5 text-left shadow-lg">
+          <div class="flex items-center justify-between gap-2">
+            <span class="text-[11px] font-black uppercase tracking-wider text-indigo-300 flex items-center gap-1.5">
+              <span>📖</span><span>Frase Correcta Completa:</span>
+            </span>
+            <button onclick="speakText('${correctEsc}')" class="px-3 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-md">
+              <span>🔊</span><span>Escuchar modelo</span>
+            </button>
+          </div>
+          <div class="text-base sm:text-xl font-bold text-white leading-relaxed">
+            ${sentenceHtml}
+          </div>
+          ${translationText ? `<p class="text-sm text-slate-300 font-medium">“${translationText}”</p>` : ''}
+        </div>
+      `;
+
+      // 3. Word-by-word pronunciation accuracy badges
       const statusBadge = {
         correct: 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30',
         mispronounced: 'bg-amber-500/15 text-amber-300 border-amber-500/30',
         missing: 'bg-rose-500/15 text-rose-300 border-rose-500/30 line-through',
         extra: 'bg-purple-500/15 text-purple-300 border-purple-500/30',
       };
-      const wordsHtml = evaluation.words.map(w => {
+      const wordsHtml = (evaluation.words || []).map(w => {
         const token = w.expected || w.heard || '';
         return `
-          <span onclick="openTranslateOverlay('${escapeJs(token)}', '${fullEsc}', '${scenEsc}', '${phrEsc}')" class="cursor-pointer px-2.5 py-1 rounded-lg border text-xs font-medium ${statusBadge[w.status]}">
+          <span onclick="openTranslateOverlay('${escapeJs(token)}', '${fullEsc}', '${scenEsc}', '${phrEsc}')" class="cursor-pointer px-2.5 py-1 rounded-lg border text-xs font-medium ${statusBadge[w.status] || 'border-slate-700'}">
             ${token}
           </span>
         `;
@@ -48989,13 +49035,16 @@
       ` : '';
 
       return `
-        <div class="rounded-3xl border p-5 space-y-3 shadow-xl ${
+        <div class="rounded-3xl border p-5 space-y-4 shadow-xl ${
           evaluation.passed ? 'bg-emerald-950/25 border-emerald-500/40' : 'bg-amber-950/25 border-amber-500/40'
         }">
-          <div class="flex items-center justify-between gap-2">
+          ${focusStatusHtml}
+          ${revealedSentenceHtml}
+
+          <div class="flex items-center justify-between gap-2 pt-1 border-t border-slate-800/80">
             <div>
               <span class="text-[11px] font-bold uppercase tracking-wider ${evaluation.passed ? 'text-emerald-400' : 'text-amber-400'}">
-                ${evaluation.passed ? '✔ ¡Muy bien hecho!' : '⚠️ Inténtalo de nuevo'}
+                ${evaluation.passed ? '✔ ¡Muy bien hecho!' : '⚠️ Pronunciación por mejorar'}
               </span>
               <p class="text-sm font-bold text-white mt-0.5">${feedback.message_es}</p>
             </div>
@@ -49003,6 +49052,7 @@
               ${Math.round(evaluation.score * 100)}%
             </span>
           </div>
+
           <div class="flex flex-wrap gap-1.5 pt-1">${wordsHtml}</div>
           ${tipsHtml ? `<ul class="space-y-1 pt-1">${tipsHtml}</ul>` : ''}
           ${continueBtnHtml}
@@ -49337,10 +49387,16 @@
         fd.append('debug_transcript', transcript);
         const url = cardId ? `/v1/review/${cardId}/attempts` : `/v1/exercises/${exId}/attempts`;
         state.lastEvaluation = await api(url, { method: 'POST', body: fd });
+        if (state.lastEvaluation && state.lastEvaluation.evaluation) {
+          state.lastEvaluation.evaluation.transcript = transcript || state.lastEvaluation.evaluation.transcript || '';
+        }
       } else {
         const stage = state.lesson.stages[Math.min(state.stageIndex, 3)];
         const ex = stage.exercises[state.exerciseIndex];
         state.lastEvaluation = evaluateLocally(ex, transcript);
+        if (state.lastEvaluation && state.lastEvaluation.evaluation) {
+          state.lastEvaluation.evaluation.transcript = transcript;
+        }
         if (cardId) state.srsList = state.srsList.filter(c => c.card_id !== cardId);
       }
       if (window.SpeakFlowFirebase && state.lastEvaluation) {
