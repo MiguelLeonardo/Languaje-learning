@@ -36089,7 +36089,7 @@
         const icon = topicIcons[s.topic] || '📘';
         const modTitle = topicTitles[s.topic] || s.topic;
         return `
-          <div class="bg-slate-900/80 hover:bg-slate-900 border border-slate-800/90 hover:border-indigo-500/50 rounded-3xl p-5 flex flex-col justify-between gap-4 transition shadow-md hover:shadow-indigo-500/10 ${
+          <div onclick="startLesson('${s.id}')" class="cursor-pointer bg-slate-900/80 hover:bg-slate-900 border border-slate-800/90 hover:border-indigo-500/50 rounded-3xl p-5 flex flex-col justify-between gap-4 transition shadow-md hover:shadow-indigo-500/10 ${
             active ? 'ring-2 ring-indigo-500/50 border-indigo-500/70' : ''
           }">
             <div class="space-y-2.5">
@@ -36109,7 +36109,7 @@
 
             <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between gap-2">
               <span class="text-[11px] text-slate-500">5 etapas de voz</span>
-              <button onclick="startLesson('${s.id}')"
+              <button type="button" onclick="event.stopPropagation(); startLesson('${s.id}')"
                 class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-bold text-xs shadow-md shadow-indigo-600/25 flex items-center gap-2 transition transform hover:scale-[1.02]">
                 <span>🎙️</span><span>Practicar Lección</span>
               </button>
@@ -36120,10 +36120,12 @@
     }
 
     async function startLesson(id) {
-      await selectScenario(id, true);
       state.viewMode = 'exercise';
+      state.activeTab = 'lesson';
       updateViewVisibility();
-      await switchTab('lesson');
+      updateTabStyles();
+      await selectScenario(id, true);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function goToCatalogView() {
@@ -36310,7 +36312,7 @@
       renderActiveTab();
     }
 
-    function renderExerciseCard(ex, meta, idx, total) {
+    function renderExerciseCard(ex, meta, idx, total, navFn = null) {
       const p = ex.prompt;
       const fullPhrase = ex.expected_text || p.display_text || '';
       const fullEsc = escapeJs(fullPhrase);
@@ -36742,6 +36744,7 @@
         btn.classList.remove('recording-pulse');
         label.textContent = 'Hablar con la IA en voz alta';
       };
+      rec.start();
     }
 
     async function submitRoleplayTurn(line) {
@@ -36786,6 +36789,11 @@
       else await renderRoleplayView(false);
     }
 
+    async function advanceSrsItem() {
+      state.lastEvaluation = null;
+      await renderSrsView();
+    }
+
     async function renderSrsView() {
       if (state.backendOnline) state.srsList = await api('/v1/review/due');
       if (!state.srsList.length) {
@@ -36813,7 +36821,7 @@
           <div class="flex items-center justify-between pb-3 border-b border-slate-800/80">
             <h3 class="font-semibold text-sm text-white">🔖 Frases por repasar (${state.srsList.length})</h3>
           </div>
-          ${renderExerciseCard(ex, meta, 0, state.srsList.length)}
+          ${renderExerciseCard(ex, meta, 0, state.srsList.length, 'advanceSrsItem')}
         </div>
         ${renderMicrophoneControls(ex, item.card_id, null)}
       `;
