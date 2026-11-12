@@ -186,14 +186,18 @@
         </div>
       </div>
 
-      <!-- Clean Learner Progress & Subtle Settings -->
+      <!-- Clean Learner Progress, Navigation & Subtle Settings -->
       <div class="flex items-center gap-2 text-xs">
+        <button id="nav-catalog-btn" onclick="goToCatalogView()" class="px-3 py-1.5 rounded-xl bg-indigo-600/20 hover:bg-indigo-600/30 border border-indigo-500/30 text-indigo-200 transition flex items-center gap-1.5 font-medium" title="Volver a la selección de nivel y temáticas">
+          <span>🧭</span>
+          <span class="hidden sm:inline">Temáticas</span>
+        </button>
         <div class="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 flex items-center gap-1.5" title="Precisión media de pronunciación">
           <span class="text-emerald-400">🎯</span>
           <span class="text-slate-400 hidden sm:inline">Precisión</span>
           <span id="stat-score" class="font-semibold text-white">0%</span>
         </div>
-        <button onclick="switchTab('srs')" class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 transition flex items-center gap-1.5" title="Frases guardadas para repasar">
+        <button onclick="openSrsView()" class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 transition flex items-center gap-1.5" title="Frases guardadas para repasar">
           <span>🔖</span>
           <span class="hidden sm:inline">Repaso</span>
           <span id="stat-due" class="font-semibold px-1.5 py-0.2 rounded-full bg-indigo-500/20 text-indigo-300">0</span>
@@ -335,36 +339,65 @@
   </div>
 
   <!-- Main Workspace -->
-  <div class="max-w-6xl mx-auto w-full flex-1 grid grid-cols-1 lg:grid-cols-12 gap-6 p-4 sm:p-6">
-    <!-- Left Column: Levels, Categories & Lessons -->
-    <aside class="lg:col-span-4 space-y-4">
-      <div class="bg-slate-900/70 border border-slate-800/90 rounded-2xl p-4 space-y-3">
-        <div class="flex items-center justify-between">
-          <h2 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Nivel</h2>
-          <span id="band-badge" class="text-xs text-slate-400">Todos</span>
+  <div class="max-w-6xl mx-auto w-full flex-1 p-4 sm:p-6 flex flex-col">
+    <!-- VIEW 1: Hub de Selección de Nivel y Temáticas (Catálogo) -->
+    <section id="view-catalog" class="space-y-6">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-slate-900/80 border border-slate-800/90 rounded-3xl p-5 sm:p-6">
+        <div>
+          <span class="text-[11px] font-semibold uppercase tracking-wider text-indigo-400">Currículo Conversacional (Solo Voz)</span>
+          <h1 class="text-xl sm:text-2xl font-bold text-white mt-1">Elige tu Nivel y Temática</h1>
+          <p class="text-xs text-slate-400 mt-1">180 escenarios estructurados con progresión de habla natural y conversación libre con IA.</p>
         </div>
-        <div id="cefr-buttons" class="grid grid-cols-7 gap-1.5 text-xs font-semibold"></div>
+        <div class="flex items-center gap-2">
+          <span class="text-xs text-slate-400">Filtro activo:</span>
+          <span id="current-filter-badge" class="px-3.5 py-1.5 rounded-full bg-indigo-500/15 border border-indigo-500/30 text-indigo-300 text-xs font-semibold">Todos los niveles</span>
+        </div>
       </div>
 
-      <div class="bg-slate-900/70 border border-slate-800/90 rounded-2xl p-4 space-y-3">
+      <!-- Selector 1: Nivel CEFR -->
+      <div class="bg-slate-900/60 border border-slate-800/90 rounded-3xl p-5 space-y-3">
         <div class="flex items-center justify-between">
-          <h2 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Temáticas</h2>
-          <span id="module-badge" class="text-xs text-indigo-300">Todas</span>
+          <h2 class="text-xs font-semibold uppercase tracking-wider text-slate-400">1. Selecciona tu Nivel de Inglés</h2>
+          <span id="band-badge" class="text-xs text-indigo-300 font-medium">Todos</span>
         </div>
-        <div id="module-buttons" class="grid grid-cols-2 gap-1.5 text-xs"></div>
+        <div id="cefr-buttons" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2 text-xs font-semibold"></div>
       </div>
 
-      <div class="bg-slate-900/70 border border-slate-800/90 rounded-2xl p-4 space-y-3">
+      <!-- Selector 2: Temáticas / Módulos -->
+      <div class="bg-slate-900/60 border border-slate-800/90 rounded-3xl p-5 space-y-3">
         <div class="flex items-center justify-between">
-          <h2 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Lecciones</h2>
-          <span id="scenario-count" class="text-xs text-slate-400"></span>
+          <h2 class="text-xs font-semibold uppercase tracking-wider text-slate-400">2. Selecciona una Temática</h2>
+          <span id="module-badge" class="text-xs text-indigo-300 font-medium">Todas</span>
         </div>
-        <div id="scenario-list" class="space-y-2 max-h-[380px] overflow-y-auto pr-1"></div>
+        <div id="module-buttons" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-2 text-xs"></div>
       </div>
-    </aside>
 
-    <!-- Right Column: Active Mode & Exercise Stage -->
-    <main class="lg:col-span-8 flex flex-col gap-4">
+      <!-- Grid de Lecciones Disponibles -->
+      <div class="space-y-3">
+        <div class="flex items-center justify-between px-1">
+          <div class="flex items-center gap-2">
+            <h2 class="text-sm font-bold text-white">Lecciones disponibles</h2>
+            <span id="scenario-count-badge" class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-indigo-300 font-mono font-semibold">180</span>
+          </div>
+          <span class="text-xs text-slate-400">Toca cualquier lección para comenzar tu práctica progresiva</span>
+        </div>
+        <div id="scenario-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5"></div>
+      </div>
+    </section>
+
+    <!-- VIEW 2: Pantalla de Ejercicios Progresiva (Solo Voz) -->
+    <section id="view-exercise" class="hidden flex-1 flex flex-col gap-4 max-w-4xl mx-auto w-full">
+      <!-- Barra superior de la lección con botón para volver a la selección -->
+      <div class="flex flex-wrap items-center justify-between gap-3 bg-slate-900/80 border border-slate-800/90 rounded-2xl p-3 px-4">
+        <button onclick="goToCatalogView()" class="px-3.5 py-2 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-200 text-xs font-semibold flex items-center gap-2 transition">
+          <span>←</span><span>Temáticas y Niveles</span>
+        </button>
+        <div id="active-lesson-breadcrumbs" class="flex items-center gap-2 text-xs truncate">
+          <!-- e.g. [B1] ✈️ Viajes: Reservar vuelo -->
+        </div>
+      </div>
+
+      <!-- Navegación de Modos de la Lección activa -->
       <nav class="bg-slate-900/70 border border-slate-800/90 rounded-2xl p-1.5 grid grid-cols-2 sm:grid-cols-5 gap-1 text-xs font-medium">
         <button data-tab="lesson" onclick="switchTab('lesson')" class="tab-btn py-2.5 px-3 rounded-xl transition flex items-center justify-center gap-1.5">
           <span>📚</span><span>Lección</span>
@@ -383,10 +416,10 @@
         </button>
       </nav>
 
-      <div id="stage-container" class="bg-slate-900/70 border border-slate-800/90 rounded-3xl p-5 sm:p-6 flex-1 flex flex-col justify-between min-h-[500px]">
+      <div id="stage-container" class="bg-slate-900/70 border border-slate-800/90 rounded-3xl p-5 sm:p-7 flex-1 flex flex-col justify-between min-h-[520px]">
         <div class="text-center text-slate-400 py-16 text-sm">Cargando lección…</div>
       </div>
-    </main>
+    </section>
   </div>
 
   <script>
@@ -35628,6 +35661,7 @@
 ];
 
     const state = {
+      viewMode: 'catalog',
       backendOnline: false,
       token: null,
       cefr: 'ALL',
@@ -35947,29 +35981,58 @@
       await loadScenarios();
       await refreshProgress();
       updateTabStyles();
+      updateViewVisibility();
     }
 
     function renderCefrButtons() {
       const levels = ['ALL', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
-      document.getElementById('cefr-buttons').innerHTML = levels.map(lv => `
-        <button onclick="selectCefr('${lv}')" class="py-1.5 rounded-xl border transition ${
-          state.cefr === lv ? 'bg-indigo-600 border-indigo-400 text-white shadow-sm' : 'bg-slate-900 border-slate-800 text-slate-300 hover:bg-slate-800'
-        }">${lv === 'ALL' ? 'Todos' : lv}</button>
-      `).join('');
-      const bandMap = { ALL: 'A1 a C2', A1: 'Inicial', A2: 'Básico', B1: 'Intermedio', B2: 'Intermedio Alto', C1: 'Avanzado', C2: 'Maestría' };
-      document.getElementById('band-badge').textContent = bandMap[state.cefr];
+      const cefrContainer = document.getElementById('cefr-buttons');
+      if (cefrContainer) {
+        cefrContainer.innerHTML = levels.map(lv => `
+          <button onclick="selectCefr('${lv}')" class="py-2.5 px-2 rounded-2xl border font-bold text-xs transition flex flex-col items-center justify-center gap-0.5 ${
+            state.cefr === lv ? 'bg-indigo-600 border-indigo-400 text-white shadow-md shadow-indigo-600/30' : 'bg-slate-900 border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white'
+          }">
+            <span class="text-sm">${lv === 'ALL' ? '🌐' : lv}</span>
+            <span class="text-[10px] font-normal opacity-80">${lv === 'ALL' ? 'Todos' : getCefrBandName(lv)}</span>
+          </button>
+        `).join('');
+      }
+      const bandMap = { ALL: 'Todos los niveles (A1 a C2)', A1: 'A1 - Inicial', A2: 'A2 - Básico', B1: 'B1 - Intermedio', B2: 'B2 - Intermedio Alto', C1: 'C1 - Avanzado', C2: 'C2 - Maestría' };
+      const bandEl = document.getElementById('band-badge');
+      if (bandEl) bandEl.textContent = bandMap[state.cefr] || state.cefr;
+      updateFilterSummaryBadge();
+    }
+
+    function getCefrBandName(lv) {
+      const map = { A1: 'Inicial', A2: 'Básico', B1: 'Intermedio', B2: 'Int. Alto', C1: 'Avanzado', C2: 'Maestría' };
+      return map[lv] || '';
     }
 
     function renderModuleButtons() {
-      document.getElementById('module-buttons').innerHTML = TOPIC_MODULES.map(m => `
-        <button onclick="selectTopic('${m.id}')" class="px-2.5 py-2 rounded-xl border text-left truncate transition ${
-          state.topic === m.id ? 'bg-indigo-600/25 border-indigo-500/60 text-white font-semibold' : 'bg-slate-900 border-slate-800/80 text-slate-300 hover:bg-slate-800/80'
-        } ${m.id === 'ALL' ? 'col-span-2 text-center' : ''}">
-          <span>${m.icon}</span> <span class="ml-1">${m.title_es}</span>
-        </button>
-      `).join('');
+      const modContainer = document.getElementById('module-buttons');
+      if (modContainer) {
+        modContainer.innerHTML = TOPIC_MODULES.map(m => `
+          <button onclick="selectTopic('${m.id}')" class="p-2.5 rounded-2xl border text-left transition flex items-center gap-2 ${
+            state.topic === m.id ? 'bg-indigo-600/25 border-indigo-500/60 text-white font-bold ring-1 ring-indigo-500/50' : 'bg-slate-900 border-slate-800/80 text-slate-300 hover:bg-slate-800/80 hover:text-white'
+          }">
+            <span class="text-lg">${m.icon}</span>
+            <span class="text-xs truncate font-medium">${m.title_es}</span>
+          </button>
+        `).join('');
+      }
       const activeMod = TOPIC_MODULES.find(m => m.id === state.topic);
-      document.getElementById('module-badge').textContent = activeMod ? activeMod.title_es : 'Todas';
+      const modBadge = document.getElementById('module-badge');
+      if (modBadge) modBadge.textContent = activeMod ? activeMod.title_es : 'Todas';
+      updateFilterSummaryBadge();
+    }
+
+    function updateFilterSummaryBadge() {
+      const b = document.getElementById('current-filter-badge');
+      if (!b) return;
+      const mod = TOPIC_MODULES.find(m => m.id === state.topic);
+      const modText = (mod && mod.id !== 'ALL') ? mod.title_es : 'Todas las temáticas';
+      const cefrText = state.cefr !== 'ALL' ? `Nivel ${state.cefr}` : 'Todos los niveles';
+      b.textContent = `${cefrText} • ${modText}`;
     }
 
     async function selectCefr(lv) {
@@ -35998,9 +36061,10 @@
         if (state.topic !== 'ALL') list = list.filter(s => s.topic === state.topic);
         state.scenarios = list.map(s => ({ ...s, phrases: s.phrases.length }));
       }
-      document.getElementById('scenario-count').textContent = `${state.scenarios.length}`;
+      const countBadge = document.getElementById('scenario-count-badge');
+      if (countBadge) countBadge.textContent = `${state.scenarios.length}`;
       if (state.scenarios.length && (!state.currentScenario || !state.scenarios.some(s => s.id === state.currentScenario.id))) {
-        await selectScenario(state.scenarios[0].id);
+        await selectScenario(state.scenarios[0].id, false);
       } else {
         renderScenarioList();
       }
@@ -36013,27 +36077,96 @@
         advanced: 'bg-rose-500/15 text-rose-300 border-rose-500/30',
       };
       const topicIcons = Object.fromEntries(TOPIC_MODULES.map(m => [m.id, m.icon]));
-      document.getElementById('scenario-list').innerHTML = state.scenarios.map(s => {
+      const topicTitles = Object.fromEntries(TOPIC_MODULES.map(m => [m.id, m.title_es]));
+      const grid = document.getElementById('scenario-grid');
+      if (!grid) return;
+      if (!state.scenarios.length) {
+        grid.innerHTML = `<div class="col-span-full text-center py-12 text-slate-400 text-sm">No se encontraron escenarios con este filtro.</div>`;
+        return;
+      }
+      grid.innerHTML = state.scenarios.map(s => {
         const active = state.currentScenario && state.currentScenario.id === s.id;
+        const icon = topicIcons[s.topic] || '📘';
+        const modTitle = topicTitles[s.topic] || s.topic;
         return `
-          <button onclick="selectScenario('${s.id}')" class="w-full text-left p-3 rounded-2xl border transition flex items-start justify-between gap-2 ${
-            active ? 'bg-indigo-600/20 border-indigo-500/70 text-white shadow-sm' : 'bg-slate-900/80 border-slate-800/80 hover:border-slate-700 text-slate-200'
+          <div class="bg-slate-900/80 hover:bg-slate-900 border border-slate-800/90 hover:border-indigo-500/50 rounded-3xl p-5 flex flex-col justify-between gap-4 transition shadow-md hover:shadow-indigo-500/10 ${
+            active ? 'ring-2 ring-indigo-500/50 border-indigo-500/70' : ''
           }">
-            <div>
-              <div class="flex items-center gap-1.5">
-                <span class="text-[11px] font-bold px-2 py-0.5 rounded-md border ${bandColors[s.band] || ''}">${s.cefr}</span>
-                <span>${topicIcons[s.topic] || '📘'}</span>
-                <span class="font-semibold text-sm">${s.title_es}</span>
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-1.5">
+                  <span class="text-xs font-bold font-mono px-2.5 py-0.5 rounded-lg border ${bandColors[s.band] || 'bg-slate-800 text-slate-300'}">${s.cefr}</span>
+                  <span class="text-xs text-slate-400 flex items-center gap-1"><span>${icon}</span><span class="truncate max-w-[140px]">${modTitle}</span></span>
+                </div>
+                <span class="text-[11px] font-semibold text-slate-400 bg-slate-950 px-2 py-0.5 rounded-md border border-slate-800/80">${s.phrases} frases</span>
               </div>
-              <p class="text-xs text-slate-400 mt-1 line-clamp-2">${s.description}</p>
+              <div>
+                <h3 class="font-bold text-base text-white leading-snug">${s.title_es}</h3>
+                <p class="text-xs text-indigo-300/80 font-medium mt-0.5">${s.title}</p>
+              </div>
+              <p class="text-xs text-slate-400 leading-relaxed line-clamp-2">${s.description}</p>
             </div>
-            <span class="text-[11px] text-slate-400 shrink-0 mt-0.5">${s.phrases} frases</span>
-          </button>
+
+            <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between gap-2">
+              <span class="text-[11px] text-slate-500">5 etapas de voz</span>
+              <button onclick="startLesson('${s.id}')"
+                class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-bold text-xs shadow-md shadow-indigo-600/25 flex items-center gap-2 transition transform hover:scale-[1.02]">
+                <span>🎙️</span><span>Practicar Lección</span>
+              </button>
+            </div>
+          </div>
         `;
       }).join('');
     }
 
-    async function selectScenario(id) {
+    async function startLesson(id) {
+      await selectScenario(id, true);
+      state.viewMode = 'exercise';
+      updateViewVisibility();
+      await switchTab('lesson');
+    }
+
+    function goToCatalogView() {
+      state.viewMode = 'catalog';
+      updateViewVisibility();
+    }
+
+    function openSrsView() {
+      state.viewMode = 'exercise';
+      updateViewVisibility();
+      switchTab('srs');
+    }
+
+    function updateViewVisibility() {
+      const cat = document.getElementById('view-catalog');
+      const ex = document.getElementById('view-exercise');
+      const navBtn = document.getElementById('nav-catalog-btn');
+      if (state.viewMode === 'catalog') {
+        if (cat) cat.classList.remove('hidden');
+        if (ex) ex.classList.add('hidden');
+        if (navBtn) navBtn.classList.add('hidden');
+      } else {
+        if (cat) cat.classList.add('hidden');
+        if (ex) ex.classList.remove('hidden');
+        if (navBtn) navBtn.classList.remove('hidden');
+        updateActiveLessonBreadcrumbs();
+      }
+    }
+
+    function updateActiveLessonBreadcrumbs() {
+      const bc = document.getElementById('active-lesson-breadcrumbs');
+      if (!bc || !state.currentScenario) return;
+      const s = state.currentScenario;
+      const mod = TOPIC_MODULES.find(m => m.id === s.topic) || { icon: '📘', title_es: '' };
+      bc.innerHTML = `
+        <span class="px-2.5 py-0.5 rounded-md bg-indigo-500/20 text-indigo-300 font-bold font-mono text-[11px] border border-indigo-500/30">${s.cefr}</span>
+        <span class="font-semibold text-slate-200">${mod.icon} ${s.title_es}</span>
+        <span class="hidden md:inline text-slate-500">•</span>
+        <span class="hidden md:inline text-slate-400 text-xs">${s.title}</span>
+      `;
+    }
+
+    async function selectScenario(id, renderActive = false) {
       if (state.backendOnline) {
         state.currentScenario = await api(`/v1/scenarios/${id}`);
         state.lesson = await api(`/v1/lessons/${id}`);
@@ -36045,7 +36178,8 @@
       }
       state.stageIndex = 0; state.exerciseIndex = 0; state.lastEvaluation = null; state.roleplaySession = null; state.showManualInput = false;
       renderScenarioList();
-      await renderActiveTab();
+      updateActiveLessonBreadcrumbs();
+      if (renderActive) await renderActiveTab();
     }
 
     async function refreshProgress() {
@@ -36231,12 +36365,12 @@
           </div>
 
           ${glossaryHtml}
-          ${renderEvaluationResult(ex)}
+          ${renderEvaluationResult(ex, navFn)}
         </div>
       `;
     }
 
-    function renderEvaluationResult(ex = null) {
+    function renderEvaluationResult(ex = null, navFn = null) {
       if (!state.lastEvaluation) return '';
       const { evaluation, feedback } = state.lastEvaluation;
       const fullEsc = escapeJs(evaluation.expected_text || '');
@@ -36263,18 +36397,37 @@
         </li>
       `).join('');
 
+      const continueBtnHtml = navFn ? `
+        <div class="pt-3 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <button onclick="recordWithMicrophone('${ex ? ex.id : ''}', '${fullEsc}', '')"
+            class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold flex items-center justify-center gap-2 transition">
+            <span>🎙️</span><span>Repetir pronunciación</span>
+          </button>
+          <button id="btn-continue-exercise" onclick="${navFn}(1)"
+            class="w-full sm:w-auto px-8 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-extrabold text-sm shadow-xl shadow-emerald-500/25 flex items-center justify-center gap-2 transition transform hover:scale-[1.02] active:scale-95">
+            <span>Continuar</span><span>→</span>
+          </button>
+        </div>
+      ` : '';
+
       return `
-        <div class="rounded-2xl border p-4 space-y-2.5 ${
-          evaluation.passed ? 'bg-emerald-950/25 border-emerald-500/35' : 'bg-amber-950/25 border-amber-500/35'
+        <div class="rounded-3xl border p-5 space-y-3 shadow-xl ${
+          evaluation.passed ? 'bg-emerald-950/25 border-emerald-500/40' : 'bg-amber-950/25 border-amber-500/40'
         }">
           <div class="flex items-center justify-between gap-2">
-            <p class="text-sm font-semibold text-white">${feedback.message_es}</p>
-            <span class="text-xs font-bold px-2.5 py-1 rounded-full ${evaluation.passed ? 'bg-emerald-500/20 text-emerald-300' : 'bg-amber-500/20 text-amber-300'}">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider ${evaluation.passed ? 'text-emerald-400' : 'text-amber-400'}">
+                ${evaluation.passed ? '✔ ¡Muy bien hecho!' : '⚠️ Inténtalo de nuevo'}
+              </span>
+              <p class="text-sm font-bold text-white mt-0.5">${feedback.message_es}</p>
+            </div>
+            <span class="text-sm font-extrabold px-3 py-1 rounded-full ${evaluation.passed ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30' : 'bg-amber-500/20 text-amber-300 border border-amber-500/30'}">
               ${Math.round(evaluation.score * 100)}%
             </span>
           </div>
-          <div class="flex flex-wrap gap-1.5">${wordsHtml}</div>
+          <div class="flex flex-wrap gap-1.5 pt-1">${wordsHtml}</div>
           ${tipsHtml ? `<ul class="space-y-1 pt-1">${tipsHtml}</ul>` : ''}
+          ${continueBtnHtml}
         </div>
       `;
     }
@@ -36284,47 +36437,22 @@
       return `
         <div class="mt-5 pt-4 border-t border-slate-800/80 space-y-3">
           <div class="flex items-center justify-between gap-3">
-            ${navFn ? `<button onclick="${navFn}(-1)" class="px-3.5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-300 transition">← Anterior</button>` : '<div></div>'}
+            ${navFn ? `<button onclick="${navFn}(-1)" class="px-3.5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-400 hover:text-slate-200 transition">← Anterior</button>` : '<div></div>'}
 
-            <div class="flex items-center gap-2">
+            <div class="flex items-center justify-center">
               <button id="mic-btn" onclick="recordWithMicrophone('${ex.id}', '${target}', '${cardId || ''}')"
-                class="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-500 hover:to-pink-500 text-white font-semibold text-sm shadow-lg shadow-rose-600/25 flex items-center gap-2.5 transition">
-                <span>🎙️</span><span id="mic-label">Toca para hablar</span>
-              </button>
-              <button onclick="toggleManualInput()" title="Escribir respuesta si no puedes usar el micrófono"
-                class="p-3.5 rounded-2xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 hover:text-white text-xs transition">
-                ⌨️
+                class="px-8 py-3.5 rounded-2xl bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-500 hover:to-pink-500 text-white font-bold text-sm shadow-xl shadow-rose-600/30 flex items-center gap-3 transition transform hover:scale-105 active:scale-95">
+                <span class="text-lg">🎙️</span><span id="mic-label">Toca para hablar</span>
               </button>
             </div>
 
-            ${navFn ? `<button onclick="${navFn}(1)" class="px-3.5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-300 transition">Siguiente →</button>` : '<div></div>'}
+            ${navFn ? `<button onclick="${navFn}(1)" class="px-3.5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-400 hover:text-slate-200 transition">Siguiente →</button>` : '<div></div>'}
           </div>
-
-          <div id="manual-input-box" class="${state.showManualInput ? 'flex' : 'hidden'} items-center gap-2 pt-1">
-            <input id="manual-speech-input" type="text" value="${ex.expected_text.replace(/"/g, '&quot;')}"
-              placeholder="Escribe la frase en inglés para practicar…"
-              class="flex-1 px-3.5 py-2 rounded-xl bg-slate-950 border border-slate-800 text-xs text-white"
-              onkeydown="if(event.key==='Enter') submitManualInput('${ex.id}', '${cardId || ''}')" />
-            <button onclick="submitManualInput('${ex.id}', '${cardId || ''}')"
-              class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold">
-              Evaluar
-            </button>
-          </div>
+          <p class="text-center text-[11px] text-slate-500 flex items-center justify-center gap-1.5">
+            <span>🎙️</span><span>App de solo voz: escucha el modelo y pronuncia con tu micrófono.</span>
+          </p>
         </div>
       `;
-    }
-
-    function toggleManualInput() {
-      state.showManualInput = !state.showManualInput;
-      const box = document.getElementById('manual-input-box');
-      if (box) box.classList.toggle('hidden', !state.showManualInput);
-      if ( box && state.showManualInput) box.classList.add('flex');
-    }
-
-    async function submitManualInput(exId, cardId = '') {
-      const inp = document.getElementById('manual-speech-input');
-      if (!inp || !inp.value.trim()) return;
-      await submitAttempt(exId, inp.value.trim(), cardId);
     }
 
     async function recordWithMicrophone(exId, fallbackText, cardId) {
@@ -36359,8 +36487,13 @@
 
       const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
       if (!SR) {
-        state.showManualInput = true;
-        toggleManualInput();
+        label.textContent = 'Habla ahora (simulación activa)';
+        btn.classList.add('recording-pulse');
+        setTimeout(async () => {
+          btn.classList.remove('recording-pulse');
+          label.textContent = 'Toca para hablar';
+          await submitAttempt(exId, fallbackText, cardId);
+        }, 1200);
         return;
       }
       btn.classList.add('recording-pulse');
@@ -36376,9 +36509,6 @@
       rec.onerror = () => {
         btn.classList.remove('recording-pulse');
         label.textContent = 'Toca para hablar';
-        state.showManualInput = true;
-        const box = document.getElementById('manual-input-box');
-        if (box) { box.classList.remove('hidden'); box.classList.add('flex'); }
       };
       rec.start();
     }
@@ -36491,45 +36621,52 @@
 
       const turnEval = rp.last_turn_evaluation || (rp.feedback ? { passed: rp.accepted, feedback: rp.feedback, natural_alternative: rp.natural_alternative } : null);
       const evalBanner = turnEval ? `
-        <div class="rounded-2xl border p-3.5 text-xs space-y-1 ${
+        <div class="rounded-2xl border p-4 text-xs space-y-2.5 ${
           turnEval.passed !== false ? 'bg-emerald-950/25 border-emerald-500/35 text-emerald-200' : 'bg-amber-950/25 border-amber-500/35 text-amber-200'
         }">
-          <p class="font-medium">${turnEval.feedback ? turnEval.feedback.message_es : ''}</p>
-          ${turnEval.natural_alternative ? `<p class="text-indigo-200">💡 <strong>Sugerencia nativa:</strong> “${turnEval.natural_alternative}”</p>` : ''}
+          <div class="flex items-center justify-between">
+            <p class="font-bold text-sm text-white">${turnEval.feedback ? turnEval.feedback.message_es : 'Turno evaluado'}</p>
+            <span class="text-xs font-bold px-2.5 py-0.5 rounded-full ${turnEval.passed !== false ? 'bg-emerald-500/20 text-emerald-300' : 'bg-amber-500/20 text-amber-300'}">
+              ${turnEval.passed !== false ? '✔ Correcto' : 'Ajuste'}
+            </span>
+          </div>
+          ${turnEval.natural_alternative ? `<p class="text-indigo-200">💡 <strong>Alternativa nativa sugerida:</strong> “${turnEval.natural_alternative}”</p>` : ''}
+          ${rp.pending_turn ? `
+            <div class="pt-2 flex justify-end">
+              <button onclick="document.getElementById('rp-turn-card')?.scrollIntoView({behavior:'smooth'})" class="px-5 py-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-bold text-xs flex items-center gap-1.5 shadow transition">
+                <span>Continuar al siguiente turno</span><span>→</span>
+              </button>
+            </div>
+          ` : ''}
         </div>
       ` : '';
 
       const pendingHtml = rp.pending_turn ? `
-        <div class="bg-slate-950/90 border border-slate-800 rounded-2xl p-4 space-y-3">
+        <div id="rp-turn-card" class="bg-slate-950/90 border border-slate-800 rounded-3xl p-5 space-y-4">
           <div class="flex items-center justify-between gap-2">
-            <span class="text-xs font-semibold text-rose-300">🎯 Tu turno en la conversación</span>
-            <span class="text-[11px] text-slate-400">Responde con tu propia frase o usa una sugerencia</span>
+            <span class="text-xs font-bold text-rose-300 uppercase tracking-wider">🎯 Tu turno en la conversación</span>
+            <span class="text-[11px] text-slate-400">Responde hablando con tu voz o usa una sugerencia</span>
           </div>
-          <p class="text-sm font-semibold text-white">${rp.pending_turn.goal}</p>
+          <p class="text-base font-bold text-white">${rp.pending_turn.goal}</p>
 
-          <div class="flex flex-col sm:flex-row gap-2">
+          <div class="flex flex-col sm:flex-row items-center gap-3 pt-1">
             <button id="rp-mic-btn" onclick="recordRoleplayFreeform('${escapeJs(rp.pending_turn.suggested_lines[0] || '')}')"
-              class="px-4 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-semibold text-xs shadow flex items-center justify-center gap-2 shrink-0">
-              <span>🎙️</span><span id="rp-mic-label">Hablar con la IA</span>
+              class="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-500 hover:to-pink-500 text-white font-bold text-sm shadow-xl shadow-rose-600/30 flex items-center justify-center gap-2.5 transition transform hover:scale-[1.02] active:scale-95">
+              <span class="text-lg">🎙️</span><span id="rp-mic-label">Hablar con la IA en voz alta</span>
             </button>
-            <div class="flex-1 flex gap-1.5">
-              <input id="rp-free-input" type="text" placeholder="O escribe tu respuesta en inglés…"
-                class="flex-1 px-3.5 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs text-white"
-                onkeydown="if(event.key==='Enter') submitFreeformInput()" />
-              <button onclick="submitFreeformInput()" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold">
-                Enviar
-              </button>
-            </div>
+            <span class="text-[11px] text-slate-400 text-center sm:text-left">
+              Habla libremente en inglés para responder al turno.
+            </span>
           </div>
 
-          <div class="space-y-1.5 pt-2 border-t border-slate-900">
-            <div class="text-[11px] text-slate-400">Ideas del libreto (toca cualquier palabra para traducir o 🎙️ para decirla):</div>
+          <div class="space-y-2 pt-3 border-t border-slate-800/80">
+            <div class="text-[11px] text-slate-400 font-medium">Ideas del libreto (toca para traducir o di cualquiera con el micrófono):</div>
             <div class="flex flex-col sm:flex-row flex-wrap gap-2">
               ${rp.pending_turn.suggested_lines.map(line => `
-                <div class="px-3 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 text-xs flex items-center justify-between gap-2">
-                  <span>“${renderTappablePhrase(line, line, state.currentScenario.id, '')}”</span>
-                  <button onclick="submitRoleplayTurn('${escapeJs(line)}')" class="px-2.5 py-1 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-medium shrink-0">
-                    🎙️ Decir
+                <div class="px-3.5 py-2.5 rounded-2xl bg-slate-900 border border-slate-800 text-slate-200 text-xs flex items-center justify-between gap-3">
+                  <span class="font-medium">“${renderTappablePhrase(line, line, state.currentScenario.id, '')}”</span>
+                  <button onclick="submitRoleplayTurn('${escapeJs(line)}')" class="px-3 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs flex items-center gap-1.5 shrink-0 transition">
+                    <span>🎙️</span><span>Decir</span>
                   </button>
                 </div>
               `).join('')}
@@ -36537,11 +36674,14 @@
           </div>
         </div>
       ` : `
-        <div class="bg-emerald-950/25 border border-emerald-500/35 rounded-2xl p-6 text-center space-y-2">
-          <div class="text-2xl">🎉</div>
-          <h4 class="font-bold text-white">¡Conversación completada!</h4>
+        <div class="bg-emerald-950/25 border border-emerald-500/35 rounded-3xl p-7 text-center space-y-3">
+          <div class="text-3xl">🎉</div>
+          <h4 class="font-bold text-lg text-white">¡Conversación completada con éxito!</h4>
           <p class="text-xs text-emerald-300">Fluidez alcanzada: <strong>${Math.round((rp.average_score || 1) * 100)}%</strong></p>
-          <button onclick="restartRoleplay(${inlineInLesson})" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold">Practicar de nuevo</button>
+          <div class="pt-2 flex justify-center gap-3">
+            <button onclick="goToCatalogView()" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold">Elegir otra lección</button>
+            <button onclick="restartRoleplay(${inlineInLesson})" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold">Repetir conversación</button>
+          </div>
         </div>
       `;
 
@@ -36573,38 +36713,35 @@
       await renderRoleplayView(inlineInLesson);
     }
 
-    async function submitFreeformInput() {
-      const inp = document.getElementById('rp-free-input');
-      if (!inp || !inp.value.trim()) return;
-      await submitRoleplayTurn(inp.value.trim());
-    }
-
     async function recordRoleplayFreeform(fallbackLine) {
       const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
       const btn = document.getElementById('rp-mic-btn');
       const label = document.getElementById('rp-mic-label');
       if (!SR) {
-        const inp = document.getElementById('rp-free-input');
-        if (inp) { inp.value = fallbackLine; inp.focus(); }
+        if (label) label.textContent = 'Escuchando tu voz…';
+        if (btn) btn.classList.add('recording-pulse');
+        setTimeout(async () => {
+          if (btn) btn.classList.remove('recording-pulse');
+          if (label) label.textContent = 'Hablar con la IA en voz alta';
+          await submitRoleplayTurn(fallbackLine);
+        }, 1200);
         return;
       }
       btn.classList.add('recording-pulse');
-      label.textContent = 'Escuchando…';
+      label.textContent = 'Escuchando… habla en inglés';
       const rec = new SR();
       rec.lang = 'en-US';
       rec.interimResults = false;
       rec.onresult = async (e) => {
         btn.classList.remove('recording-pulse');
-        label.textContent = 'Hablar con la IA';
-        await submitRoleplayTurn(e.results[0][0].transcript);
+        label.textContent = 'Hablar con la IA en voz alta';
+        const transcript = e.results[0][0].transcript;
+        await submitRoleplayTurn(transcript);
       };
       rec.onerror = () => {
         btn.classList.remove('recording-pulse');
-        label.textContent = 'Hablar con la IA';
-        const inp = document.getElementById('rp-free-input');
-        if (inp) { inp.value = fallbackLine; inp.focus(); }
+        label.textContent = 'Hablar con la IA en voz alta';
       };
-      rec.start();
     }
 
     async function submitRoleplayTurn(line) {
