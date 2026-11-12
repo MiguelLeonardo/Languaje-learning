@@ -1,0 +1,108 @@
+id: a1-fruit-market-stand
+title: Buying fresh fruit at the market
+title_es: Comprar fruta en el mercado
+cefr: A1
+topic: food-and-drink
+description: Compra manzanas rojas, plátanos maduros y fresas en un puesto del mercado.
+phrases:
+- id: four-red-apples
+  text: I would like four red apples, please.
+  translation: Quisiera cuatro manzanas rojas, por favor.
+  visual_hint: 🍎🧺
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: apples
+    meaning: manzanas
+    ipa: ˈæpəlz
+- id: ripe-bananas
+  text: Are these yellow bananas ripe for today?
+  translation: ¿Estos plátanos amarillos están maduros para hoy?
+  visual_hint: 🍌✨
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: ripe
+    meaning: maduro
+    ipa: raɪp
+- id: box-of-berries
+  text: I will also take one box of strawberries.
+  translation: También me llevo una caja de fresas.
+  visual_hint: 🍓📦
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: box
+    meaning: caja
+    ipa: bɑːks
+- id: how-much-all
+  text: How much is everything together?
+  translation: ¿Cuánto es todo junto?
+  visual_hint: 💶🧮
+  cloze:
+  - 1
+  - 3
+  glossary:
+  - word: together
+    meaning: junto / en total
+    ipa: təˈɡeðər
+- id: sweet-oranges
+  text: These oranges smell very fresh.
+  translation: Estas naranjas huelen muy frescas.
+  visual_hint: 🍊🌿
+  cloze:
+  - 1
+  - 3
+  glossary:
+  - word: smell
+    meaning: oler
+    ipa: smel
+- id: have-my-own-bag
+  text: I have my own cloth bag, thanks.
+  translation: Traigo mi propia bolsa de tela, gracias.
+  visual_hint: 👜♻️
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: own
+    meaning: propia
+    ipa: oʊn
+roleplay:
+  ai_role: vendor
+  user_role: shopper
+  setting: An open-air morning fruit market.
+  turns:
+  - speaker: ai
+    text: Good morning! Fresh fruit today. What would you like?
+  - speaker: user
+    goal: Pide cuatro manzanas rojas.
+    suggested_lines:
+    - I would like four red apples, please.
+    - Are these yellow bananas ripe for today?
+  - speaker: ai
+    text: Four red apples! Anything else from the stand?
+  - speaker: user
+    goal: Pregunta si los plátanos están maduros.
+    suggested_lines:
+    - Are these yellow bananas ripe for today?
+    - I will also take one box of strawberries.
+  - speaker: ai
+    text: Yes, they are sweet and ready to eat!
+  - speaker: user
+    goal: Agrega una caja de fresas.
+    suggested_lines:
+    - I will also take one box of strawberries.
+    - How much is everything together?
+  - speaker: ai
+    text: One box of strawberries. I have my own bag right here.
+  - speaker: user
+    goal: Pregunta cuánto es todo junto.
+    suggested_lines:
+    - How much is everything together?
+    - These oranges smell very fresh.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

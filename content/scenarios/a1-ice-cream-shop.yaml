@@ -1,0 +1,108 @@
+id: a1-ice-cream-shop
+title: Ordering ice cream
+title_es: Pedir un helado
+cefr: A1
+topic: food-and-drink
+description: Elige sabores de helado, decide entre vaso o cono y pide chispas de chocolate.
+phrases:
+- id: vanilla-and-strawberry
+  text: I would like vanilla and strawberry, please.
+  translation: Quisiera vainilla y fresa, por favor.
+  visual_hint: 🍦🍓
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: strawberry
+    meaning: fresa / frutilla
+    ipa: ˈstrɔːberi
+- id: in-a-cup
+  text: In a small cup with a spoon, please.
+  translation: En un vaso pequeño con cuchara, por favor.
+  visual_hint: 🍨🥄
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: spoon
+    meaning: cuchara
+    ipa: spuːn
+- id: chocolate-sprinkles
+  text: Can you add chocolate sprinkles on top?
+  translation: ¿Puede agregar chispas de chocolate arriba?
+  visual_hint: 🍫✨
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: sprinkles
+    meaning: chispas dulces
+    ipa: ˈsprɪŋkəlz
+- id: napkin-please
+  text: Can I have an extra napkin, please?
+  translation: ¿Me da una servilleta extra, por favor?
+  visual_hint: 🧻👌
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: napkin
+    meaning: servilleta
+    ipa: ˈnæpkɪn
+- id: taste-the-mango
+  text: May I taste the mango flavor first?
+  translation: ¿Puedo probar el sabor de mango primero?
+  visual_hint: 🥭🥄
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: taste
+    meaning: probar
+    ipa: teɪst
+- id: very-cold-and-good
+  text: This ice cream is very good, thank you!
+  translation: ¡Este helado está muy rico, gracias!
+  visual_hint: 😋🍦
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: good
+    meaning: bueno / rico
+    ipa: ɡʊd
+roleplay:
+  ai_role: server
+  user_role: customer
+  setting: A sunny ice cream parlor near the beach.
+  turns:
+  - speaker: ai
+    text: Hi there! Which flavors would you like today?
+  - speaker: user
+    goal: Elige los sabores vainilla y fresa.
+    suggested_lines:
+    - I would like vanilla and strawberry, please.
+    - In a small cup with a spoon, please.
+  - speaker: ai
+    text: Great choice! Would you like that in a cup or a waffle cone?
+  - speaker: user
+    goal: Pídelo en un vaso pequeño con cuchara.
+    suggested_lines:
+    - In a small cup with a spoon, please.
+    - Can you add chocolate sprinkles on top?
+  - speaker: ai
+    text: One small cup. Any toppings on your ice cream?
+  - speaker: user
+    goal: Pide chispas de chocolate arriba.
+    suggested_lines:
+    - Can you add chocolate sprinkles on top?
+    - Can I have an extra napkin, please?
+  - speaker: ai
+    text: Here is your ice cream! That's four dollars.
+  - speaker: user
+    goal: Pide una servilleta extra y agradece.
+    suggested_lines:
+    - Can I have an extra napkin, please?
+    - May I taste the mango flavor first?
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

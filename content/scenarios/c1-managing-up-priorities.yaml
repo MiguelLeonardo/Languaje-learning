@@ -1,0 +1,124 @@
+id: c1-managing-up-priorities
+title: Aligning competing executive priorities
+title_es: Alinear prioridades con directivos
+cefr: C1
+topic: work-and-career
+description: Plantea con claridad ante dos vicepresidentes que la capacidad de ingeniería es fija y deben elegir
+  qué proyecto sale primero.
+phrases:
+- id: fixed-engineering-bandwidth
+  text: With our current engineering bandwidth, we can deliver either the self-serve onboarding flow or the Salesforce
+    sync by May first—not both.
+  translation: Con nuestra capacidad actual de ingeniería, podemos entregar el flujo de autogestión o la integración
+    con Salesforce para el primero de mayo, no ambos.
+  visual_hint: ⚖️🗓️
+  cloze:
+  - 7
+  - 14
+  glossary:
+  - word: bandwidth
+    meaning: capacidad operativa disponible
+    ipa: ˈbændwɪdθ
+- id: context-switching-tax
+  text: Splitting the squad fifty-fifty across both initiatives would introduce a heavy context-switching tax and
+    delay both into June.
+  translation: Dividir al equipo mitad y mitad entre ambas iniciativas generaría un alto costo por cambio de contexto
+    y retrasaría ambas hasta junio.
+  visual_hint: 🔀⏳
+  cloze:
+  - 6
+  - 12
+  glossary:
+  - word: context-switching
+    meaning: cambio constante de tarea
+    ipa: ˈkɑːntekst ˈswɪtʃɪŋ
+- id: sequence-by-revenue-impact
+  text: If we sequence the Salesforce sync first for the enterprise pipeline, we can ship it in three weeks and
+    start self-serve immediately after.
+  translation: Si priorizamos primero la integración con Salesforce para ventas corporativas, la entregamos en tres
+    semanas e iniciamos autogestión enseguida.
+  visual_hint: 📈🎯
+  cloze:
+  - 7
+  - 15
+  glossary:
+  - word: sequence
+    meaning: secuenciar / ordenar en fila
+    ipa: ˈsiːkwəns
+- id: document-tradeoff-decision
+  text: Great—let's lock in Salesforce as Priority 1 for April and publish the updated roadmap so the squad has
+    unambiguous focus.
+  translation: 'Excelente: fijemos Salesforce como Prioridad 1 para abril y publiquemos la hoja de ruta para que
+    el equipo tenga foco total.'
+  visual_hint: ✅🧭
+  cloze:
+  - 6
+  - 13
+  glossary:
+  - word: unambiguous
+    meaning: inequívoco / sin ambigüedades
+    ipa: ˌʌnæmˈbɪɡjuəs
+- id: protect-sprint-from-scope-creep
+  text: Any new requests during the next three weeks will go into the May backlog review.
+  translation: Cualquier solicitud nueva durante las próximas tres semanas pasará a la revisión de mayo.
+  visual_hint: 🛡️📋
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: scope creep
+    meaning: expansión descontrolada del alcance
+    ipa: skoʊp kriːp
+- id: appreciate-decisive-alignment
+  text: Thank you both for making the trade-off call—this clarity sets the team up to execute fast.
+  translation: Gracias a ambos por tomar la decisión de priorización; esta claridad permite al equipo avanzar rápido.
+  visual_hint: 🤝🚀
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: sets up
+    meaning: prepara el terreno para el éxito
+    ipa: sets ʌp
+roleplay:
+  ai_role: VP of Marketing & VP of Sales
+  user_role: product director
+  setting: Executive roadmap trade-off alignment session.
+  turns:
+  - speaker: ai
+    text: Both the enterprise Salesforce connector and the self-serve signup revamp are marked P0 for May!
+  - speaker: user
+    goal: Explica con claridad que con la capacidad actual solo uno de los dos proyectos puede salir el 1 de mayo.
+    suggested_lines:
+    - With our current engineering bandwidth, we can deliver either the self-serve onboarding flow or the Salesforce
+      sync by May first—not both.
+    - Splitting the squad fifty-fifty across both initiatives would introduce a heavy context-switching tax and
+      delay both into June.
+  - speaker: ai
+    text: Why can't we just have half the engineers work on each workstream in parallel?
+  - speaker: user
+    goal: Advierte que dividir al equipo retrasaría ambos lanzamientos hasta junio.
+    suggested_lines:
+    - Splitting the squad fifty-fifty across both initiatives would introduce a heavy context-switching tax and
+      delay both into June.
+    - If we sequence the Salesforce sync first for the enterprise pipeline, we can ship it in three weeks and start
+      self-serve immediately after.
+  - speaker: ai
+    text: The enterprise quarter closes May 15th, so the Salesforce sync unlocks three immediate deals.
+  - speaker: user
+    goal: Propón entregar primero Salesforce en tres semanas y enseguida atacar autogestión.
+    suggested_lines:
+    - If we sequence the Salesforce sync first for the enterprise pipeline, we can ship it in three weeks and start
+      self-serve immediately after.
+    - Great—let's lock in Salesforce as Priority 1 for April and publish the updated roadmap so the squad has unambiguous
+      focus.
+  - speaker: ai
+    text: Sequencing them three weeks apart makes sense—Marketing can time the self-serve campaign for late May.
+  - speaker: user
+    goal: Confirma el acuerdo de priorizar Salesforce en abril y documentarlo en la hoja de ruta.
+    suggested_lines:
+    - Great—let's lock in Salesforce as Priority 1 for April and publish the updated roadmap so the squad has unambiguous
+      focus.
+    - Any new requests during the next three weeks will go into the May backlog review.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

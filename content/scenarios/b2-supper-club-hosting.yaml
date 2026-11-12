@@ -1,0 +1,109 @@
+id: b2-supper-club-hosting
+title: Hosting a themed dinner party
+title_es: Ser anfitrión de una cena temática
+cefr: B2
+topic: food-and-drink
+description: Presenta los platos a tus invitados en una cena mediterránea, ofrece maridaje y comparte la historia
+  de la receta.
+phrases:
+- id: make-yourselves-at-home
+  text: Come on in, everyone! Hang up your coats and make yourselves at home.
+  translation: ¡Pasen todos! Cuelguen sus abrigos y siéntanse como en su casa.
+  visual_hint: 🏠🥂
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: make yourselves at home
+    meaning: siéntanse como en casa
+    ipa: meɪk jɔːrˈselvz æt hoʊm
+- id: slow-braised-lamb
+  text: Tonight's main dish is slow-braised lamb shoulder with pomegranate and mint.
+  translation: El plato principal de esta noche es paleta de cordero braseada lentamente con granada y menta.
+  visual_hint: 🍖🌿
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: slow-braised
+    meaning: braseado a fuego lento
+    ipa: sloʊ breɪzd
+- id: family-recipe-twist
+  text: It's my grandmother's recipe, though I added smoked paprika for extra warmth.
+  translation: Es la receta de mi abuela, aunque agregué pimentón ahumado para darle calidez.
+  visual_hint: 👵🌶️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: smoked paprika
+    meaning: pimentón ahumado
+    ipa: smoʊkt pəˈpriːkə
+- id: help-yourselves-seconds
+  text: Please help yourselves to seconds—there is plenty of saffron rice left.
+  translation: Por favor sírvanse una segunda porción; queda bastante arroz con azafrán.
+  visual_hint: 🍚🥄
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: seconds
+    meaning: segunda porción / repetir plato
+    ipa: ˈsekəndz
+- id: citrus-almond-tart
+  text: For dessert, I baked a flourless orange and almond tart.
+  translation: De postre, horneé una tarta de naranja y almendras sin harina.
+  visual_hint: 🍊🥧
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: flourless
+    meaning: sin harina
+    ipa: ˈflaʊərləs
+- id: toast-to-good-friends
+  text: Let's raise a glass to good friends and unforgettable evenings!
+  translation: ¡Levantemos la copa por los buenos amigos y las noches inolvidables!
+  visual_hint: 🥂✨
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: raise a glass
+    meaning: brindar / alzar la copa
+    ipa: reɪz ə ɡlæs
+roleplay:
+  ai_role: guest (Elena)
+  user_role: dinner host
+  setting: A warm candlelit dinner table at your apartment.
+  turns:
+  - speaker: ai
+    text: Thank you for having us! Your apartment smells incredible—what's cooking?
+  - speaker: user
+    goal: Recibe a tus invitados y diles que se sientan como en casa.
+    suggested_lines:
+    - Come on in, everyone! Hang up your coats and make yourselves at home.
+    - Tonight's main dish is slow-braised lamb shoulder with pomegranate and mint.
+  - speaker: ai
+    text: We brought a bottle of Rioja! Tell us about tonight's menu.
+  - speaker: user
+    goal: Explica que preparaste cordero braseado con granada y menta.
+    suggested_lines:
+    - Tonight's main dish is slow-braised lamb shoulder with pomegranate and mint.
+    - It's my grandmother's recipe, though I added smoked paprika for extra warmth.
+  - speaker: ai
+    text: The meat is so tender! Where did you learn to make this?
+  - speaker: user
+    goal: Cuenta que es la receta de tu abuela con un toque de pimentón ahumado.
+    suggested_lines:
+    - It's my grandmother's recipe, though I added smoked paprika for extra warmth.
+    - Please help yourselves to seconds—there is plenty of saffron rice left.
+  - speaker: ai
+    text: That smoky note is delicious. May I have a little more rice?
+  - speaker: user
+    goal: Anima a todos a servirse una segunda porción.
+    suggested_lines:
+    - Please help yourselves to seconds—there is plenty of saffron rice left.
+    - For dessert, I baked a flourless orange and almond tart.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

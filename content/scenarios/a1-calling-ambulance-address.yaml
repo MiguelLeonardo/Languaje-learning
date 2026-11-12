@@ -1,0 +1,108 @@
+id: a1-calling-ambulance-address
+title: Giving your address for an emergency
+title_es: Dar la dirección para una ambulancia
+cefr: A1
+topic: health-and-emergencies
+description: Llama al número de emergencias para pedir una ambulancia e indica la calle y el número con claridad.
+phrases:
+- id: need-an-ambulance
+  text: Hello, we need an ambulance right away, please.
+  translation: Hola, necesitamos una ambulancia de inmediato, por favor.
+  visual_hint: 🚑📞
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: ambulance
+    meaning: ambulancia
+    ipa: ˈæmbjələns
+- id: man-fell-on-stairs
+  text: An older man fell on the stairs and hurt his leg.
+  translation: Un señor mayor se cayó en las escaleras y se lastimó la pierna.
+  visual_hint: 🪜🦵
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: hurt
+    meaning: lastimó / hirió
+    ipa: hɜːrt
+- id: he-is-awake-and-talking
+  text: Yes, he is awake and talking to us now.
+  translation: Sí, está despierto y hablando con nosotros ahora.
+  visual_hint: 🗣️✅
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: awake
+    meaning: despierto / consciente
+    ipa: əˈweɪk
+- id: forty-two-king-street
+  text: We are at 42 King Street, in front of the bank.
+  translation: Estamos en el 42 de King Street, frente al banco.
+  visual_hint: 📍🏦
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: street
+    meaning: calle
+    ipa: striːt
+- id: stay-with-him-here
+  text: We will stay with him until the paramedics arrive.
+  translation: Nos quedaremos con él hasta que lleguen los paramédicos.
+  visual_hint: 🤝🚑
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: stay
+    meaning: quedarse
+    ipa: steɪ
+- id: wave-at-the-corner
+  text: My friend is waiting at the corner to wave to the driver.
+  translation: Mi amigo espera en la esquina para hacer señas al conductor.
+  visual_hint: 👋🚨
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: corner
+    meaning: esquina
+    ipa: ˈkɔːrnər
+roleplay:
+  ai_role: emergency operator
+  user_role: caller
+  setting: Calling emergency services from a store entrance.
+  turns:
+  - speaker: ai
+    text: Emergency services, do you need police, fire, or an ambulance?
+  - speaker: user
+    goal: Pide una ambulancia de inmediato.
+    suggested_lines:
+    - Hello, we need an ambulance right away, please.
+    - An older man fell on the stairs and hurt his leg.
+  - speaker: ai
+    text: What happened, and is the person awake and breathing?
+  - speaker: user
+    goal: Explica que un señor mayor cayó en las escaleras y se lastimó la pierna.
+    suggested_lines:
+    - An older man fell on the stairs and hurt his leg.
+    - Yes, he is awake and talking to us now.
+  - speaker: ai
+    text: Good. What is the exact street address where you are?
+  - speaker: user
+    goal: Confirma que está despierto y hablando.
+    suggested_lines:
+    - Yes, he is awake and talking to us now.
+    - We are at 42 King Street, in front of the bank.
+  - speaker: ai
+    text: The ambulance is on the way—it will be there in four minutes!
+  - speaker: user
+    goal: 'Indica la dirección exacta: 42 King Street, frente al banco.'
+    suggested_lines:
+    - We are at 42 King Street, in front of the bank.
+    - We will stay with him until the paramedics arrive.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

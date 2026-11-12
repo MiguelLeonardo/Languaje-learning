@@ -1,0 +1,108 @@
+id: a1-office-printer-paper
+title: Finding office supplies
+title_es: Buscar papel y útiles de oficina
+cefr: A1
+topic: work-and-career
+description: Pregunta a una compañera dónde está el papel para la impresora, toma dos bolígrafos azules y agradece.
+phrases:
+- id: printer-out-of-paper
+  text: Excuse me, the printer is out of white paper.
+  translation: Disculpa, la impresora se quedó sin papel blanco.
+  visual_hint: 🖨️📄
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: out of
+    meaning: sin / agotado
+    ipa: aʊt əv
+- id: supply-cabinet-key
+  text: Where do we keep the boxes of copy paper?
+  translation: ¿Dónde guardamos las cajas de papel para copias?
+  visual_hint: 📦🗄️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: keep
+    meaning: guardar / mantener
+    ipa: kiːp
+- id: take-two-blue-pens
+  text: Can I also take two blue pens and a yellow notepad?
+  translation: ¿Puedo tomar también dos bolígrafos azules y un bloc amarillo?
+  visual_hint: 🖊️📒
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: notepad
+    meaning: bloc de notas
+    ipa: ˈnoʊtpæd
+- id: load-the-paper-tray
+  text: I will put the paper in the bottom tray now.
+  translation: Pondré el papel en la bandeja inferior ahora.
+  visual_hint: 📥🖨️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: tray
+    meaning: bandeja
+    ipa: treɪ
+- id: press-green-button
+  text: Now I just press the green start button to print.
+  translation: Ahora solo presiono el botón verde de inicio para imprimir.
+  visual_hint: 🟢👆
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: print
+    meaning: imprimir
+    ipa: prɪnt
+- id: thanks-for-showing-me
+  text: It is printing my pages now—thank you, Sarah!
+  translation: Ya está imprimiendo mis páginas; ¡gracias, Sarah!
+  visual_hint: 📄😊
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: pages
+    meaning: páginas / hojas
+    ipa: ˈpeɪdʒɪz
+roleplay:
+  ai_role: coworker (Sarah)
+  user_role: team member
+  setting: Office copy and supply room.
+  turns:
+  - speaker: ai
+    text: Hi! Having trouble with the office printer?
+  - speaker: user
+    goal: Explica que la impresora se quedó sin papel blanco.
+    suggested_lines:
+    - Excuse me, the printer is out of white paper.
+    - Where do we keep the boxes of copy paper?
+  - speaker: ai
+    text: Oh, it just needs a new pack! Look in the tall grey cabinet.
+  - speaker: user
+    goal: Pregunta dónde se guardan las cajas de papel.
+    suggested_lines:
+    - Where do we keep the boxes of copy paper?
+    - Can I also take two blue pens and a yellow notepad?
+  - speaker: ai
+    text: Found the paper? The pens and sticky notes are on the top shelf.
+  - speaker: user
+    goal: Pregunta si puedes tomar dos bolígrafos azules y un bloc amarillo.
+    suggested_lines:
+    - Can I also take two blue pens and a yellow notepad?
+    - I will put the paper in the bottom tray now.
+  - speaker: ai
+    text: Of course! Take whatever supplies you need for your desk.
+  - speaker: user
+    goal: Indica que pondrás el papel en la bandeja inferior.
+    suggested_lines:
+    - I will put the paper in the bottom tray now.
+    - Now I just press the green start button to print.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

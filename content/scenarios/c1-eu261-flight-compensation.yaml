@@ -1,0 +1,110 @@
+id: c1-eu261-flight-compensation
+title: Claiming statutory flight compensation
+title_es: Reclamar indemnización legal por vuelo cancelado
+cefr: C1
+topic: travel-and-transport
+description: Solicita la compensación reglamentaria tras una cancelación por fallo técnico de la aeronave.
+phrases:
+- id: technical-fault-not-extraordinary
+  text: Under European court precedent, a routine technical fault does not qualify as an extraordinary circumstance.
+  translation: Según la jurisprudencia europea, un fallo técnico rutinario no califica como circunstancia extraordinaria.
+  visual_hint: ⚖️✈️
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: precedent
+    meaning: precedente / jurisprudencia
+    ipa: ˈpresɪdənt
+- id: statutory-six-hundred-euros
+  text: Since we arrived four hours late on a long-haul route, we're eligible for the statutory six-hundred-euro
+    payout.
+  translation: Como llegamos cuatro horas tarde en una ruta de larga distancia, calificamos para la compensación
+    legal de seiscientos euros.
+  visual_hint: 💶📋
+  cloze:
+  - 5
+  - 11
+  glossary:
+  - word: statutory
+    meaning: establecido por ley / reglamentario
+    ipa: ˈstætʃətɔːri
+- id: prefer-bank-wire-over-voucher
+  text: We'd prefer the cash settlement via IBAN wire transfer rather than restricted airline vouchers.
+  translation: Preferimos la liquidación en efectivo por transferencia bancaria en lugar de bonos restringidos.
+  visual_hint: 🏦💳
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: settlement
+    meaning: liquidación / pago
+    ipa: ˈsetəlmənt
+- id: duty-of-care-receipts
+  text: I've also attached itemized receipts for our dinner and taxi under the airline's duty-of-care obligation.
+  translation: También adjunté los recibos detallados de cena y taxi bajo la obligación de asistencia de la aerolínea.
+  visual_hint: 🧾🍽️
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: duty of care
+    meaning: deber de asistencia al pasajero
+    ipa: ˈduːti əv ker
+- id: written-acknowledgment-number
+  text: Could you issue a claim dossier number so we can track processing within fourteen days?
+  translation: ¿Podría emitir un número de expediente para dar seguimiento en catorce días?
+  visual_hint: 🔢📧
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: dossier
+    meaning: expediente
+    ipa: ˈdɑːsieɪ
+- id: appreciate-prompt-resolution
+  text: Thank you for handling the claim transparently and logging our documentation.
+  translation: Gracias por gestionar el reclamo con transparencia y registrar nuestra documentación.
+  visual_hint: 🤝✅
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: transparently
+    meaning: con transparencia
+    ipa: trænsˈpærəntli
+roleplay:
+  ai_role: customer relations supervisor
+  user_role: passenger
+  setting: Airline service desk after a long-haul technical cancellation.
+  turns:
+  - speaker: ai
+    text: We apologize for the four-hour delay, which was caused by a faulty valve replaced in Madrid.
+  - speaker: user
+    goal: Recuerda que un fallo técnico rutinario no es circunstancia extraordinaria.
+    suggested_lines:
+    - Under European court precedent, a routine technical fault does not qualify as an extraordinary circumstance.
+    - Since we arrived four hours late on a long-haul route, we're eligible for the statutory six-hundred-euro payout.
+  - speaker: ai
+    text: I understand your frustration. Were you looking for travel vouchers or a bank transfer?
+  - speaker: user
+    goal: Solicita la compensación reglamentaria por llegar cuatro horas tarde.
+    suggested_lines:
+    - Since we arrived four hours late on a long-haul route, we're eligible for the statutory six-hundred-euro payout.
+    - We'd prefer the cash settlement via IBAN wire transfer rather than restricted airline vouchers.
+  - speaker: ai
+    text: Under EU Regulation 261, you do have the right to choose cash payment over vouchers.
+  - speaker: user
+    goal: Indica que prefieren transferencia bancaria en lugar de bonos de viaje.
+    suggested_lines:
+    - We'd prefer the cash settlement via IBAN wire transfer rather than restricted airline vouchers.
+    - I've also attached itemized receipts for our dinner and taxi under the airline's duty-of-care obligation.
+  - speaker: ai
+    text: Please enter your IBAN details on this claim portal and upload any meal receipts.
+  - speaker: user
+    goal: Entrega los recibos de comida y transporte cubiertos por el deber de asistencia.
+    suggested_lines:
+    - I've also attached itemized receipts for our dinner and taxi under the airline's duty-of-care obligation.
+    - Could you issue a claim dossier number so we can track processing within fourteen days?
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

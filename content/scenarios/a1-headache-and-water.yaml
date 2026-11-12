@@ -1,0 +1,108 @@
+id: a1-headache-and-water
+title: Telling a guide you feel dizzy
+title_es: Avisar que tienes dolor de cabeza en un tour
+cefr: A1
+topic: health-and-emergencies
+description: Dile al guía turístico que tienes dolor de cabeza por el calor y necesitas sentarte a la sombra.
+phrases:
+- id: have-a-headache
+  text: Excuse me, I have a headache from the heat.
+  translation: Disculpe, tengo dolor de cabeza por el calor.
+  visual_hint: 🤕☀️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: headache
+    meaning: dolor de cabeza
+    ipa: ˈhedeɪk
+- id: sit-in-the-shade
+  text: Can we sit on that bench in the shade?
+  translation: ¿Podemos sentarnos en esa banca a la sombra?
+  visual_hint: 🪑🌳
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: bench
+    meaning: banca
+    ipa: bentʃ
+- id: need-some-water
+  text: May I have some cold water, please?
+  translation: ¿Me puede dar un poco de agua fría, por favor?
+  visual_hint: 💧🥤
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: cold water
+    meaning: agua fría
+    ipa: koʊld ˈwɔːtər
+- id: rest-for-ten-minutes
+  text: I just need to rest here for ten minutes.
+  translation: Solo necesito descansar aquí diez minutos.
+  visual_hint: ⏱️😌
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: rest
+    meaning: descansar
+    ipa: rest
+- id: take-an-aspirin
+  text: I have a mild pain pill in my small bag.
+  translation: Traigo una pastilla suave para el dolor en mi bolso.
+  visual_hint: 💊👜
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: pill
+    meaning: pastilla
+    ipa: pɪl
+- id: feeling-okay-now
+  text: Thank you, the cool air helps a lot!
+  translation: ¡Gracias, el aire fresco ayuda mucho!
+  visual_hint: 🌬️👍
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: helps
+    meaning: ayuda
+    ipa: helps
+roleplay:
+  ai_role: tour guide
+  user_role: visitor
+  setting: Walking tour in a sunny historic square.
+  turns:
+  - speaker: ai
+    text: Are you okay? You look a little pale.
+  - speaker: user
+    goal: Dile al guía que tienes dolor de cabeza por el calor.
+    suggested_lines:
+    - Excuse me, I have a headache from the heat.
+    - Can we sit on that bench in the shade?
+  - speaker: ai
+    text: Of course! Let's stop right here under the trees.
+  - speaker: user
+    goal: Pide sentarte en la banca que está a la sombra.
+    suggested_lines:
+    - Can we sit on that bench in the shade?
+    - May I have some cold water, please?
+  - speaker: ai
+    text: Sit down and take slow breaths. Here is a new bottle of water.
+  - speaker: user
+    goal: Pide un poco de agua fría.
+    suggested_lines:
+    - May I have some cold water, please?
+    - I just need to rest here for ten minutes.
+  - speaker: ai
+    text: Take all the time you need—the museum cafe is right behind us.
+  - speaker: user
+    goal: Indica que solo necesitas descansar diez minutos.
+    suggested_lines:
+    - I just need to rest here for ten minutes.
+    - I have a mild pain pill in my small bag.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

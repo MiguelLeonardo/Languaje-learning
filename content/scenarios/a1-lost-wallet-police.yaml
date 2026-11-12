@@ -1,0 +1,108 @@
+id: a1-lost-wallet-police
+title: Reporting a lost wallet to police
+title_es: Reportar pérdida de billetera a la policía
+cefr: A1
+topic: health-and-emergencies
+description: Explica a un oficial de policía que perdiste tu billetera marrón cerca de la estación y deja tu teléfono.
+phrases:
+- id: lost-my-wallet
+  text: Excuse me, Officer. I lost my wallet in the park.
+  translation: Disculpe, oficial. Perdí mi billetera en el parque.
+  visual_hint: 👮‍♂️👛
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: lost
+    meaning: perdí
+    ipa: lɔːst
+- id: small-brown-leather
+  text: It is a small brown leather wallet with a zipper.
+  translation: Es una billetera pequeña de cuero marrón con cierre.
+  visual_hint: 🤎🔍
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: leather
+    meaning: cuero / piel
+    ipa: ˈleðər
+- id: has-my-id-inside
+  text: My ID card and bank card are inside it.
+  translation: Mi identificación y mi tarjeta del banco están adentro.
+  visual_hint: 🪪💳
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: inside
+    meaning: adentro / en el interior
+    ipa: ɪnˈsaɪd
+- id: write-my-phone-number
+  text: Here is my name and my hotel phone number.
+  translation: Aquí están mi nombre y el teléfono de mi hotel.
+  visual_hint: 📝🏨
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: name
+    meaning: nombre
+    ipa: neɪm
+- id: keep-passport-at-hotel
+  text: Thankfully, my passport is safe at the hotel.
+  translation: Por suerte, mi pasaporte está seguro en el hotel.
+  visual_hint: 🛂✅
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: safe
+    meaning: seguro / a salvo
+    ipa: seɪf
+- id: call-if-someone-brings-it
+  text: Thank you, Officer! Please call me if someone finds it.
+  translation: ¡Gracias, oficial! Por favor llámeme si alguien la encuentra.
+  visual_hint: 📞🙏
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: finds
+    meaning: encuentra
+    ipa: faɪndz
+roleplay:
+  ai_role: police officer
+  user_role: visitor
+  setting: Police information booth near the main square.
+  turns:
+  - speaker: ai
+    text: Hello! Stay calm, how can I help you today?
+  - speaker: user
+    goal: Dile al oficial que perdiste tu billetera en el parque.
+    suggested_lines:
+    - Excuse me, Officer. I lost my wallet in the park.
+    - It is a small brown leather wallet with a zipper.
+  - speaker: ai
+    text: When did you last see it, and what does it look like?
+  - speaker: user
+    goal: Describe que es una billetera pequeña de cuero marrón.
+    suggested_lines:
+    - It is a small brown leather wallet with a zipper.
+    - My ID card and bank card are inside it.
+  - speaker: ai
+    text: Okay, let me check our lost-and-found desk log.
+  - speaker: user
+    goal: Explica que adentro están tu identificación y tu tarjeta bancaria.
+    suggested_lines:
+    - My ID card and bank card are inside it.
+    - Here is my name and my hotel phone number.
+  - speaker: ai
+    text: Please lock your bank card on your phone app right now, and leave your contact info.
+  - speaker: user
+    goal: Deja tu nombre y el número de teléfono de tu hotel.
+    suggested_lines:
+    - Here is my name and my hotel phone number.
+    - Thankfully, my passport is safe at the hotel.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

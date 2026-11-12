@@ -1,0 +1,122 @@
+id: c1-altitude-sickness-protocol
+title: Managing acute mountain sickness
+title_es: Protocolo médico por mal de altura
+cefr: C1
+topic: health-and-emergencies
+description: Consulta en una posta médica andina por cefalea de altitud y saturación de oxígeno, coordinando oxigenoterapia
+  y descenso.
+phrases:
+- id: throbbing-altitude-headache
+  text: We ascended to thirty-eight hundred meters yesterday, and my companion developed a throbbing frontal headache
+    and dizziness.
+  translation: Ascendimos ayer a tres mil ochocientos metros y mi compañero presentó dolor de cabeza pulsátil y
+    mareo.
+  visual_hint: ⛰️🩺
+  cloze:
+  - 5
+  - 11
+  glossary:
+  - word: throbbing
+    meaning: pulsátil / latente
+    ipa: ˈθrɑːbɪŋ
+- id: oxygen-saturation-eighty-four
+  text: His portable oximeter reading dropped to eighty-four percent at rest, though his lungs sound clear without
+    crackles.
+  translation: Su oxímetro portátil bajó a ochenta y cuatro por ciento en reposo, aunque sus pulmones se escuchan
+    limpios.
+  visual_hint: 🫁📊
+  cloze:
+  - 5
+  - 11
+  glossary:
+  - word: at rest
+    meaning: en reposo
+    ipa: æt rest
+- id: supplemental-oxygen-and-acetazolamide
+  text: Would thirty minutes of supplemental oxygen combined with acetazolamide stabilize him before we descend
+    to the valley?
+  translation: ¿Treinta minutos de oxígeno suplementario combinados con acetazolamida lo estabilizarán antes de
+    bajar al valle?
+  visual_hint: 💨💊
+  cloze:
+  - 5
+  - 11
+  glossary:
+  - word: descend
+    meaning: descender a menor altitud
+    ipa: dɪˈsend
+- id: descend-six-hundred-meters
+  text: We've already arranged a vehicle to take us down six hundred meters to the Sacred Valley hotel for two nights.
+  translation: Ya coordinamos un vehículo para bajar seiscientos metros al hotel del valle por dos noches.
+  visual_hint: 🚐🏞️
+  cloze:
+  - 6
+  - 13
+  glossary:
+  - word: arranged
+    meaning: coordinamos / organizamos
+    ipa: əˈreɪndʒd
+- id: gradual-acclimatization-profile
+  text: Once he's symptom-free for forty-eight hours, we'll keep our ascent profile under three hundred meters per
+    day.
+  translation: Cuando lleve cuarenta y ocho horas sin síntomas, subiremos menos de trescientos metros por día.
+  visual_hint: 📈🧭
+  cloze:
+  - 5
+  - 11
+  glossary:
+  - word: acclimatization
+    meaning: aclimatación progresiva
+    ipa: əˌklaɪmətɪˈzeɪʃən
+- id: saturation-back-to-ninety-five
+  text: His color is back and the oximeter reads ninety-six percent on oxygen—thank you, Doctor!
+  translation: Ya recuperó el color y el oxímetro marca noventa y seis por ciento; ¡gracias, doctor!
+  visual_hint: ✅😊
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: symptom-free
+    meaning: libre de síntomas
+    ipa: ˈsɪmptəm friː
+roleplay:
+  ai_role: high-altitude physician
+  user_role: trekker
+  setting: Mountain medical clinic at 3,800 meters elevation.
+  turns:
+  - speaker: ai
+    text: Come sit by the heater. Let's clip the pulse oximeter onto his finger right away.
+  - speaker: user
+    goal: Explica que tras ascender ayer a 3,800 metros tu compañero tiene cefalea y mareo.
+    suggested_lines:
+    - We ascended to thirty-eight hundred meters yesterday, and my companion developed a throbbing frontal headache
+      and dizziness.
+    - His portable oximeter reading dropped to eighty-four percent at rest, though his lungs sound clear without
+      crackles.
+  - speaker: ai
+    text: 84% is low for Day 2—good thing his lungs are completely clear with no signs of pulmonary edema.
+  - speaker: user
+    goal: Indica que su saturación bajó a 84% en reposo pero sin estertores pulmonares.
+    suggested_lines:
+    - His portable oximeter reading dropped to eighty-four percent at rest, though his lungs sound clear without
+      crackles.
+    - Would thirty minutes of supplemental oxygen combined with acetazolamide stabilize him before we descend to
+      the valley?
+  - speaker: ai
+    text: We'll put him on two liters per minute of nasal oxygen right now.
+  - speaker: user
+    goal: Pregunta si oxígeno suplementario y acetazolamida lo estabilizarán para descender al valle.
+    suggested_lines:
+    - Would thirty minutes of supplemental oxygen combined with acetazolamide stabilize him before we descend to
+      the valley?
+    - We've already arranged a vehicle to take us down six hundred meters to the Sacred Valley hotel for two nights.
+  - speaker: ai
+    text: Descending six hundred meters is the gold-standard treatment—he'll feel like a new person by dinner!
+  - speaker: user
+    goal: Confirma que ya tienen vehículo para descender 600 metros hacia el valle.
+    suggested_lines:
+    - We've already arranged a vehicle to take us down six hundred meters to the Sacred Valley hotel for two nights.
+    - Once he's symptom-free for forty-eight hours, we'll keep our ascent profile under three hundred meters per
+      day.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

@@ -1,0 +1,111 @@
+id: b2-food-allergy-epipen
+title: Post-EpiPen observation at the ER
+title_es: Explicar uso de EpiPen en sala de emergencias
+cefr: B2
+topic: health-and-emergencies
+description: Explica al médico de urgencias que usaste tu autoinyector de epinefrina tras exposición accidental
+  a maní y tus síntomas cedieron.
+phrases:
+- id: accidental-peanut-exposure
+  text: I had an accidental cross-contact exposure to peanuts at a restaurant thirty minutes ago.
+  translation: Tuve una exposición accidental por contaminación cruzada con maní en un restaurante hace treinta
+    minutos.
+  visual_hint: 🥜🚨
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: cross-contact
+    meaning: contaminación cruzada involuntaria
+    ipa: krɔːs ˈkɑːntækt
+- id: administered-epipen-thigh
+  text: As soon as I felt hives and throat tightness, I administered my EpiPen into my outer thigh at 7:15 PM.
+  translation: En cuanto sentí urticaria y opresión en la garganta, me apliqué el EpiPen en el muslo externo a las
+    7:15 PM.
+  visual_hint: 💉🦵
+  cloze:
+  - 6
+  - 13
+  glossary:
+  - word: hives
+    meaning: urticaria / ronchas en la piel
+    ipa: haɪvz
+- id: wheezing-subsided-quickly
+  text: Within five minutes of the injection, the wheezing subsided and my airways felt completely clear.
+  translation: A los cinco minutos de la inyección, el silbido al respirar cedió y mis vías respiratorias se despejaron.
+  visual_hint: 🫁✅
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: subsided
+    meaning: cedió / disminuyó rápidamente
+    ipa: səbˈsaɪdɪd
+- id: four-hour-biphasic-observation
+  text: I know protocol calls for a four-hour observation window to watch for a biphasic rebound reaction.
+  translation: Sé que el protocolo indica cuatro horas de observación para descartar una reacción bifásica de rebote.
+  visual_hint: ⏱️🏥
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: rebound
+    meaning: efecto rebote / segunda fase
+    ipa: ˈriːbaʊnd
+- id: prescription-for-twin-pack
+  text: Before I'm discharged tonight, could you write a replacement prescription for a two-pack of autoinjectors?
+  translation: Antes de darme de alta esta noche, ¿podría extenderme receta para reponer el paquete doble de inyectores?
+  visual_hint: 📋💊
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: discharged
+    meaning: dado de alta del hospital
+    ipa: dɪsˈtʃɑːrdʒd
+- id: carry-second-injector-always
+  text: I'll hand the used injector to the nurse for sharps disposal—thank you, Doctor.
+  translation: Entregaré el inyector usado a la enfermera para el contenedor biológico; gracias, doctor.
+  visual_hint: 🗑️🤝
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: sharps disposal
+    meaning: contenedor de residuos punzocortantes
+    ipa: ʃɑːrps dɪˈspoʊzəl
+roleplay:
+  ai_role: ER attending physician
+  user_role: patient
+  setting: Emergency room observation bay.
+  turns:
+  - speaker: ai
+    text: We have your vitals monitor hooked up. Tell me when the reaction started and what you took.
+  - speaker: user
+    goal: Explica que tuviste exposición accidental a maní hace treinta minutos.
+    suggested_lines:
+    - I had an accidental cross-contact exposure to peanuts at a restaurant thirty minutes ago.
+    - As soon as I felt hives and throat tightness, I administered my EpiPen into my outer thigh at 7:15 PM.
+  - speaker: ai
+    text: Using your epinephrine autoinjector immediately was the exact right decision!
+  - speaker: user
+    goal: Indica que te aplicaste el EpiPen en el muslo a las 7:15 PM al sentir urticaria.
+    suggested_lines:
+    - As soon as I felt hives and throat tightness, I administered my EpiPen into my outer thigh at 7:15 PM.
+    - Within five minutes of the injection, the wheezing subsided and my airways felt completely clear.
+  - speaker: ai
+    text: Your lungs sound clear on the stethoscope now. How are you feeling overall?
+  - speaker: user
+    goal: Detalla que en cinco minutos cedió la dificultad respiratoria.
+    suggested_lines:
+    - Within five minutes of the injection, the wheezing subsided and my airways felt completely clear.
+    - I know protocol calls for a four-hour observation window to watch for a biphasic rebound reaction.
+  - speaker: ai
+    text: Just a bit shaky from the adrenaline, which is totally normal.
+  - speaker: user
+    goal: Menciona que conoces la necesidad de permanecer cuatro horas en observación.
+    suggested_lines:
+    - I know protocol calls for a four-hour observation window to watch for a biphasic rebound reaction.
+    - Before I'm discharged tonight, could you write a replacement prescription for a two-pack of autoinjectors?
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

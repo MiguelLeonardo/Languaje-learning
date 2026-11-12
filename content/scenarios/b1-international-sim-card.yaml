@@ -1,0 +1,108 @@
+id: b1-international-sim-card
+title: Buying an eSIM data plan at arrivals
+title_es: Comprar un plan de datos eSIM al aterrizar
+cefr: B1
+topic: travel-and-transport
+description: Compra una eSIM de datos para dos semanas, pide ayuda para escanear el código QR y activar el roaming.
+phrases:
+- id: two-week-esim-plan
+  text: Hi, I'm staying for two weeks and need an eSIM with plenty of mobile data.
+  translation: Hola, me quedo dos semanas y necesito una eSIM con suficientes datos móviles.
+  visual_hint: 📱🌐
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: plenty of
+    meaning: suficientes / abundantes
+    ipa: ˈplenti əv
+- id: hotspot-tethering-allowed
+  text: Does the twenty-gigabyte plan allow hotspot tethering to my laptop?
+  translation: ¿El plan de veinte gigabytes permite compartir internet con mi laptop?
+  visual_hint: 💻📶
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: tethering
+    meaning: compartir internet (hotspot)
+    ipa: ˈteðərɪŋ
+- id: scan-qr-to-install
+  text: Could you help me scan the activation QR code in my phone settings?
+  translation: ¿Podría ayudarme a escanear el código QR de activación en los ajustes de mi teléfono?
+  visual_hint: 📷⚙️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: settings
+    meaning: ajustes / configuración
+    ipa: ˈsetɪŋz
+- id: keep-whatsapp-number
+  text: Will my regular WhatsApp number keep working while I use this data line?
+  translation: ¿Mi número habitual de WhatsApp seguirá funcionando mientras use esta línea de datos?
+  visual_hint: 💬✅
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: keep working
+    meaning: seguir funcionando
+    ipa: kiːp ˈwɜːrkɪŋ
+- id: coverage-in-mountains
+  text: How is the network coverage if we drive up to the national park?
+  translation: ¿Qué tal es la cobertura de red si conducimos hacia el parque nacional?
+  visual_hint: ⛰️📡
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: coverage
+    meaning: cobertura de señal
+    ipa: ˈkʌvərɪdʒ
+- id: turn-off-home-roaming
+  text: I'll switch data roaming off on my home SIM to avoid extra charges.
+  translation: Desactivaré el roaming de datos en mi SIM principal para evitar cobros extra.
+  visual_hint: 🚫💸
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: avoid
+    meaning: evitar
+    ipa: əˈvɔɪd
+roleplay:
+  ai_role: telecom kiosk agent
+  user_role: traveler
+  setting: Mobile SIM kiosk in the airport arrivals terminal.
+  turns:
+  - speaker: ai
+    text: Welcome! Looking for a local SIM card or an instant eSIM for your trip?
+  - speaker: user
+    goal: Explica que estarás dos semanas y necesitas una eSIM con bastantes datos.
+    suggested_lines:
+    - Hi, I'm staying for two weeks and need an eSIM with plenty of mobile data.
+    - Does the twenty-gigabyte plan allow hotspot tethering to my laptop?
+  - speaker: ai
+    text: Our 20-gigabyte tourist eSIM is twenty-five dollars and lasts thirty days.
+  - speaker: user
+    goal: Pregunta si el plan de 20 GB permite compartir internet a tu laptop.
+    suggested_lines:
+    - Does the twenty-gigabyte plan allow hotspot tethering to my laptop?
+    - Could you help me scan the activation QR code in my phone settings?
+  - speaker: ai
+    text: Yes, personal hotspot is completely unrestricted on that plan!
+  - speaker: user
+    goal: Pide ayuda para escanear el código QR de activación en tus ajustes.
+    suggested_lines:
+    - Could you help me scan the activation QR code in my phone settings?
+    - Will my regular WhatsApp number keep working while I use this data line?
+  - speaker: ai
+    text: All installed! You already have full 5G signal bars at the top.
+  - speaker: user
+    goal: Pregunta si tu número de WhatsApp seguirá funcionando normalmente.
+    suggested_lines:
+    - Will my regular WhatsApp number keep working while I use this data line?
+    - How is the network coverage if we drive up to the national park?
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

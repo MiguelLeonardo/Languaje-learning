@@ -1,0 +1,117 @@
+id: c1-pre-authorization-mri
+title: Securing insurer pre-authorization for an MRI
+title_es: Gestionar preautorización urgente de resonancia
+cefr: C1
+topic: health-and-emergencies
+description: Coordina con el departamento médico de tu aseguradora la aprobación urgente de una resonancia magnética
+  ambulatoria.
+phrases:
+- id: expedited-pre-authorization
+  text: I'm calling to request expedited pre-authorization for a contrast-enhanced lumbar MRI ordered by my neurologist.
+  translation: Llamo para solicitar preautorización urgente de una resonancia lumbar con contraste indicada por
+    mi neurólogo.
+  visual_hint: 🧲📋
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: expedited
+    meaning: acelerada / de trámite urgente
+    ipa: ˈekspədaɪtɪd
+- id: clinical-notes-uploaded
+  text: The clinic already uploaded the ICD-10 diagnostic codes and clinical notes documenting acute radiculopathy.
+  translation: La clínica ya subió los códigos diagnósticos ICD-10 y las notas clínicas que documentan radiculopatía
+    aguda.
+  visual_hint: 🩺💻
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: acute
+    meaning: aguda / de aparición intensa
+    ipa: əˈkjuːt
+- id: in-network-imaging-facility
+  text: Because the imaging center is in-network, only my hundred-dollar copay should apply once you issue the guarantee
+    of payment.
+  translation: Como el centro de imagenología está dentro de la red, solo debe aplicar mi copago de cien dólares
+    al emitir la carta garantía.
+  visual_hint: 🏥💳
+  cloze:
+  - 6
+  - 12
+  glossary:
+  - word: in-network
+    meaning: dentro de la red médica afiliada
+    ipa: ɪn ˈnetwɜːrk
+- id: fax-authorization-to-radiology
+  text: Could you transmit the authorization code directly to the radiology scheduling desk before my 3:00 PM slot?
+  translation: ¿Podría enviar el código de autorización directamente a radiología antes de mi turno de las 3:00
+    PM?
+  visual_hint: 📠🕒
+  cloze:
+  - 5
+  - 11
+  glossary:
+  - word: transmit
+    meaning: transmitir / enviar oficialmente
+    ipa: trænzˈmɪt
+- id: cover-follow-up-consult
+  text: Does this authorization bundle also cover Friday's follow-up consultation to review the scans?
+  translation: ¿Esta autorización cubre también la consulta de seguimiento del viernes para revisar las imágenes?
+  visual_hint: 🗓️🔍
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: follow-up
+    meaning: consulta de seguimiento
+    ipa: ˈfɑːloʊ ʌp
+- id: relieved-it-cleared-today
+  text: Having that guarantee letter in their inbox before I arrive saves so much stress—thank you!
+  translation: Tener esa carta garantía en su correo antes de llegar me ahorra muchísimo estrés; ¡gracias!
+  visual_hint: 😌🙌
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: guarantee letter
+    meaning: carta garantía de pago hospitalario
+    ipa: ˌɡærənˈtiː ˈletər
+roleplay:
+  ai_role: medical review coordinator
+  user_role: insured patient
+  setting: Phone call with the international health insurer's clinical desk.
+  turns:
+  - speaker: ai
+    text: Clinical Pre-Authorization Desk, hello. I see your policy number on screen. What procedure was ordered?
+  - speaker: user
+    goal: Solicita preautorización urgente para una resonancia lumbar indicada por tu neurólogo.
+    suggested_lines:
+    - I'm calling to request expedited pre-authorization for a contrast-enhanced lumbar MRI ordered by my neurologist.
+    - The clinic already uploaded the ICD-10 diagnostic codes and clinical notes documenting acute radiculopathy.
+  - speaker: ai
+    text: For expedited review, we need the ordering physician's clinical notes showing conservative care or red-flag
+      symptoms.
+  - speaker: user
+    goal: Confirma que la clínica ya subió los códigos diagnósticos y notas médicas.
+    suggested_lines:
+    - The clinic already uploaded the ICD-10 diagnostic codes and clinical notes documenting acute radiculopathy.
+    - Because the imaging center is in-network, only my hundred-dollar copay should apply once you issue the guarantee
+      of payment.
+  - speaker: ai
+    text: I see the neurologist's PDF attachment right here—it clearly meets our urgent clinical criteria.
+  - speaker: user
+    goal: Verifica que al ser un centro de la red solo aplique el copago con carta garantía.
+    suggested_lines:
+    - Because the imaging center is in-network, only my hundred-dollar copay should apply once you issue the guarantee
+      of payment.
+    - Could you transmit the authorization code directly to the radiology scheduling desk before my 3:00 PM slot?
+  - speaker: ai
+    text: 'Approved under Authorization #MR-9042! Would you like me to email the Guarantee of Payment to the clinic?'
+  - speaker: user
+    goal: Pide que envíen el código de autorización a radiología antes de las 3:00 PM.
+    suggested_lines:
+    - Could you transmit the authorization code directly to the radiology scheduling desk before my 3:00 PM slot?
+    - Does this authorization bundle also cover Friday's follow-up consultation to review the scans?
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

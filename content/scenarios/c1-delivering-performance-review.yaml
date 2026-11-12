@@ -1,0 +1,124 @@
+id: c1-delivering-performance-review
+title: Delivering constructive coaching feedback
+title_es: Dar evaluación de desempeño constructiva
+cefr: C1
+topic: work-and-career
+description: 'Ofrece retroalimentación equilibrada a un ingeniero talentoso: reconoce su excelencia técnica y guíalo
+  para delegar más.'
+phrases:
+- id: anchor-on-technical-impact
+  text: First off, your architecture work on the real-time notification engine set a new bar for reliability across
+    the org.
+  translation: Para empezar, tu trabajo de arquitectura en el motor de notificaciones marcó un nuevo estándar de
+    fiabilidad en toda la empresa.
+  visual_hint: 🏆⚙️
+  cloze:
+  - 6
+  - 12
+  glossary:
+  - word: set a new bar
+    meaning: marcar un nuevo estándar superior
+    ipa: set ə nuː bɑːr
+- id: shift-from-hero-to-multiplier
+  text: To make the leap to Staff Engineer, the shift is moving from being the go-to problem solver to being a force
+    multiplier.
+  translation: Para dar el salto a Staff Engineer, la clave es pasar de resolver todo tú mismo a ser un multiplicador
+    del equipo.
+  visual_hint: 🌱🚀
+  cloze:
+  - 7
+  - 14
+  glossary:
+  - word: force multiplier
+    meaning: multiplicador de talento / impulsor del equipo
+    ipa: fɔːrs ˈmʌltɪplaɪər
+- id: delegate-design-docs
+  text: When you jump in and rewrite junior engineers' PRs late at night, it unblocks the sprint but deprives them
+    of the learning curve.
+  translation: Cuando entras a reescribir el código de los juniors de noche, destrabas el sprint pero les quitas
+    la curva de aprendizaje.
+  visual_hint: 🔍🤝
+  cloze:
+  - 7
+  - 15
+  glossary:
+  - word: deprives
+    meaning: priva de / quita la oportunidad
+    ipa: dɪˈpraɪvz
+- id: co-author-next-rfc
+  text: This quarter, let's have you mentor Maya as she authors the caching RFC while you guide the architectural
+    trade-offs.
+  translation: Este trimestre, haz que Maya redacte la propuesta técnica de caché mientras tú la guías en las decisiones
+    de arquitectura.
+  visual_hint: 📝🧭
+  cloze:
+  - 6
+  - 12
+  glossary:
+  - word: trade-offs
+    meaning: compensaciones / pros y contras técnicos
+    ipa: treɪd ɔːfs
+- id: document-promotion-packet
+  text: Coaching her through that design review will be the centerpiece of your Staff promotion packet.
+  translation: Guiarla en esa revisión de diseño será la pieza central de tu expediente de promoción.
+  visual_hint: 📑🌟
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: centerpiece
+    meaning: pieza central / argumento clave
+    ipa: ˈsentərpiːs
+- id: check-in-biweekly
+  text: We'll review how the delegation feels in our biweekly 1-on-1s—you're more than ready for this step.
+  translation: Revisaremos cómo avanza la delegación cada dos semanas; estás más que listo para este paso.
+  visual_hint: 🙌✅
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: more than ready
+    meaning: más que preparado
+    ipa: mɔːr ðæn ˈredi
+roleplay:
+  ai_role: senior engineer (Alex)
+  user_role: engineering manager
+  setting: Quarterly career growth and coaching 1-on-1.
+  turns:
+  - speaker: ai
+    text: Thanks for setting aside time for our quarterly growth chat. How am I tracking toward Staff Engineer?
+  - speaker: user
+    goal: Inicia reconociendo el impacto sobresaliente de su arquitectura técnica.
+    suggested_lines:
+    - First off, your architecture work on the real-time notification engine set a new bar for reliability across
+      the org.
+    - To make the leap to Staff Engineer, the shift is moving from being the go-to problem solver to being a force
+      multiplier.
+  - speaker: ai
+    text: I'd love honest feedback on where my blind spots are for that Staff promotion.
+  - speaker: user
+    goal: Explica que el siguiente nivel requiere pasar de ejecutor individual a multiplicador del equipo.
+    suggested_lines:
+    - To make the leap to Staff Engineer, the shift is moving from being the go-to problem solver to being a force
+      multiplier.
+    - When you jump in and rewrite junior engineers' PRs late at night, it unblocks the sprint but deprives them
+      of the learning curve.
+  - speaker: ai
+    text: That's fair—sometimes I just fix it myself because it feels faster than explaining it.
+  - speaker: user
+    goal: Señala con tacto que resolverles el código les resta oportunidad de aprendizaje.
+    suggested_lines:
+    - When you jump in and rewrite junior engineers' PRs late at night, it unblocks the sprint but deprives them
+      of the learning curve.
+    - This quarter, let's have you mentor Maya as she authors the caching RFC while you guide the architectural
+      trade-offs.
+  - speaker: ai
+    text: How can I practice that mentorship muscle on our upcoming Q3 project?
+  - speaker: user
+    goal: Propón que este trimestre guíe a Maya como autora del documento técnico.
+    suggested_lines:
+    - This quarter, let's have you mentor Maya as she authors the caching RFC while you guide the architectural
+      trade-offs.
+    - Coaching her through that design review will be the centerpiece of your Staff promotion packet.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

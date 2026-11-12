@@ -1,0 +1,116 @@
+id: b2-pitching-internal-automation
+title: Pitching a workflow automation tool
+title_es: Proponer automatización para ahorrar tiempo
+cefr: B2
+topic: work-and-career
+description: Presenta una propuesta interna que ahorra diez horas semanales de carga manual de facturas con retorno
+  en dos meses.
+phrases:
+- id: ten-hours-manual-entry
+  text: Right now, our coordinators spend twelve hours every week manually copying invoice rows into the ERP.
+  translation: Actualmente, nuestros coordinadores dedican doce horas por semana a copiar manualmente facturas en
+    el sistema ERP.
+  visual_hint: ⏱️📊
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: manually
+    meaning: de forma manual
+    ipa: ˈmænjuəli
+- id: built-working-prototype
+  text: I built a lightweight OCR script over two afternoons that extracts the fields with ninety-nine-percent accuracy.
+  translation: Construí un script ligero en dos tardes que extrae los campos con un noventa y nueve por ciento de
+    precisión.
+  visual_hint: 🤖📄
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: extracts
+    meaning: extrae automáticamente
+    ipa: ɪkˈstrækts
+- id: human-in-the-loop-review
+  text: A coordinator still reviews flagged exceptions, so we keep full financial control while cutting processing
+    time by eighty percent.
+  translation: Un coordinador sigue revisando las excepciones marcadas, manteniendo control total y reduciendo el
+    tiempo un ochenta por ciento.
+  visual_hint: 👁️🛡️
+  cloze:
+  - 6
+  - 12
+  glossary:
+  - word: exceptions
+    meaning: casos atípicos / excepciones
+    ipa: ɪkˈsepʃənz
+- id: two-week-pilot-budget
+  text: The cloud API costs just eighty dollars a month; can we run a two-week pilot with the regional team?
+  translation: La API cuesta solo ochenta dólares al mes; ¿podemos hacer un piloto de dos semanas con el equipo
+    regional?
+  visual_hint: 🚀💵
+  cloze:
+  - 6
+  - 12
+  glossary:
+  - word: pilot
+    meaning: prueba piloto
+    ipa: ˈpaɪlət
+- id: measure-error-reduction
+  text: We'll track time saved and error rates before rolling it out globally in Q3.
+  translation: Mediremos el tiempo ahorrado y la reducción de errores antes de desplegarlo globalmente.
+  visual_hint: 📈🌍
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: rolling it out
+    meaning: desplegarlo / implementarlo
+    ipa: ˈroʊlɪŋ ɪt aʊt
+- id: green-light-for-pilot
+  text: Awesome—I'll set up the pilot sandbox this afternoon and report back in two weeks!
+  translation: ¡Excelente! Configuraré el entorno de prueba hoy mismo y presentaré resultados en dos semanas.
+  visual_hint: ✅🙌
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: report back
+    meaning: informar los resultados
+    ipa: rɪˈpɔːrt bæk
+roleplay:
+  ai_role: operations director
+  user_role: process lead
+  setting: 15-minute internal pitch meeting with operations leadership.
+  turns:
+  - speaker: ai
+    text: You mentioned you found a bottleneck in our monthly vendor billing workflow. Walk me through it.
+  - speaker: user
+    goal: Explica que el equipo pierde doce horas semanales copiando facturas a mano.
+    suggested_lines:
+    - Right now, our coordinators spend twelve hours every week manually copying invoice rows into the ERP.
+    - I built a lightweight OCR script over two afternoons that extracts the fields with ninety-nine-percent accuracy.
+  - speaker: ai
+    text: Twelve hours a week is huge—and manual data entry always leads to typos. What's your proposed fix?
+  - speaker: user
+    goal: Cuenta que creaste un prototipo que extrae los datos con 99% de precisión.
+    suggested_lines:
+    - I built a lightweight OCR script over two afternoons that extracts the fields with ninety-nine-percent accuracy.
+    - A coordinator still reviews flagged exceptions, so we keep full financial control while cutting processing
+      time by eighty percent.
+  - speaker: ai
+    text: How do we make sure an automated script doesn't approve a duplicate vendor bill?
+  - speaker: user
+    goal: Aclara que un coordinador sigue aprobando las excepciones para mantener el control.
+    suggested_lines:
+    - A coordinator still reviews flagged exceptions, so we keep full financial control while cutting processing
+      time by eighty percent.
+    - The cloud API costs just eighty dollars a month; can we run a two-week pilot with the regional team?
+  - speaker: ai
+    text: Human-in-the-loop validation is smart. What's the software cost to test this?
+  - speaker: user
+    goal: Solicita luz verde para un piloto de dos semanas con un costo de $80 al mes.
+    suggested_lines:
+    - The cloud API costs just eighty dollars a month; can we run a two-week pilot with the regional team?
+    - We'll track time saved and error rates before rolling it out globally in Q3.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

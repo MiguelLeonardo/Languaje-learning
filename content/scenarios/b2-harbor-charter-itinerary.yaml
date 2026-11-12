@@ -1,0 +1,109 @@
+id: b2-harbor-charter-itinerary
+title: Adjusting a coastal boat charter
+title_es: Ajustar ruta en barco por vientos fuertes
+cefr: B2
+topic: travel-and-transport
+description: Coordina con el capitán de un velero alquilado cambiar el recorrido hacia una bahía protegida del viento.
+phrases:
+- id: sheltered-cove-route
+  text: Given the gusty afternoon forecast, would it be wiser to hug the sheltered southern coves?
+  translation: Dado el pronóstico de ráfagas por la tarde, ¿sería más prudente bordear las calas protegidas del
+    sur?
+  visual_hint: ⛵🌬️
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: sheltered
+    meaning: protegidas / resguardadas
+    ipa: ˈʃeltərd
+- id: avoid-choppy-swell
+  text: A couple of friends get seasick easily, so we'd love to avoid choppy open-water swell.
+  translation: Un par de amigos se marean fácilmente, así que preferimos evitar el oleaje picado de mar abierto.
+  visual_hint: 🌊🤢
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: choppy
+    meaning: picado / agitado (el mar)
+    ipa: ˈtʃɑːpi
+- id: drop-anchor-for-swim
+  text: Can we drop anchor in the turquoise bay around noon for snorkeling and lunch?
+  translation: ¿Podemos echar el ancla en la bahía turquesa al mediodía para hacer snorkel y almorzar?
+  visual_hint: ⚓🤿
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: drop anchor
+    meaning: echar el ancla / fondear
+    ipa: drɑːp ˈæŋkər
+- id: head-back-before-dusk
+  text: Let's aim to dock back at the marina thirty minutes before sunset.
+  translation: Apuntemos a atracar de regreso en la marina treinta minutos antes del atardecer.
+  visual_hint: 🌅⚓
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: dock
+    meaning: atracar en el muelle
+    ipa: dɑːk
+- id: life-vest-briefing
+  text: Please give everyone a quick safety briefing before we cast off the lines.
+  translation: Por favor dé a todos una breve charla de seguridad antes de soltar amarras.
+  visual_hint: 🦺📢
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: cast off
+    meaning: soltar amarras / zarpar
+    ipa: kæst ɔːf
+- id: split-fuel-and-tip
+  text: We'll settle the fuel tab and crew gratuity as soon as we tie up.
+  translation: Liquidaremos el combustible y la propina de la tripulación en cuanto amarremos.
+  visual_hint: 💳🤝
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: gratuity
+    meaning: propina
+    ipa: ɡrəˈtuːəti
+roleplay:
+  ai_role: charter skipper
+  user_role: group organizer
+  setting: Marina dock before setting sail along the coast.
+  turns:
+  - speaker: ai
+    text: Morning! The breeze is picking up to twenty knots from the northwest this afternoon.
+  - speaker: user
+    goal: Pregunta si conviene ir por las calas protegidas del sur ante el viento.
+    suggested_lines:
+    - Given the gusty afternoon forecast, would it be wiser to hug the sheltered southern coves?
+    - A couple of friends get seasick easily, so we'd love to avoid choppy open-water swell.
+  - speaker: ai
+    text: Hugging the southern peninsula keeps us in flat water all day.
+  - speaker: user
+    goal: Explica que algunos amigos se marean y prefieren aguas tranquilas.
+    suggested_lines:
+    - A couple of friends get seasick easily, so we'd love to avoid choppy open-water swell.
+    - Can we drop anchor in the turquoise bay around noon for snorkeling and lunch?
+  - speaker: ai
+    text: That's a great plan—Blue Lagoon on the south side is crystal clear and calm.
+  - speaker: user
+    goal: Pregunta si pueden fondear al mediodía para hacer snorkel y almorzar.
+    suggested_lines:
+    - Can we drop anchor in the turquoise bay around noon for snorkeling and lunch?
+    - Let's aim to dock back at the marina thirty minutes before sunset.
+  - speaker: ai
+    text: Absolutely! I have snorkeling masks, fins, and paddleboards stowed on deck.
+  - speaker: user
+    goal: Propón regresar al muelle treinta minutos antes del atardecer.
+    suggested_lines:
+    - Let's aim to dock back at the marina thirty minutes before sunset.
+    - Please give everyone a quick safety briefing before we cast off the lines.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

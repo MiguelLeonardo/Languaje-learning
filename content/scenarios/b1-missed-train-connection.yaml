@@ -1,0 +1,108 @@
+id: b1-missed-train-connection
+title: Revalidating a missed train connection
+title_es: Validar boleto tras perder conexión de tren
+cefr: B1
+topic: travel-and-transport
+description: Explica al inspector que tu primer tren llegó con retraso y necesitas subir al siguiente tren sin recargo.
+phrases:
+- id: first-train-was-delayed
+  text: Excuse me, our incoming regional train was delayed by twenty minutes, so we missed our connection.
+  translation: Disculpe, nuestro tren regional llegó con veinte minutos de retraso, así que perdimos la conexión.
+  visual_hint: 🚆⏱️
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: incoming
+    meaning: entrante / de llegada
+    ipa: ˈɪnkʌmɪŋ
+- id: stamp-ticket-for-next
+  text: Can you endorse our tickets so we can board this 11:15 train without a penalty?
+  translation: ¿Puede sellar nuestros boletos para abordar este tren de las 11:15 sin penalización?
+  visual_hint: 🎫🖋️
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: without a penalty
+    meaning: sin multa / sin recargo
+    ipa: wɪˈðaʊt ə ˈpenəlti
+- id: sit-in-unreserved-coach
+  text: Since our original seat reservations are gone, which coach has unreserved seating?
+  translation: Como perdimos nuestros asientos originales, ¿qué vagón tiene asientos sin reserva?
+  visual_hint: 💺🚃
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: unreserved
+    meaning: sin reserva / libre
+    ipa: ˌʌnrɪˈzɜːrvd
+- id: change-again-at-reading
+  text: Do we stay on this train all the way, or do we need to transfer again?
+  translation: ¿Nos quedamos en este tren todo el trayecto o debemos hacer transbordo otra vez?
+  visual_hint: 🔄🗺️
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: all the way
+    meaning: todo el camino / directo
+    ipa: ɔːl ðə weɪ
+- id: delay-repay-compensation
+  text: Can we claim a partial refund online under the Delay Repay guarantee?
+  translation: ¿Podemos solicitar un reembolso parcial en línea por la garantía de retraso?
+  visual_hint: 💻💷
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: partial refund
+    meaning: reembolso parcial
+    ipa: ˈpɑːrʃəl ˈriːfʌnd
+- id: hop-on-before-whistle
+  text: Thank you so much! We'll board Coach E right now.
+  translation: ¡Muchísimas gracias! Subiremos al vagón E ahora mismo.
+  visual_hint: 🙌🚆
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: board
+    meaning: abordar / subir
+    ipa: bɔːrd
+roleplay:
+  ai_role: train conductor
+  user_role: traveler
+  setting: On the platform at a transfer railway station.
+  turns:
+  - speaker: ai
+    text: Tickets, please! Keep in mind this 11:15 express requires a seat reservation.
+  - speaker: user
+    goal: Explica que su primer tren se retrasó veinte minutos y perdieron la conexión.
+    suggested_lines:
+    - Excuse me, our incoming regional train was delayed by twenty minutes, so we missed our connection.
+    - Can you endorse our tickets so we can board this 11:15 train without a penalty?
+  - speaker: ai
+    text: Let me check the delay log—yes, the regional service from Bath arrived eighteen minutes late.
+  - speaker: user
+    goal: Pregunta si puede validar sus boletos para subir a este tren sin multa.
+    suggested_lines:
+    - Can you endorse our tickets so we can board this 11:15 train without a penalty?
+    - Since our original seat reservations are gone, which coach has unreserved seating?
+  - speaker: ai
+    text: I've stamped your tickets as valid for this service—no extra charge.
+  - speaker: user
+    goal: Pregunta qué vagón tiene asientos libres sin reserva.
+    suggested_lines:
+    - Since our original seat reservations are gone, which coach has unreserved seating?
+    - Do we stay on this train all the way, or do we need to transfer again?
+  - speaker: ai
+    text: Coaches E and F at the rear of the train are completely unreserved.
+  - speaker: user
+    goal: Pregunta si este tren va directo o requiere otro transbordo.
+    suggested_lines:
+    - Do we stay on this train all the way, or do we need to transfer again?
+    - Can we claim a partial refund online under the Delay Repay guarantee?
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

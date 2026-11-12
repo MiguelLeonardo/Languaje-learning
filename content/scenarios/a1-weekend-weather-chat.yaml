@@ -1,0 +1,108 @@
+id: a1-weekend-weather-chat
+title: Small talk in the elevator
+title_es: Charlar sobre el clima en el ascensor
+cefr: A1
+topic: social-and-smalltalk
+description: Rompe el hielo en el ascensor hablando del buen clima del fin de semana y qué piso presionas.
+phrases:
+- id: going-up-floor-five
+  text: Good afternoon! Which floor are you going to?
+  translation: ¡Buenas tardes! ¿A qué piso vas?
+  visual_hint: 🛗🔢
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: floor
+    meaning: piso / planta
+    ipa: flɔːr
+- id: press-button-six
+  text: I will press floor six for you right here.
+  translation: Presionaré el piso seis por ti justo aquí.
+  visual_hint: 👆6️⃣
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: press
+    meaning: presionar / pulsar
+    ipa: pres
+- id: beautiful-sunny-friday
+  text: The weather is so warm and sunny today!
+  translation: ¡El clima está muy cálido y soleado hoy!
+  visual_hint: ☀️🌤️
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: sunny
+    meaning: soleado
+    ipa: ˈsʌni
+- id: walk-by-the-beach
+  text: Yes! I am going to the beach with my family tomorrow.
+  translation: ¡Sí! Mañana voy a la playa con mi familia.
+  visual_hint: 🏖️👨‍👩‍👧
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: beach
+    meaning: playa
+    ipa: biːtʃ
+- id: no-rain-until-monday
+  text: I am glad there is no rain this weekend.
+  translation: Me alegra que no haya lluvia este fin de semana.
+  visual_hint: 🌈😊
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: rain
+    meaning: lluvia
+    ipa: reɪn
+- id: have-a-great-weekend
+  text: Here is your floor. Have a great weekend!
+  translation: Aquí está tu piso. ¡Que tengas un excelente fin de semana!
+  visual_hint: 👋🌟
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: weekend
+    meaning: fin de semana
+    ipa: ˈwiːkend
+roleplay:
+  ai_role: neighbor
+  user_role: resident
+  setting: Apartment building elevator on Friday afternoon.
+  turns:
+  - speaker: ai
+    text: Good afternoon! Thanks for holding the elevator door!
+  - speaker: user
+    goal: Saluda y pregunta a qué piso va.
+    suggested_lines:
+    - Good afternoon! Which floor are you going to?
+    - I will press floor six for you right here.
+  - speaker: ai
+    text: Floor six, please! My hands are full with groceries.
+  - speaker: user
+    goal: Di que presionarás el botón del piso seis por él.
+    suggested_lines:
+    - I will press floor six for you right here.
+    - The weather is so warm and sunny today!
+  - speaker: ai
+    text: Thank you! Isn't it a lovely Friday outside?
+  - speaker: user
+    goal: Comenta lo cálido y soleado que está el día.
+    suggested_lines:
+    - The weather is so warm and sunny today!
+    - Yes! I am going to the beach with my family tomorrow.
+  - speaker: ai
+    text: It's supposed to stay warm all weekend! Any fun plans?
+  - speaker: user
+    goal: Cuéntale que mañana irás a la playa con tu familia.
+    suggested_lines:
+    - Yes! I am going to the beach with my family tomorrow.
+    - I am glad there is no rain this weekend.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

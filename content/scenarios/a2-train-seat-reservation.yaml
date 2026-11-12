@@ -1,0 +1,108 @@
+id: a2-train-seat-reservation
+title: Finding your reserved train seat
+title_es: Encontrar tu asiento reservado en el tren
+cefr: A2
+topic: travel-and-transport
+description: Verifica el número de tu asiento junto a la ventana y pide permiso para guardar tu mochila arriba.
+phrases:
+- id: seat-twelve-window
+  text: Excuse me, I think my ticket is for seat 12A by the window.
+  translation: Disculpe, creo que mi boleto es para el asiento 12A junto a la ventana.
+  visual_hint: 🚆🪟
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: by the window
+    meaning: junto a la ventana
+    ipa: baɪ ðə ˈwɪndoʊ
+- id: check-coach-number
+  text: Let me check—yes, this is Coach 4 and I have 12A.
+  translation: 'Déjeme revisar: sí, este es el vagón 4 y tengo el 12A.'
+  visual_hint: 🎫🔍
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: let me check
+    meaning: déjeme revisar
+    ipa: let miː tʃek
+- id: overhead-luggage-rack
+  text: Do you mind if I put my backpack on the overhead rack?
+  translation: ¿Le importa si pongo mi mochila en el portaequipajes superior?
+  visual_hint: 🎒⬆️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: do you mind
+    meaning: ¿le importa / molesta?
+    ipa: duː juː maɪnd
+- id: power-outlet-under-seat
+  text: Is there a power outlet under the seat to charge my phone?
+  translation: ¿Hay un enchufe debajo del asiento para cargar mi teléfono?
+  visual_hint: 🔌📱
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: power outlet
+    meaning: toma de corriente / enchufe
+    ipa: ˈpaʊər ˈaʊtlet
+- id: free-train-wifi
+  text: Does this train have free Wi-Fi during the trip?
+  translation: ¿Este tren tiene wifi gratuito durante el viaje?
+  visual_hint: 📶🚄
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: during
+    meaning: durante
+    ipa: ˈdʊrɪŋ
+- id: wake-me-at-station
+  text: I'm getting off at York; have a pleasant journey!
+  translation: Me bajo en York; ¡que tenga un buen viaje!
+  visual_hint: 👋😊
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: getting off
+    meaning: bajarse (de tren/autobús)
+    ipa: ˈɡetɪŋ ɔːf
+roleplay:
+  ai_role: fellow passenger
+  user_role: traveler
+  setting: Boarding a high-speed intercity train.
+  turns:
+  - speaker: ai
+    text: Oh, hello! Are you sitting in this row?
+  - speaker: user
+    goal: Indica amablemente que tu boleto es el asiento 12A junto a la ventana.
+    suggested_lines:
+    - Excuse me, I think my ticket is for seat 12A by the window.
+    - Let me check—yes, this is Coach 4 and I have 12A.
+  - speaker: ai
+    text: Oops, my ticket is actually for 12B on the aisle! Let me stand up for you.
+  - speaker: user
+    goal: Confirma que es el vagón 4 y tienes el asiento 12A.
+    suggested_lines:
+    - Let me check—yes, this is Coach 4 and I have 12A.
+    - Do you mind if I put my backpack on the overhead rack?
+  - speaker: ai
+    text: Here you go, the window seat is all yours!
+  - speaker: user
+    goal: Pregunta si puedes colocar tu mochila en el compartimento superior.
+    suggested_lines:
+    - Do you mind if I put my backpack on the overhead rack?
+    - Is there a power outlet under the seat to charge my phone?
+  - speaker: ai
+    text: Not at all, go right ahead! There is plenty of room up there.
+  - speaker: user
+    goal: Pregunta si hay un enchufe bajo el asiento para cargar tu teléfono.
+    suggested_lines:
+    - Is there a power outlet under the seat to charge my phone?
+    - Does this train have free Wi-Fi during the trip?
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

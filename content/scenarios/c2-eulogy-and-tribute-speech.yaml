@@ -1,0 +1,110 @@
+id: c2-eulogy-and-tribute-speech
+title: Delivering a lifetime achievement tribute
+title_es: Pronunciar un homenaje solemne a una mentora
+cefr: C2
+topic: social-and-smalltalk
+description: Rinde un homenaje elocuente a una profesora que se jubila tras cuarenta años formando generaciones.
+phrases:
+- id: measure-of-a-mentor
+  text: The true measure of a scholar lies not merely in citations, but in the minds she has kindled.
+  translation: La verdadera medida de una académica no reside solo en sus citas, sino en las mentes que ha encendido.
+  visual_hint: 🕯️🎓
+  cloze:
+  - 6
+  - 12
+  glossary:
+  - word: kindled
+    meaning: encendido / inspirado
+    ipa: ˈkɪndəld
+- id: unflinching-red-pen
+  text: Anyone who survived Dr. Lin's red pen knows she demanded rigor precisely because she believed in our potential.
+  translation: Cualquiera que haya sobrevivido a las correcciones de la Dra. Lin sabe que exigía rigor porque creía
+    en nuestro potencial.
+  visual_hint: ✒️📄
+  cloze:
+  - 6
+  - 12
+  glossary:
+  - word: rigor
+    meaning: rigor intelectual
+    ipa: ˈrɪɡər
+- id: quiet-generosity-behind-scenes
+  text: Behind the scenes, her quiet generosity opened doors for countless first-generation researchers.
+  translation: Tras bambalinas, su generosidad silenciosa abrió puertas a innumerables investigadores de primera
+    generación.
+  visual_hint: 🚪🌟
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: countless
+    meaning: innumerables
+    ipa: ˈkaʊntləs
+- id: enduring-intellectual-lineage
+  text: Though you step down from the lecture hall tonight, your intellectual lineage spans four continents.
+  translation: Aunque hoy deje la cátedra, su linaje intelectual se extiende por cuatro continentes.
+  visual_hint: 🌍🥂
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: lineage
+    meaning: linaje / legado formativo
+    ipa: ˈlɪniɪdʒ
+- id: endowed-fellowship-in-your-name
+  text: In your honor, the alumni have endowed a fellowship for emerging scientists.
+  translation: En su honor, los exalumnos hemos constituido una beca para científicos emergentes.
+  visual_hint: 🏅🔬
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: endowed
+    meaning: dotado financieramente (un fondo o beca)
+    ipa: ɪnˈdaʊd
+- id: with-deepest-gratitude
+  text: With our deepest gratitude, Dr. Lin—thank you for teaching us how to think.
+  translation: 'Con nuestra más profunda gratitud, Dra. Lin: gracias por enseñarnos a pensar.'
+  visual_hint: 🙏❤️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: gratitude
+    meaning: gratitud
+    ipa: ˈɡrætɪtuːd
+roleplay:
+  ai_role: retiring professor (Dr. Lin)
+  user_role: former mentee
+  setting: University auditorium tribute dinner celebrating Dr. Lin's forty-year career.
+  turns:
+  - speaker: ai
+    text: Please welcome Dr. Lin's former doctoral advisee to deliver the closing tribute.
+  - speaker: user
+    goal: Inicia el homenaje destacando que el legado de una mentora está en las mentes que inspira.
+    suggested_lines:
+    - The true measure of a scholar lies not merely in citations, but in the minds she has kindled.
+    - Anyone who survived Dr. Lin's red pen knows she demanded rigor precisely because she believed in our potential.
+  - speaker: ai
+    text: (Warm laughter and nodding across the auditorium)
+  - speaker: user
+    goal: Evoca con cariño sus exigentes correcciones como muestra de fe en sus alumnos.
+    suggested_lines:
+    - Anyone who survived Dr. Lin's red pen knows she demanded rigor precisely because she believed in our potential.
+    - Behind the scenes, her quiet generosity opened doors for countless first-generation researchers.
+  - speaker: ai
+    text: What will you carry forward most from your years in her laboratory?
+  - speaker: user
+    goal: Resalta su generosidad silenciosa abriendo puertas a nuevos investigadores.
+    suggested_lines:
+    - Behind the scenes, her quiet generosity opened doors for countless first-generation researchers.
+    - Though you step down from the lecture hall tonight, your intellectual lineage spans four continents.
+  - speaker: ai
+    text: (Standing ovation as Dr. Lin rises to the podium)
+  - speaker: user
+    goal: Brinda por su legado intelectual presente en cuatro continentes.
+    suggested_lines:
+    - Though you step down from the lecture hall tonight, your intellectual lineage spans four continents.
+    - In your honor, the alumni have endowed a fellowship for emerging scientists.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

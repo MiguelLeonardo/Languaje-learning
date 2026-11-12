@@ -1,0 +1,108 @@
+id: a2-uber-pickup-spot
+title: Confirming a rideshare pickup spot
+title_es: Confirmar punto de recogida con el conductor
+cefr: A2
+topic: travel-and-transport
+description: Llama a tu conductor de aplicación para explicarle exactamente en qué esquina estás esperando.
+phrases:
+- id: waiting-by-pharmacy
+  text: Hi! I'm your passenger. I'm standing in front of the green pharmacy.
+  translation: ¡Hola! Soy tu pasajero. Estoy parado frente a la farmacia verde.
+  visual_hint: 📱🚕
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: in front of
+    meaning: frente a / delante de
+    ipa: ɪn frʌnt əv
+- id: cross-to-north-corner
+  text: Should I cross the street to the north corner by the cafe?
+  translation: ¿Debo cruzar la calle hacia la esquina norte junto a la cafetería?
+  visual_hint: 🚶‍♂️☕
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: cross
+    meaning: cruzar
+    ipa: krɔːs
+- id: wearing-yellow-coat
+  text: I'm wearing a bright yellow jacket and holding a blue umbrella.
+  translation: Llevo puesta una chaqueta amarilla brillante y un paraguas azul.
+  visual_hint: 🧥☂️
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: wearing
+    meaning: llevando puesto / vistiendo
+    ipa: ˈwerɪŋ
+- id: see-your-silver-car
+  text: I see your silver Toyota with the hazard lights on now!
+  translation: ¡Ya veo tu Toyota plateado con las luces intermitentes encendidas!
+  visual_hint: 🚗✨
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: hazard lights
+    meaning: luces preventivas / intermitentes
+    ipa: ˈhæzərd laɪts
+- id: check-license-plate
+  text: Just checking your license plate—is this ride for Alex?
+  translation: 'Solo verificando la placa: ¿este viaje es para Alex?'
+  visual_hint: 🔢✅
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: license plate
+    meaning: placa / matrícula
+    ipa: ˈlaɪsəns pleɪt
+- id: take-the-highway
+  text: Thanks for finding us! Is the highway faster tonight?
+  translation: ¡Gracias por encontrarnos! ¿La autopista es más rápida esta noche?
+  visual_hint: 🛣️🌙
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: highway
+    meaning: autopista
+    ipa: ˈhaɪweɪ
+roleplay:
+  ai_role: rideshare driver
+  user_role: passenger
+  setting: Standing outside a busy theater after a show.
+  turns:
+  - speaker: ai
+    text: Hello! I'm two blocks away on Main Street, but the theater entrance is blocked.
+  - speaker: user
+    goal: Explica que estás frente a la farmacia verde.
+    suggested_lines:
+    - Hi! I'm your passenger. I'm standing in front of the green pharmacy.
+    - Should I cross the street to the north corner by the cafe?
+  - speaker: ai
+    text: I see the pharmacy, but police aren't letting cars stop on that side.
+  - speaker: user
+    goal: Pregunta si debes cruzar hacia la esquina norte junto a la cafetería.
+    suggested_lines:
+    - Should I cross the street to the north corner by the cafe?
+    - I'm wearing a bright yellow jacket and holding a blue umbrella.
+  - speaker: ai
+    text: Yes! Cross to the cafe corner—I can pull over right there.
+  - speaker: user
+    goal: Describe que llevas chaqueta amarilla y paraguas azul.
+    suggested_lines:
+    - I'm wearing a bright yellow jacket and holding a blue umbrella.
+    - I see your silver Toyota with the hazard lights on now!
+  - speaker: ai
+    text: I'm pulling up to the curb in a silver Camry right now!
+  - speaker: user
+    goal: Di que ya ves su auto plateado con las intermitentes.
+    suggested_lines:
+    - I see your silver Toyota with the hazard lights on now!
+    - Just checking your license plate—is this ride for Alex?
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

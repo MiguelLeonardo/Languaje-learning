@@ -1,0 +1,108 @@
+id: a2-supermarket-self-checkout
+title: Using the supermarket self-checkout
+title_es: Pedir ayuda en la caja de autopago
+cefr: A2
+topic: hotel-and-shopping
+description: Pide ayuda al encargado del supermercado cuando la máquina de autopago no escanea el pan.
+phrases:
+- id: barcode-wont-scan
+  text: Excuse me, this bakery bag doesn't have a barcode to scan.
+  translation: Disculpe, esta bolsa de panadería no tiene código de barras para escanear.
+  visual_hint: 🥐🛒
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: barcode
+    meaning: código de barras
+    ipa: ˈbɑːrkoʊd
+- id: enter-item-code
+  text: How do I look up fresh bread Rolls on the touch screen?
+  translation: ¿Cómo busco los panecillos frescos en la pantalla táctil?
+  visual_hint: 🖥️👆
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: look up
+    meaning: buscar en una lista
+    ipa: lʊk ʌp
+- id: weighed-the-apples
+  text: I also weighed these apples—do I press the fruit button first?
+  translation: También pesé estas manzanas; ¿presiono primero el botón de frutas?
+  visual_hint: 🍎⚖️
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: weighed
+    meaning: pesé / puse en la báscula
+    ipa: weɪd
+- id: remove-double-scan
+  text: Oops, it scanned the milk twice! Could you remove one carton?
+  translation: ¡Uy, escaneó la leche dos veces! ¿Podría borrar un cartón?
+  visual_hint: 🥛❌
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: twice
+    meaning: dos veces
+    ipa: twaɪs
+- id: use-my-own-bag
+  text: I tapped 'using my own bag' and placed it on the bagging area.
+  translation: Toqué 'uso mi propia bolsa' y la coloqué en el área de empaque.
+  visual_hint: 👜✅
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: bagging area
+    meaning: zona de embolsado
+    ipa: ˈbæɡɪŋ ˈeriə
+- id: tap-phone-to-pay
+  text: All fixed! I'll pay with Apple Pay on the card reader.
+  translation: ¡Todo listo! Pagaré con el celular en el lector de tarjetas.
+  visual_hint: 📲💳
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: card reader
+    meaning: lector de tarjetas
+    ipa: kɑːrd ˈriːdər
+roleplay:
+  ai_role: store attendant
+  user_role: shopper
+  setting: Self-checkout lanes at a grocery store.
+  turns:
+  - speaker: ai
+    text: Hi! Need a hand with the self-checkout screen?
+  - speaker: user
+    goal: Explica que la bolsa de panadería no tiene código de barras.
+    suggested_lines:
+    - Excuse me, this bakery bag doesn't have a barcode to scan.
+    - How do I look up fresh bread Rolls on the touch screen?
+  - speaker: ai
+    text: No problem! For fresh bakery items, we select them by picture.
+  - speaker: user
+    goal: Pregunta cómo buscar los panecillos en la pantalla táctil.
+    suggested_lines:
+    - How do I look up fresh bread Rolls on the touch screen?
+    - I also weighed these apples—do I press the fruit button first?
+  - speaker: ai
+    text: Just tap 'Bakery' on the left and enter quantity four.
+  - speaker: user
+    goal: Pregunta cómo registrar las manzanas en la báscula.
+    suggested_lines:
+    - I also weighed these apples—do I press the fruit button first?
+    - Oops, it scanned the milk twice! Could you remove one carton?
+  - speaker: ai
+    text: Yes, place the apples flat on the scale and tap 'Honeycrisp Apples'.
+  - speaker: user
+    goal: Pide ayuda porque la leche se escaneó dos veces.
+    suggested_lines:
+    - Oops, it scanned the milk twice! Could you remove one carton?
+    - I tapped 'using my own bag' and placed it on the bagging area.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

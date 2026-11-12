@@ -1,0 +1,109 @@
+id: b1-bee-sting-swelling
+title: Treating an insect sting at urgent care
+title_es: Atender inflamación por picadura en urgencias
+cefr: B1
+topic: health-and-emergencies
+description: Describe en un centro de atención rápida que te picó una avispa en el antebrazo y tienes inflamación
+  local sin falta de aire.
+phrases:
+- id: stung-by-wasp-on-trail
+  text: Hi, I was stung on my forearm by a wasp about forty minutes ago while hiking.
+  translation: Hola, me picó una avispa en el antebrazo hace unos cuarenta minutos mientras caminaba.
+  visual_hint: 🐝💪
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: stung
+    meaning: picado (por abeja o avispa)
+    ipa: stʌŋ
+- id: breathing-is-normal
+  text: My breathing and swallowing are completely normal, so it's just localized swelling and heat.
+  translation: Mi respiración y deglución son totalmente normales; solo tengo inflamación y calor local.
+  visual_hint: 🫁✅
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: swelling
+    meaning: hinchazón / inflamación
+    ipa: ˈswelɪŋ
+- id: stinger-came-out-clean
+  text: We washed it with soap and water, and I don't see a stinger left in the skin.
+  translation: Lo lavamos con agua y jabón, y no veo que haya quedado aguijón en la piel.
+  visual_hint: 🧼🔍
+  cloze:
+  - 5
+  - 11
+  glossary:
+  - word: stinger
+    meaning: aguijón
+    ipa: ˈstɪŋər
+- id: hydrocortisone-and-antihistamine
+  text: Should I take an oral antihistamine and apply hydrocortisone cream to bring the redness down?
+  translation: ¿Debo tomar un antihistamínico oral y aplicar crema de hidrocortisona para bajar el enrojecimiento?
+  visual_hint: 💊🧴
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: redness
+    meaning: enrojecimiento
+    ipa: ˈrednəs
+- id: draw-pen-line-border
+  text: Drawing a pen line around the red border helps track if the swelling spreads.
+  translation: Marcar con pluma el borde rojo ayuda a vigilar si la hinchazón avanza.
+  visual_hint: 🖊️📏
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: spreads
+    meaning: se extiende / propaga
+    ipa: spredz
+- id: feel-relief-already
+  text: The ice pack and antihistamine are taking the sting away already—thank you!
+  translation: La compresa fría y el antihistamínico ya están aliviando el ardor; ¡gracias!
+  visual_hint: 🧊😌
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: relief
+    meaning: alivio
+    ipa: rɪˈliːf
+roleplay:
+  ai_role: urgent care nurse
+  user_role: patient
+  setting: Walk-in urgent care clinic near a national park.
+  turns:
+  - speaker: ai
+    text: Come right in to Triage Room 2. What happened on the trail today?
+  - speaker: user
+    goal: Explica que te picó una avispa en el antebrazo hace cuarenta minutos.
+    suggested_lines:
+    - Hi, I was stung on my forearm by a wasp about forty minutes ago while hiking.
+    - My breathing and swallowing are completely normal, so it's just localized swelling and heat.
+  - speaker: ai
+    text: 'First question: are you having any shortness of breath, dizziness, or throat tightness?'
+  - speaker: user
+    goal: Aclara que respiras normal y solo tienes inflamación y calor local.
+    suggested_lines:
+    - My breathing and swallowing are completely normal, so it's just localized swelling and heat.
+    - We washed it with soap and water, and I don't see a stinger left in the skin.
+  - speaker: ai
+    text: Good—your oxygen saturation and pulse are rock-steady. Let me inspect your arm.
+  - speaker: user
+    goal: Menciona que lavaron la zona y no quedó aguijón adentro.
+    suggested_lines:
+    - We washed it with soap and water, and I don't see a stinger left in the skin.
+    - Should I take an oral antihistamine and apply hydrocortisone cream to bring the redness down?
+  - speaker: ai
+    text: Wasps don't leave a stinger behind, which is good. I'll put a cold compress on it now.
+  - speaker: user
+    goal: Pregunta si debes tomar un antihistamínico y aplicar crema antiinflamatoria.
+    suggested_lines:
+    - Should I take an oral antihistamine and apply hydrocortisone cream to bring the redness down?
+    - Drawing a pen line around the red border helps track if the swelling spreads.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

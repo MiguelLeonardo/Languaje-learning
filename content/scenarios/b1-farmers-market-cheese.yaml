@@ -1,0 +1,108 @@
+id: b1-farmers-market-cheese
+title: Tasting artisanal cheeses
+title_es: Probar quesos artesanales en el mercado
+cefr: B1
+topic: food-and-drink
+description: Pide probar un queso de cabra curado, pregunta cómo conservarlo en un viaje y compra una cuña.
+phrases:
+- id: sample-aged-cheddar
+  text: Could I try a small sample of the aged goat cheese?
+  translation: ¿Podría probar una pequeña muestra del queso de cabra curado?
+  visual_hint: 🧀🔪
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: aged
+    meaning: curado / añejado
+    ipa: eɪdʒd
+- id: nutty-and-creamy
+  text: It has a wonderful nutty flavor and a really creamy texture.
+  translation: Tiene un maravilloso sabor a nuez y una textura muy cremosa.
+  visual_hint: 🥜✨
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: nutty
+    meaning: con notas de nuez
+    ipa: ˈnʌti
+- id: pair-with-figs
+  text: What kind of jam or crackers goes best with this cheese?
+  translation: ¿Qué tipo de mermelada o galletas combina mejor con este queso?
+  visual_hint: 🍯🥖
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: goes best
+    meaning: combina mejor
+    ipa: ɡoʊz best
+- id: vacuum-seal-travel
+  text: Could you vacuum-seal a half-pound wedge so I can pack it?
+  translation: ¿Podría sellar al vacío una cuña de media libra para llevarla de viaje?
+  visual_hint: 📦✈️
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: vacuum-seal
+    meaning: sellar al vacío
+    ipa: ˈvækjuːm siːl
+- id: unpasteurized-milk
+  text: Is this made with raw milk or pasteurized sheep's milk?
+  translation: ¿Está hecho con leche cruda o leche de oveja pasteurizada?
+  visual_hint: 🐑🥛
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: pasteurized
+    meaning: pasteurizada
+    ipa: ˈpæstʃəraɪzd
+- id: keep-at-room-temp
+  text: Take it out of the fridge thirty minutes before serving.
+  translation: Sácalo del refrigerador treinta minutos antes de servir.
+  visual_hint: 🌡️🍽️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: serving
+    meaning: servir
+    ipa: ˈsɜːrvɪŋ
+roleplay:
+  ai_role: cheesemonger
+  user_role: customer
+  setting: A bustling Saturday farmers' market stall.
+  turns:
+  - speaker: ai
+    text: Good morning! All our cheeses come from our family farm. Want to try one?
+  - speaker: user
+    goal: Pide probar una muestra del queso de cabra curado.
+    suggested_lines:
+    - Could I try a small sample of the aged goat cheese?
+    - It has a wonderful nutty flavor and a really creamy texture.
+  - speaker: ai
+    text: Here is a slice of our six-month aged goat cheese. What do you think?
+  - speaker: user
+    goal: Comenta su sabor a nuez y textura cremosa.
+    suggested_lines:
+    - It has a wonderful nutty flavor and a really creamy texture.
+    - What kind of jam or crackers goes best with this cheese?
+  - speaker: ai
+    text: Glad you like it! We age it in natural stone caves.
+  - speaker: user
+    goal: Pregunta qué mermelada o galletas combinan mejor.
+    suggested_lines:
+    - What kind of jam or crackers goes best with this cheese?
+    - Could you vacuum-seal a half-pound wedge so I can pack it?
+  - speaker: ai
+    text: Fig jam and walnut sourdough crackers pair with it beautifully.
+  - speaker: user
+    goal: Pide sellar al vacío una cuña de media libra para tu viaje.
+    suggested_lines:
+    - Could you vacuum-seal a half-pound wedge so I can pack it?
+    - Is this made with raw milk or pasteurized sheep's milk?
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

@@ -1,0 +1,108 @@
+id: b1-airbnb-host-check-in
+title: Coordinating vacation rental check-in
+title_es: Coordinar llegada a departamento vacacional
+cefr: B1
+topic: hotel-and-shopping
+description: Llama al anfitrión de tu alojamiento para confirmar el código de la cerradura digital y el estacionamiento.
+phrases:
+- id: arrived-at-front-gate
+  text: Hi! We just pulled up in front of the townhouse; how do we unlock the keypad?
+  translation: ¡Hola! Acabamos de llegar frente a la casa; ¿cómo abrimos el teclado numérico?
+  visual_hint: 🏡🔢
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: keypad
+    meaning: teclado numérico de acceso
+    ipa: ˈkiːpæd
+- id: press-pound-after-code
+  text: Do I press the hash key before or after entering the four-digit pin?
+  translation: ¿Presiono la tecla de gato antes o después de ingresar el código de cuatro dígitos?
+  visual_hint: '#️⃣🔓'
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: four-digit
+    meaning: de cuatro dígitos
+    ipa: fɔːr ˈdɪdʒɪt
+- id: driveway-parking-spot
+  text: Should we park in the driveway on the left or on the street with a permit?
+  translation: ¿Estacionamos en la entrada izquierda o en la calle con permiso?
+  visual_hint: 🚗🅿️
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: driveway
+    meaning: entrada para auto / cochera
+    ipa: ˈdraɪvweɪ
+- id: thermostat-and-recycling
+  text: Where is the heating thermostat, and which bin outside is for recycling?
+  translation: ¿Dónde está el termostato de calefacción y qué contenedor es para reciclaje?
+  visual_hint: 🌡️♻️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: bin
+    meaning: contenedor / bote
+    ipa: bɪn
+- id: checkout-instructions-binder
+  text: We see the welcome binder on the kitchen island with the Wi-Fi QR code.
+  translation: Ya vimos la carpeta de bienvenida en la barra de la cocina con el código QR del wifi.
+  visual_hint: 📖📶
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: binder
+    meaning: carpeta informativa
+    ipa: ˈbaɪndər
+- id: message-if-anything-needed
+  text: The apartment is spotless—thank you for the local coffee beans!
+  translation: El departamento está impecable; ¡gracias por el café local!
+  visual_hint: ☕🌟
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: spotless
+    meaning: impecable / reluciente
+    ipa: ˈspɑːtləs
+roleplay:
+  ai_role: property host
+  user_role: guest
+  setting: Outside a townhouse vacation rental upon arrival.
+  turns:
+  - speaker: ai
+    text: Welcome to Seattle! Glad you made it safely. Are you at the front door?
+  - speaker: user
+    goal: Avisa que ya llegaron y pregunta cómo usar el teclado numérico.
+    suggested_lines:
+    - Hi! We just pulled up in front of the townhouse; how do we unlock the keypad?
+    - Do I press the hash key before or after entering the four-digit pin?
+  - speaker: ai
+    text: Wake the screen with your palm, type 4829, and press the checkmark at the bottom right.
+  - speaker: user
+    goal: Pregunta si se presiona el signo de número antes o después del código.
+    suggested_lines:
+    - Do I press the hash key before or after entering the four-digit pin?
+    - Should we park in the driveway on the left or on the street with a permit?
+  - speaker: ai
+    text: Awesome, I just heard the smart lock click open!
+  - speaker: user
+    goal: Pregunta dónde deben estacionar el auto.
+    suggested_lines:
+    - Should we park in the driveway on the left or on the street with a permit?
+    - Where is the heating thermostat, and which bin outside is for recycling?
+  - speaker: ai
+    text: Park right in the left driveway spot—it's reserved exclusively for your unit.
+  - speaker: user
+    goal: Pregunta dónde está el termostato y cuál es el bote de reciclaje.
+    suggested_lines:
+    - Where is the heating thermostat, and which bin outside is for recycling?
+    - We see the welcome binder on the kitchen island with the Wi-Fi QR code.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

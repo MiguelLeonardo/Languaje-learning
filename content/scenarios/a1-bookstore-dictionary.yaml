@@ -1,0 +1,108 @@
+id: a1-bookstore-dictionary
+title: Buying a travel guide at a bookstore
+title_es: Comprar una guía en la librería
+cefr: A1
+topic: hotel-and-shopping
+description: Busca una guía de viaje en inglés con mapa de la ciudad y un cuaderno pequeño en una librería.
+phrases:
+- id: travel-books-section
+  text: Excuse me, where are the city travel guides?
+  translation: Disculpe, ¿dónde están las guías de viaje de la ciudad?
+  visual_hint: 📚🗺️
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: travel guides
+    meaning: guías de viaje
+    ipa: ˈtrævəl ɡaɪdz
+- id: book-with-street-map
+  text: Does this small guide have a pull-out street map?
+  translation: ¿Esta guía pequeña trae un mapa desplegable de calles?
+  visual_hint: 🗺️📖
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: street map
+    meaning: mapa de calles
+    ipa: striːt mæp
+- id: pocket-notebook
+  text: I also want this blue notebook and a black pen.
+  translation: También quiero este cuaderno azul y un bolígrafo negro.
+  visual_hint: 📓🖊️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: notebook
+    meaning: cuaderno / libreta
+    ipa: ˈnoʊtbʊk
+- id: free-bookmark
+  text: May I have one of these paper bookmarks, please?
+  translation: ¿Me regala uno de estos separadores de libros, por favor?
+  visual_hint: 🔖📘
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: bookmark
+    meaning: separador de libros / marcapáginas
+    ipa: ˈbʊkmɑːrk
+- id: english-short-stories
+  text: This book of easy short stories looks great too.
+  translation: Este libro de cuentos cortos fáciles también se ve genial.
+  visual_hint: 📖✨
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: short stories
+    meaning: cuentos cortos / relatos
+    ipa: ʃɔːrt ˈstɔːriz
+- id: pay-at-counter
+  text: Here is my card. Thank you for your help!
+  translation: Aquí está mi tarjeta. ¡Gracias por su ayuda!
+  visual_hint: 💳😊
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: counter
+    meaning: mostrador
+    ipa: ˈkaʊntər
+roleplay:
+  ai_role: bookseller
+  user_role: reader
+  setting: A quiet neighborhood bookshop.
+  turns:
+  - speaker: ai
+    text: Hello! Welcome to City Books. Can I help you find a title?
+  - speaker: user
+    goal: Pregunta dónde están las guías de viaje de la ciudad.
+    suggested_lines:
+    - Excuse me, where are the city travel guides?
+    - Does this small guide have a pull-out street map?
+  - speaker: ai
+    text: The travel section is right over here by the green armchair.
+  - speaker: user
+    goal: Pregunta si esa guía pequeña incluye un mapa de calles.
+    suggested_lines:
+    - Does this small guide have a pull-out street map?
+    - I also want this blue notebook and a black pen.
+  - speaker: ai
+    text: Yes, there is a full color fold-out map in the back cover!
+  - speaker: user
+    goal: Agrega el cuaderno azul y un bolígrafo negro.
+    suggested_lines:
+    - I also want this blue notebook and a black pen.
+    - May I have one of these paper bookmarks, please?
+  - speaker: ai
+    text: Let's ring these up at the register for you.
+  - speaker: user
+    goal: Pide uno de los separadores de libros en la caja.
+    suggested_lines:
+    - May I have one of these paper bookmarks, please?
+    - This book of easy short stories looks great too.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

@@ -1,0 +1,110 @@
+id: b2-overbooked-flight-volunteer
+title: Volunteering on an overbooked flight
+title_es: Negociar compensación en vuelo sobrevendido
+cefr: B2
+topic: travel-and-transport
+description: Ofrece tu asiento en un vuelo sobrevendido a cambio de ascenso a clase ejecutiva, hotel y bono.
+phrases:
+- id: flexible-if-compensated
+  text: Hi, I heard you're oversold—my schedule is flexible if the compensation package makes sense.
+  translation: Hola, escuché que el vuelo está sobrevendido; mi horario es flexible si el paquete de compensación
+    vale la pena.
+  visual_hint: 🛫💼
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: oversold
+    meaning: sobrevendido
+    ipa: ˌoʊvərˈsoʊld
+- id: confirmed-seat-tomorrow
+  text: Can you guarantee a confirmed seat on the 8:00 AM flight tomorrow rather than standby?
+  translation: ¿Puede garantizar un asiento confirmado en el vuelo de las 8:00 AM mañana en lugar de lista de espera?
+  visual_hint: ✅💺
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: standby
+    meaning: en lista de espera / sujeto a espacio
+    ipa: ˈstændbaɪ
+- id: upgrade-and-hotel-voucher
+  text: If you can include a business-class upgrade plus the airport hotel and meal vouchers, count me in.
+  translation: Si puede incluir un ascenso a clase ejecutiva más el hotel del aeropuerto y vales de comida, cuente
+    conmigo.
+  visual_hint: 🏨🥂
+  cloze:
+  - 5
+  - 11
+  glossary:
+  - word: count me in
+    meaning: cuente conmigo / acepto
+    ipa: kaʊnt miː ɪn
+- id: pull-checked-bag-or-keep
+  text: Will my checked bag stay safely in the hold overnight, or should I retrieve it now?
+  translation: ¿Mi maleta documentada quedará resguardada durante la noche o debo recogerla ahora?
+  visual_hint: 🧳🔒
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: retrieve
+    meaning: recuperar / recoger
+    ipa: rɪˈtriːv
+- id: no-expiration-voucher
+  text: Is the travel credit transferable or valid for twelve months without blackout dates?
+  translation: ¿El crédito de viaje es válido por doce meses sin fechas restringidas?
+  visual_hint: 🎟️📅
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: blackout dates
+    meaning: fechas restringidas
+    ipa: ˈblækaʊt deɪts
+- id: shuttle-to-airport-hotel
+  text: Where does the complimentary shuttle to the airport hotel pick up?
+  translation: ¿Dónde se toma el transporte gratuito hacia el hotel del aeropuerto?
+  visual_hint: 🚐🏨
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: shuttle
+    meaning: autobús de enlace / transporte
+    ipa: ˈʃʌtəl
+roleplay:
+  ai_role: gate agent
+  user_role: flexible traveler
+  setting: Departure gate announcement calling for volunteers.
+  turns:
+  - speaker: ai
+    text: 'Attention passengers: we are looking for two volunteers to take the morning flight.'
+  - speaker: user
+    goal: Indica que tu horario es flexible si la compensación es atractiva.
+    suggested_lines:
+    - Hi, I heard you're oversold—my schedule is flexible if the compensation package makes sense.
+    - Can you guarantee a confirmed seat on the 8:00 AM flight tomorrow rather than standby?
+  - speaker: ai
+    text: Thank you for coming up! We're offering a $600 travel credit for volunteers.
+  - speaker: user
+    goal: Pide asiento confirmado en el vuelo de las 8:00 AM y no en lista de espera.
+    suggested_lines:
+    - Can you guarantee a confirmed seat on the 8:00 AM flight tomorrow rather than standby?
+    - If you can include a business-class upgrade plus the airport hotel and meal vouchers, count me in.
+  - speaker: ai
+    text: Yes, I have one seat left in Business Class on the 8:00 AM departure!
+  - speaker: user
+    goal: Propón aceptar si incluyen ascenso a clase ejecutiva, hotel y comidas.
+    suggested_lines:
+    - If you can include a business-class upgrade plus the airport hotel and meal vouchers, count me in.
+    - Will my checked bag stay safely in the hold overnight, or should I retrieve it now?
+  - speaker: ai
+    text: Deal! I've locked in seat 3A for tomorrow, plus your hotel voucher and $600 credit.
+  - speaker: user
+    goal: Pregunta qué pasará con tu maleta documentada esta noche.
+    suggested_lines:
+    - Will my checked bag stay safely in the hold overnight, or should I retrieve it now?
+    - Is the travel credit transferable or valid for twelve months without blackout dates?
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

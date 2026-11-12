@@ -1,0 +1,108 @@
+id: a1-subway-metro-card
+title: Buying a metro card
+title_es: Comprar una tarjeta de metro
+cefr: A1
+topic: travel-and-transport
+description: Compra una tarjeta de metro para todo el día y pregunta hacia dónde va la línea azul.
+phrases:
+- id: one-day-metro-pass
+  text: Can I buy a one-day metro pass, please?
+  translation: ¿Puedo comprar un pase de metro por un día, por favor?
+  visual_hint: 🚇🎫
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: pass
+    meaning: pase / abono
+    ipa: pæs
+- id: blue-line-downtown
+  text: Does the blue line go to the city center?
+  translation: ¿La línea azul va al centro de la ciudad?
+  visual_hint: 🔵🏙️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: city center
+    meaning: centro de la ciudad
+    ipa: ˈsɪti ˈsentər
+- id: how-many-stops
+  text: How many stops is it to Central Museum?
+  translation: ¿Cuántas estaciones son hasta el Museo Central?
+  visual_hint: 🏛️🔢
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: stops
+    meaning: paradas / estaciones
+    ipa: stɑːps
+- id: tap-card-at-gate
+  text: Do I tap the card on the yellow gate?
+  translation: ¿Debo pasar la tarjeta por el lector amarillo?
+  visual_hint: 📲🚧
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: tap
+    meaning: acercar / tocar con la tarjeta
+    ipa: tæp
+- id: free-metro-map
+  text: May I take one of these pocket metro maps?
+  translation: ¿Puedo llevarme uno de estos mapas de bolsillo del metro?
+  visual_hint: 🗺️🚇
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: pocket
+    meaning: de bolsillo
+    ipa: ˈpɑːkɪt
+- id: trains-every-five-min
+  text: Great! The train is coming now, thank you.
+  translation: ¡Genial! El tren ya viene, gracias.
+  visual_hint: 🚆👍
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: coming
+    meaning: viniendo / llegando
+    ipa: ˈkʌmɪŋ
+roleplay:
+  ai_role: station clerk
+  user_role: traveler
+  setting: Underground metro station ticket window.
+  turns:
+  - speaker: ai
+    text: Hello! Welcome to the city metro. How can I help you?
+  - speaker: user
+    goal: Pide comprar un pase de metro por un día.
+    suggested_lines:
+    - Can I buy a one-day metro pass, please?
+    - Does the blue line go to the city center?
+  - speaker: ai
+    text: Here is your one-day pass for eight dollars.
+  - speaker: user
+    goal: Pregunta si la línea azul va al centro.
+    suggested_lines:
+    - Does the blue line go to the city center?
+    - How many stops is it to Central Museum?
+  - speaker: ai
+    text: Yes, take the blue line northbound on platform 1.
+  - speaker: user
+    goal: Pregunta cuántas paradas son hasta el Museo Central.
+    suggested_lines:
+    - How many stops is it to Central Museum?
+    - Do I tap the card on the yellow gate?
+  - speaker: ai
+    text: It is only four stops from here—about ten minutes.
+  - speaker: user
+    goal: Pregunta si pasas la tarjeta por el lector amarillo.
+    suggested_lines:
+    - Do I tap the card on the yellow gate?
+    - May I take one of these pocket metro maps?
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

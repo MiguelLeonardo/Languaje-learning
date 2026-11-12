@@ -1,0 +1,108 @@
+id: a1-fast-food-combo
+title: Ordering a burger combo
+title_es: Pedir un combo de hamburguesa
+cefr: A1
+topic: food-and-drink
+description: Ordena una hamburguesa con queso, papas fritas sin sal y una limonada.
+phrases:
+- id: cheeseburger-combo
+  text: Can I get the cheeseburger combo, please?
+  translation: ¿Me da el combo de hamburguesa con queso, por favor?
+  visual_hint: 🍔🍟
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: combo
+    meaning: menú completo / combo
+    ipa: ˈkɑːmboʊ
+- id: french-fries
+  text: Medium french fries with ketchup, please.
+  translation: Papas fritas medianas con kétchup, por favor.
+  visual_hint: 🍟🍅
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: french fries
+    meaning: papas fritas
+    ipa: frentʃ fraɪz
+- id: iced-lemonade
+  text: I want an iced lemonade to drink.
+  translation: Quiero una limonada con hielo para tomar.
+  visual_hint: 🍋🧊
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: iced
+    meaning: con hielo / helada
+    ipa: aɪst
+- id: eat-here-tray
+  text: We will eat here at a table.
+  translation: Vamos a comer aquí en una mesa.
+  visual_hint: 🍽️🪑
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: eat here
+    meaning: comer aquí
+    ipa: iːt hɪr
+- id: no-onions-please
+  text: No onions on the burger, please.
+  translation: Sin cebolla en la hamburguesa, por favor.
+  visual_hint: 🧅🚫
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: onions
+    meaning: cebollas
+    ipa: ˈʌnjənz
+- id: order-number
+  text: Thank you, what is my order number?
+  translation: Gracias, ¿cuál es mi número de pedido?
+  visual_hint: 🔢🧾
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: order number
+    meaning: número de pedido
+    ipa: ˈɔːrdər ˈnʌmbər
+roleplay:
+  ai_role: cashier
+  user_role: customer
+  setting: A casual burger counter at lunchtime.
+  turns:
+  - speaker: ai
+    text: Welcome! What can I get started for you?
+  - speaker: user
+    goal: Pide el combo de hamburguesa con queso.
+    suggested_lines:
+    - Can I get the cheeseburger combo, please?
+    - Medium french fries with ketchup, please.
+  - speaker: ai
+    text: Sure! What size fries and sauce would you like?
+  - speaker: user
+    goal: Elige papas medianas con kétchup.
+    suggested_lines:
+    - Medium french fries with ketchup, please.
+    - I want an iced lemonade to drink.
+  - speaker: ai
+    text: And what drink comes with your meal?
+  - speaker: user
+    goal: Pide una limonada con hielo para tomar.
+    suggested_lines:
+    - I want an iced lemonade to drink.
+    - We will eat here at a table.
+  - speaker: ai
+    text: Got it! Is that for here or to go?
+  - speaker: user
+    goal: Indica que comerán aquí en una mesa.
+    suggested_lines:
+    - We will eat here at a table.
+    - No onions on the burger, please.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

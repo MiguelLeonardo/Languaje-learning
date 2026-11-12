@@ -1,0 +1,108 @@
+id: a1-hotel-breakfast-hours
+title: Asking about hotel breakfast & pool
+title_es: Preguntar horario de desayuno y piscina
+cefr: A1
+topic: hotel-and-shopping
+description: Pregunta en recepción a qué hora empieza el desayuno, en qué piso está la piscina y pide la llave.
+phrases:
+- id: what-time-breakfast
+  text: Excuse me, what time does breakfast start tomorrow?
+  translation: Disculpe, ¿a qué hora empieza el desayuno mañana?
+  visual_hint: 🥐🕖
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: start
+    meaning: empezar / comenzar
+    ipa: stɑːrt
+- id: where-is-dining-room
+  text: Is the breakfast room on the ground floor?
+  translation: ¿El comedor del desayuno está en la planta baja?
+  visual_hint: 🍽️🏨
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: ground floor
+    meaning: planta baja / primer piso
+    ipa: ɡraʊnd flɔːr
+- id: swimming-pool-open
+  text: Is the indoor swimming pool open this evening?
+  translation: ¿La piscina techada está abierta esta tarde?
+  visual_hint: 🏊‍♂️💧
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: swimming pool
+    meaning: piscina / alberca
+    ipa: ˈswɪmɪŋ puːl
+- id: towels-by-the-pool
+  text: Do you have clean towels by the pool?
+  translation: ¿Tienen toallas limpias junto a la piscina?
+  visual_hint: 🧺🏊
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: clean
+    meaning: limpias
+    ipa: kliːn
+- id: second-room-key
+  text: Can I have a second key card for my room, please?
+  translation: ¿Me da una segunda tarjeta llave para mi habitación, por favor?
+  visual_hint: 🪪🚪
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: key card
+    meaning: tarjeta llave
+    ipa: kiː kɑːrd
+- id: thank-you-reception
+  text: Thank you very much! See you tomorrow morning.
+  translation: ¡Muchas gracias! Nos vemos mañana por la mañana.
+  visual_hint: 😊👋
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: tomorrow
+    meaning: mañana
+    ipa: təˈmɔːroʊ
+roleplay:
+  ai_role: receptionist
+  user_role: hotel guest
+  setting: Hotel lobby desk in the afternoon.
+  turns:
+  - speaker: ai
+    text: Good afternoon! How are you enjoying your stay with us?
+  - speaker: user
+    goal: Pregunta a qué hora empieza el desayuno mañana.
+    suggested_lines:
+    - Excuse me, what time does breakfast start tomorrow?
+    - Is the breakfast room on the ground floor?
+  - speaker: ai
+    text: Breakfast starts at seven o'clock and runs until ten.
+  - speaker: user
+    goal: Pregunta si el comedor está en la planta baja.
+    suggested_lines:
+    - Is the breakfast room on the ground floor?
+    - Is the indoor swimming pool open this evening?
+  - speaker: ai
+    text: Yes, right past the elevators on the ground floor.
+  - speaker: user
+    goal: Pregunta si la piscina techada está abierta esta tarde.
+    suggested_lines:
+    - Is the indoor swimming pool open this evening?
+    - Do you have clean towels by the pool?
+  - speaker: ai
+    text: The pool is open until 9:00 PM on the second floor.
+  - speaker: user
+    goal: Pregunta si hay toallas limpias junto a la piscina.
+    suggested_lines:
+    - Do you have clean towels by the pool?
+    - Can I have a second key card for my room, please?
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

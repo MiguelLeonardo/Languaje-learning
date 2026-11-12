@@ -1,0 +1,116 @@
+id: c1-hotel-conference-block
+title: Negotiating a corporate hotel room block
+title_es: Negociar bloque corporativo de habitaciones
+cefr: C1
+topic: hotel-and-shopping
+description: Negocia con el director de ventas de un hotel la cláusula de reducción (attrition), salas de trabajo
+  y ascensos VIP.
+phrases:
+- id: twenty-percent-attrition
+  text: Could we increase the allowable room-block attrition from ten percent to twenty percent until thirty days
+    out?
+  translation: ¿Podríamos ampliar el margen permitido de reducción del bloque del diez al veinte por ciento hasta
+    treinta días antes?
+  visual_hint: 🏨📊
+  cloze:
+  - 5
+  - 11
+  glossary:
+  - word: attrition
+    meaning: reducción permitida de habitaciones sin penalización
+    ipa: əˈtrɪʃən
+- id: waive-breakout-room-rental
+  text: If our banquet food-and-beverage spend exceeds twenty thousand dollars, will you waive the breakout room
+    rental?
+  translation: Si nuestro consumo de banquetes supera los veinte mil dólares, ¿eximirán el alquiler de las salas
+    de trabajo?
+  visual_hint: 🍽️🏛️
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: breakout room
+    meaning: sala para sesiones paralelas
+    ipa: ˈbreɪkaʊt ruːm
+- id: complimentary-suite-upgrades
+  text: We'd also ask for three complimentary suite upgrades for our keynote speakers and board chair.
+  translation: También solicitaríamos tres ascensos gratuitos a suite para nuestros conferencistas principales y
+    presidenta del directorio.
+  visual_hint: 🛎️🌟
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: complimentary
+    meaning: sin costo / de cortesía
+    ipa: ˌkɑːmplɪˈmentəri
+- id: dedicated-gigabit-vlan
+  text: Can your IT team provision a dedicated symmetrical gigabit VLAN for our livestream keynote?
+  translation: ¿Puede su equipo de TI habilitar una red gigabit dedicada para la transmisión en vivo de la conferencia?
+  visual_hint: 🌐📡
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: provision
+    meaning: habilitar / aprovisionar
+    ipa: prəˈvɪʒən
+- id: master-account-billing
+  text: Route room-and-tax to the corporate master account, while guests settle their own incidentals.
+  translation: Cargue habitación e impuestos a la cuenta maestra corporativa, y que cada huésped pague sus gastos
+    extras.
+  visual_hint: 💳📋
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: incidentals
+    meaning: gastos incidentales / extras de habitación
+    ipa: ˌɪnsɪˈdentəlz
+- id: execute-addendum-today
+  text: With those four revisions in the addendum, we're ready to sign today.
+  translation: Con esas cuatro revisiones en el anexo, estamos listos para firmar hoy mismo.
+  visual_hint: ✍️✅
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: revisions
+    meaning: modificaciones / ajustes
+    ipa: rɪˈvɪʒənz
+roleplay:
+  ai_role: hotel sales director
+  user_role: summit producer
+  setting: Negotiating a 50-room hotel contract for an annual leadership summit.
+  turns:
+  - speaker: ai
+    text: We're delighted to host your fifty executives in October. Did you review the room-block draft?
+  - speaker: user
+    goal: Pide ampliar al 20% el margen de ajuste de habitaciones sin penalización.
+    suggested_lines:
+    - Could we increase the allowable room-block attrition from ten percent to twenty percent until thirty days
+      out?
+    - If our banquet food-and-beverage spend exceeds twenty thousand dollars, will you waive the breakout room rental?
+  - speaker: ai
+    text: We can grant 20% cumulative attrition up to thirty days prior to arrival.
+  - speaker: user
+    goal: Propón eximir el costo de las salas de trabajo si el banquete supera los $20,000.
+    suggested_lines:
+    - If our banquet food-and-beverage spend exceeds twenty thousand dollars, will you waive the breakout room rental?
+    - We'd also ask for three complimentary suite upgrades for our keynote speakers and board chair.
+  - speaker: ai
+    text: Yes, hitting the $20,000 catering tier waves all meeting-space rental fees.
+  - speaker: user
+    goal: Solicita tres ascensos a suite sin costo para los conferencistas principales.
+    suggested_lines:
+    - We'd also ask for three complimentary suite upgrades for our keynote speakers and board chair.
+    - Can your IT team provision a dedicated symmetrical gigabit VLAN for our livestream keynote?
+  - speaker: ai
+    text: I'll add three Junior Suite upgrades at the group rate plus VIP airport transfers.
+  - speaker: user
+    goal: Pregunta si pueden habilitar una red de internet dedicada para la transmisión.
+    suggested_lines:
+    - Can your IT team provision a dedicated symmetrical gigabit VLAN for our livestream keynote?
+    - Route room-and-tax to the corporate master account, while guests settle their own incidentals.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

@@ -1,0 +1,112 @@
+id: c2-molecular-gastronomy-symposium
+title: Debating modernist vs. traditional cuisine
+title_es: Debatir gastronomía molecular frente a tradición
+cefr: C2
+topic: food-and-drink
+description: Debate en un simposio gastronómico el uso de hidrocoloides y cocción al vacío frente al fuego de leña.
+phrases:
+- id: technique-serves-flavor
+  text: Modernist technique should illuminate the ingredient's essence, never become a parlor trick.
+  translation: La técnica modernista debe iluminar la esencia del ingrediente, nunca convertirse en un truco de
+    salón.
+  visual_hint: 🔬🍽️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: parlor trick
+    meaning: truco superficial / artificio
+    ipa: ˈpɑːrlər trɪk
+- id: false-dichotomy
+  text: Framing hearth cooking and precision sous-vide as mutually exclusive is a false dichotomy.
+  translation: Plantear el fuego de leña y la precisión del sous-vide como excluyentes es una falsa dicotomía.
+  visual_hint: 🔥⚖️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: false dichotomy
+    meaning: falsa dicotomía
+    ipa: fɔːls daɪˈkɑːtəmi
+- id: distill-volatile-aromas
+  text: Vacuum distillation captures fleeting blossom aromas that boiling would utterly destroy.
+  translation: La destilación al vacío captura aromas florales efímeros que el hervor destruiría por completo.
+  visual_hint: 🌸⚗️
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: fleeting
+    meaning: efímeros / fugaces
+    ipa: ˈfliːtɪŋ
+- id: tradition-was-once-innovation
+  text: Every revered classic—from puff pastry to mayonnaise—was once a radical technical innovation.
+  translation: Todo clásico venerado —desde el hojaldre hasta la mayonesa— fue alguna vez una innovación técnica
+    radical.
+  visual_hint: 🥐📜
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: revered
+    meaning: venerado / consagrado
+    ipa: rɪˈvɪrd
+- id: sensory-resonance
+  text: Ultimately, the diner judges a dish by its emotional and sensory resonance, not its equipment.
+  translation: En última instancia, el comensal juzga un plato por su resonancia sensorial y emocional, no por su
+    equipo.
+  visual_hint: ❤️🥄
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: resonance
+    meaning: resonancia / impacto profundo
+    ipa: ˈrezənəns
+- id: mutual-enrichment
+  text: When ancestral craft informs scientific curiosity, gastronomy moves forward.
+  translation: Cuando el oficio ancestral nutre la curiosidad científica, la gastronomía avanza.
+  visual_hint: 🤝✨
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: informs
+    meaning: nutre / guía con fundamento
+    ipa: ɪnˈfɔːrmz
+roleplay:
+  ai_role: traditionalist chef
+  user_role: culinary panelist
+  setting: Main stage at an international gastronomy congress.
+  turns:
+  - speaker: ai
+    text: Some critics argue that rotary evaporators and spherification strip cooking of its soul. Where do you
+      stand?
+  - speaker: user
+    goal: Sostén que la técnica debe realzar el ingrediente y no ser puro espectáculo.
+    suggested_lines:
+    - Modernist technique should illuminate the ingredient's essence, never become a parlor trick.
+    - Framing hearth cooking and precision sous-vide as mutually exclusive is a false dichotomy.
+  - speaker: ai
+    text: Fair point, yet nothing replicates the primal unpredictability of live wood fire.
+  - speaker: user
+    goal: Argumenta que oponer el fuego de leña al sous-vide es una falsa dicotomía.
+    suggested_lines:
+    - Framing hearth cooking and precision sous-vide as mutually exclusive is a false dichotomy.
+    - Vacuum distillation captures fleeting blossom aromas that boiling would utterly destroy.
+  - speaker: ai
+    text: Where do laboratory tools genuinely surpass classic French reductions?
+  - speaker: user
+    goal: Explica cómo la destilación al vacío preserva aromas florales efímeros.
+    suggested_lines:
+    - Vacuum distillation captures fleeting blossom aromas that boiling would utterly destroy.
+    - Every revered classic—from puff pastry to mayonnaise—was once a radical technical innovation.
+  - speaker: ai
+    text: I have to admit, cold-distilled elderflower essence is extraordinary.
+  - speaker: user
+    goal: Cierra recordando que todo clásico fue alguna vez una innovación radical.
+    suggested_lines:
+    - Every revered classic—from puff pastry to mayonnaise—was once a radical technical innovation.
+    - Ultimately, the diner judges a dish by its emotional and sensory resonance, not its equipment.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

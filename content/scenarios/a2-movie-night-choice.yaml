@@ -1,0 +1,108 @@
+id: a2-movie-night-choice
+title: Choosing a movie at the cinema
+title_es: Elegir una película en el cine
+cefr: A2
+topic: social-and-smalltalk
+description: Decide con un amigo entre una comedia o una película de ciencia ficción y compren palomitas.
+phrases:
+- id: sci-fi-or-comedy
+  text: Do you feel like watching the new sci-fi adventure or the comedy?
+  translation: ¿Te apetece ver la nueva aventura de ciencia ficción o la comedia?
+  visual_hint: 🎬🍿
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: feel like
+    meaning: tener ganas de / apetecer
+    ipa: fiːl laɪk
+- id: starts-at-seven-thirty
+  text: The sci-fi movie starts at seven thirty in the IMAX theater.
+  translation: La película de ciencia ficción empieza a las siete y media en la sala IMAX.
+  visual_hint: 🕢📽️
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: starts
+    meaning: empieza
+    ipa: stɑːrts
+- id: seats-in-middle-row
+  text: Let's pick two seats in the middle row so we have a great view.
+  translation: Elijamos dos asientos en la fila del medio para tener una buena vista.
+  visual_hint: 💺👀
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: middle row
+    meaning: fila central
+    ipa: ˈmɪdəl roʊ
+- id: share-large-popcorn
+  text: Want to share a large bucket of buttered popcorn and two sodas?
+  translation: ¿Quieres compartir una cubeta grande de palomitas con mantequilla y dos refrescos?
+  visual_hint: 🍿🥤
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: share
+    meaning: compartir
+    ipa: ʃer
+- id: put-phones-on-silent
+  text: Don't forget to put our phones on silent before the trailers start.
+  translation: No olvidemos poner los teléfonos en silencio antes de que empiecen los avances.
+  visual_hint: 📵🎞️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: silent
+    meaning: modo silencio
+    ipa: ˈsaɪlənt
+- id: grab-tickets-at-kiosk
+  text: I'll get the popcorn while you print the tickets at the kiosk!
+  translation: ¡Yo compro las palomitas mientras tú imprimes los boletos en el quiosco!
+  visual_hint: 🎟️🙌
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: while
+    meaning: mientras
+    ipa: waɪl
+roleplay:
+  ai_role: friend (Liam)
+  user_role: moviegoer
+  setting: Cinema lobby looking at the showtime screens.
+  turns:
+  - speaker: ai
+    text: We made it to the cinema with fifteen minutes to spare! What should we watch?
+  - speaker: user
+    goal: Pregunta si prefiere ver ciencia ficción o la comedia.
+    suggested_lines:
+    - Do you feel like watching the new sci-fi adventure or the comedy?
+    - The sci-fi movie starts at seven thirty in the IMAX theater.
+  - speaker: ai
+    text: I read great reviews about the space adventure! What time does it start?
+  - speaker: user
+    goal: Propón la película de ciencia ficción de las 7:30 en sala IMAX.
+    suggested_lines:
+    - The sci-fi movie starts at seven thirty in the IMAX theater.
+    - Let's pick two seats in the middle row so we have a great view.
+  - speaker: ai
+    text: 7:30 is perfect! Which seats on the screen should we choose?
+  - speaker: user
+    goal: Sugiere elegir dos asientos en la fila central.
+    suggested_lines:
+    - Let's pick two seats in the middle row so we have a great view.
+    - Want to share a large bucket of buttered popcorn and two sodas?
+  - speaker: ai
+    text: Row G seats 10 and 11 are right in the center!
+  - speaker: user
+    goal: Propón compartir unas palomitas grandes con mantequilla.
+    suggested_lines:
+    - Want to share a large bucket of buttered popcorn and two sodas?
+    - Don't forget to put our phones on silent before the trailers start.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

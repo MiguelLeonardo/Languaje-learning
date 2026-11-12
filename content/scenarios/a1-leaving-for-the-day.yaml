@@ -1,0 +1,108 @@
+id: a1-leaving-for-the-day
+title: Saying goodbye after work
+title_es: Despedirse al terminar el trabajo
+cefr: A1
+topic: work-and-career
+description: Avisa a tu equipo que ya terminaste tus tareas del día, apaga tu computadora y despídete.
+phrases:
+- id: finished-my-report
+  text: Hi Mark, I finished all my emails and the daily table.
+  translation: Hola Mark, terminé todos mis correos y la tabla del día.
+  visual_hint: ✅💻
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: finished
+    meaning: terminé / completé
+    ipa: ˈfɪnɪʃt
+- id: heading-home-now
+  text: I am turning off my computer and heading home now.
+  translation: Estoy apagando mi computadora y ya me voy a casa.
+  visual_hint: 🖥️🏠
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: heading home
+    meaning: yendo a casa
+    ipa: ˈhedɪŋ hoʊm
+- id: need-anything-before-i-go
+  text: Do you need anything else from me today?
+  translation: ¿Necesitas algo más de mi parte hoy?
+  visual_hint: 🙋‍♂️📋
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: anything else
+    meaning: algo más
+    ipa: ˈeniθɪŋ els
+- id: see-you-tomorrow-nine
+  text: Thank you! Have a good evening, see you tomorrow at nine!
+  translation: ¡Gracias! Que pases buena noche, ¡nos vemos mañana a las nueve!
+  visual_hint: 🌙👋
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: evening
+    meaning: tarde-noche
+    ipa: ˈiːvnɪŋ
+- id: lock-my-desk-drawer
+  text: I locked my desk drawer and took my badge.
+  translation: Cerré con llave el cajón de mi escritorio y tomé mi credencial.
+  visual_hint: 🔒🪪
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: drawer
+    meaning: cajón
+    ipa: drɔːr
+- id: catch-the-five-forty-train
+  text: If I walk fast, I can catch the 5:40 train!
+  translation: Si camino rápido, ¡puedo alcanzar el tren de las 5:40!
+  visual_hint: 🚆🏃
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: catch
+    meaning: alcanzar / tomar (transporte)
+    ipa: kætʃ
+roleplay:
+  ai_role: team lead (Mark)
+  user_role: employee
+  setting: Open office floor at 5:30 PM.
+  turns:
+  - speaker: ai
+    text: Hi! It's 5:30 already. How did your afternoon go?
+  - speaker: user
+    goal: Avisa que terminaste tus correos y la tabla del día.
+    suggested_lines:
+    - Hi Mark, I finished all my emails and the daily table.
+    - I am turning off my computer and heading home now.
+  - speaker: ai
+    text: Great job on that table! Are you heading out for the evening?
+  - speaker: user
+    goal: Di que estás apagando tu computadora y te vas a casa.
+    suggested_lines:
+    - I am turning off my computer and heading home now.
+    - Do you need anything else from me today?
+  - speaker: ai
+    text: All set on my side! Don't forget your umbrella by the door.
+  - speaker: user
+    goal: Pregunta si necesita algo más de ti hoy.
+    suggested_lines:
+    - Do you need anything else from me today?
+    - Thank you! Have a good evening, see you tomorrow at nine!
+  - speaker: ai
+    text: Have a restful evening! See you tomorrow morning.
+  - speaker: user
+    goal: Despídete deseándole buena noche hasta mañana a las nueve.
+    suggested_lines:
+    - Thank you! Have a good evening, see you tomorrow at nine!
+    - I locked my desk drawer and took my badge.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

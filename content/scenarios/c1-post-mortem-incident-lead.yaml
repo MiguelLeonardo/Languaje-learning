@@ -1,0 +1,124 @@
+id: c1-post-mortem-incident-lead
+title: Leading a blameless technical post-mortem
+title_es: Dirigir análisis post-mortem sin culpas
+cefr: C1
+topic: work-and-career
+description: Dirige una revisión técnica tras un incidente de base de datos, identificando brechas de monitoreo
+  y acciones automáticas.
+phrases:
+- id: blameless-systemic-focus
+  text: Our goal in this post-mortem is to uncover the systemic gaps that allowed a bad migration script to reach
+    production.
+  translation: Nuestro objetivo en este análisis es descubrir las brechas sistémicas que permitieron que una migración
+    defectuosa llegara a producción.
+  visual_hint: 🔍🛡️
+  cloze:
+  - 6
+  - 13
+  glossary:
+  - word: uncover
+    meaning: descubrir / sacar a la luz
+    ipa: ʌnˈkʌvər
+- id: staging-lacked-production-volume
+  text: Because our staging database only holds ten thousand rows, the table lock wasn't visible during pre-deploy
+    checks.
+  translation: Como nuestra base de pruebas solo tiene diez mil filas, el bloqueo de tabla no fue visible en las
+    validaciones previas.
+  visual_hint: 🗄️📊
+  cloze:
+  - 5
+  - 11
+  glossary:
+  - word: table lock
+    meaning: bloqueo de escritura en tabla
+    ipa: ˈteɪbəl lɑːk
+- id: add-linter-for-ddl-locks
+  text: As our primary remediation, we're adding a migration linter in CI that rejects any schema change without
+    a lock timeout.
+  translation: Como medida principal, agregaremos un validador en CI que rechace cualquier cambio de esquema sin
+    tiempo límite de bloqueo.
+  visual_hint: 🤖✅
+  cloze:
+  - 6
+  - 13
+  glossary:
+  - word: remediation
+    meaning: medida correctiva de fondo
+    ipa: rɪˌmiːdiˈeɪʃən
+- id: time-to-recovery-praise
+  text: On the positive side, our automated canary alarm fired within ninety seconds and the rollback runbook worked
+    flawlessly.
+  translation: En el lado positivo, nuestra alarma automática se activó en noventa segundos y el manual de reversión
+    funcionó impecablemente.
+  visual_hint: ⏱️👏
+  cloze:
+  - 6
+  - 12
+  glossary:
+  - word: flawlessly
+    meaning: sin fallos / impecablemente
+    ipa: ˈflɔːləsli
+- id: synthetic-load-in-staging
+  text: We'll also seed anonymized million-row tables in staging to mirror production query plans.
+  translation: También cargaremos tablas anónimas de un millón de filas en pruebas para reflejar el volumen real.
+  visual_hint: 📈🔬
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: mirror
+    meaning: reflejar / replicar fielmente
+    ipa: ˈmɪrər
+- id: publish-postmortem-to-wiki
+  text: I'll publish the post-mortem summary and due dates to the engineering wiki today.
+  translation: Publicaré hoy el resumen del análisis y las fechas compromiso en la wiki de ingeniería.
+  visual_hint: 📑🌐
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: wiki
+    meaning: base de conocimiento interna
+    ipa: ˈwɪki
+roleplay:
+  ai_role: platform engineer
+  user_role: incident commander
+  setting: Engineering post-mortem review meeting.
+  turns:
+  - speaker: ai
+    text: The migration locked the orders table for twelve minutes before we rolled it back.
+  - speaker: user
+    goal: Establece que el objetivo es encontrar brechas del sistema y no señalar personas.
+    suggested_lines:
+    - Our goal in this post-mortem is to uncover the systemic gaps that allowed a bad migration script to reach
+      production.
+    - Because our staging database only holds ten thousand rows, the table lock wasn't visible during pre-deploy
+      checks.
+  - speaker: ai
+    text: Why didn't the automated CI pipeline catch the full-table scan?
+  - speaker: user
+    goal: Explica por qué el entorno de pruebas no detectó el bloqueo por tener pocos datos.
+    suggested_lines:
+    - Because our staging database only holds ten thousand rows, the table lock wasn't visible during pre-deploy
+      checks.
+    - As our primary remediation, we're adding a migration linter in CI that rejects any schema change without a
+      lock timeout.
+  - speaker: ai
+    text: That makes total sense. How do we prevent an unindexed alter-table from merging again?
+  - speaker: user
+    goal: Propón un validador automático en CI que exija límite de tiempo en migraciones.
+    suggested_lines:
+    - As our primary remediation, we're adding a migration linter in CI that rejects any schema change without a
+      lock timeout.
+    - On the positive side, our automated canary alarm fired within ninety seconds and the rollback runbook worked
+      flawlessly.
+  - speaker: ai
+    text: We'll have that CI linter rule merged before tomorrow's deploy window.
+  - speaker: user
+    goal: Destaca que la alerta temprana y el protocolo de reversión funcionaron en 90 segundos.
+    suggested_lines:
+    - On the positive side, our automated canary alarm fired within ninety seconds and the rollback runbook worked
+      flawlessly.
+    - We'll also seed anonymized million-row tables in staging to mirror production query plans.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

@@ -1,0 +1,108 @@
+id: b1-cooking-class-inquiry
+title: Joining a local cooking class
+title_es: Unirse a una clase de cocina local
+cefr: B1
+topic: food-and-drink
+description: Pregunta al chef instructor cómo preparar pasta fresca, pide un delantal y anota las proporciones.
+phrases:
+- id: knead-the-dough
+  text: How many minutes should we knead the pasta dough until it's smooth?
+  translation: ¿Cuántos minutos debemos amasar la masa de pasta hasta que quede suave?
+  visual_hint: 👐🍝
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: knead
+    meaning: amasar
+    ipa: niːd
+- id: pinch-of-salt
+  text: Should I add a pinch of salt and olive oil right now?
+  translation: ¿Debo agregar una pizca de sal y aceite de oliva ahora mismo?
+  visual_hint: 🧂🫒
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: pinch
+    meaning: pizca
+    ipa: pɪntʃ
+- id: let-it-rest
+  text: Why is it important to let the dough rest under a towel?
+  translation: ¿Por qué es importante dejar reposar la masa bajo un paño?
+  visual_hint: ⏳🧺
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: rest
+    meaning: reposar
+    ipa: rest
+- id: email-the-recipe
+  text: Will you email us the recipe card so we can practice at home?
+  translation: ¿Nos enviará por correo la ficha de la receta para practicar en casa?
+  visual_hint: 📧📖
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: recipe card
+    meaning: ficha de receta
+    ipa: ˈresəpi kɑːrd
+- id: apron-and-rolling-pin
+  text: Could I borrow an apron and a wooden rolling pin?
+  translation: ¿Me podría prestar un delantal y un rodillo de madera?
+  visual_hint: 👨‍🍳🪵
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: apron
+    meaning: delantal
+    ipa: ˈeɪprən
+- id: simmer-the-sauce
+  text: Let the tomato basil sauce simmer on low heat for twenty minutes.
+  translation: Deja que la salsa de tomate y albahaca hierva a fuego lento veinte minutos.
+  visual_hint: 🍅🔥
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: simmer
+    meaning: hervir a fuego lento
+    ipa: ˈsɪmər
+roleplay:
+  ai_role: chef instructor
+  user_role: student
+  setting: A hands-on culinary studio in Florence.
+  turns:
+  - speaker: ai
+    text: Welcome to our pasta workshop! Everyone has flour and eggs at their station.
+  - speaker: user
+    goal: Pregunta cuántos minutos amasar la pasta hasta que quede suave.
+    suggested_lines:
+    - How many minutes should we knead the pasta dough until it's smooth?
+    - Should I add a pinch of salt and olive oil right now?
+  - speaker: ai
+    text: Knead it firmly with the heel of your hand for about ten minutes.
+  - speaker: user
+    goal: Pregunta si agregas una pizca de sal y aceite ahora.
+    suggested_lines:
+    - Should I add a pinch of salt and olive oil right now?
+    - Why is it important to let the dough rest under a towel?
+  - speaker: ai
+    text: Just a pinch of salt! Now wrap the dough ball in a clean towel.
+  - speaker: user
+    goal: Pregunta por qué es importante dejar reposar la masa.
+    suggested_lines:
+    - Why is it important to let the dough rest under a towel?
+    - Will you email us the recipe card so we can practice at home?
+  - speaker: ai
+    text: Resting relaxes the gluten so you can roll it super thin!
+  - speaker: user
+    goal: Pregunta si enviarán la receta por correo para practicar en casa.
+    suggested_lines:
+    - Will you email us the recipe card so we can practice at home?
+    - Could I borrow an apron and a wooden rolling pin?
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

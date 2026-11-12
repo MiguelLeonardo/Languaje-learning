@@ -1,0 +1,108 @@
+id: a2-breakfast-buffet
+title: At the breakfast buffet
+title_es: En el buffet de desayuno
+cefr: A2
+topic: food-and-drink
+description: Pregunta qué incluye el buffet, pide huevos revueltos recién hechos y leche sin lactosa.
+phrases:
+- id: buffet-included
+  text: Good morning, is the breakfast buffet included with my room?
+  translation: Buenos días, ¿el buffet de desayuno está incluido con mi habitación?
+  visual_hint: 🥞🏨
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: included
+    meaning: incluido
+    ipa: ɪnˈkluːdɪd
+- id: scrambled-eggs-station
+  text: Where can I order freshly cooked scrambled eggs?
+  translation: ¿Dónde puedo pedir huevos revueltos recién hechos?
+  visual_hint: 🍳👨‍🍳
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: scrambled eggs
+    meaning: huevos revueltos
+    ipa: ˈskræmbəld eɡz
+- id: lactose-free-milk
+  text: Do you have almond milk or lactose-free milk for cereal?
+  translation: ¿Tienen leche de almendras o sin lactosa para el cereal?
+  visual_hint: 🥛🥣
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: lactose-free
+    meaning: sin lactosa
+    ipa: ˈlæktoʊs friː
+- id: sit-by-window
+  text: Can we sit at that sunny table by the window?
+  translation: ¿Podemos sentarnos en esa mesa soleada junto a la ventana?
+  visual_hint: 🪟☀️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: sunny
+    meaning: soleada
+    ipa: ˈsʌni
+- id: refill-coffee-pot
+  text: Could we get a pot of hot coffee for the table?
+  translation: ¿Nos podría traer una jarra de café caliente para la mesa?
+  visual_hint: ☕🫖
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: pot
+    meaning: jarra / cafetera
+    ipa: pɑːt
+- id: until-what-time
+  text: Until what time is the buffet open today?
+  translation: ¿Hasta qué hora está abierto el buffet hoy?
+  visual_hint: 🕙🍽️
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: until
+    meaning: hasta
+    ipa: ənˈtɪl
+roleplay:
+  ai_role: breakfast host
+  user_role: guest
+  setting: A bright hotel dining room at 8:30 AM.
+  turns:
+  - speaker: ai
+    text: Good morning! Welcome to the breakfast room. What is your room number?
+  - speaker: user
+    goal: Pregunta si el buffet está incluido con tu habitación.
+    suggested_lines:
+    - Good morning, is the breakfast buffet included with my room?
+    - Where can I order freshly cooked scrambled eggs?
+  - speaker: ai
+    text: Room 405—yes, your breakfast is fully included!
+  - speaker: user
+    goal: Pregunta dónde pedir huevos revueltos recién hechos.
+    suggested_lines:
+    - Where can I order freshly cooked scrambled eggs?
+    - Do you have almond milk or lactose-free milk for cereal?
+  - speaker: ai
+    text: The chef at the omelet station makes them to order.
+  - speaker: user
+    goal: Pregunta si tienen leche de almendras o sin lactosa.
+    suggested_lines:
+    - Do you have almond milk or lactose-free milk for cereal?
+    - Can we sit at that sunny table by the window?
+  - speaker: ai
+    text: Yes, the almond milk pitcher is right next to the fruit bowl.
+  - speaker: user
+    goal: Pregunta si pueden sentarse junto a la ventana.
+    suggested_lines:
+    - Can we sit at that sunny table by the window?
+    - Could we get a pot of hot coffee for the table?
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

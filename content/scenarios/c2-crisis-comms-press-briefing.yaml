@@ -1,0 +1,118 @@
+id: c2-crisis-comms-press-briefing
+title: Leading a regulatory press briefing
+title_es: Liderar comunicación de crisis ante prensa
+cefr: C2
+topic: work-and-career
+description: Responde con aplomo y transparencia ante periodistas tras una auditoría regulatoria, detallando las
+  medidas independientes adoptadas.
+phrases:
+- id: proactive-self-disclosure
+  text: 'Let me be unequivocal: we discovered the reporting anomaly internally and self-disclosed it to the regulator
+    within twenty-four hours.'
+  translation: 'Permítanme ser categórico: detectamos la anomalía internamente y la reportamos por iniciativa propia
+    al regulador en veinticuatro horas.'
+  visual_hint: 🎙️🏛️
+  cloze:
+  - 6
+  - 12
+  glossary:
+  - word: unequivocal
+    meaning: categórico / inequívoco
+    ipa: ˌʌnɪˈkwɪvəkəl
+- id: independent-forensic-review
+  text: The audit committee immediately commissioned an independent forensic firm whose mandate is unrestricted.
+  translation: El comité de auditoría contrató de inmediato a una firma forense independiente con mandato irrestricto.
+  visual_hint: 🔍⚖️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: commissioned
+    meaning: encargó oficialmente
+    ipa: kəˈmɪʃənd
+- id: zero-impact-customer-funds
+  text: Crucially, this is a timing reclassification between fiscal quarters—customer deposits and cash reserves
+    remain ring-fenced and intact.
+  translation: De manera crucial, se trata de una reclasificación temporal entre trimestres; los fondos de clientes
+    y reservas permanecen intactos.
+  visual_hint: 🛡️🏦
+  cloze:
+  - 5
+  - 11
+  glossary:
+  - word: ring-fenced
+    meaning: blindados en cuentas separadas
+    ipa: rɪŋ fenst
+- id: publish-unredacted-findings
+  text: We will publish the executive summary of the independent findings alongside our restated Q2 filings next
+    Tuesday.
+  translation: Publicaremos el resumen ejecutivo del informe independiente junto con los estados financieros el
+    próximo martes.
+  visual_hint: 📑🌐
+  cloze:
+  - 5
+  - 11
+  glossary:
+  - word: alongside
+    meaning: junto con / de forma simultánea
+    ipa: əˌlɔːŋˈsaɪd
+- id: remediate-internal-controls
+  text: We have already separated the treasury sign-off chain to eliminate any single point of failure.
+  translation: Ya hemos separado la cadena de firmas de tesorería para eliminar cualquier punto único de fallo.
+  visual_hint: 🔒✅
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: single point of failure
+    meaning: punto único de fallo
+    ipa: ˈsɪŋɡəl pɔɪnt əv ˈfeɪljər
+- id: transparency-restores-trust
+  text: Credibility is earned through verifiable action, and we will answer every question as the audit concludes.
+  translation: La credibilidad se gana con hechos verificables y responderemos cada pregunta al concluir la auditoría.
+  visual_hint: 🤝🌟
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: verifiable
+    meaning: verificable
+    ipa: ˈverɪfaɪəbəl
+roleplay:
+  ai_role: financial journalist
+  user_role: chief communications officer
+  setting: Live broadcast press briefing at company headquarters.
+  turns:
+  - speaker: ai
+    text: Did the company only disclose the accounting reclassification after regulators opened an inquiry?
+  - speaker: user
+    goal: Deja claro de forma categórica que la empresa detectó y reportó la anomalía por iniciativa propia.
+    suggested_lines:
+    - 'Let me be unequivocal: we discovered the reporting anomaly internally and self-disclosed it to the regulator
+      within twenty-four hours.'
+    - The audit committee immediately commissioned an independent forensic firm whose mandate is unrestricted.
+  - speaker: ai
+    text: How can investors trust an internal review conducted by the same management team?
+  - speaker: user
+    goal: Explica que el comité de auditoría encargó una revisión forense independiente sin restricciones.
+    suggested_lines:
+    - The audit committee immediately commissioned an independent forensic firm whose mandate is unrestricted.
+    - Crucially, this is a timing reclassification between fiscal quarters—customer deposits and cash reserves remain
+      ring-fenced and intact.
+  - speaker: ai
+    text: Does this restatement affect client balances or your liquidity covenants?
+  - speaker: user
+    goal: Subraya que los fondos de los clientes y reservas de efectivo están intactos.
+    suggested_lines:
+    - Crucially, this is a timing reclassification between fiscal quarters—customer deposits and cash reserves remain
+      ring-fenced and intact.
+    - We will publish the executive summary of the independent findings alongside our restated Q2 filings next Tuesday.
+  - speaker: ai
+    text: When will the market see the final numbers and governance changes?
+  - speaker: user
+    goal: Compromete la publicación de las conclusiones independientes el próximo martes.
+    suggested_lines:
+    - We will publish the executive summary of the independent findings alongside our restated Q2 filings next Tuesday.
+    - We have already separated the treasury sign-off chain to eliminate any single point of failure.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

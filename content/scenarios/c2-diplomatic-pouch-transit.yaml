@@ -1,0 +1,111 @@
+id: c2-diplomatic-pouch-transit
+title: Clearing a diplomatic courier pouch
+title_es: Verificar tránsito de valija diplomática
+cefr: C2
+topic: travel-and-transport
+description: Invoca el artículo 27 de la Convención de Viena en control aeroportuario para proteger una valija diplomática
+  sellada.
+phrases:
+- id: vienna-convention-article
+  text: Pursuant to Article 27 of the Vienna Convention, this sealed diplomatic pouch is exempt from X-ray obertura.
+  translation: Conforme al artículo 27 de la Convención de Viena, esta valija diplomática sellada está exenta de
+    apertura.
+  visual_hint: 🛂📜
+  cloze:
+  - 5
+  - 11
+  glossary:
+  - word: pursuant to
+    meaning: de conformidad con / según
+    ipa: pərˈsuːənt tuː
+- id: courier-waybill-seal
+  text: Here is my diplomatic courier credential along with the ministry waybill matching the lead wax seal.
+  translation: Aquí está mi credencial de correo diplomático junto con la guía del ministerio que coincide con el
+    sello de plomo.
+  visual_hint: 🪪🔒
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: waybill
+    meaning: guía de despacho oficial
+    ipa: ˈweɪbɪl
+- id: external-swab-permissible
+  text: While the pouch cannot be opened, you are welcome to inspect the exterior seal integrity.
+  translation: Aunque la valija no puede abrirse, puede verificar visualmente la integridad de los sellos exteriores.
+  visual_hint: 🔍🛡️
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: exterior
+    meaning: exterior / externo
+    ipa: ɪkˈstɪriər
+- id: escort-to-boarding-gate
+  text: Could a protocol officer countersign the transit log and escort us to Gate A12?
+  translation: ¿Podría un oficial de protocolo refrendar la bitácora de tránsito y escoltarnos a la puerta A12?
+  visual_hint: ✍️🛫
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: protocol officer
+    meaning: oficial de protocolo diplomático
+    ipa: ˈproʊtəkɔːl ˈɔːfɪsər
+- id: unaccompanied-custody-forbidden
+  text: Protocol requires the pouch to remain in my personal custody in the cabin at all times.
+  translation: El protocolo exige que la valija permanezca bajo mi custodia personal en cabina en todo momento.
+  visual_hint: 💼💺
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: custody
+    meaning: custodia directa
+    ipa: ˈkʌstədi
+- id: courteous-adherence-protocol
+  text: I appreciate your team's strict adherence to international treaty protocol.
+  translation: Agradezco el estricto apego de su equipo al protocolo de los tratados internacionales.
+  visual_hint: 🤝🌐
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: adherence
+    meaning: apego / cumplimiento estricto
+    ipa: ədˈhɪrəns
+roleplay:
+  ai_role: aviation security supervisor
+  user_role: diplomatic courier
+  setting: International transit security checkpoint.
+  turns:
+  - speaker: ai
+    text: Good afternoon. All transit parcels must be opened for manual inspection at this checkpoint.
+  - speaker: user
+    goal: Explica que bajo el Artículo 27 la valija sellada no puede ser abierta.
+    suggested_lines:
+    - Pursuant to Article 27 of the Vienna Convention, this sealed diplomatic pouch is exempt from X-ray obertura.
+    - Here is my diplomatic courier credential along with the ministry waybill matching the lead wax seal.
+  - speaker: ai
+    text: May I verify your diplomatic passport and the official courier letter?
+  - speaker: user
+    goal: Presenta tu credencial diplomática y la guía oficial que coincide con el sello.
+    suggested_lines:
+    - Here is my diplomatic courier credential along with the ministry waybill matching the lead wax seal.
+    - While the pouch cannot be opened, you are welcome to inspect the exterior seal integrity.
+  - speaker: ai
+    text: The seal serial numbers and Ministry of Foreign Affairs stamp match your courier dossier.
+  - speaker: user
+    goal: Permite que verifiquen visualmente los sellos externos sin abrir la valija.
+    suggested_lines:
+    - While the pouch cannot be opened, you are welcome to inspect the exterior seal integrity.
+    - Could a protocol officer countersign the transit log and escort us to Gate A12?
+  - speaker: ai
+    text: Understood. We will log the diplomatic transit without opening the seal.
+  - speaker: user
+    goal: Solicita que el oficial de protocolo firme la bitácora y los acompañe a la puerta A12.
+    suggested_lines:
+    - Could a protocol officer countersign the transit log and escort us to Gate A12?
+    - Protocol requires the pouch to remain in my personal custody in the cabin at all times.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

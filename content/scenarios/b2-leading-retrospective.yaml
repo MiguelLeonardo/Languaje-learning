@@ -1,0 +1,112 @@
+id: b2-leading-retrospective
+title: Facilitating an agile sprint retrospective
+title_es: Liderar una retrospectiva de equipo
+cefr: B2
+topic: work-and-career
+description: Modera una retrospectiva enfocada en soluciones concretas sin buscar culpables tras un lanzamiento
+  intenso.
+phrases:
+- id: focus-on-systems-not-blame
+  text: Let's kick off our retro—remember, we're looking at our workflow and systems, not pointing fingers.
+  translation: Iniciemos nuestra retrospectiva; recuerden que analizamos nuestros procesos y sistemas, sin buscar
+    culpables.
+  visual_hint: 🔄🤝
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: pointing fingers
+    meaning: echar culpas / señalar personas
+    ipa: ˈpɔɪntɪŋ ˈfɪŋɡərz
+- id: celebrate-what-went-well
+  text: First, huge shout-out to the backend and QA pair for catching that currency rounding bug before launch.
+  translation: Primero, un gran reconocimiento a backend y QA por detectar ese error de redondeo de moneda antes
+    del lanzamiento.
+  visual_hint: 👏🎯
+  cloze:
+  - 5
+  - 11
+  glossary:
+  - word: shout-out
+    meaning: reconocimiento público
+    ipa: ˈʃaʊt aʊt
+- id: freeze-scope-forty-eight-hours
+  text: To avoid last-minute crunch, what if we freeze non-critical copy changes forty-eight hours before release?
+  translation: Para evitar prisas de última hora, ¿qué tal si congelamos cambios de texto no críticos cuarenta y
+    ocho horas antes?
+  visual_hint: ❄️⏱️
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: crunch
+    meaning: sobrecarga de trabajo de última hora
+    ipa: krʌntʃ
+- id: assign-one-clear-owner
+  text: Let's turn that into a concrete action item with an owner so we test it in Sprint 14.
+  translation: Convirtamos eso en un acuerdo concreto con responsable para probarlo en el Sprint 14.
+  visual_hint: ✅📋
+  cloze:
+  - 6
+  - 12
+  glossary:
+  - word: action item
+    meaning: acuerdo / tarea concreta
+    ipa: ˈækʃən ˈaɪtəm
+- id: automated-smoke-suite
+  text: Automating the five core checkout smoke tests will also shave an hour off manual verification.
+  translation: Automatizar las cinco pruebas clave de compra también ahorrará una hora de revisión manual.
+  visual_hint: ⚡🤖
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: shave off
+    meaning: ahorrar / recortar tiempo
+    ipa: ʃeɪv ɔːf
+- id: wrap-up-on-high-note
+  text: Two clear action items and five minutes to spare—thank you all for a candid retro!
+  translation: Dos acuerdos claros y cinco minutos de sobra; ¡gracias a todos por una retrospectiva tan franca!
+  visual_hint: 🌟🙌
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: candid
+    meaning: franca / sincera
+    ipa: ˈkændɪd
+roleplay:
+  ai_role: software engineer
+  user_role: scrum facilitator
+  setting: Bi-weekly team retrospective meeting.
+  turns:
+  - speaker: ai
+    text: Glad we shipped the release, though Thursday night felt pretty chaotic with late QA changes!
+  - speaker: user
+    goal: Abre la sesión recordando que el foco está en mejorar procesos sin buscar culpables.
+    suggested_lines:
+    - Let's kick off our retro—remember, we're looking at our workflow and systems, not pointing fingers.
+    - First, huge shout-out to the backend and QA pair for catching that currency rounding bug before launch.
+  - speaker: ai
+    text: Thanks! Pairing on the test cases definitely saved us on Friday.
+  - speaker: user
+    goal: Reconoce el logro del equipo al detectar el error de moneda antes de salir a producción.
+    suggested_lines:
+    - First, huge shout-out to the backend and QA pair for catching that currency rounding bug before launch.
+    - To avoid last-minute crunch, what if we freeze non-critical copy changes forty-eight hours before release?
+  - speaker: ai
+    text: The main bottleneck was getting five copy changes after code freeze had already started.
+  - speaker: user
+    goal: Propón congelar cambios no críticos 48 horas antes del lanzamiento.
+    suggested_lines:
+    - To avoid last-minute crunch, what if we freeze non-critical copy changes forty-eight hours before release?
+    - Let's turn that into a concrete action item with an owner so we test it in Sprint 14.
+  - speaker: ai
+    text: A 48-hour copy freeze would make QA's life ten times easier—I can draft the checklist!
+  - speaker: user
+    goal: Convierte la propuesta en un acuerdo concreto con responsable para el próximo sprint.
+    suggested_lines:
+    - Let's turn that into a concrete action item with an owner so we test it in Sprint 14.
+    - Automating the five core checkout smoke tests will also shave an hour off manual verification.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

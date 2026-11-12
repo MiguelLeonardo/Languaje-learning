@@ -1,0 +1,108 @@
+id: b2-specialty-coffee-roastery
+title: Discussing single-origin coffee
+title_es: Conversar sobre café de especialidad
+cefr: B2
+topic: food-and-drink
+description: Conversa con un tostador sobre notas florales, molienda para filtro V60 y tueste ligero.
+phrases:
+- id: washed-ethiopian-beans
+  text: I'm drawn to light-roast Ethiopian beans with floral and bergamot notes.
+  translation: Me atraen los granos etíopes de tueste claro con notas florales y de bergamota.
+  visual_hint: ☕🌸
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: light-roast
+    meaning: tueste ligero / claro
+    ipa: laɪt roʊst
+- id: grind-for-pour-over
+  text: Could you leave the bag whole-bean? I grind fresh for a V60 pour-over.
+  translation: ¿Podría dejar la bolsa en grano entero? Muelo al momento para filtro V60.
+  visual_hint: ⚙️🫖
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: whole-bean
+    meaning: en grano entero
+    ipa: hoʊl biːn
+- id: water-temperature-ratio
+  text: What water temperature and coffee-to-water ratio bring out the best sweetness?
+  translation: ¿Qué temperatura de agua y proporción resaltan mejor el dulzor?
+  visual_hint: 🌡️⚖️
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: bring out
+    meaning: resaltar / sacar a relucir
+    ipa: brɪŋ aʊt
+- id: roast-date-degassing
+  text: Since it was roasted yesterday, should I let it degas for a few days?
+  translation: Como se tostó ayer, ¿debería dejarlo desgasificar unos días?
+  visual_hint: 📦⏳
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: degas
+    meaning: desgasificar (reposar tras el tueste)
+    ipa: diːˈɡæs
+- id: natural-process-fruity
+  text: How does the natural-process Colombian compare in body and acidity?
+  translation: ¿Cómo se compara el colombiano de proceso natural en cuerpo y acidez?
+  visual_hint: 🍒☕
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: body
+    meaning: cuerpo / densidad en boca
+    ipa: ˈbɑːdi
+- id: monthly-bean-subscription
+  text: I'd love to sign up for your monthly roaster's choice subscription.
+  translation: Me encantaría suscribirme a su selección mensual del tostador.
+  visual_hint: 📬☕
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: sign up
+    meaning: inscribirse / suscribirse
+    ipa: saɪn ʌp
+roleplay:
+  ai_role: head roaster
+  user_role: coffee enthusiast
+  setting: A specialty micro-roastery tasting bar.
+  turns:
+  - speaker: ai
+    text: Welcome to the roastery! What flavor profile do you usually brew at home?
+  - speaker: user
+    goal: Di que te gustan los granos etíopes de tueste ligero con notas florales.
+    suggested_lines:
+    - I'm drawn to light-roast Ethiopian beans with floral and bergamot notes.
+    - Could you leave the bag whole-bean? I grind fresh for a V60 pour-over.
+  - speaker: ai
+    text: We just roasted a washed Yirgacheffe yesterday—it's super bright and floral.
+  - speaker: user
+    goal: Pide la bolsa en grano entero porque mueles en casa para V60.
+    suggested_lines:
+    - Could you leave the bag whole-bean? I grind fresh for a V60 pour-over.
+    - What water temperature and coffee-to-water ratio bring out the best sweetness?
+  - speaker: ai
+    text: Smart move—whole bean keeps the aromatics intact much longer.
+  - speaker: user
+    goal: Pregunta qué temperatura y proporción resaltan mejor el dulzor.
+    suggested_lines:
+    - What water temperature and coffee-to-water ratio bring out the best sweetness?
+    - Since it was roasted yesterday, should I let it degas for a few days?
+  - speaker: ai
+    text: Aim for a 1-to-16 ratio at 93 degrees Celsius with a 40-second bloom.
+  - speaker: user
+    goal: Pregunta cuántos días dejarlo reposar tras el tueste.
+    suggested_lines:
+    - Since it was roasted yesterday, should I let it degas for a few days?
+    - How does the natural-process Colombian compare in body and acidity?
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

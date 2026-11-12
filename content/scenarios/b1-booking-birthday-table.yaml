@@ -1,0 +1,108 @@
+id: b1-booking-birthday-table
+title: Reserving a birthday dinner table
+title_es: Reservar mesa para una cena de cumpleaños
+cefr: B1
+topic: food-and-drink
+description: Llama a un restaurante para reservar mesa para ocho personas en la terraza y coordinar un pastel.
+phrases:
+- id: table-for-eight-patio
+  text: Hi, I'd like to book a table for eight on the heated patio this Friday.
+  translation: Hola, quisiera reservar una mesa para ocho en la terraza climatizada este viernes.
+  visual_hint: 🎂🌿
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: heated patio
+    meaning: terraza climatizada
+    ipa: ˈhiːtɪd ˈpætioʊ
+- id: around-eight-pm
+  text: Do you have availability around eight o'clock in the evening?
+  translation: ¿Tienen disponibilidad alrededor de las ocho de la noche?
+  visual_hint: 🕗📅
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: availability
+    meaning: disponibilidad
+    ipa: əˌveɪləˈbɪləti
+- id: bring-birthday-cake
+  text: We're celebrating a birthday; is it okay if we bring our own cake?
+  translation: Celebramos un cumpleaños; ¿está bien si llevamos nuestro propio pastel?
+  visual_hint: 🎂🕯️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: celebrating
+    meaning: celebrando
+    ipa: ˈselɪbreɪtɪŋ
+- id: store-in-fridge
+  text: Could your staff keep the cake in the fridge until dessert?
+  translation: ¿Podría su personal guardar el pastel en el refrigerador hasta el postre?
+  visual_hint: 🧊🍰
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: fridge
+    meaning: refrigerador / nevera
+    ipa: frɪdʒ
+- id: one-vegetarian-guest
+  text: Two of our guests are vegetarian, just so the kitchen knows.
+  translation: Dos de nuestros invitados son vegetarianos, para que la cocina lo sepa.
+  visual_hint: 🥗🌱
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: just so
+    meaning: solo para que
+    ipa: dʒʌst soʊ
+- id: confirm-by-text
+  text: Great, please put the reservation under Sofia and send a text confirmation.
+  translation: Genial, ponga la reserva a nombre de Sofía y envíe confirmación por mensaje.
+  visual_hint: 📱✅
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: confirmation
+    meaning: confirmación
+    ipa: ˌkɑːnfərˈmeɪʃən
+roleplay:
+  ai_role: restaurant host
+  user_role: caller
+  setting: Calling a restaurant to plan a friend's birthday dinner.
+  turns:
+  - speaker: ai
+    text: Bella Vista Restaurant, how can I help you?
+  - speaker: user
+    goal: Pide reservar una mesa para ocho en la terraza este viernes.
+    suggested_lines:
+    - Hi, I'd like to book a table for eight on the heated patio this Friday.
+    - Do you have availability around eight o'clock in the evening?
+  - speaker: ai
+    text: Let me check our Friday book. What time were you thinking?
+  - speaker: user
+    goal: Pregunta si tienen disponibilidad a las 8:00 PM.
+    suggested_lines:
+    - Do you have availability around eight o'clock in the evening?
+    - We're celebrating a birthday; is it okay if we bring our own cake?
+  - speaker: ai
+    text: We have a large round table on the patio at 8:15 PM!
+  - speaker: user
+    goal: Pregunta si pueden llevar su propio pastel de cumpleaños.
+    suggested_lines:
+    - We're celebrating a birthday; is it okay if we bring our own cake?
+    - Could your staff keep the cake in the fridge until dessert?
+  - speaker: ai
+    text: Yes, you're welcome to bring a cake! We don't charge a cutting fee.
+  - speaker: user
+    goal: Pide que guarden el pastel en el refrigerador hasta el postre.
+    suggested_lines:
+    - Could your staff keep the cake in the fridge until dessert?
+    - Two of our guests are vegetarian, just so the kitchen knows.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

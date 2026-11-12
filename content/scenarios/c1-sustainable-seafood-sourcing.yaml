@@ -1,0 +1,109 @@
+id: c1-sustainable-seafood-sourcing
+title: Inquiring about sustainable seafood
+title_es: Consultar sobre pesca sostenible y trazabilidad
+cefr: C1
+topic: food-and-drink
+description: Conversa con el chef de un restaurante costero sobre pesca de anzuelo, vedas y trazabilidad marina.
+phrases:
+- id: line-caught-wild
+  text: Is the halibut line-caught in local waters or sourced from offshore trawlers?
+  translation: ¿El fletán es pescado con anzuelo en aguas locales o proviene de arrastreros de altura?
+  visual_hint: 🎣🐟
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: line-caught
+    meaning: pescado con caña / anzuelo
+    ipa: laɪn kɔːt
+- id: bycatch-mitigation
+  text: We try to support fisheries that actively minimize bycatch and seabed disruption.
+  translation: Intentamos apoyar pesquerías que minimizan activamente la captura incidental y el daño al fondo marino.
+  visual_hint: 🌊🐢
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: bycatch
+    meaning: captura incidental
+    ipa: ˈbaɪkætʃ
+- id: hand-harvested-scallops
+  text: Knowing the scallops are hand-harvested by divers makes the dish even more compelling.
+  translation: Saber que las vieiras son recolectadas a mano por buzos hace que el plato sea aún más atractivo.
+  visual_hint: 🤿🐚
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: hand-harvested
+    meaning: recolectadas a mano
+    ipa: hænd ˈhɑːrvɪstɪd
+- id: traceability-qr-code
+  text: I love that your menu lists the vessel name and landing port for full traceability.
+  translation: Me encanta que su menú indique el nombre de la embarcación y el puerto de desembarque para total
+    trazabilidad.
+  visual_hint: ⚓📋
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: traceability
+    meaning: trazabilidad
+    ipa: ˌtreɪsəˈbɪləti
+- id: in-season-oysters
+  text: Which of the cold-water oysters has the cleanest briny finish tonight?
+  translation: ¿Cuál de las ostras de agua fría tiene el final salino más limpio esta noche?
+  visual_hint: 🦪🌊
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: briny
+    meaning: salino / sabor a mar
+    ipa: ˈbraɪni
+- id: underutilized-species
+  text: Highlighting underutilized fish species takes real pressure off overfished stocks.
+  translation: Destacar especies poco conocidas alivia la presión sobre las poblaciones sobreexplotadas.
+  visual_hint: 🐟♻️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: underutilized
+    meaning: poco aprovechadas
+    ipa: ˌʌndərˈjuːtəlaɪzd
+roleplay:
+  ai_role: seafood chef
+  user_role: conscious diner
+  setting: An oceanfront seafood restaurant known for ethical sourcing.
+  turns:
+  - speaker: ai
+    text: Good evening! Tonight our featured catch is Pacific halibut and diver scallops.
+  - speaker: user
+    goal: Pregunta si el fletán es de pesca artesanal con anzuelo.
+    suggested_lines:
+    - Is the halibut line-caught in local waters or sourced from offshore trawlers?
+    - We try to support fisheries that actively minimize bycatch and seabed disruption.
+  - speaker: ai
+    text: All our halibut is hook-and-line caught by day-boats out of Half Moon Bay.
+  - speaker: user
+    goal: Explica que prefieren apoyar pesquerías que reducen la captura incidental.
+    suggested_lines:
+    - We try to support fisheries that actively minimize bycatch and seabed disruption.
+    - Knowing the scallops are hand-harvested by divers makes the dish even more compelling.
+  - speaker: ai
+    text: That's our core philosophy too—we never buy dredged shellfish.
+  - speaker: user
+    goal: Celebra que las vieiras sean recolectadas a mano y pide ese plato.
+    suggested_lines:
+    - Knowing the scallops are hand-harvested by divers makes the dish even more compelling.
+    - I love that your menu lists the vessel name and landing port for full traceability.
+  - speaker: ai
+    text: I'll fire an order of the diver scallops and halibut for your table right away!
+  - speaker: user
+    goal: Elogia la trazabilidad del menú indicando la embarcación y el puerto.
+    suggested_lines:
+    - I love that your menu lists the vessel name and landing port for full traceability.
+    - Which of the cold-water oysters has the cleanest briny finish tonight?
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

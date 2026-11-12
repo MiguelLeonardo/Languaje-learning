@@ -1,0 +1,126 @@
+id: c2-ma-due-diligence-brief
+title: Defending valuation in M&A due diligence
+title_es: Defender valuación en auditoría de compra (M&A)
+cefr: C2
+topic: work-and-career
+description: Defiende ante el comité de adquisiciones la retención neta de ingresos, la propiedad intelectual y
+  las sinergias operativas.
+phrases:
+- id: net-dollar-retention-cohorts
+  text: Across our enterprise cohorts, net dollar retention has compounded at a hundred and twenty-eight percent
+    over twelve quarters.
+  translation: En nuestras cohortes empresariales, la retención neta en dólares se ha compuesto al ciento veintiocho
+    por ciento durante doce trimestres.
+  visual_hint: 📈🏛️
+  cloze:
+  - 6
+  - 12
+  glossary:
+  - word: compounded
+    meaning: crecido de forma compuesta
+    ipa: kəmˈpaʊndɪd
+- id: clean-ip-chain-of-title
+  text: Our external IP counsel completed a comprehensive open-source audit confirming an unencumbered chain of
+    title across all core patents.
+  translation: Nuestros asesores de propiedad intelectual completaron una auditoría exhaustiva confirmando titularidad
+    limpia en todas las patentes clave.
+  visual_hint: ⚖️🔐
+  cloze:
+  - 6
+  - 12
+  glossary:
+  - word: unencumbered
+    meaning: libre de gravámenes o reclamos
+    ipa: ˌʌnɪnˈkʌmbərd
+- id: cross-sell-accretive-margin
+  text: Integrating our compliance module into your global salesforce becomes accretive to EBITDA within two quarters
+    of closing.
+  translation: Integrar nuestro módulo de cumplimiento en su fuerza de ventas global aporta positivamente al EBITDA
+    en dos trimestres tras el cierre.
+  visual_hint: 💹🤝
+  cloze:
+  - 5
+  - 11
+  glossary:
+  - word: accretive
+    meaning: que incrementa el valor / margen por acción
+    ipa: əˈkriːtɪv
+- id: escrow-indemnity-cap
+  text: Given the clean audit findings, we propose capping the general indemnity escrow at five percent with a twelve-month
+    survival period.
+  translation: Dados los resultados limpios de la auditoría, proponemos topar el fideicomiso de garantía en cinco
+    por ciento por doce meses.
+  visual_hint: 🏦✍️
+  cloze:
+  - 6
+  - 13
+  glossary:
+  - word: escrow
+    meaning: depósito en garantía / fideicomiso
+    ipa: ˈeskroʊ
+- id: key-talent-vesting-retention
+  text: Restructuring the unvested equity into milestone retention grants keeps the founding engineering leads locked
+    in.
+  translation: Reestructurar las acciones en bonos por hitos asegura la permanencia de los líderes técnicos fundadores.
+  visual_hint: 🎯🔒
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: unvested
+    meaning: acciones aún en periodo de consolidación
+    ipa: ʌnˈvestɪd
+- id: proceed-to-definitive-spa
+  text: We are aligned to instruct counsel to finalize the Share Purchase Agreement for Friday signature.
+  translation: Estamos alineados para instruir a los abogados a cerrar el contrato de compraventa este viernes.
+  visual_hint: 📄✅
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: aligned
+    meaning: en pleno acuerdo
+    ipa: əˈlaɪnd
+roleplay:
+  ai_role: managing director (acquirer)
+  user_role: chief strategy officer
+  setting: Confirmatory M&A due diligence session.
+  turns:
+  - speaker: ai
+    text: Let's examine customer stickiness—how resilient is your recurring revenue if macro budgets tighten?
+  - speaker: user
+    goal: Destaca la retención neta de ingresos del 128% sostenida durante doce trimestres.
+    suggested_lines:
+    - Across our enterprise cohorts, net dollar retention has compounded at a hundred and twenty-eight percent over
+      twelve quarters.
+    - Our external IP counsel completed a comprehensive open-source audit confirming an unencumbered chain of title
+      across all core patents.
+  - speaker: ai
+    text: And did the technical audit surface any copyleft contamination in your proprietary inference engine?
+  - speaker: user
+    goal: Confirma que la auditoría de propiedad intelectual verificó titularidad limpia.
+    suggested_lines:
+    - Our external IP counsel completed a comprehensive open-source audit confirming an unencumbered chain of title
+      across all core patents.
+    - Integrating our compliance module into your global salesforce becomes accretive to EBITDA within two quarters
+      of closing.
+  - speaker: ai
+    text: How quickly do the commercial synergies materialize post-acquisition?
+  - speaker: user
+    goal: Explica que la venta cruzada incrementará el EBITDA en solo dos trimestres.
+    suggested_lines:
+    - Integrating our compliance module into your global salesforce becomes accretive to EBITDA within two quarters
+      of closing.
+    - Given the clean audit findings, we propose capping the general indemnity escrow at five percent with a twelve-month
+      survival period.
+  - speaker: ai
+    text: Our diligence committee is satisfied with both the cohort data and the IP clearance.
+  - speaker: user
+    goal: Propón limitar la retención en garantía al 5% durante doce meses.
+    suggested_lines:
+    - Given the clean audit findings, we propose capping the general indemnity escrow at five percent with a twelve-month
+      survival period.
+    - Restructuring the unvested equity into milestone retention grants keeps the founding engineering leads locked
+      in.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

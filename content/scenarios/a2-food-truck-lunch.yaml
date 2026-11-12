@@ -1,0 +1,108 @@
+id: a2-food-truck-lunch
+title: Ordering at a street food truck
+title_es: Pedir en un camión de comida
+cefr: A2
+topic: food-and-drink
+description: Pide tacos de pescado a la parrilla, pregunta qué tan picante es la salsa y pide servilletas.
+phrases:
+- id: grilled-fish-tacos
+  text: Hi! I'll try an order of three grilled fish tacos.
+  translation: ¡Hola! Probaré una orden de tres tacos de pescado a la parrilla.
+  visual_hint: 🌮🐟
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: order
+    meaning: orden / ración
+    ipa: ˈɔːrdər
+- id: how-spicy-salsa
+  text: How spicy is the green salsa? I prefer mild.
+  translation: ¿Qué tan picante es la salsa verde? La prefiero suave.
+  visual_hint: 🌶️🥣
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: mild
+    meaning: poco picante / suave
+    ipa: maɪld
+- id: extra-lime-cilantro
+  text: Could you put extra lime and cilantro on the side?
+  translation: ¿Podría poner limón y cilantro extra aparte?
+  visual_hint: 🍋🌿
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: on the side
+    meaning: aparte / a un lado
+    ipa: ɑːn ðə saɪd
+- id: call-my-name
+  text: Will you call my name when the food is ready?
+  translation: ¿Llamará mi nombre cuando la comida esté lista?
+  visual_hint: 📣🌮
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: ready
+    meaning: lista
+    ipa: ˈredi
+- id: cold-horchata
+  text: Add a large cold horchata to my order, please.
+  translation: Agregue una horchata fría grande a mi pedido, por favor.
+  visual_hint: 🥤🧊
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: add
+    meaning: agregar / añadir
+    ipa: æd
+- id: picnic-benches
+  text: Are those picnic benches over there free to use?
+  translation: ¿Esas bancas de picnic de allá son de uso libre?
+  visual_hint: 🪑🌳
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: benches
+    meaning: bancas
+    ipa: ˈbentʃɪz
+roleplay:
+  ai_role: food truck chef
+  user_role: customer
+  setting: A lively downtown food truck park.
+  turns:
+  - speaker: ai
+    text: Hey! Welcome to Taco Wheel. What are you hungry for?
+  - speaker: user
+    goal: Pide una orden de tres tacos de pescado a la parrilla.
+    suggested_lines:
+    - Hi! I'll try an order of three grilled fish tacos.
+    - How spicy is the green salsa? I prefer mild.
+  - speaker: ai
+    text: Three fish tacos coming up! Do you want red or green salsa?
+  - speaker: user
+    goal: Pregunta qué tan picante es la salsa verde y di que prefieres suave.
+    suggested_lines:
+    - How spicy is the green salsa? I prefer mild.
+    - Could you put extra lime and cilantro on the side?
+  - speaker: ai
+    text: The green salsa is very mild, made with roasted tomatillos.
+  - speaker: user
+    goal: Pide limón y cilantro extra aparte.
+    suggested_lines:
+    - Could you put extra lime and cilantro on the side?
+    - Will you call my name when the food is ready?
+  - speaker: ai
+    text: Sure thing, extra lime and cilantro on the side!
+  - speaker: user
+    goal: Pregunta si llamarán tu nombre cuando esté listo.
+    suggested_lines:
+    - Will you call my name when the food is ready?
+    - Add a large cold horchata to my order, please.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

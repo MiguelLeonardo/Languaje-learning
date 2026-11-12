@@ -1,0 +1,108 @@
+id: b2-sleeper-train-compartment
+title: Resolving a sleeper train booking
+title_es: Resolver cabina duplicada en tren nocturno
+cefr: B2
+topic: travel-and-transport
+description: Aclara con el jefe de tren nocturno que dos pasajeros tienen impreso el mismo camarote y solicita reubicación.
+phrases:
+- id: duplicate-cabin-assignment
+  text: Excuse me, it looks like there's a system glitch—both of us have tickets for Cabin 7.
+  translation: 'Disculpe, parece que hay un fallo del sistema: ambos tenemos boletos para el camarote 7.'
+  visual_hint: 🚆🛏️
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: system glitch
+    meaning: fallo técnico del sistema
+    ipa: ˈsɪstəm ɡlɪtʃ
+- id: booked-private-sleeper
+  text: I booked this private two-berth compartment three months ago; here is my PDF confirmation.
+  translation: Reservé este compartimento privado de dos literas hace tres meses; aquí está mi confirmación en PDF.
+  visual_hint: 📱📄
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: berth
+    meaning: litera de tren o barco
+    ipa: bɜːrθ
+- id: vacant-deluxe-cabin
+  text: Is there a vacant compartment in the next carriage so neither of us has to downgrade?
+  translation: ¿Hay algún compartimento libre en el siguiente vagón para que ninguno baje de categoría?
+  visual_hint: 🚪✨
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: vacant
+    meaning: libre / desocupado
+    ipa: ˈveɪkənt
+- id: breakfast-tray-order
+  text: Thank you for sorting that out! Where should I hang our morning breakfast order card?
+  translation: ¡Gracias por resolverlo! ¿Dónde debo colgar nuestra tarjeta de pedido de desayuno?
+  visual_hint: 🥐☕
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: sorting that out
+    meaning: resolver / solucionar eso
+    ipa: ˈsɔːrtɪŋ ðæt aʊt
+- id: lock-compartment-inside
+  text: Does the security latch lock from the inside while we sleep?
+  translation: ¿El pestillo de seguridad cierra por dentro mientras dormimos?
+  visual_hint: 🔒🌙
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: latch
+    meaning: pestillo / cerrojo
+    ipa: lætʃ
+- id: border-passport-check
+  text: Do border police check passports overnight, or do you hold our tickets?
+  translation: ¿La policía fronteriza revisa pasaportes de noche o usted guarda los boletos?
+  visual_hint: 🛂🌙
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: overnight
+    meaning: durante la noche
+    ipa: ˌoʊvərˈnaɪt
+roleplay:
+  ai_role: sleeping car attendant
+  user_role: overnight passenger
+  setting: Corridor of a European night train departing Vienna.
+  turns:
+  - speaker: ai
+    text: Good evening and welcome aboard the Nightjet! How can I help you two?
+  - speaker: user
+    goal: Explica que ambos pasajeros tienen boletos asignados al camarote 7.
+    suggested_lines:
+    - Excuse me, it looks like there's a system glitch—both of us have tickets for Cabin 7.
+    - I booked this private two-berth compartment three months ago; here is my PDF confirmation.
+  - speaker: ai
+    text: Let me scan both QR codes—ah, theycoupled a replacement carriage today.
+  - speaker: user
+    goal: Muestra tu confirmación en PDF reservada hace tres meses.
+    suggested_lines:
+    - I booked this private two-berth compartment three months ago; here is my PDF confirmation.
+    - Is there a vacant compartment in the next carriage so neither of us has to downgrade?
+  - speaker: ai
+    text: I see what happened. Let me check my manifest for Carriage 412.
+  - speaker: user
+    goal: Pregunta si hay un camarote libre en el vagón contiguo.
+    suggested_lines:
+    - Is there a vacant compartment in the next carriage so neither of us has to downgrade?
+    - Thank you for sorting that out! Where should I hang our morning breakfast order card?
+  - speaker: ai
+    text: 'Good news: Cabin 3 in the Deluxe carriage is completely empty—I''ll move you there at no charge!'
+  - speaker: user
+    goal: Agradece la solución y pregunta por la tarjeta de desayuno.
+    suggested_lines:
+    - Thank you for sorting that out! Where should I hang our morning breakfast order card?
+    - Does the security latch lock from the inside while we sleep?
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

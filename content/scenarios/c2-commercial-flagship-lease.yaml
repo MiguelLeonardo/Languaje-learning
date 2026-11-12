@@ -1,0 +1,115 @@
+id: c2-commercial-flagship-lease
+title: Structuring a flagship retail lease
+title_es: Estructurar contrato de local comercial insignia
+cefr: C2
+topic: hotel-and-shopping
+description: Negocia una estructura híbrida de renta base más porcentaje sobre ventas y periodo de carencia por
+  obra.
+phrases:
+- id: base-plus-turnover-rent
+  text: We propose a hybrid structure combining a conservative base rent with a six-percent turnover overage above
+    the breakpoint.
+  translation: Proponemos una estructura híbrida que combine una renta base moderada con un seis por ciento sobre
+    ventas por encima del umbral.
+  visual_hint: 🏢📈
+  cloze:
+  - 6
+  - 12
+  glossary:
+  - word: turnover rent
+    meaning: renta variable sobre facturación
+    ipa: ˈtɜːrnoʊvər rent
+- id: nine-month-fit-out-rent-free
+  text: Given the extensive structural fit-out required, we need a nine-month rent-free abatement period.
+  translation: Dada la extensa adecuación arquitectónica requerida, necesitamos un periodo de gracia de nueve meses
+    sin pago de renta.
+  visual_hint: 🏗️⏳
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: abatement
+    meaning: exención temporal / periodo de carencia
+    ipa: əˈbeɪtmənt
+- id: exclude-ecommerce-returns
+  text: The gross-sales definition must explicitly exclude online orders returned in-store and employee purchases.
+  translation: La definición de ventas brutas debe excluir explícitamente las devoluciones de compras web en tienda
+    y ventas a empleados.
+  visual_hint: 💻🧾
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: explicitly exclude
+    meaning: excluir de forma expresa
+    ipa: ɪkˈsplɪsɪtli ɪkˈskluːd
+- id: right-of-first-refusal-adjacent
+  text: We also want a right of first refusal on the adjacent mezzanine should the current tenant vacate.
+  translation: También queremos derecho de preferencia sobre el entrepiso contiguo en caso de que el inquilino actual
+    desocupe.
+  visual_hint: 🔑📐
+  cloze:
+  - 5
+  - 11
+  glossary:
+  - word: right of first refusal
+    meaning: derecho de tanteo / primera opción
+    ipa: raɪt əv fɜːrst rɪˈfjuːzəl
+- id: cap-service-charge-escalation
+  text: Annual common-area service-charge escalations must be capped at the consumer price index.
+  translation: Los incrementos anuales de mantenimiento de áreas comunes deben toparse a la inflación.
+  visual_hint: 📊🛡️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: capped at
+    meaning: topado / limitado a
+    ipa: kæpt æt
+- id: instruct-solicitors-heads-of-terms
+  text: Let's sign these Heads of Terms so our respective counsels can engross the lease.
+  translation: Firmemos esta carta de intención para que nuestros abogados redacten el contrato definitivo.
+  visual_hint: ✍️⚖️
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: Heads of Terms
+    meaning: acuerdo marco de términos principales
+    ipa: hedz əv tɜːrmz
+roleplay:
+  ai_role: commercial REIT director
+  user_role: retail expansion VP
+  setting: Boardroom negotiation for a prime corner retail flagship.
+  turns:
+  - speaker: ai
+    text: For this corner flagship on Bond Street, our asking rent is a flat nine hundred thousand per annum.
+  - speaker: user
+    goal: Propón una renta híbrida con base fija más porcentaje sobre ventas.
+    suggested_lines:
+    - We propose a hybrid structure combining a conservative base rent with a six-percent turnover overage above
+      the breakpoint.
+    - Given the extensive structural fit-out required, we need a nine-month rent-free abatement period.
+  - speaker: ai
+    text: A turnover component aligns our incentives, provided the natural breakpoint is set at twelve million.
+  - speaker: user
+    goal: Solicita nueve meses de carencia de renta para ejecutar la obra de adecuación.
+    suggested_lines:
+    - Given the extensive structural fit-out required, we need a nine-month rent-free abatement period.
+    - The gross-sales definition must explicitly exclude online orders returned in-store and employee purchases.
+  - speaker: ai
+    text: We can grant six months rent-free plus a landlord capital contribution toward HVAC and facade glazing.
+  - speaker: user
+    goal: Pide que el cálculo de ventas excluya devoluciones de comercio electrónico en tienda.
+    suggested_lines:
+    - The gross-sales definition must explicitly exclude online orders returned in-store and employee purchases.
+    - We also want a right of first refusal on the adjacent mezzanine should the current tenant vacate.
+  - speaker: ai
+    text: Excluding web returns from audited store turnover is completely reasonable.
+  - speaker: user
+    goal: Solicita derecho de preferencia sobre el local contiguo si llega a desocuparse.
+    suggested_lines:
+    - We also want a right of first refusal on the adjacent mezzanine should the current tenant vacate.
+    - Annual common-area service-charge escalations must be capped at the consumer price index.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

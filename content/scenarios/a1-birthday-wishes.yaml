@@ -1,0 +1,108 @@
+id: a1-birthday-wishes
+title: Wishing a friend happy birthday
+title_es: Felicitar a un amigo en su cumpleaños
+cefr: A1
+topic: social-and-smalltalk
+description: Felicita a una compañera de clase por su cumpleaños, entrégale una tarjeta y unos chocolates.
+phrases:
+- id: happy-birthday-emma
+  text: Happy birthday, Emma! I hope you have a wonderful day.
+  translation: ¡Feliz cumpleaños, Emma! Espero que tengas un día maravilloso.
+  visual_hint: 🎂🎈
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: wonderful
+    meaning: maravilloso
+    ipa: ˈwʌndərfəl
+- id: card-from-all-of-us
+  text: This birthday card is from all of us in the class.
+  translation: Esta tarjeta de cumpleaños es de parte de todos en la clase.
+  visual_hint: 💌✍️
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: all of us
+    meaning: todos nosotros
+    ipa: ɔːl əv ʌs
+- id: box-of-dark-chocolates
+  text: And we got you a small box of dark chocolates!
+  translation: ¡Y te compramos una pequeña caja de chocolates oscuros!
+  visual_hint: 🍫🎁
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: dark chocolates
+    meaning: chocolates amargos / oscuros
+    ipa: dɑːrk ˈtʃɑːkləts
+- id: dinner-with-family
+  text: Are you having a special dinner tonight with your family?
+  translation: ¿Vas a tener una cena especial esta noche con tu familia?
+  visual_hint: 🍽️🥂
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: special
+    meaning: especial
+    ipa: ˈspeʃəl
+- id: try-a-vanilla-cupcake
+  text: Thank you for the vanilla cupcake—it looks delicious!
+  translation: ¡Gracias por el cupcake de vainilla; se ve delicioso!
+  visual_hint: 🧁😋
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: delicious
+    meaning: delicioso
+    ipa: dɪˈlɪʃəs
+- id: sing-happy-birthday
+  text: Let's sing Happy Birthday together before the lesson!
+  translation: ¡Cantemos el Feliz Cumpleaños juntos antes de la lección!
+  visual_hint: 🎶🎉
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: sing
+    meaning: cantar
+    ipa: sɪŋ
+roleplay:
+  ai_role: classmate (Emma)
+  user_role: friend
+  setting: Before English class starts in the morning.
+  turns:
+  - speaker: ai
+    text: Good morning! Look, I brought cupcakes for the class today!
+  - speaker: user
+    goal: Desea un feliz cumpleaños a Emma.
+    suggested_lines:
+    - Happy birthday, Emma! I hope you have a wonderful day.
+    - This birthday card is from all of us in the class.
+  - speaker: ai
+    text: Aw, thank you so much! What is that envelope in your hand?
+  - speaker: user
+    goal: Entrégale la tarjeta firmada por toda la clase.
+    suggested_lines:
+    - This birthday card is from all of us in the class.
+    - And we got you a small box of dark chocolates!
+  - speaker: ai
+    text: Everyone signed the card—that is so sweet of you all!
+  - speaker: user
+    goal: Dale la caja de chocolates oscuros.
+    suggested_lines:
+    - And we got you a small box of dark chocolates!
+    - Are you having a special dinner tonight with your family?
+  - speaker: ai
+    text: Dark chocolate is my favorite! Thank you!
+  - speaker: user
+    goal: Pregunta si tendrá una cena especial esta noche.
+    suggested_lines:
+    - Are you having a special dinner tonight with your family?
+    - Thank you for the vanilla cupcake—it looks delicious!
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

@@ -1,0 +1,109 @@
+id: b2-custom-jewelry-engraving
+title: Ordering a custom engraved watch
+title_es: Encargar un grabado personalizado en relojería
+cefr: B2
+topic: hotel-and-shopping
+description: Elige una tipografía cursiva para grabar la tapa trasera de un reloj de regalo y verifica la fecha
+  de entrega.
+phrases:
+- id: engrave-case-back
+  text: I'd like to purchase this automatic dress watch and have a dedication engraved on the case back.
+  translation: Quisiera comprar este reloj automático de vestir y grabar una dedicatoria en la tapa trasera.
+  visual_hint: ⌚✒️
+  cloze:
+  - 5
+  - 11
+  glossary:
+  - word: dedication
+    meaning: dedicatoria
+    ipa: ˌdedɪˈkeɪʃən
+- id: italic-serif-typeface
+  text: Between block capitals and italic script, which typeface reads more legibly at this scale?
+  translation: Entre mayúsculas de molde y letra cursiva, ¿qué tipografía se lee mejor a esta escala?
+  visual_hint: 🔤🔍
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: legibly
+    meaning: de forma legible
+    ipa: ˈledʒəbli
+- id: double-check-spelling
+  text: Let's double-check the spelling and Roman numerals on the proof sheet before you start.
+  translation: Revisemos dos veces la ortografía y los números romanos en la hoja de prueba antes de empezar.
+  visual_hint: 📝✅
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: proof sheet
+    meaning: hoja de prueba de diseño
+    ipa: pruːf ʃiːt
+- id: remove-two-bracelet-links
+  text: Could you also remove two links from the bracelet and include the spare pins in the box?
+  translation: ¿Podría también quitar dos eslabones del brazalete y guardar los pasadores en la caja?
+  visual_hint: 🔗📦
+  cloze:
+  - 5
+  - 11
+  glossary:
+  - word: links
+    meaning: eslabones de correa metálica
+    ipa: lɪŋks
+- id: international-warranty-card
+  text: Will the five-year international movement warranty still apply after case-back engraving?
+  translation: ¿La garantía internacional de cinco años sigue vigente tras grabar la tapa?
+  visual_hint: 📜🛡️
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: movement
+    meaning: maquinaria / movimiento del reloj
+    ipa: ˈmuːvmənt
+- id: gift-wrap-with-ribbon
+  text: It's for my father's retirement on Friday—gift wrapping would be fantastic.
+  translation: Es para la jubilación de mi padre el viernes; envolverlo para regalo sería fantástico.
+  visual_hint: 🎁🎉
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: retirement
+    meaning: jubilación
+    ipa: rɪˈtaɪərmənt
+roleplay:
+  ai_role: watchmaker & jeweler
+  user_role: buyer
+  setting: A boutique watch and jewelry shop.
+  turns:
+  - speaker: ai
+    text: Welcome! This stainless-steel automatic has a solid polished case back—ideal for engraving.
+  - speaker: user
+    goal: Di que quieres comprar el reloj automático y grabar una dedicatoria atrás.
+    suggested_lines:
+    - I'd like to purchase this automatic dress watch and have a dedication engraved on the case back.
+    - Between block capitals and italic script, which typeface reads more legibly at this scale?
+  - speaker: ai
+    text: We do diamond-tip engraving in-house. What inscription and font style did you have in mind?
+  - speaker: user
+    goal: Pregunta qué tipografía se lee mejor a ese tamaño.
+    suggested_lines:
+    - Between block capitals and italic script, which typeface reads more legibly at this scale?
+    - Let's double-check the spelling and Roman numerals on the proof sheet before you start.
+  - speaker: ai
+    text: Our classic italic serif looks super crisp and timeless for initials and a date.
+  - speaker: user
+    goal: Pide revisar dos veces la ortografía y los números romanos en la prueba.
+    suggested_lines:
+    - Let's double-check the spelling and Roman numerals on the proof sheet before you start.
+    - Could you also remove two links from the bracelet and include the spare pins in the box?
+  - speaker: ai
+    text: Here is the digital mockup on screen—please verify every character.
+  - speaker: user
+    goal: Pide ajustar dos eslabones de la correa y guardar los sobrantes en la caja.
+    suggested_lines:
+    - Could you also remove two links from the bracelet and include the spare pins in the box?
+    - Will the five-year international movement warranty still apply after case-back engraving?
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

@@ -1,0 +1,109 @@
+id: b2-furniture-delivery-window
+title: Coordinating a freight elevator delivery
+title_es: Coordinar entrega de muebles y elevador de carga
+cefr: B2
+topic: hotel-and-shopping
+description: Reprograma una entrega de sofá para que coincida con la reserva del elevador de carga de tu edificio.
+phrases:
+- id: freight-elevator-window
+  text: Hi, my building only allows furniture deliveries between 9:00 AM and noon when the freight elevator is padded.
+  translation: Hola, mi edificio solo permite mudanzas y muebles entre las 9:00 AM y el mediodía con el elevador
+    de carga protegido.
+  visual_hint: 🛋️🛗
+  cloze:
+  - 6
+  - 12
+  glossary:
+  - word: freight elevator
+    meaning: elevador de carga / montacargas
+    ipa: freɪt ˈelɪveɪtər
+- id: switch-to-morning-route
+  text: Could you move our stop to the first morning window on Friday so the crew isn't turned away?
+  translation: ¿Podría pasar nuestra entrega al primer turno matutino del viernes para que no rechacen al camión?
+  visual_hint: 🚚🕘
+  cloze:
+  - 6
+  - 12
+  glossary:
+  - word: turned away
+    meaning: rechazados en puerta
+    ipa: tɜːrnd əˈweɪ
+- id: white-glove-assembly
+  text: Our order includes white-glove assembly and haul-away of all the cardboard packaging.
+  translation: Nuestro pedido incluye armado completo y retiro de todo el cartón de embalaje.
+  visual_hint: 🧤📦
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: white-glove
+    meaning: servicio completo con instalación
+    ipa: waɪt ɡlʌv
+- id: certificate-of-insurance
+  text: Could you email your carrier's certificate of insurance to our property manager today?
+  translation: ¿Podría enviar hoy por correo la póliza de seguro del transportista al administrador del edificio?
+  visual_hint: 📧🏢
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: certificate of insurance
+    meaning: póliza de responsabilidad civil
+    ipa: sərˈtɪfɪkət əv ɪnˈʃʊrəns
+- id: measure-doorway-clearance
+  text: The hallway doorway is thirty-four inches wide, so the sofa legs unscrew easily.
+  translation: La puerta del pasillo mide treinta y cuatro pulgadas, así que las patas se desenroscan fácil.
+  visual_hint: 📐🚪
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: clearance
+    meaning: espacio libre de paso
+    ipa: ˈklɪrəns
+- id: call-thirty-min-out
+  text: Please ask the driver to call me thirty minutes before arrival.
+  translation: Por favor pida al conductor llamarme treinta minutos antes de llegar.
+  visual_hint: 📞🚛
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: arrival
+    meaning: llegada
+    ipa: əˈraɪvəl
+roleplay:
+  ai_role: logistics coordinator
+  user_role: apartment resident
+  setting: Calling the furniture store's delivery dispatch desk.
+  turns:
+  - speaker: ai
+    text: Delivery Dispatch, hello! I see your sectional sofa is scheduled for Thursday afternoon.
+  - speaker: user
+    goal: Explica que tu edificio solo permite entregas de 9:00 AM a 12:00 PM por el elevador de carga.
+    suggested_lines:
+    - Hi, my building only allows furniture deliveries between 9:00 AM and noon when the freight elevator is padded.
+    - Could you move our stop to the first morning window on Friday so the crew isn't turned away?
+  - speaker: ai
+    text: Good catch! Afternoon trucks wouldn't be allowed past your concierge desk.
+  - speaker: user
+    goal: Pide cambiar la entrega al primer turno matutino del viernes.
+    suggested_lines:
+    - Could you move our stop to the first morning window on Friday so the crew isn't turned away?
+    - Our order includes white-glove assembly and haul-away of all the cardboard packaging.
+  - speaker: ai
+    text: I can lock you into Slot 1 on Friday between 9:00 and 10:30 AM.
+  - speaker: user
+    goal: Confirma que el pedido incluye armado y retiro del cartón.
+    suggested_lines:
+    - Our order includes white-glove assembly and haul-away of all the cardboard packaging.
+    - Could you email your carrier's certificate of insurance to our property manager today?
+  - speaker: ai
+    text: Yes, our two-person team will bolt the sectional together and take every scrap of packing material.
+  - speaker: user
+    goal: Pide enviar la póliza de seguro del transportista a la administración del edificio.
+    suggested_lines:
+    - Could you email your carrier's certificate of insurance to our property manager today?
+    - The hallway doorway is thirty-four inches wide, so the sofa legs unscrew easily.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

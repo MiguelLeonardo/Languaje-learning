@@ -1,0 +1,108 @@
+id: a2-welcoming-client-visitor
+title: Welcoming a visiting client
+title_es: Recibir a un cliente en la oficina
+cefr: A2
+topic: work-and-career
+description: Recibe a una clienta en el vestíbulo, ofrécele agua o café y acompáñala a la sala de juntas.
+phrases:
+- id: welcome-to-our-office
+  text: Good morning, Ms. Chen! Welcome to our headquarters—it's great to meet you in person.
+  translation: ¡Buenos días, Sra. Chen! Bienvenida a nuestra oficina central; qué gusto conocerla en persona.
+  visual_hint: 🏢🤝
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: in person
+    meaning: en persona
+    ipa: ɪn ˈpɜːrsən
+- id: how-was-your-flight
+  text: Did you have a smooth trip from the airport this morning?
+  translation: ¿Tuvo un trayecto tranquilo desde el aeropuerto esta mañana?
+  visual_hint: 🚕☀️
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: smooth
+    meaning: sin contratiempos / fluido
+    ipa: smuːð
+- id: hang-up-your-coat
+  text: Let me take your coat, and can I get you a coffee or sparkling water?
+  translation: Permítame su abrigo, ¿y puedo ofrecerle un café o agua con gas?
+  visual_hint: 🧥☕
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: let me
+    meaning: permítame
+    ipa: let miː
+- id: conference-room-down-hall
+  text: Our conference room is right down this hall on the left—after you!
+  translation: Nuestra sala de juntas está al final de este pasillo a la izquierda; ¡adelante!
+  visual_hint: 🚪➡️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: after you
+    meaning: pase usted primero / adelante
+    ipa: ˈæftər juː
+- id: guest-wifi-on-board
+  text: The guest Wi-Fi password is written on the whiteboard if you need it.
+  translation: La clave del wifi para visitas está escrita en el pizarrón por si la necesita.
+  visual_hint: 📶📋
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: whiteboard
+    meaning: pizarrón blanco
+    ipa: ˈwaɪtbɔːrd
+- id: team-joining-in-two-minutes
+  text: The rest of the team will join us in just two minutes.
+  translation: El resto del equipo se nos unirá en solo dos minutos.
+  visual_hint: 👥⏱️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: the rest of
+    meaning: el resto de
+    ipa: ðə rest əv
+roleplay:
+  ai_role: visiting client (Ms. Chen)
+  user_role: account coordinator
+  setting: Company reception lobby before a 10 AM meeting.
+  turns:
+  - speaker: ai
+    text: Good morning! I'm Mei Chen, here for the ten o'clock product meeting.
+  - speaker: user
+    goal: Da la bienvenida a la Sra. Chen a la oficina.
+    suggested_lines:
+    - Good morning, Ms. Chen! Welcome to our headquarters—it's great to meet you in person.
+    - Did you have a smooth trip from the airport this morning?
+  - speaker: ai
+    text: Great to meet you too! Your lobby is lovely.
+  - speaker: user
+    goal: Pregunta si tuvo un buen traslado desde el aeropuerto.
+    suggested_lines:
+    - Did you have a smooth trip from the airport this morning?
+    - Let me take your coat, and can I get you a coffee or sparkling water?
+  - speaker: ai
+    text: Yes, the traffic wasn't bad at all today!
+  - speaker: user
+    goal: Ofrécele guardar su abrigo y traerle café o agua con gas.
+    suggested_lines:
+    - Let me take your coat, and can I get you a coffee or sparkling water?
+    - Our conference room is right down this hall on the left—after you!
+  - speaker: ai
+    text: A cup of black coffee would be wonderful, thank you.
+  - speaker: user
+    goal: Invítala a pasar hacia la sala de juntas al final del pasillo.
+    suggested_lines:
+    - Our conference room is right down this hall on the left—after you!
+    - The guest Wi-Fi password is written on the whiteboard if you need it.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

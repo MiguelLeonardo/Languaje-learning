@@ -1,0 +1,108 @@
+id: a2-reporting-stolen-phone
+title: Filing a police report for a stolen phone
+title_es: Obtener acta policial por robo de teléfono
+cefr: A2
+topic: health-and-emergencies
+description: Solicita en la comisaría un acta policial con sello para que tu seguro te reponga el teléfono.
+phrases:
+- id: report-stolen-phone
+  text: Good afternoon, I need to file a police report for my stolen mobile phone.
+  translation: Buenas tardes, necesito levantar un acta policial por el robo de mi teléfono móvil.
+  visual_hint: 📱👮
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: file a report
+    meaning: levantar un reporte / denuncia
+    ipa: faɪl ə rɪˈpɔːrt
+- id: taken-from-coat-pocket
+  text: Someone took it from my coat pocket on the crowded tram around noon.
+  translation: Alguien lo sacó del bolsillo de mi abrigo en el tranvía lleno alrededor del mediodía.
+  visual_hint: 🚊🧥
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: crowded
+    meaning: lleno de gente / concurrido
+    ipa: ˈkraʊdɪd
+- id: locked-via-find-my
+  text: I already locked the screen remotely using my friend's tablet and wrote down the IMEI number.
+  translation: Ya bloqueé la pantalla a distancia con la tablet de mi amigo y anoté el número IMEI.
+  visual_hint: 🔒🔢
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: remotely
+    meaning: a distancia / remotamente
+    ipa: rɪˈmoʊtli
+- id: stamped-copy-for-insurance
+  text: Could I get a stamped paper copy of the report to send to my insurance company?
+  translation: ¿Podría darme una copia impresa y sellada del acta para enviarla a mi aseguradora?
+  visual_hint: 📑🖋️
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: stamped
+    meaning: sellada
+    ipa: stæmpt
+- id: black-iphone-blue-case
+  text: It is a black iPhone 15 in a dark blue silicone case.
+  translation: Es un iPhone 15 negro con una funda de silicona azul oscuro.
+  visual_hint: 📱🔵
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: case
+    meaning: funda protectora
+    ipa: keɪs
+- id: thank-you-for-your-help
+  text: Thank you for your help and for printing the English version of the form!
+  translation: ¡Gracias por su ayuda y por imprimir la versión en inglés del formulario!
+  visual_hint: 🤝📄
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: version
+    meaning: versión
+    ipa: ˈvɜːrʒən
+roleplay:
+  ai_role: desk officer
+  user_role: tourist
+  setting: Tourist police station reception desk.
+  turns:
+  - speaker: ai
+    text: Good afternoon. Come to window two—are you safe and unharmed?
+  - speaker: user
+    goal: Explica que necesitas levantar un acta policial por el robo de tu teléfono.
+    suggested_lines:
+    - Good afternoon, I need to file a police report for my stolen mobile phone.
+    - Someone took it from my coat pocket on the crowded tram around noon.
+  - speaker: ai
+    text: Yes, I'm glad you weren't hurt. Where and when did this happen?
+  - speaker: user
+    goal: Cuenta que lo sacaron de tu abrigo en el tranvía al mediodía.
+    suggested_lines:
+    - Someone took it from my coat pocket on the crowded tram around noon.
+    - I already locked the screen remotely using my friend's tablet and wrote down the IMEI number.
+  - speaker: ai
+    text: Smart thinking! Having the serial or IMEI number helps our database a lot.
+  - speaker: user
+    goal: Indica que ya bloqueaste el equipo a distancia y tienes el número IMEI.
+    suggested_lines:
+    - I already locked the screen remotely using my friend's tablet and wrote down the IMEI number.
+    - Could I get a stamped paper copy of the report to send to my insurance company?
+  - speaker: ai
+    text: I've typed all the details into the official incident form. Please sign at the bottom.
+  - speaker: user
+    goal: Pide una copia impresa y sellada del reporte para tu seguro.
+    suggested_lines:
+    - Could I get a stamped paper copy of the report to send to my insurance company?
+    - It is a black iPhone 15 in a dark blue silicone case.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

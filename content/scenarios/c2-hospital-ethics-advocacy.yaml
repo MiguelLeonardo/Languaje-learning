@@ -1,0 +1,116 @@
+id: c2-hospital-ethics-advocacy
+title: Advocating during multidisciplinary hospital rounds
+title_es: Defender plan de cuidado en junta médica
+cefr: C2
+topic: health-and-emergencies
+description: Participa como representante familiar en el pase de visita multidisciplinario alineando cardiología,
+  nefrología y rehabilitación.
+phrases:
+- id: reconcile-conflicting-guidance
+  text: Before we adjust the diuretic regimen, could we reconcile the fluid targets between cardiology and nephrology?
+  translation: Antes de ajustar el esquema de diuréticos, ¿podríamos conciliar las metas de líquidos entre cardiología
+    y nefrología?
+  visual_hint: 🩺⚖️
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: reconcile
+    meaning: conciliar / armonizar criterios
+    ipa: ˈrekənsaɪl
+- id: prioritize-functional-mobility
+  text: My father's overarching goal is preserving independent mobility, so we want early bedside physical therapy
+    prioritized.
+  translation: La prioridad fundamental de mi padre es conservar su movilidad independiente, por lo que pedimos
+    priorizar fisioterapia temprana.
+  visual_hint: 🚶‍♂️🌟
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: overarching
+    meaning: primordial / rector
+    ipa: ˌoʊvərˈɑːrtʃɪŋ
+- id: deprescribe-sedating-meds
+  text: Could we also review his nighttime medication list to deprescribe any sedatives that heighten delirium risk?
+  translation: ¿Podríamos también revisar su medicación nocturna para retirar sedantes que eleven el riesgo de desorientación?
+  visual_hint: 🌙💊
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: deprescribe
+    meaning: retirar medicamentos innecesarios de forma supervisada
+    ipa: ˌdiːprɪˈskraɪb
+- id: structured-discharge-milestones
+  text: Let's define clear physiological and mobility milestones for Friday's transition to outpatient cardiac rehab.
+  translation: Definamos hitos fisiológicos y de movilidad claros para su transición del viernes a rehabilitación
+    ambulatoria.
+  visual_hint: 📋🏠
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: milestones
+    meaning: hitos / metas clínicas verificables
+    ipa: ˈmaɪlstoʊnz
+- id: single-point-of-contact
+  text: Having the case manager send one consolidated afternoon update keeps our whole family aligned.
+  translation: Que la gestora de casos envíe un resumen diario por la tarde mantiene a toda la familia coordinada.
+  visual_hint: 📲🤝
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: consolidated
+    meaning: unificado / consolidado
+    ipa: kənˈsɑːlɪdeɪtɪd
+- id: grateful-for-collaborative-care
+  text: We're deeply grateful for how collaboratively your teams are listening to his goals.
+  translation: Estamos profundamente agradecidos por la forma tan colaborativa en que escuchan sus prioridades.
+  visual_hint: 🙏❤️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: collaboratively
+    meaning: de forma colaborativa
+    ipa: kəˈlæbərətɪvli
+roleplay:
+  ai_role: attending hospitalist
+  user_role: family healthcare proxy
+  setting: Morning multidisciplinary bedside rounds.
+  turns:
+  - speaker: ai
+    text: Good morning. We're reviewing your father's chart with the inpatient team today.
+  - speaker: user
+    goal: Pide conciliar las metas de líquidos entre cardiología y nefrología.
+    suggested_lines:
+    - Before we adjust the diuretic regimen, could we reconcile the fluid targets between cardiology and nephrology?
+    - My father's overarching goal is preserving independent mobility, so we want early bedside physical therapy
+      prioritized.
+  - speaker: ai
+    text: Cardiology and nephrology just huddled—a gentle oral dose protects his kidney function while clearing
+      congestion.
+  - speaker: user
+    goal: Subraya que la prioridad es preservar su movilidad con fisioterapia temprana.
+    suggested_lines:
+    - My father's overarching goal is preserving independent mobility, so we want early bedside physical therapy
+      prioritized.
+    - Could we also review his nighttime medication list to deprescribe any sedatives that heighten delirium risk?
+  - speaker: ai
+    text: We've ordered daily inpatient physical therapy starting at 10:00 AM today.
+  - speaker: user
+    goal: Solicita revisar la medicación nocturna para evitar fármacos que causen desorientación.
+    suggested_lines:
+    - Could we also review his nighttime medication list to deprescribe any sedatives that heighten delirium risk?
+    - Let's define clear physiological and mobility milestones for Friday's transition to outpatient cardiac rehab.
+  - speaker: ai
+    text: Good catch—we'll discontinue the nighttime antihistamine sleep aid immediately.
+  - speaker: user
+    goal: Propón definir metas claras para el alta hacia rehabilitación ambulatoria el viernes.
+    suggested_lines:
+    - Let's define clear physiological and mobility milestones for Friday's transition to outpatient cardiac rehab.
+    - Having the case manager send one consolidated afternoon update keeps our whole family aligned.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

@@ -1,0 +1,110 @@
+id: c1-moderating-book-discussion
+title: Moderating a literary book club
+title_es: Moderar un club de lectura literario
+cefr: C1
+topic: social-and-smalltalk
+description: Guía un debate sobre narradores poco fiables, simbolismo y estructura no lineal procurando que todos
+  participen.
+phrases:
+- id: unreliable-narrator-device
+  text: What fascinated me was how the author uses an unreliable narrator to make us question our own assumptions.
+  translation: Lo que me fascinó fue cómo la autora utiliza un narrador poco fiable para hacernos cuestionar nuestras
+    suposiciones.
+  visual_hint: 📚🧐
+  cloze:
+  - 6
+  - 12
+  glossary:
+  - word: unreliable narrator
+    meaning: narrador poco fiable
+    ipa: ˌʌnrɪˈlaɪəbəl ˈnæreɪtər
+- id: nonlinear-flashbacks
+  text: Do you feel the nonlinear flashbacks heightened the suspense, or did they fragment the emotional arc?
+  translation: ¿Sienten que los saltos temporales aumentaron el suspenso o fragmentaron el arco emocional?
+  visual_hint: ⏳📖
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: heightened
+    meaning: intensificaron / aumentaron
+    ipa: ˈhaɪtənd
+- id: ambiguous-final-chapter
+  text: Rather than tying everything up neatly, the ambiguous ending forces the reader to sit with uncertainty.
+  translation: En lugar de atar todos los cabos, el final ambiguo obliga al lector a convivir con la incertidumbre.
+  visual_hint: 🌫️✨
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: tying up neatly
+    meaning: resolver todo de forma cerrada
+    ipa: ˈtaɪɪŋ ʌp ˈniːtli
+- id: hear-from-quiet-side
+  text: Elena, you've been nodding thoughtfully—how did that closing metaphor land for you?
+  translation: Elena, has estado asintiendo pensativa; ¿cómo interpretaste esa metáfora final?
+  visual_hint: 🗣️🤝
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: nodding
+    meaning: asintiendo con la cabeza
+    ipa: ˈnɑːdɪŋ
+- id: recurring-motif-water
+  text: The recurring motif of rising tide water mirrors the family's unspoken secrets.
+  translation: El motivo recurrente de la marea refleja los secretos no dichos de la familia.
+  visual_hint: 🌊🔍
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: motif
+    meaning: motivo literario recurrente
+    ipa: moʊˈtiːf
+- id: vote-on-next-months-pick
+  text: Before we wrap up, let's cast our votes for next month's biography shortlist.
+  translation: Antes de cerrar, votemos entre las biografías finalistas para el próximo mes.
+  visual_hint: 🗳️📅
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: shortlist
+    meaning: lista corta de finalistas
+    ipa: ˈʃɔːrtlɪst
+roleplay:
+  ai_role: book club member
+  user_role: discussion moderator
+  setting: Evening literary circle in an independent bookstore.
+  turns:
+  - speaker: ai
+    text: Alright everyone, we've all finished the novel! What stood out to you about the protagonist's voice?
+  - speaker: user
+    goal: Abre el debate destacando el recurso del narrador poco fiable.
+    suggested_lines:
+    - What fascinated me was how the author uses an unreliable narrator to make us question our own assumptions.
+    - Do you feel the nonlinear flashbacks heightened the suspense, or did they fragment the emotional arc?
+  - speaker: ai
+    text: I kept changing my mind about who was telling the truth in Part Two!
+  - speaker: user
+    goal: Pregunta al grupo si los saltos en el tiempo intensificaron el suspenso.
+    suggested_lines:
+    - Do you feel the nonlinear flashbacks heightened the suspense, or did they fragment the emotional arc?
+    - Rather than tying everything up neatly, the ambiguous ending forces the reader to sit with uncertainty.
+  - speaker: ai
+    text: The timeline shifts were dizzying at first, though that final chapter pulled the threads together.
+  - speaker: user
+    goal: Reflexiona sobre cómo el final abierto invita a convivir con la incertidumbre.
+    suggested_lines:
+    - Rather than tying everything up neatly, the ambiguous ending forces the reader to sit with uncertainty.
+    - Elena, you've been nodding thoughtfully—how did that closing metaphor land for you?
+  - speaker: ai
+    text: Some of us loved the open ending, while others wanted a clear resolution!
+  - speaker: user
+    goal: Invita amablemente a participar a quien aún no ha tomado la palabra.
+    suggested_lines:
+    - Elena, you've been nodding thoughtfully—how did that closing metaphor land for you?
+    - The recurring motif of rising tide water mirrors the family's unspoken secrets.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

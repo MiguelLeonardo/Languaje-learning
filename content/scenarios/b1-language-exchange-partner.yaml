@@ -1,0 +1,109 @@
+id: b1-language-exchange-partner
+title: Setting up a language exchange
+title_es: Acordar dinámica de intercambio de idiomas
+cefr: B1
+topic: social-and-smalltalk
+description: Acuerda con tu compañero de intercambio hablar treinta minutos en español y treinta en inglés corrigiendo
+  con confianza.
+phrases:
+- id: thirty-minutes-each-language
+  text: How about we speak thirty minutes in Spanish first, and then thirty minutes in English?
+  translation: ¿Qué te parece si hablamos treinta minutos en español primero y luego treinta en inglés?
+  visual_hint: 🗣️⏱️
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: how about
+    meaning: ¿qué te parece si...?
+    ipa: haʊ əˈbaʊt
+- id: set-a-phone-timer
+  text: I'll set a gentle timer on my phone so neither language takes over the whole hour!
+  translation: Pondré un temporizador suave en mi teléfono para que ningún idioma acapare toda la hora.
+  visual_hint: 📱🔔
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: takes over
+    meaning: acaparar / dominar
+    ipa: teɪks ˈoʊvər
+- id: correct-my-pronunciation
+  text: Please feel free to correct my pronunciation or suggest a more natural phrase anytime.
+  translation: Por favor siéntete con total confianza de corregir mi pronunciación o sugerir una frase más natural.
+  visual_hint: 🎯💬
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: anytime
+    meaning: en cualquier momento
+    ipa: ˈenitaɪm
+- id: write-down-new-idioms
+  text: I brought a small notebook to jot down three new idioms from every session.
+  translation: Traje una libreta pequeña para anotar tres modismos nuevos en cada sesión.
+  visual_hint: 📓✍️
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: jot down
+    meaning: apuntar / anotar rápido
+    ipa: dʒɑːt daʊn
+- id: pick-topic-for-next-week
+  text: Next week we could talk about our favorite travel stories or movies.
+  translation: La próxima semana podríamos hablar de nuestras historias de viaje o películas favoritas.
+  visual_hint: 🌍🎬
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: stories
+    meaning: historias / anécdotas
+    ipa: ˈstɔːriz
+- id: same-cafe-next-wednesday
+  text: This was so helpful and fun—same time and table next Wednesday?
+  translation: Esto fue muy útil y divertido; ¿misma hora y mesa el próximo miércoles?
+  visual_hint: ☕📅
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: helpful
+    meaning: útil / de gran ayuda
+    ipa: ˈhelpfəl
+roleplay:
+  ai_role: language partner (Claire)
+  user_role: learner
+  setting: First coffee meetup with a native English speaker learning Spanish.
+  turns:
+  - speaker: ai
+    text: It's so nice to finally meet in person! How would you like to structure our practice?
+  - speaker: user
+    goal: Propón hablar treinta minutos en español y luego treinta en inglés.
+    suggested_lines:
+    - How about we speak thirty minutes in Spanish first, and then thirty minutes in English?
+    - I'll set a gentle timer on my phone so neither language takes over the whole hour!
+  - speaker: ai
+    text: Splitting it fifty-fifty is super fair—otherwise I get lazy and switch back to English!
+  - speaker: user
+    goal: Sugiere poner un temporizador para dar el mismo tiempo a ambos idiomas.
+    suggested_lines:
+    - I'll set a gentle timer on my phone so neither language takes over the whole hour!
+    - Please feel free to correct my pronunciation or suggest a more natural phrase anytime.
+  - speaker: ai
+    text: How do you prefer to handle grammar or vocabulary corrections while we talk?
+  - speaker: user
+    goal: Pídele que corrija tu pronunciación o sugiera expresiones más naturales.
+    suggested_lines:
+    - Please feel free to correct my pronunciation or suggest a more natural phrase anytime.
+    - I brought a small notebook to jot down three new idioms from every session.
+  - speaker: ai
+    text: Same for me in Spanish! Tell me whenever a verb tense sounds unnatural.
+  - speaker: user
+    goal: Muestra tu libreta donde anotarás tres expresiones nuevas cada semana.
+    suggested_lines:
+    - I brought a small notebook to jot down three new idioms from every session.
+    - Next week we could talk about our favorite travel stories or movies.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

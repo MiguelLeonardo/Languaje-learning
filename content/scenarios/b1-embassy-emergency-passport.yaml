@@ -1,0 +1,109 @@
+id: b1-embassy-emergency-passport
+title: Applying for an emergency passport
+title_es: Tramitar pasaporte de emergencia en el consulado
+cefr: B1
+topic: health-and-emergencies
+description: Acude a la sección consular con tu denuncia policial, fotos tamaño pasaporte y boleto de avión para
+  obtener un pasaporte de emergencia.
+phrases:
+- id: apply-emergency-travel-doc
+  text: Good morning. My backpack was stolen yesterday, and I need an emergency passport to fly home on Friday.
+  translation: Buenos días. Ayer robaron mi mochila y necesito un pasaporte de emergencia para volar a casa el viernes.
+  visual_hint: 🛂✈️
+  cloze:
+  - 6
+  - 12
+  glossary:
+  - word: emergency passport
+    meaning: pasaporte de emergencia
+    ipa: ɪˈmɜːrdʒənsi ˈpæspɔːrt
+- id: police-report-and-copy
+  text: I brought the official police report, two biometric passport photos, and a photocopy of my old passport.
+  translation: Traje el acta policial oficial, dos fotos biométricas y una fotocopia de mi pasaporte anterior.
+  visual_hint: 📑📸
+  cloze:
+  - 5
+  - 11
+  glossary:
+  - word: photocopy
+    meaning: fotocopia / copia impresa
+    ipa: ˈfoʊtoʊkɑːpi
+- id: confirmed-return-itinerary
+  text: Here is my confirmed airline itinerary showing my departure flight in forty-eight hours.
+  translation: Aquí está mi itinerario aéreo confirmado que muestra mi vuelo de salida en cuarenta y ocho horas.
+  visual_hint: 🎫🕒
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: itinerary
+    meaning: itinerario de vuelo
+    ipa: aɪˈtɪnəreri
+- id: pick-up-this-afternoon
+  text: Can the limited-validity passport be printed for pickup this afternoon?
+  translation: ¿El pasaporte de validez limitada puede imprimirse para recogerlo hoy por la tarde?
+  visual_hint: 🖨️🕓
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: pickup
+    meaning: recogida en ventanilla
+    ipa: ˈpɪkʌp
+- id: valid-for-direct-return
+  text: I understand this emergency book is valid for one year to complete my return journey.
+  translation: Entiendo que este pasaporte de emergencia es válido por un año para completar mi regreso.
+  visual_hint: 📘✅
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: journey
+    meaning: viaje / trayecto
+    ipa: ˈdʒɜːrni
+- id: huge-weight-off-shoulders
+  text: Come back at 3:00 PM? That is a huge weight off my shoulders—thank you!
+  translation: ¿Regresar a las 3:00 PM? Me quita un enorme peso de encima; ¡muchas gracias!
+  visual_hint: 😌🙌
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: weight off my shoulders
+    meaning: un gran peso de encima / alivio
+    ipa: weɪt ɔːf maɪ ˈʃoʊldərz
+roleplay:
+  ai_role: consular officer
+  user_role: citizen abroad
+  setting: Embassy citizen services window.
+  turns:
+  - speaker: ai
+    text: Good morning. Welcome to American Citizen Services. How can we assist you?
+  - speaker: user
+    goal: Explica que robaron tu mochila y necesitas un pasaporte de emergencia para volar el viernes.
+    suggested_lines:
+    - Good morning. My backpack was stolen yesterday, and I need an emergency passport to fly home on Friday.
+    - I brought the official police report, two biometric passport photos, and a photocopy of my old passport.
+  - speaker: ai
+    text: Having a photocopy of your lost passport speeds up identity verification tremendously!
+  - speaker: user
+    goal: Presenta el acta policial, las dos fotografías y la copia de tu pasaporte anterior.
+    suggested_lines:
+    - I brought the official police report, two biometric passport photos, and a photocopy of my old passport.
+    - Here is my confirmed airline itinerary showing my departure flight in forty-eight hours.
+  - speaker: ai
+    text: Thank you. May I also see proof of your urgent travel date?
+  - speaker: user
+    goal: Muestra tu itinerario de vuelo confirmado para dentro de 48 horas.
+    suggested_lines:
+    - Here is my confirmed airline itinerary showing my departure flight in forty-eight hours.
+    - Can the limited-validity passport be printed for pickup this afternoon?
+  - speaker: ai
+    text: Everything is verified. Please pay the passport fee at Cashier Window 1.
+  - speaker: user
+    goal: Pregunta si el documento puede estar listo para recogerlo esta misma tarde.
+    suggested_lines:
+    - Can the limited-validity passport be printed for pickup this afternoon?
+    - I understand this emergency book is valid for one year to complete my return journey.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

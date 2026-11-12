@@ -40,7 +40,7 @@ def test_health_ready_and_auth_required(client, auth):
     ).json()
     assert "Hola" in tpl2["response"]
     assert client.get("/health").json() == {"status": "ok"}
-    assert client.get("/ready").json()["scenarios"] == 36
+    assert client.get("/ready").json()["scenarios"] == 180
     st = client.get("/v1/providers/status", headers={"X-OpenAI-Key": "sk-test"}).json()
     assert st["has_openai_key"] is True and st["speech_provider"] == "openai_whisper"
     st_gc = client.get(
@@ -63,9 +63,13 @@ def test_catalog(client, auth):
     assert [lv["cefr"] for lv in levels] == ["A1", "A2", "B1", "B2", "C1", "C2"]
     assert levels[0]["band"] == "basic"
     modules = client.get("/v1/modules", headers=auth).json()
-    assert len(modules) == 6 and all(m["scenarios"] == 6 for m in modules)
-    assert len(client.get("/v1/scenarios?band=intermediate", headers=auth).json()) == 12
-    assert len(client.get("/v1/scenarios?topic=health-and-emergencies", headers=auth).json()) == 6
+    assert len(modules) == 6 and all(m["scenarios"] == 30 for m in modules)
+    assert len(client.get("/v1/scenarios?band=intermediate", headers=auth).json()) == 60
+    assert len(client.get("/v1/scenarios?topic=health-and-emergencies", headers=auth).json()) == 30
+    for m in modules:
+        for lv in ["A1", "A2", "B1", "B2", "C1", "C2"]:
+            cell = client.get(f"/v1/scenarios?topic={m['id']}&cefr={lv}", headers=auth).json()
+            assert len(cell) >= 5
     c2_ids = {s["id"] for s in client.get("/v1/scenarios?cefr=C2", headers=auth).json()}
     assert "c2-dinner-debate" in c2_ids and "c2-executive-pitch" in c2_ids
     assert client.get("/v1/scenarios/a1-ordering-coffee", headers=auth).json()["roleplay"]["ai_role"] == "barista"

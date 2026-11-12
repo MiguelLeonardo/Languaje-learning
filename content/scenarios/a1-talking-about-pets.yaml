@@ -1,0 +1,108 @@
+id: a1-talking-about-pets
+title: Chatting about dogs at the park
+title_es: Hablar de mascotas en el parque
+cefr: A1
+topic: social-and-smalltalk
+description: Conversa con otro dueño de perro en el parque sobre el nombre, la edad y qué le gusta jugar a tu mascota.
+phrases:
+- id: cute-golden-dog
+  text: Your dog is so cute and friendly! What is his name?
+  translation: ¡Tu perro es muy lindo y amigable! ¿Cómo se llama?
+  visual_hint: 🐕💛
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: cute
+    meaning: lindo / tierno
+    ipa: kjuːt
+- id: my-dog-is-max
+  text: My dog's name is Toby, and he is two years old.
+  translation: Mi perro se llama Toby y tiene dos años.
+  visual_hint: 🐾🎂
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: years old
+    meaning: años de edad
+    ipa: jɪrz oʊld
+- id: loves-the-tennis-ball
+  text: He loves chasing the yellow tennis ball all day.
+  translation: Le encanta perseguir la pelota de tenis amarilla todo el día.
+  visual_hint: 🎾🐕
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: chasing
+    meaning: perseguir / correr tras
+    ipa: ˈtʃeɪsɪŋ
+- id: come-here-every-morning
+  text: We walk in this park every morning at eight.
+  translation: Caminamos en este parque todas las mañanas a las ocho.
+  visual_hint: 🌳🕗
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: every morning
+    meaning: todas las mañanas
+    ipa: ˈevri ˈmɔːrnɪŋ
+- id: give-him-a-treat
+  text: May I give Bruno a small dog biscuit?
+  translation: ¿Puedo darle a Bruno una pequeña galleta para perro?
+  visual_hint: 🦴😊
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: biscuit
+    meaning: galleta / premio
+    ipa: ˈbɪskɪt
+- id: time-for-water
+  text: Look, they are thirsty now—let's go to the water bowl!
+  translation: Mira, ya tienen sed; ¡vamos al bebedero de agua!
+  visual_hint: 💧🐕
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: thirsty
+    meaning: sedientos / con sed
+    ipa: ˈθɜːrsti
+roleplay:
+  ai_role: dog owner
+  user_role: park visitor
+  setting: A sunny dog park in the afternoon.
+  turns:
+  - speaker: ai
+    text: Hi! Our dogs are having fun running together!
+  - speaker: user
+    goal: Elogia a su perro y pregunta cómo se llama.
+    suggested_lines:
+    - Your dog is so cute and friendly! What is his name?
+    - My dog's name is Toby, and he is two years old.
+  - speaker: ai
+    text: Thank you! His name is Bruno. What about yours?
+  - speaker: user
+    goal: Dile que tu perro se llama Toby y tiene dos años.
+    suggested_lines:
+    - My dog's name is Toby, and he is two years old.
+    - He loves chasing the yellow tennis ball all day.
+  - speaker: ai
+    text: Toby has so much energy! Does he like playing fetch?
+  - speaker: user
+    goal: Cuenta que a tu perro le encanta perseguir la pelota de tenis.
+    suggested_lines:
+    - He loves chasing the yellow tennis ball all day.
+    - We walk in this park every morning at eight.
+  - speaker: ai
+    text: Bruno loves tennis balls too! Do you live near the park?
+  - speaker: user
+    goal: Dile que caminan en este parque todas las mañanas a las ocho.
+    suggested_lines:
+    - We walk in this park every morning at eight.
+    - May I give Bruno a small dog biscuit?
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

@@ -1,0 +1,108 @@
+id: a1-buying-sunscreen
+title: Buying sunscreen and aloe vera
+title_es: Comprar protector solar en la farmacia
+cefr: A1
+topic: health-and-emergencies
+description: Pide un bloqueador solar factor 50 y gel de aloe vera para una quemadura de sol en la playa.
+phrases:
+- id: sunscreen-fifty-spf
+  text: Hello, do you have sunscreen with SPF 50?
+  translation: Hola, ¿tienen protector solar con factor 50?
+  visual_hint: 🧴☀️
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: sunscreen
+    meaning: protector / bloqueador solar
+    ipa: ˈsʌnskriːn
+- id: red-shoulders-from-sun
+  text: My shoulders are red from the sun today.
+  translation: Mis hombros están rojos por el sol de hoy.
+  visual_hint: 🏖️🔴
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: shoulders
+    meaning: hombros
+    ipa: ˈʃoʊldərz
+- id: cooling-aloe-gel
+  text: Do you have cold aloe vera gel for my skin?
+  translation: ¿Tienen gel frío de aloe vera para mi piel?
+  visual_hint: 🌿🧊
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: skin
+    meaning: piel
+    ipa: skɪn
+- id: drink-lots-of-water
+  text: I will also buy two big bottles of water.
+  translation: También compraré dos botellas grandes de agua.
+  visual_hint: 💧🍾
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: bottles
+    meaning: botellas
+    ipa: ˈbɑːtəlz
+- id: wear-a-sun-hat
+  text: Put the gel on three times a day.
+  translation: Aplique el gel tres veces al día.
+  visual_hint: 🕒👌
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: three times
+    meaning: tres veces
+    ipa: θriː taɪmz
+- id: thank-you-pharmacist
+  text: Thank you! My skin will feel better tonight.
+  translation: ¡Gracias! Mi piel se sentirá mejor esta noche.
+  visual_hint: 😌🌙
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: tonight
+    meaning: esta noche
+    ipa: təˈnaɪt
+roleplay:
+  ai_role: pharmacist
+  user_role: beachgoer
+  setting: A coastal pharmacy on a hot sunny day.
+  turns:
+  - speaker: ai
+    text: Hello! Welcome to Beach Pharmacy. How can I help you?
+  - speaker: user
+    goal: Pregunta si tienen protector solar con factor 50.
+    suggested_lines:
+    - Hello, do you have sunscreen with SPF 50?
+    - My shoulders are red from the sun today.
+  - speaker: ai
+    text: Yes, here is our waterproof SPF 50 lotion.
+  - speaker: user
+    goal: Explica que tus hombros están rojos por el sol.
+    suggested_lines:
+    - My shoulders are red from the sun today.
+    - Do you have cold aloe vera gel for my skin?
+  - speaker: ai
+    text: Oh, a mild sunburn! You should put cooling gel on it.
+  - speaker: user
+    goal: Pide gel frío de aloe vera para tu piel.
+    suggested_lines:
+    - Do you have cold aloe vera gel for my skin?
+    - I will also buy two big bottles of water.
+  - speaker: ai
+    text: This green aloe gel feels very cool and gentle.
+  - speaker: user
+    goal: Agrega dos botellas grandes de agua.
+    suggested_lines:
+    - I will also buy two big bottles of water.
+    - Put the gel on three times a day.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

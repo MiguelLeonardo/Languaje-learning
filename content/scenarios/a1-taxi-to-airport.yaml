@@ -1,0 +1,108 @@
+id: a1-taxi-to-airport
+title: Taking a taxi to the airport
+title_es: Tomar un taxi al aeropuerto
+cefr: A1
+topic: travel-and-transport
+description: Sube a un taxi, indica que vas a la terminal internacional y pregunta cuánto cuesta el viaje.
+phrases:
+- id: to-airport-terminal
+  text: Hello! To the international airport, Terminal 2, please.
+  translation: ¡Hola! Al aeropuerto internacional, Terminal 2, por favor.
+  visual_hint: 🚕✈️
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: terminal
+    meaning: terminal aérea
+    ipa: ˈtɜːrmɪnəl
+- id: put-bags-in-trunk
+  text: Can we put these two suitcases in the trunk?
+  translation: ¿Podemos poner estas dos maletas en el maletero?
+  visual_hint: 🧳🚗
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: trunk
+    meaning: maletero / cajuela
+    ipa: trʌŋk
+- id: how-long-drive
+  text: How many minutes is the drive to the airport?
+  translation: ¿De cuántos minutos es el trayecto al aeropuerto?
+  visual_hint: ⏱️🛣️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: drive
+    meaning: trayecto en auto
+    ipa: draɪv
+- id: pay-by-card-taxi
+  text: Here we are! Can I pay with my card?
+  translation: ¡Aquí estamos! ¿Puedo pagar con mi tarjeta?
+  visual_hint: 💳🚕
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: here we are
+    meaning: aquí estamos / llegamos
+    ipa: hɪr wiː ɑːr
+- id: need-a-receipt-taxi
+  text: Could I have a printed receipt, please?
+  translation: ¿Me podría dar un recibo impreso, por favor?
+  visual_hint: 🧾🙌
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: printed
+    meaning: impreso
+    ipa: ˈprɪntɪd
+- id: thank-you-safe-drive
+  text: Thank you for the safe ride! Have a good day.
+  translation: ¡Gracias por el viaje seguro! Que tenga un buen día.
+  visual_hint: 😊👋
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: ride
+    meaning: viaje / traslado
+    ipa: raɪd
+roleplay:
+  ai_role: taxi driver
+  user_role: passenger
+  setting: Outside the city hotel with two suitcases.
+  turns:
+  - speaker: ai
+    text: Good morning! Where can I take you today?
+  - speaker: user
+    goal: Pide ir al aeropuerto internacional, Terminal 2.
+    suggested_lines:
+    - Hello! To the international airport, Terminal 2, please.
+    - Can we put these two suitcases in the trunk?
+  - speaker: ai
+    text: Terminal 2, sure! Do you have luggage with you?
+  - speaker: user
+    goal: Pregunta si pueden poner las dos maletas en el maletero.
+    suggested_lines:
+    - Can we put these two suitcases in the trunk?
+    - How many minutes is the drive to the airport?
+  - speaker: ai
+    text: All loaded! Hop in and buckle your seatbelt.
+  - speaker: user
+    goal: Pregunta cuántos minutos toma llegar al aeropuerto.
+    suggested_lines:
+    - How many minutes is the drive to the airport?
+    - Here we are! Can I pay with my card?
+  - speaker: ai
+    text: It takes about twenty-five minutes this morning. Here is Terminal 2!
+  - speaker: user
+    goal: Pregunta si puedes pagar con tarjeta al llegar.
+    suggested_lines:
+    - Here we are! Can I pay with my card?
+    - Could I have a printed receipt, please?
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

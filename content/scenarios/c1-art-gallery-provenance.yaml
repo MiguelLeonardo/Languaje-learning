@@ -1,0 +1,109 @@
+id: c1-art-gallery-provenance
+title: Acquiring a painting at an art gallery
+title_es: Consultar procedencia y conservación en galería
+cefr: C1
+topic: hotel-and-shopping
+description: Conversa con el director de una galería sobre procedencia de una obra, cristal antirreflejo y transporte
+  asegurado.
+phrases:
+- id: exhibition-provenance
+  text: Could you share the full provenance and exhibition history for this oil-on-linen piece?
+  translation: ¿Podría compartir la procedencia completa y el historial de exposiciones de este óleo sobre lino?
+  visual_hint: 🖼️📜
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: provenance
+    meaning: procedencia / historial de propiedad
+    ipa: ˈprɑːvənəns
+- id: museum-grade-uv-glazing
+  text: If we hang it in a sunlit foyer, would you recommend framing it behind museum-grade UV acrylic?
+  translation: Si lo colgamos en un vestíbulo iluminado, ¿recomendaría enmarcarlo con acrílico UV de grado museístico?
+  visual_hint: ☀️🛡️
+  cloze:
+  - 5
+  - 11
+  glossary:
+  - word: museum-grade
+    meaning: de calidad de museo
+    ipa: mjuːˈziːəm ɡreɪd
+- id: condition-report-craquelure
+  text: The impasto brushwork is vibrant, and I see zero surface craquelure under raking light.
+  translation: La pincelada de empaste es vibrante y no veo ninguna grieta superficial bajo luz rasante.
+  visual_hint: 🎨🔦
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: impasto
+    meaning: empaste (capa gruesa de pintura)
+    ipa: ɪmˈpæstoʊ
+- id: fine-art-crate-shipping
+  text: Can your registrars arrange climate-controlled fine-art shipping and wall installation?
+  translation: ¿Puede su equipo gestionar el transporte climatizado de obras de arte y la instalación en pared?
+  visual_hint: 📦🚚
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: registrars
+    meaning: encargados de registro y conservación
+    ipa: ˈredʒɪstrɑːrz
+- id: certificate-of-authenticity
+  text: Please include the signed certificate of authenticity and archival invoice for our insurer.
+  translation: Por favor incluya el certificado de autenticidad firmado y la factura para nuestra aseguradora.
+  visual_hint: ✍️📑
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: authenticity
+    meaning: autenticidad
+    ipa: ˌɔːθenˈtɪsəti
+- id: place-red-dot-reserve
+  text: Let's place a formal hold on the work while our bank processes the wire.
+  translation: Pongamos una reserva formal sobre la obra mientras nuestro banco procesa la transferencia.
+  visual_hint: 🔴🤝
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: formal hold
+    meaning: reserva formal de compra
+    ipa: ˈfɔːrməl hoʊld
+roleplay:
+  ai_role: gallery director
+  user_role: art collector
+  setting: Private viewing room at a contemporary art gallery.
+  turns:
+  - speaker: ai
+    text: This 2019 canvas is one of the artist's most sought-after coastal studies.
+  - speaker: user
+    goal: Pide revisar la procedencia completa y el historial de exposiciones de la obra.
+    suggested_lines:
+    - Could you share the full provenance and exhibition history for this oil-on-linen piece?
+    - If we hang it in a sunlit foyer, would you recommend framing it behind museum-grade UV acrylic?
+  - speaker: ai
+    text: It comes directly from the estate collection and was exhibited at the Venice Biennale.
+  - speaker: user
+    goal: Pregunta cómo proteger la obra de la luz solar en el vestíbulo.
+    suggested_lines:
+    - If we hang it in a sunlit foyer, would you recommend framing it behind museum-grade UV acrylic?
+    - The impasto brushwork is vibrant, and I see zero surface craquelure under raking light.
+  - speaker: ai
+    text: For an oil painting, we'll apply a breathable conservation varnish and recommend indirect LED spots.
+  - speaker: user
+    goal: Comenta el excelente estado del empaste bajo luz rasante.
+    suggested_lines:
+    - The impasto brushwork is vibrant, and I see zero surface craquelure under raking light.
+    - Can your registrars arrange climate-controlled fine-art shipping and wall installation?
+  - speaker: ai
+    text: Our conservator signed the clean condition report this morning.
+  - speaker: user
+    goal: Pregunta si la galería coordina el transporte climatizado y el montaje.
+    suggested_lines:
+    - Can your registrars arrange climate-controlled fine-art shipping and wall installation?
+    - Please include the signed certificate of authenticity and archival invoice for our insurer.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

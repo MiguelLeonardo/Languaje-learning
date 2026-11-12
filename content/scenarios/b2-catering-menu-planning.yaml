@@ -1,0 +1,108 @@
+id: b2-catering-menu-planning
+title: Planning corporate event catering
+title_es: Planificar el catering de un evento
+cefr: B2
+topic: food-and-drink
+description: Coordina con una empresa de banquetes estaciones de comida, opciones veganas y horarios de servicio.
+phrases:
+- id: bite-sized-canapes
+  text: We want passed bite-sized canapés so guests can mingle easily.
+  translation: Queremos canapés de un bocado servidos en bandeja para que los invitados conversen cómodamente.
+  visual_hint: 🍢🥂
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: mingle
+    meaning: socializar / mezclarse
+    ipa: ˈmɪŋɡəl
+- id: clearly-labeled-allergens
+  text: At least thirty percent of the platter options should be vegan and clearly labeled.
+  translation: Al menos el treinta por ciento de las bandejas deben ser veganas y estar claramente etiquetadas.
+  visual_hint: 🌱🏷️
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: platter
+    meaning: bandeja / fuente
+    ipa: ˈplætər
+- id: coffee-and-pastry-break
+  text: Can you set up an espresso bar during the afternoon networking break?
+  translation: ¿Pueden instalar una barra de espresso durante el receso de networking de la tarde?
+  visual_hint: ☕⚡
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: set up
+    meaning: instalar / montar
+    ipa: set ʌp
+- id: final-headcount-deadline
+  text: When is the final cutoff date to confirm our exact guest headcount?
+  translation: ¿Cuál es la fecha límite para confirmar el número exacto de asistentes?
+  visual_hint: 📅👥
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: headcount
+    meaning: número de asistentes
+    ipa: ˈhedkaʊnt
+- id: staffing-and-clean-up
+  text: Does the quote include servers, glassware rental, and post-event cleanup?
+  translation: ¿La cotización incluye meseros, alquiler de cristalería y limpieza final?
+  visual_hint: 🧾🥂
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: glassware
+    meaning: cristalería
+    ipa: ˈɡlæswer
+- id: tasting-session-friday
+  text: Let's schedule a menu tasting this Friday before we sign the deposit.
+  translation: Agendemos una degustación de menú este viernes antes de firmar el anticipo.
+  visual_hint: 🍽️✍️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: tasting
+    meaning: degustación
+    ipa: ˈteɪstɪŋ
+roleplay:
+  ai_role: catering manager
+  user_role: event organizer
+  setting: Planning the menu for a 60-person product launch.
+  turns:
+  - speaker: ai
+    text: Thanks for meeting today! For your 60 guests, do you prefer a sit-down buffet or cocktail style?
+  - speaker: user
+    goal: Explica que prefieren canapés de un bocado para facilitar el networking.
+    suggested_lines:
+    - We want passed bite-sized canapés so guests can mingle easily.
+    - At least thirty percent of the platter options should be vegan and clearly labeled.
+  - speaker: ai
+    text: Passed canapés work great for product launches. Any dietary requirements?
+  - speaker: user
+    goal: Pide que el 30% de las opciones sean veganas y estén etiquetadas.
+    suggested_lines:
+    - At least thirty percent of the platter options should be vegan and clearly labeled.
+    - Can you set up an espresso bar during the afternoon networking break?
+  - speaker: ai
+    text: We use color-coded cards showing gluten-free, vegan, and nut-free items.
+  - speaker: user
+    goal: Pregunta si pueden montar una barra de espresso en el receso.
+    suggested_lines:
+    - Can you set up an espresso bar during the afternoon networking break?
+    - When is the final cutoff date to confirm our exact guest headcount?
+  - speaker: ai
+    text: Yes, our mobile barista cart is very popular. Let's talk logistics.
+  - speaker: user
+    goal: Pregunta la fecha límite para confirmar el número final de invitados.
+    suggested_lines:
+    - When is the final cutoff date to confirm our exact guest headcount?
+    - Does the quote include servers, glassware rental, and post-event cleanup?
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

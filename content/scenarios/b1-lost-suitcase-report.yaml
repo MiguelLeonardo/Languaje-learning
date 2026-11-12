@@ -1,0 +1,108 @@
+id: b1-lost-suitcase-report
+title: Reporting a delayed suitcase
+title_es: Reportar una maleta demorada
+cefr: B1
+topic: travel-and-transport
+description: Reporta en el mostrador de equipaje que tu maleta no salió en la banda y deja la dirección de tu hotel.
+phrases:
+- id: bag-didnt-arrive
+  text: Hi, my flight from Chicago just landed, but my checked bag didn't come out.
+  translation: Hola, mi vuelo de Chicago acaba de aterrizar, pero mi maleta documentada no salió.
+  visual_hint: 🧳❓
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: landed
+    meaning: aterrizó
+    ipa: ˈlændɪd
+- id: baggage-claim-tag
+  text: Here is the baggage claim sticker attached to my boarding pass.
+  translation: Aquí está la etiqueta de reclamo de equipaje pegada en mi pase de abordar.
+  visual_hint: 🏷️🎫
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: sticker
+    meaning: etiqueta adhesiva / talón
+    ipa: ˈstɪkər
+- id: hard-shell-navy-bag
+  text: It's a medium navy-blue hard-shell suitcase with a red ribbon on the handle.
+  translation: Es una maleta rígida mediana azul marino con una cinta roja en el asa.
+  visual_hint: 🧳🎀
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: hard-shell
+    meaning: de carcasa rígida
+    ipa: hɑːrd ʃel
+- id: deliver-to-hotel-desk
+  text: Could the courier deliver it directly to the Grand Hotel front desk tonight?
+  translation: ¿Podría el mensajero entregarla directamente en la recepción del Grand Hotel esta noche?
+  visual_hint: 🚐🏨
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: courier
+    meaning: servicio de mensajería
+    ipa: ˈkʊriər
+- id: overnight-toiletry-kit
+  text: Do you provide an overnight toiletry kit while we wait for the bag?
+  translation: ¿Proporcionan un kit de aseo nocturno mientras esperamos la maleta?
+  visual_hint: 🪥🧴
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: toiletry kit
+    meaning: neceser / kit de aseo
+    ipa: ˈtɔɪlətri kɪt
+- id: tracking-reference-code
+  text: I'll save this tracking number so I can check the delivery status online.
+  translation: Guardaré este número de rastreo para revisar el estado de entrega en línea.
+  visual_hint: 📲🔢
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: tracking
+    meaning: seguimiento / rastreo
+    ipa: ˈtrækɪŋ
+roleplay:
+  ai_role: baggage service agent
+  user_role: passenger
+  setting: Airline baggage service office in the arrivals hall.
+  turns:
+  - speaker: ai
+    text: Hello! Welcome to Baggage Services. How can I assist you today?
+  - speaker: user
+    goal: Explica que tu vuelo de Chicago aterrizó pero tu maleta no salió.
+    suggested_lines:
+    - Hi, my flight from Chicago just landed, but my checked bag didn't come out.
+    - Here is the baggage claim sticker attached to my boarding pass.
+  - speaker: ai
+    text: I'm sorry about that. May I see your baggage tag number so I can trace it?
+  - speaker: user
+    goal: Entrega la etiqueta de equipaje pegada en tu pase de abordar.
+    suggested_lines:
+    - Here is the baggage claim sticker attached to my boarding pass.
+    - It's a medium navy-blue hard-shell suitcase with a red ribbon on the handle.
+  - speaker: ai
+    text: 'Good news: the scanner shows it''s coming on the next flight in three hours. Can you describe the bag?'
+  - speaker: user
+    goal: Describe tu maleta azul marino rígida con cinta roja.
+    suggested_lines:
+    - It's a medium navy-blue hard-shell suitcase with a red ribbon on the handle.
+    - Could the courier deliver it directly to the Grand Hotel front desk tonight?
+  - speaker: ai
+    text: Thank you. You don't need to wait at the airport—we can deliver it to you.
+  - speaker: user
+    goal: Pide que la entreguen directamente en la recepción de tu hotel esta noche.
+    suggested_lines:
+    - Could the courier deliver it directly to the Grand Hotel front desk tonight?
+    - Do you provide an overnight toiletry kit while we wait for the bag?
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

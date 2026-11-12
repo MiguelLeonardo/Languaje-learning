@@ -1,0 +1,108 @@
+id: b2-restaurant-waitlist-negotiation
+title: Securing seats at a packed restaurant
+title_es: Conseguir mesa en un restaurante lleno
+cefr: B2
+topic: food-and-drink
+description: Consulta el tiempo de espera en un restaurante sin reserva y pide cenar en la barra del chef.
+phrases:
+- id: walk-in-for-two
+  text: Good evening! We don't have a reservation, but any chance of squeezing in two?
+  translation: ¡Buenas noches! No tenemos reserva, pero ¿habría posibilidad de acomodar a dos?
+  visual_hint: 🍽️🤞
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: squeezing in
+    meaning: hacer un hueco / acomodar
+    ipa: ˈskwiːzɪŋ ɪn
+- id: full-menu-at-bar
+  text: Do you serve the full dinner menu at the kitchen counter or bar seats?
+  translation: ¿Sirven el menú completo de cena en la barra de la cocina o del bar?
+  visual_hint: 🍸📖
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: counter
+    meaning: barra / mostrador
+    ipa: ˈkaʊntər
+- id: put-name-on-waitlist
+  text: We'd love to take the bar seats—or put our name down if a booth opens.
+  translation: Nos encantaría tomar los asientos de la barra, o anotarnos por si se libera un reservado.
+  visual_hint: 📝🪑
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: booth
+    meaning: mesa tipo gabinete / reservado
+    ipa: buːθ
+- id: grab-aperitif-first
+  text: We'll grab an aperitif at the counter right now; thank you for fitting us in!
+  translation: Tomaremos un aperitivo en la barra ahora mismo; ¡gracias por hacernos espacio!
+  visual_hint: 🥂🔥
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: fitting us in
+    meaning: hacernos lugar
+    ipa: ˈfɪtɪŋ ʌs ɪn
+- id: notify-by-sms
+  text: If a patio table frees up early, could you ping my phone?
+  translation: Si se desocupa antes una mesa en la terraza, ¿podría avisarme al celular?
+  visual_hint: 📲🔔
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: frees up
+    meaning: se desocupa / libera
+    ipa: friːz ʌp
+- id: kitchen-last-call
+  text: What time does the kitchen take last orders on Friday nights?
+  translation: ¿A qué hora toma la cocina los últimos pedidos los viernes por la noche?
+  visual_hint: 🕙👨‍🍳
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: last orders
+    meaning: últimos pedidos
+    ipa: læst ˈɔːrdərz
+roleplay:
+  ai_role: maître d'
+  user_role: diner
+  setting: Friday night at a popular neighborhood restaurant.
+  turns:
+  - speaker: ai
+    text: Good evening! Welcome to Ember. Do you have a reservation tonight?
+  - speaker: user
+    goal: Pregunta si hay posibilidad de acomodar a dos personas sin reserva.
+    suggested_lines:
+    - Good evening! We don't have a reservation, but any chance of squeezing in two?
+    - Do you serve the full dinner menu at the kitchen counter or bar seats?
+  - speaker: ai
+    text: Our dining tables are booked until 9:30, though two bar seats just opened up.
+  - speaker: user
+    goal: Pregunta si sirven el menú completo en la barra de la cocina.
+    suggested_lines:
+    - Do you serve the full dinner menu at the kitchen counter or bar seats?
+    - We'd love to take the bar seats—or put our name down if a booth opens.
+  - speaker: ai
+    text: Yes, the full menu is available at the chef's counter, and you get a view of the wood grill!
+  - speaker: user
+    goal: Acepta los asientos de la barra.
+    suggested_lines:
+    - We'd love to take the bar seats—or put our name down if a booth opens.
+    - We'll grab an aperitif at the counter right now; thank you for fitting us in!
+  - speaker: ai
+    text: Fantastic! Follow me right here—here are your dinner and cocktail menus.
+  - speaker: user
+    goal: Agradece que les hayan hecho lugar y pide la carta de bebidas.
+    suggested_lines:
+    - We'll grab an aperitif at the counter right now; thank you for fitting us in!
+    - If a patio table frees up early, could you ping my phone?
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

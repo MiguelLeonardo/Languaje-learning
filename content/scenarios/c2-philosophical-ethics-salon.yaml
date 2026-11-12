@@ -1,0 +1,114 @@
+id: c2-philosophical-ethics-salon
+title: Debating moral luck and agency
+title_es: Debatir ética y responsabilidad en una tertulia
+cefr: C2
+topic: social-and-smalltalk
+description: Participa en una tertulia filosófica analizando el concepto de suerte moral de Bernard Williams y la
+  meritocracia.
+phrases:
+- id: moral-luck-paradox
+  text: Bernard Williams's paradox of moral luck exposes how much of our ethical judgment hinges on outcomes beyond
+    our control.
+  translation: La paradoja de la suerte moral de Bernard Williams expone cuánto de nuestro juicio ético depende
+    de resultados fuera de nuestro control.
+  visual_hint: ⚖️📚
+  cloze:
+  - 6
+  - 12
+  glossary:
+  - word: hinges on
+    meaning: depende fundamentalmente de
+    ipa: ˈhɪndʒɪz ɑːn
+- id: two-reckless-drivers
+  text: Two equally negligent drivers deserve identical moral blame, even if only one happens to encounter a pedestrian.
+  translation: Dos conductores igualmente negligentes merecen idéntico reproche moral, aunque solo uno se cruce
+    por azar con un peatón.
+  visual_hint: 🚗🎲
+  cloze:
+  - 5
+  - 11
+  glossary:
+  - word: blame
+    meaning: reproche / culpa moral
+    ipa: bleɪm
+- id: hubris-of-meritocracy
+  text: Recognizing constitutive luck—our temperament and upbringing—tempers the hubris of uncritical meritocracy.
+  translation: Reconocer la suerte constitutiva —temperamento y crianza— modera la arrogancia de la meritocracia
+    acrítica.
+  visual_hint: 🏛️🌱
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: hubris
+    meaning: arrogancia / desmesura
+    ipa: ˈhjuːbrɪs
+- id: agency-within-contingency
+  text: Far from absolving us of responsibility, acknowledging contingency demands greater institutional empathy.
+  translation: Lejos de eximirnos de responsabilidad, reconocer la contingencia exige una mayor empatía institucional.
+  visual_hint: 🤝✨
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: absolving
+    meaning: eximir / absolver
+    ipa: əbˈzɑːlvɪŋ
+- id: epistemic-humility
+  text: Epistemic humility reminds us that hindsight always makes contingent events look inevitable.
+  translation: La humildad epistémica nos recuerda que la retrospectiva hace parecer inevitable lo que fue azaroso.
+  visual_hint: 🔍⏳
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: hindsight
+    meaning: visión retrospectiva
+    ipa: ˈhaɪndsaɪt
+- id: stimulating-exchange
+  text: Thank you all for such a rigorous yet generous exchange of ideas tonight.
+  translation: Gracias a todos por un intercambio de ideas tan riguroso y generoso esta noche.
+  visual_hint: 🥂📖
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: rigorous
+    meaning: riguroso
+    ipa: ˈrɪɡərəs
+roleplay:
+  ai_role: philosophy professor
+  user_role: salon participant
+  setting: An intimate evening humanities salon in a university library.
+  turns:
+  - speaker: ai
+    text: 'Tonight''s question is deceptively simple: should we judge actions solely by intent, or by their consequences?'
+  - speaker: user
+    goal: Introduce la paradoja de la suerte moral y cómo juzgamos según el resultado.
+    suggested_lines:
+    - Bernard Williams's paradox of moral luck exposes how much of our ethical judgment hinges on outcomes beyond
+      our control.
+    - Two equally negligent drivers deserve identical moral blame, even if only one happens to encounter a pedestrian.
+  - speaker: ai
+    text: Can you unpack how circumstantial luck complicates pure Kantian intention?
+  - speaker: user
+    goal: Ilustra el argumento con el caso clásico de los dos conductores negligentes.
+    suggested_lines:
+    - Two equally negligent drivers deserve identical moral blame, even if only one happens to encounter a pedestrian.
+    - Recognizing constitutive luck—our temperament and upbringing—tempers the hubris of uncritical meritocracy.
+  - speaker: ai
+    text: If luck pervades both our starting point and our outcomes, does personal agency evaporate?
+  - speaker: user
+    goal: Conecta la suerte constitutiva con una visión más humilde de la meritocracia.
+    suggested_lines:
+    - Recognizing constitutive luck—our temperament and upbringing—tempers the hubris of uncritical meritocracy.
+    - Far from absolving us of responsibility, acknowledging contingency demands greater institutional empathy.
+  - speaker: ai
+    text: That's a crucial distinction—humility without fatalism.
+  - speaker: user
+    goal: Concluye que reconocer el azar no elimina la responsabilidad, sino que exige empatía.
+    suggested_lines:
+    - Far from absolving us of responsibility, acknowledging contingency demands greater institutional empathy.
+    - Epistemic humility reminds us that hindsight always makes contingent events look inevitable.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

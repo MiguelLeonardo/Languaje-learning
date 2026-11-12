@@ -1,0 +1,111 @@
+id: c2-antarctic-expedition-briefing
+title: Ice-navigation expedition briefing
+title_es: Revisar contingencias de navegación polar
+cefr: C2
+topic: travel-and-transport
+description: Evalúa con el capitán de un buque polar las cartas de hielo marino, protocolos de desembarco en Zodiac
+  y bioseguridad.
+phrases:
+- id: pack-ice-drift
+  text: Satellite synthetic-aperture radar shows dense pack ice drifting across the Lemaire Channel entrance.
+  translation: El radar satelital muestra hielo marino denso desplazándose hacia la entrada del canal Lemaire.
+  visual_hint: 🧊🛰️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: pack ice
+    meaning: banquisa / hielo marino flotante
+    ipa: pæk aɪs
+- id: pivot-to-leeward-bay
+  text: If brash ice chokes the narrows, we should pivot our morning Zodiac landing to the leeward bay.
+  translation: Si el hielo fragmentado bloquea el estrecho, debemos redirigir el desembarco matutino en Zodiac a
+    la bahía de sotavento.
+  visual_hint: 🚤🧭
+  cloze:
+  - 5
+  - 11
+  glossary:
+  - word: leeward
+    meaning: a sotavento / protegido del viento
+    ipa: ˈliːwərd
+- id: biosecurity-boot-scrub
+  text: Every passenger must complete the biosecurity vacuuming and virucidal boot scrub before stepping ashore.
+  translation: Cada pasajero debe completar el aspirado de bioseguridad y desinfección de botas antes de bajar a
+    tierra.
+  visual_hint: 🥾🧪
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: ashore
+    meaning: en tierra firme / a la costa
+    ipa: əˈʃɔːr
+- id: katabatic-wind-watch
+  text: We'll keep a coxswain on continuous barometric watch in case katabatic gusts sweep off the glacier.
+  translation: Mantendremos un timonel en vigilancia barométrica continua por si bajan ráfagas catabáticas del glaciar.
+  visual_hint: 🌬️🏔️
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: gusts
+    meaning: ráfagas de viento
+    ipa: ɡʌsts
+- id: maintain-five-meter-buffer
+  text: Remind all photographers to maintain a strict five-meter wildlife buffer along the penguin highways.
+  translation: Recuerde a los fotógrafos mantener cinco metros de distancia respecto a los senderos de pingüinos.
+  visual_hint: 🐧📸
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: buffer
+    meaning: zona de respeto / distancia mínima
+    ipa: ˈbʌfər
+- id: update-evening-recap
+  text: Let's present the revised chart to the guests during tonight's briefing in the lounge.
+  translation: Presentemos la carta náutica actualizada a los pasajeros en la charla de esta noche.
+  visual_hint: 🗺️🎙️
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: chart
+    meaning: carta náutica
+    ipa: tʃɑːrt
+roleplay:
+  ai_role: ice-pilot captain
+  user_role: expedition leader
+  setting: Bridge of a polar expedition vessel crossing the Drake Passage.
+  turns:
+  - speaker: ai
+    text: Welcome to the bridge. Let's review tomorrow's landing sites along the peninsula.
+  - speaker: user
+    goal: Señala que el radar satelital muestra hielo denso en la entrada del canal.
+    suggested_lines:
+    - Satellite synthetic-aperture radar shows dense pack ice drifting across the Lemaire Channel entrance.
+    - If brash ice chokes the narrows, we should pivot our morning Zodiac landing to the leeward bay.
+  - speaker: ai
+    text: Agreed—pushing through heavy floes would eat up our entire morning window.
+  - speaker: user
+    goal: Propón cambiar el desembarco en Zodiac a la bahía de sotavento si hay bloqueo.
+    suggested_lines:
+    - If brash ice chokes the narrows, we should pivot our morning Zodiac landing to the leeward bay.
+    - Every passenger must complete the biosecurity vacuuming and virucidal boot scrub before stepping ashore.
+  - speaker: ai
+    text: The leeward bay has a sheltered pebble beach and a gentoo penguin colony.
+  - speaker: user
+    goal: Recuerda el protocolo obligatorio de desinfección de botas antes de bajar a tierra.
+    suggested_lines:
+    - Every passenger must complete the biosecurity vacuuming and virucidal boot scrub before stepping ashore.
+    - We'll keep a coxswain on continuous barometric watch in case katabatic gusts sweep off the glacier.
+  - speaker: ai
+    text: Strict IAATO biosecurity is non-negotiable. What about wind monitoring during shore operations?
+  - speaker: user
+    goal: Establece vigilancia continua ante posibles vientos catabáticos del glaciar.
+    suggested_lines:
+    - We'll keep a coxswain on continuous barometric watch in case katabatic gusts sweep off the glacier.
+    - Remind all photographers to maintain a strict five-meter wildlife buffer along the penguin highways.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

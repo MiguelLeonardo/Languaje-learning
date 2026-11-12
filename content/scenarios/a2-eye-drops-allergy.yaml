@@ -1,0 +1,108 @@
+id: a2-eye-drops-allergy
+title: Buying allergy eye drops
+title_es: Pedir gotas para alergia ocular
+cefr: A2
+topic: health-and-emergencies
+description: Pide gotas antihistamínicas porque el polen de primavera te causa picazón en los ojos.
+phrases:
+- id: itchy-watery-eyes
+  text: Hello! The tree pollen is giving me very itchy, watery eyes today.
+  translation: ¡Hola! El polen de los árboles me está causando mucha picazón y lagrimeo hoy.
+  visual_hint: 👁️🌸
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: itchy
+    meaning: con picazón / comezón
+    ipa: ˈɪtʃi
+- id: antihistamine-eye-drops
+  text: Can I buy antihistamine eye drops without a doctor's prescription?
+  translation: ¿Puedo comprar gotas antihistamínicas para los ojos sin receta médica?
+  visual_hint: 💧👁️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: prescription
+    meaning: receta médica
+    ipa: prɪˈskrɪpʃən
+- id: safe-with-contact-lenses
+  text: I wear soft contact lenses—should I take them out before putting the drops in?
+  translation: Uso lentes de contacto blandos; ¿debo quitármelos antes de ponerme las gotas?
+  visual_hint: 👓💧
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: take them out
+    meaning: quitárselos / retirarlos
+    ipa: teɪk ðem aʊt
+- id: one-drop-twice-a-day
+  text: So I put one drop in each eye in the morning and evening?
+  translation: ¿Entonces pongo una gota en cada ojo por la mañana y por la noche?
+  visual_hint: 🕗🌙
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: each
+    meaning: cada
+    ipa: iːtʃ
+- id: saline-nasal-spray
+  text: I'll also take a simple saline nasal spray for my stuffy nose.
+  translation: También llevaré un spray nasal salino para la nariz tapada.
+  visual_hint: 👃🌿
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: stuffy nose
+    meaning: nariz tapada / congestión
+    ipa: ˈstʌfi noʊz
+- id: sunglasses-help-outside
+  text: Wearing wrap-around sunglasses in the park helps block the pollen too!
+  translation: Usar lentes de sol en el parque también ayuda a frenar el polen.
+  visual_hint: 🕶️🌳
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: block
+    meaning: bloquear / frenar
+    ipa: blɑːk
+roleplay:
+  ai_role: pharmacist
+  user_role: customer
+  setting: Pharmacy counter during spring pollen season.
+  turns:
+  - speaker: ai
+    text: Hello! Spring allergy season is in full swing. What symptoms are bothering you?
+  - speaker: user
+    goal: Explica que el polen te causa picazón y lagrimeo en los ojos.
+    suggested_lines:
+    - Hello! The tree pollen is giving me very itchy, watery eyes today.
+    - Can I buy antihistamine eye drops without a doctor's prescription?
+  - speaker: ai
+    text: Yes, our over-the-counter allergy eye drops work within ten minutes!
+  - speaker: user
+    goal: Pregunta si venden gotas antihistamínicas sin receta médica.
+    suggested_lines:
+    - Can I buy antihistamine eye drops without a doctor's prescription?
+    - I wear soft contact lenses—should I take them out before putting the drops in?
+  - speaker: ai
+    text: Here is a preservative-free bottle. Do you wear contact lenses?
+  - speaker: user
+    goal: Pregunta si debes quitarte los lentes de contacto antes de aplicar las gotas.
+    suggested_lines:
+    - I wear soft contact lenses—should I take them out before putting the drops in?
+    - So I put one drop in each eye in the morning and evening?
+  - speaker: ai
+    text: Yes, remove your contacts, put one drop in each eye, and wait fifteen minutes.
+  - speaker: user
+    goal: Confirma la dosis de una gota en cada ojo mañana y noche.
+    suggested_lines:
+    - So I put one drop in each eye in the morning and evening?
+    - I'll also take a simple saline nasal spray for my stuffy nose.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

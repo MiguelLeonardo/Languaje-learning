@@ -1,0 +1,108 @@
+id: a1-shoe-store-size
+title: Trying on running shoes
+title_es: Probarse zapatos deportivos
+cefr: A1
+topic: hotel-and-shopping
+description: Pide unos tenis para correr en talla nueve, pruébatelos y comenta que son muy cómodos.
+phrases:
+- id: size-nine-shoes
+  text: Do you have these blue running shoes in size nine?
+  translation: ¿Tienen estos tenis azules para correr en talla nueve?
+  visual_hint: 👟🔵
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: size
+    meaning: talla / número
+    ipa: saɪz
+- id: try-both-on
+  text: Can I sit here and try both shoes on?
+  translation: ¿Puedo sentarme aquí y probarme ambos zapatos?
+  visual_hint: 🪑👟
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: both
+    meaning: ambos / los dos
+    ipa: boʊθ
+- id: very-comfortable
+  text: They feel very light and comfortable on my feet.
+  translation: Se sienten muy ligeros y cómodos en mis pies.
+  visual_hint: 🦶✨
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: comfortable
+    meaning: cómodos
+    ipa: ˈkʌmfərtəbəl
+- id: pair-of-white-socks
+  text: I will take the shoes and one pack of white socks.
+  translation: Me llevo los zapatos y un paquete de calcetines blancos.
+  visual_hint: 🧦🛍️
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: socks
+    meaning: calcetines / medias
+    ipa: sɑːks
+- id: half-size-bigger
+  text: Nine is my exact size; I don't need a bigger one.
+  translation: Nueve es mi talla exacta; no necesito uno más grande.
+  visual_hint: 📏✅
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: bigger
+    meaning: más grande
+    ipa: ˈbɪɡər
+- id: keep-the-shoebox
+  text: Yes, please put them inside the shoebox.
+  translation: Sí, por favor póngalos dentro de la caja de zapatos.
+  visual_hint: 📦👟
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: shoebox
+    meaning: caja de zapatos
+    ipa: ˈʃuːbɑːks
+roleplay:
+  ai_role: shoe sales associate
+  user_role: shopper
+  setting: A sports shoe store on Main Street.
+  turns:
+  - speaker: ai
+    text: Hi there! Let me know if you'd like to try on any shoes.
+  - speaker: user
+    goal: Pregunta si tienen los tenis azules en talla nueve.
+    suggested_lines:
+    - Do you have these blue running shoes in size nine?
+    - Can I sit here and try both shoes on?
+  - speaker: ai
+    text: Here is a size nine in blue! Would you like to try them?
+  - speaker: user
+    goal: Pide sentarte y probarte ambos zapatos.
+    suggested_lines:
+    - Can I sit here and try both shoes on?
+    - They feel very light and comfortable on my feet.
+  - speaker: ai
+    text: Take a walk around the mirror. How do they feel?
+  - speaker: user
+    goal: Comenta que se sienten muy ligeros y cómodos.
+    suggested_lines:
+    - They feel very light and comfortable on my feet.
+    - I will take the shoes and one pack of white socks.
+  - speaker: ai
+    text: They look great on you! Ready to check out?
+  - speaker: user
+    goal: Di que te llevas los zapatos y un paquete de calcetines blancos.
+    suggested_lines:
+    - I will take the shoes and one pack of white socks.
+    - Nine is my exact size; I don't need a bigger one.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

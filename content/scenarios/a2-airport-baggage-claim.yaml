@@ -1,0 +1,108 @@
+id: a2-airport-baggage-claim
+title: Finding luggage at baggage claim
+title_es: Buscar equipaje en la banda
+cefr: A2
+topic: travel-and-transport
+description: Pregunta en el área de llegadas en qué carrusel salen las maletas de tu vuelo y dónde están los carritos.
+phrases:
+- id: which-carousel-madrid
+  text: Excuse me, which baggage carousel is for the flight from Madrid?
+  translation: Disculpe, ¿qué banda de equipaje es para el vuelo de Madrid?
+  visual_hint: 🧳✈️
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: carousel
+    meaning: banda / carrusel de maletas
+    ipa: ˌkærəˈsel
+- id: luggage-carts-free
+  text: Where can I get a luggage cart for our heavy bags?
+  translation: ¿Dónde puedo conseguir un carrito para nuestras maletas pesadas?
+  visual_hint: 🛒🧳
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: luggage cart
+    meaning: carrito de equipaje
+    ipa: ˈlʌɡɪdʒ kɑːrt
+- id: oversized-ski-bag
+  text: We also checked a large stroller; does it come out here?
+  translation: También documentamos una carriola grande; ¿sale por aquí?
+  visual_hint: 👶🛷
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: checked
+    meaning: documentamos / facturamos
+    ipa: tʃekt
+- id: exit-toward-trains
+  text: After we pick up our bags, which way is the airport train?
+  translation: Después de recoger las maletas, ¿hacia dónde está el tren del aeropuerto?
+  visual_hint: 🚆➡️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: pick up
+    meaning: recoger
+    ipa: pɪk ʌp
+- id: nothing-to-declare
+  text: We only have personal clothes, so we take the green exit.
+  translation: Solo traemos ropa personal, así que salimos por el carril verde.
+  visual_hint: 🟢🛂
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: personal
+    meaning: personal
+    ipa: ˈpɜːrsənəl
+- id: thanks-for-directions
+  text: Thank you, I can see our blue suitcase coming out now!
+  translation: ¡Gracias, ya veo salir nuestra maleta azul!
+  visual_hint: 🧳🙌
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: suitcase
+    meaning: maleta
+    ipa: ˈsuːtkeɪs
+roleplay:
+  ai_role: airport staff
+  user_role: arriving passenger
+  setting: International arrivals baggage claim hall.
+  turns:
+  - speaker: ai
+    text: Welcome! Do you need help finding your flight's bags?
+  - speaker: user
+    goal: Pregunta qué banda de equipaje corresponde al vuelo de Madrid.
+    suggested_lines:
+    - Excuse me, which baggage carousel is for the flight from Madrid?
+    - Where can I get a luggage cart for our heavy bags?
+  - speaker: ai
+    text: Flight IB-302 from Madrid is unloading on Carousel 6.
+  - speaker: user
+    goal: Pregunta dónde conseguir un carrito para maletas.
+    suggested_lines:
+    - Where can I get a luggage cart for our heavy bags?
+    - We also checked a large stroller; does it come out here?
+  - speaker: ai
+    text: The luggage carts are right by the glass doors, and they are free!
+  - speaker: user
+    goal: Pregunta por dónde sale el equipaje grande como la carriola.
+    suggested_lines:
+    - We also checked a large stroller; does it come out here?
+    - After we pick up our bags, which way is the airport train?
+  - speaker: ai
+    text: Oversized items come out at Door B, right next to Carousel 6.
+  - speaker: user
+    goal: Pregunta hacia dónde está el tren del aeropuerto al salir.
+    suggested_lines:
+    - After we pick up our bags, which way is the airport train?
+    - We only have personal clothes, so we take the green exit.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

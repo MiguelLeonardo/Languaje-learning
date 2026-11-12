@@ -1,0 +1,114 @@
+id: b2-roadside-breakdown-tow
+title: Coordinating a highway roadside tow
+title_es: Coordinar grúa en carretera por avería
+cefr: B2
+topic: health-and-emergencies
+description: Llama a asistencia vial tras una llanta ponchada en autopista, comparte las coordenadas del poste kilométrico
+  y pide grúa de plataforma.
+phrases:
+- id: pulled-onto-wide-shoulder
+  text: Hi, we had a front tire blowout on Route 9, but we're safely pulled onto the wide paved shoulder with hazards
+    on.
+  translation: Hola, se nos reventó una llanta delantera en la Ruta 9, pero ya estamos seguros en el acotamiento
+    amplio con intermitentes.
+  visual_hint: 🚗🚨
+  cloze:
+  - 7
+  - 14
+  glossary:
+  - word: shoulder
+    meaning: acotamiento / arcén de la carretera
+    ipa: ˈʃoʊldər
+- id: mile-marker-forty-six
+  text: We're northbound just two hundred meters past Mile Marker 46, before the River Exit.
+  translation: Vamos en dirección norte apenas doscientos metros después del poste kilométrico 46, antes de la salida
+    del río.
+  visual_hint: 🪧🧭
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: mile marker
+    meaning: poste indicador de milla / kilómetro
+    ipa: maɪl ˈmɑːrkər
+- id: all-wheel-drive-flatbed
+  text: Because this rental SUV is all-wheel drive, no spare tire is on board—we'll need a flatbed tow truck.
+  translation: Como esta camioneta de alquiler tiene tracción integral y no trae llanta de refacción, necesitaremos
+    una grúa de plataforma.
+  visual_hint: 🛻⚙️
+  cloze:
+  - 6
+  - 12
+  glossary:
+  - word: flatbed
+    meaning: grúa de plataforma plana
+    ipa: ˈflætbed
+- id: ride-in-truck-cab
+  text: Can the three of us ride in the tow truck cab to the tire service center in town?
+  translation: ¿Podemos ir nosotros tres en la cabina de la grúa hasta el centro llantero del pueblo?
+  visual_hint: 👥🛻
+  cloze:
+  - 6
+  - 12
+  glossary:
+  - word: cab
+    meaning: cabina del camión
+    ipa: kæb
+- id: stay-behind-guardrail
+  text: We're waiting safely behind the metal guardrail while the truck is en route.
+  translation: Estamos esperando seguros detrás de la barrera metálica mientras llega la grúa.
+  visual_hint: 🛡️🛣️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: guardrail
+    meaning: barrera metálica de contención
+    ipa: ˈɡɑːrdreɪl
+- id: live-tracker-sms-link
+  text: I just received the SMS link showing the flatbed truck is eighteen minutes away—thank you!
+  translation: Ya recibí el enlace por SMS mostrando que la grúa llega en dieciocho minutos; ¡gracias!
+  visual_hint: 📲✅
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: en route
+    meaning: en camino
+    ipa: ɑːn ruːt
+roleplay:
+  ai_role: roadside dispatch agent
+  user_role: driver
+  setting: Pulled onto the wide shoulder of a highway with hazard lights on.
+  turns:
+  - speaker: ai
+    text: Roadside Assistance, hello! First, are you in a safe location away from moving traffic?
+  - speaker: user
+    goal: Avisa que tuvieron una ponchadura pero están seguros en el acotamiento con intermitentes.
+    suggested_lines:
+    - Hi, we had a front tire blowout on Route 9, but we're safely pulled onto the wide paved shoulder with hazards
+      on.
+    - We're northbound just two hundred meters past Mile Marker 46, before the River Exit.
+  - speaker: ai
+    text: Glad you're well off the roadway. Can you see a mile marker or exit sign nearby?
+  - speaker: user
+    goal: 'Indica tu ubicación exacta: dirección norte pasando el marcador 46.'
+    suggested_lines:
+    - We're northbound just two hundred meters past Mile Marker 46, before the River Exit.
+    - Because this rental SUV is all-wheel drive, no spare tire is on board—we'll need a flatbed tow truck.
+  - speaker: ai
+    text: Got your exact GPS pin at Mile 46.2! Does the vehicle have a spare tire in the trunk?
+  - speaker: user
+    goal: Explica que por ser tracción integral sin refacción requieren grúa de plataforma.
+    suggested_lines:
+    - Because this rental SUV is all-wheel drive, no spare tire is on board—we'll need a flatbed tow truck.
+    - Can the three of us ride in the tow truck cab to the tire service center in town?
+  - speaker: ai
+    text: Good call—towing an all-wheel-drive SUV on two wheels would damage the transmission.
+  - speaker: user
+    goal: Pregunta si los tres pueden viajar en la cabina de la grúa hasta el taller.
+    suggested_lines:
+    - Can the three of us ride in the tow truck cab to the tire service center in town?
+    - We're waiting safely behind the metal guardrail while the truck is en route.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

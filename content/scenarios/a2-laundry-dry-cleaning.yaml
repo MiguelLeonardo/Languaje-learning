@@ -1,0 +1,108 @@
+id: a2-laundry-dry-cleaning
+title: Dropping off clothes for dry cleaning
+title_es: Dejar ropa en la tintorería
+cefr: A2
+topic: hotel-and-shopping
+description: Entrega un traje y una camisa blanca en la tintorería, indica una mancha de café y pide entrega exprés.
+phrases:
+- id: dry-clean-this-suit
+  text: Hi, I need to get this wool suit dry-cleaned and pressed.
+  translation: Hola, necesito lavar en seco y planchar este traje de lana.
+  visual_hint: 🤵🧥
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: pressed
+    meaning: planchado
+    ipa: prest
+- id: coffee-stain-on-cuff
+  text: There is a small coffee stain on the right sleeve cuff.
+  translation: Hay una pequeña mancha de café en el puño de la manga derecha.
+  visual_hint: ☕👔
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: stain
+    meaning: mancha
+    ipa: steɪn
+- id: ready-by-tomorrow-five
+  text: Is it possible to have it ready by five o'clock tomorrow afternoon?
+  translation: ¿Es posible tenerlo listo mañana a las cinco de la tarde?
+  visual_hint: 🕔📅
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: ready by
+    meaning: listo antes de / para
+    ipa: ˈredi baɪ
+- id: hangers-instead-folded
+  text: Please put the white shirts on hangers instead of folding them.
+  translation: Por favor ponga las camisas blancas en ganchos en lugar de doblarlas.
+  visual_hint: 👔🪝
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: hangers
+    meaning: ganchos / perchas de ropa
+    ipa: ˈhæŋərz
+- id: light-starch-collar
+  text: Just light starch on the shirt collars, please.
+  translation: Solo un poco de almidón en los cuellos de las camisas, por favor.
+  visual_hint: ✨👔
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: collar
+    meaning: cuello de camisa
+    ipa: ˈkɑːlər
+- id: keep-pickup-ticket
+  text: I'll bring this pink pickup ticket with me tomorrow.
+  translation: Traeré este boleto rosa de recogida conmigo mañana.
+  visual_hint: 🎟️👍
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: pickup
+    meaning: recogida
+    ipa: ˈpɪkʌp
+roleplay:
+  ai_role: dry cleaner
+  user_role: customer
+  setting: A neighborhood dry cleaning and laundry shop.
+  turns:
+  - speaker: ai
+    text: Good morning! Dropping off some items for cleaning today?
+  - speaker: user
+    goal: Pide lavar en seco y planchar este traje de lana.
+    suggested_lines:
+    - Hi, I need to get this wool suit dry-cleaned and pressed.
+    - There is a small coffee stain on the right sleeve cuff.
+  - speaker: ai
+    text: Let me inspect the jacket and trousers. Any spots I should treat?
+  - speaker: user
+    goal: Señala que hay una pequeña mancha de café en el puño derecho.
+    suggested_lines:
+    - There is a small coffee stain on the right sleeve cuff.
+    - Is it possible to have it ready by five o'clock tomorrow afternoon?
+  - speaker: ai
+    text: I'll pre-treat that cuff stain so it comes right out.
+  - speaker: user
+    goal: Pregunta si puede estar listo mañana a las cinco de la tarde.
+    suggested_lines:
+    - Is it possible to have it ready by five o'clock tomorrow afternoon?
+    - Please put the white shirts on hangers instead of folding them.
+  - speaker: ai
+    text: Yes, our next-day express service will have it ready by 4:30 PM tomorrow.
+  - speaker: user
+    goal: Pide que pongan las camisas en ganchos en lugar de doblarlas.
+    suggested_lines:
+    - Please put the white shirts on hangers instead of folding them.
+    - Just light starch on the shirt collars, please.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

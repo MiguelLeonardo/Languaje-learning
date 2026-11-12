@@ -1,0 +1,120 @@
+id: c1-ergonomic-workplace-assessment
+title: Consulting on workplace ergonomics
+title_es: Consulta de ergonomía y salud ocupacional
+cefr: C1
+topic: health-and-emergencies
+description: Evalúa con un especialista en salud ocupacional el síndrome del túnel carpiano incipiente y ajustes
+  de postura.
+phrases:
+- id: tingling-in-index-finger
+  text: Over the past month, I've noticed intermittent tingling in my right thumb and index finger after long coding
+    sessions.
+  translation: Durante el último mes he notado hormigueo intermitente en el pulgar e índice derechos tras largas
+    sesiones de código.
+  visual_hint: 🖐️💻
+  cloze:
+  - 6
+  - 12
+  glossary:
+  - word: tingling
+    meaning: hormigueo / parestesia leve
+    ipa: ˈtɪŋɡlɪŋ
+- id: catch-repetitive-strain-early
+  text: I wanted to get evaluated early before mild median-nerve irritation progresses to chronic carpal tunnel
+    syndrome.
+  translation: Quise evaluarme a tiempo antes de que una irritación leve del nervio mediano avance a túnel carpiano
+    crónico.
+  visual_hint: 🩺⏱️
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: early
+    meaning: a tiempo / en etapa temprana
+    ipa: ˈɜːrli
+- id: split-tenting-keyboard
+  text: Switching to a split tented keyboard and a vertical mouse should keep my forearms in a neutral pronation
+    angle.
+  translation: Cambiar a un teclado dividido inclinado y un ratón vertical debería mantener mis antebrazos en un
+    ángulo neutro.
+  visual_hint: ⌨️📐
+  cloze:
+  - 6
+  - 12
+  glossary:
+  - word: neutral
+    meaning: posición anatómica neutra
+    ipa: ˈnuːtrəl
+- id: ergonomic-grant-letter
+  text: Could you provide a brief occupational health recommendation so my employer's ergonomic stipend covers the
+    equipment?
+  translation: ¿Podría darme una breve recomendación ocupacional para que el bono ergonómico de mi empresa cubra
+    el equipo?
+  visual_hint: 📑🏢
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: stipend
+    meaning: asignación / bono corporativo para equipamiento
+    ipa: ˈstaɪpend
+- id: neutral-nighttime-splint
+  text: Wearing a neutral wrist splint at night prevents unconscious flexion while sleeping.
+  translation: Usar una férula neutra de muñeca por la noche evita doblarla inconscientemente al dormir.
+  visual_hint: 🌙🧤
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: splint
+    meaning: férula / muñequera estabilizadora
+    ipa: splɪnt
+- id: monitor-at-eye-level
+  text: Raising the external monitor to eye level also took the strain off my cervical spine.
+  translation: Subir el monitor externo a la altura de los ojos también quitó tensión a mis cervicales.
+  visual_hint: 🖥️👀
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: eye level
+    meaning: a la altura de los ojos
+    ipa: aɪ ˈlevəl
+roleplay:
+  ai_role: occupational health physician
+  user_role: remote professional
+  setting: Ergonomic and repetitive-strain consultation.
+  turns:
+  - speaker: ai
+    text: Welcome in. Tell me about the wrist and hand symptoms you've been experiencing at your desk.
+  - speaker: user
+    goal: Describe que sientes hormigueo intermitente en el pulgar e índice tras programar.
+    suggested_lines:
+    - Over the past month, I've noticed intermittent tingling in my right thumb and index finger after long coding
+      sessions.
+    - I wanted to get evaluated early before mild median-nerve irritation progresses to chronic carpal tunnel syndrome.
+  - speaker: ai
+    text: Catching it at the intermittent stage makes conservative ergonomic intervention ninety percent effective.
+  - speaker: user
+    goal: Explica que buscaste consulta temprana para prevenir túnel carpiano crónico.
+    suggested_lines:
+    - I wanted to get evaluated early before mild median-nerve irritation progresses to chronic carpal tunnel syndrome.
+    - Switching to a split tented keyboard and a vertical mouse should keep my forearms in a neutral pronation angle.
+  - speaker: ai
+    text: Right now, a flat laptop keyboard forces your wrists into ulnar deviation and extension.
+  - speaker: user
+    goal: Propón usar teclado dividido e inclinado con ratón vertical para alinear el antebrazo.
+    suggested_lines:
+    - Switching to a split tented keyboard and a vertical mouse should keep my forearms in a neutral pronation angle.
+    - Could you provide a brief occupational health recommendation so my employer's ergonomic stipend covers the
+      equipment?
+  - speaker: ai
+    text: I'll also show you three nerve-gliding stretches to do every ninety minutes.
+  - speaker: user
+    goal: Solicita una constancia médica para que la empresa cubra el equipo ergonómico.
+    suggested_lines:
+    - Could you provide a brief occupational health recommendation so my employer's ergonomic stipend covers the
+      equipment?
+    - Wearing a neutral wrist splint at night prevents unconscious flexion while sleeping.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

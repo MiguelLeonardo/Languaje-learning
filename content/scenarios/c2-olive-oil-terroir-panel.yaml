@@ -1,0 +1,109 @@
+id: c2-olive-oil-terroir-panel
+title: Evaluating extra-virgin olive oil terroir
+title_es: Evaluar terroir en cata de aceite de oliva
+cefr: C2
+topic: food-and-drink
+description: Participa como jurado en un panel sensorial analizando polifenoles, picor retronasal y cosecha temprana.
+phrases:
+- id: herbaceous-nose
+  text: On the nose, this early-harvest Picual bursts with cut grass and green tomato leaf.
+  translation: En nariz, este Picual de cosecha temprana estalla con notas de hierba recién cortada y hoja de tomate.
+  visual_hint: 🫒🌿
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: early-harvest
+    meaning: cosecha temprana
+    ipa: ˈɜːrli ˈhɑːrvɪst
+- id: polyphenol-pungency
+  text: The peppery pungency at the back of the throat attests to an exceptionally high polyphenol count.
+  translation: El picor pimienta al fondo de la garganta atestigua una concentración excepcionalmente alta de polifenoles.
+  visual_hint: 🌶️🔬
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: pungency
+    meaning: picor característico del aceite joven
+    ipa: ˈpʌndʒənsi
+- id: cold-extraction-integrity
+  text: Milling within three hours of picking clearly prevented any trace of oxidative fustiness.
+  translation: Moler a las tres horas de la recolección evitó claramente cualquier rastro de defecto oxidativo.
+  visual_hint: ⚙️⏱️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: milling
+    meaning: molienda / almazara
+    ipa: ˈmɪlɪŋ
+- id: score-harmonious-complexity
+  text: I'm scoring it nine point four for its harmonious balance between astringency and almond sweetness.
+  translation: Le otorgo nueve punto cuatro por su equilibrio armonioso entre astringencia y dulzor almendrado.
+  visual_hint: 🏆📋
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: astringency
+    meaning: astringencia
+    ipa: əˈstrɪndʒənsi
+- id: dry-farmed-groves
+  text: Dry-farmed mountain groves concentrate volatile aromatics far more intensely than irrigated plains.
+  translation: Los olivares de montaña de secano concentran los compuestos aromáticos mucho más que las llanuras
+    regadas.
+  visual_hint: ⛰️🌳
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: dry-farmed
+    meaning: cultivado en secano
+    ipa: draɪ fɑːrmd
+- id: unanimous-gold-commendation
+  text: We have unanimous consensus to award this estate our highest distinction.
+  translation: Tenemos consenso unánime para otorgar a esta finca nuestra máxima distinción.
+  visual_hint: 🥇🤝
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: unanimous
+    meaning: unánime
+    ipa: juːˈnænɪməs
+roleplay:
+  ai_role: panel chair
+  user_role: sensory judge
+  setting: An international extra-virgin olive oil sensory evaluation panel.
+  turns:
+  - speaker: ai
+    text: Judge 3, please share your olfactory and retronasal notes on Sample B.
+  - speaker: user
+    goal: Describe los aromas de hierba cortada y hoja de tomate en nariz.
+    suggested_lines:
+    - On the nose, this early-harvest Picual bursts with cut grass and green tomato leaf.
+    - The peppery pungency at the back of the throat attests to an exceptionally high polyphenol count.
+  - speaker: ai
+    text: And how did the bitterness and pungency register on the palate?
+  - speaker: user
+    goal: Señala que el picor en garganta demuestra un alto nivel de polifenoles.
+    suggested_lines:
+    - The peppery pungency at the back of the throat attests to an exceptionally high polyphenol count.
+    - Milling within three hours of picking clearly prevented any trace of oxidative fustiness.
+  - speaker: ai
+    text: There's zero defect on the finish—remarkably clean extraction.
+  - speaker: user
+    goal: Comenta que la molienda inmediata evitó cualquier defecto de oxidación.
+    suggested_lines:
+    - Milling within three hours of picking clearly prevented any trace of oxidative fustiness.
+    - I'm scoring it nine point four for its harmonious balance between astringency and almond sweetness.
+  - speaker: ai
+    text: What is your final numerical score for the gold-medal shortlist?
+  - speaker: user
+    goal: Otorga tu puntuación destacando su equilibrio entre astringencia y almendra.
+    suggested_lines:
+    - I'm scoring it nine point four for its harmonious balance between astringency and almond sweetness.
+    - Dry-farmed mountain groves concentrate volatile aromatics far more intensely than irrigated plains.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

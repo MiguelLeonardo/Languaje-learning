@@ -1,0 +1,108 @@
+id: a1-train-platform-check
+title: Checking the train platform
+title_es: Preguntar el andén del tren
+cefr: A1
+topic: travel-and-transport
+description: Pregunta a un empleado de la estación de qué andén sale el tren a Oxford y en qué vagón subir.
+phrases:
+- id: which-platform-oxford
+  text: Excuse me, which platform is the train to Oxford?
+  translation: Disculpe, ¿en qué andén está el tren a Oxford?
+  visual_hint: 🚆🪧
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: platform
+    meaning: andén / plataforma
+    ipa: ˈplætfɔːrm
+- id: leaves-at-nine
+  text: Is this the fast train that leaves at nine o'clock?
+  translation: ¿Es este el tren rápido que sale a las nueve en punto?
+  visual_hint: 🕘⚡
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: leaves
+    meaning: sale / parte
+    ipa: liːvz
+- id: where-is-coach-b
+  text: My seat is in Coach B. Is it at the front?
+  translation: Mi asiento está en el vagón B. ¿Está adelante?
+  visual_hint: 🎫🚃
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: coach
+    meaning: vagón de pasajeros
+    ipa: koʊtʃ
+- id: show-ticket-on-phone
+  text: Here is my ticket QR code on my phone.
+  translation: Aquí está el código QR de mi boleto en mi teléfono.
+  visual_hint: 📱🎫
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: code
+    meaning: código
+    ipa: koʊd
+- id: quiet-car-rules
+  text: Is there a cafe car on this train?
+  translation: ¿Hay un vagón cafetería en este tren?
+  visual_hint: ☕🚆
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: cafe car
+    meaning: vagón cafetería
+    ipa: kæˈfeɪ kɑːr
+- id: have-a-good-trip
+  text: Thank you very much for your help!
+  translation: ¡Muchas gracias por su ayuda!
+  visual_hint: 🙏😊
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: help
+    meaning: ayuda
+    ipa: help
+roleplay:
+  ai_role: station guard
+  user_role: passenger
+  setting: Main departure board at Paddington Station.
+  turns:
+  - speaker: ai
+    text: Good morning! Looking for your train?
+  - speaker: user
+    goal: Pregunta de qué andén sale el tren a Oxford.
+    suggested_lines:
+    - Excuse me, which platform is the train to Oxford?
+    - Is this the fast train that leaves at nine o'clock?
+  - speaker: ai
+    text: The Oxford train is boarding on Platform 4 right now.
+  - speaker: user
+    goal: Pregunta si es el tren rápido de las nueve.
+    suggested_lines:
+    - Is this the fast train that leaves at nine o'clock?
+    - My seat is in Coach B. Is it at the front?
+  - speaker: ai
+    text: Yes, the 9:00 AM express! It only stops once.
+  - speaker: user
+    goal: Pregunta si el vagón B está en la parte delantera.
+    suggested_lines:
+    - My seat is in Coach B. Is it at the front?
+    - Here is my ticket QR code on my phone.
+  - speaker: ai
+    text: Coach B is right in the middle of the train, by the green sign.
+  - speaker: user
+    goal: Muestra el boleto en tu teléfono y agradece.
+    suggested_lines:
+    - Here is my ticket QR code on my phone.
+    - Is there a cafe car on this train?
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

@@ -1,0 +1,109 @@
+id: b2-pediatric-fever-triage
+title: Describing a child's fever at triage
+title_es: Explicar evolución de fiebre en triaje pediátrico
+cefr: B2
+topic: health-and-emergencies
+description: Detalla al enfermero de triaje la curva de fiebre, el peso exacto de tu hijo y a qué hora tomó la última
+  dosis de paracetamol.
+phrases:
+- id: spiked-fever-last-night
+  text: My six-year-old son spiked a thirty-nine-degree fever last night and has been complaining of pain when swallowing.
+  translation: Mi hijo de seis años subió a treinta y nueve grados de fiebre anoche y se queja de dolor al tragar.
+  visual_hint: 🌡️👦
+  cloze:
+  - 5
+  - 11
+  glossary:
+  - word: spiked a fever
+    meaning: tuvo un pico de fiebre
+    ipa: spaɪkt ə ˈfiːvər
+- id: weight-and-last-dose
+  text: He weighs twenty-two kilos, and we gave him weight-based liquid acetaminophen four hours ago.
+  translation: Pesa veintidós kilos y le dimos paracetamol líquido según su peso hace cuatro horas.
+  visual_hint: ⚖️🥄
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: weight-based
+    meaning: calculado según el peso corporal
+    ipa: weɪt beɪzd
+- id: keeping-fluids-down
+  text: He's keeping water and popsicle fluids down well, and he has no rash or neck stiffness.
+  translation: Está reteniendo bien el agua y paletas de hielo, y no tiene sarpullido ni rigidez en el cuello.
+  visual_hint: 💧🍧
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: keeping down
+    meaning: retener líquidos sin vomitar
+    ipa: ˈkiːpɪŋ daʊn
+- id: rapid-strep-throat-swab
+  text: Could we do a rapid strep throat swab to see if he needs antibiotics?
+  translation: ¿Podríamos hacerle una prueba rápida de estreptococo en garganta para ver si requiere antibiótico?
+  visual_hint: 🧪🩺
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: swab
+    meaning: hisopado / muestra con hisopo
+    ipa: swɑːb
+- id: no-penicillin-allergy
+  text: He has no known drug allergies and is fully up to date on his childhood vaccinations.
+  translation: No tiene alergias a medicamentos y tiene todas sus vacunas infantiles al día.
+  visual_hint: 🛡️✅
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: up to date
+    meaning: al día / actualizado
+    ipa: ʌp tuː deɪt
+- id: results-in-ten-minutes
+  text: Thanks for being so gentle with him—we'll wait right here for the diez-minute swab result.
+  translation: Gracias por tratarlo con tanta dulzura; esperaremos aquí el resultado de diez minutos.
+  visual_hint: 🙏😊
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: gentle
+    meaning: cuidadoso / amable
+    ipa: ˈdʒentəl
+roleplay:
+  ai_role: pediatric triage nurse
+  user_role: parent
+  setting: Pediatric urgent care triage room.
+  turns:
+  - speaker: ai
+    text: Hi there! Let's get your little guy checked out. What symptoms brought you in today?
+  - speaker: user
+    goal: Explica que tu hijo de seis años subió a 39 grados y le duele al tragar.
+    suggested_lines:
+    - My six-year-old son spiked a thirty-nine-degree fever last night and has been complaining of pain when swallowing.
+    - He weighs twenty-two kilos, and we gave him weight-based liquid acetaminophen four hours ago.
+  - speaker: ai
+    text: Good job tracking the temperature. When did he last have fever reducer, and what is his weight?
+  - speaker: user
+    goal: Indica que pesa 22 kilos y tomó paracetamol hace cuatro horas.
+    suggested_lines:
+    - He weighs twenty-two kilos, and we gave him weight-based liquid acetaminophen four hours ago.
+    - He's keeping water and popsicle fluids down well, and he has no rash or neck stiffness.
+  - speaker: ai
+    text: The medicine brought his temp down to 37.8 right now. How is his hydration?
+  - speaker: user
+    goal: Confirma que tolera bien los líquidos y no tiene sarpullido ni rigidez.
+    suggested_lines:
+    - He's keeping water and popsicle fluids down well, and he has no rash or neck stiffness.
+    - Could we do a rapid strep throat swab to see if he needs antibiotics?
+  - speaker: ai
+    text: Looking at his tonsils, there are a few white spots, so a rapid strep test is the exact next step.
+  - speaker: user
+    goal: Pregunta si pueden hacerle una prueba rápida de estreptococo en la garganta.
+    suggested_lines:
+    - Could we do a rapid strep throat swab to see if he needs antibiotics?
+    - He has no known drug allergies and is fully up to date on his childhood vaccinations.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

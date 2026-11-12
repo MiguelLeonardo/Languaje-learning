@@ -1,0 +1,109 @@
+id: a2-working-from-home-note
+title: Checking in when working remotely
+title_es: Avisar que trabajarás desde casa
+cefr: A2
+topic: work-and-career
+description: Avisa a tu líder de equipo que hoy trabajarás desde casa mientras reparan una tubería y que estás disponible
+  en Slack.
+phrases:
+- id: working-from-home-today
+  text: Good morning! I'm working from home today because the plumber is coming at ten.
+  translation: ¡Buenos días! Hoy trabajo desde casa porque el plomero viene a las diez.
+  visual_hint: 🏠💻
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: plumber
+    meaning: plomero / fontanero
+    ipa: ˈplʌmər
+- id: online-on-slack-and-email
+  text: I'm already logged in on Slack and email, so you can reach me anytime.
+  translation: Ya estoy conectado en Slack y en el correo, así que puedes contactarme en cualquier momento.
+  visual_hint: 💬🟢
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: reach me
+    meaning: contactarme / localizarme
+    ipa: riːtʃ miː
+- id: join-all-video-meetings
+  text: Yes, my internet is fast and I'll join all our video meetings on camera.
+  translation: Sí, mi internet es rápido y entraré a todas nuestras videollamadas con cámara.
+  visual_hint: 📹📶
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: on camera
+    meaning: con la cámara encendida
+    ipa: ɑːn ˈkæmərə
+- id: back-in-office-tomorrow
+  text: I'll update the spreadsheet by noon, and I'll be back in the office tomorrow!
+  translation: Actualizaré la hoja de cálculo antes del mediodía y mañana estaré de vuelta en la oficina.
+  visual_hint: 📊🏢
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: spreadsheet
+    meaning: hoja de cálculo
+    ipa: ˈspredʃiːt
+- id: step-away-ten-minutes
+  text: I'll post a quick note in the team channel when he arrives.
+  translation: Pondré un aviso rápido en el canal del equipo cuando él llegue.
+  visual_hint: 📝💬
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: channel
+    meaning: canal de chat
+    ipa: ˈtʃænəl
+- id: productive-quiet-morning
+  text: Working from a quiet desk at home is great for finishing deep work!
+  translation: Trabajar desde un escritorio tranquilo en casa es genial para avanzar.
+  visual_hint: 🎧✨
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: quiet
+    meaning: tranquilo / silencioso
+    ipa: ˈkwaɪət
+roleplay:
+  ai_role: team lead
+  user_role: remote employee
+  setting: Quick morning voice call from your home office.
+  turns:
+  - speaker: ai
+    text: Morning! Thanks for calling. Everything okay at your apartment?
+  - speaker: user
+    goal: Avisa que hoy trabajarás desde casa porque viene el plomero a las diez.
+    suggested_lines:
+    - Good morning! I'm working from home today because the plumber is coming at ten.
+    - I'm already logged in on Slack and email, so you can reach me anytime.
+  - speaker: ai
+    text: Oh, I hope the pipe is an easy fix! Will you be able to join the 11:00 AM call?
+  - speaker: user
+    goal: Confirma que ya estás conectado en Slack y correo para cualquier cosa.
+    suggested_lines:
+    - I'm already logged in on Slack and email, so you can reach me anytime.
+    - Yes, my internet is fast and I'll join all our video meetings on camera.
+  - speaker: ai
+    text: Awesome. Could you also update the shared spreadsheet before lunch?
+  - speaker: user
+    goal: Asegura que entrarás a todas las videollamadas con cámara encendida.
+    suggested_lines:
+    - Yes, my internet is fast and I'll join all our video meetings on camera.
+    - I'll update the spreadsheet by noon, and I'll be back in the office tomorrow!
+  - speaker: ai
+    text: Thanks! Let me know if the plumber needs you to step away for fifteen minutes.
+  - speaker: user
+    goal: Promete actualizar la hoja antes del mediodía y volver mañana a la oficina.
+    suggested_lines:
+    - I'll update the spreadsheet by noon, and I'll be back in the office tomorrow!
+    - I'll post a quick note in the team channel when he arrives.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

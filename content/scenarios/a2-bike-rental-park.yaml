@@ -1,0 +1,108 @@
+id: a2-bike-rental-park
+title: Renting city bikes for the afternoon
+title_es: Alquilar bicicletas para el parque
+cefr: A2
+topic: travel-and-transport
+description: Alquila dos bicicletas con casco y candado, pregunta por la ciclovía junto al río y la hora de devolución.
+phrases:
+- id: rent-two-bikes
+  text: Hi! We'd like to rent two city bikes for three hours.
+  translation: ¡Hola! Quisiéramos alquilar dos bicicletas urbanas por tres horas.
+  visual_hint: 🚲🌳
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: rent
+    meaning: alquilar
+    ipa: rent
+- id: helmets-and-locks
+  text: Do the rentals come with helmets and a strong bike lock?
+  translation: ¿El alquiler incluye cascos y un candado resistente?
+  visual_hint: 🪖🔒
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: helmets
+    meaning: cascos
+    ipa: ˈhelmɪts
+- id: river-bike-path
+  text: Is there a safe bike path that goes along the river?
+  translation: ¿Hay una ciclovía segura que vaya junto al río?
+  visual_hint: 🌊🚴
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: bike path
+    meaning: ciclovía / carril bici
+    ipa: baɪk pæθ
+- id: return-by-six-pm
+  text: If we return them before six o'clock, do we get our ID back here?
+  translation: Si las devolvemos antes de las seis, ¿recogemos nuestra identificación aquí?
+  visual_hint: 🕕🪪
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: return
+    meaning: devolver
+    ipa: rɪˈtɜːrn
+- id: check-tire-brakes
+  text: Both brakes feel good and the tires have plenty of air.
+  translation: Ambos frenos se sienten bien y las llantas tienen buen aire.
+  visual_hint: 🛞👌
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: brakes
+    meaning: frenos
+    ipa: breɪks
+- id: park-at-designated-racks
+  text: We will lock them at the metal bike racks when we stop for coffee.
+  translation: Las aseguraremos en los aparcabicis metálicos cuando paremos por café.
+  visual_hint: ☕🚲
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: racks
+    meaning: soportes / aparcabicis
+    ipa: ræks
+roleplay:
+  ai_role: bike shop clerk
+  user_role: visitor
+  setting: A bike rental stand at the entrance to Central Park.
+  turns:
+  - speaker: ai
+    text: Good afternoon! Beautiful day for a ride. How can I help you?
+  - speaker: user
+    goal: Pide alquilar dos bicicletas por tres horas.
+    suggested_lines:
+    - Hi! We'd like to rent two city bikes for three hours.
+    - Do the rentals come with helmets and a strong bike lock?
+  - speaker: ai
+    text: Two city bikes for three hours! Let me adjust the seat height for you.
+  - speaker: user
+    goal: Pregunta si incluyen cascos y candado.
+    suggested_lines:
+    - Do the rentals come with helmets and a strong bike lock?
+    - Is there a safe bike path that goes along the river?
+  - speaker: ai
+    text: Yes, helmets, locks, and a front basket are all included at no extra cost.
+  - speaker: user
+    goal: Pregunta si hay una ciclovía segura junto al río.
+    suggested_lines:
+    - Is there a safe bike path that goes along the river?
+    - If we return them before six o'clock, do we get our ID back here?
+  - speaker: ai
+    text: Yes! Follow the green lane west and it goes straight along the waterfront.
+  - speaker: user
+    goal: Confirma que las devolverán antes de las seis en este mismo puesto.
+    suggested_lines:
+    - If we return them before six o'clock, do we get our ID back here?
+    - Both brakes feel good and the tires have plenty of air.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

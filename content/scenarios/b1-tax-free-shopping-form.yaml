@@ -1,0 +1,109 @@
+id: b1-tax-free-shopping-form
+title: Requesting a VAT tax-free refund form
+title_es: Solicitar formulario libre de impuestos (Tax Free)
+cefr: B1
+topic: hotel-and-shopping
+description: Solicita el formulario de devolución de IVA al comprar un abrigo en una tienda departamental.
+phrases:
+- id: qualify-for-vat-refund
+  text: Hi, I'm visiting from outside the EU; does this coat purchase qualify for a VAT refund?
+  translation: Hola, visito desde fuera de la Unión Europea; ¿esta compra de abrigo califica para devolución de
+    IVA?
+  visual_hint: 🧥🛂
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: qualify
+    meaning: calificar / cumplir requisitos
+    ipa: ˈkwɑːlɪfaɪ
+- id: original-passport-ready
+  text: Here is my original passport along with the receipt from the third floor.
+  translation: Aquí está mi pasaporte original junto con el recibo del tercer piso.
+  visual_hint: 🪪🧾
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: receipt
+    meaning: recibo de compra
+    ipa: rɪˈsiːt
+- id: refund-back-to-card
+  text: Could you set the refund to go straight back to my Visa card?
+  translation: ¿Podría configurar el reembolso para que regrese directo a mi tarjeta Visa?
+  visual_hint: 💳🔄
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: straight back
+    meaning: directamente de vuelta
+    ipa: streɪt bæk
+- id: scan-at-airport-kiosk
+  text: Do I scan this barcode at the customs kiosk before checking my suitcase?
+  translation: ¿Escaneo este código de barras en el quiosco de aduana antes de documentar mi maleta?
+  visual_hint: 🛫🔍
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: kiosk
+    meaning: quiosco digital
+    ipa: ˈkiːɑːsk
+- id: keep-tags-attached
+  text: I'll keep the coat unworn with the tags attached in my luggage until customs.
+  translation: Mantendré el abrigo sin usar y con etiquetas en mi maleta hasta pasar por aduana.
+  visual_hint: 🏷️🧳
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: unworn
+    meaning: sin usar / nuevo
+    ipa: ˌʌnˈwɔːrn
+- id: five-business-days-credit
+  text: Thanks for explaining the steps so clearly!
+  translation: ¡Gracias por explicar los pasos con tanta claridad!
+  visual_hint: 🙏✅
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: steps
+    meaning: pasos
+    ipa: steps
+roleplay:
+  ai_role: customer service clerk
+  user_role: international shopper
+  setting: Tax-free desk on the top floor of a department store.
+  turns:
+  - speaker: ai
+    text: Good afternoon! Welcome to the International Visitor Desk. May I see your store receipts?
+  - speaker: user
+    goal: Pregunta si la compra de tu abrigo califica para devolución de IVA.
+    suggested_lines:
+    - Hi, I'm visiting from outside the EU; does this coat purchase qualify for a VAT refund?
+    - Here is my original passport along with the receipt from the third floor.
+  - speaker: ai
+    text: Yes, any same-day purchase over a hundred euros qualifies! Do you have your passport?
+  - speaker: user
+    goal: Muestra tu pasaporte original y el recibo de compra.
+    suggested_lines:
+    - Here is my original passport along with the receipt from the third floor.
+    - Could you set the refund to go straight back to my Visa card?
+  - speaker: ai
+    text: I've entered your passport details. Do you want a cash refund at the airport or back to your card?
+  - speaker: user
+    goal: Pide que el reembolso se acredite directamente a tu tarjeta Visa.
+    suggested_lines:
+    - Could you set the refund to go straight back to my Visa card?
+    - Do I scan this barcode at the customs kiosk before checking my suitcase?
+  - speaker: ai
+    text: Card refunds have zero handling fee! Here is your printed Tax-Free form in the envelope.
+  - speaker: user
+    goal: Pregunta si debes validar el formulario en aduana antes de documentar la maleta.
+    suggested_lines:
+    - Do I scan this barcode at the customs kiosk before checking my suitcase?
+    - I'll keep the coat unworn with the tags attached in my luggage until customs.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

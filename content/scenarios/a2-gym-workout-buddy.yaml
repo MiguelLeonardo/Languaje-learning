@@ -1,0 +1,108 @@
+id: a2-gym-workout-buddy
+title: Chatting at a fitness class
+title_es: Conversar en una clase del gimnasio
+cefr: A2
+topic: social-and-smalltalk
+description: Saluda a un compañero en la clase de ciclismo bajo techo, comparte pesas y comenten el entrenamiento.
+phrases:
+- id: first-time-in-class
+  text: Hi! Is this spot next to you taken? It's my first time in this class.
+  translation: ¡Hola! ¿Está ocupado este lugar junto a ti? Es mi primera vez en esta clase.
+  visual_hint: 🏋️‍♀️👋
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: taken
+    meaning: ocupado (un lugar)
+    ipa: ˈteɪkən
+- id: which-dumbbells-to-use
+  text: Which weight dumbbells do you recommend for the shoulder exercises?
+  translation: ¿Qué peso de mancuernas recomiendas para los ejercicios de hombros?
+  visual_hint: 💪🏋️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: dumbbells
+    meaning: mancuernas / pesas
+    ipa: ˈdʌmbelz
+- id: great-upbeat-playlist
+  text: I love the upbeat music playlist she uses for the warm-up!
+  translation: ¡Me encanta la lista de música animada que usa para el calentamiento!
+  visual_hint: 🎵🔥
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: upbeat
+    meaning: animada / con energía
+    ipa: ˈʌpbiːt
+- id: grab-smoothie-after
+  text: That was a great workout! Do you come to the Tuesday and Thursday sessions?
+  translation: ¡Fue un gran entrenamiento! ¿Vienes a las sesiones de martes y jueves?
+  visual_hint: 🥤💦
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: workout
+    meaning: entrenamiento / rutina
+    ipa: ˈwɜːrkaʊt
+- id: wipe-down-the-mat
+  text: Here are the disinfectant wipes to clean our mats and weights.
+  translation: Aquí están las toallitas desinfectantes para limpiar nuestros tapetes y pesas.
+  visual_hint: 🧻✨
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: mat
+    meaning: tapete de ejercicio / colchoneta
+    ipa: mæt
+- id: see-you-on-thursday
+  text: Awesome, I'll book my spot for Thursday—see you then!
+  translation: Genial, reservaré mi lugar para el jueves; ¡nos vemos entonces!
+  visual_hint: 📅🙌
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: book my spot
+    meaning: reservar mi lugar
+    ipa: bʊk maɪ spɑːt
+roleplay:
+  ai_role: gym member
+  user_role: fitness class participant
+  setting: Studio room before an evening spin and strength class.
+  turns:
+  - speaker: ai
+    text: Hey there! Welcome to the 6:00 PM strength and cardio session!
+  - speaker: user
+    goal: Pregunta si el lugar está libre y comenta que es tu primera vez en la clase.
+    suggested_lines:
+    - Hi! Is this spot next to you taken? It's my first time in this class.
+    - Which weight dumbbells do you recommend for the shoulder exercises?
+  - speaker: ai
+    text: Not taken at all, grab that mat! The instructor, Maya, is super encouraging.
+  - speaker: user
+    goal: Pregunta qué peso de mancuernas recomienda para hombros.
+    suggested_lines:
+    - Which weight dumbbells do you recommend for the shoulder exercises?
+    - I love the upbeat music playlist she uses for the warm-up!
+  - speaker: ai
+    text: Start with the ten-pound dumbbells—we do a lot of repetitions!
+  - speaker: user
+    goal: Comenta que te gusta mucho la música del calentamiento.
+    suggested_lines:
+    - I love the upbeat music playlist she uses for the warm-up!
+    - That was a great workout! Do you come to the Tuesday and Thursday sessions?
+  - speaker: ai
+    text: Whew, we survived the final plank challenge! How do you feel?
+  - speaker: user
+    goal: Dile que fue un gran entrenamiento y pregunta si viene martes y jueves.
+    suggested_lines:
+    - That was a great workout! Do you come to the Tuesday and Thursday sessions?
+    - Here are the disinfectant wipes to clean our mats and weights.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

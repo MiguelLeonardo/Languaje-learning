@@ -1,0 +1,108 @@
+id: a1-ferry-boat-ticket
+title: Buying harbor ferry tickets
+title_es: Comprar boletos de ferry
+cefr: A1
+topic: travel-and-transport
+description: Compra dos boletos para el barco del puerto, pregunta si puedes sentarte afuera y a qué hora regresa.
+phrases:
+- id: two-ferry-tickets
+  text: Two adult tickets for the island ferry, please.
+  translation: Dos boletos de adulto para el ferry a la isla, por favor.
+  visual_hint: ⛴️🎟️
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: island
+    meaning: isla
+    ipa: ˈaɪlənd
+- id: sit-on-top-deck
+  text: Can we sit outside on the top deck?
+  translation: ¿Podemos sentarnos afuera en la cubierta superior?
+  visual_hint: ☀️🌊
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: top deck
+    meaning: cubierta superior
+    ipa: tɑːp dek
+- id: last-boat-back
+  text: What time is the last boat back to the city?
+  translation: ¿A qué hora sale el último barco de regreso a la ciudad?
+  visual_hint: 🌇⛴️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: last
+    meaning: último
+    ipa: læst
+- id: how-long-crossing
+  text: Is the boat ride thirty minutes long?
+  translation: ¿El paseo en barco dura treinta minutos?
+  visual_hint: ⏱️⚓
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: boat ride
+    meaning: viaje en barco
+    ipa: boʊt raɪd
+- id: life-jackets-under-seat
+  text: Where do we wait for boarding?
+  translation: ¿Dónde esperamos para abordar?
+  visual_hint: 🚶‍♂️🪧
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: wait
+    meaning: esperar
+    ipa: weɪt
+- id: enjoy-the-breeze
+  text: Thank you! It is a great day for the water.
+  translation: ¡Gracias! Es un gran día para navegar.
+  visual_hint: 🌊😊
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: water
+    meaning: agua / mar
+    ipa: ˈwɔːtər
+roleplay:
+  ai_role: ticket agent
+  user_role: tourist
+  setting: Harbor pier ticket booth on a sunny day.
+  turns:
+  - speaker: ai
+    text: Welcome to the harbor pier! Where are you sailing today?
+  - speaker: user
+    goal: Pide dos boletos de adulto para el ferry a la isla.
+    suggested_lines:
+    - Two adult tickets for the island ferry, please.
+    - Can we sit outside on the top deck?
+  - speaker: ai
+    text: Two adult tickets! The boat boards at Gate B in ten minutes.
+  - speaker: user
+    goal: Pregunta si pueden sentarse afuera en la cubierta superior.
+    suggested_lines:
+    - Can we sit outside on the top deck?
+    - What time is the last boat back to the city?
+  - speaker: ai
+    text: Yes, the upper deck has open seats and great views of the bridge.
+  - speaker: user
+    goal: Pregunta a qué hora sale el último barco de regreso.
+    suggested_lines:
+    - What time is the last boat back to the city?
+    - Is the boat ride thirty minutes long?
+  - speaker: ai
+    text: The last ferry back from the island leaves at 7:00 PM.
+  - speaker: user
+    goal: Pregunta si el viaje dura treinta minutos.
+    suggested_lines:
+    - Is the boat ride thirty minutes long?
+    - Where do we wait for boarding?
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

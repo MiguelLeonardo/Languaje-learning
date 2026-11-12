@@ -1,0 +1,108 @@
+id: a2-pub-fish-and-chips
+title: Ordering lunch at a British pub
+title_es: Almorzar en un pub británico
+cefr: A2
+topic: food-and-drink
+description: Ordena en la barra indicando el número de tu mesa, pide pescado con papas y vinagre de malta.
+phrases:
+- id: order-at-the-bar
+  text: Hi, we are sitting at table twelve. Do we order here at the bar?
+  translation: Hola, estamos en la mesa doce. ¿Pedimos aquí en la barra?
+  visual_hint: 🍺🪑
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: at the bar
+    meaning: en la barra
+    ipa: æt ðə bɑːr
+- id: traditional-fish-chips
+  text: We'd like two portions of fish and chips with mushy peas.
+  translation: Quisiéramos dos porciones de pescado con papas y puré de guisantes.
+  visual_hint: 🐟🍟
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: portions
+    meaning: porciones / raciones
+    ipa: ˈpɔːrʃənz
+- id: malt-vinegar-sauce
+  text: Could you bring some malt vinegar and tartar sauce?
+  translation: ¿Podría traernos vinagre de malta y salsa tártara?
+  visual_hint: 🍾🥣
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: tartar sauce
+    meaning: salsa tártara
+    ipa: ˈtɑːrtər sɔːs
+- id: ginger-beer-ice
+  text: Two glasses of ginger beer with ice and lemon, please.
+  translation: Dos vasos de cerveza de jengibre con hielo y limón, por favor.
+  visual_hint: 🥂🍋
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: ginger beer
+    meaning: refresco de jengibre
+    ipa: ˈdʒɪndʒər bɪr
+- id: sunday-roast-special
+  text: Do you also serve the traditional Sunday roast here?
+  translation: ¿También sirven el asado tradicional de los domingos aquí?
+  visual_hint: 🥩🥕
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: roast
+    meaning: asado al horno
+    ipa: roʊst
+- id: close-the-tab
+  text: We're ready to pay right now by contactless card.
+  translation: Estamos listos para pagar ahora mismo con tarjeta sin contacto.
+  visual_hint: 💳📲
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: contactless
+    meaning: sin contacto
+    ipa: ˈkɑːntæktləs
+roleplay:
+  ai_role: bartender
+  user_role: visitor
+  setting: A cozy traditional pub in London.
+  turns:
+  - speaker: ai
+    text: Hello! Welcome to The Crown. How can I help you?
+  - speaker: user
+    goal: Indica que están en la mesa doce y pregunta si se pide en la barra.
+    suggested_lines:
+    - Hi, we are sitting at table twelve. Do we order here at the bar?
+    - We'd like two portions of fish and chips with mushy peas.
+  - speaker: ai
+    text: Yes, you order right here and we bring the food to table twelve!
+  - speaker: user
+    goal: Pide dos porciones de fish and chips.
+    suggested_lines:
+    - We'd like two portions of fish and chips with mushy peas.
+    - Could you bring some malt vinegar and tartar sauce?
+  - speaker: ai
+    text: Two fish and chips! Anything to drink with your meal?
+  - speaker: user
+    goal: Pide vinagre de malta y salsa tártara.
+    suggested_lines:
+    - Could you bring some malt vinegar and tartar sauce?
+    - Two glasses of ginger beer with ice and lemon, please.
+  - speaker: ai
+    text: Of course, I'll bring the condiments right over.
+  - speaker: user
+    goal: Pide dos vasos de ginger beer con hielo y limón.
+    suggested_lines:
+    - Two glasses of ginger beer with ice and lemon, please.
+    - Do you also serve the traditional Sunday roast here?
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

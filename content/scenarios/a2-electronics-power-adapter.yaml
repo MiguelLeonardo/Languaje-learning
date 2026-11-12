@@ -1,0 +1,108 @@
+id: a2-electronics-power-adapter
+title: Buying a universal travel adapter
+title_es: Comprar un adaptador de enchufe universal
+cefr: A2
+topic: hotel-and-shopping
+description: Compra un adaptador universal con puertos USB-C en una tienda de electrónica y verifica el voltaje.
+phrases:
+- id: universal-plug-adapter
+  text: Hi, I'm looking for a universal travel plug adapter for Europe and the UK.
+  translation: Hola, busco un adaptador de enchufe universal para Europa y el Reino Unido.
+  visual_hint: 🔌🌍
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: plug adapter
+    meaning: adaptador de enchufe
+    ipa: plʌɡ əˈdæptər
+- id: fast-usb-c-ports
+  text: Does this model have two fast-charging USB-C ports built in?
+  translation: ¿Este modelo tiene dos puertos USB-C de carga rápida integrados?
+  visual_hint: ⚡📱
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: built in
+    meaning: incorporados / integrados
+    ipa: bɪlt ɪn
+- id: safe-for-laptop
+  text: Is it safe to plug my laptop charger and phone into it at the same time?
+  translation: ¿Es seguro conectar el cargador de mi laptop y mi teléfono al mismo tiempo?
+  visual_hint: 💻🔌
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: at the same time
+    meaning: al mismo tiempo
+    ipa: æt ðə seɪm taɪm
+- id: braided-charging-cable
+  text: I'll also grab a two-meter braided charging cable, please.
+  translation: También me llevaré un cable de carga trenzado de dos metros, por favor.
+  visual_hint: ➰🔋
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: cable
+    meaning: cable
+    ipa: ˈkeɪbəl
+- id: spare-fuse-inside
+  text: It's nice that it includes a spare safety fuse inside the case.
+  translation: Qué bueno que incluye un fusible de repuesto dentro del estuche.
+  visual_hint: 🛡️⚙️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: spare
+    meaning: de repuesto
+    ipa: sper
+- id: test-before-leaving
+  text: Everything fits snugly in the travel pouch—I'll take it!
+  translation: Todo cabe perfecto en el estuche de viaje; ¡me lo llevo!
+  visual_hint: 🎒✅
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: pouch
+    meaning: estuche / bolsita
+    ipa: paʊtʃ
+roleplay:
+  ai_role: electronics clerk
+  user_role: traveler
+  setting: An electronics store near the train station.
+  turns:
+  - speaker: ai
+    text: Welcome! What kind of accessory are you looking for today?
+  - speaker: user
+    goal: Di que buscas un adaptador universal para Europa y Reino Unido.
+    suggested_lines:
+    - Hi, I'm looking for a universal travel plug adapter for Europe and the UK.
+    - Does this model have two fast-charging USB-C ports built in?
+  - speaker: ai
+    text: We have this compact all-in-one world adapter right here.
+  - speaker: user
+    goal: Pregunta si ese modelo tiene dos puertos USB-C de carga rápida.
+    suggested_lines:
+    - Does this model have two fast-charging USB-C ports built in?
+    - Is it safe to plug my laptop charger and phone into it at the same time?
+  - speaker: ai
+    text: Yes, it delivers 65 watts across two USB-C ports plus the main AC socket.
+  - speaker: user
+    goal: Pregunta si es seguro conectar la laptop y el teléfono a la vez.
+    suggested_lines:
+    - Is it safe to plug my laptop charger and phone into it at the same time?
+    - I'll also grab a two-meter braided charging cable, please.
+  - speaker: ai
+    text: Completely safe for dual-voltage laptops and tablets!
+  - speaker: user
+    goal: Agrega un cable de carga de dos metros a tu compra.
+    suggested_lines:
+    - I'll also grab a two-meter braided charging cable, please.
+    - It's nice that it includes a spare safety fuse inside the case.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

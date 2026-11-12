@@ -1,0 +1,124 @@
+id: b2-salary-review-discussion
+title: Presenting achievements for a salary review
+title_es: Presentar logros para revisión salarial
+cefr: B2
+topic: work-and-career
+description: Expón con datos concretos cómo ampliaste tus responsabilidades y lideraste proyectos clave para solicitar
+  un ajuste salarial.
+phrases:
+- id: expanded-scope-this-year
+  text: Over the past year, my scope has expanded from individual feature delivery to leading our three-person billing
+    pod.
+  translation: Durante el último año, mi alcance pasó de entregar funciones individuales a liderar nuestro equipo
+    de tres personas de facturación.
+  visual_hint: 📈💼
+  cloze:
+  - 6
+  - 12
+  glossary:
+  - word: scope
+    meaning: alcance de responsabilidades
+    ipa: skoʊp
+- id: reduced-churn-and-latency
+  text: By re-architecting the payment retry pipeline, we recovered four hundred thousand dollars in annual recurring
+    revenue.
+  translation: Al rediseñar el flujo de reintentos de pago, recuperamos cuatrocientos mil dólares en ingresos anuales
+    recurrentes.
+  visual_hint: 💡💵
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: recovered
+    meaning: recuperamos
+    ipa: rɪˈkʌvərd
+- id: benchmark-compensation-band
+  text: Given these results and my current responsibilities, I'd like to discuss aligning my base salary with the
+    Senior Lead band.
+  translation: Dados estos resultados y mis responsabilidades actuales, me gustaría conversar sobre alinear mi salario
+    base con la banda de Senior Lead.
+  visual_hint: ⚖️🎯
+  cloze:
+  - 6
+  - 13
+  glossary:
+  - word: aligning
+    meaning: alinear / equiparar
+    ipa: əˈlaɪnɪŋ
+- id: twelve-percent-adjustment
+  text: Based on our internal leveling guide and market data, a twelve-percent adjustment to base plus equity refresh
+    feels fair.
+  translation: Según nuestra guía interna de niveles y datos de mercado, un ajuste del doce por ciento más renovación
+    de acciones parece justo.
+  visual_hint: 📊🤝
+  cloze:
+  - 6
+  - 12
+  glossary:
+  - word: adjustment
+    meaning: ajuste salarial
+    ipa: əˈdʒʌstmənt
+- id: timeline-for-hr-signoff
+  text: When does the compensation committee finalize adjustments for the Q2 payroll cycle?
+  translation: ¿Cuándo cierra el comité los ajustes para la nómina del segundo trimestre?
+  visual_hint: 🗓️🏦
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: payroll cycle
+    meaning: ciclo de nómina
+    ipa: ˈpeɪroʊl ˈsaɪkəl
+- id: excited-for-next-roadmap
+  text: I appreciate your advocacy, and I'm really excited to lead the international checkout rollout next!
+  translation: Agradezco mucho tu respaldo y me entusiasma liderar el despliegue internacional.
+  visual_hint: 🚀🌟
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: advocacy
+    meaning: respaldo activo / defensa
+    ipa: ˈædvəkəsi
+roleplay:
+  ai_role: engineering VP
+  user_role: senior contributor
+  setting: Annual performance and compensation review meeting.
+  turns:
+  - speaker: ai
+    text: Thanks for sending your self-assessment ahead of time. You've had a standout year!
+  - speaker: user
+    goal: Explica cómo tu alcance creció hasta liderar el equipo de facturación este año.
+    suggested_lines:
+    - Over the past year, my scope has expanded from individual feature delivery to leading our three-person billing
+      pod.
+    - By re-architecting the payment retry pipeline, we recovered four hundred thousand dollars in annual recurring
+      revenue.
+  - speaker: ai
+    text: The executive team noticed that metric right away—it made a huge dent in involuntary churn.
+  - speaker: user
+    goal: Destaca que el rediseño de pagos recuperó $400,000 en ingresos recurrentes.
+    suggested_lines:
+    - By re-architecting the payment retry pipeline, we recovered four hundred thousand dollars in annual recurring
+      revenue.
+    - Given these results and my current responsibilities, I'd like to discuss aligning my base salary with the
+      Senior Lead band.
+  - speaker: ai
+    text: Where do you see your compensation sitting relative to market benchmarks?
+  - speaker: user
+    goal: Propón alinear tu salario base con la banda de Senior Lead.
+    suggested_lines:
+    - Given these results and my current responsibilities, I'd like to discuss aligning my base salary with the
+      Senior Lead band.
+    - Based on our internal leveling guide and market data, a twelve-percent adjustment to base plus equity refresh
+      feels fair.
+  - speaker: ai
+    text: I agree you're already operating at that level. Let me take this proposal to HR and compensation committee.
+  - speaker: user
+    goal: Plantea un ajuste del 12% apoyado en la guía interna de niveles.
+    suggested_lines:
+    - Based on our internal leveling guide and market data, a twelve-percent adjustment to base plus equity refresh
+      feels fair.
+    - When does the compensation committee finalize adjustments for the Q2 payroll cycle?
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

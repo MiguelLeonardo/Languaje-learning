@@ -1,0 +1,108 @@
+id: b1-tailor-suit-alterations
+title: Getting trousers hemmed at a tailor
+title_es: Ajustar el largo de un pantalón en la sastrería
+cefr: B1
+topic: hotel-and-shopping
+description: Pide a un sastre subir el dobladillo de un pantalón de vestir para una boda el sábado.
+phrases:
+- id: shorten-trouser-hem
+  text: Hi! I bought these dress trousers for a wedding, but the legs are too long.
+  translation: ¡Hola! Compré este pantalón de vestir para una boda, pero las piernas me quedan largas.
+  visual_hint: 👖📏
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: trousers
+    meaning: pantalón de vestir
+    ipa: ˈtraʊzərz
+- id: slight-break-on-shoe
+  text: Could you hem them so there's just a slight break over my leather shoes?
+  translation: ¿Podría subir el dobladillo para que caiga apenas sobre mis zapatos de cuero?
+  visual_hint: 👞📌
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: hem
+    meaning: hacer el dobladillo
+    ipa: hem
+- id: take-in-the-waist
+  text: The waist is also half an inch loose; can you take it in slightly?
+  translation: La cintura también me queda media pulgada suelta; ¿puede ajustarla un poco?
+  visual_hint: 🪡✨
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: take it in
+    meaning: entallar / meter costura
+    ipa: teɪk ɪt ɪn
+- id: pick-up-friday-noon
+  text: Since the wedding is on Saturday, will they be ready for pickup Friday at noon?
+  translation: Como la boda es el sábado, ¿estarán listos para recoger el viernes al mediodía?
+  visual_hint: 📅🕛
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: wedding
+    meaning: boda
+    ipa: ˈwedɪŋ
+- id: blind-stitch-finish
+  text: A blind-stitch finish without cuffs will look cleanest with this jacket.
+  translation: Un acabado de puntada invisible sin valenciana se verá más limpio con este saco.
+  visual_hint: 🧵👌
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: blind-stitch
+    meaning: puntada invisible
+    ipa: blaɪnd stɪtʃ
+- id: try-on-at-pickup
+  text: Great, I'll try them on quickly when I pick them up on Friday.
+  translation: Genial, me los probaré rápido cuando pase a recogerlos el viernes.
+  visual_hint: 🪞✅
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: try them on
+    meaning: probármelos
+    ipa: traɪ ðem ɑːn
+roleplay:
+  ai_role: master tailor
+  user_role: customer
+  setting: A traditional tailoring shop with fitting mirrors.
+  turns:
+  - speaker: ai
+    text: Welcome in! Step up onto the platform with your dress shoes on.
+  - speaker: user
+    goal: Explica que compraste el pantalón para una boda pero te queda largo.
+    suggested_lines:
+    - Hi! I bought these dress trousers for a wedding, but the legs are too long.
+    - Could you hem them so there's just a slight break over my leather shoes?
+  - speaker: ai
+    text: Let me pin the fabric right here—do you prefer a modern no-break or a classic slight break?
+  - speaker: user
+    goal: Pide que el dobladillo caiga suavemente sobre tus zapatos.
+    suggested_lines:
+    - Could you hem them so there's just a slight break over my leather shoes?
+    - The waist is also half an inch loose; can you take it in slightly?
+  - speaker: ai
+    text: Pinned at a slight break! How does the waistband feel when you button it?
+  - speaker: user
+    goal: Pregunta si también puede ajustar media pulgada la cintura.
+    suggested_lines:
+    - The waist is also half an inch loose; can you take it in slightly?
+    - Since the wedding is on Saturday, will they be ready for pickup Friday at noon?
+  - speaker: ai
+    text: Taking the back seam in half an inch is very easy—we'll keep the extra fabric inside.
+  - speaker: user
+    goal: Pregunta si estarán listos para recoger el viernes al mediodía.
+    suggested_lines:
+    - Since the wedding is on Saturday, will they be ready for pickup Friday at noon?
+    - A blind-stitch finish without cuffs will look cleanest with this jacket.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

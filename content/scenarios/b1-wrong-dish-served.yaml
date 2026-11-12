@@ -1,0 +1,108 @@
+id: b1-wrong-dish-served
+title: Politely fixing a wrong order
+title_es: Corregir amablemente un pedido equivocado
+cefr: B1
+topic: food-and-drink
+description: Explica con cortesía al mesero que te trajeron pasta con carne cuando habías pedido el risotto vegetariano.
+phrases:
+- id: sorry-to-bother
+  text: Excuse me, sorry to bother you, but I think there's a mix-up.
+  translation: Disculpe, lamento molestarle, pero creo que hay una confusión.
+  visual_hint: 🙋‍♂️🍝
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: mix-up
+    meaning: confusión / error
+    ipa: ˈmɪks ʌp
+- id: ordered-mushroom-risotto
+  text: I actually ordered the wild mushroom risotto without meat.
+  translation: En realidad pedí el risotto de hongos silvestres sin carne.
+  visual_hint: 🍄🍚
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: actually
+    meaning: en realidad
+    ipa: ˈæktʃuəli
+- id: no-rush-at-all
+  text: No worries at all, mistakes happen when it's this busy.
+  translation: No se preocupe en absoluto, los errores pasan cuando hay tanta gente.
+  visual_hint: 😊🙌
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: mistakes happen
+    meaning: los errores pasan
+    ipa: mɪˈsteɪks ˈhæpən
+- id: how-long-new-dish
+  text: Will the risotto take long, or is there one ready?
+  translation: ¿Tardará mucho el risotto, o tienen alguno listo?
+  visual_hint: ⏱️🍲
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: take long
+    meaning: tardar mucho
+    ipa: teɪk lɔːŋ
+- id: keep-side-salad
+  text: Thank you for offering the complimentary salad while I wait.
+  translation: Gracias por ofrecer la ensalada de cortesía mientras espero.
+  visual_hint: 🥗🙏
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: complimentary
+    meaning: de cortesía / gratuito
+    ipa: ˌkɑːmplɪˈmentəri
+- id: tastes-wonderful
+  text: The risotto came out hot and tastes wonderful, thank you!
+  translation: ¡El risotto salió caliente y sabe maravilloso, gracias!
+  visual_hint: 👨‍🍳🌟
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: came out
+    meaning: salió / quedó
+    ipa: keɪm aʊt
+roleplay:
+  ai_role: waiter
+  user_role: diner
+  setting: A busy Italian restaurant during dinner.
+  turns:
+  - speaker: ai
+    text: Here is your pasta Bolognese! Enjoy your meal.
+  - speaker: user
+    goal: Explica amablemente que crees que hay una confusión con tu plato.
+    suggested_lines:
+    - Excuse me, sorry to bother you, but I think there's a mix-up.
+    - I actually ordered the wild mushroom risotto without meat.
+  - speaker: ai
+    text: Oh, I'm so sorry! What did you order?
+  - speaker: user
+    goal: Aclara que habías pedido el risotto de hongos sin carne.
+    suggested_lines:
+    - I actually ordered the wild mushroom risotto without meat.
+    - No worries at all, mistakes happen when it's this busy.
+  - speaker: ai
+    text: Let me take this back to the kitchen immediately!
+  - speaker: user
+    goal: Tranquiliza al mesero y pregunta cuánto tardará el risotto.
+    suggested_lines:
+    - No worries at all, mistakes happen when it's this busy.
+    - Will the risotto take long, or is there one ready?
+  - speaker: ai
+    text: The chef can have a fresh risotto out in six minutes, and I'll bring a free side salad.
+  - speaker: user
+    goal: Acepta la ensalada de cortesía mientras esperas.
+    suggested_lines:
+    - Will the risotto take long, or is there one ready?
+    - Thank you for offering the complimentary salad while I wait.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

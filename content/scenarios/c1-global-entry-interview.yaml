@@ -1,0 +1,111 @@
+id: c1-global-entry-interview
+title: Trusted traveler border interview
+title_es: Entrevista de viajero frecuente en frontera
+cefr: C1
+topic: travel-and-transport
+description: Responde con precisión las preguntas de un oficial sobre historial de viajes, motivo laboral y cumplimiento
+  aduanero.
+phrases:
+- id: frequent-transatlantic-travel
+  text: I fly transatlantic roughly once a month to oversee our European engineering hubs.
+  translation: Vuelo a través del Atlántico aproximadamente una vez al mes para supervisar nuestros centros de ingeniería
+    europeos.
+  visual_hint: ✈️🌐
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: oversee
+    meaning: supervisar / dirigir
+    ipa: ˌoʊvərˈsiː
+- id: five-year-address-history
+  text: I brought my residency utility bills and employment verification covering the past five years.
+  translation: Traje mis comprobantes de domicilio y constancia laboral que cubren los últimos cinco años.
+  visual_hint: 📑🏠
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: covering
+    meaning: que abarcan / cubren
+    ipa: ˈkʌvərɪŋ
+- id: strict-customs-compliance
+  text: I've never had a customs violation or agricultural seizure in any jurisdiction.
+  translation: Nunca he tenido una infracción aduanera ni retención agrícola en ninguna jurisdicción.
+  visual_hint: 🛂✅
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: seizure
+    meaning: decomiso / retención aduanera
+    ipa: ˈsiːʒər
+- id: biometric-kiosk-rules
+  text: I understand that even with biometric kiosk clearance, I must declare any food or currency over the threshold.
+  translation: Entiendo que incluso usando el quiosco biométrico debo declarar cualquier alimento o divisa que supere
+    el límite.
+  visual_hint: 👁️📋
+  cloze:
+  - 6
+  - 12
+  glossary:
+  - word: threshold
+    meaning: umbral / límite legal
+    ipa: ˈθreʃhoʊld
+- id: known-traveler-number
+  text: How soon does my Known Traveler Number activate for upcoming airline bookings?
+  translation: ¿Qué tan pronto se activa mi número de viajero confiable para próximas reservas?
+  visual_hint: 🔢📲
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: upcoming
+    meaning: próximas / futuras
+    ipa: ˈʌpkʌmɪŋ
+- id: renew-every-five-years
+  text: Thank you, Officer—I'll add the KTN to my frequent-flyer profile today.
+  translation: Gracias, oficial; agregaré el número a mi perfil de viajero frecuente hoy mismo.
+  visual_hint: 🤝✈️
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: profile
+    meaning: perfil de usuario
+    ipa: ˈproʊfaɪl
+roleplay:
+  ai_role: customs & border officer
+  user_role: applicant
+  setting: Trusted Traveler enrollment center at an international airport.
+  turns:
+  - speaker: ai
+    text: Please have a seat. Why are you applying for the Trusted Traveler program?
+  - speaker: user
+    goal: Explica que vuelas cada mes a Europa para supervisar equipos de ingeniería.
+    suggested_lines:
+    - I fly transatlantic roughly once a month to oversee our European engineering hubs.
+    - I brought my residency utility bills and employment verification covering the past five years.
+  - speaker: ai
+    text: Thank you. Let's verify your residential and employment history.
+  - speaker: user
+    goal: Presenta tus comprobantes de domicilio y constancia laboral de cinco años.
+    suggested_lines:
+    - I brought my residency utility bills and employment verification covering the past five years.
+    - I've never had a customs violation or agricultural seizure in any jurisdiction.
+  - speaker: ai
+    text: Have you ever been cited for failing to declare commercial goods or agricultural items?
+  - speaker: user
+    goal: Confirma que nunca has tenido infracciones aduaneras en ninguna jurisdicción.
+    suggested_lines:
+    - I've never had a customs violation or agricultural seizure in any jurisdiction.
+    - I understand that even with biometric kiosk clearance, I must declare any food or currency over the threshold.
+  - speaker: ai
+    text: Good. Place your right four fingers flat on the glass scanner for biometrics.
+  - speaker: user
+    goal: Demuestra que conoces la obligación de declarar alimentos o divisas sobre el límite.
+    suggested_lines:
+    - I understand that even with biometric kiosk clearance, I must declare any food or currency over the threshold.
+    - How soon does my Known Traveler Number activate for upcoming airline bookings?
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

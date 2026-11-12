@@ -1,0 +1,108 @@
+id: a1-introducing-a-friend
+title: Introducing two friends
+title_es: Presentar a dos amigos
+cefr: A1
+topic: social-and-smalltalk
+description: Presenta a tu amiga Ana a tu compañero de trabajo Tom en una cafetería y conversen sobre de dónde son.
+phrases:
+- id: meet-my-friend-ana
+  text: Hi Tom! I want you to meet my good friend, Ana.
+  translation: ¡Hola Tom! Quiero que conozcas a mi buena amiga, Ana.
+  visual_hint: 👋😊
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: meet
+    meaning: conocer a alguien
+    ipa: miːt
+- id: she-is-from-lima
+  text: Ana is visiting from Lima for the week.
+  translation: Ana está de visita desde Lima por esta semana.
+  visual_hint: ✈️🌎
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: visiting
+    meaning: visitando / de visita
+    ipa: ˈvɪzɪtɪŋ
+- id: work-in-same-office
+  text: Tom and I work together in the design office.
+  translation: Tom y yo trabajamos juntos en la oficina de diseño.
+  visual_hint: 💼🎨
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: together
+    meaning: juntos
+    ipa: təˈɡeðər
+- id: sit-at-our-table
+  text: Would you like to sit and have coffee with us?
+  translation: ¿Te gustaría sentarte y tomar un café con nosotros?
+  visual_hint: ☕🪑
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: with us
+    meaning: con nosotros
+    ipa: wɪð ʌs
+- id: love-the-sunny-weather
+  text: You brought the warm sunny weather with you!
+  translation: ¡Trajiste el clima cálido y soleado contigo!
+  visual_hint: ☀️😄
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: weather
+    meaning: clima / tiempo
+    ipa: ˈweðər
+- id: see-you-on-monday
+  text: Great chatting with you, Tom! See you on Monday.
+  translation: ¡Qué gusto charlar contigo, Tom! Nos vemos el lunes.
+  visual_hint: 🙌📅
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: Monday
+    meaning: lunes
+    ipa: ˈmʌndeɪ
+roleplay:
+  ai_role: colleague (Tom)
+  user_role: friend
+  setting: Running into a coworker at a neighborhood cafe.
+  turns:
+  - speaker: ai
+    text: Hey! Good to see you here at the cafe!
+  - speaker: user
+    goal: Preséntale a tu amiga Ana a tu compañero Tom.
+    suggested_lines:
+    - Hi Tom! I want you to meet my good friend, Ana.
+    - Ana is visiting from Lima for the week.
+  - speaker: ai
+    text: Hi Ana, nice to meet you! Where are you from?
+  - speaker: user
+    goal: Cuéntale que Ana está de visita desde Lima por esta semana.
+    suggested_lines:
+    - Ana is visiting from Lima for the week.
+    - Tom and I work together in the design office.
+  - speaker: ai
+    text: Lima is a wonderful city! Is this your first time here?
+  - speaker: user
+    goal: Explica que Tom y tú trabajan juntos en la oficina de diseño.
+    suggested_lines:
+    - Tom and I work together in the design office.
+    - Would you like to sit and have coffee with us?
+  - speaker: ai
+    text: Yes, we work on the same team!
+  - speaker: user
+    goal: Invita a Tom a sentarse a tomar café con ustedes.
+    suggested_lines:
+    - Would you like to sit and have coffee with us?
+    - You brought the warm sunny weather with you!
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

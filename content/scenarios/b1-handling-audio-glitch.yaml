@@ -1,0 +1,109 @@
+id: b1-handling-audio-glitch
+title: Troubleshooting a video call glitch
+title_es: Resolver fallo de audio y pantalla en videollamada
+cefr: B1
+topic: work-and-career
+description: Resuelve con calma un eco en el micrófono y un problema al compartir pantalla durante una presentación
+  remota.
+phrases:
+- id: hear-my-audio-clearly
+  text: Hi everyone! Before I dive in, can you hear my audio clearly and see my slides?
+  translation: ¡Hola a todos! Antes de comenzar de lleno, ¿escuchan bien mi audio y ven mis diapositivas?
+  visual_hint: 🎙️💻
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: dive in
+    meaning: entrar en materia / comenzar
+    ipa: daɪv ɪn
+- id: switch-to-headset-mic
+  text: Let me switch my audio input to my wired headset so we get rid of that echo.
+  translation: Déjenme cambiar la entrada de audio a mis audífonos con cable para eliminar ese eco.
+  visual_hint: 🎧🔧
+  cloze:
+  - 5
+  - 11
+  glossary:
+  - word: get rid of
+    meaning: eliminar / deshacerse de
+    ipa: ɡet rɪd əv
+- id: share-specific-window
+  text: I'll stop sharing and share the browser window directly instead of my whole desktop.
+  translation: Dejaré de compartir y seleccionaré directamente la ventana del navegador en lugar de todo el escritorio.
+  visual_hint: 🖥️🔄
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: instead of
+    meaning: en lugar de
+    ipa: ɪnˈsted əv
+- id: drop-link-in-chat
+  text: There we go! I also dropped the PDF link in the chat in case anyone wants to follow along.
+  translation: ¡Listo! También dejé el enlace del PDF en el chat por si alguien quiere seguirlo desde ahí.
+  visual_hint: 🔗✅
+  cloze:
+  - 6
+  - 12
+  glossary:
+  - word: follow along
+    meaning: seguir la presentación al mismo tiempo
+    ipa: ˈfɑːloʊ əˈlɔːŋ
+- id: mute-when-not-speaking
+  text: Feel free to unmute and jump in with questions as we go through each screen.
+  translation: Siéntanse libres de abrir su micrófono y hacer preguntas en cada pantalla.
+  visual_hint: 🗣️✨
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: jump in
+    meaning: intervenir en la conversación
+    ipa: dʒʌmp ɪn
+- id: thanks-for-patience-tech
+  text: Thanks for bearing with me for thirty seconds—let's jump into the demo!
+  translation: Gracias por la paciencia estos treinta segundos; ¡vamos directo a la demostración!
+  visual_hint: 🚀👏
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: bearing with me
+    meaning: tenerme paciencia
+    ipa: ˈberɪŋ wɪð miː
+roleplay:
+  ai_role: client on Zoom
+  user_role: presenter
+  setting: Start of an online product demo call.
+  turns:
+  - speaker: ai
+    text: Hi! We can hear you, though there's a slight echo, and the screen is still black.
+  - speaker: user
+    goal: Pregunta si te escuchan con claridad y pueden ver tus diapositivas.
+    suggested_lines:
+    - Hi everyone! Before I dive in, can you hear my audio clearly and see my slides?
+    - Let me switch my audio input to my wired headset so we get rid of that echo.
+  - speaker: ai
+    text: Much better—the echo is completely gone now! What about the slide deck?
+  - speaker: user
+    goal: Explica que cambiarás a tus audífonos con cable para quitar el eco.
+    suggested_lines:
+    - Let me switch my audio input to my wired headset so we get rid of that echo.
+    - I'll stop sharing and share the browser window directly instead of my whole desktop.
+  - speaker: ai
+    text: Take your time, Zoom always acts up right before a demo!
+  - speaker: user
+    goal: Indica que compartirás directamente la ventana del navegador.
+    suggested_lines:
+    - I'll stop sharing and share the browser window directly instead of my whole desktop.
+    - There we go! I also dropped the PDF link in the chat in case anyone wants to follow along.
+  - speaker: ai
+    text: Crystal clear! We see the title slide in full screen now.
+  - speaker: user
+    goal: Confirma que ya se ve y menciona que pusiste el enlace del PDF en el chat.
+    suggested_lines:
+    - There we go! I also dropped the PDF link in the chat in case anyone wants to follow along.
+    - Feel free to unmute and jump in with questions as we go through each screen.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

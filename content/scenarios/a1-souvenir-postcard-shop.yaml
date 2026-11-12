@@ -1,0 +1,108 @@
+id: a1-souvenir-postcard-shop
+title: Buying postcards and magnets
+title_es: Comprar postales e imanes
+cefr: A1
+topic: hotel-and-shopping
+description: Compra tres postales, un imán para el refrigerador y estampillas en una tienda de recuerdos.
+phrases:
+- id: three-postcards
+  text: I would like these three city postcards, please.
+  translation: Quisiera estas tres postales de la ciudad, por favor.
+  visual_hint: 🖼️🏙️
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: postcards
+    meaning: tarjetas postales
+    ipa: ˈpoʊstkɑːrdz
+- id: fridge-magnet
+  text: How much is this little bridge magnet?
+  translation: ¿Cuánto cuesta este pequeño imán del puente?
+  visual_hint: 🧲🌉
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: magnet
+    meaning: imán
+    ipa: ˈmæɡnɪt
+- id: stamps-for-postcards
+  text: Do you sell international stamps here too?
+  translation: ¿Venden estampillas internacionales aquí también?
+  visual_hint: ✉️🌍
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: stamps
+    meaning: estampillas / sellos postales
+    ipa: stæmps
+- id: small-gift-bag
+  text: Can you put them in a small gift bag?
+  translation: ¿Puede ponerlos en una bolsita de regalo?
+  visual_hint: 🎁🛍️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: gift bag
+    meaning: bolsa de regalo
+    ipa: ɡɪft bæɡ
+- id: red-keychain
+  text: I will also take this red keychain for my sister.
+  translation: También me llevo este llavero rojo para mi hermana.
+  visual_hint: 🔑❤️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: keychain
+    meaning: llavero
+    ipa: ˈkiːtʃeɪn
+- id: mailbox-outside
+  text: Great, I see the yellow mailbox outside the shop!
+  translation: ¡Genial, veo el buzón amarillo afuera de la tienda!
+  visual_hint: 📮😊
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: mailbox
+    meaning: buzón de correo
+    ipa: ˈmeɪlbɑːks
+roleplay:
+  ai_role: shopkeeper
+  user_role: tourist
+  setting: A colorful souvenir shop near the old town square.
+  turns:
+  - speaker: ai
+    text: Hello! Welcome to Old Town Gifts. Did you find everything okay?
+  - speaker: user
+    goal: Pide estas tres postales de la ciudad.
+    suggested_lines:
+    - I would like these three city postcards, please.
+    - How much is this little bridge magnet?
+  - speaker: ai
+    text: Three postcards! Anything else from the rack?
+  - speaker: user
+    goal: Pregunta cuánto cuesta el imán del puente.
+    suggested_lines:
+    - How much is this little bridge magnet?
+    - Do you sell international stamps here too?
+  - speaker: ai
+    text: The bridge magnet is three dollars. It's hand-painted!
+  - speaker: user
+    goal: Pregunta si venden estampillas internacionales.
+    suggested_lines:
+    - Do you sell international stamps here too?
+    - Can you put them in a small gift bag?
+  - speaker: ai
+    text: Yes, I have international stamps right behind the counter.
+  - speaker: user
+    goal: Pide que los pongan en una bolsita de regalo.
+    suggested_lines:
+    - Can you put them in a small gift bag?
+    - I will also take this red keychain for my sister.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

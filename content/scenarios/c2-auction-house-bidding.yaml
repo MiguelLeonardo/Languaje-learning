@@ -1,0 +1,113 @@
+id: c2-auction-house-bidding
+title: Registering for a fine-art auction
+title_es: Registrar puja telefónica en casa de subastas
+cefr: C2
+topic: hotel-and-shopping
+description: Coordina en una casa de subastas la garantía bancaria, el informe de conservación ultravioleta y la
+  puja telefónica.
+phrases:
+- id: register-telephone-paddle
+  text: I'd like to register an absentee ceiling and a dedicated telephone line for Lot 42 in tomorrow's evening
+    sale.
+  translation: Quisiera registrar un tope en ausencia y una línea telefónica dedicada para el Lote 42 en la subasta
+    de mañana.
+  visual_hint: 🔨📞
+  cloze:
+  - 6
+  - 12
+  glossary:
+  - word: absentee ceiling
+    meaning: puja máxima de respaldo en ausencia
+    ipa: ˌæbsənˈtiː ˈsiːlɪŋ
+- id: uv-fluorescence-report
+  text: Did the conservation lab's ultraviolet examination reveal any inpainting along the lower margin?
+  translation: ¿El examen con luz ultravioleta del laboratorio reveló algún retoque pictórico en el margen inferior?
+  visual_hint: 🔬🖼️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: inpainting
+    meaning: retoque / reintegración pictórica
+    ipa: ˈɪnpeɪntɪŋ
+- id: buyers-premium-calculation
+  text: Factoring in the tiered buyer's premium and artist's resale royalty, what is the all-in hammer equivalent?
+  translation: Considerando la comisión escalonada de la casa y el derecho de seguimiento del artista, ¿cuál es
+    el costo total sobre el martillo?
+  visual_hint: 🧮🏛️
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: buyer's premium
+    meaning: comisión del comprador en subasta
+    ipa: ˈbaɪərz ˈpriːmiəm
+- id: escrow-wire-verification
+  text: Our private banker has already transmitted the bank reference letter to clear our bidding limit.
+  translation: Nuestro banquero privado ya transmitió la carta de referencia bancaria para autorizar nuestro límite
+    de puja.
+  visual_hint: 🏦✅
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: bidding limit
+    meaning: límite autorizado de puja
+    ipa: ˈbɪdɪŋ ˈlɪmɪt
+- id: bonded-freeport-transfer
+  text: Should we prevail on the lot, we'll transfer it directly to bonded storage in Geneva.
+  translation: En caso de adjudicarnos el lote, lo trasladaremos directamente al depósito franco en Ginebra.
+  visual_hint: 🔐✈️
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: prevail
+    meaning: resultar adjudicatario / ganar la puja
+    ipa: prɪˈveɪl
+- id: call-three-lots-prior
+  text: Please have your desk specialist ring my mobile three lots prior to Lot 42.
+  translation: Por favor pida a su especialista llamarme tres lotes antes del Lote 42.
+  visual_hint: 📲🔔
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: three lots prior
+    meaning: tres lotes antes
+    ipa: θriː lɑːts ˈpraɪər
+roleplay:
+  ai_role: senior auction specialist
+  user_role: private collector
+  setting: Evening sale preview room at an international auction house.
+  turns:
+  - speaker: ai
+    text: Welcome to the preview! Lot 42 has drawn strong institutional interest this week.
+  - speaker: user
+    goal: Solicita registrar una línea telefónica y un tope de respaldo para el Lote 42.
+    suggested_lines:
+    - I'd like to register an absentee ceiling and a dedicated telephone line for Lot 42 in tomorrow's evening sale.
+    - Did the conservation lab's ultraviolet examination reveal any inpainting along the lower margin?
+  - speaker: ai
+    text: Our head restorer examined the panel out of its frame yesterday afternoon.
+  - speaker: user
+    goal: Pregunta si el análisis ultravioleta reveló algún retoque en el margen inferior.
+    suggested_lines:
+    - Did the conservation lab's ultraviolet examination reveal any inpainting along the lower margin?
+    - Factoring in the tiered buyer's premium and artist's resale royalty, what is the all-in hammer equivalent?
+  - speaker: ai
+    text: Under UV fluorescence, the varnish is untouched and completely free of restoration.
+  - speaker: user
+    goal: Pide confirmar el cálculo total incluyendo la comisión de subasta y regalías.
+    suggested_lines:
+    - Factoring in the tiered buyer's premium and artist's resale royalty, what is the all-in hammer equivalent?
+    - Our private banker has already transmitted the bank reference letter to clear our bidding limit.
+  - speaker: ai
+    text: At a hammer price of two hundred thousand, the all-in total with premium is two hundred fifty-two thousand.
+  - speaker: user
+    goal: Confirma que su banco ya envió la referencia para liberar el límite de puja.
+    suggested_lines:
+    - Our private banker has already transmitted the bank reference letter to clear our bidding limit.
+    - Should we prevail on the lot, we'll transfer it directly to bonded storage in Geneva.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

@@ -1,0 +1,108 @@
+id: a2-book-club-recommendation
+title: Recommending a book to a friend
+title_es: Recomendar un libro a un amigo
+cefr: A2
+topic: social-and-smalltalk
+description: Recomienda una novela de misterio que no pudiste soltar el fin de semana y ofrece prestársela.
+phrases:
+- id: finished-great-novel
+  text: I just finished an amazing mystery novel last night—I couldn't put it down!
+  translation: Anoche terminé una novela de misterio increíble; ¡no podía soltarla!
+  visual_hint: 📖🌙
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: couldn't put it down
+    meaning: no pude dejar de leerlo
+    ipa: ˈkʊdənt pʊt ɪt daʊn
+- id: set-on-scottish-island
+  text: It's set on a tiny island in Scotland during a winter storm.
+  translation: Está ambientada en una pequeña isla de Escocia durante una tormenta de invierno.
+  visual_hint: 🏝️🌨️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: set on
+    meaning: ambientada en
+    ipa: set ɑːn
+- id: plot-twist-at-the-end
+  text: The characters feel very real, and I never guessed the twist at the end.
+  translation: Los personajes se sienten muy reales y nunca adiviné el giro del final.
+  visual_hint: 🕵️‍♀️✨
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: twist
+    meaning: giro inesperado en la trama
+    ipa: twɪst
+- id: lend-you-my-copy
+  text: I have the paperback in my bag—you can borrow my copy right now!
+  translation: Traigo la edición de bolsillo en mi bolso; ¡te puedo prestar mi ejemplar ahora mismo!
+  visual_hint: 👜📚
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: borrow
+    meaning: tomar prestado
+    ipa: ˈbɑːroʊ
+- id: short-chapters-fast-read
+  text: The chapters are short, so it's super easy to read on the train.
+  translation: Los capítulos son cortos, así que es muy fácil de leer en el tren.
+  visual_hint: 🚆📖
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: chapters
+    meaning: capítulos
+    ipa: ˈtʃæptərz
+- id: tell-me-who-you-suspect
+  text: Text me when you reach Chapter 10 and tell me who you suspect!
+  translation: ¡Escríbeme cuando llegues al capítulo 10 y dime de quién sospechas!
+  visual_hint: 📱🕵️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: suspect
+    meaning: sospechar
+    ipa: səˈspekt
+roleplay:
+  ai_role: friend (Nora)
+  user_role: reader
+  setting: Having tea on a rainy Sunday afternoon.
+  turns:
+  - speaker: ai
+    text: I'm looking for a new book to read on my train commute. Read anything good lately?
+  - speaker: user
+    goal: Cuenta que anoche terminaste una novela de misterio que no podías soltar.
+    suggested_lines:
+    - I just finished an amazing mystery novel last night—I couldn't put it down!
+    - It's set on a tiny island in Scotland during a winter storm.
+  - speaker: ai
+    text: Ooh, I love a good mystery! What is the story about, without spoilers?
+  - speaker: user
+    goal: Explica que está ambientada en una isla de Escocia durante una tormenta.
+    suggested_lines:
+    - It's set on a tiny island in Scotland during a winter storm.
+    - The characters feel very real, and I never guessed the twist at the end.
+  - speaker: ai
+    text: A stormy Scottish island sounds like the perfect atmosphere!
+  - speaker: user
+    goal: Comenta que los personajes son muy reales y el final sorprende.
+    suggested_lines:
+    - The characters feel very real, and I never guessed the twist at the end.
+    - I have the paperback in my bag—you can borrow my copy right now!
+  - speaker: ai
+    text: You've convinced me! I'll look for it at the bookstore tomorrow.
+  - speaker: user
+    goal: Ofrécele prestarle tu ejemplar que llevas en el bolso.
+    suggested_lines:
+    - I have the paperback in my bag—you can borrow my copy right now!
+    - The chapters are short, so it's super easy to read on the train.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

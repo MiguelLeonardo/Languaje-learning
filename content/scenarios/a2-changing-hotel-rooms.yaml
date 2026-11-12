@@ -1,0 +1,108 @@
+id: a2-changing-hotel-rooms
+title: Asking to move to a quieter hotel room
+title_es: Pedir cambio a una habitación más tranquila
+cefr: A2
+topic: hotel-and-shopping
+description: Explica en recepción que tu habitación está justo al lado del ascensor y pide cambiar a otra más silenciosa.
+phrases:
+- id: next-to-elevator
+  text: Good morning. I'm in room 201, right next to the elevator and ice machine.
+  translation: Buenos días. Estoy en la habitación 201, justo al lado del ascensor y la máquina de hielo.
+  visual_hint: 🏨🛗
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: ice machine
+    meaning: máquina de hielo
+    ipa: aɪs məˈʃiːn
+- id: move-to-quieter-room
+  text: Would it be possible to move to a quieter room down the hall?
+  translation: ¿Sería posible cambiarme a una habitación más silenciosa al final del pasillo?
+  visual_hint: 🤫🚪
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: quieter
+    meaning: más silenciosa / tranquila
+    ipa: ˈkwaɪətər
+- id: courtyard-view-fine
+  text: A room facing the inner courtyard on the fourth floor sounds wonderful.
+  translation: Una habitación con vista al patio interior en el cuarto piso suena maravilloso.
+  visual_hint: 🌳🪟
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: courtyard
+    meaning: patio interior
+    ipa: ˈkɔːrtjɑːrd
+- id: pack-up-in-ten-minutes
+  text: I can pack my suitcase in ten minutes and swap the key cards here.
+  translation: Puedo empacar mi maleta en diez minutos y cambiar las tarjetas llave aquí.
+  visual_hint: 🧳🔑
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: swap
+    meaning: intercambiar / cambiar
+    ipa: swɑːp
+- id: bellhop-help-bags
+  text: We only have two carry-on bags, so we can carry them up ourselves.
+  translation: Solo tenemos dos maletas de mano, así que podemos subirlas nosotros mismos.
+  visual_hint: 🎒🙌
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: carry-on
+    meaning: equipaje de mano
+    ipa: ˈkæri ɑːn
+- id: sleep-much-better
+  text: Thank you for being so helpful—we'll sleep much better tonight!
+  translation: ¡Gracias por ser tan amable; dormiremos mucho mejor esta noche!
+  visual_hint: 😴🌟
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: helpful
+    meaning: servicial / amable
+    ipa: ˈhelpfəl
+roleplay:
+  ai_role: front desk clerk
+  user_role: guest
+  setting: Hotel reception desk the morning after your first night.
+  turns:
+  - speaker: ai
+    text: Good morning! How did you sleep last night?
+  - speaker: user
+    goal: Explica que estás en la habitación 201 junto al ascensor y la máquina de hielo.
+    suggested_lines:
+    - Good morning. I'm in room 201, right next to the elevator and ice machine.
+    - Would it be possible to move to a quieter room down the hall?
+  - speaker: ai
+    text: Oh, I'm sorry if the hallway noise disturbed your rest! Let me check our system.
+  - speaker: user
+    goal: Pregunta si es posible cambiar a una habitación más silenciosa.
+    suggested_lines:
+    - Would it be possible to move to a quieter room down the hall?
+    - A room facing the inner courtyard on the fourth floor sounds wonderful.
+  - speaker: ai
+    text: We have room 418 available right now—it's at the end of the hall facing the quiet courtyard.
+  - speaker: user
+    goal: Acepta encantado la habitación con vista al patio interior.
+    suggested_lines:
+    - A room facing the inner courtyard on the fourth floor sounds wonderful.
+    - I can pack my suitcase in ten minutes and swap the key cards here.
+  - speaker: ai
+    text: There is no extra charge for the move, and housekeeping has already cleaned 418.
+  - speaker: user
+    goal: Indica que empacarás en diez minutos y bajarás a cambiar las llaves.
+    suggested_lines:
+    - I can pack my suitcase in ten minutes and swap the key cards here.
+    - We only have two carry-on bags, so we can carry them up ourselves.
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

@@ -1,0 +1,108 @@
+id: b1-apologizing-for-lateness
+title: Apologizing for running late
+title_es: Disculparse por llegar tarde debido al tráfico
+cefr: B1
+topic: social-and-smalltalk
+description: Llama a tu amigo para avisar que el metro se detuvo, calcula tu hora de llegada y pídele que vaya pidiendo.
+phrases:
+- id: so-sorry-running-late
+  text: Hey! I'm so sorry, I'm running about fifteen minutes behind schedule.
+  translation: ¡Hola! Lo siento muchísimo, voy con unos quince minutos de retraso.
+  visual_hint: ⌚🙏
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: running behind
+    meaning: ir con retraso / llegar tarde
+    ipa: ˈrʌnɪŋ bɪˈhaɪnd
+- id: train-held-in-tunnel
+  text: Our subway train was held in the tunnel because of a signal problem.
+  translation: Nuestro tren del metro se detuvo en el túnel por un fallo de señalización.
+  visual_hint: 🚇🚦
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: signal problem
+    meaning: fallo de señalización
+    ipa: ˈsɪɡnəl ˈprɑːbləm
+- id: please-order-starter
+  text: Please go ahead and order a drink and a starter—don't wait for me!
+  translation: Por favor ve pidiendo una bebida y una entrada; ¡no me esperes!
+  visual_hint: 🥂🥗
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: go ahead
+    meaning: adelante / procede sin esperar
+    ipa: ɡoʊ əˈhed
+- id: walking-fast-two-blocks
+  text: I just exited the station and I'm walking fast—I'll be there in four minutes!
+  translation: Acabo de salir de la estación y voy caminando rápido; ¡llego en cuatro minutos!
+  visual_hint: 🏃‍♂️🏙️
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: exited
+    meaning: salí de
+    ipa: ˈeksɪtɪd
+- id: first-round-on-me
+  text: Thanks for being so patient—the first round of drinks is definitely on me!
+  translation: Gracias por ser tan paciente; ¡la primera ronda de bebidas corre por mi cuenta!
+  visual_hint: 🍹🤝
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: round
+    meaning: ronda de bebidas
+    ipa: raʊnd
+- id: wave-from-the-door
+  text: I'm walking through the front door right now—I see you waving!
+  translation: Estoy entrando por la puerta principal ahora mismo; ¡ya te veo saludando!
+  visual_hint: 👋😊
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: waving
+    meaning: saludando con la mano
+    ipa: ˈweɪvɪŋ
+roleplay:
+  ai_role: friend waiting at restaurant
+  user_role: caller
+  setting: Calling from the subway station when running 15 minutes late.
+  turns:
+  - speaker: ai
+    text: Hey! I just got to the restaurant and got us a table. How close are you?
+  - speaker: user
+    goal: Disculpate y avisa que vas con unos quince minutos de retraso.
+    suggested_lines:
+    - Hey! I'm so sorry, I'm running about fifteen minutes behind schedule.
+    - Our subway train was held in the tunnel because of a signal problem.
+  - speaker: ai
+    text: No worries! Everything okay with the transit?
+  - speaker: user
+    goal: Explica que el tren se detuvo en el túnel por un problema de señales.
+    suggested_lines:
+    - Our subway train was held in the tunnel because of a signal problem.
+    - Please go ahead and order a drink and a starter—don't wait for me!
+  - speaker: ai
+    text: Ugh, the green line always does that at rush hour!
+  - speaker: user
+    goal: Pídele que vaya ordenando una bebida y una entrada sin esperarte.
+    suggested_lines:
+    - Please go ahead and order a drink and a starter—don't wait for me!
+    - I just exited the station and I'm walking fast—I'll be there in four minutes!
+  - speaker: ai
+    text: I ordered some olives and sparkling water for the table. Take your time!
+  - speaker: user
+    goal: Avisa que ya saliste de la estación y llegas en cuatro minutos.
+    suggested_lines:
+    - I just exited the station and I'm walking fast—I'll be there in four minutes!
+    - Thanks for being so patient—the first round of drinks is definitely on me!
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

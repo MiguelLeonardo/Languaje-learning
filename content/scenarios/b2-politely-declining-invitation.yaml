@@ -1,0 +1,114 @@
+id: b2-politely-declining-invitation
+title: Declining a destination wedding invite
+title_es: Declinar con tacto una invitación lejana
+cefr: B2
+topic: social-and-smalltalk
+description: Agradece de corazón la invitación a una boda en el extranjero, explica por qué no podrás viajar y organiza
+  una cena para celebrar.
+phrases:
+- id: touched-by-invitation
+  text: We were so touched to receive your beautiful wedding invitation in the mail yesterday!
+  translation: ¡Nos conmovió muchísimo recibir ayer por correo su hermosa invitación de boda!
+  visual_hint: 💌💍
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: touched
+    meaning: conmovidos / agradecidos de corazón
+    ipa: tʌtʃt
+- id: prior-work-commitment
+  text: Heartbreakingly, my sister's graduation falls on that exact weekend, so we won't be able to fly to Italy.
+  translation: Lamentablemente, la graduación de mi hermana cae ese mismo fin de semana, así que no podremos volar
+    a Italia.
+  visual_hint: 🎓✈️
+  cloze:
+  - 6
+  - 12
+  glossary:
+  - word: falls on
+    meaning: coincide en fecha con
+    ipa: fɔːlz ɑːn
+- id: take-you-out-for-champagne
+  text: We're gutted to miss it, so we insist on taking you both out for a celebratory champagne dinner before you
+    leave!
+  translation: Nos da muchísima pena perdérnoslo, así que insistimos en invitarlos a cenar con champán antes de
+    que viajen.
+  visual_hint: 🥂🍽️
+  cloze:
+  - 7
+  - 14
+  glossary:
+  - word: gutted
+    meaning: muy apenados / tristes por perderse algo
+    ipa: ˈɡʌtɪd
+- id: send-something-from-registry
+  text: We've already picked out something special from your registry to toast to your new chapter.
+  translation: Ya elegimos algo especial de su mesa de regalos para brindar por esta nueva etapa.
+  visual_hint: 🎁✨
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: registry
+    meaning: lista / mesa de regalos de boda
+    ipa: ˈredʒɪstri
+- id: cant-wait-to-see-photos
+  text: Promise you'll send us photos from the vineyard ceremony!
+  translation: ¡Prométanme que nos enviarán fotos de la ceremonia en el viñedo!
+  visual_hint: 📸🍇
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: vineyard
+    meaning: viñedo
+    ipa: ˈvɪnjərd
+- id: wishing-you-lifetime-joy
+  text: We're wishing you both a lifetime of happiness and adventure!
+  translation: ¡Les deseamos toda una vida de felicidad y aventuras juntos!
+  visual_hint: ❤️🌟
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: lifetime
+    meaning: toda una vida
+    ipa: ˈlaɪftaɪm
+roleplay:
+  ai_role: engaged friend
+  user_role: invited friend
+  setting: Phone call with a close friend getting married in Italy.
+  turns:
+  - speaker: ai
+    text: Hey! Did our Tuscany wedding save-the-date card arrive in the mail?
+  - speaker: user
+    goal: Expresa cuánto te emocionó recibir la invitación de boda.
+    suggested_lines:
+    - We were so touched to receive your beautiful wedding invitation in the mail yesterday!
+    - Heartbreakingly, my sister's graduation falls on that exact weekend, so we won't be able to fly to Italy.
+  - speaker: ai
+    text: We'd love so much to have you two there celebrating with us in Florence!
+  - speaker: user
+    goal: Explica con cariño que coincide con la graduación de tu hermana y no podrán viajar.
+    suggested_lines:
+    - Heartbreakingly, my sister's graduation falls on that exact weekend, so we won't be able to fly to Italy.
+    - We're gutted to miss it, so we insist on taking you both out for a celebratory champagne dinner before you
+      leave!
+  - speaker: ai
+    text: Oh, family graduation completely comes first—we totally understand!
+  - speaker: user
+    goal: Insiste en invitarlos a una cena de celebración con champán antes de su viaje.
+    suggested_lines:
+    - We're gutted to miss it, so we insist on taking you both out for a celebratory champagne dinner before you
+      leave!
+    - We've already picked out something special from your registry to toast to your new chapter.
+  - speaker: ai
+    text: A dinner before we fly out in June sounds wonderful! Let's put it on the calendar.
+  - speaker: user
+    goal: Menciona que ya eligieron un regalo especial de su lista de bodas.
+    suggested_lines:
+    - We've already picked out something special from your registry to toast to your new chapter.
+    - Promise you'll send us photos from the vineyard ceremony!
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!

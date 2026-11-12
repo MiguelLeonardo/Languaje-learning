@@ -1,0 +1,108 @@
+id: a2-pizzeria-delivery
+title: Ordering pizza to your hotel
+title_es: Pedir pizza a domicilio al hotel
+cefr: A2
+topic: food-and-drink
+description: Llama a una pizzería local para pedir una pizza mediana, indica tu habitación y forma de pago.
+phrases:
+- id: order-for-delivery
+  text: Hi, I'd like to place an order for delivery, please.
+  translation: Hola, quisiera hacer un pedido a domicilio, por favor.
+  visual_hint: 🍕🛵
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: delivery
+    meaning: entrega a domicilio
+    ipa: dɪˈlɪvəri
+- id: medium-margherita
+  text: Could I get a medium Margherita pizza with mushrooms?
+  translation: ¿Me podría dar una pizza Margherita mediana con champiñones?
+  visual_hint: 🍕🍄
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: mushrooms
+    meaning: champiñones / hongos
+    ipa: ˈmʌʃruːmz
+- id: thin-crust-crispy
+  text: We prefer thin crust and extra garlic sauce.
+  translation: Preferimos masa delgada y salsa de ajo extra.
+  visual_hint: 🧄🥖
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: thin crust
+    meaning: masa delgada
+    ipa: θɪn krʌst
+- id: deliver-hotel-lobby
+  text: Please deliver it to the Park Hotel lobby, room 210.
+  translation: Por favor entréguela en la recepción del Hotel Park, habitación 210.
+  visual_hint: 🏨📍
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: lobby
+    meaning: vestíbulo / recepción
+    ipa: ˈlɑːbi
+- id: how-long-delivery
+  text: How long will the delivery take tonight?
+  translation: ¿Cuánto tardará la entrega esta noche?
+  visual_hint: ⏱️🛵
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: take
+    meaning: tardar / tomar tiempo
+    ipa: teɪk
+- id: pay-driver-by-card
+  text: Can I pay the driver with a credit card?
+  translation: ¿Puedo pagarle al repartidor con tarjeta de crédito?
+  visual_hint: 💳🤝
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: driver
+    meaning: repartidor / conductor
+    ipa: ˈdraɪvər
+roleplay:
+  ai_role: pizza order taker
+  user_role: hotel guest
+  setting: Calling a local pizzeria from your hotel room.
+  turns:
+  - speaker: ai
+    text: Luigi's Pizza, how can I help you tonight?
+  - speaker: user
+    goal: Di que quieres hacer un pedido a domicilio.
+    suggested_lines:
+    - Hi, I'd like to place an order for delivery, please.
+    - Could I get a medium Margherita pizza with mushrooms?
+  - speaker: ai
+    text: Sure! What kind of pizza would you like?
+  - speaker: user
+    goal: Pide una pizza Margherita mediana con champiñones.
+    suggested_lines:
+    - Could I get a medium Margherita pizza with mushrooms?
+    - We prefer thin crust and extra garlic sauce.
+  - speaker: ai
+    text: Medium Margherita with mushrooms. Thick or thin crust?
+  - speaker: user
+    goal: Indica que prefieres masa delgada y salsa de ajo.
+    suggested_lines:
+    - We prefer thin crust and extra garlic sauce.
+    - Please deliver it to the Park Hotel lobby, room 210.
+  - speaker: ai
+    text: Got it! What is the delivery address?
+  - speaker: user
+    goal: Da la dirección del Hotel Park y pregunta el tiempo de entrega.
+    suggested_lines:
+    - Please deliver it to the Park Hotel lobby, room 210.
+    - How long will the delivery take tonight?
+  - speaker: ai
+    text: Wonderful! Everything is all set. Have a fantastic day!
