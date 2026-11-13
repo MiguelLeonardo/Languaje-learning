@@ -211,3 +211,59 @@ def test_rate_limit():
     with pytest.raises(HTTPException) as e:
         lim(u)
     assert e.value.status_code == 429
+
+
+def test_private_scenarios_only_in_local_env(tmp_path, monkeypatch):
+    import yaml
+
+    from app.api.routes.catalog import modules
+    from app.content.repository import get_repository
+    from app.core.config import get_settings
+
+    priv_dir = tmp_path / "private_scenarios"
+    priv_dir.mkdir()
+    sample = {
+        "id": "c1-cv-dhl-tl-test",
+        "title": "Private Test",
+        "title_es": "Prueba Privada",
+        "cefr": "C1",
+        "topic": "cv-dhl-gsc-tl",
+        "description": "Private dev test",
+        "phrases": [
+            {
+                "id": "p1",
+                "text": "We streamline workflows across the board.",
+                "translation": "Agilizamos flujos.",
+                "glossary": [{"word": "streamline workflows", "meaning": "agilizar flujos"}],
+                "cloze": [1, 2],
+            }
+        ],
+        "roleplay": {
+            "ai_role": "Interviewer",
+            "user_role": "Candidate",
+            "setting": "Private",
+            "turns": [{"speaker": "ai", "text": "Hello"}],
+        },
+    }
+    (priv_dir / "c1-cv-dhl-tl-test.yaml").write_text(yaml.safe_dump(sample), encoding="utf-8")
+
+    get_settings.cache_clear()
+    get_repository.cache_clear()
+    try:
+        # In test env, private scenarios are NOT loaded
+        repo_test = get_repository()
+        assert repo_test.get("c1-cv-dhl-tl-test") is None
+        assert all(m.id != "cv-dhl-gsc-tl" for m in modules(repo_test))
+
+        # In local env with private_content_dir, private scenarios ARE loaded
+        monkeypatch.setenv("ENV", "local")
+        monkeypatch.setenv("PRIVATE_CONTENT_DIR", str(priv_dir))
+        get_settings.cache_clear()
+        get_repository.cache_clear()
+
+        repo_local = get_repository()
+        assert repo_local.get("c1-cv-dhl-tl-test") is not None
+        assert any(m.id == "cv-dhl-gsc-tl" for m in modules(repo_local))
+    finally:
+        get_settings.cache_clear()
+        get_repository.cache_clear()

@@ -3,7 +3,7 @@ from pydantic import BaseModel
 
 from app.api.deps import RepoDep
 from app.content.repository import ContentRepository
-from app.content.schema import CEFR, TOPIC_MODULES, Scenario
+from app.content.schema import CEFR, PRIVATE_TOPIC_MODULES, TOPIC_MODULES, Scenario
 from app.core.security import get_current_user
 from app.services.exercises import (
     Exercise,
@@ -70,6 +70,20 @@ def modules(repo: ContentRepository = RepoDep):
                 scenarios=len(scens),
             )
         )
+    for mod_id, meta in PRIVATE_TOPIC_MODULES.items():
+        scens = repo.list(topic=mod_id)
+        if scens:
+            out.append(
+                ModuleOut(
+                    id=mod_id,
+                    title_es=meta["title_es"],
+                    title_en=meta["title_en"],
+                    icon=meta["icon"],
+                    description_es=meta["description_es"],
+                    levels=sorted({s.cefr.value for s in scens}),
+                    scenarios=len(scens),
+                )
+            )
     return out
 
 

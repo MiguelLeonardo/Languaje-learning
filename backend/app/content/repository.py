@@ -18,10 +18,17 @@ class ContentRepository:
 
     @classmethod
     def from_dir(cls, path: Path) -> ContentRepository:
+        return cls.from_dirs([path])
+
+    @classmethod
+    def from_dirs(cls, paths: list[Path]) -> ContentRepository:
         scenarios = []
-        for file in sorted(path.glob("*.yaml")):
-            data = yaml.safe_load(file.read_text(encoding="utf-8"))
-            scenarios.append(Scenario.model_validate(data))
+        for path in paths:
+            if not path.exists():
+                continue
+            for file in sorted(path.glob("*.yaml")):
+                data = yaml.safe_load(file.read_text(encoding="utf-8"))
+                scenarios.append(Scenario.model_validate(data))
         return cls(scenarios)
 
     def list(self, cefr: CEFR | None = None, band: str | None = None, topic: str | None = None) -> list[Scenario]:
@@ -49,4 +56,8 @@ class ContentRepository:
 def get_repository() -> ContentRepository:
     from app.core.config import get_settings
 
-    return ContentRepository.from_dir(get_settings().content_dir)
+    settings = get_settings()
+    dirs = [settings.content_dir]
+    if settings.env == "local" and settings.private_content_dir.exists():
+        dirs.append(settings.private_content_dir)
+    return ContentRepository.from_dirs(dirs)

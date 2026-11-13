@@ -16,6 +16,7 @@ class Settings(BaseSettings):
     env: Literal["local", "test", "staging", "production"] = "local"
     database_url: str = "sqlite:///./languaje.db"
     content_dir: Path = ROOT_DIR / "content" / "scenarios"
+    private_content_dir: Path = ROOT_DIR / "content" / "private_scenarios"
 
     # Auth
     jwt_secret: str = DEV_JWT_SECRET  # overridden via Secret Manager outside local

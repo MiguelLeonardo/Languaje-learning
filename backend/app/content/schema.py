@@ -150,3 +150,12 @@ TOPIC_MODULES: dict[str, dict[str, str]] = {
     },
 }
 
+PRIVATE_TOPIC_MODULES: dict[str, dict[str, str]] = {
+    "cv-dhl-gsc-tl": {
+        "title_es": "CV & DHL Team Leader (Dev)",
+        "title_en": "CV & DHL GSC Team Leader (Business Support)",
+        "icon": "🔒",
+        "description_es": "Módulo privado de entrevista y CV para DHL GSC Team Leader (solo desarrollo local).",
+    },
+}
+

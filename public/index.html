@@ -64903,6 +64903,14 @@
         });
         state.token = auth.access_token;
         state.backendOnline = true;
+        try {
+          const serverMods = await api('/v1/modules');
+          for (const sm of serverMods) {
+            if (!TOPIC_MODULES.some(m => m.id === sm.id)) {
+              TOPIC_MODULES.push({ id: sm.id, title_es: sm.title_es, icon: sm.icon });
+            }
+          }
+        } catch (_) {}
       } catch (_) {
         state.backendOnline = false;
       }

@@ -22,3 +22,5 @@ research-artifacts/
 infra/terraform/.terraform/
 *.tfstate*
 *.egg-info/
+# Private local-only scenarios (Option B)
+content/private_scenarios/
