@@ -48652,32 +48652,46 @@
             })
           },
           {
-            type: 'recall',
-            support: 'full',
-            exercises: (scenario.phrases.some(p => p.apply_sentence) ? scenario.phrases.filter(p => p.apply_sentence) : scenario.phrases).map(p => {
-              const info = getIdiomFocus(scenario.id, p.id, p);
-              return p.apply_sentence
-                ? {
-                    id: `${scenario.id}.${p.id}.recall`, type: 'recall', support: 'full', scenario_id: scenario.id, phrase_id: p.id,
-                    expected_text: p.apply_sentence.replace('____', p.apply_answer), pass_threshold: 0.75, response_mode: 'speech',
-                    prompt: {
-                      instruction_es: 'Completa la nueva oración con el modismo que practicaste y dila completa en voz alta.',
-                      display_text: p.apply_sentence, translation: p.apply_translation, glossary: p.glossary || [],
-                      visual_hint: p.visual_hint, audio_text: p.apply_sentence.replace('____', p.apply_answer),
-                      focus_words: info.terms
-                    }
-                  }
-                : mk(p, 'recall', 'full', 0.75, 'Aplica la expresión en voz alta dentro de la oración.', p.text, p.translation, p.glossary, p.text);
-            })
-          },
-          {
             type: 'completion',
             support: 'low',
             exercises: scenario.phrases.map(p => mk(
               p, 'completion', 'low', 0.85,
-              'Aplica y completa las palabras que faltan diciendo toda la frase (puedes usar la guía de audio).',
+              'Completa las palabras que faltan diciendo toda la frase (puedes usar la guía de audio).',
               cloze(p), null, [], p.text
             ))
+          },
+          {
+            type: 'recall',
+            support: 'full',
+            exercises: scenario.phrases.map(p => {
+              const info = getIdiomFocus(scenario.id, p.id, p);
+              const firstHint = t => String(t || '').split(/\s+/).map(w => {
+                const c = w.replace(/[.,!?]+$/, '');
+                return (c.length > 1 ? c[0] + '_'.repeat(c.length - 1) : c) + w.slice(c.length);
+              }).join(' ');
+              if (p.apply_sentence) {
+                const fullApplied = p.apply_sentence.replace('____', p.apply_answer || '');
+                const maskedApplied = p.apply_sentence.replace('____', firstHint(p.apply_answer || ''));
+                return {
+                  id: `${scenario.id}.${p.id}.recall`, type: 'recall', support: 'full', scenario_id: scenario.id, phrase_id: p.id,
+                  expected_text: fullApplied, pass_threshold: 0.75, response_mode: 'speech',
+                  prompt: {
+                    instruction_es: 'Di la frase completa ayudándote con las letras incompletas del modismo o palabra clave.',
+                    display_text: maskedApplied, translation: p.apply_translation, glossary: p.glossary || [],
+                    visual_hint: p.visual_hint, audio_text: fullApplied,
+                    focus_words: info.terms
+                  }
+                };
+              }
+              const tokens = (p.text || '').split(/\s+/);
+              const mask = computeIdiomTokenMask(tokens, info.terms);
+              const maskedSentence = tokens.map((tok, idx) => mask[idx] ? firstHint(tok) : tok).join(' ');
+              return mk(
+                p, 'recall', 'full', 0.75,
+                'Di la frase completa ayudándote con las letras incompletas del modismo o palabra clave.',
+                maskedSentence, p.translation, p.glossary, p.text
+              );
+            })
           },
         ]
       };
