@@ -40991,6 +40991,910 @@
       }
     ];
 
+    const state = {
+      viewMode: 'setup',
+      backendOnline: false,
+      token: null,
+      cefr: 'ALL',
+      topic: 'ALL',
+      scenarios: [],
+      currentScenario: null,
+      lesson: null,
+      activeTab: 'lesson',
+      stageIndex: 0,
+      exerciseIndex: 0,
+      shadowingList: [],
+      commonList: [],
+      srsList: JSON.parse(localStorage.getItem('sf_local_srs') || '[]'),
+      roleplaySession: null,
+      lastEvaluation: null,
+      localAttempts: 0,
+      localScores: [],
+      lastTranslated: null,
+      showManualInput: false,
+      roleplayPhase: 'briefing',
+      keys: {
+        tier: localStorage.getItem('sf_freemium_tier') || 'free',
+        gemini: localStorage.getItem('sf_gemini_key') || '',
+        googleCloud: localStorage.getItem('sf_google_cloud_key') || '',
+        openai: localStorage.getItem('sf_openai_key') || '',
+        elevenlabs: localStorage.getItem('sf_elevenlabs_key') || '',
+        elevenVoice: localStorage.getItem('sf_eleven_voice') || '21m00Tcm4TlvDq8ikWAM',
+        anthropic: localStorage.getItem('sf_anthropic_key') || '',
+      },
+      practiceHistory: JSON.parse(localStorage.getItem('sf_practice_history') || '[]'),
+      historyExpanded: false,
+      lastUserAudioUrl: null,
+      lastUserAudioBlob: null,
+      wordTrainerState: { activeIndex: null, status: 'idle', lastHeard: '' },
+    };
+
+    function isTestEnv() {
+      return ['localhost', '127.0.0.1'].includes(location.hostname) ||
+             new URLSearchParams(location.search).get('test') === '1' ||
+             localStorage.getItem('sf_test_env') === '1';
+    }
+    const IS_TEST_ENV = isTestEnv();
+
+    function showDevToast(msg) {
+      let toast = document.getElementById('dev-nav-toast');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'dev-nav-toast';
+        toast.className = 'fixed bottom-6 right-6 z-50 px-4 py-2.5 rounded-2xl bg-slate-900/95 border border-indigo-500/50 text-indigo-200 text-xs font-bold shadow-2xl backdrop-blur-md transition-all duration-300 pointer-events-none flex items-center gap-2 transform translate-y-2 opacity-0';
+        document.body.appendChild(toast);
+      }
+      toast.innerHTML = msg;
+      toast.classList.remove('opacity-0', 'translate-y-2');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      clearTimeout(toast._timer);
+      toast._timer = setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'translate-y-2');
+      }, 2000);
+    }
+
+    function toggleTestEnv() {
+      const active = isTestEnv();
+      if (active) {
+        localStorage.removeItem('sf_test_env');
+        showDevToast('🔒 Modo Producción (Botones de navegación ocultos)');
+      } else {
+        localStorage.setItem('sf_test_env', '1');
+        showDevToast('🛠️ Modo Dev / Test: Botones de navegación activados');
+      }
+      if (state.viewMode === 'exercise') {
+        renderActiveTab();
+      }
+    }
+
+    const STAGE_LABELS = {
+      shadowing: { title: '1. Sombra', subtitle: 'Escucha e imita el ritmo natural', color: 'bg-sky-500/15 text-sky-300 border-sky-500/30' },
+      guided: { title: '2. Practica', subtitle: 'Enfócate en las palabras modismo', color: 'bg-amber-500/15 text-amber-300 border-amber-500/30' },
+      completion: { title: '3. Completa', subtitle: 'Completa la frase de memoria', color: 'bg-purple-500/15 text-purple-300 border-purple-500/30' },
+      recall: { title: '4. Aplica', subtitle: 'Aplica la expresión en contexto', color: 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30' },
+      roleplay: { title: '5. Conversa', subtitle: 'Conversación abierta inmersiva', color: 'bg-rose-500/15 text-rose-300 border-rose-500/30' },
+    };
+
+    window.addEventListener('speakflow:firebase-ready', (e) => {
+      const d = e.detail || {};
+      const modalSt = document.getElementById('modal-firebase-status');
+      if (modalSt) {
+        modalSt.textContent = d.mode === 'firebase-live'
+          ? `Conectado a Firebase (${d.projectId})`
+          : 'Modo local activo';
+      }
+    });
+
+    function keyHeaders() {
+      const h = { 'X-Freemium-Tier': state.keys.tier || 'free' };
+      if (state.keys.gemini) h['X-Gemini-Key'] = state.keys.gemini;
+      if (state.keys.googleCloud) h['X-Google-Cloud-Key'] = state.keys.googleCloud;
+      if (state.keys.openai) h['X-OpenAI-Key'] = state.keys.openai;
+      if (state.keys.elevenlabs) h['X-ElevenLabs-Key'] = state.keys.elevenlabs;
+      if (state.keys.anthropic) h['X-Anthropic-Key'] = state.keys.anthropic;
+      return h;
+    }
+
+    function toggleKeysModal(show) {
+      document.getElementById('key-gemini').value = state.keys.gemini;
+      document.getElementById('key-google-cloud').value = state.keys.googleCloud;
+      document.getElementById('key-openai').value = state.keys.openai;
+      document.getElementById('key-elevenlabs').value = state.keys.elevenlabs;
+      document.getElementById('key-eleven-voice').value = state.keys.elevenVoice;
+      document.getElementById('key-anthropic').value = state.keys.anthropic;
+      document.getElementById('key-firebase-json').value = localStorage.getItem('sf_firebase_config') || '';
+      document.getElementById('keys-modal').classList.toggle('hidden', !show);
+    }
+
+    async function saveKeys() {
+      state.keys.gemini = document.getElementById('key-gemini').value.trim();
+      state.keys.googleCloud = document.getElementById('key-google-cloud').value.trim();
+      state.keys.openai = document.getElementById('key-openai').value.trim();
+      state.keys.elevenlabs = document.getElementById('key-elevenlabs').value.trim();
+      state.keys.elevenVoice = document.getElementById('key-eleven-voice').value.trim() || '21m00Tcm4TlvDq8ikWAM';
+      state.keys.anthropic = document.getElementById('key-anthropic').value.trim();
+      localStorage.setItem('sf_gemini_key', state.keys.gemini);
+      localStorage.setItem('sf_google_cloud_key', state.keys.googleCloud);
+      localStorage.setItem('sf_openai_key', state.keys.openai);
+      localStorage.setItem('sf_elevenlabs_key', state.keys.elevenlabs);
+      localStorage.setItem('sf_eleven_voice', state.keys.elevenVoice);
+      localStorage.setItem('sf_anthropic_key', state.keys.anthropic);
+      const fbJson = document.getElementById('key-firebase-json').value.trim();
+      if (fbJson && window.SpeakFlowFirebase) {
+        await window.SpeakFlowFirebase.saveFirebaseConfig(fbJson);
+      }
+      toggleKeysModal(false);
+    }
+
+    async function connectAndEnableOnlineFirestore() {
+      const fbJson = document.getElementById('key-firebase-json').value.trim();
+      const modalSt = document.getElementById('modal-firebase-status');
+      if (modalSt) modalSt.textContent = 'Conectando a Firestore Online…';
+      if (window.SpeakFlowFirebase) {
+        const res = fbJson
+          ? await window.SpeakFlowFirebase.saveFirebaseConfig(fbJson)
+          : await window.SpeakFlowFirebase.enableOnlineFirestore();
+        if (modalSt) {
+          modalSt.textContent = res.connected
+            ? `✔ Firestore Online Activo (${res.projectId} · UID ${(res.uid || '').slice(0, 6)})`
+            : `⚠ ${res.reason || 'Verifica que Anonymous Auth y Firestore estén activos en la consola'}`;
+        }
+      }
+    }
+
+    async function clearKeys() {
+      state.keys = { tier: 'free', gemini: '', googleCloud: '', openai: '', elevenlabs: '', elevenVoice: '21m00Tcm4TlvDq8ikWAM', anthropic: '' };
+      ['sf_gemini_key', 'sf_google_cloud_key', 'sf_openai_key', 'sf_elevenlabs_key', 'sf_anthropic_key', 'sf_firebase_config'].forEach(k => localStorage.removeItem(k));
+      toggleKeysModal(false);
+    }
+
+    async function testSpeakerVoice() {
+      await saveKeys();
+      await speakText('Welcome to SpeakFlow! Tap any word to see its translation.');
+    }
+
+    function makeWavBlob() {
+      const sampleRate = 8000, numSamples = 1600;
+      const buf = new ArrayBuffer(44 + numSamples * 2);
+      const view = new DataView(buf);
+      const writeStr = (off, s) => { for (let i = 0; i < s.length; i++) view.setUint8(off + i, s.charCodeAt(i)); };
+      writeStr(0, 'RIFF'); view.setUint32(4, 36 + numSamples * 2, true); writeStr(8, 'WAVEfmt ');
+      view.setUint32(16, 16, true); view.setUint16(20, 1, true); view.setUint16(22, 1, true);
+      view.setUint32(24, sampleRate, true); view.setUint32(28, sampleRate * 2, true);
+      view.setUint16(32, 2, true); view.setUint16(34, 16, true); writeStr(36, 'data');
+      view.setUint32(40, numSamples * 2, true);
+      return new Blob([buf], { type: 'audio/wav' });
+    }
+
+    async function api(path, opts = {}) {
+      const headers = { ...keyHeaders(), ...(opts.headers || {}) };
+      if (state.token) headers['Authorization'] = `Bearer ${state.token}`;
+      const res = await fetch(path, { ...opts, headers });
+      if (!res.ok) throw new Error(`${res.status}: ${await res.text()}`);
+      return res.json();
+    }
+
+    // ─── Voice Guide Natural Intonation & Rhythm ──────────────────────────────
+    let _voicesList = [];
+    function loadVoices() {
+      if (typeof window === 'undefined' || !('speechSynthesis' in window)) return [];
+      _voicesList = window.speechSynthesis.getVoices() || [];
+      return _voicesList;
+    }
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      loadVoices();
+      window.speechSynthesis.onvoiceschanged = () => loadVoices();
+    }
+
+    function selectBestNaturalVoice(targetLang = 'en-US') {
+      const voices = _voicesList.length ? _voicesList : loadVoices();
+      if (!voices.length) return null;
+      const langNorm = (targetLang || 'en-US').toLowerCase().replace('_', '-');
+      const langPrefix = langNorm.split('-')[0];
+
+      const englishVoices = voices.filter(v => (v.lang || '').toLowerCase().replace('_', '-').startsWith(langPrefix));
+      const pool = englishVoices.length ? englishVoices : voices;
+
+      const isNatural = v => /natural|neural|online|multilingual/i.test(v.name);
+      const isTopNamed = v => /jenny|guy|aria|ryan|christopher|samantha|daniel|karen|ava|zoe|serena/i.test(v.name);
+      const isEnhanced = v => /enhanced|premium/i.test(v.name);
+      const isGoogle = v => /google/i.test(v.name);
+
+      const exactPool = pool.filter(v => (v.lang || '').toLowerCase().replace('_', '-') === langNorm);
+      const candidates = exactPool.length ? exactPool : pool;
+
+      return candidates.find(isNatural) ||
+             candidates.find(isTopNamed) ||
+             candidates.find(isEnhanced) ||
+             candidates.find(isGoogle) ||
+             candidates[0] || null;
+    }
+
+    function isAndroidBrowser() {
+      return /Android/i.test(navigator.userAgent || '');
+    }
+
+    async function speakText(text, onComplete = null, rateOverride = null) {
+      const doneCb = typeof onComplete === 'function' ? onComplete : null;
+      const customRate = typeof onComplete === 'number' ? onComplete : rateOverride;
+      if (!text) { if (doneCb) doneCb(); return; }
+      if (state.backendOnline && (state.keys.elevenlabs || state.keys.openai || state.keys.googleCloud)) {
+        try {
+          const res = await fetch('/v1/tts', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${state.token}`, ...keyHeaders() },
+            body: JSON.stringify({ text })
+          });
+          if (res.ok) {
+            const blob = await res.blob();
+            const audio = new Audio(URL.createObjectURL(blob));
+            if (doneCb) {
+              audio.onended = () => doneCb();
+              audio.onerror = () => doneCb();
+            }
+            await audio.play();
+            return;
+          }
+        } catch (_) {}
+      }
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const spoken = text
+          .replace(/_+/g, '')
+          .replace(/\[\s*✏️.*?\s*\]/g, '')
+          .replace(/\[\s*\?\s*\]/g, '')
+          .replace(/\s{2,}/g, ' ')
+          .trim();
+        if (!spoken) { if (doneCb) doneCb(); return; }
+
+        const u = new SpeechSynthesisUtterance(spoken);
+        const targetLang = state.speechLang || 'en-US';
+        u.lang = targetLang;
+
+        const bestVoice = selectBestNaturalVoice(targetLang);
+        if (bestVoice) {
+          u.voice = bestVoice;
+        }
+
+        const wordCount = spoken.split(/\s+/).length;
+        u.rate = customRate || (wordCount <= 3 ? 0.88 : 0.93);
+        u.pitch = spoken.endsWith('?') ? 1.05 : 1.03;
+
+        let finished = false;
+        let safetyTimer = null;
+        const markDone = () => {
+          if (finished) return;
+          finished = true;
+          clearTimeout(safetyTimer);
+          if (doneCb) doneCb();
+        };
+        u.onend = markDone;
+        u.onerror = markDone;
+        // Safety fallback in case Android WebView/Chrome fails to fire onend
+        if (doneCb) {
+          safetyTimer = setTimeout(markDone, Math.min(12000, Math.max(2500, spoken.length * 85)));
+        }
+        window.speechSynthesis.speak(u);
+      } else {
+        if (doneCb) setTimeout(doneCb, Math.min(4500, Math.max(1200, text.length * 65)));
+      }
+    }
+
+    // ─── Instant Tap-to-Translate Overlay (Speak-style) ─────────────────────────
+    function escapeJs(str) {
+      return (str || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/"/g, '&quot;');
+    }
+
+    function getIdiomFocus(scenarioId = '', phraseId = '', phraseObj = null) {
+      let p = phraseObj;
+      if (!p && scenarioId && phraseId) {
+        const sc = (typeof SCENARIOS !== 'undefined' ? SCENARIOS : []).find(s => s.id === scenarioId)
+          || (state.currentScenario && state.currentScenario.id === scenarioId ? state.currentScenario : null);
+        if (sc && sc.phrases) p = sc.phrases.find(x => x.id === phraseId) || null;
+      }
+      if (!p) return { label: '', meaning: '', terms: [] };
+      const terms = [];
+      if (p.apply_answer) terms.push(p.apply_answer.trim());
+      if (Array.isArray(p.glossary)) {
+        p.glossary.forEach(g => {
+          if (g && g.word) terms.push(g.word.trim());
+        });
+      }
+      if (!terms.length && Array.isArray(p.cloze) && p.text) {
+        const ws = p.text.split(/\s+/);
+        const clozeWords = p.cloze.map(i => (ws[i] || '').replace(/^[^a-zA-Z0-9']+|[^a-zA-Z0-9']+$/g, '')).filter(Boolean);
+        if (clozeWords.length) terms.push(clozeWords.join(' '));
+      }
+      const uniqueTerms = [...new Set(terms.filter(Boolean))];
+      const label = p.apply_answer || (p.glossary && p.glossary[0] && p.glossary[0].word) || uniqueTerms[0] || '';
+      const meaning = (p.glossary && p.glossary[0] && p.glossary[0].meaning) || '';
+      return { label, meaning, terms: uniqueTerms };
+    }
+
+    function computeIdiomTokenMask(tokens, focusTerms) {
+      const mask = new Array(tokens.length).fill(false);
+      if (!focusTerms || !focusTerms.length) return mask;
+      const cleanTokens = tokens.map(t => t.replace(/^[^a-zA-Z0-9']+|[^a-zA-Z0-9']+$/g, '').toLowerCase());
+      focusTerms.forEach(term => {
+        const termWords = String(term).toLowerCase().replace(/[^\w\s']/g, ' ').split(/\s+/).filter(Boolean);
+        if (!termWords.length) return;
+        for (let i = 0; i <= cleanTokens.length - termWords.length; i++) {
+          let matched = true;
+          for (let k = 0; k < termWords.length; k++) {
+            if (cleanTokens[i + k] !== termWords[k]) {
+              matched = false;
+              break;
+            }
+          }
+          if (matched) {
+            for (let k = 0; k < termWords.length; k++) mask[i + k] = true;
+          }
+        }
+      });
+      return mask;
+    }
+
+    function renderTappablePhrase(displayText, fullPhraseText, scenarioId = '', phraseId = '', focusHint = '') {
+      if (!displayText) return '';
+      const fullEsc = escapeJs(fullPhraseText || displayText);
+      const scenEsc = escapeJs(scenarioId || (state.currentScenario ? state.currentScenario.id : ''));
+      const phrEsc = escapeJs(phraseId || '');
+      const tokens = displayText.split(/\s+/);
+      const idiomInfo = getIdiomFocus(scenarioId || (state.currentScenario ? state.currentScenario.id : ''), phraseId);
+      const highlightTerms = [...idiomInfo.terms];
+      if (focusHint) highlightTerms.push(focusHint);
+      const idiomMask = computeIdiomTokenMask(tokens, highlightTerms);
+
+      return tokens.map((tok, idx) => {
+        const clean = tok.replace(/^[^a-zA-Z0-9']+|[^a-zA-Z0-9']+$/g, '');
+
+        // 1. High-visibility blanks: ____ in Aplica / Completa
+        if (tok.includes('____') || /_{3,}/.test(tok)) {
+          const punctuation = tok.replace(/_+/g, '');
+          return `<span class="inline-flex items-center justify-center px-3.5 py-1 mx-1.5 rounded-xl bg-amber-500/20 border-2 border-dashed border-amber-400 text-amber-300 font-mono font-black text-sm shadow-md ring-2 ring-amber-400/20 animate-pulse tracking-wider">[ ✏️ ____ ]</span>${punctuation}`;
+        }
+
+        // 2. High-visibility guided initials: B____ or l__
+        if (/^[a-zA-Z]_+/.test(tok)) {
+          const m = tok.match(/^([a-zA-Z])(_+)(.*)$/);
+          if (m) {
+            const [, initial, blanks, trailingPunct] = m;
+            return `<span class="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-lg bg-slate-900 border border-indigo-400/50 font-mono text-xs shadow-inner"><span class="text-indigo-300 font-black text-base underline decoration-indigo-400 decoration-2">${initial}</span><span class="tracking-widest text-slate-400 font-bold ml-0.5">${blanks}</span></span>${trailingPunct}`;
+          }
+        }
+
+        if (!clean || tok.includes('_')) {
+          return `<span class="mx-0.5 text-slate-400 font-mono">${tok}</span>`;
+        }
+        const tokEsc = escapeJs(clean);
+        const isIdiomTok = idiomMask[idx];
+        const idiomClass = isIdiomTok
+          ? ' bg-amber-500/20 text-amber-200 border-b-2 border-amber-400 px-1.5 py-0.5 rounded-lg font-extrabold shadow-xs'
+          : '';
+        const titleAttr = isIdiomTok
+          ? `Modismo / expresión clave: '${clean}' (toca para ver traducción)`
+          : `Ver traducción de '${clean}'`;
+        return `<span class="tap-word${idiomClass}" title="${titleAttr}" onclick="openTranslateOverlay('${tokEsc}', '${fullEsc}', '${scenEsc}', '${phrEsc}')">${tok}</span>`;
+      }).join(' ');
+    }
+
+    const WORD_DICT_ES = {
+      i:'yo', you:'tú / usted', he:'él', she:'ella', it:'eso / ello', we:'nosotros', they:'ellos',
+      am:'soy / estoy', is:'es / está', are:'son / están', was:'era / estaba', were:'eran / estaban',
+      be:'ser / estar', been:'sido / estado', have:'tener / haber', has:'tiene / ha', had:'tenía / tuvo',
+      do:'hacer', does:'hace', did:'hizo', can:'poder', could:'podría', will:'hará (futuro)', would:'haría',
+      should:'debería', may:'poder / quizá', might:'podría', must:'deber',
+      the:'el / la / los / las', a:'un / una', an:'un / una', this:'este / esta', that:'ese / esa / que',
+      these:'estos / estas', those:'esos / esas', my:'mi', your:'tu / su', his:'su (de él)', her:'su (de ella)',
+      our:'nuestro', their:'su (de ellos)', there:'allí / hay', here:'aquí', where:'dónde', when:'cuándo',
+      what:'qué', who:'quién', why:'por qué', how:'cómo', which:'cuál',
+      no:'no / ningún', not:'no', yes:'sí', and:'y', or:'o', but:'pero', if:'si', because:'porque',
+      so:'así que / tan', very:'muy', really:'realmente', just:'solo / justo', now:'ahora', today:'hoy',
+      tomorrow:'mañana', yesterday:'ayer', weekend:'fin de semana', week:'semana', day:'día', time:'tiempo / hora',
+      glad:'contento / alegre', happy:'feliz', sorry:'lo siento / disculpa', please:'por favor', thanks:'gracias',
+      thank:'agradecer', rain:'lluvia / llover', sun:'sol', weather:'clima', cold:'frío', hot:'caliente / calor',
+      warm:'cálido', good:'bueno', great:'genial', nice:'agradable', bad:'malo', fine:'bien', well:'bien',
+      go:'ir', went:'fue', gone:'ido', come:'venir', came:'vino', get:'conseguir / obtener', got:'consiguió',
+      make:'hacer', made:'hecho', take:'tomar / llevar', took:'tomó', give:'dar', gave:'dio',
+      say:'decir', said:'dijo', tell:'contar / decir', told:'contó', ask:'preguntar / pedir',
+      want:'querer', need:'necesitar', like:'gustar / como', love:'amar / encantar', know:'saber / conocer',
+      think:'pensar / creer', see:'ver', saw:'vio', look:'mirar', feel:'sentir', try:'intentar',
+      work:'trabajar / trabajo', help:'ayudar / ayuda', talk:'hablar', speak:'hablar', listen:'escuchar',
+      hear:'oír', heard:'oyó', read:'leer', write:'escribir', learn:'aprender', practice:'practicar',
+      in:'en', on:'en / sobre', at:'en / a', to:'a / para', for:'para / por', of:'de', from:'de / desde',
+      with:'con', without:'sin', by:'por / junto a', about:'sobre / acerca de', past:'pasado / junto a',
+      through:'a través de', over:'sobre / terminado', under:'debajo', up:'arriba', down:'abajo',
+      out:'fuera', off:'apagado / fuera', away:'lejos', back:'atrás / de vuelta',
+      coffee:'café', tea:'té', water:'agua', food:'comida', table:'mesa', menu:'menú', check:'cuenta / revisar',
+      bill:'cuenta / factura', price:'precio', money:'dinero', room:'habitación / sala', hotel:'hotel',
+      flight:'vuelo', ticket:'boleto / entrada', train:'tren', bus:'autobús', car:'auto', street:'calle',
+      hospital:'hospital', doctor:'doctor', appointment:'cita', meeting:'reunión', job:'trabajo / empleo',
+      break:'romper / descanso', broke:'rompió', leg:'pierna', luck:'suerte',
+      more:'más', much:'mucho', many:'muchos', some:'algunos / algo', any:'algún / cualquier', all:'todo / todos',
+      one:'uno', two:'dos', three:'tres', first:'primero', next:'siguiente', last:'último / pasado',
+      new:'nuevo', old:'viejo', big:'grande', small:'pequeño', long:'largo', short:'corto', right:'correcto / derecha',
+      left:'izquierda / salió', early:'temprano', late:'tarde', ready:'listo', sure:'seguro'
+    };
+
+    const _wordTranslationCache = JSON.parse(localStorage.getItem('sf_word_dict_cache') || '{}');
+
+    async function translateSingleWordEs(word) {
+      const clean = (word || '').toLowerCase().replace(/[^a-z']/g, '').trim();
+      if (!clean) return '';
+      if (WORD_DICT_ES[clean]) return WORD_DICT_ES[clean];
+      if (_wordTranslationCache[clean]) return _wordTranslationCache[clean];
+
+      const saveCache = (tr) => {
+        if (!tr) return '';
+        _wordTranslationCache[clean] = tr;
+        try { localStorage.setItem('sf_word_dict_cache', JSON.stringify(_wordTranslationCache)); } catch (_) {}
+        return tr;
+      };
+
+      // Try Gemini if key configured
+      if (state.keys.gemini) {
+        try {
+          const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${encodeURIComponent(state.keys.gemini)}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              contents: [{ parts: [{ text: `Translate the single English word "${clean}" to concise Spanish (1-3 words max, no quotes or extra text).` }] }]
+            })
+          });
+          if (res.ok) {
+            const d = await res.json();
+            const txt = (d?.candidates?.[0]?.content?.parts?.[0]?.text || '').trim().replace(/^["']|["']$/g, '');
+            if (txt && txt.length < 50) return saveCache(txt);
+          }
+        } catch (_) {}
+      }
+
+      // Free dictionary lookup fallback with short timeout
+      try {
+        const ctrl = new AbortController();
+        const tid = setTimeout(() => ctrl.abort(), 1600);
+        const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(clean)}&langpair=en|es`, { signal: ctrl.signal });
+        clearTimeout(tid);
+        if (res.ok) {
+          const data = await res.json();
+          const tr = (data?.responseData?.translatedText || '').trim();
+          if (tr && tr.toLowerCase() !== clean) return saveCache(tr.toLowerCase());
+        }
+      } catch (_) {}
+
+      return '';
+    }
+
+    async function openTranslateOverlay(word, phraseText, scenarioId = '', phraseId = '') {
+      const overlay = document.getElementById('translate-overlay');
+      overlay.classList.remove('hidden');
+      const selected = word || phraseText;
+      const isSingleWord = selected && !/\s/.test(selected.trim());
+
+      document.getElementById('tr-word').textContent = selected;
+      document.getElementById('tr-ipa').textContent = '…';
+      document.getElementById('tr-word-meaning').textContent = 'Consultando significado…';
+      document.getElementById('tr-phrase-en').textContent = phraseText || selected;
+      document.getElementById('tr-phrase-es').textContent = '';
+      document.getElementById('tr-usage-tip').textContent = '';
+      document.getElementById('tr-chunks').innerHTML = '';
+      document.getElementById('tr-bookmark-status').textContent = 'Guarda esta palabra o expresión en tu diccionario de repaso.';
+
+      let card = null;
+      if (state.backendOnline) {
+        try {
+          card = await api('/v1/translate', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              selected_text: selected,
+              phrase_text: phraseText || selected,
+              scenario_id: scenarioId || (state.currentScenario && state.currentScenario.id) || null,
+              phrase_id: phraseId || null
+            })
+          });
+        } catch (_) {}
+      }
+      if (!card) {
+        const scen = state.currentScenario || FALLBACK_SCENARIOS[0];
+        const foundPhrase = (scen.phrases || []).find(p => p.id === phraseId || p.text === phraseText);
+        const cleanSel = (selected || '').toLowerCase().replace(/[^a-z']/g, '');
+        const foundGloss = foundPhrase && (foundPhrase.glossary || []).find(g => g.word.toLowerCase() === cleanSel);
+        let singularMeaning = foundGloss ? foundGloss.meaning : '';
+        if (!singularMeaning && isSingleWord) {
+          singularMeaning = await translateSingleWordEs(selected);
+        }
+        if (!singularMeaning) {
+          singularMeaning = isSingleWord ? `"${selected}" (palabra individual)` : (foundPhrase ? foundPhrase.translation : 'Expresión en contexto');
+        }
+        card = {
+          selected_text: selected,
+          word_translation_es: singularMeaning,
+          ipa: foundGloss && foundGloss.ipa ? foundGloss.ipa : null,
+          phrase_text: phraseText || (foundPhrase ? foundPhrase.text : selected),
+          phrase_translation_es: foundPhrase ? foundPhrase.translation : 'Oración completa de la lección',
+          chunk_breakdown: isSingleWord ? [selected, phraseText].filter(Boolean) : [phraseText].filter(Boolean),
+          usage_tip_es: isSingleWord
+            ? `Palabra individual: "${selected}" significa "${singularMeaning}". Toca "Guardar en mi repaso" para agregarla a tu diccionario.`
+            : `Aprende esta expresión completa para recordarla con fluidez en conversación.`,
+          scenario_id: scenarioId || scen.id,
+          phrase_id: phraseId || (foundPhrase ? foundPhrase.id : 'custom')
+        };
+      }
+      state.lastTranslated = card;
+      document.getElementById('tr-word').textContent = card.selected_text;
+      document.getElementById('tr-ipa').textContent = card.ipa ? `/${card.ipa}/` : (isSingleWord ? 'Palabra' : 'Frase');
+      document.getElementById('tr-word-meaning').textContent = card.word_translation_es;
+      document.getElementById('tr-phrase-en').textContent = card.phrase_text;
+      document.getElementById('tr-phrase-es').textContent = `“${card.phrase_translation_es}”`;
+      document.getElementById('tr-usage-tip').textContent = card.usage_tip_es;
+      document.getElementById('tr-chunks').innerHTML = (card.chunk_breakdown || []).map(c =>
+        `<span class="px-2.5 py-0.5 rounded-lg bg-indigo-500/20 border border-indigo-500/30 text-indigo-200 font-medium">${c}</span>`
+      ).join('');
+      document.getElementById('tr-speak-word').onclick = () => speakText(card.selected_text);
+      document.getElementById('tr-speak-phrase').onclick = () => speakText(card.phrase_text);
+
+      // Populate individual word-by-word translations for the full phrase
+      const wbwEl = document.getElementById('tr-word-by-word');
+      if (wbwEl) {
+        const scenObj = state.currentScenario || FALLBACK_SCENARIOS[0];
+        const phrObj = (scenObj.phrases || []).find(p => p.id === phraseId || p.text === card.phrase_text);
+        const rawTokens = (card.phrase_text || '').split(/\s+/).map(t => t.replace(/^[^a-zA-Z0-9']+|[^a-zA-Z0-9']+$/g, '')).filter(Boolean);
+        const seen = new Set();
+        const uniqueWords = rawTokens.filter(w => {
+          const k = w.toLowerCase();
+          if (seen.has(k)) return false;
+          seen.add(k);
+          return true;
+        });
+        const selLower = (card.selected_text || '').toLowerCase().replace(/[^a-z']/g, '');
+        const getQuickEs = (w) => {
+          const k = w.toLowerCase().replace(/[^a-z']/g, '');
+          if (isSingleWord && k === selLower && card.word_translation_es && !card.word_translation_es.includes('palabra individual')) {
+            return card.word_translation_es;
+          }
+          const exactG = phrObj && (phrObj.glossary || []).find(g => g.word.toLowerCase() === k);
+          if (exactG) return exactG.meaning;
+          return WORD_DICT_ES[k] || _wordTranslationCache[k] || '';
+        };
+        wbwEl.innerHTML = uniqueWords.map((w, i) => {
+          const k = w.toLowerCase().replace(/[^a-z']/g, '');
+          const tr = getQuickEs(w);
+          const isSel = isSingleWord && k === selLower;
+          return `
+            <button onclick="openTranslateOverlay('${escapeJs(w)}', '${escapeJs(card.phrase_text)}', '${escapeJs(card.scenario_id || '')}', '${escapeJs(card.phrase_id || '')}')"
+              class="text-xs px-2.5 py-1.5 rounded-xl border transition flex items-center gap-1.5 ${
+                isSel
+                  ? 'bg-emerald-500/20 border-emerald-400/60 text-white shadow-xs'
+                  : 'bg-slate-900 hover:bg-slate-800 border-slate-800 text-slate-200'
+              }">
+              <span class="font-bold">${w}</span>
+              <span class="text-slate-500">→</span>
+              <span id="tr-wbw-${i}" class="text-emerald-300 font-medium">${tr || '…'}</span>
+            </button>
+          `;
+        }).join('');
+        uniqueWords.forEach(async (w, i) => {
+          if (!getQuickEs(w)) {
+            const tr = await translateSingleWordEs(w);
+            const span = document.getElementById(`tr-wbw-${i}`);
+            if (span) span.textContent = tr || w;
+          }
+        });
+      }
+
+      // Populate situational tips for when to use the idiom
+      const sitEl = document.getElementById('tr-idiom-situations');
+      if (sitEl) {
+        const scenObj = state.currentScenario || FALLBACK_SCENARIOS[0];
+        const phrObj = (scenObj.phrases || []).find(p => p.id === phraseId || p.text === card.phrase_text);
+        const idiomInfo = getIdiomFocus(scenObj.id, phrObj ? phrObj.id : phraseId, phrObj);
+        const targetIdiom = idiomInfo.label || card.selected_text;
+        const fullLower = (card.phrase_text || '').toLowerCase();
+
+        const topicSituations = {
+          'food-and-drink': 'Restaurantes, cafeterías, pedir comida, preguntar por ingredientes o pagar la cuenta.',
+          'travel-and-transport': 'Aeropuertos, estaciones de tren/autobús, pedir direcciones o resolver retrasos de viaje.',
+          'hotel-and-shopping': 'Check-in/check-out en hoteles, compras en tiendas, tallas, cambios o reembolsos.',
+          'work-and-career': 'Reuniones de equipo, llamadas con clientes, entrevistas laborales o correos profesionales.',
+          'health-and-emergencies': 'Consultas médicas, farmacias, describir síntomas o pedir ayuda en urgencias.',
+          'social-and-smalltalk': 'Charlas cotidianas con amigos, vecinos, planes de fin de semana o eventos sociales.',
+          'grammar-and-connectors': 'Práctica de adverbios, comparativos, superlativos, conectores y estructuras gramaticales en contexto.',
+          'daily-tech-and-media': 'Tecnología cotidiana, Wi-Fi, aplicaciones, rutinas del hogar, compras online y noticias.'
+        };
+        const topicHint = topicSituations[scenObj.topic] || (scenObj.description || scenObj.title_es || 'Conversaciones cotidianas en inglés.');
+        const isPolite = /\b(could|would|please|excuse me|may i|sorry|appreciate)\b/i.test(fullLower);
+        const isQuestion = (card.phrase_text || '').includes('?') || /^(how|what|where|when|which|can|could|would|do|is|are)\b/i.test(fullLower);
+        const registerTip = isPolite
+          ? 'Registro cortés y natural: ideal con desconocidos, clientes, personal de servicio o colegas.'
+          : 'Registro cercano y coloquial: úsalo en charlas fluidas para sonar como hablante nativo.';
+        const whenTip = isQuestion
+          ? `Úsalo cuando necesites iniciar una petición o pregunta clave sobre "${scenObj.title_es || 'este tema'}".`
+          : `Úsalo para responder con naturalidad durante "${scenObj.title_es || 'la conversación'}".`;
+
+        sitEl.innerHTML = `
+          <div>• <strong>Expresión foco:</strong> <span class="text-amber-300 font-semibold">“${targetIdiom}”</span>${idiomInfo.meaning ? ` (${idiomInfo.meaning})` : ''}</div>
+          <div>• <strong>Situaciones ideales:</strong> ${topicHint}</div>
+          <div>• <strong>Cuándo decirlo:</strong> ${whenTip}</div>
+          <div>• <strong>Tono recomendado:</strong> ${registerTip}</div>
+        `;
+      }
+
+      // Auto-save every consulted/clicked word or expression into Mi Repaso
+      await saveConsultedToReview(card, true);
+    }
+
+    function persistLocalSrs() {
+      try {
+        localStorage.setItem('sf_local_srs', JSON.stringify((state.srsList || []).slice(0, 60)));
+      } catch (_) {}
+    }
+
+    function buildReviewExerciseForConsulted(card, scenId, phraseId) {
+      const scen = FALLBACK_SCENARIOS.find(s => s.id === scenId) || state.currentScenario || FALLBACK_SCENARIOS[0];
+      const matchedPhrase = (scen && scen.phrases || []).find(p => p.id === phraseId || p.text === card.phrase_text);
+      const phraseText = card.phrase_text || (matchedPhrase ? matchedPhrase.text : card.selected_text);
+      const focusWord = (card.selected_text || '').trim();
+      const isWord = focusWord && !/\s/.test(focusWord);
+      const glossList = matchedPhrase && Array.isArray(matchedPhrase.glossary) ? [...matchedPhrase.glossary] : [];
+      if (focusWord && !glossList.some(g => (g.word || '').toLowerCase() === focusWord.toLowerCase())) {
+        glossList.unshift({
+          word: focusWord,
+          meaning: card.word_translation_es || 'Palabra consultada',
+          ipa: card.ipa || ''
+        });
+      }
+      return {
+        id: `${scenId}.${phraseId || 'consulted'}.recall`,
+        scenario_id: scenId,
+        phrase_id: phraseId || 'consulted',
+        type: 'recall',
+        expected_text: phraseText,
+        pass_threshold: 0.75,
+        prompt: {
+          instruction_es: isWord
+            ? `Repasa la palabra consultada “${focusWord}” dentro de la frase:`
+            : 'Repasa la expresión consultada en voz alta:',
+          display_text: phraseText,
+          audio_text: phraseText,
+          translation: card.phrase_translation_es || (matchedPhrase ? matchedPhrase.translation : ''),
+          visual_hint: (matchedPhrase && matchedPhrase.visual_hint) || '🔍',
+          glossary: glossList,
+          focus_words: focusWord ? [focusWord] : []
+        }
+      };
+    }
+
+    async function saveConsultedToReview(c, isAuto = false) {
+      if (!c) return;
+      const scenId = c.scenario_id || (state.currentScenario && state.currentScenario.id) || 'a1-ordering-coffee';
+      let phraseId = c.phrase_id;
+      const scenObj = FALLBACK_SCENARIOS.find(s => s.id === scenId) || state.currentScenario;
+      if ((!phraseId || phraseId === 'custom') && scenObj && scenObj.phrases) {
+        const m = scenObj.phrases.find(p => p.text === c.phrase_text);
+        if (m) phraseId = m.id;
+      }
+      if (!phraseId && scenObj && scenObj.phrases && scenObj.phrases[0]) {
+        phraseId = scenObj.phrases[0].id;
+      }
+
+      const focusKey = (c.selected_text || c.phrase_text || '').trim().toLowerCase();
+      const dedupKey = `${scenId}::${phraseId || 'custom'}::${focusKey}`;
+
+      if (state.backendOnline && phraseId && phraseId !== 'custom') {
+        try {
+          const res = await api('/v1/review/bookmark', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ scenario_id: scenId, phrase_id: phraseId, focus_word: c.selected_text })
+          });
+          if (window.SpeakFlowFirebase) {
+            window.SpeakFlowFirebase.syncSrsCard({ card_id: res.card_id, scenario_id: scenId, phrase_id: phraseId, focus_words: res.focus_words });
+          }
+        } catch (_) {}
+      }
+
+      const alreadyInList = state.srsList.some(item => {
+        if (item.dedup_key && item.dedup_key === dedupKey) return true;
+        const fw = (item.exercise?.prompt?.focus_words || []).map(w => w.toLowerCase());
+        return item.exercise?.expected_text === (c.phrase_text || c.selected_text) && (!focusKey || fw.includes(focusKey));
+      });
+      if (!alreadyInList) {
+        state.srsList.unshift({
+          card_id: `local-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
+          dedup_key: dedupKey,
+          kind: 'bookmark',
+          consulted_word: c.selected_text || '',
+          exercise: buildReviewExerciseForConsulted(c, scenId, phraseId)
+        });
+        persistLocalSrs();
+      }
+
+      const statusEl = document.getElementById('tr-bookmark-status');
+      if (statusEl) {
+        statusEl.innerHTML = isAuto
+          ? '<span class="text-emerald-400 font-semibold">✔ Guardada automáticamente en Mi Repaso.</span>'
+          : '<span class="text-emerald-400 font-semibold">✔ Guardada en tu lista de repaso.</span>';
+      }
+      await refreshProgress();
+    }
+
+    function closeTranslateOverlay() {
+      document.getElementById('translate-overlay').classList.add('hidden');
+    }
+
+    async function bookmarkTranslatedPhrase() {
+      await saveConsultedToReview(state.lastTranslated, false);
+    }
+
+    function buildLocalLesson(scenario) {
+      const cloze = p => { const s = new Set(p.cloze || [1]); return p.text.split(' ').map((w, i) => s.has(i) ? '____' : w).join(' '); };
+      const getIdiomTarget = p => {
+        const info = getIdiomFocus(scenario.id, p.id, p);
+        return info.label || p.text;
+      };
+      const mk = (p, type, support, th, inst, disp, tr, gl, aud, expOverride = null, ctxSentence = null) => {
+        const info = getIdiomFocus(scenario.id, p.id, p);
+        return {
+          id: `${scenario.id}.${p.id}.${type}`, type, support, scenario_id: scenario.id, phrase_id: p.id,
+          expected_text: expOverride || p.text, pass_threshold: th, response_mode: 'speech',
+          prompt: {
+            instruction_es: inst,
+            display_text: disp,
+            translation: tr,
+            glossary: gl || [],
+            visual_hint: p.visual_hint,
+            audio_text: aud,
+            focus_words: info.terms,
+            context_sentence: ctxSentence
+          }
+        };
+      };
+      return {
+        scenario_id: scenario.id, title: scenario.title, cefr: scenario.cefr, topic: scenario.topic,
+        stages: [
+          {
+            type: 'shadowing',
+            support: 'full',
+            exercises: scenario.phrases.map(p => mk(
+              p, 'shadowing', 'full', 0.70,
+              'Escucha el audio (se reproduce solo) y repite la frase imitando el ritmo. Fíjate en el modismo resaltado.',
+              p.text, p.translation, p.glossary || [], p.text
+            ))
+          },
+          {
+            type: 'guided',
+            support: 'partial',
+            exercises: scenario.phrases.map(p => {
+              const info = getIdiomFocus(scenario.id, p.id, p);
+              const firstHint = t => String(t || '').split(/\s+/).map(w => {
+                const c = w.replace(/[.,!?]+$/, '');
+                return (c.length > 1 ? c[0] + '_'.repeat(c.length - 1) : c) + w.slice(c.length);
+              }).join(' ');
+              const tokens = (p.text || '').split(/\s+/);
+              const mask = computeIdiomTokenMask(tokens, info.terms);
+              const maskedSentence = tokens.map((tok, idx) => mask[idx] ? firstHint(tok) : tok).join(' ');
+              return mk(
+                p, 'guided', 'partial', 0.75,
+                'Practica la frase completa ayudándote con las letras incompletas únicamente en el modismo.',
+                maskedSentence, p.translation, p.glossary || [], p.text, p.text
+              );
+            })
+          },
+          {
+            type: 'completion',
+            support: 'low',
+            exercises: scenario.phrases.map(p => mk(
+              p, 'completion', 'low', 0.85,
+              'Completa las palabras que faltan diciendo toda la frase (puedes usar la guía de audio).',
+              cloze(p), null, [], p.text
+            ))
+          },
+          {
+            type: 'recall',
+            support: 'full',
+            exercises: scenario.phrases.map(p => {
+              const info = getIdiomFocus(scenario.id, p.id, p);
+              const firstHint = t => String(t || '').split(/\s+/).map(w => {
+                const c = w.replace(/[.,!?]+$/, '');
+                return (c.length > 1 ? c[0] + '_'.repeat(c.length - 1) : c) + w.slice(c.length);
+              }).join(' ');
+              if (p.apply_sentence) {
+                const fullApplied = p.apply_sentence.replace('____', p.apply_answer || '');
+                const maskedApplied = p.apply_sentence.replace('____', firstHint(p.apply_answer || ''));
+                return {
+                  id: `${scenario.id}.${p.id}.recall`, type: 'recall', support: 'full', scenario_id: scenario.id, phrase_id: p.id,
+                  expected_text: fullApplied, pass_threshold: 0.75, response_mode: 'speech',
+                  prompt: {
+                    instruction_es: 'Di la frase completa ayudándote con las letras incompletas del modismo o palabra clave.',
+                    display_text: maskedApplied, translation: p.apply_translation, glossary: p.glossary || [],
+                    visual_hint: p.visual_hint, audio_text: fullApplied,
+                    focus_words: info.terms
+                  }
+                };
+              }
+              const tokens = (p.text || '').split(/\s+/);
+              const mask = computeIdiomTokenMask(tokens, info.terms);
+              const maskedSentence = tokens.map((tok, idx) => mask[idx] ? firstHint(tok) : tok).join(' ');
+              return mk(
+                p, 'recall', 'full', 0.75,
+                'Di la frase completa ayudándote con las letras incompletas del modismo o palabra clave.',
+                maskedSentence, p.translation, p.glossary, p.text
+              );
+            })
+          },
+        ]
+      };
+    }
+
+    async function init() {
+      try {
+        const auth = await api('/v1/auth/dev-token', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ user_id: 'demo-learner' }),
+        });
+        state.token = auth.access_token;
+        state.backendOnline = true;
+      } catch (_) {
+        state.backendOnline = false;
+      }
+      renderLangButtons();
+      renderCefrButtons();
+      renderModuleButtons();
+      await loadScenarios();
+      await refreshProgress();
+      updateTabStyles();
+      updateViewVisibility();
+    }
+
+    function renderCefrButtons() {
+      const levels = ['ALL', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+      const cefrContainer = document.getElementById('cefr-buttons');
+      if (cefrContainer) {
+        cefrContainer.innerHTML = levels.map(lv => `
+          <button onclick="selectCefr('${lv}')" class="py-2.5 px-2 rounded-2xl border font-bold text-xs transition flex flex-col items-center justify-center gap-0.5 ${
+            state.cefr === lv ? 'bg-indigo-600 border-indigo-400 text-white shadow-md shadow-indigo-600/30' : 'bg-slate-900 border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white'
+          }">
+            <span class="text-sm">${lv === 'ALL' ? '🌐' : lv}</span>
+            <span class="text-[10px] font-normal opacity-80">${lv === 'ALL' ? 'Todos' : getCefrBandName(lv)}</span>
+          </button>
+        `).join('');
+      }
+      const bandMap = { ALL: 'Todos los niveles (A1 a C2)', A1: 'A1 - Inicial', A2: 'A2 - Básico', B1: 'B1 - Intermedio', B2: 'B2 - Intermedio Alto', C1: 'C1 - Avanzado', C2: 'C2 - Maestría' };
+      const bandEl = document.getElementById('band-badge');
+      if (bandEl) bandEl.textContent = bandMap[state.cefr] || state.cefr;
+      updateFilterSummaryBadge();
+    }
+
+    function getCefrBandName(lv) {
+      const map = { A1: 'Inicial', A2: 'Básico', B1: 'Intermedio', B2: 'Int. Alto', C1: 'Avanzado', C2: 'Maestría' };
+      return map[lv] || '';
+    }
+
+    function renderModuleButtons() {
+      const modContainer = document.getElementById('module-buttons');
+      if (modContainer) {
+        modContainer.innerHTML = TOPIC_MODULES.map(m => `
+          <button onclick="selectTopic('${m.id}')" class="p-2.5 rounded-2xl border text-left transition flex items-center gap-2 ${
+            state.topic === m.id ? 'bg-indigo-600/25 border-indigo-500/60 text-white font-bold ring-1 ring-indigo-500/50' : 'bg-slate-900 border-slate-800/80 text-slate-300 hover:bg-slate-800/80 hover:text-white'
+          }">
+            <span class="text-lg">${m.icon}</span>
+            <span class="text-xs truncate font-medium">${m.title_es}</span>
+          </button>
+        `).join('');
+      }
+      const activeMod = TOPIC_MODULES.find(m => m.id === state.topic);
+      const modBadge = document.getElementById('module-badge');
+      if (modBadge) modBadge.textContent = activeMod ? activeMod.title_es : 'Todas';
+      updateFilterSummaryBadge();
+    }
+
+    const SPEECH_LANGS = [
+      { id: 'en-US', flag: '🇺🇸', name: 'Inglés (Estados Unidos)', desc: 'Pronunciación y expresiones cotidianas de EE. UU.' },
+      { id: 'en-GB', flag: '🇬🇧', name: 'Inglés (Reino Unido)', desc: 'Pronunciación británica y modismos del Reino Unido' },
+    ];
+
     function renderLangButtons() {
       const container = document.getElementById('lang-buttons');
       if (container) {
@@ -42857,6 +43761,7 @@
       if (focus.length) {
         const exRecall = { ...ex, type: 'recall', prompt: { ...ex.prompt, focus_words: focus } };
         state.srsList.unshift({ card_id: `local-${Date.now()}`, kind: 'feedback', exercise: exRecall });
+        persistLocalSrs();
       }
       return {
         evaluation: { expected_text: ex.expected_text, transcript, accuracy: acc, fluency: flu, score, passed, words },
@@ -42866,7 +43771,8 @@
     }
 
     async function submitAttempt(exId, transcript, cardId = '') {
-      if (state.backendOnline && !state.keys.openai) {
+      const isLocalCard = cardId && String(cardId).startsWith('local-');
+      if (state.backendOnline && !state.keys.openai && !isLocalCard) {
         const fd = new FormData();
         fd.append('audio', makeWavBlob(), 'speech.wav');
         fd.append('debug_transcript', transcript);
@@ -42876,13 +43782,17 @@
           state.lastEvaluation.evaluation.transcript = transcript || state.lastEvaluation.evaluation.transcript || '';
         }
       } else {
-        const stage = state.lesson.stages[Math.min(state.stageIndex, 3)];
-        const ex = stage.exercises[state.exerciseIndex];
+        const srsItem = cardId ? state.srsList.find(c => c.card_id === cardId) : null;
+        const stage = state.lesson && state.lesson.stages ? state.lesson.stages[Math.min(state.stageIndex, 3)] : null;
+        const ex = (srsItem && srsItem.exercise) || (stage && stage.exercises[state.exerciseIndex]);
         state.lastEvaluation = evaluateLocally(ex, transcript);
         if (state.lastEvaluation && state.lastEvaluation.evaluation) {
           state.lastEvaluation.evaluation.transcript = transcript;
         }
-        if (cardId) state.srsList = state.srsList.filter(c => c.card_id !== cardId);
+        if (cardId) {
+          state.srsList = state.srsList.filter(c => c.card_id !== cardId);
+          persistLocalSrs();
+        }
       }
       if (window.SpeakFlowFirebase && state.lastEvaluation) {
         window.SpeakFlowFirebase.syncAttempt({
@@ -43569,14 +44479,23 @@ Return ONLY valid JSON:
     }
 
     async function renderSrsView() {
-      if (state.backendOnline) state.srsList = await api('/v1/review/due');
+      if (state.backendOnline) {
+        try {
+          const remoteDue = await api('/v1/review/due');
+          const localExtra = (state.srsList || []).filter(item =>
+            String(item.card_id || '').startsWith('local-') &&
+            !remoteDue.some(r => r.exercise?.expected_text === item.exercise?.expected_text)
+          );
+          state.srsList = [...remoteDue, ...localExtra];
+        } catch (_) {}
+      }
       if (!state.srsList.length) {
         document.getElementById('stage-container').innerHTML = `
           <div class="text-center py-16 space-y-4">
             <div class="text-4xl">🔖</div>
             <h3 class="font-bold text-lg text-white">Estás al día con tu repaso</h3>
             <p class="text-xs text-slate-400 max-w-md mx-auto leading-relaxed">
-              Toca cualquier palabra o frase durante una lección y elige <strong>"Guardar en mi repaso"</strong> para practicar aquí las expresiones que quieras dominar.
+              Cada palabra o frase que toques o consultes durante una lección se guarda automáticamente aquí para que puedas practicarla en <strong>Mi Repaso</strong>.
             </p>
             <div class="pt-2">
               <button onclick="switchTab('lesson')" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold transition">
@@ -43589,11 +44508,13 @@ Return ONLY valid JSON:
       }
       const item = state.srsList[0];
       const ex = item.exercise;
-      const meta = STAGE_LABELS[ex.type];
+      const meta = STAGE_LABELS[ex.type] || STAGE_LABELS.recall;
+      const focusWords = (ex.prompt && ex.prompt.focus_words) || (item.consulted_word ? [item.consulted_word] : []);
       document.getElementById('stage-container').innerHTML = `
         <div class="space-y-5">
-          <div class="flex items-center justify-between pb-3 border-b border-slate-800/80">
-            <h3 class="font-semibold text-sm text-white">🔖 Frases por repasar (${state.srsList.length})</h3>
+          <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-800/80">
+            <h3 class="font-semibold text-sm text-white">🔖 Frases y palabras por repasar (${state.srsList.length})</h3>
+            ${focusWords.length ? `<span class="text-xs px-2.5 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 font-medium">🔍 Foco: ${focusWords.join(', ')}</span>` : ''}
           </div>
           ${renderExerciseCard(ex, meta, 0, state.srsList.length, 'advanceSrsItem')}
         </div>
