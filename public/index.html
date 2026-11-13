@@ -49233,9 +49233,10 @@
 
     function scheduleAutoPlay(ex) {
       clearTimeout(state._autoTimer);
-      if (!ex || ex.type !== 'shadowing' || state.lastEvaluation) return;
+      const autoPlayTypes = new Set(['shadowing', 'guided', 'completion']);
+      if (!ex || !autoPlayTypes.has(ex.type) || state.lastEvaluation) return;
       state._autoTimer = setTimeout(() => {
-        if (state.viewMode === 'exercise') speakText(ex.expected_text);
+        if (state.viewMode === 'exercise') speakText((ex.prompt && ex.prompt.audio_text) || ex.expected_text);
       }, 900);
     }
 
