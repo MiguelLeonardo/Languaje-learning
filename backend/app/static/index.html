@@ -49461,8 +49461,36 @@
       return matrix[b.length][a.length];
     }
 
+    function playSingleWordAudio(wordIndex) {
+      const url = state.wordAudioUrls && state.wordAudioUrls[wordIndex];
+      if (!url) return;
+      if (window.speechSynthesis) window.speechSynthesis.cancel();
+      if (state._userAudioPlayer && !state._userAudioPlayer.paused) {
+        try { state._userAudioPlayer.pause(); } catch (_) {}
+      }
+      try {
+        const player = new Audio(url);
+        state._userAudioPlayer = player;
+        const btn = document.getElementById(`btn-play-word-audio-${wordIndex}`);
+        if (btn) btn.innerHTML = '<span>⏸️</span><span>Pausar</span>';
+        player.onended = () => {
+          if (btn) btn.innerHTML = '<span>🎧</span><span>Mi voz</span>';
+        };
+        player.onerror = () => {
+          if (btn) btn.innerHTML = '<span>🎧</span><span>Mi voz</span>';
+        };
+        player.play().catch(() => {
+          if (btn) btn.innerHTML = '<span>🎧</span><span>Mi voz</span>';
+        });
+      } catch (_) {}
+    }
+
     async function recordSingleWord(wordIndex, targetWord, exId) {
       if (state._activeWordTrainerRec) {
+        if (state._wordMediaRecorder && state._wordMediaRecorder.state === 'recording') {
+          try { state._wordMediaRecorder.stop(); } catch (_) {}
+          state._wordMediaRecorder = null;
+        }
         try { state._activeWordTrainerRec.stop(); } catch (_) {}
         state._activeWordTrainerRec = null;
         state.wordTrainerState = { activeIndex: null, status: 'idle', lastHeard: '' };
@@ -49474,9 +49502,6 @@
       if (!SR) {
         showMicNotice('Tu navegador no soporta reconocimiento de voz. Usa Chrome o Edge.');
         return;
-      }
-      if (typeof VoiceSession.releaseStream === 'function') {
-        VoiceSession.releaseStream();
       }
 
       if (window.speechSynthesis) window.speechSynthesis.cancel();
@@ -49500,6 +49525,51 @@
 
       let heardTranscript = '';
       let alternatives = [];
+      let ended = false;
+      let wordAudioChunks = [];
+      let wordRecorder = null;
+      let chosenMime = '';
+      const androidNoParallel = isAndroidBrowser() && localStorage.getItem('sf_android_no_parallel_rec') === '1';
+
+      const startWordAudioRecorder = async () => {
+        if (androidNoParallel || !window.MediaRecorder || ended) return;
+        try {
+          await VoiceSession.ensureMicPermission();
+          if (ended || !VoiceSession.stream) return;
+          const mimeCandidates = ['audio/webm;codecs=opus', 'audio/webm', 'audio/mp4', 'audio/aac', ''];
+          if (typeof MediaRecorder.isTypeSupported === 'function') {
+            chosenMime = mimeCandidates.find(m => !m || MediaRecorder.isTypeSupported(m)) || '';
+          }
+          wordRecorder = chosenMime
+            ? new MediaRecorder(VoiceSession.stream, { mimeType: chosenMime })
+            : new MediaRecorder(VoiceSession.stream);
+          wordAudioChunks = [];
+          wordRecorder.ondataavailable = (e) => {
+            if (e.data && e.data.size > 0) wordAudioChunks.push(e.data);
+          };
+          wordRecorder.onstop = () => {
+            try {
+              if (!wordAudioChunks.length) return;
+              const mime = wordRecorder.mimeType || chosenMime || 'audio/webm';
+              const blob = new Blob(wordAudioChunks, { type: mime });
+              if (!blob.size) return;
+              state.wordAudioUrls = state.wordAudioUrls || {};
+              if (state.wordAudioUrls[wordIndex]) {
+                try { URL.revokeObjectURL(state.wordAudioUrls[wordIndex]); } catch (_) {}
+              }
+              state.wordAudioUrls[wordIndex] = URL.createObjectURL(blob);
+              const playBtn = document.getElementById(`btn-play-word-audio-${wordIndex}`);
+              if (playBtn) {
+                playBtn.removeAttribute('disabled');
+                playBtn.classList.remove('opacity-40', 'cursor-not-allowed');
+              }
+            } catch (_) {}
+          };
+          wordRecorder.start(200);
+          state._wordMediaRecorder = wordRecorder;
+        } catch (_) {}
+      };
+
       rec.onresult = (e) => {
         if (e.results && e.results[0]) {
           heardTranscript = (e.results[0][0].transcript || '').trim();
@@ -49511,10 +49581,23 @@
 
       rec.onerror = (e) => {
         console.warn('Word trainer recognition error:', e.error);
+        if ((e.error === 'audio-capture' || e.error === 'aborted') && isAndroidBrowser() && state._wordMediaRecorder) {
+          try { localStorage.setItem('sf_android_no_parallel_rec', '1'); } catch (_) {}
+          if (state._wordMediaRecorder.state === 'recording') {
+            try { state._wordMediaRecorder.stop(); } catch (_) {}
+          }
+          state._wordMediaRecorder = null;
+          VoiceSession.releaseStream();
+        }
       };
 
       rec.onend = async () => {
+        ended = true;
         state._activeWordTrainerRec = null;
+        if (state._wordMediaRecorder && state._wordMediaRecorder.state === 'recording') {
+          try { state._wordMediaRecorder.stop(); } catch (_) {}
+          state._wordMediaRecorder = null;
+        }
         const clean = s => (s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
         const expClean = clean(targetWord);
         const heardClean = clean(heardTranscript);
@@ -49540,8 +49623,14 @@
 
       try {
         rec.start();
+        startWordAudioRecorder();
       } catch (err) {
+        ended = true;
         state._activeWordTrainerRec = null;
+        if (state._wordMediaRecorder && state._wordMediaRecorder.state === 'recording') {
+          try { state._wordMediaRecorder.stop(); } catch (_) {}
+          state._wordMediaRecorder = null;
+        }
         state.wordTrainerState = { activeIndex: null, status: 'idle', lastHeard: '' };
         await renderActiveTab();
       }
@@ -49805,7 +49894,13 @@
                         <div class="text-[10px] text-slate-400">Objetivo fonético individual</div>
                       </div>
                     </div>
-                    <div class="flex items-center gap-2 self-end sm:self-auto shrink-0">
+                    <div class="flex items-center flex-wrap gap-2 self-end sm:self-auto shrink-0">
+                      <button id="btn-play-word-audio-${idx}" onclick="playSingleWordAudio(${idx})"
+                        ${(state.wordAudioUrls && state.wordAudioUrls[idx]) ? '' : 'disabled'}
+                        title="Escuchar tu pronunciación aislada de esta palabra"
+                        class="px-2.5 py-1.5 rounded-lg bg-indigo-600/20 hover:bg-indigo-600/35 border border-indigo-500/35 text-indigo-200 text-xs font-semibold flex items-center gap-1.5 transition ${(state.wordAudioUrls && state.wordAudioUrls[idx]) ? '' : 'opacity-40 cursor-not-allowed'}">
+                        <span>🎧</span><span>Mi voz</span>
+                      </button>
                       <button onclick="speakText('${escapeJs(expected)}', 0.82)"
                         title="Escuchar palabra modelo despacio"
                         class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold flex items-center gap-1.5 transition">
@@ -49823,16 +49918,35 @@
           </div>
         `;
       } else {
+        const recordedKeys = Object.keys(state.wordAudioUrls || {});
+        const isolatedChips = recordedKeys.length ? `
+          <div class="flex flex-wrap gap-1.5 pt-2 border-t border-emerald-500/20">
+            <span class="text-[11px] text-emerald-300/90 mr-1 self-center">Tus tomas aisladas:</span>
+            ${recordedKeys.map(k => {
+              const wObj = words[Number(k)];
+              const wLabel = wObj ? wObj.expected : `#${Number(k) + 1}`;
+              return `
+                <button id="btn-play-word-audio-${k}" onclick="playSingleWordAudio(${k})"
+                  class="px-2.5 py-1 rounded-lg bg-indigo-600/25 hover:bg-indigo-600/40 border border-indigo-400/40 text-indigo-200 text-[11px] font-semibold flex items-center gap-1 transition">
+                  <span>🎧</span><span>${wLabel}</span>
+                </button>
+              `;
+            }).join('')}
+          </div>
+        ` : '';
         wordTrainerHtml = `
-          <div class="p-3.5 rounded-2xl bg-emerald-950/40 border border-emerald-500/40 flex items-center justify-between gap-2 shadow-inner">
-            <div class="flex items-center gap-2.5">
-              <span class="text-emerald-400 text-lg">✨</span>
-              <div>
-                <span class="text-xs font-extrabold text-emerald-300">¡Versión corregida completada con éxito!</span>
-                <p class="text-[11px] text-slate-300">Todas las palabras han alcanzado la pronunciación óptima.</p>
+          <div class="p-3.5 rounded-2xl bg-emerald-950/40 border border-emerald-500/40 space-y-2 shadow-inner">
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-2.5">
+                <span class="text-emerald-400 text-lg">✨</span>
+                <div>
+                  <span class="text-xs font-extrabold text-emerald-300">¡Versión corregida completada con éxito!</span>
+                  <p class="text-[11px] text-slate-300">Todas las palabras han alcanzado la pronunciación óptima.</p>
+                </div>
               </div>
+              <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[11px] font-bold">100% Precisión</span>
             </div>
-            <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[11px] font-bold">100% Precisión</span>
+            ${isolatedChips}
           </div>
         `;
       }
