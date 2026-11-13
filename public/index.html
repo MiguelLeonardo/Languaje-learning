@@ -64778,7 +64778,9 @@
               const info = getIdiomFocus(scenario.id, p.id, p);
               const firstHint = t => String(t || '').split(/\s+/).map(w => {
                 const c = w.replace(/[.,!?]+$/, '');
-                return (c.length > 1 ? c[0] + '_'.repeat(c.length - 1) : c) + w.slice(c.length);
+                if (c.length <= 1) return w;
+                const count = Math.min(c.length - 1, Math.max(c.length >= 4 ? 2 : 1, Math.round(c.length * 0.33)));
+                return c.slice(0, count) + '_'.repeat(c.length - count) + w.slice(c.length);
               }).join(' ');
               if (p.apply_sentence) {
                 const fullApplied = p.apply_sentence.replace('____', p.apply_answer || '');
@@ -64795,34 +64797,38 @@
                 };
               }
 
-              // Vary the context for phrases without an explicit apply_sentence
+              // Vary the context naturally for phrases without an explicit apply_sentence
               const gloss0 = (p.glossary && p.glossary[0]) ? p.glossary[0] : null;
               const rawTarget = (info.label || (gloss0 && gloss0.word) || '').trim();
               const target = rawTarget || (p.text || '').split(/\s+/).find(w => w.replace(/[^a-zA-Z]/g, '').length > 3) || 'expression';
               const targetMeaning = (gloss0 && gloss0.meaning) ? gloss0.meaning.split('/')[0].trim() : target;
+              const lowerTarget = target.toLowerCase();
               const lowerText = (p.text || '').toLowerCase();
 
               let variedEn = '';
               let variedEs = '';
-              if (/^(can i|could i|may i|could you|would you)\b/i.test(lowerText)) {
-                variedEn = `Excuse me, when you have a moment, could we talk about ${target}?`;
-                variedEs = `Disculpa, cuando tengas un momento, ¿podríamos hablar sobre "${targetMeaning}"?`;
+              if (/ly$/.test(lowerTarget) && !/\s/.test(lowerTarget)) {
+                variedEn = `When the main system went offline, the team handled every order ${target} until noon.`;
+                variedEs = `Cuando el sistema principal se cayó, el equipo gestionó cada pedido ${targetMeaning} hasta el mediodía.`;
+              } else if (/^(can i|could i|may i|could you|would you)\b/i.test(lowerText)) {
+                variedEn = `At a different counter later that day, you politely ask about ${target} before paying.`;
+                variedEs = `En otro mostrador más tarde ese día, preguntas con cortesía por "${targetMeaning}" antes de pagar.`;
               } else if (/\?$/.test((p.text || '').trim())) {
-                variedEn = `In a new situation, someone might ask you: what do you mean by ${target}?`;
-                variedEs = `En otra situación, alguien podría preguntarte: ¿a qué te refieres con "${targetMeaning}"?`;
+                variedEn = `In a new situation, a coworker asks you to double-check ${target} before sending the report.`;
+                variedEs = `En una nueva situación, un compañero te pide revisar "${targetMeaning}" antes de enviar el informe.`;
               } else {
                 const templates = [
                   {
-                    en: `In another conversation, you can naturally mention ${target} to explain your idea.`,
-                    es: `En otra conversación, puedes mencionar "${targetMeaning}" con naturalidad para explicar tu idea.`
+                    en: `During last week's project, everyone noticed how useful ${target} was for the whole team.`,
+                    es: `Durante el proyecto de la semana pasada, todos notaron lo útil que fue "${targetMeaning}" para todo el equipo.`
                   },
                   {
-                    en: `Imagine telling a friend later today how important ${target} was in your day.`,
-                    es: `Imagina contarle más tarde a un amigo lo importante que fue "${targetMeaning}" en tu día.`
+                    en: `At the new office downtown, clients often appreciate ${target} right from the first visit.`,
+                    es: `En la nueva oficina del centro, los clientes suelen valorar "${targetMeaning}" desde la primera visita.`
                   },
                   {
-                    en: `During a different situation at work or home, remember to use ${target} clearly.`,
-                    es: `En una situación distinta en el trabajo o en casa, recuerda usar "${targetMeaning}" con claridad.`
+                    en: `Before finishing the trip, we made sure to arrange ${target} ahead of time.`,
+                    es: `Antes de terminar el viaje, nos aseguramos de organizar "${targetMeaning}" con anticipación.`
                   }
                 ];
                 const pick = templates[idx % templates.length];
