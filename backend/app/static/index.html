@@ -64327,19 +64327,19 @@
       return tokens.map((tok, idx) => {
         const clean = tok.replace(/^[^a-zA-Z0-9']+|[^a-zA-Z0-9']+$/g, '');
 
-        // 1. High-visibility blanks: ____ in Aplica / Completa
-        if (tok.includes('____') || /_{3,}/.test(tok)) {
-          const punctuation = tok.replace(/_+/g, '');
-          return `<span class="inline-flex items-center justify-center px-3.5 py-1 mx-1.5 rounded-xl bg-amber-500/20 border-2 border-dashed border-amber-400 text-amber-300 font-mono font-black text-sm shadow-md ring-2 ring-amber-400/20 animate-pulse tracking-wider">[ ✏️ ____ ]</span>${punctuation}`;
-        }
-
-        // 2. High-visibility guided initials: B____ or l__
+        // 1. High-visibility guided initials: b___ or w______ (must run BEFORE pure blanks!)
         if (/^[a-zA-Z]_+/.test(tok)) {
           const m = tok.match(/^([a-zA-Z])(_+)(.*)$/);
           if (m) {
             const [, initial, blanks, trailingPunct] = m;
-            return `<span class="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-lg bg-slate-900 border border-indigo-400/50 font-mono text-xs shadow-inner"><span class="text-indigo-300 font-black text-base underline decoration-indigo-400 decoration-2">${initial}</span><span class="tracking-widest text-slate-400 font-bold ml-0.5">${blanks}</span></span>${trailingPunct}`;
+            return `<span class="inline-flex items-center px-3 py-1 mx-1 rounded-xl bg-amber-500/20 border-2 border-dashed border-amber-400 text-amber-200 font-mono text-base shadow-md ring-2 ring-amber-400/20"><span class="text-amber-300 font-black text-xl underline decoration-amber-400 decoration-2">${initial}</span><span class="tracking-widest text-amber-300/75 font-bold ml-0.5">${blanks}</span></span>${trailingPunct}`;
           }
+        }
+
+        // 2. High-visibility pure blanks: ____ in Completa
+        if (/^[^a-zA-Z0-9]*_{3,}[^a-zA-Z0-9]*$/.test(tok)) {
+          const punctuation = tok.replace(/_+/g, '');
+          return `<span class="inline-flex items-center justify-center px-3.5 py-1 mx-1.5 rounded-xl bg-amber-500/20 border-2 border-dashed border-amber-400 text-amber-300 font-mono font-black text-sm shadow-md ring-2 ring-amber-400/20 animate-pulse tracking-wider">[ ✏️ ____ ]</span>${punctuation}`;
         }
 
         if (!clean || tok.includes('_')) {
