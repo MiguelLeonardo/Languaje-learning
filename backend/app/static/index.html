@@ -64327,9 +64327,9 @@
       return tokens.map((tok, idx) => {
         const clean = tok.replace(/^[^a-zA-Z0-9']+|[^a-zA-Z0-9']+$/g, '');
 
-        // 1. High-visibility guided initials: b___ or w______ (must run BEFORE pure blanks!)
-        if (/^[a-zA-Z]_+/.test(tok)) {
-          const m = tok.match(/^([a-zA-Z])(_+)(.*)$/);
+        // 1. High-visibility guided hints: co____ or cus_____ (must run BEFORE pure blanks!)
+        if (/^[a-zA-Z0-9']+_+/.test(tok)) {
+          const m = tok.match(/^([a-zA-Z0-9']+)(_+)(.*)$/);
           if (m) {
             const [, initial, blanks, trailingPunct] = m;
             return `<span class="inline-flex items-center px-3 py-1 mx-1 rounded-xl bg-amber-500/20 border-2 border-dashed border-amber-400 text-amber-200 font-mono text-base shadow-md ring-2 ring-amber-400/20"><span class="text-amber-300 font-black text-xl underline decoration-amber-400 decoration-2">${initial}</span><span class="tracking-widest text-amber-300/75 font-bold ml-0.5">${blanks}</span></span>${trailingPunct}`;
@@ -64748,7 +64748,9 @@
               const info = getIdiomFocus(scenario.id, p.id, p);
               const firstHint = t => String(t || '').split(/\s+/).map(w => {
                 const c = w.replace(/[.,!?]+$/, '');
-                return (c.length > 1 ? c[0] + '_'.repeat(c.length - 1) : c) + w.slice(c.length);
+                if (c.length <= 1) return w;
+                const count = Math.min(c.length - 1, Math.max(c.length >= 4 ? 2 : 1, Math.round(c.length * 0.33)));
+                return c.slice(0, count) + '_'.repeat(c.length - count) + w.slice(c.length);
               }).join(' ');
               const tokens = (p.text || '').split(/\s+/);
               const mask = computeIdiomTokenMask(tokens, info.terms);
@@ -65485,9 +65487,20 @@
       let guidanceBannerHtml = '';
       if (!state.lastEvaluation) {
         if (ex.type === 'recall') {
+          const rawMeaning = idiomInfo.meaning || (p.glossary && p.glossary[0] && p.glossary[0].meaning) || '';
+          const cleanSpanishCue = rawMeaning.includes(':') ? rawMeaning.split(':').slice(1).join(':').trim() : rawMeaning.trim();
           guidanceBannerHtml = `
-            <div class="mb-2 inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-semibold shadow-xs">
-              <span>🎯</span><span>Completa la frase guiándote por las letras iniciales del modismo o palabra clave.</span>
+            <div class="flex flex-col items-center gap-2 mb-2">
+              <div class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-semibold shadow-xs">
+                <span>🎯</span><span>Completa la frase guiándote por las letras iniciales del modismo o palabra clave.</span>
+              </div>
+              ${cleanSpanishCue ? `
+                <div class="inline-flex flex-wrap items-center justify-center gap-1.5 px-4 py-2 rounded-2xl bg-amber-500/15 border border-amber-400/35 text-amber-200 text-xs font-semibold shadow-xs">
+                  <span>🧠</span>
+                  <span>Pista de significado (en español):</span>
+                  <strong class="text-amber-300 font-extrabold">“${cleanSpanishCue}”</strong>
+                </div>
+              ` : ''}
             </div>
           `;
         } else if (ex.type === 'guided') {
