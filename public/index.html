@@ -48225,22 +48225,76 @@
       return (str || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/"/g, '&quot;');
     }
 
+    function getIdiomFocus(scenarioId = '', phraseId = '', phraseObj = null) {
+      let p = phraseObj;
+      if (!p && scenarioId && phraseId) {
+        const sc = (typeof SCENARIOS !== 'undefined' ? SCENARIOS : []).find(s => s.id === scenarioId)
+          || (state.currentScenario && state.currentScenario.id === scenarioId ? state.currentScenario : null);
+        if (sc && sc.phrases) p = sc.phrases.find(x => x.id === phraseId) || null;
+      }
+      if (!p) return { label: '', meaning: '', terms: [] };
+      const terms = [];
+      if (p.apply_answer) terms.push(p.apply_answer.trim());
+      if (Array.isArray(p.glossary)) {
+        p.glossary.forEach(g => {
+          if (g && g.word) terms.push(g.word.trim());
+        });
+      }
+      if (!terms.length && Array.isArray(p.cloze) && p.text) {
+        const ws = p.text.split(/\s+/);
+        const clozeWords = p.cloze.map(i => (ws[i] || '').replace(/^[^a-zA-Z0-9']+|[^a-zA-Z0-9']+$/g, '')).filter(Boolean);
+        if (clozeWords.length) terms.push(clozeWords.join(' '));
+      }
+      const uniqueTerms = [...new Set(terms.filter(Boolean))];
+      const label = p.apply_answer || (p.glossary && p.glossary[0] && p.glossary[0].word) || uniqueTerms[0] || '';
+      const meaning = (p.glossary && p.glossary[0] && p.glossary[0].meaning) || '';
+      return { label, meaning, terms: uniqueTerms };
+    }
+
+    function computeIdiomTokenMask(tokens, focusTerms) {
+      const mask = new Array(tokens.length).fill(false);
+      if (!focusTerms || !focusTerms.length) return mask;
+      const cleanTokens = tokens.map(t => t.replace(/^[^a-zA-Z0-9']+|[^a-zA-Z0-9']+$/g, '').toLowerCase());
+      focusTerms.forEach(term => {
+        const termWords = String(term).toLowerCase().replace(/[^\w\s']/g, ' ').split(/\s+/).filter(Boolean);
+        if (!termWords.length) return;
+        for (let i = 0; i <= cleanTokens.length - termWords.length; i++) {
+          let matched = true;
+          for (let k = 0; k < termWords.length; k++) {
+            if (cleanTokens[i + k] !== termWords[k]) {
+              matched = false;
+              break;
+            }
+          }
+          if (matched) {
+            for (let k = 0; k < termWords.length; k++) mask[i + k] = true;
+          }
+        }
+      });
+      return mask;
+    }
+
     function renderTappablePhrase(displayText, fullPhraseText, scenarioId = '', phraseId = '', focusHint = '') {
       if (!displayText) return '';
       const fullEsc = escapeJs(fullPhraseText || displayText);
       const scenEsc = escapeJs(scenarioId || (state.currentScenario ? state.currentScenario.id : ''));
       const phrEsc = escapeJs(phraseId || '');
       const tokens = displayText.split(/\s+/);
-      return tokens.map(tok => {
+      const idiomInfo = getIdiomFocus(scenarioId || (state.currentScenario ? state.currentScenario.id : ''), phraseId);
+      const highlightTerms = [...idiomInfo.terms];
+      if (focusHint) highlightTerms.push(focusHint);
+      const idiomMask = computeIdiomTokenMask(tokens, highlightTerms);
+
+      return tokens.map((tok, idx) => {
         const clean = tok.replace(/^[^a-zA-Z0-9']+|[^a-zA-Z0-9']+$/g, '');
 
-        // 1. High-visibility blanks: ____ in Aplica (Stage 2) and Completa (Stage 4)
+        // 1. High-visibility blanks: ____ in Aplica / Completa
         if (tok.includes('____') || /_{3,}/.test(tok)) {
           const punctuation = tok.replace(/_+/g, '');
           return `<span class="inline-flex items-center justify-center px-3.5 py-1 mx-1.5 rounded-xl bg-amber-500/20 border-2 border-dashed border-amber-400 text-amber-300 font-mono font-black text-sm shadow-md ring-2 ring-amber-400/20 animate-pulse tracking-wider">[ ✏️ ____ ]</span>${punctuation}`;
         }
 
-        // 2. High-visibility guided initials: B____ or l__ in Practica (Stage 3)
+        // 2. High-visibility guided initials: B____ or l__
         if (/^[a-zA-Z]_+/.test(tok)) {
           const m = tok.match(/^([a-zA-Z])(_+)(.*)$/);
           if (m) {
@@ -48253,7 +48307,14 @@
           return `<span class="mx-0.5 text-slate-400 font-mono">${tok}</span>`;
         }
         const tokEsc = escapeJs(clean);
-        return `<span class="tap-word" title="Ver traducción de '${clean}'" onclick="openTranslateOverlay('${tokEsc}', '${fullEsc}', '${scenEsc}', '${phrEsc}')">${tok}</span>`;
+        const isIdiomTok = idiomMask[idx];
+        const idiomClass = isIdiomTok
+          ? ' bg-amber-500/20 text-amber-200 border-b-2 border-amber-400 px-1.5 py-0.5 rounded-lg font-extrabold shadow-xs'
+          : '';
+        const titleAttr = isIdiomTok
+          ? `Modismo / expresión clave: '${clean}' (toca para ver traducción)`
+          : `Ver traducción de '${clean}'`;
+        return `<span class="tap-word${idiomClass}" title="${titleAttr}" onclick="openTranslateOverlay('${tokEsc}', '${fullEsc}', '${scenEsc}', '${phrEsc}')">${tok}</span>`;
       }).join(' ');
     }
 
@@ -48458,24 +48519,82 @@
     }
 
     function buildLocalLesson(scenario) {
-      const firstHint = t => t.split(' ').map(w => { const c = w.replace(/[.,!?]+$/, ''); return (c.length > 1 ? c[0] + '_'.repeat(c.length - 1) : c) + w.slice(c.length); }).join(' ');
       const cloze = p => { const s = new Set(p.cloze || [1]); return p.text.split(' ').map((w, i) => s.has(i) ? '____' : w).join(' '); };
-      const mk = (p, type, support, th, inst, disp, tr, gl, aud) => ({
-        id: `${scenario.id}.${p.id}.${type}`, type, support, scenario_id: scenario.id, phrase_id: p.id,
-        expected_text: p.text, pass_threshold: th, response_mode: 'speech',
-        prompt: { instruction_es: inst, display_text: disp, translation: tr, glossary: gl || [], visual_hint: p.visual_hint, audio_text: aud, focus_words: [] }
-      });
+      const getIdiomTarget = p => {
+        const info = getIdiomFocus(scenario.id, p.id, p);
+        return info.label || p.text;
+      };
+      const mk = (p, type, support, th, inst, disp, tr, gl, aud, expOverride = null, ctxSentence = null) => {
+        const info = getIdiomFocus(scenario.id, p.id, p);
+        return {
+          id: `${scenario.id}.${p.id}.${type}`, type, support, scenario_id: scenario.id, phrase_id: p.id,
+          expected_text: expOverride || p.text, pass_threshold: th, response_mode: 'speech',
+          prompt: {
+            instruction_es: inst,
+            display_text: disp,
+            translation: tr,
+            glossary: gl || [],
+            visual_hint: p.visual_hint,
+            audio_text: aud,
+            focus_words: info.terms,
+            context_sentence: ctxSentence
+          }
+        };
+      };
       return {
         scenario_id: scenario.id, title: scenario.title, cefr: scenario.cefr, topic: scenario.topic,
         stages: [
-          { type: 'shadowing', support: 'full', exercises: scenario.phrases.map(p => mk(p, 'shadowing', 'full', 0.70, 'Escucha el audio (se reproduce solo) y repite la frase imitando el ritmo.', p.text, p.translation, [], p.text)) },
-          { type: 'recall', support: 'full', exercises: (scenario.phrases.some(p => p.apply_sentence) ? scenario.phrases.filter(p => p.apply_sentence) : scenario.phrases).map(p => p.apply_sentence
-            ? { id: `${scenario.id}.${p.id}.recall`, type: 'recall', support: 'full', scenario_id: scenario.id, phrase_id: p.id,
-                expected_text: p.apply_sentence.replace('____', p.apply_answer), pass_threshold: 0.75, response_mode: 'speech',
-                prompt: { instruction_es: 'Completa la nueva oración con la expresión que practicaste y dila completa en voz alta.', display_text: p.apply_sentence, translation: p.apply_translation, glossary: p.glossary || [], visual_hint: p.visual_hint, audio_text: null, focus_words: [] } }
-            : mk(p, 'recall', 'full', 0.75, 'Lee la frase en voz alta. Toca cualquier palabra para ver su traducción.', p.text, p.translation, p.glossary, p.text)) },
-          { type: 'guided', support: 'partial', exercises: scenario.phrases.map(p => mk(p, 'guided', 'partial', 0.80, 'Di la frase en inglés ayudándote con las iniciales.', firstHint(p.text), p.translation, [], null)) },
-          { type: 'completion', support: 'low', exercises: scenario.phrases.map(p => mk(p, 'completion', 'low', 0.85, 'Completa las palabras que faltan diciendo toda la frase.', cloze(p), null, [], null)) },
+          {
+            type: 'shadowing',
+            support: 'full',
+            exercises: scenario.phrases.map(p => mk(
+              p, 'shadowing', 'full', 0.70,
+              'Escucha el audio (se reproduce solo) y repite la frase imitando el ritmo. Fíjate en el modismo resaltado.',
+              p.text, p.translation, p.glossary || [], p.text
+            ))
+          },
+          {
+            type: 'guided',
+            support: 'partial',
+            exercises: scenario.phrases.map(p => {
+              const idiomTarget = getIdiomTarget(p);
+              const info = getIdiomFocus(scenario.id, p.id, p);
+              const idiomMeaning = info.meaning || p.translation;
+              return mk(
+                p, 'guided', 'partial', 0.75,
+                'Practica únicamente el modismo o expresión clave resaltada (escucha la guía de audio si lo necesitas).',
+                idiomTarget, idiomMeaning, p.glossary || [], idiomTarget, idiomTarget, p.text
+              );
+            })
+          },
+          {
+            type: 'recall',
+            support: 'full',
+            exercises: (scenario.phrases.some(p => p.apply_sentence) ? scenario.phrases.filter(p => p.apply_sentence) : scenario.phrases).map(p => {
+              const info = getIdiomFocus(scenario.id, p.id, p);
+              return p.apply_sentence
+                ? {
+                    id: `${scenario.id}.${p.id}.recall`, type: 'recall', support: 'full', scenario_id: scenario.id, phrase_id: p.id,
+                    expected_text: p.apply_sentence.replace('____', p.apply_answer), pass_threshold: 0.75, response_mode: 'speech',
+                    prompt: {
+                      instruction_es: 'Completa la nueva oración con el modismo que practicaste y dila completa en voz alta.',
+                      display_text: p.apply_sentence, translation: p.apply_translation, glossary: p.glossary || [],
+                      visual_hint: p.visual_hint, audio_text: p.apply_sentence.replace('____', p.apply_answer),
+                      focus_words: info.terms
+                    }
+                  }
+                : mk(p, 'recall', 'full', 0.75, 'Aplica la expresión en voz alta dentro de la oración.', p.text, p.translation, p.glossary, p.text);
+            })
+          },
+          {
+            type: 'completion',
+            support: 'low',
+            exercises: scenario.phrases.map(p => mk(
+              p, 'completion', 'low', 0.85,
+              'Aplica y completa las palabras que faltan diciendo toda la frase (puedes usar la guía de audio).',
+              cloze(p), null, [], p.text
+            ))
+          },
         ]
       };
     }
@@ -48903,8 +49022,8 @@
     async function selectScenario(id, renderActive = false) {
       if (state.backendOnline) {
         state.currentScenario = await api(`/v1/scenarios/${id}`);
-        state.lesson = await api(`/v1/lessons/${id}`);
-        state.shadowingList = await api(`/v1/shadowing/${id}`);
+        state.lesson = buildLocalLesson(state.currentScenario);
+        state.shadowingList = state.lesson.stages[0].exercises;
       } else {
         state.currentScenario = FALLBACK_SCENARIOS.find(s => s.id === id) || FALLBACK_SCENARIOS[0];
         state.lesson = buildLocalLesson(state.currentScenario);
@@ -48962,7 +49081,10 @@
         state.commonList = await api(`/v1/phrases/common${q}`);
       } else {
         const scens = state.cefr === 'ALL' ? FALLBACK_SCENARIOS : FALLBACK_SCENARIOS.filter(s => s.cefr === state.cefr);
-        state.commonList = scens.flatMap(s => buildLocalLesson(s).stages[1].exercises);
+        state.commonList = scens.flatMap(s => {
+          const l = buildLocalLesson(s);
+          return (l.stages.find(st => st.type === 'recall') || l.stages[1]).exercises;
+        });
       }
       state.exerciseIndex = 0;
     }
@@ -49781,6 +49903,7 @@
           }
 
           if (display) {
+            this.resetInactivityTimer();
             clearTimeout(this.silenceTimeout);
             this.silenceTimeout = setTimeout(() => {
               this.commitTurn();
@@ -49816,6 +49939,24 @@
         return rec;
       },
 
+      resetInactivityTimer() {
+        this.clearInactivityTimer();
+        if (state.roleplayPhase !== 'live') return;
+        this.inactivityTimeout = setTimeout(() => {
+          if (state.roleplayPhase === 'live' && !this.isAiSpeaking) {
+            const inline = state.activeTab === 'lesson' && state.stageIndex === 4;
+            finishLiveRoleplay(inline, 'timeout_30s');
+          }
+        }, 30000);
+      },
+
+      clearInactivityTimer() {
+        if (this.inactivityTimeout) {
+          clearTimeout(this.inactivityTimeout);
+          this.inactivityTimeout = null;
+        }
+      },
+
       startListening() {
         // Release MediaStream on Android so SpeechRecognition has exclusive mic access
         if (isAndroidBrowser()) {
@@ -49830,9 +49971,10 @@
         this.isListening = true;
         this.isAiSpeaking = false;
         this.updateBadge('listening');
+        this.resetInactivityTimer();
         const streamEl = document.getElementById('live-transcript-stream');
         if (streamEl) {
-          streamEl.innerHTML = `<span class="text-slate-400 animate-pulse">🎙️ Micrófono abierto — habla libremente en inglés</span>`;
+          streamEl.innerHTML = `<span class="text-slate-400 animate-pulse">🎙️ Micrófono abierto — habla libremente en inglés (se cierra tras 30s de pausa)</span>`;
         }
         if (rec) {
           try { rec.start(); } catch (_) {}
@@ -49844,6 +49986,7 @@
       stopListening() {
         this.isListening = false;
         clearTimeout(this.silenceTimeout);
+        this.clearInactivityTimer();
         if (this.recognition) {
           try { this.recognition.stop(); } catch (_) {}
         }
@@ -50445,35 +50588,68 @@
         VoiceSession.stopListening();
         const userTurns = rp.history.filter(h => h.speaker === 'user').length;
         const avgPct = Math.round((rp.average_score || 0.9) * 100);
+        const reasonLabels = {
+          farewell: '👋 Finalizado automáticamente por despedida',
+          timeout_30s: '⏱️ Finalizado automáticamente tras 30s sin actividad',
+          all_idioms_completed: '🏆 ¡Finalizado automáticamente al usar todos los modismos!',
+          manual: '✔ Finalizado manualmente'
+        };
+        const reasonBadge = reasonLabels[rp.finish_reason || 'manual'] || reasonLabels.manual;
+        const report = Array.isArray(rp.concept_report) ? rp.concept_report : [];
+        const reviewAddedCount = report.filter(c => c.status !== 'used_well').length;
+
         document.getElementById('stage-container').innerHTML = `
           <div class="space-y-5">
             ${inlineInLesson && lessonStagePills ? `<div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-800/80"><div class="flex flex-wrap gap-1.5">${lessonStagePills}</div></div>` : ''}
             <div class="bg-emerald-950/25 border border-emerald-500/35 rounded-3xl p-6 sm:p-7 space-y-5 shadow-xl">
               <div class="text-center space-y-2">
                 <div class="text-4xl">🎉</div>
+                <div class="inline-flex items-center px-3 py-1 rounded-full bg-slate-900/90 border border-slate-700 text-[11px] font-semibold text-indigo-300">
+                  ${reasonBadge}
+                </div>
                 <h4 class="font-bold text-xl text-white">Resumen de tu Conversación</h4>
                 <p class="text-xs text-emerald-300">
                   Turnos hablados: <strong>${userTurns}</strong> • Fluidez promedio: <strong>${avgPct}%</strong>
                 </p>
               </div>
 
-              <div class="bg-slate-950/70 border border-slate-800 rounded-2xl p-4 space-y-2">
-                <div class="text-xs font-bold text-slate-300 flex items-center justify-between">
-                  <span>Expresiones clave utilizadas naturalmente:</span>
-                  <span class="text-indigo-400">${usedSet.size}/${targetPhrases.length}</span>
+              <div class="bg-slate-950/70 border border-slate-800 rounded-2xl p-4 space-y-3">
+                <div class="text-xs font-bold text-slate-300 flex items-center justify-between flex-wrap gap-2">
+                  <span>Evaluación por modismo / concepto practicado:</span>
+                  <span class="text-indigo-400">${report.filter(c => c.status === 'used_well').length}/${report.length} dominados</span>
                 </div>
-                <div class="flex flex-wrap gap-1.5">
-                  ${targetPhrases.map(tp => {
-                    const used = usedSet.has(tp);
+                <div class="space-y-2">
+                  ${report.map((c, idx) => {
+                    const badge = c.status === 'used_well'
+                      ? '<span class="px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[10px] font-bold">✅ Usado bien</span>'
+                      : (c.status === 'used_badly'
+                        ? '<span class="px-2 py-0.5 rounded-md bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[10px] font-bold">⚠️ Mejorar uso</span>'
+                        : '<span class="px-2 py-0.5 rounded-md bg-slate-800 text-slate-400 border border-slate-700 text-[10px] font-bold">○ No usado</span>');
                     return `
-                      <span class="text-xs px-2.5 py-1 rounded-xl border flex items-center gap-1.5 ${
-                        used ? 'bg-emerald-500/15 border-emerald-500/35 text-emerald-200' : 'bg-slate-900 border-slate-800 text-slate-400'
-                      }">
-                        <span>${used ? '✅' : '○'}</span><span>${tp}</span>
-                      </span>
+                      <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800/90 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <div class="space-y-1">
+                          <div class="flex flex-wrap items-center gap-2">
+                            <span class="text-xs font-bold text-amber-200">“${c.idiom || c.phrase}”</span>
+                            ${badge}
+                          </div>
+                          ${c.meaning ? `<div class="text-[11px] text-slate-400">${c.meaning}</div>` : ''}
+                          <div class="text-xs text-slate-300">${c.feedback_es}</div>
+                        </div>
+                        ${c.status !== 'used_well' ? `
+                          <button onclick="addConceptToReview(${idx}, ${inlineInLesson})" class="shrink-0 text-[11px] px-3 py-1.5 rounded-lg ${c.added_to_srs ? 'bg-emerald-500/15 text-emerald-300 border border-emerald-500/30' : 'bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-300 border border-indigo-500/30'} font-semibold transition">
+                            ${c.added_to_srs ? '✔ En Mi Repaso' : '➕ Agregar a Repaso'}
+                          </button>
+                        ` : ''}
+                      </div>
                     `;
                   }).join('')}
                 </div>
+                ${reviewAddedCount > 0 ? `
+                  <div class="text-[11px] text-indigo-300 bg-indigo-500/10 border border-indigo-500/20 rounded-xl px-3 py-2 flex items-center justify-between">
+                    <span>📌 Los ${reviewAddedCount} conceptos pendientes o por mejorar se agregaron automáticamente a <strong>Mi Repaso</strong>.</span>
+                    <button onclick="switchTab('srs')" class="underline font-bold hover:text-white ml-2 shrink-0">Ir a Repaso →</button>
+                  </div>
+                ` : ''}
               </div>
 
               <div class="flex flex-wrap justify-center gap-3 pt-1">
@@ -50842,24 +51018,47 @@ Return ONLY valid JSON:
 
       const aiData = await generateConversationalReply(state.currentScenario, rp.history, line);
 
-      // Track any target phrases used naturally
+      // Track per-concept/idiom usage (used_well vs used_badly)
+      rp.concept_usage = rp.concept_usage || {};
       const lineNorm = line.toLowerCase();
+      const lineWords = lineNorm.replace(/[^\w\s']/g, ' ').split(/\s+/).filter(Boolean);
+      const turnScore = typeof aiData.score === 'number' ? aiData.score : 0.92;
+
       (state.currentScenario.phrases || []).forEach(p => {
+        const info = getIdiomFocus(state.currentScenario.id, p.id, p);
+        const idiomText = (info.label || p.text).toLowerCase();
+        const idiomWords = idiomText.replace(/[^\w\s']/g, ' ').split(/\s+/).filter(w => w.length > 2);
         const pWords = p.text.toLowerCase().split(/\s+/).slice(0, 3).join(' ');
-        if (lineNorm.includes(p.text.toLowerCase()) || lineNorm.includes(pWords)) {
+
+        const aiMarkedUsed = Array.isArray(aiData.used_phrases) && aiData.used_phrases.some(
+          up => String(up).toLowerCase() === p.text.toLowerCase() || String(up).toLowerCase() === idiomText
+        );
+        const exactMatch = lineNorm.includes(p.text.toLowerCase()) || lineNorm.includes(idiomText) || (pWords.length > 5 && lineNorm.includes(pWords));
+
+        let overlapCount = 0;
+        if (idiomWords.length) {
+          idiomWords.forEach(iw => {
+            if (lineWords.some(lw => lw === iw || wordSim(lw, iw) >= 0.78)) overlapCount++;
+          });
+        }
+        const partialAttempt = idiomWords.length > 0 && (overlapCount / idiomWords.length) >= 0.5;
+
+        if (exactMatch || (aiMarkedUsed && turnScore >= 0.75)) {
           if (!rp.used_lesson_phrases.includes(p.text)) rp.used_lesson_phrases.push(p.text);
+          rp.concept_usage[p.id] = {
+            status: 'used_well',
+            feedback_es: `¡Excelente! Usaste “${info.label || p.text}” correctamente en tu respuesta.`
+          };
+        } else if ((partialAttempt || aiMarkedUsed) && (!rp.concept_usage[p.id] || rp.concept_usage[p.id].status !== 'used_well')) {
+          rp.concept_usage[p.id] = {
+            status: 'used_badly',
+            feedback_es: aiData.natural_alternative
+              ? `Intentaste usar “${info.label || p.text}”. Alternativa recomendada: “${aiData.natural_alternative}”.`
+              : `Intentaste usar “${info.label || p.text}”, pero faltó precisión. Repásalo en Mi Repaso.`
+          };
         }
       });
-      if (Array.isArray(aiData.used_phrases)) {
-        aiData.used_phrases.forEach(up => {
-          const match = (state.currentScenario.phrases || []).find(p => p.text.toLowerCase() === String(up).toLowerCase());
-          if (match && !rp.used_lesson_phrases.includes(match.text)) {
-            rp.used_lesson_phrases.push(match.text);
-          }
-        });
-      }
 
-      const turnScore = typeof aiData.score === 'number' ? aiData.score : 0.92;
       rp.turn_scores = rp.turn_scores || [];
       rp.turn_scores.push(turnScore);
       rp.average_score = rp.turn_scores.reduce((a, b) => a + b, 0) / rp.turn_scores.length;
@@ -50884,15 +51083,24 @@ Return ONLY valid JSON:
         });
       }
 
+      const farewellDetected = isFarewellMessage(line);
+      const totalTargets = (state.currentScenario.phrases || []).length;
+      const allIdiomsCompleted = totalTargets > 0 && rp.used_lesson_phrases.length >= totalTargets;
+      const autoEndReason = farewellDetected ? 'farewell' : (allIdiomsCompleted ? 'all_idioms_completed' : null);
+
       await refreshProgress();
       if (inline) await renderLessonView();
       else await renderRoleplayView(false);
 
-      // In Live mode, speak the AI's reply and auto-reopen microphone
+      // In Live mode, speak the AI's reply and either auto-finish or reopen microphone
       if (state.roleplayPhase === 'live') {
         VoiceSession.speakAiUtterance(aiReply, () => {
           if (state.roleplayPhase === 'live') {
-            VoiceSession.startListening();
+            if (autoEndReason) {
+              finishLiveRoleplay(inline, autoEndReason);
+            } else {
+              VoiceSession.startListening();
+            }
           }
         });
       }
