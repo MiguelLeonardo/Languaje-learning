@@ -1,0 +1,99 @@
+id: a1-airport-check-in
+title: Checking in at the airport
+title_es: Facturar en el aeropuerto
+cefr: A1
+topic: travel-and-transport
+description: Entrega tu maleta en el mostrador del aeropuerto, pide un asiento y confirma
+  tu puerta de embarque.
+phrases:
+- id: check-in-bag
+  text: I would like to check in one suitcase.
+  translation: Me gustaría facturar una maleta.
+  visual_hint: 🧳🛫
+  cloze:
+  - 4
+  - 7
+  glossary:
+  - word: check in
+    meaning: facturar / registrarse
+    ipa: tʃek ɪn
+  - word: suitcase
+    meaning: maleta
+    ipa: ˈsuːtkeɪs
+- id: window-seat-please
+  text: Can I have a window seat, please?
+  translation: ¿Puedo tener un asiento de ventanilla, por favor?
+  visual_hint: 🪟💺
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: window seat
+    meaning: asiento de ventanilla
+    ipa: ˈwɪndoʊ siːt
+- id: where-boarding-gate
+  text: Which gate does my flight leave from?
+  translation: ¿De qué puerta sale mi vuelo?
+  visual_hint: 🚪✈️
+  cloze:
+  - 1
+  - 4
+  glossary:
+  - word: gate
+    meaning: puerta de embarque
+    ipa: ɡeɪt
+  - word: flight
+    meaning: vuelo
+    ipa: flaɪt
+- id: checkin-fill-out
+  text: Please fill out this baggage tag with your name.
+  translation: Por favor, rellena esta etiqueta de equipaje con tu nombre. (fill out = rellenar)
+  visual_hint: 🏷️✍️
+  cloze:
+  - 1
+  - 2
+  - 4
+  glossary:
+  - word: fill out
+    meaning: rellenar / completar un formulario
+    ipa: fɪl aʊt
+  kind: phrasal_verb
+  apply_sentence: Travelers must ____ a short form at the counter.
+  apply_answer: fill out
+  apply_translation: Los viajeros deben rellenar un formulario corto en el mostrador.
+- id: checkin-on-time
+  text: You need to arrive on time for boarding.
+  translation: Necesitas llegar a tiempo para el embarque. (on time = a tiempo)
+  visual_hint: ⏰🛫
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: on time
+    meaning: a tiempo / puntual
+    ipa: ɑːn taɪm
+  kind: expression
+  apply_sentence: The train always leaves ____ at eight o'clock.
+  apply_answer: on time
+  apply_translation: El tren siempre sale a tiempo a las ocho en punto.
+roleplay:
+  ai_role: check-in agent
+  user_role: passenger
+  setting: An airport check-in counter before an international flight.
+  turns:
+  - speaker: ai
+    text: Good morning! May I see your passport, please?
+  - speaker: user
+    goal: Entrega tu pasaporte y di que quieres facturar una maleta.
+    suggested_lines:
+    - Here is my passport. I would like to check in one suitcase.
+    - I would like to check in one suitcase, please.
+  - speaker: ai
+    text: Put your bag on the scale, please. Do you prefer a window or an aisle seat?
+  - speaker: user
+    goal: Pide un asiento de ventanilla y pregunta de qué puerta sale tu vuelo.
+    suggested_lines:
+    - Can I have a window seat, please? Which gate does my flight leave from?
+    - A window seat, please. Which gate does my flight leave from?
+  - speaker: ai
+    text: Here is your boarding pass. You leave from gate twelve, so please arrive on time.

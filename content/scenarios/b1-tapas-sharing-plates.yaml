@@ -1,0 +1,102 @@
+id: b1-tapas-sharing-plates
+title: Ordering tapas to share
+title_es: Pedir tapas para compartir
+cefr: B1
+topic: food-and-drink
+description: Pide platos pequeños para compartir, pregunta por ingredientes y decide el ritmo de servicio.
+phrases:
+- id: plates-to-share
+  text: We would like to order several small plates to share for the table.
+  translation: Nos gustaría pedir varios platos pequeños para compartir en la mesa.
+  visual_hint: 🍽️🤝
+  cloze:
+  - 6
+  - 9
+  glossary:
+  - word: several
+    meaning: varios
+    ipa: ˈsevrəl
+  - word: share
+    meaning: compartir
+    ipa: ʃer
+- id: bring-as-ready
+  text: Feel free to bring the dishes out as soon as they are ready.
+  translation: Siéntanse libres de traer los platos en cuanto estén listos.
+  visual_hint: 🍲⏱️
+  cloze:
+  - 4
+  - 11
+  glossary:
+  - word: dishes
+    meaning: platos (de comida)
+    ipa: ˈdɪʃɪz
+- id: garlic-and-olive-oil
+  text: Are the sautéed mushrooms cooked with garlic and olive oil?
+  translation: ¿Los champiñones salteados están cocinados con ajo y aceite de oliva?
+  visual_hint: 🍄🧄🫒
+  cloze:
+  - 2
+  - 6
+  glossary:
+  - word: sautéed
+    meaning: salteado
+    ipa: sɔːˈteɪd
+  - word: garlic
+    meaning: ajo
+    ipa: ˈɡɑːrlɪk
+- id: dig-in
+  text: Everything smells amazing; let's dig in before it gets cold!
+  translation: 'Todo huele increíble; ¡empecemos a comer antes de que se enfríe! (dig in: empezar a comer)'
+  visual_hint: 😋🍴
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: dig in
+    meaning: 'dig in: empezar a comer con ganas'
+    ipa: dɪɡ ɪn
+  kind: phrasal_verb
+  apply_sentence: The food is on the table, everyone ____!
+  apply_answer: dig in
+  apply_translation: La comida está en la mesa, ¡a comer todos!
+- id: play-it-by-ear
+  text: Let's order four tapas first and play it by ear for dessert.
+  translation: 'Pidamos cuatro tapas primero y vamos viendo sobre la marcha para el postre. (play it by ear: improvisar según avance)'
+  visual_hint: 🍮🤔
+  cloze:
+  - 7
+  - 10
+  glossary:
+  - word: play it by ear
+    meaning: 'play it by ear: decidir sobre la marcha'
+    ipa: pleɪ ɪt baɪ ɪr
+  kind: idiom
+  apply_sentence: We do not need a strict plan; we can just ____.
+  apply_answer: play it by ear
+  apply_translation: No necesitamos un plan estricto; podemos decidir sobre la marcha.
+roleplay:
+  ai_role: tapas bar server
+  user_role: diner with friends
+  setting: A lively Spanish-style tapas bar on a Friday night.
+  turns:
+  - speaker: ai
+    text: Good evening! Have you decided how you would like to order tonight?
+  - speaker: user
+    goal: Di que quieren pedir varios platos pequeños para compartir y que los traigan conforme estén listos.
+    suggested_lines:
+    - We would like to order several small plates to share for the table. Feel free to bring them out as they are ready.
+    - Let's do several small plates to share, and just bring them as they come out.
+  - speaker: ai
+    text: Sounds great! Which tapas caught your eye?
+  - speaker: user
+    goal: Pregunta si los champiñones salteados llevan ajo y aceite de oliva.
+    suggested_lines:
+    - Are the sautéed mushrooms cooked with garlic and olive oil?
+    - Could you tell me if the sautéed mushrooms have garlic and olive oil?
+  - speaker: ai
+    text: Yes, they are sautéed in extra-virgin olive oil with roasted garlic and parsley.
+  - speaker: user
+    goal: Pide cuatro platos primero y di que luego ven si piden postre.
+    suggested_lines:
+    - Perfect, let's order four tapas first and play it by ear for dessert.
+    - We will start with those four and decide on dessert later.

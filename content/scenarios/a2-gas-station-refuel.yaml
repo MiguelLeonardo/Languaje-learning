@@ -1,0 +1,99 @@
+id: a2-gas-station-refuel
+title: Refueling a rental car
+title_es: Cargar gasolina en el coche de alquiler
+cefr: A2
+topic: travel-and-transport
+description: Pide llenar el tanque en la gasolinera, confirma el tipo de combustible
+  y solicita un recibo impreso.
+phrases:
+- id: fill-tank-pump
+  text: Can I fill up the tank on pump four, please?
+  translation: ¿Puedo llenar el tanque en el surtidor cuatro, por favor?
+  visual_hint: ⛽🚗
+  cloze:
+  - 5
+  - 7
+  glossary:
+  - word: tank
+    meaning: tanque / depósito
+    ipa: tæŋk
+  - word: pump
+    meaning: surtidor / bomba de gasolina
+    ipa: pʌmp
+- id: regular-unleaded-gas
+  text: Does this rental car take regular unleaded gas?
+  translation: ¿Este coche de alquiler usa gasolina regular sin plomo?
+  visual_hint: 🚘⛽
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: regular unleaded
+    meaning: gasolina normal sin plomo
+    ipa: ˈreɡjələr ʌnˈledɪd
+- id: need-gas-receipt
+  text: Could I get a printed receipt for the fuel?
+  translation: ¿Me podría dar un recibo impreso por el combustible?
+  visual_hint: 🧾⛽
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: receipt
+    meaning: recibo / ticket
+    ipa: rɪˈsiːt
+  - word: fuel
+    meaning: combustible
+    ipa: ˈfjuːəl
+- id: gas-fill-up
+  text: Remember to fill up the car before returning it.
+  translation: Recuerda llenar el coche antes de devolverlo. (fill up = llenar)
+  visual_hint: ⛽🔁
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: fill up
+    meaning: llenar por completo
+    ipa: fɪl ʌp
+  kind: phrasal_verb
+  apply_sentence: Let's ____ the tank before we get on the highway.
+  apply_answer: fill up
+  apply_translation: Llenemos el tanque antes de entrar a la autopista.
+- id: gas-run-out-of
+  text: We should stop soon so we don't run out of fuel.
+  translation: Deberíamos parar pronto para no quedarnos sin combustible. (run out of = quedarse sin)
+  visual_hint: ⚠️⛽
+  cloze:
+  - 7
+  - 8
+  - 9
+  glossary:
+  - word: run out of
+    meaning: quedarse sin algo
+    ipa: rʌn aʊt əv
+  kind: phrasal_verb
+  apply_sentence: Drivers sometimes ____ battery on long mountain roads.
+  apply_answer: run out of
+  apply_translation: Los conductores a veces se quedan sin batería en carreteras largas de montaña.
+roleplay:
+  ai_role: gas station cashier
+  user_role: driver
+  setting: A highway service station counter before returning a rental car to the airport.
+  turns:
+  - speaker: ai
+    text: Hi there! Which pump are you on?
+  - speaker: user
+    goal: Di que estás en el surtidor cuatro y quieres llenar el tanque.
+    suggested_lines:
+    - Can I fill up the tank on pump four, please?
+    - I'm on pump four and I'd like to fill up the tank.
+  - speaker: ai
+    text: Sure, pump four is unlocked now. Did you use regular unleaded or diesel?
+  - speaker: user
+    goal: Confirma que usaste gasolina regular sin plomo y pide un recibo impreso.
+    suggested_lines:
+    - Regular unleaded gas. Could I get a printed receipt for the fuel?
+    - I used regular unleaded. Can I have a printed receipt, please?
+  - speaker: ai
+    text: Here is your receipt for forty-two dollars. Have a safe flight!

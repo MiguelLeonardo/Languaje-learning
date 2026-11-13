@@ -1,0 +1,95 @@
+id: a1-tech-taking-a-photo
+title: Taking a photo with a phone
+title_es: Tomar una foto con el teléfono
+cefr: A1
+topic: daily-tech-and-media
+description: Pide a alguien que te tome una foto con el teléfono y compártela por mensaje.
+phrases:
+- id: take-a-picture
+  text: Can you take a picture of us here?
+  translation: ¿Puedes tomarnos una foto aquí?
+  visual_hint: 📸👥
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: picture
+    meaning: foto / imagen
+    ipa: ˈpɪktʃər
+- id: press-white-button
+  text: Just press the white button on the screen.
+  translation: Solo presiona el botón blanco en la pantalla.
+  visual_hint: ⚪👆
+  cloze:
+  - 1
+  - 4
+  glossary:
+  - word: button
+    meaning: botón
+    ipa: ˈbʌtən
+- id: lighting-looks-great
+  text: The lighting looks great in this photo.
+  translation: La iluminación se ve muy bien en esta foto.
+  visual_hint: ☀️🖼️
+  cloze:
+  - 1
+  - 3
+  glossary:
+  - word: lighting
+    meaning: iluminación
+    ipa: ˈlaɪtɪŋ
+- id: idm-zoom-in
+  text: Please zoom in a little on the building.
+  translation: 'Por favor acerca un poco la imagen del edificio. (zoom in: hacer zoom / acercar)'
+  visual_hint: 🔍🏢
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: zoom in
+    meaning: acercar la imagen / hacer zoom
+    ipa: zuːm ɪn
+  kind: phrasal_verb
+  apply_sentence: You can ____ to see the small sign clearly.
+  apply_answer: zoom in
+  apply_translation: Puedes hacer zoom para ver el letrero pequeño con claridad.
+- id: idm-send-over
+  text: I will send over the best photo tonight.
+  translation: 'Te enviaré la mejor foto esta noche. (send over: enviar / mandar)'
+  visual_hint: 📲🌙
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: send over
+    meaning: enviar / mandar
+    ipa: send ˈoʊvər
+  kind: phrasal_verb
+  apply_sentence: Can you ____ the pictures from the trip?
+  apply_answer: send over
+  apply_translation: ¿Puedes enviar las fotos del viaje?
+roleplay:
+  ai_role: friendly tourist
+  user_role: traveler
+  setting: Outside a famous city monument on a sunny afternoon.
+  turns:
+  - speaker: ai
+    text: Hi! That view is amazing. Would you like me to take a photo for you?
+  - speaker: user
+    goal: Acepta la ayuda, pídele que tome una foto y explícale qué botón presionar.
+    suggested_lines:
+    - Can you take a picture of us here?
+    - Just press the white button on the screen.
+  - speaker: ai
+    text: Got it! Should I include the whole building in the background?
+  - speaker: user
+    goal: Pídele que haga un poco de zoom en el edificio.
+    suggested_lines:
+    - Please zoom in a little on the building.
+  - speaker: ai
+    text: Done! Here is your phone back.
+  - speaker: user
+    goal: Di que la iluminación se ve genial y que enviarás la mejor foto esta noche.
+    suggested_lines:
+    - The lighting looks great in this photo.
+    - I will send over the best photo tonight.

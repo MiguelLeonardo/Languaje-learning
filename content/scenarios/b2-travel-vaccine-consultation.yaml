@@ -1,0 +1,96 @@
+id: b2-travel-vaccine-consultation
+title: Getting required travel vaccinations
+title_es: Consulta de vacunas obligatorias antes de viajar
+cefr: B2
+topic: health-and-emergencies
+description: Consulta en una clínica del viajero qué vacunas son obligatorias o recomendadas,
+  el certificado internacional y los tiempos de aplicación.
+phrases:
+- id: required-immunizations
+  text: Which vaccinations are mandatory versus recommended for rural northern Thailand?
+  translation: ¿Qué vacunas son obligatorias frente a las recomendadas para el norte rural de Tailandia?
+  visual_hint: 💉🗺️
+  cloze:
+  - 1
+  - 3
+  - 5
+  glossary:
+  - word: mandatory
+    meaning: obligatorio
+    ipa: ˈmændətɔːri
+- id: yellow-fever-card
+  text: Will I need an international yellow fever certificate at border control?
+  translation: ¿Necesitaré un certificado internacional de fiebre amarilla en el control fronterizo?
+  visual_hint: 📒🛂
+  cloze:
+  - 5
+  - 6
+  - 7
+  glossary:
+  - word: certificate
+    meaning: certificado
+    ipa: sərˈtɪfɪkət
+- id: booster-timing
+  text: How many weeks before departure should I get the booster shot?
+  translation: ¿Cuántas semanas antes de partir debo aplicarme la dosis de refuerzo?
+  visual_hint: 🗓️💉
+  cloze:
+  - 3
+  - 9
+  - 10
+  glossary:
+  - word: booster shot
+    meaning: dosis de refuerzo
+    ipa: ˈbuːstər ʃɑːt
+- id: idm-build-up-b2
+  text: It takes two weeks for the vaccine to build up immunity.
+  translation: La vacuna tarda dos semanas en generar inmunidad. (build up = acumular / desarrollar)
+  visual_hint: 🛡️⏳
+  cloze:
+  - 8
+  - 9
+  glossary:
+  - word: build up
+    meaning: desarrollar / acumular gradualmente
+    ipa: bɪld ʌp
+  kind: phrasal_verb
+  apply_sentence: Regular exercise helps ____ your stamina over time.
+  apply_answer: build up
+  apply_translation: El ejercicio regular ayuda a desarrollar tu resistencia con el tiempo.
+- id: idm-on-the-safe-side-b2
+  text: Let's include typhoid protection just to be on the safe side.
+  translation: Incluyamos protección contra la tifoidea por si acaso. (to be on the safe side = para ir a lo seguro)
+  visual_hint: ✅🛡️
+  cloze:
+  - 7
+  - 9
+  - 10
+  glossary:
+  - word: to be on the safe side
+    meaning: para mayor seguridad / ir a lo seguro
+    ipa: tuː biː ɒn ðə seɪf saɪd
+  kind: idiom
+  apply_sentence: Let's leave thirty minutes early ____.
+  apply_answer: to be on the safe side
+  apply_translation: Salgamos treinta minutos antes para ir a lo seguro.
+roleplay:
+  ai_role: travel medicine nurse
+  user_role: traveler
+  setting: Travel health clinic consultation room.
+  turns:
+  - speaker: ai
+    text: Welcome! I see you're heading to Southeast Asia next month. Where will you be staying?
+  - speaker: user
+    goal: Pregunta qué vacunas son obligatorias o recomendadas y si necesitas certificado de fiebre amarilla.
+    suggested_lines:
+    - Which vaccinations are mandatory versus recommended for rural northern Thailand?
+    - Will I need an international yellow fever certificate at border control?
+  - speaker: ai
+    text: Yellow fever is only required if you're arriving from an endemic country, though we strongly advise Hepatitis A and typhoid.
+  - speaker: user
+    goal: Confirma que prefieres incluir la de tifoidea por seguridad y pregunta cuándo aplicar el refuerzo.
+    suggested_lines:
+    - Let's include typhoid protection just to be on the safe side.
+    - How many weeks before departure should I get the booster shot?
+  - speaker: ai
+    text: Getting them today gives you three full weeks to build up immunity before your flight.

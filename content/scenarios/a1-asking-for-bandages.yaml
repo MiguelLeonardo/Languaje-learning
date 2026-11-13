@@ -1,0 +1,96 @@
+id: a1-asking-for-bandages
+title: Asking for bandages and antiseptic
+title_es: Pedir curitas y antiséptico en la farmacia
+cefr: A1
+topic: health-and-emergencies
+description: Pide curitas, crema antiséptica y gasas impermeables en una farmacia
+  para curar un corte pequeño.
+phrases:
+- id: need-bandages
+  text: Excuse me, I need some bandages for my finger.
+  translation: Disculpe, necesito unas curitas para mi dedo.
+  visual_hint: 🩹☝️
+  cloze:
+  - 3
+  - 5
+  glossary:
+  - word: bandages
+    meaning: curitas / vendas
+    ipa: ˈbændɪdʒɪz
+- id: antiseptic-cream
+  text: Do you have any antiseptic cream for a small cut?
+  translation: ¿Tiene crema antiséptica para un corte pequeño?
+  visual_hint: 🧴🩹
+  cloze:
+  - 4
+  - 5
+  - 9
+  glossary:
+  - word: antiseptic cream
+    meaning: crema antiséptica
+    ipa: ˌæntɪˈseptɪk kriːm
+  - word: cut
+    meaning: corte / herida
+    ipa: kʌt
+- id: waterproof-plasters
+  text: Are these plasters waterproof for taking a shower?
+  translation: ¿Estas curitas son impermeables para ducharse?
+  visual_hint: 🚿🩹
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: waterproof
+    meaning: impermeable / resistente al agua
+    ipa: ˈwɔːtərpruːf
+- id: idm-right-away-a1
+  text: Could you help me find them right away?
+  translation: ¿Podría ayudarme a encontrarlas de inmediato? (right away = de inmediato)
+  visual_hint: ⏱️👉
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: right away
+    meaning: de inmediato
+    ipa: raɪt əˈweɪ
+  kind: expression
+  apply_sentence: Please clean the cut ____ so it stays safe.
+  apply_answer: right away
+  apply_translation: Por favor, limpia el corte de inmediato para que esté seguro.
+- id: idm-put-on-a1
+  text: I will put on a clean bandage after washing.
+  translation: Me pondré una curita limpia después de lavar. (put on = ponerse)
+  visual_hint: 🧼🩹
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: put on
+    meaning: ponerse / colocarse
+    ipa: pʊt ɒn
+  kind: phrasal_verb
+  apply_sentence: You should ____ a jacket because it is cold.
+  apply_answer: put on
+  apply_translation: Deberías ponerte una chaqueta porque hace frío.
+roleplay:
+  ai_role: pharmacist
+  user_role: customer
+  setting: Neighborhood pharmacy counter.
+  turns:
+  - speaker: ai
+    text: Hello! How can I help you today?
+  - speaker: user
+    goal: Dile al farmacéutico que necesitas curitas para tu dedo.
+    suggested_lines:
+    - Excuse me, I need some bandages for my finger.
+    - Could you help me find them right away?
+  - speaker: ai
+    text: Sure, we have different sizes right here. Would you like antiseptic cream too?
+  - speaker: user
+    goal: Pregunta si tienen crema antiséptica y si las curitas son impermeables.
+    suggested_lines:
+    - Do you have any antiseptic cream for a small cut?
+    - Are these plasters waterproof for taking a shower?
+  - speaker: ai
+    text: Yes, this box is waterproof and here is a small antiseptic tube. Have a safe day!

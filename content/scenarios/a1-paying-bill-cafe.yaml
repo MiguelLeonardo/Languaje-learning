@@ -1,0 +1,89 @@
+id: a1-paying-bill-cafe
+title: Asking for the bill at a café
+title_es: Pedir la cuenta en una cafetería
+cefr: A1
+topic: food-and-drink
+description: Pide la cuenta, pregunta si aceptan tarjeta y pide un recibo en una cafetería.
+phrases:
+- id: check-please
+  text: Excuse me, can we have the bill, please?
+  translation: Disculpe, ¿nos puede traer la cuenta, por favor?
+  visual_hint: 🧾🙋
+  cloze:
+  - 6
+  glossary:
+  - word: bill
+    meaning: cuenta / factura
+    ipa: bɪl
+- id: pay-by-card
+  text: Can I pay by credit card here?
+  translation: ¿Puedo pagar con tarjeta de crédito aquí?
+  visual_hint: 💳☕
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: card
+    meaning: tarjeta
+    ipa: kɑːrd
+- id: keep-the-receipt
+  text: Can I have a receipt, please?
+  translation: ¿Me puede dar un recibo, por favor?
+  visual_hint: 🧾✅
+  cloze:
+  - 4
+  glossary:
+  - word: receipt
+    meaning: recibo / ticket
+    ipa: rɪˈsiːt
+- id: pick-up-tab
+  text: Let me pay for this. I will pick up the tab.
+  translation: 'Déjame pagar esto. Yo invito la cuenta. (pick up the tab: pagar la cuenta)'
+  visual_hint: 💵🤝
+  cloze:
+  - 7
+  - 10
+  glossary:
+  - word: pick up the tab
+    meaning: 'pick up the tab: hacerse cargo de la cuenta'
+    ipa: pɪk ʌp ðə tæb
+  kind: idiom
+  apply_sentence: It is your birthday, so I will ____ tonight.
+  apply_answer: pick up the tab
+  apply_translation: Es tu cumpleaños, así que yo pago la cuenta esta noche.
+- id: all-set
+  text: Thank you, you are all set! Have a good day.
+  translation: 'Gracias, ¡ya está todo listo! Que tenga buen día. (all set: todo listo)'
+  visual_hint: 👍😊
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: all set
+    meaning: 'all set: todo listo / completado'
+    ipa: ɔːl set
+  kind: expression
+  apply_sentence: Here is your change and receipt; you are ____.
+  apply_answer: all set
+  apply_translation: Aquí tiene su cambio y recibo; ya está todo listo.
+roleplay:
+  ai_role: café server
+  user_role: customer
+  setting: A quiet café after finishing breakfast.
+  turns:
+  - speaker: ai
+    text: Did you enjoy your coffee and cake?
+  - speaker: user
+    goal: Di que sí y pide la cuenta.
+    suggested_lines:
+    - Yes, thank you. Can we have the bill, please?
+    - Everything was great. The bill, please.
+  - speaker: ai
+    text: Of course. The total is twelve dollars.
+  - speaker: user
+    goal: Pregunta si puedes pagar con tarjeta y pide un recibo.
+    suggested_lines:
+    - Can I pay by credit card here? And can I have a receipt, please?
+    - I would like to pay by card and get a receipt, please.
+  - speaker: ai
+    text: Yes, tap your card right here. Here is your receipt. You are all set!

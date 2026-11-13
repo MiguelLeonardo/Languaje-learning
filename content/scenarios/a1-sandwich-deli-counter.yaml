@@ -1,0 +1,101 @@
+id: a1-sandwich-deli-counter
+title: Ordering a sandwich at a deli
+title_es: Pedir un sándwich en la barra
+cefr: A1
+topic: food-and-drink
+description: Elige el tipo de pan, los ingredientes y pide un sándwich para llevar.
+phrases:
+- id: turkey-sandwich
+  text: I would like a turkey sandwich on white bread.
+  translation: Quisiera un sándwich de pavo en pan blanco.
+  visual_hint: 🥪🍞
+  cloze:
+  - 4
+  - 7
+  glossary:
+  - word: turkey
+    meaning: pavo
+    ipa: ˈtɜːrki
+  - word: bread
+    meaning: pan
+    ipa: bred
+- id: cheese-and-tomato
+  text: Can you add cheese and tomato, please?
+  translation: ¿Puede agregar queso y tomate, por favor?
+  visual_hint: 🧀🍅
+  cloze:
+  - 3
+  - 5
+  glossary:
+  - word: cheese
+    meaning: queso
+    ipa: tʃiːz
+  - word: tomato
+    meaning: tomate
+    ipa: təˈmeɪtoʊ
+- id: no-onions
+  text: No onions, please. I do not like them.
+  translation: Sin cebolla, por favor. No me gusta.
+  visual_hint: 🧅🚫
+  cloze:
+  - 1
+  glossary:
+  - word: onions
+    meaning: cebollas
+    ipa: ˈʌnjənz
+- id: to-go
+  text: Can I have my sandwich to go, please?
+  translation: '¿Me puede dar mi sándwich para llevar, por favor? (to go: para llevar)'
+  visual_hint: 🛍️🥪
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: to go
+    meaning: 'to go: para llevar'
+    ipa: tə ɡoʊ
+  kind: expression
+  apply_sentence: We do not have time to sit, so let's order food ____.
+  apply_answer: to go
+  apply_translation: No tenemos tiempo de sentarnos, así que pidamos comida para llevar.
+- id: fill-up
+  text: This big sandwich will fill me up until dinner.
+  translation: 'Este sándwich grande me va a llenar hasta la cena. (fill up: llenar / saciar)'
+  visual_hint: 😋🍽️
+  cloze:
+  - 5
+  - 7
+  glossary:
+  - word: fill up
+    meaning: 'fill up: llenar / saciar el hambre'
+    ipa: fɪl ʌp
+  kind: phrasal_verb
+  apply_sentence: A bowl of soup and bread will ____ your stomach.
+  apply_answer: fill up
+  apply_translation: Un tazón de sopa y pan te llenará el estómago.
+roleplay:
+  ai_role: deli clerk
+  user_role: customer
+  setting: A neighborhood sandwich deli at lunchtime.
+  turns:
+  - speaker: ai
+    text: Hi there! What kind of sandwich can I make for you?
+  - speaker: user
+    goal: Pide un sándwich de pavo en pan blanco.
+    suggested_lines:
+    - I would like a turkey sandwich on white bread.
+    - Can I have a turkey sandwich on white bread, please?
+  - speaker: ai
+    text: Would you like cheese, tomato, or onions on that?
+  - speaker: user
+    goal: Pide queso y tomate, pero sin cebolla.
+    suggested_lines:
+    - Can you add cheese and tomato, please? No onions.
+    - Cheese and tomato, please. No onions, please.
+  - speaker: ai
+    text: Is that for here or to go?
+  - speaker: user
+    goal: Di que es para llevar.
+    suggested_lines:
+    - To go, please.
+    - Can I have my sandwich to go, please?

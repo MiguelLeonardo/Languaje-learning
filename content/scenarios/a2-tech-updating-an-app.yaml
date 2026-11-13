@@ -1,0 +1,91 @@
+id: a2-tech-updating-an-app
+title: Updating an app with low storage
+title_es: Actualizar una app con poco espacio
+cefr: A2
+topic: daily-tech-and-media
+description: Libera espacio en tu teléfono para poder descargar la última actualización de una aplicación.
+phrases:
+- id: storage-almost-full
+  text: My phone says the storage is almost full.
+  translation: Mi teléfono dice que el almacenamiento está casi lleno.
+  visual_hint: 📱⚠️
+  cloze:
+  - 4
+  - 6
+  glossary:
+  - word: storage
+    meaning: almacenamiento / espacio
+    ipa: ˈstɔːrɪdʒ
+- id: update-wont-download
+  text: The new app update will not download yet.
+  translation: La nueva actualización de la app todavía no se descarga.
+  visual_hint: ⬇️❌
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: update
+    meaning: actualización
+    ipa: ˈʌpdeɪt
+- id: delete-old-videos
+  text: I should delete old videos I never watch.
+  translation: Debería borrar videos viejos que nunca veo.
+  visual_hint: 🎬🗑️
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: delete
+    meaning: borrar / eliminar
+    ipa: dɪˈliːt
+- id: idm-free-up
+  text: Removing unused games will free up two gigabytes.
+  translation: 'Eliminar juegos que no uso liberará dos gigabytes. (free up: liberar espacio o tiempo)'
+  visual_hint: 🎮🧹
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: free up
+    meaning: liberar (espacio, memoria, tiempo)
+    ipa: friː ʌp
+  kind: phrasal_verb
+  apply_sentence: Empty the trash folder to ____ more space on your laptop.
+  apply_answer: free up
+  apply_translation: Vacía la papelera para liberar más espacio en tu portátil.
+- id: idm-run-out-of
+  text: I always run out of space after taking travel photos.
+  translation: 'Siempre me quedo sin espacio después de tomar fotos de viaje. (run out of: quedarse sin)'
+  visual_hint: 📸💾
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: run out of
+    meaning: quedarse sin algo
+    ipa: rʌn aʊt əv
+  kind: phrasal_verb
+  apply_sentence: If we ____ memory, the camera will stop recording.
+  apply_answer: run out of
+  apply_translation: Si nos quedamos sin memoria, la cámara dejará de grabar.
+roleplay:
+  ai_role: friend
+  user_role: phone user
+  setting: Sitting on a bench trying to open a transit ticket app.
+  turns:
+  - speaker: ai
+    text: Why is your ticket app not opening?
+  - speaker: user
+    goal: Explica que la actualización no se descarga porque el almacenamiento está casi lleno.
+    suggested_lines:
+    - The new app update will not download yet.
+    - My phone says the storage is almost full.
+  - speaker: ai
+    text: That happens to me too! What can you remove right now?
+  - speaker: user
+    goal: Di que deberías borrar videos viejos y que quitar juegos sin usar liberará espacio.
+    suggested_lines:
+    - I should delete old videos I never watch.
+    - Removing unused games will free up two gigabytes.
+  - speaker: ai
+    text: Nice, now the download bar is moving!

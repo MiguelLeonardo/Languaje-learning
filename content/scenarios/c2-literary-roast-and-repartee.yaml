@@ -1,0 +1,103 @@
+id: c2-literary-roast-and-repartee
+title: Mastering witty repartee and playful banter
+title_es: Dominar el ingenio y la réplica sutil en sociedad
+cefr: C2
+topic: social-and-smalltalk
+description: Participa en un intercambio social ágil lleno de humor elegante, alusiones ingeniosas y réplicas afectuosas sin herir susceptibilidades.
+phrases:
+- id: razor-sharp-repartee
+  text: Good-natured banter thrives on razor-sharp repartee rather than mean-spirited barbs.
+  translation: Las bromas amistosas prosperan gracias a una réplica aguda e ingeniosa más que a pullas malintencionadas.
+  visual_hint: 🎭⚡
+  cloze:
+  - 4
+  - 5
+  - 9
+  glossary:
+  - word: repartee
+    meaning: réplica ingeniosa y rápida
+    ipa: ˌrepɑːrˈtiː
+  - word: barbs
+    meaning: pullas / dardos verbales
+    ipa: bɑːrbz
+- id: disarm-with-brevity
+  text: When someone teases you at a toast, the wittiest rejoinder is often effortless brevity.
+  translation: Cuando alguien bromea contigo en un brindis, la réplica más ingeniosa suele ser una brevedad sin esfuerzo.
+  visual_hint: 🥂✨
+  cloze:
+  - 7
+  - 8
+  - 12
+  glossary:
+  - word: rejoinder
+    meaning: réplica / contestación aguda
+    ipa: rɪˈdʒɔɪndər
+  - word: brevity
+    meaning: brevedad
+    ipa: ˈbrevəti
+- id: affectionate-caricature
+  text: The secret to a memorable roast is grounding every exaggeration in unmistakable affection.
+  translation: El secreto de una broma memorable es basar cada exageración en un afecto inconfundible.
+  visual_hint: 💛🎤
+  cloze:
+  - 5
+  - 8
+  - 10
+  glossary:
+  - word: roast
+    meaning: homenaje humorístico con bromas
+    ipa: roʊst
+  - word: unmistakable
+    meaning: inconfundible
+    ipa: ˌʌnmɪˈsteɪkəbl
+- id: idm-c2lr-quick-on-the-draw
+  text: You have to be quick on the draw when dining with a table full of playwrights.
+  translation: Hay que ser rápido de reflejos al cenar con una mesa llena de dramaturgos (responder con agilidad mental).
+  visual_hint: 🖋️⚡
+  cloze:
+  - 4
+  - 7
+  glossary:
+  - word: quick on the draw
+    meaning: rápido de reflejos / ágil al responder
+    ipa: kwɪk ɒn ðə drɔː
+  kind: idiom
+  apply_sentence: In live Q&A sessions, our host is remarkably ____.
+  apply_answer: quick on the draw
+  apply_translation: En las sesiones de preguntas en vivo, nuestro anfitrión es notablemente rápido de reflejos.
+- id: idm-c2lr-take-in-stride
+  text: Knowing how to take a playful jab in stride instantly wins over the entire room.
+  translation: Saber encajar una broma juguetona con naturalidad conquista al instante a toda la sala (tomárselo con deportividad).
+  visual_hint: 😄👏
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: take in stride
+    meaning: encajar con naturalidad / tomarse con calma
+    ipa: teɪk ɪn straɪd
+  kind: idiom
+  apply_sentence: Even when the microphone failed, the comedian ____.
+  apply_answer: took it in stride
+  apply_translation: Incluso cuando falló el micrófono, el comediante se lo tomó con naturalidad.
+roleplay:
+  ai_role: witty friend (Octavia)
+  user_role: guest of honor
+  setting: Celebratory book-launch dinner among close friends and writers.
+  turns:
+  - speaker: ai
+    text: Careful, everyone—before we toast, remember our guest of honor once spent three weeks debating a single semicolon!
+  - speaker: user
+    goal: Encaja la broma con deportividad y responde con ingenio sobre tu amor por la brevedad.
+    suggested_lines:
+    - Knowing how to take a playful jab in stride is essential here—at least the semicolon survived!
+    - When someone teases you at a toast, the wittiest rejoinder is often effortless brevity, so I'll just say cheers!
+  - speaker: ai
+    text: Touché! Honestly, you're far too quick on the draw for us tonight.
+  - speaker: user
+    goal: Destaca que el buen humor se apoya en el afecto y la réplica ágil, no en pullas hirientes.
+    suggested_lines:
+    - Good-natured banter thrives on razor-sharp repartee rather than mean-spirited barbs.
+    - The secret to a memorable roast is grounding every exaggeration in unmistakable affection.
+  - speaker: ai
+    text: Hear, hear! To many more dinners where nobody takes themselves too seriously.

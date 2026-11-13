@@ -1,0 +1,87 @@
+id: a2-grammar-time-clauses
+title: 'Time clauses: when, while, before, after, until'
+title_es: 'Cláusulas de tiempo: when, while, before, after, until'
+cefr: A2
+topic: grammar-and-connectors
+description: Conecta acciones en el pasado y el futuro usando 'when', 'while', 'before',
+  'after' y 'until'.
+phrases:
+- id: call-when-arrive
+  text: Text me when you arrive at the station.
+  translation: Escríbeme cuando llegues a la estación.
+  visual_hint: 📱🚆
+  cloze:
+  - 2
+  glossary:
+  - word: when
+    meaning: cuando (presente simple para futuro)
+    ipa: wɛn
+  kind: expression
+  apply_sentence: Let's start the meeting ____ everyone gets here.
+  apply_answer: when
+  apply_translation: Empecemos la reunión cuando todos lleguen.
+- id: while-cooking
+  text: I listened to a podcast while I was cooking.
+  translation: Escuché un pódcast mientras cocinaba.
+  visual_hint: 🎧🍳
+  cloze:
+  - 5
+  glossary:
+  - word: while
+    meaning: mientras (acciones en progreso)
+    ipa: waɪl
+  kind: expression
+  apply_sentence: She took notes ____ the teacher was speaking.
+  apply_answer: while
+  apply_translation: Ella tomó notas mientras el profesor hablaba.
+- id: lock-before-leave
+  text: Lock the front door before you leave.
+  translation: Cierra la puerta principal con llave antes de salir.
+  visual_hint: 🔒🚪
+  cloze:
+  - 4
+  glossary:
+  - word: before
+    meaning: antes de que
+    ipa: bɪˈfɔːr
+- id: wait-until-stops
+  text: Let's wait inside until the rain stops.
+  translation: Esperemos adentro hasta que deje de llover.
+  visual_hint: 🌧️🏠
+  cloze:
+  - 4
+  glossary:
+  - word: until
+    meaning: hasta que
+    ipa: ənˈtɪl
+- id: after-finish-work
+  text: We can grab dinner after I finish work.
+  translation: Podemos ir a cenar después de que termine de trabajar.
+  visual_hint: 🍽️💼
+  cloze:
+  - 4
+  glossary:
+  - word: after
+    meaning: después de que
+    ipa: ˈæftər
+roleplay:
+  ai_role: travel buddy
+  user_role: travel buddy
+  setting: Coordinating plans before catching an evening train.
+  turns:
+  - speaker: ai
+    text: What should we do while we wait for the train?
+  - speaker: user
+    goal: Sugiere algo usando 'while' o 'until'.
+    suggested_lines:
+    - Let's get a coffee while we wait for the platform number.
+    - We can sit in the cafe until the train arrives.
+  - speaker: ai
+    text: Good idea. Should we buy snacks now or later?
+  - speaker: user
+    goal: Responde usando 'before' o 'after'.
+    suggested_lines:
+    - Let's buy them before we get on the train.
+    - We can eat after we find our seats.
+  - speaker: ai
+    text: Sounds like a plan!

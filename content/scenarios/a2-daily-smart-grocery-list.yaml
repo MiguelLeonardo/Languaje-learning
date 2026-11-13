@@ -1,0 +1,95 @@
+id: a2-daily-smart-grocery-list
+title: Sharing a digital grocery list
+title_es: Compartir una lista de compras digital
+cefr: A2
+topic: daily-tech-and-media
+description: Usa una aplicación de notas compartida para organizar las compras del supermercado en casa.
+phrases:
+- id: shared-grocery-list
+  text: I added fresh fruit to our shared grocery list.
+  translation: Agregué fruta fresca a nuestra lista de compras compartida.
+  visual_hint: 🍎📝
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: shared
+    meaning: compartida / en común
+    ipa: ʃerd
+- id: sync-across-devices
+  text: The list syncs automatically across both of our phones.
+  translation: La lista se sincroniza automáticamente en nuestros dos teléfonos.
+  visual_hint: 🔄📱
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: syncs
+    meaning: se sincroniza
+    ipa: sɪŋks
+- id: check-fridge-first
+  text: Check the fridge before we buy more milk.
+  translation: Revisa el refrigerador antes de que compremos más leche.
+  visual_hint: 🥛❄️
+  cloze:
+  - 2
+  - 6
+  glossary:
+  - word: fridge
+    meaning: refrigerador / nevera
+    ipa: frɪdʒ
+- id: idm-cross-off
+  text: Remember to cross off each item once it is in the cart.
+  translation: 'Recuerda tachar cada artículo cuando esté en el carrito. (cross off: tachar de una lista)'
+  visual_hint: ☑️🛒
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: cross off
+    meaning: tachar (un elemento de una lista)
+    ipa: krɔːs ɔːf
+  kind: phrasal_verb
+  apply_sentence: Let us ____ bread and eggs because we already grabbed them.
+  apply_answer: cross off
+  apply_translation: Tachemos el pan y los huevos porque ya los agarramos.
+- id: idm-pick-up
+  text: Could you pick up coffee beans on your way home?
+  translation: '¿Podrías pasar a comprar granos de café de camino a casa? (pick up: pasar a comprar / recoger)'
+  visual_hint: ☕🏠
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: pick up
+    meaning: pasar a comprar / recoger
+    ipa: pɪk ʌp
+  kind: phrasal_verb
+  apply_sentence: I need to ____ dish soap at the corner store.
+  apply_answer: pick up
+  apply_translation: Necesito pasar a comprar jabón para platos en la tienda de la esquina.
+roleplay:
+  ai_role: partner
+  user_role: shopper
+  setting: Kitchen before heading out to the supermarket.
+  turns:
+  - speaker: ai
+    text: I am opening the notes app now. Did you put anything on it?
+  - speaker: user
+    goal: Di que agregaste fruta fresca y que la lista se sincroniza en ambos teléfonos.
+    suggested_lines:
+    - I added fresh fruit to our shared grocery list.
+    - The list syncs automatically across both of our phones.
+  - speaker: ai
+    text: Great, I see it! Should I also grab milk?
+  - speaker: user
+    goal: Pídele que revise el refrigerador primero y que tache cada artículo en el carrito.
+    suggested_lines:
+    - Check the fridge before we buy more milk.
+    - Remember to cross off each item once it is in the cart.
+  - speaker: ai
+    text: Will do! Anything else before you leave?
+  - speaker: user
+    goal: Pregunta si puede pasar a comprar granos de café de camino a casa.
+    suggested_lines:
+    - Could you pick up coffee beans on your way home?

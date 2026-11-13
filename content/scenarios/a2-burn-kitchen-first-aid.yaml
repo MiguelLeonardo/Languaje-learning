@@ -1,0 +1,92 @@
+id: a2-burn-kitchen-first-aid
+title: Treating a minor burn at a hostel
+title_es: Pedir ayuda por quemadura leve en la mano
+cefr: A2
+topic: health-and-emergencies
+description: Pide primeros auxilios en la recepción de un hostal después de quemarte
+  levemente la mano cocinando.
+phrases:
+- id: burned-my-hand
+  text: I accidentally burned my hand on a hot pan.
+  translation: Me quemé la mano accidentalmente con una sartén caliente.
+  visual_hint: 🍳🔥
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: burned
+    meaning: quemé
+    ipa: bɜːrnd
+- id: cool-running-water
+  text: Should I hold it under cool running water first?
+  translation: ¿Debo ponerla bajo agua corriente fresca primero?
+  visual_hint: 🚰💧
+  cloze:
+  - 5
+  - 7
+  glossary:
+  - word: running water
+    meaning: agua corriente
+    ipa: ˈrʌnɪŋ ˈwɔːtər
+- id: burn-gel
+  text: Do you have any soothing burn gel or sterile gauze?
+  translation: ¿Tienen gel calmante para quemaduras o gasa estéril?
+  visual_hint: 🧴🩹
+  cloze:
+  - 5
+  - 9
+  glossary:
+  - word: sterile gauze
+    meaning: gasa estéril
+    ipa: ˈsterəl ɡɔːz
+- id: idm-cool-down-a2
+  text: Let the skin cool down before covering the blister.
+  translation: Deja que la piel se enfríe antes de cubrir la ampolla. (cool down = enfriarse)
+  visual_hint: ❄️✋
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: cool down
+    meaning: enfriarse
+    ipa: kuːl daʊn
+  kind: phrasal_verb
+  apply_sentence: Wait for the soup to ____ before eating it.
+  apply_answer: cool down
+  apply_translation: Espera a que la sopa se enfríe antes de comerla.
+- id: idm-better-safe-than-sorry-a2
+  text: Let's check with a nurse; better safe than sorry.
+  translation: Consultemos con una enfermera; más vale prevenir que lamentar. (better safe than sorry)
+  visual_hint: 🏥👍
+  cloze:
+  - 5
+  - 8
+  glossary:
+  - word: better safe than sorry
+    meaning: más vale prevenir que lamentar
+    ipa: ˈbetər seɪf ðæn ˈsɑːri
+  kind: idiom
+  apply_sentence: Take an umbrella today; ____.
+  apply_answer: better safe than sorry
+  apply_translation: Lleva un paraguas hoy; más vale prevenir que lamentar.
+roleplay:
+  ai_role: hostel receptionist
+  user_role: guest
+  setting: Hostel front desk next to the shared kitchen.
+  turns:
+  - speaker: ai
+    text: Hi, what happened? Are you okay?
+  - speaker: user
+    goal: Explica que te quemaste la mano con una sartén caliente y pregunta si debes usar agua fría.
+    suggested_lines:
+    - I accidentally burned my hand on a hot pan.
+    - Should I hold it under cool running water first?
+  - speaker: ai
+    text: Yes, run cool water over it for ten minutes—never use ice. Let me grab the first-aid kit.
+  - speaker: user
+    goal: Pregunta si tienen gel para quemaduras o gasa estéril.
+    suggested_lines:
+    - Do you have any soothing burn gel or sterile gauze?
+    - Let's check with a nurse; better safe than sorry.
+  - speaker: ai
+    text: Here is soothing burn gel and clean gauze. Let us know if it still hurts later.

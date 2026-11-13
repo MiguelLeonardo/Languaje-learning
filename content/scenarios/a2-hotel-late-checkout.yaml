@@ -1,0 +1,91 @@
+id: a2-hotel-late-checkout
+title: Requesting a late hotel checkout
+title_es: Pedir salida tardía en el hotel
+cefr: A2
+topic: hotel-and-shopping
+description: Solicita extender tu hora de salida en el hotel y programa una llamada de despertador.
+phrases:
+- id: late-checkout-noon
+  text: Would it be possible to have a late checkout tomorrow?
+  translation: ¿Sería posible tener una salida tardía mañana?
+  visual_hint: 🏨🕛
+  cloze:
+  - 7
+  - 8
+  glossary:
+  - word: late checkout
+    meaning: salida tardía
+    ipa: leɪt ˈtʃekaʊt
+- id: extra-hour-fee
+  text: Is there an extra fee if we stay until two?
+  translation: ¿Hay un cargo adicional si nos quedamos hasta las dos?
+  visual_hint: 💵🕑
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: extra fee
+    meaning: cargo adicional
+    ipa: ˈekstrə fiː
+- id: wake-up-call
+  text: Could you set a wake-up call for six thirty?
+  translation: ¿Podría programar una llamada de despertador para las seis y media?
+  visual_hint: ⏰📞
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: wake-up call
+    meaning: llamada de despertador
+    ipa: ˈweɪk ʌp kɔːl
+- id: idm-check-out-time
+  text: We need to check out before our afternoon flight.
+  translation: Tenemos que hacer el check-out antes de nuestro vuelo de la tarde.
+  visual_hint: 🧳✈️
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: check out
+    meaning: entregar la habitación / hacer check-out
+    ipa: tʃek aʊt
+  kind: phrasal_verb
+  apply_sentence: Guests must ____ by eleven in the morning.
+  apply_answer: check out
+  apply_translation: Los huéspedes deben entregar la habitación antes de las once de la mañana.
+- id: idm-in-case-delay
+  text: Let's ask early just in case the hotel is full.
+  translation: Preguntemos temprano por si acaso el hotel está lleno.
+  visual_hint: 🗓️🏨
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: just in case
+    meaning: por si acaso
+    ipa: dʒʌst ɪn keɪs
+  kind: expression
+  apply_sentence: Take a receipt ____ you need to change the booking.
+  apply_answer: just in case
+  apply_translation: Toma un recibo por si acaso necesitas cambiar la reserva.
+roleplay:
+  ai_role: front desk clerk
+  user_role: hotel guest
+  setting: Hotel reception desk in the evening.
+  turns:
+  - speaker: ai
+    text: Good evening! How can I assist you with your stay?
+  - speaker: user
+    goal: Pregunta si es posible tener salida tardía mañana y si hay cargo extra.
+    suggested_lines:
+    - Would it be possible to have a late checkout tomorrow?
+    - Is there an extra fee if we stay until two?
+  - speaker: ai
+    text: Until 1:00 PM is free, and until 2:00 PM is twenty dollars.
+  - speaker: user
+    goal: Acepta hasta la una y pide una llamada de despertador a las seis y media.
+    suggested_lines:
+    - One o'clock is great, thank you!
+    - Could you set a wake-up call for six thirty?
+  - speaker: ai
+    text: All set! Your wake-up call is scheduled for 6:30 AM and checkout is at 1:00 PM.

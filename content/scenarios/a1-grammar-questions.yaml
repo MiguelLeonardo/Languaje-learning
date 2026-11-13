@@ -1,0 +1,91 @@
+id: a1-grammar-questions
+title: Wh- questions and there is / there are
+title_es: Preguntas con Wh- y there is / there are
+cefr: A1
+topic: grammar-and-connectors
+description: Formula preguntas básicas con where, when, who, how y describe lugares
+  con 'there is' y 'there are'.
+phrases:
+- id: where-is-station
+  text: Excuse me, where is the nearest subway station?
+  translation: Disculpe, ¿dónde está la estación de metro más cercana?
+  visual_hint: 🚇🗺️
+  cloze:
+  - 2
+  glossary:
+  - word: where
+    meaning: dónde (para preguntar ubicación)
+    ipa: wɛr
+  kind: expression
+  apply_sentence: ____ is the bathroom, please?
+  apply_answer: Where
+  apply_translation: ¿Dónde está el baño, por favor?
+- id: there-is-pharmacy
+  text: There is a small pharmacy across the street.
+  translation: Hay una farmacia pequeña cruzando la calle.
+  visual_hint: 💊🏪
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: there is
+    meaning: hay (para un solo objeto o lugar)
+    ipa: ðɛr ɪz
+  kind: expression
+  apply_sentence: ____ a nice park behind the hotel.
+  apply_answer: There is
+  apply_translation: Hay un parque bonito detrás del hotel.
+- id: there-are-two-cafes
+  text: There are two good cafes near the square.
+  translation: Hay dos buenas cafeterías cerca de la plaza.
+  visual_hint: ☕☕
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: there are
+    meaning: hay (para plural)
+    ipa: ðɛr ɑːr
+- id: what-time-open
+  text: What time does the museum open on Sunday?
+  translation: ¿A qué hora abre el museo el domingo?
+  visual_hint: 🏛️🕒
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: what time
+    meaning: a qué hora
+    ipa: wʌt taɪm
+- id: how-many-stops
+  text: How far is the hotel from the airport?
+  translation: ¿Qué tan lejos está el hotel del aeropuerto?
+  visual_hint: 🏨✈️
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: how far
+    meaning: qué tan lejos / a qué distancia
+    ipa: haʊ fɑːr
+roleplay:
+  ai_role: hotel receptionist
+  user_role: guest
+  setting: Asking about nearby places at a hotel front desk.
+  turns:
+  - speaker: ai
+    text: Welcome! How can I help you today?
+  - speaker: user
+    goal: Pregunta dónde hay un restaurante o cajero usando 'Where' o 'Is there'.
+    suggested_lines:
+    - Where is a good restaurant near here?
+    - Is there a bank on this street?
+  - speaker: ai
+    text: There is a great Italian place just two blocks away.
+  - speaker: user
+    goal: Pregunta a qué hora abre o qué tan lejos está.
+    suggested_lines:
+    - What time does it open?
+    - How far is it from here?
+  - speaker: ai
+    text: It opens at twelve, and it is a five-minute walk.

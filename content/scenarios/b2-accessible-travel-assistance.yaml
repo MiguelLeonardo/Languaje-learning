@@ -1,0 +1,101 @@
+id: b2-accessible-travel-assistance
+title: Requesting mobility assistance
+title_es: Solicitar asistencia de movilidad en viaje
+cefr: B2
+topic: travel-and-transport
+description: Coordina asistencia en silla de ruedas, embarque prioritario y acompañamiento
+  en conexiones aéreas ajustadas.
+phrases:
+- id: wheelchair-gate-assistance
+  text: I need to arrange wheelchair assistance from check-in all the way to the gate.
+  translation: Necesito coordinar asistencia en silla de ruedas desde el mostrador hasta la puerta de embarque.
+  visual_hint: ♿🛫
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: wheelchair assistance
+    meaning: asistencia en silla de ruedas
+    ipa: ˈwiːltʃer əˈsɪstəns
+  - word: arrange
+    meaning: organizar / coordinar
+    ipa: əˈreɪndʒ
+- id: priority-boarding-medical
+  text: Could you add a priority boarding note for my mobility device?
+  translation: ¿Podría añadir una nota de embarque prioritario para mi dispositivo de movilidad?
+  visual_hint: 🩺✈️
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: priority boarding
+    meaning: embarque prioritario
+    ipa: praɪˈɔːrəti ˈbɔːrdɪŋ
+  - word: mobility device
+    meaning: dispositivo de movilidad
+    ipa: moʊˈbɪləti dɪˈvaɪs
+- id: tight-layover-escort
+  text: With a tight layover, will an escort meet us at the aircraft door?
+  translation: Con una escala ajustada, ¿nos recibirá un acompañante en la puerta del avión?
+  visual_hint: ⏱️🤝
+  cloze:
+  - 2
+  - 6
+  glossary:
+  - word: tight layover
+    meaning: escala muy ajustada
+    ipa: taɪt ˈleɪoʊvər
+  - word: escort
+    meaning: acompañante / personal de apoyo
+    ipa: ˈeskɔːrt
+- id: access-in-advance
+  text: Special assistance should be requested at least forty-eight hours in advance.
+  translation: La asistencia especial debe solicitarse con al menos cuarenta y ocho horas de antelación. (in advance = por adelantado)
+  visual_hint: 📅♿
+  cloze:
+  - 9
+  - 10
+  glossary:
+  - word: in advance
+    meaning: con antelación / por adelantado
+    ipa: ɪn ədˈvæns
+  kind: expression
+  apply_sentence: Reserve accessible train seats several days ____.
+  apply_answer: in advance
+  apply_translation: Reserva los asientos accesibles del tren con varios días de antelación.
+- id: access-smooth-over
+  text: Having a dedicated ground agent really helps smooth over tight connections.
+  translation: Contar con un agente de tierra dedicado realmente ayuda a facilitar las conexiones ajustadas. (smooth over = facilitar / suavizar)
+  visual_hint: 🛂✨
+  cloze:
+  - 7
+  - 8
+  glossary:
+  - word: smooth over
+    meaning: facilitar / resolver sin tropiezos
+    ipa: smuːð ˈoʊvər
+  kind: phrasal_verb
+  apply_sentence: Good communication can ____ any transfer delay at the terminal.
+  apply_answer: smooth over
+  apply_translation: Una buena comunicación puede suavizar cualquier retraso de traslado en la terminal.
+roleplay:
+  ai_role: airline special assistance coordinator
+  user_role: passenger
+  setting: An airline accessibility desk ahead of a two-leg international journey.
+  turns:
+  - speaker: ai
+    text: Good morning, Special Assistance Desk. How can I help prepare your itinerary?
+  - speaker: user
+    goal: Solicita asistencia en silla de ruedas hasta la puerta y embarque prioritario para tu dispositivo de movilidad.
+    suggested_lines:
+    - I need to arrange wheelchair assistance from check-in all the way to the gate. Could you add a priority boarding note for my mobility device?
+    - I'd like wheelchair assistance to the gate and priority boarding for my mobility device.
+  - speaker: ai
+    text: I have added the WCHR code and priority boarding to both segments of your booking.
+  - speaker: user
+    goal: Pregunta si habrá un acompañante esperando en la puerta del avión por la escala ajustada.
+    suggested_lines:
+    - With a tight layover, will an escort meet us at the aircraft door?
+    - Will a ground escort meet us right at the aircraft door during our tight layover?
+  - speaker: ai
+    text: Yes, an electric cart and escort will be waiting at the jet bridge upon arrival.

@@ -1,0 +1,102 @@
+id: b1-car-rental-pickup
+title: Picking up a rental car
+title_es: Recoger un coche de alquiler
+cefr: B1
+topic: travel-and-transport
+description: Revisa el contrato de alquiler, confirma la política de combustible y registra
+  daños previos antes de salir.
+phrases:
+- id: unlimited-mileage-included
+  text: Does this rental agreement include unlimited mileage and basic insurance?
+  translation: ¿Este contrato de alquiler incluye kilometraje ilimitado y seguro básico?
+  visual_hint: 📄🚗
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: rental agreement
+    meaning: contrato de alquiler
+    ipa: ˈrentəl əˈɡriːmənt
+  - word: unlimited mileage
+    meaning: kilometraje ilimitado
+    ipa: ʌnˈlɪmɪtɪd ˈmaɪlɪdʒ
+- id: check-existing-scratches
+  text: Can we note this scratch on the bumper before I drive away?
+  translation: ¿Podemos anotar este rayón en el parachoques antes de que me vaya?
+  visual_hint: 🔍🚘
+  cloze:
+  - 4
+  - 7
+  glossary:
+  - word: scratch
+    meaning: rayón / arañazo
+    ipa: skrætʃ
+  - word: bumper
+    meaning: parachoques / defensa
+    ipa: ˈbʌmpər
+- id: full-to-full-policy
+  text: I would prefer the full-to-full fuel policy instead of prepaying.
+  translation: Preferiría la política de combustible lleno-lleno en lugar de prepagar.
+  visual_hint: ⛽📋
+  cloze:
+  - 4
+  - 6
+  glossary:
+  - word: fuel policy
+    meaning: política de combustible
+    ipa: ˈfjuːəl ˈpɑːləsi
+  - word: prepaying
+    meaning: pagar por adelantado
+    ipa: ˌpriːˈpeɪɪŋ
+- id: rental-drop-off
+  text: Is there an extra fee if I drop off the car at the downtown branch?
+  translation: ¿Hay un cargo extra si devuelvo el coche en la sucursal del centro? (drop off = devolver / dejar)
+  visual_hint: 🔑🏢
+  cloze:
+  - 7
+  - 8
+  glossary:
+  - word: drop off
+    meaning: dejar / entregar en un lugar
+    ipa: drɑːp ɔːf
+  kind: phrasal_verb
+  apply_sentence: You can ____ the keys in the express box after hours.
+  apply_answer: drop off
+  apply_translation: Puedes dejar las llaves en el buzón exprés fuera de horario.
+- id: rental-on-the-safe-side
+  text: Let's take photos of every side just to be on the safe side.
+  translation: Tomemos fotos de cada lado solo por si acaso. (on the safe side = por precaución)
+  visual_hint: 📸🛡️
+  cloze:
+  - 9
+  - 11
+  - 12
+  glossary:
+  - word: on the safe side
+    meaning: por si acaso / por precaución
+    ipa: ɑːn ðə seɪf saɪd
+  kind: expression
+  apply_sentence: Book a flexible ticket just to be ____.
+  apply_answer: on the safe side
+  apply_translation: Reserva un boleto flexible solo por precaución.
+roleplay:
+  ai_role: rental counter agent
+  user_role: traveler
+  setting: An airport car rental desk with keys and inspection forms.
+  turns:
+  - speaker: ai
+    text: Welcome! I have your compact car reservation ready. Would you like to add prepaid fuel?
+  - speaker: user
+    goal: Rechaza el prepago, pide política lleno-lleno y pregunta si incluye kilometraje ilimitado.
+    suggested_lines:
+    - I would prefer the full-to-full fuel policy instead of prepaying. Does this rental agreement include unlimited mileage and basic insurance?
+    - No, thank you. I prefer the full-to-full fuel policy, and does it include unlimited mileage?
+  - speaker: ai
+    text: Yes, unlimited mileage and basic coverage are included, and full-to-full is fine.
+  - speaker: user
+    goal: Pregunta si hay cargo extra por devolver el coche en la sucursal del centro y pide anotar un rayón en el parachoques.
+    suggested_lines:
+    - Is there an extra fee if I drop off the car at the downtown branch? Also, can we note this scratch on the bumper before I drive away?
+    - Can we note this scratch on the bumper first, and is there a fee to drop off the car downtown?
+  - speaker: ai
+    text: Downtown drop-off is free, and I have marked that bumper scratch on your inspection sheet. Safe travels!

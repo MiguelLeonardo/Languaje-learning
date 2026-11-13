@@ -1,0 +1,108 @@
+id: c2-generational-values-roundtable
+title: Debating shifting generational values
+title_es: Debatir sobre cambios generacionales y valores sociales
+cefr: C2
+topic: social-and-smalltalk
+description: Analiza con rigor y empatía cómo cambian las expectativas laborales, familiares y sociales entre distintas generaciones.
+phrases:
+- id: false-dichotomy-work
+  text: Framing younger professionals as less committed creates a false dichotomy; they simply prize autonomy over presenteeism.
+  translation: Presentar a los jóvenes profesionales como menos comprometidos crea una falsa dicotomía; simplemente valoran la autonomía sobre el presencialismo.
+  visual_hint: ⚖️💼
+  cloze:
+  - 0
+  - 9
+  - 13
+  glossary:
+  - word: false dichotomy
+    meaning: falsa dicotomía
+    ipa: fɔːls daɪˈkɑːtəmi
+  - word: presenteeism
+    meaning: presencialismo
+    ipa: ˌprezənˈtiːɪzəm
+- id: economic-backdrop
+  text: One cannot disentangle shifting life milestones from the stark economic backdrop of housing affordability.
+  translation: No se pueden desligar los hitos vitales cambiantes del duro trasfondo económico de la accesibilidad a la vivienda.
+  visual_hint: 🏘️📊
+  cloze:
+  - 2
+  - 5
+  - 9
+  glossary:
+  - word: disentangle
+    meaning: desligar / separar
+    ipa: ˌdɪsɪnˈtæŋɡəl
+  - word: backdrop
+    meaning: trasfondo / contexto
+    ipa: ˈbækdrɑːp
+- id: intergenerational-empathy
+  text: Beneath the surface friction, every generation is ultimately negotiating security, purpose, and belonging.
+  translation: Bajo la fricción superficial, cada generación está negociando en última instancia seguridad, propósito y pertenencia.
+  visual_hint: 🤝🌱
+  cloze:
+  - 2
+  - 7
+  - 10
+  glossary:
+  - word: friction
+    meaning: fricción / roce
+    ipa: ˈfrɪkʃən
+  - word: belonging
+    meaning: pertenencia
+    ipa: bɪˈlɔːŋɪŋ
+- id: idm-c2gv-miss-the-forest
+  text: Obsessing over slang or dress codes misses the forest for the trees in this conversation.
+  translation: Obsesionarse con la jerga o los códigos de vestimenta impide ver el panorama general en esta conversación (perder la perspectiva por los detalles).
+  visual_hint: 🌲🔍
+  cloze:
+  - 6
+  - 10
+  glossary:
+  - word: miss the forest for the trees
+    meaning: no ver el bosque por los árboles
+    ipa: mɪs ðə ˈfɔːrɪst fɔːr ðə triːz
+  kind: idiom
+  apply_sentence: Focusing only on minor typos means you ____.
+  apply_answer: miss the forest for the trees
+  apply_translation: Centrarse solo en erratas menores significa no ver el panorama general.
+- id: idm-c2gv-come-full-circle
+  text: Ironically, the renewed appetite for tactile crafts shows how cultural values often come full circle.
+  translation: Irónicamente, el renovado interés por los oficios táctiles muestra cómo los valores culturales suelen cerrar el círculo (volver al punto de partida).
+  visual_hint: 🔄🏺
+  cloze:
+  - 12
+  - 14
+  glossary:
+  - word: come full circle
+    meaning: cerrar el círculo / volver al origen
+    ipa: kʌm fʊl ˈsɜːrkl
+  kind: idiom
+  apply_sentence: After years of digital-only music, vinyl records have ____.
+  apply_answer: come full circle
+  apply_translation: Tras años de música solo digital, los discos de vinilo han cerrado el círculo.
+roleplay:
+  ai_role: cultural columnist (Henrik)
+  user_role: roundtable guest
+  setting: Post-talk reception at a civic forum on generational change.
+  turns:
+  - speaker: ai
+    text: Every week there's another headline claiming younger cohorts lack loyalty to institutions. Do you buy that narrative?
+  - speaker: user
+    goal: Cuestiona la falsa dicotomía y vincula los cambios vitales con el contexto económico actual.
+    suggested_lines:
+    - Framing younger professionals as less committed creates a false dichotomy; they simply prize autonomy over presenteeism.
+    - One cannot disentangle shifting life milestones from the stark economic backdrop of housing affordability.
+  - speaker: ai
+    text: Good point—commentators love reducing structural shifts to a caricature about coffee habits.
+  - speaker: user
+    goal: Señala que enfocarse en detalles triviales impide ver lo esencial y que todas las generaciones buscan propósito y pertenencia.
+    suggested_lines:
+    - Obsessing over slang or dress codes misses the forest for the trees in this conversation.
+    - Beneath the surface friction, every generation is ultimately negotiating security, purpose, and belonging.
+  - speaker: ai
+    text: True, and it's fascinating seeing young people revive analog hobbies like pottery and vinyl.
+  - speaker: user
+    goal: Coincide en que los valores culturales suelen cerrar el círculo de formas sorprendentes.
+    suggested_lines:
+    - Ironically, the renewed appetite for tactile crafts shows how cultural values often come full circle.
+    - Values really do come full circle when people crave tangibility again.

@@ -1,0 +1,108 @@
+id: b2-mediating-group-trip
+title: Mediating plans for a group trip
+title_es: Mediar decisiones en un viaje en grupo
+cefr: B2
+topic: social-and-smalltalk
+description: Ayuda a un grupo de amigos con gustos distintos a llegar a un acuerdo justo sobre presupuesto, fechas y actividades.
+phrases:
+- id: meet-halfway-budget
+  text: Since half the group wants luxury hotels and half wants hostels, let's meet halfway.
+  translation: Como la mitad del grupo quiere hoteles de lujo y la otra mitad hostales, busquemos un punto medio.
+  visual_hint: 🏨⚖️
+  cloze:
+  - 3
+  - 9
+  - 12
+  glossary:
+  - word: meet halfway
+    meaning: llegar a un punto medio / ceder ambas partes
+    ipa: miːt ˌhæfˈweɪ
+  - word: hostels
+    meaning: hostales / albergues
+    ipa: ˈhɑːstəlz
+- id: split-up-afternoon
+  text: We don't have to do every activity together; we can split up for the afternoon.
+  translation: No tenemos que hacer cada actividad juntos; podemos separarnos por la tarde.
+  visual_hint: 🧭🔀
+  cloze:
+  - 4
+  - 9
+  - 10
+  glossary:
+  - word: split up
+    meaning: separarse / dividirse
+    ipa: splɪt ʌp
+  - word: activity
+    meaning: actividad
+    ipa: ækˈtɪvəti
+- id: lock-in-dates
+  text: Before flights get pricier, we should lock in our dates by Friday.
+  translation: Antes de que los vuelos suban de precio, deberíamos fijar nuestras fechas para el viernes.
+  visual_hint: ✈️📅
+  cloze:
+  - 3
+  - 6
+  - 9
+  glossary:
+  - word: pricier
+    meaning: más caro
+    ipa: ˈpraɪsiər
+  - word: lock in
+    meaning: fijar / asegurar
+    ipa: lɑːk ɪn
+- id: idm-b2mg-on-the-same-page
+  text: Let's make sure everyone is on the same page about the daily budget.
+  translation: Asegurémonos de que todos estemos de acuerdo sobre el presupuesto diario (compartir el mismo criterio).
+  visual_hint: 📋🤝
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: on the same page
+    meaning: en la misma sintonía / de acuerdo
+    ipa: ɒn ðə seɪm peɪdʒ
+  kind: idiom
+  apply_sentence: Before we book the venue, we need to get ____.
+  apply_answer: on the same page
+  apply_translation: Antes de reservar el lugar, tenemos que ponernos de acuerdo.
+- id: idm-b2mg-iron-out
+  text: We just need ten minutes to iron out the last few itinerary details.
+  translation: Solo necesitamos diez minutos para pulir los últimos detalles del itinerario (resolver pequeños desacuerdos o dudas).
+  visual_hint: 🗺️🛠️
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: iron out
+    meaning: pulir / resolver detalles
+    ipa: ˈaɪərn aʊt
+  kind: phrasal_verb
+  apply_sentence: Let's have a quick call to ____ the schedule.
+  apply_answer: iron out
+  apply_translation: Hagamos una llamada rápida para pulir el horario.
+roleplay:
+  ai_role: friend (Mateo)
+  user_role: trip mediator
+  setting: Video call with friends who can't agree on their Lisbon trip.
+  turns:
+  - speaker: ai
+    text: Honestly, this group chat is chaotic. Sara wants a five-star resort, and Leo wants a backpacker hostel!
+  - speaker: user
+    goal: Propón buscar un punto medio y asegurarse de que todos estén en la misma sintonía con el presupuesto.
+    suggested_lines:
+    - Since half the group wants luxury hotels and half wants hostels, let's meet halfway.
+    - Let's make sure everyone is on the same page about the daily budget.
+  - speaker: ai
+    text: Good call—a boutique guesthouse works for everyone. What about museums versus beach time?
+  - speaker: user
+    goal: Sugiere que no tienen que hacerlo todo juntos y que pueden dividirse por la tarde.
+    suggested_lines:
+    - We don't have to do every activity together; we can split up for the afternoon.
+    - We can meet for dinner after splitting up for a few hours.
+  - speaker: ai
+    text: That takes the pressure off! When should we actually book the flights?
+  - speaker: user
+    goal: Recomienda fijar las fechas antes del viernes y pulir los últimos detalles pronto.
+    suggested_lines:
+    - Before flights get pricier, we should lock in our dates by Friday.
+    - We just need ten minutes to iron out the last few itinerary details.

@@ -1,0 +1,101 @@
+id: c2-high-speed-rail-corridor-bid
+title: Cross-border high-speed rail corridor bid
+title_es: Licitación de corredor ferroviario de alta velocidad
+cefr: C2
+topic: travel-and-transport
+description: Defiende ante un panel ministerial la interoperabilidad ERTMS, homologación
+  de material rodante y capacidad de intervalos.
+phrases:
+- id: ertms-interoperability
+  text: Seamless cross-border traction requires harmonizing legacy national signaling with ERTMS Level 2.
+  translation: La tracción transfronteriza fluida exige armonizar la señalización nacional heredada con el sistema ERTMS Nivel 2.
+  visual_hint: 🚄🚦
+  cloze:
+  - 4
+  - 7
+  glossary:
+  - word: harmonizing
+    meaning: armonizando / compatibilizando
+    ipa: ˈhɑːrmənaɪzɪŋ
+  - word: signaling
+    meaning: señalización ferroviaria
+    ipa: ˈsɪɡnəlɪŋ
+- id: rolling-stock-homologation
+  text: Our consortium has already secured dual-voltage rolling-stock homologation across both rail networks.
+  translation: Nuestro consorcio ya ha obtenido la homologación de material rodante bitensión en ambas redes ferroviarias.
+  visual_hint: ⚡🚆
+  cloze:
+  - 5
+  - 7
+  glossary:
+  - word: dual-voltage
+    meaning: bitensión / doble voltaje
+    ipa: ˈduːəl ˈvoʊltɪdʒ
+  - word: homologation
+    meaning: homologación técnica
+    ipa: həˌmɑːləˈɡeɪʃən
+- id: headway-capacity-bottleneck
+  text: Eliminating the border crew-change dwell time unlocks twenty percent more peak-hour headway capacity.
+  translation: Eliminar el tiempo de parada por relevo de tripulación en frontera libera un veinte por ciento más de capacidad de intervalo en hora punta.
+  visual_hint: ⏱️📊
+  cloze:
+  - 4
+  - 11
+  glossary:
+  - word: dwell time
+    meaning: tiempo de detención en estación
+    ipa: dwel taɪm
+  - word: headway
+    meaning: intervalo entre trenes
+    ipa: ˈhedweɪ
+- id: rail-square-the-circle
+  text: Upgrading freight sidings alongside express tracks lets us square the circle on mixed-traffic throughput.
+  translation: Modernizar los apartaderos de carga junto a las vías exprés nos permite resolver la cuadratura del círculo en el flujo mixto. (square the circle = lograr algo casi imposible)
+  visual_hint: 🛤️🧩
+  cloze:
+  - 8
+  - 10
+  glossary:
+  - word: square the circle
+    meaning: resolver un problema aparentemente imposible
+    ipa: skwer ðə ˈsɜːrkəl
+  kind: idiom
+  apply_sentence: Dynamic timetable allocation helped the operator ____ between freight and commuters.
+  apply_answer: square the circle
+  apply_translation: La asignación dinámica de horarios ayudó al operador a conciliar la carga y los viajeros diarios.
+- id: rail-phase-in
+  text: We propose to phase in night-train frequencies incrementally over eighteen months.
+  translation: Proponemos introducir gradualmente las frecuencias de trenes nocturnos a lo largo de dieciocho meses. (phase in = implementar gradualmente)
+  visual_hint: 🌙🚄
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: phase in
+    meaning: introducir de forma gradual
+    ipa: feɪz ɪn
+  kind: phrasal_verb
+  apply_sentence: Stations will ____ biometric boarding gates starting next quarter.
+  apply_answer: phase in
+  apply_translation: Las estaciones introducirán gradualmente puertas de embarque biométricas a partir del próximo trimestre.
+roleplay:
+  ai_role: transport ministry procurement chair
+  user_role: rail consortium director
+  setting: A binational transport ministry hearing evaluating high-speed rail corridor bids.
+  turns:
+  - speaker: ai
+    text: Your technical dossier is ambitious, yet border signaling transitions have stalled past operators. How will you avoid that?
+  - speaker: user
+    goal: Explica que la tracción fluida requiere armonizar señalización con ERTMS Nivel 2 y que ya tienes homologación bitensión.
+    suggested_lines:
+    - Seamless cross-border traction requires harmonizing legacy national signaling with ERTMS Level 2. Fortunately, our consortium has already secured dual-voltage rolling-stock homologation across both rail networks.
+    - We are harmonizing legacy signaling with ERTMS Level 2, backed by dual-voltage rolling-stock homologation on both networks.
+  - speaker: ai
+    text: Impressive. Even so, freight unions worry that express frequencies will choke regional cargo paths.
+  - speaker: user
+    goal: Explica cómo los apartaderos de carga y eliminar el tiempo de relevo fronterizo aumentan la capacidad de intervalo.
+    suggested_lines:
+    - Eliminating the border crew-change dwell time unlocks twenty percent more peak-hour headway capacity, and upgrading freight sidings alongside express tracks lets us square the circle on mixed-traffic throughput.
+    - By eliminating crew-change dwell time and upgrading freight sidings, we unlock twenty percent more headway capacity for mixed traffic.
+  - speaker: ai
+    text: If you phase in those night-train slots as outlined, the ministry is ready to advance your bid to final review.

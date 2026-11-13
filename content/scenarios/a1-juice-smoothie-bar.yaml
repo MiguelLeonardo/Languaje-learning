@@ -1,0 +1,96 @@
+id: a1-juice-smoothie-bar
+title: Ordering at a juice bar
+title_es: Pedir en una barra de jugos
+cefr: A1
+topic: food-and-drink
+description: Pide un jugo o licuado fresco, elige frutas y agrega hielo en una barra de jugos.
+phrases:
+- id: orange-juice-please
+  text: Can I have a fresh orange juice, please?
+  translation: ¿Me da un jugo de naranja natural, por favor?
+  visual_hint: 🍊🥤
+  cloze:
+  - 4
+  - 6
+  glossary:
+  - word: fresh
+    meaning: fresco / natural
+    ipa: freʃ
+  - word: juice
+    meaning: jugo / zumo
+    ipa: dʒuːs
+- id: no-sugar-added
+  text: No sugar, please. Just fruit.
+  translation: Sin azúcar, por favor. Solo fruta.
+  visual_hint: 🍓🚫🍬
+  cloze:
+  - 1
+  - 4
+  glossary:
+  - word: sugar
+    meaning: azúcar
+    ipa: ˈʃʊɡər
+  - word: fruit
+    meaning: fruta
+    ipa: fruːt
+- id: with-ice
+  text: With a lot of ice, please.
+  translation: Con mucho hielo, por favor.
+  visual_hint: 🧊🥤
+  cloze:
+  - 4
+  glossary:
+  - word: ice
+    meaning: hielo
+    ipa: aɪs
+- id: cool-down
+  text: I want a cold smoothie to cool down today.
+  translation: 'Quiero un licuado frío para refrescarme hoy. (cool down: refrescarse)'
+  visual_hint: 🥤❄️
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: cool down
+    meaning: 'cool down: refrescarse / enfriarse'
+    ipa: kuːl daʊn
+  kind: phrasal_verb
+  apply_sentence: Let's sit in the shade and ____ after our walk.
+  apply_answer: cool down
+  apply_translation: Sentémonos a la sombra y refresquémonos después de caminar.
+- id: on-the-go
+  text: Make it in a cup to drink on the go.
+  translation: 'Prepárelo en un vaso para tomar sobre la marcha. (on the go: de paso / en movimiento)'
+  visual_hint: 🚶🥤
+  cloze:
+  - 7
+  - 9
+  glossary:
+  - word: on the go
+    meaning: 'on the go: sobre la marcha / de paso'
+    ipa: ɒn ðə ɡoʊ
+  kind: expression
+  apply_sentence: I always eat breakfast ____ because I wake up late.
+  apply_answer: on the go
+  apply_translation: Siempre desayuno sobre la marcha porque me despierto tarde.
+roleplay:
+  ai_role: juice bar worker
+  user_role: customer
+  setting: A sunny street-corner juice and smoothie stand.
+  turns:
+  - speaker: ai
+    text: Hello! Welcome to Sunny Juice. What would you like today?
+  - speaker: user
+    goal: Pide un jugo de naranja natural.
+    suggested_lines:
+    - Can I have a fresh orange juice, please?
+    - A fresh orange juice, please.
+  - speaker: ai
+    text: Sure! Do you want any sugar or extra ice in it?
+  - speaker: user
+    goal: Di que sin azúcar y con mucho hielo.
+    suggested_lines:
+    - No sugar, please. With a lot of ice, please.
+    - No sugar, just fruit and ice, please.
+  - speaker: ai
+    text: Got it! Here is your cold orange juice. Enjoy!

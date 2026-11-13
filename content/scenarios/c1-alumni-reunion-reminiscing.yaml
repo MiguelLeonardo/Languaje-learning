@@ -1,0 +1,108 @@
+id: c1-alumni-reunion-reminiscing
+title: Reminiscing and reconnecting at an alumni gala
+title_es: Rememorar anécdotas en un reencuentro de exalumnos
+cefr: C1
+topic: social-and-smalltalk
+description: Comparte recuerdos universitarios con matices, reflexiona sobre cómo han cambiado las cosas y reconecta con antiguos compañeros.
+phrases:
+- id: feels-like-yesterday
+  text: Walking back into this courtyard makes ten years feel like yesterday.
+  translation: Volver a caminar por este patio hace que diez años parezcan ayer.
+  visual_hint: 🏛️⏳
+  cloze:
+  - 3
+  - 7
+  - 10
+  glossary:
+  - word: courtyard
+    meaning: patio interior
+    ipa: ˈkɔːrtjɑːrd
+  - word: feel like yesterday
+    meaning: parecer que fue ayer
+    ipa: fiːl laɪk ˈjestərdeɪ
+- id: life-took-unexpected-turns
+  text: Funny how everyone's career took such unexpected turns after graduation.
+  translation: Qué curioso cómo la carrera de todos dio giros tan inesperados tras la graduación.
+  visual_hint: 🔀🎓
+  cloze:
+  - 3
+  - 5
+  - 8
+  glossary:
+  - word: unexpected turns
+    meaning: giros inesperados
+    ipa: ˌʌnɪkˈspektɪd tɜːrnz
+  - word: graduation
+    meaning: graduación
+    ipa: ˌɡrædʒuˈeɪʃən
+- id: bittersweet-nostalgia
+  text: Looking back, even those sleepless exam weeks carry a certain bittersweet charm.
+  translation: Mirando atrás, incluso aquellas semanas de exámenes sin dormir tienen cierto encanto agridulce.
+  visual_hint: 📚✨
+  cloze:
+  - 4
+  - 9
+  - 10
+  glossary:
+  - word: sleepless
+    meaning: sin dormir / de desvelo
+    ipa: ˈsliːpləs
+  - word: bittersweet
+    meaning: agridulce
+    ipa: ˌbɪtərˈswiːt
+- id: idm-c1ar-walk-down-memory-lane
+  text: Comparing old dorm stories was a wonderful walk down memory lane.
+  translation: Comparar viejas historias de la residencia fue un maravilloso paseo por el recuerdo (evocar momentos pasados).
+  visual_hint: 🎞️💛
+  cloze:
+  - 7
+  - 9
+  glossary:
+  - word: walk down memory lane
+    meaning: viaje al pasado / recordar buenos tiempos
+    ipa: wɔːk daʊn ˈmeməri leɪn
+  kind: idiom
+  apply_sentence: Flipping through our childhood photo album is always a ____.
+  apply_answer: walk down memory lane
+  apply_translation: Hojear nuestro álbum de fotos de la infancia siempre es un viaje al pasado.
+- id: idm-c1ar-pick-up-where-left-off
+  text: Despite the long gap, we managed to pick up right where we left off.
+  translation: A pesar del largo tiempo sin vernos, logramos retomar la conversación justo donde la dejamos (recuperar la cercanía al instante).
+  visual_hint: 🔗😊
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: pick up where we left off
+    meaning: retomar donde lo dejamos
+    ipa: pɪk ʌp wer wiː left ɔːf
+  kind: phrasal_verb
+  apply_sentence: True friends can meet after years and ____ immediately.
+  apply_answer: pick up where they left off
+  apply_translation: Los verdaderos amigos pueden verse tras años y retomar donde lo dejaron de inmediato.
+roleplay:
+  ai_role: former roommate (Tessa)
+  user_role: alumna/alumnus
+  setting: Evening reception in the university's historic courtyard.
+  turns:
+  - speaker: ai
+    text: Look at this place—the ivy on the library wall hasn't changed a bit!
+  - speaker: user
+    goal: Expresa nostalgia diciendo que volver allí hace que diez años parezcan ayer.
+    suggested_lines:
+    - Walking back into this courtyard makes ten years feel like yesterday.
+    - Looking back, even those sleepless exam weeks carry a certain bittersweet charm.
+  - speaker: ai
+    text: Seriously! Remember when we pulled all-nighters before Professor Vance's finals?
+  - speaker: user
+    goal: Comenta lo curioso que es cómo las carreras de todos dieron giros inesperados y qué gusto da recordar viejos tiempos.
+    suggested_lines:
+    - Funny how everyone's career took such unexpected turns after graduation.
+    - Comparing old dorm stories is such a wonderful walk down memory lane.
+  - speaker: ai
+    text: Tell me about it! Honestly, talking to you now feels like no time has passed at all.
+  - speaker: user
+    goal: Coincide en que lograron retomar la amistad justo donde la dejaron y propón verse pronto.
+    suggested_lines:
+    - Despite the long gap, we managed to pick up right where we left off.
+    - Let's make sure we don't wait another ten years to grab dinner!

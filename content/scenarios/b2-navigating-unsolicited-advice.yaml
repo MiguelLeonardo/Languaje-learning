@@ -1,0 +1,108 @@
+id: b2-navigating-unsolicited-advice
+title: Handling unsolicited advice gracefully
+title_es: Manejar consejos no solicitados con tacto
+cefr: B2
+topic: social-and-smalltalk
+description: Responde con educación pero firmeza cuando un conocido o familiar te da consejos personales que no pediste.
+phrases:
+- id: appreciate-the-thought
+  text: I appreciate your concern, though I've already weighed my options carefully.
+  translation: Agradezco tu preocupación, aunque ya he sopesado mis opciones con cuidado.
+  visual_hint: 🙏🧠
+  cloze:
+  - 1
+  - 6
+  - 9
+  glossary:
+  - word: concern
+    meaning: preocupación / interés
+    ipa: kənˈsɜːrn
+  - word: weighed my options
+    meaning: sopesado mis opciones
+    ipa: weɪd maɪ ˈɑːpʃənz
+- id: works-for-my-situation
+  text: Everyone's situation is different, and this approach fits my priorities right now.
+  translation: La situación de cada quien es distinta, y este enfoque encaja con mis prioridades ahora.
+  visual_hint: 🧭✨
+  cloze:
+  - 1
+  - 6
+  - 9
+  glossary:
+  - word: approach
+    meaning: enfoque / método
+    ipa: əˈproʊtʃ
+  - word: priorities
+    meaning: prioridades
+    ipa: praɪˈɔːrətiz
+- id: pivot-the-subject
+  text: Anyway, enough about my plans—how has your new project been going?
+  translation: En fin, suficiente sobre mis planes... ¿cómo te ha ido con tu nuevo proyecto?
+  visual_hint: 🔄💬
+  cloze:
+  - 0
+  - 4
+  - 8
+  glossary:
+  - word: enough about
+    meaning: suficiente sobre
+    ipa: ɪˈnʌf əˈbaʊt
+  - word: project
+    meaning: proyecto
+    ipa: ˈprɑːdʒekt
+- id: idm-b2na-take-with-grain-of-salt
+  text: I try to take well-meaning advice with a grain of salt and trust my instincts.
+  translation: Intento tomar los consejos bienintencionados con cautela y confiar en mi instinto (no tomarlo al pie de la letra).
+  visual_hint: 🧂😌
+  cloze:
+  - 7
+  - 9
+  glossary:
+  - word: with a grain of salt
+    meaning: con cautela / sin tomarlo al pie de la letra
+    ipa: wɪð ə ɡreɪn əv sɔːlt
+  kind: idiom
+  apply_sentence: You should take online rumors ____.
+  apply_answer: with a grain of salt
+  apply_translation: Deberías tomarte los rumores de internet con cautela.
+- id: idm-b2na-hear-you-out
+  text: I hear where you're coming from, but I'm comfortable with my decision.
+  translation: Entiendo tu punto de vista, pero me siento cómodo con mi decisión (comprender la intención sin ceder).
+  visual_hint: 👂✋
+  cloze:
+  - 1
+  - 4
+  glossary:
+  - word: hear where someone is coming from
+    meaning: entender el punto de vista de alguien
+    ipa: hɪr wer ˈkʌmɪŋ frʌm
+  kind: expression
+  apply_sentence: I ____, yet I still think we need more time.
+  apply_answer: hear where you're coming from
+  apply_translation: Entiendo tu punto de vista, pero aun así creo que necesitamos más tiempo.
+roleplay:
+  ai_role: opinionated acquaintance (Arthur)
+  user_role: guest
+  setting: Family friend chatting at a Sunday afternoon barbecue.
+  turns:
+  - speaker: ai
+    text: You know, if I were you, I wouldn't switch to remote work. You'll lose visibility!
+  - speaker: user
+    goal: Agradece su preocupación con tacto, pero deja claro que ya evaluaste tus opciones.
+    suggested_lines:
+    - I appreciate your concern, though I've already weighed my options carefully.
+    - I hear where you're coming from, but I'm comfortable with my decision.
+  - speaker: ai
+    text: Well, I'm just saying—when I was your age, staying in the office was the only way to grow.
+  - speaker: user
+    goal: Explica que cada situación es diferente y que este enfoque encaja con tus prioridades actuales.
+    suggested_lines:
+    - Everyone's situation is different, and this approach fits my priorities right now.
+    - Things have changed a lot, and this fits my priorities right now.
+  - speaker: ai
+    text: Fair enough, I suppose times really have changed.
+  - speaker: user
+    goal: Cambia amablemente de tema preguntándole por su nuevo proyecto.
+    suggested_lines:
+    - Anyway, enough about my plans—how has your new project been going?
+    - Thanks for understanding! By the way, how is your garden project going?

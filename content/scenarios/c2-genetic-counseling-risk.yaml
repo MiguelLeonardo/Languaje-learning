@@ -1,0 +1,97 @@
+id: c2-genetic-counseling-risk
+title: Interpreting hereditary biomarker panels
+title_es: Interpretar panel genético hereditario con asesor médico
+cefr: C2
+topic: health-and-emergencies
+description: Analiza con un asesor genético una variante de significado incierto,
+  la penetrancia incompleta y el protocolo de pruebas en cascada familiar.
+phrases:
+- id: variant-uncertain-significance
+  text: Should we treat this BRCA variant of uncertain significance as clinically actionable?
+  translation: ¿Debemos tratar esta variante BRCA de significado incierto como clínicamente accionable?
+  visual_hint: 🧬🔬
+  cloze:
+  - 5
+  - 7
+  - 11
+  glossary:
+  - word: clinically actionable
+    meaning: clínicamente accionable / que justifica intervención médica
+    ipa: ˈklɪnɪkli ˈækʃənəbəl
+- id: penetrance-and-surveillance
+  text: Given the incomplete penetrance, how does this alter my biennial MRI surveillance?
+  translation: Dada la penetrancia incompleta, ¿cómo modifica esto mi vigilancia bienal por resonancia magnética?
+  visual_hint: 📊🏥
+  cloze:
+  - 3
+  - 9
+  - 11
+  glossary:
+  - word: penetrance
+    meaning: penetrancia genética
+    ipa: ˈpenɪtrəns
+- id: cascade-testing-relatives
+  text: What is the recommended protocol for cascade genetic testing among first-degree relatives?
+  translation: ¿Cuál es el protocolo recomendado para pruebas genéticas en cascada entre familiares de primer grado?
+  visual_hint: 👨‍👩‍👧‍👦🧬
+  cloze:
+  - 6
+  - 8
+  - 10
+  glossary:
+  - word: cascade genetic testing
+    meaning: estudio genético en cascada para familiares
+    ipa: kæˈskeɪd dʒəˈnetɪk ˈtestɪŋ
+- id: idm-zero-in-on-c2
+  text: Targeted sequencing allowed the lab to zero in on the pathogenic mutation.
+  translation: La secuenciación dirigida permitió al laboratorio centrarse exactamente en la mutación patogénica. (zero in on)
+  visual_hint: 🎯🧬
+  cloze:
+  - 6
+  - 7
+  - 8
+  glossary:
+  - word: zero in on
+    meaning: enfocarse con precisión en
+    ipa: ˈzɪroʊ ɪn ɒn
+  kind: phrasal_verb
+  apply_sentence: The research team managed to ____ the exact regulatory gene responsible.
+  apply_answer: zero in on
+  apply_translation: El equipo de investigación logró enfocarse con precisión en el gen regulador responsable.
+- id: idm-food-for-thought-c2
+  text: Your risk-stratification model certainly gives our family serious food for thought.
+  translation: Su modelo de estratificación de riesgo sin duda le da a nuestra familia mucho en qué pensar. (food for thought)
+  visual_hint: 💭📋
+  cloze:
+  - 8
+  - 9
+  - 10
+  glossary:
+  - word: food for thought
+    meaning: tema para reflexionar detenidamente
+    ipa: fuːd fɔːr θɔːt
+  kind: idiom
+  apply_sentence: The long-term outcomes data provided considerable ____ for the ethics panel.
+  apply_answer: food for thought
+  apply_translation: Los datos de resultados a largo plazo dieron considerable material de reflexión al comité de ética.
+roleplay:
+  ai_role: certified genetic counselor
+  user_role: patient
+  setting: Precision medicine and hereditary oncology consultation room.
+  turns:
+  - speaker: ai
+    text: Thank you for coming in. Your 42-gene hereditary panel returned one finding we should examine closely.
+  - speaker: user
+    goal: Pregunta si la variante de significado incierto es clínicamente accionable y cómo afecta tu vigilancia por resonancia.
+    suggested_lines:
+    - Should we treat this BRCA variant of uncertain significance as clinically actionable?
+    - Given the incomplete penetrance, how does this alter my biennial MRI surveillance?
+  - speaker: ai
+    text: Current guidelines classify a VUS as non-actionable on its own, so we base screening intensity on your family pedigree rather than the variant alone.
+  - speaker: user
+    goal: Consulta el protocolo de pruebas en cascada para familiares de primer grado y reflexiona sobre el modelo de riesgo.
+    suggested_lines:
+    - What is the recommended protocol for cascade genetic testing among first-degree relatives?
+    - Your risk-stratification model certainly gives our family serious food for thought.
+  - speaker: ai
+    text: We can issue a family sharing letter and re-evaluate the variant annually as genomic databases mature.

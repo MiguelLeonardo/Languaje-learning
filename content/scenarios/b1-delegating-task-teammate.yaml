@@ -1,0 +1,111 @@
+id: b1-delegating-task-teammate
+title: Delegating a task to a teammate
+title_es: Delegar una tarea a un compañero
+cefr: B1
+topic: work-and-career
+description: Explica el contexto de una tarea, aclara los entregables y la fecha límite
+  y ofrece apoyo si surge alguna duda.
+phrases:
+- id: pass-task-to-you
+  text: Could you take over the monthly newsletter draft this week?
+  translation: ¿Podrías encargarte del borrador del boletín mensual esta semana?
+  visual_hint: 📰🤝
+  cloze:
+  - 2
+  - 3
+  - 6
+  glossary:
+  - word: take over
+    meaning: encargarse de / asumir
+    ipa: teɪk ˈoʊvər
+  - word: draft
+    meaning: borrador
+    ipa: dræft
+- id: clarify-deliverable
+  text: We just need three short customer stories and two images.
+  translation: Solo necesitamos tres historias cortas de clientes y dos imágenes.
+  visual_hint: 📝🖼️
+  cloze:
+  - 2
+  - 4
+  - 6
+  glossary:
+  - word: customer stories
+    meaning: historias de clientes / casos
+    ipa: ˈkʌstəmər ˈstɔːriz
+  - word: images
+    meaning: imágenes
+    ipa: ˈɪmɪdʒɪz
+- id: offer-support-if-stuck
+  text: Let me know if you need any background files or templates.
+  translation: Avísame si necesitas algún archivo de referencia o plantillas.
+  visual_hint: 📁💬
+  cloze:
+  - 3
+  - 6
+  - 9
+  glossary:
+  - word: background files
+    meaning: archivos de contexto o referencia
+    ipa: ˈbækɡraʊnd faɪlz
+  - word: templates
+    meaning: plantillas
+    ipa: ˈtempleɪts
+- id: idm-hand-off
+  text: I want to hand off this task while I focus on the launch.
+  translation: 'Quiero delegar esta tarea mientras me enfoco en el lanzamiento. (hand off: pasar / delegar)'
+  visual_hint: 🏃‍♂️📦
+  cloze:
+  - 4
+  - 5
+  - 10
+  glossary:
+  - word: hand off
+    meaning: delegar / entregar la responsabilidad
+    ipa: hænd ɔːf
+  kind: phrasal_verb
+  apply_sentence: Before my vacation, I will ____ my open tickets to Alex.
+  apply_answer: hand off
+  apply_translation: Antes de mis vacaciones, le delegaré mis tickets abiertos a Alex.
+- id: idm-touch-base
+  text: Let's touch base on Wednesday afternoon to review your progress.
+  translation: 'Hablemos brevemente el miércoles por la tarde para revisar tu avance. (touch base: ponerse en contacto)'
+  visual_hint: 📅🗣️
+  cloze:
+  - 1
+  - 2
+  - 7
+  glossary:
+  - word: touch base
+    meaning: hablar brevemente / ponerse al día
+    ipa: tʌtʃ beɪs
+  kind: expression
+  apply_sentence: I will ____ with the designer tomorrow morning.
+  apply_answer: touch base
+  apply_translation: Me pondré en contacto con el diseñador mañana por la mañana.
+roleplay:
+  ai_role: teammate
+  user_role: project coordinator
+  setting: Quick 1-on-1 chat at the office or on Slack.
+  turns:
+  - speaker: ai
+    text: Hey! You mentioned you needed help with something before Friday?
+  - speaker: user
+    goal: Explica que quieres delegar el borrador del boletín mensual mientras te enfocas en el lanzamiento.
+    suggested_lines:
+    - Could you take over the monthly newsletter draft this week? I want to hand off this task while I focus on the launch.
+    - Yes, I want to hand off the monthly newsletter draft while I focus on the launch.
+  - speaker: ai
+    text: Sure, I have some bandwidth tomorrow. What exactly should I include?
+  - speaker: user
+    goal: Aclara que solo se necesitan tres historias cortas de clientes y dos imágenes, y ofrece plantillas.
+    suggested_lines:
+    - We just need three short customer stories and two images. Let me know if you need any background files or templates.
+    - Just three short customer stories and two images, and I can send you the templates.
+  - speaker: ai
+    text: Sounds clear! When should we check the first version?
+  - speaker: user
+    goal: Propón hablar brevemente el miércoles por la tarde para revisar el avance.
+    suggested_lines:
+    - Let's touch base on Wednesday afternoon to review your progress.
+    - How about we touch base on Wednesday afternoon?

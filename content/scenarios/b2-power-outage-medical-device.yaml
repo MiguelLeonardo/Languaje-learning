@@ -1,0 +1,93 @@
+id: b2-power-outage-medical-device
+title: Requesting backup power for a medical device
+title_es: Solicitar respaldo eléctrico para equipo médico en corte de luz
+cefr: B2
+topic: health-and-emergencies
+description: Solicita en la recepción del hotel una habitación con generador de respaldo
+  durante un apagón para alimentar tu equipo médico nocturno.
+phrases:
+- id: backup-generator
+  text: The neighborhood lost power, and my medical device needs continuous electricity.
+  translation: El vecindario se quedó sin luz y mi equipo médico necesita electricidad continua.
+  visual_hint: 🔌🏥
+  cloze:
+  - 2
+  - 3
+  - 9
+  glossary:
+  - word: continuous
+    meaning: continuo / ininterrumpido
+    ipa: kənˈtɪnjuəs
+- id: battery-reserve
+  text: My portable battery will only last another three hours overnight.
+  translation: Mi batería portátil solo durará otras tres horas durante la noche.
+  visual_hint: 🔋⏳
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: battery
+    meaning: batería
+    ipa: ˈbætəri
+- id: priority-outlet
+  text: Could you move me to a room connected to the backup generator?
+  translation: ¿Podrían cambiarme a una habitación conectada al generador de respaldo?
+  visual_hint: ⚡🏨
+  cloze:
+  - 10
+  - 11
+  glossary:
+  - word: backup generator
+    meaning: generador de respaldo
+    ipa: ˈbækʌp ˈdʒenəreɪtər
+- id: idm-cut-out-b2
+  text: The main power cut out right after the thunderstorm started.
+  translation: La electricidad principal se cortó justo después de empezar la tormenta. (cut out = cortarse / apagarse)
+  visual_hint: ⛈️💡
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: cut out
+    meaning: cortarse / dejar de funcionar
+    ipa: kʌt aʊt
+  kind: phrasal_verb
+  apply_sentence: The Wi-Fi tends to ____ whenever the microwave is on.
+  apply_answer: cut out
+  apply_translation: El Wi-Fi suele cortarse cada vez que el microondas está encendido.
+- id: idm-depend-on-b2
+  text: I depend on this breathing machine to sleep safely every night.
+  translation: Dependo de esta máquina para respirar y dormir seguro cada noche. (depend on = depender de)
+  visual_hint: 😴💨
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: depend on
+    meaning: depender de
+    ipa: dɪˈpend ɒn
+  kind: phrasal_verb
+  apply_sentence: Many travelers ____ offline maps when visiting remote areas.
+  apply_answer: depend on
+  apply_translation: Muchos viajeros dependen de mapas sin conexión al visitar zonas remotas.
+roleplay:
+  ai_role: hotel night manager
+  user_role: guest
+  setting: Hotel lobby illuminated by emergency lighting during a blackout.
+  turns:
+  - speaker: ai
+    text: Good evening. We apologize for the outage—the utility company is working on a downed line.
+  - speaker: user
+    goal: Explica que tu equipo médico necesita corriente continua y que tu batería solo dura tres horas.
+    suggested_lines:
+    - The neighborhood lost power, and my medical device needs continuous electricity.
+    - My portable battery will only last another three hours overnight.
+  - speaker: ai
+    text: I completely understand. Medical needs take top priority during an outage.
+  - speaker: user
+    goal: Pide que te reubiquen en una habitación conectada al generador de respaldo.
+    suggested_lines:
+    - Could you move me to a room connected to the backup generator?
+    - I depend on this breathing machine to sleep safely every night.
+  - speaker: ai
+    text: Our first-floor accessible suites are wired to the hospital-grade generator. Let me get you that keycard right now.

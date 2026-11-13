@@ -1,0 +1,91 @@
+id: c2-gastronomic-heritage-preservation
+title: Debating culinary heritage preservation
+title_es: Debate sobre patrimonio gastronómico
+cefr: C2
+topic: food-and-drink
+description: Debate en un panel sobre preservación de recetas ancestrales frente a la reinterpretación contemporánea.
+phrases:
+- id: culinary-canon
+  text: Reinterpreting a regional dish shouldn't erase the producers who safeguarded its culinary canon.
+  translation: Reinterpretar un plato regional no debería borrar a los productores que resguardaron su canon culinario.
+  visual_hint: 📜🍲
+  cloze:
+  - 4
+  - 11
+  glossary:
+  - word: culinary canon
+    meaning: canon o repertorio culinario tradicional
+    ipa: ˈkʌlɪneri ˈkænən
+- id: provenance-and-credit
+  text: Without explicit provenance and credit, fusion menus risk flattening centuries of technique.
+  translation: Sin procedencia ni reconocimiento explícitos, los menús fusión corren el riesgo de diluir siglos de técnica.
+  visual_hint: 🗺️🍽️
+  cloze:
+  - 2
+  - 8
+  glossary:
+  - word: provenance
+    meaning: procedencia / origen documentado
+    ipa: ˈprɑːvənəns
+- id: living-tradition
+  text: Authenticity is a living tradition rather than a museum artifact frozen in amber.
+  translation: La autenticidad es una tradición viva más que una pieza de museo congelada en el tiempo.
+  visual_hint: 🏺🌱
+  cloze:
+  - 4
+  - 7
+  glossary:
+  - word: living tradition
+    meaning: tradición viva y en evolución
+    ipa: ˈlɪvɪŋ trəˈdɪʃən
+- id: water-down
+  text: Shortcuts in fermentation inevitably water down the depth of ancestral mole pastes.
+  translation: 'Los atajos en la fermentación inevitablemente diluyen la profundidad de los moles ancestrales. (water down: diluir / rebajar)'
+  visual_hint: 🌶️🍫
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: water down
+    meaning: 'water down: diluir / restar fuerza o autenticidad'
+    ipa: ˈwɔːtər daʊn
+  kind: phrasal_verb
+  apply_sentence: Over-simplifying regional spice blends tends to ____ their cultural identity.
+  apply_answer: water down
+  apply_translation: Simplificar en exceso las mezclas regionales de especias tiende a diluir su identidad cultural.
+- id: walk-a-fine-line
+  text: Chefs walk a fine line between honoring heritage and innovating for modern palates.
+  translation: 'Los chefs caminan sobre una línea muy fina entre honrar el legado e innovar para paladares modernos. (walk a fine line: mantener un equilibrio delicado)'
+  visual_hint: ⚖️👨‍🍳
+  cloze:
+  - 1
+  - 4
+  glossary:
+  - word: walk a fine line
+    meaning: 'walk a fine line: guardar un equilibrio delicado'
+    ipa: wɔːk ə faɪn laɪn
+  kind: idiom
+  apply_sentence: Food historians ____ when documenting oral recipes without imposing rigid rules.
+  apply_answer: walk a fine line
+  apply_translation: Los historiadores gastronómicos mantienen un equilibrio delicado al documentar recetas orales sin imponer reglas rígidas.
+roleplay:
+  ai_role: culinary anthropologist
+  user_role: panelist chef
+  setting: A live roundtable at an international food culture symposium.
+  turns:
+  - speaker: ai
+    text: Some critics argue that fine-dining adaptations inevitably dilute traditional street food. Where do you stand?
+  - speaker: user
+    goal: Defiende que la autenticidad es una tradición viva, pero exige crédito y procedencia claros.
+    suggested_lines:
+    - Authenticity is a living tradition, yet reinterpreting a dish shouldn't erase the producers behind its culinary canon.
+    - Without explicit provenance and credit, fusion menus risk flattening centuries of technique.
+  - speaker: ai
+    text: Fair point. Do you think technique shortcuts are the main culprit behind that dilution?
+  - speaker: user
+    goal: Señala que los atajos diluyen la profundidad y que los chefs caminan sobre una línea fina al innovar.
+    suggested_lines:
+    - Yes—shortcuts water down complexity, so chefs must walk a fine line between honoring heritage and innovating.
+    - Exactly; we walk a fine line whenever we adapt regional classics without watering down their soul.
+  - speaker: ai
+    text: A compelling distinction—thank you for bringing nuance to the discussion.

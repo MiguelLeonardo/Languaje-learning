@@ -1,0 +1,108 @@
+id: c1-bridal-boutique-trunk-show
+title: Ordering a gown at a bridal trunk show
+title_es: Negociar confección a medida en boutique nupcial
+cefr: C1
+topic: hotel-and-shopping
+description: Negocia modificaciones de diseño, cargos por entrega urgente y plazos de depósito
+  en una boutique nupcial.
+phrases:
+- id: hollow-to-hem-measure
+  text: Could the atelier customize the hollow-to-hem measurement to avoid costly lace alterations
+    later?
+  translation: ¿Podría el taller personalizar el largo del escote al ruedo para evitar ajustes
+    costosos al encaje después?
+  visual_hint: 👗📏
+  cloze:
+  - 5
+  - 10
+  glossary:
+  - word: hollow-to-hem
+    meaning: medida del hueco del cuello al ruedo
+    ipa: ˈhɑːloʊ tə hem
+  - word: alterations
+    meaning: ajustes / composturas
+    ipa: ˌɔːltəˈreɪʃənz
+- id: waive-rush-surcharge
+  text: Given the trunk-show promotion, would the designer waive the expedited production
+    surcharge?
+  translation: Dada la promoción del desfile privado, ¿el diseñador condonaría el recargo
+    por producción urgente?
+  visual_hint: ⏳💐
+  cloze:
+  - 7
+  - 9
+  glossary:
+  - word: waive
+    meaning: condonar / eximir
+    ipa: weɪv
+  - word: expedited
+    meaning: urgente / acelerada
+    ipa: ˈekspədaɪtɪd
+- id: split-deposit-schedule
+  text: We'd prefer a fifty-percent deposit upon ordering and the balance upon final inspection.
+  translation: Preferiríamos un depósito del cincuenta por ciento al ordenar y el saldo tras
+    la inspección final.
+  visual_hint: 💳📝
+  cloze:
+  - 4
+  - 9
+  glossary:
+  - word: deposit
+    meaning: anticipo / depósito
+    ipa: dɪˈpɑːzɪt
+  - word: balance
+    meaning: saldo restante
+    ipa: ˈbæləns
+- id: idm-pin-down-timeline
+  text: Let's pin down the exact fitting timeline before we authorize the order.
+  translation: Fijemos con exactitud el calendario de pruebas antes de autorizar el pedido.
+  visual_hint: 📅📌
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: pin down
+    meaning: fijar / concretar con exactitud
+    ipa: pɪn daʊn
+  kind: phrasal_verb
+  apply_sentence: We must ____ the delivery date in writing.
+  apply_answer: pin down
+  apply_translation: Debemos concretar la fecha de entrega por escrito.
+- id: idm-peace-of-mind
+  text: Having a written fabric swatch guarantee gives me tremendous peace of mind.
+  translation: Tener una garantía por escrito de la muestra de tela me da muchísima tranquilidad.
+  visual_hint: 🧵😌
+  cloze:
+  - 8
+  - 10
+  glossary:
+  - word: peace of mind
+    meaning: tranquilidad
+    ipa: piːs əv maɪnd
+  kind: idiom
+  apply_sentence: Insurance on custom couture offers real ____.
+  apply_answer: peace of mind
+  apply_translation: El seguro en alta costura a medida ofrece verdadera tranquilidad.
+roleplay:
+  ai_role: bridal stylist
+  user_role: bride
+  setting: An upscale bridal salon during a designer trunk show.
+  turns:
+  - speaker: ai
+    text: You look stunning in that silk gown! Since the designer is here today, we can discuss
+      custom tweaks.
+  - speaker: user
+    goal: Pregunta si pueden personalizar el largo desde el taller y si eximen el cargo urgente.
+    suggested_lines:
+    - Could the atelier customize the hollow-to-hem measurement to avoid costly lace alterations
+      later?
+    - Given the trunk-show promotion, would the designer waive the expedited production surcharge?
+  - speaker: ai
+    text: Yes, custom hollow-to-hem is included today, and we can waive half the rush fee.
+  - speaker: user
+    goal: Propón pagar 50% de anticipo y concretar el calendario exacto de pruebas.
+    suggested_lines:
+    - We'd prefer a fifty-percent deposit upon ordering and the balance upon final inspection.
+    - Let's pin down the exact fitting timeline before we authorize the order.
+  - speaker: ai
+    text: Deal! I'll note your three fitting dates right on the contract.

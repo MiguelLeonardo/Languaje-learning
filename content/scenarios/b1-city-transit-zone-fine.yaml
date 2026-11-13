@@ -1,0 +1,98 @@
+id: b1-city-transit-zone-fine
+title: Resolving a transit zone fare issue
+title_es: Resolver un problema de zona en el transporte
+cefr: B1
+topic: travel-and-transport
+description: Explica al inspector de boletos una confusión con las zonas tarifarias
+  y paga la diferencia sin complicaciones.
+phrases:
+- id: thought-zone-covered
+  text: I thought my day pass covered all central metro zones.
+  translation: Pensé que mi pase diario cubría todas las zonas centrales del metro.
+  visual_hint: 🚇🗺️
+  cloze:
+  - 5
+  - 9
+  glossary:
+  - word: covered
+    meaning: cubría / incluía
+    ipa: ˈkʌvərd
+  - word: zones
+    meaning: zonas tarifarias
+    ipa: zoʊnz
+- id: ticket-machine-broken
+  text: The validation machine on the platform was out of order.
+  translation: La máquina validadora en el andén estaba fuera de servicio.
+  visual_hint: 🚫🎫
+  cloze:
+  - 1
+  - 7
+  glossary:
+  - word: validation machine
+    meaning: máquina validadora
+    ipa: ˌvælɪˈdeɪʃən məˈʃiːn
+  - word: out of order
+    meaning: fuera de servicio
+    ipa: aʊt əv ˈɔːrdər
+- id: pay-fare-difference
+  text: Can I pay the fare difference right here with my card?
+  translation: ¿Puedo pagar la diferencia de tarifa aquí mismo con mi tarjeta?
+  visual_hint: 💳🚋
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: fare difference
+    meaning: diferencia de tarifa
+    ipa: fer ˈdɪfrəns
+- id: transit-mix-up
+  text: I apologize for the mix-up; the zone map was confusing.
+  translation: Pido disculpas por la confusión; el mapa de zonas era confuso. (mix-up = confusión)
+  visual_hint: 😕🗺️
+  cloze:
+  - 4
+  - 6
+  glossary:
+  - word: mix-up
+    meaning: confusión / malentendido
+    ipa: ˈmɪksʌp
+  kind: expression
+  apply_sentence: There was a ____ with our train seat numbers.
+  apply_answer: mix-up
+  apply_translation: Hubo una confusión con los números de nuestros asientos de tren.
+- id: transit-let-off
+  text: Since it is my first mistake, could you let me off with a warning?
+  translation: Como es mi primer error, ¿podría dejarme ir con una advertencia? (let off = perdonar / dejar pasar)
+  visual_hint: 🙏🎫
+  cloze:
+  - 8
+  - 10
+  glossary:
+  - word: let off
+    meaning: perdonar / dejar sin castigo
+    ipa: let ɔːf
+  kind: phrasal_verb
+  apply_sentence: The officer decided to ____ the driver with a polite reminder.
+  apply_answer: let off
+  apply_translation: El oficial decidió dejar ir al conductor con un recordatorio amable.
+roleplay:
+  ai_role: transit ticket inspector
+  user_role: passenger
+  setting: A commuter train platform just outside the central city fare zone.
+  turns:
+  - speaker: ai
+    text: Tickets, please. Excuse me, your pass is only valid for zone one, and we are in zone three.
+  - speaker: user
+    goal: Discúlpate por la confusión y explica que pensabas que el pase cubría las zonas centrales.
+    suggested_lines:
+    - I apologize for the mix-up; the zone map was confusing. I thought my day pass covered all central metro zones.
+    - Sorry about the mix-up. I thought my day pass covered this zone.
+  - speaker: ai
+    text: Normally there is a forty-euro surcharge for traveling outside your zone.
+  - speaker: user
+    goal: Explica que es tu primer error, pide una advertencia o pregunta si puedes pagar la diferencia con tarjeta.
+    suggested_lines:
+    - Since it is my first mistake, could you let me off with a warning? Can I pay the fare difference right here with my card?
+    - Can I pay the fare difference with my card, or could you let me off with a warning?
+  - speaker: ai
+    text: Since you are visiting, I will just charge you the three-euro fare difference today.

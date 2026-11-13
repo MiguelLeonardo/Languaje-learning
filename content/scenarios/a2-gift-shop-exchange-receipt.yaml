@@ -1,0 +1,95 @@
+id: a2-gift-shop-exchange-receipt
+title: Exchanging a gift with a receipt
+title_es: Cambiar un regalo con ticket de cambio
+cefr: A2
+topic: hotel-and-shopping
+description: Usa un ticket de regalo para cambiar un suéter por otro color o talla.
+phrases:
+- id: gift-receipt-exchange
+  text: I received this sweater as a gift and have a gift receipt.
+  translation: Recibí este suéter de regalo y tengo un ticket de cambio.
+  visual_hint: 🎁🧾
+  cloze:
+  - 10
+  - 11
+  glossary:
+  - word: gift receipt
+    meaning: ticket de cambio (sin precio)
+    ipa: ɡɪft rɪˈsiːt
+- id: exchange-different-color
+  text: Can I exchange it for a dark green one instead?
+  translation: ¿Puedo cambiarlo por uno verde oscuro en su lugar?
+  visual_hint: 🧥💚
+  cloze:
+  - 2
+  - 9
+  glossary:
+  - word: exchange
+    meaning: cambiar / intercambiar
+    ipa: ɪksˈtʃeɪndʒ
+  - word: instead
+    meaning: en su lugar
+    ipa: ɪnˈsted
+- id: store-credit-option
+  text: If my size is sold out, can I get store credit?
+  translation: Si mi talla está agotada, ¿puedo obtener crédito en tienda?
+  visual_hint: 💳🏬
+  cloze:
+  - 9
+  - 10
+  glossary:
+  - word: store credit
+    meaning: crédito en tienda
+    ipa: stɔːr ˈkredɪt
+- id: idm-sold-out-color
+  text: Unfortunately, the navy blue sweater is completely sold out.
+  translation: Lamentablemente, el suéter azul marino está completamente agotado.
+  visual_hint: ❌🛍️
+  cloze:
+  - 7
+  - 8
+  glossary:
+  - word: sold out
+    meaning: agotado
+    ipa: soʊld aʊt
+  kind: phrasal_verb
+  apply_sentence: All the winter coats in medium are ____.
+  apply_answer: sold out
+  apply_translation: Todos los abrigos de invierno en talla mediana están agotados.
+- id: idm-keep-tags-on
+  text: Yes, I made sure to keep the tags on.
+  translation: Sí, me aseguré de dejar las etiquetas puestas.
+  visual_hint: 🏷️✅
+  cloze:
+  - 6
+  - 8
+  glossary:
+  - word: keep the tags on
+    meaning: dejar las etiquetas puestas
+    ipa: kiːp ðə tæɡz ɑːn
+  kind: expression
+  apply_sentence: You can only return clothes if you ____.
+  apply_answer: keep the tags on
+  apply_translation: Solo puedes devolver ropa si dejas las etiquetas puestas.
+roleplay:
+  ai_role: customer service clerk
+  user_role: shopper
+  setting: Customer service desk at a department store.
+  turns:
+  - speaker: ai
+    text: Hello! Are you doing a return or an exchange today?
+  - speaker: user
+    goal: Explica que recibiste el suéter de regalo, tienes el ticket de cambio y dejaste
+      las etiquetas.
+    suggested_lines:
+    - I received this sweater as a gift and have a gift receipt.
+    - Yes, I made sure to keep the tags on.
+  - speaker: ai
+    text: Great, everything is in order. Would you like a different size or color?
+  - speaker: user
+    goal: Pregunta si puedes cambiarlo por uno verde oscuro o pedir crédito en tienda.
+    suggested_lines:
+    - Can I exchange it for a dark green one instead?
+    - If my size is sold out, can I get store credit?
+  - speaker: ai
+    text: We have dark green right on that rack! Let me swap it for you.

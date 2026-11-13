@@ -1,0 +1,103 @@
+id: a2-board-game-night
+title: Organizing a board game night with friends
+title_es: Organizar una noche de juegos de mesa
+cefr: A2
+topic: social-and-smalltalk
+description: Invita a tus amigos a una noche de juegos de mesa, decide qué jugar y organiza los bocadillos.
+phrases:
+- id: host-game-night
+  text: Let's have a board game night at my place on Friday.
+  translation: Hagamos una noche de juegos de mesa en mi casa el viernes.
+  visual_hint: 🎲🏠
+  cloze:
+  - 3
+  - 4
+  - 7
+  glossary:
+  - word: board game
+    meaning: juego de mesa
+    ipa: bɔːrd ɡeɪm
+  - word: at my place
+    meaning: en mi casa
+    ipa: æt maɪ pleɪs
+- id: bring-snacks-drinks
+  text: I will make popcorn, and everyone can bring a snack.
+  translation: Yo haré palomitas y cada uno puede traer un bocadillo.
+  visual_hint: 🍿🥤
+  cloze:
+  - 3
+  - 6
+  - 9
+  glossary:
+  - word: popcorn
+    meaning: palomitas de maíz
+    ipa: ˈpɑːpkɔːrn
+  - word: snack
+    meaning: bocadillo / aperitivo
+    ipa: snæk
+- id: explain-the-rules
+  text: Don't worry if it's new; I can explain the rules quickly.
+  translation: No te preocupes si es nuevo; puedo explicar las reglas rápido.
+  visual_hint: 📖🎲
+  cloze:
+  - 1
+  - 7
+  - 9
+  glossary:
+  - word: worry
+    meaning: preocuparse
+    ipa: ˈwɜːri
+  - word: rules
+    meaning: reglas
+    ipa: ruːlz
+- id: idm-a2bg-count-me-in
+  text: A game night with pizza? Count me in!
+  translation: ¿Una noche de juegos con pizza? ¡Cuenten conmigo! (aceptar con entusiasmo).
+  visual_hint: 🍕🙋
+  cloze:
+  - 5
+  - 7
+  glossary:
+  - word: count me in
+    meaning: cuenta conmigo
+    ipa: kaʊnt miː ɪn
+  kind: idiom
+  apply_sentence: If you are going hiking tomorrow, ____!
+  apply_answer: count me in
+  apply_translation: Si van a hacer senderismo mañana, ¡cuenten conmigo!
+- id: idm-a2bg-take-turns
+  text: We will take turns rolling the dice and moving our pieces.
+  translation: Nos turnaremos para tirar los dados y mover nuestras fichas (hacer algo por orden).
+  visual_hint: 🎲🔄
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: take turns
+    meaning: turnarse
+    ipa: teɪk tɜːrnz
+  kind: expression
+  apply_sentence: Let's ____ driving during the long road trip.
+  apply_answer: take turns
+  apply_translation: Turnémonos para conducir durante el viaje largo por carretera.
+roleplay:
+  ai_role: friend (Nora)
+  user_role: host
+  setting: Group chat voice call on Wednesday evening.
+  turns:
+  - speaker: ai
+    text: Hey! Everyone is free this Friday night. What should we do?
+  - speaker: user
+    goal: Propón hacer una noche de juegos de mesa en tu casa y menciona qué bocadillos habrá.
+    suggested_lines:
+    - Let's have a board game night at my place on Friday.
+    - I will make popcorn, and everyone can bring a snack.
+  - speaker: ai
+    text: Oh, count me in! Which game should we play? I haven't played Catan before.
+  - speaker: user
+    goal: Tranquilízala diciendo que puedes explicar las reglas rápido y que se turnarán.
+    suggested_lines:
+    - Don't worry if it's new; I can explain the rules quickly.
+    - It's easy to learn, and we will take turns.
+  - speaker: ai
+    text: Perfect! I'll bring some chips and soda at seven.

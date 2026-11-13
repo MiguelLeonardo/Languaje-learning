@@ -1,0 +1,98 @@
+id: b1-motion-sickness-ferry
+title: Asking for seasickness remedies on a ferry
+title_es: Pedir remedio para el mareo en un ferry
+cefr: B1
+topic: health-and-emergencies
+description: Pide pastillas para el mareo en el mostrador de un ferry y busca un lugar
+  ventilado en cubierta.
+phrases:
+- id: getting-seasick
+  text: I'm starting to feel seasick from the rough waves.
+  translation: Estoy empezando a sentir mareo por el oleaje fuerte.
+  visual_hint: ⛴️🤢
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: seasick
+    meaning: mareado por el barco
+    ipa: ˈsiːsɪk
+  - word: rough waves
+    meaning: oleaje fuerte
+    ipa: rʌf weɪvz
+- id: motion-sickness-tablets
+  text: Do you sell motion sickness tablets at the snack bar?
+  translation: ¿Venden pastillas para el mareo en la cafetería del barco?
+  visual_hint: 💊⛴️
+  cloze:
+  - 3
+  - 4
+  - 5
+  glossary:
+  - word: motion sickness tablets
+    meaning: pastillas para el mareo
+    ipa: ˈmoʊʃən ˈsɪknəs ˈtæblɪts
+- id: fresh-air-deck
+  text: Is there an open deck outside where I can get fresh air?
+  translation: ¿Hay una cubierta abierta afuera donde pueda tomar aire fresco?
+  visual_hint: 🌬️🌊
+  cloze:
+  - 4
+  - 10
+  - 11
+  glossary:
+  - word: open deck
+    meaning: cubierta abierta
+    ipa: ˈoʊpən dek
+- id: idm-kick-in-b1
+  text: How long does it take for the tablet to kick in?
+  translation: ¿Cuánto tarda la pastilla en hacer efecto? (kick in = hacer efecto)
+  visual_hint: ⏱️💊
+  cloze:
+  - 9
+  - 10
+  glossary:
+  - word: kick in
+    meaning: empezar a hacer efecto
+    ipa: kɪk ɪn
+  kind: phrasal_verb
+  apply_sentence: Wait twenty minutes for the painkiller to ____.
+  apply_answer: kick in
+  apply_translation: Espera veinte minutos a que el analgésico haga efecto.
+- id: idm-hang-in-there-b1
+  text: Just hang in there until we reach the calm harbor.
+  translation: Solo aguanta un poco hasta que lleguemos al puerto tranquilo. (hang in there = aguantar)
+  visual_hint: ⚓💪
+  cloze:
+  - 1
+  - 2
+  - 3
+  glossary:
+  - word: hang in there
+    meaning: aguantar / resistir
+    ipa: hæŋ ɪn ðer
+  kind: idiom
+  apply_sentence: The trip is almost over, so ____ for ten more minutes.
+  apply_answer: hang in there
+  apply_translation: El viaje casi termina, así que aguanta diez minutos más.
+roleplay:
+  ai_role: ferry crew member
+  user_role: passenger
+  setting: Passenger ferry cabin during choppy seas.
+  turns:
+  - speaker: ai
+    text: Hello! You look a little pale. Is the crossing bothering you?
+  - speaker: user
+    goal: Explica que estás empezando a marearte y pregunta si venden pastillas para el mareo.
+    suggested_lines:
+    - I'm starting to feel seasick from the rough waves.
+    - Do you sell motion sickness tablets at the snack bar?
+  - speaker: ai
+    text: Yes, we have ginger chews and motion sickness tablets right behind the counter.
+  - speaker: user
+    goal: Pregunta cuánto tarda en hacer efecto y dónde puedes salir a tomar aire fresco.
+    suggested_lines:
+    - How long does it take for the tablet to kick in?
+    - Is there an open deck outside where I can get fresh air?
+  - speaker: ai
+    text: It kicks in within fifteen minutes. Step out onto the upper deck and look at the horizon!

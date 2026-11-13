@@ -1,0 +1,95 @@
+id: b2-tech-podcast-editing-workflow
+title: Editing a podcast episode
+title_es: Editar un episodio de pódcast
+cefr: B2
+topic: daily-tech-and-media
+description: Limpia el ruido de fondo, nivela las voces y prepara la exportación final de un episodio de pódcast.
+phrases:
+- id: ambient-background-hum
+  text: The raw recording picked up a faint ambient hum from the air conditioner.
+  translation: La grabación en bruto captó un leve zumbido ambiental del aire acondicionado.
+  visual_hint: 🎙️🌬️
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: ambient hum
+    meaning: zumbido ambiental de fondo
+    ipa: ˈæmbiənt hʌm
+- id: balance-vocal-levels
+  text: We need to balance both vocal tracks so neither host sounds louder.
+  translation: Necesitamos equilibrar ambas pistas de voz para que ningún anfitrión suene más fuerte.
+  visual_hint: 🎚️🗣️
+  cloze:
+  - 3
+  - 5
+  glossary:
+  - word: vocal tracks
+    meaning: pistas de voz
+    ipa: ˈvoʊkəl træks
+- id: export-compressed-mp3
+  text: Export the final mix as a stereo MP3 with embedded chapter markers.
+  translation: Exporta la mezcla final como MP3 estéreo con marcadores de capítulo incrustados.
+  visual_hint: 🎧💾
+  cloze:
+  - 3
+  - 9
+  glossary:
+  - word: chapter markers
+    meaning: marcadores de capítulo
+    ipa: ˈtʃæptər ˈmɑːrkərz
+- id: idm-iron-out
+  text: Noise reduction plugins can iron out most room echo in seconds.
+  translation: 'Los complementos de reducción de ruido pueden resolver la mayor parte del eco de la sala en segundos. (iron out: pulir / resolver detalles)'
+  visual_hint: 🔊✨
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: iron out
+    meaning: pulir / resolver pequeños problemas
+    ipa: ˈaɪərn aʊt
+  kind: phrasal_verb
+  apply_sentence: Let us do a quick soundcheck to ____ any microphone glitches before recording.
+  apply_answer: iron out
+  apply_translation: Hagamos una prueba de sonido rápida para resolver cualquier fallo del micrófono antes de grabar.
+- id: idm-trim-down
+  text: We should trim down the long pauses to keep the pacing snappy.
+  translation: 'Deberíamos recortar las pausas largas para mantener un ritmo ágil. (trim down: recortar / reducir)'
+  visual_hint: ✂️⏱️
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: trim down
+    meaning: recortar / acortar
+    ipa: trɪm daʊn
+  kind: phrasal_verb
+  apply_sentence: The editor had to ____ the forty-minute interview to fit the broadcast slot.
+  apply_answer: trim down
+  apply_translation: El editor tuvo que recortar la entrevista de cuarenta minutos para ajustarla al horario de emisión.
+roleplay:
+  ai_role: co-host
+  user_role: audio editor
+  setting: Home studio reviewing a newly recorded episode on a laptop.
+  turns:
+  - speaker: ai
+    text: I just listened to the raw file. Why does my voice sound quieter than yours?
+  - speaker: user
+    goal: Explica que hay un zumbido ambiental y que deben equilibrar ambas pistas de voz.
+    suggested_lines:
+    - The raw recording picked up a faint ambient hum from the air conditioner.
+    - We need to balance both vocal tracks so neither host sounds louder.
+  - speaker: ai
+    text: Makes sense. Can you fix that echo in the room too?
+  - speaker: user
+    goal: Di que los plugins de reducción de ruido lo resuelven y sugiere recortar las pausas largas.
+    suggested_lines:
+    - Noise reduction plugins can iron out most room echo in seconds.
+    - We should trim down the long pauses to keep the pacing snappy.
+  - speaker: ai
+    text: Awesome! What format should we upload to the hosting platform?
+  - speaker: user
+    goal: Indica que exportarán la mezcla final como MP3 estéreo con marcadores de capítulo.
+    suggested_lines:
+    - Export the final mix as a stereo MP3 with embedded chapter markers.

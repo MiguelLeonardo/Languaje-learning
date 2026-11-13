@@ -1,0 +1,90 @@
+id: a2-brunch-patio-table
+title: Ordering brunch on the patio
+title_es: Pedir brunch en la terraza
+cefr: A2
+topic: food-and-drink
+description: Pide una mesa en la terraza, ordena huevos al gusto y pide bebidas de brunch.
+phrases:
+- id: table-outside
+  text: Could we sit at a table on the patio?
+  translation: ¿Podríamos sentarnos en una mesa en la terraza?
+  visual_hint: ☀️🪑
+  cloze:
+  - 7
+  glossary:
+  - word: patio
+    meaning: terraza / patio exterior
+    ipa: ˈpætioʊ
+- id: poached-eggs
+  text: I will have the avocado toast with poached eggs.
+  translation: Voy a pedir la tostada de aguacate con huevos escalfados.
+  visual_hint: 🥑🍳
+  cloze:
+  - 7
+  - 8
+  glossary:
+  - word: poached
+    meaning: escalfado (huevo)
+    ipa: poʊtʃt
+- id: side-of-fruit
+  text: Can I swap the bacon for a side of fruit?
+  translation: ¿Puedo cambiar el tocino por una guarnición de fruta?
+  visual_hint: 🥓➡️🍓
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: swap
+    meaning: cambiar / intercambiar
+    ipa: swɑːp
+- id: eat-out
+  text: We love to eat out on Sunday mornings.
+  translation: 'Nos encanta salir a comer los domingos por la mañana. (eat out: comer fuera)'
+  visual_hint: 🍽️🌞
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: eat out
+    meaning: 'eat out: salir a comer fuera'
+    ipa: iːt aʊt
+  kind: phrasal_verb
+  apply_sentence: I am too tired to cook tonight, so let's ____.
+  apply_answer: eat out
+  apply_translation: Estoy muy cansado para cocinar hoy, así que salgamos a comer.
+- id: hits-the-spot
+  text: A warm latte and fresh toast really hits the spot.
+  translation: 'Un latte caliente y pan tostado caen de maravilla. (hit the spot: caer perfecto)'
+  visual_hint: ☕🍞✨
+  cloze:
+  - 7
+  - 9
+  glossary:
+  - word: hit the spot
+    meaning: 'hit the spot: satisfacer / caer de maravilla'
+    ipa: hɪt ðə spɑːt
+  kind: idiom
+  apply_sentence: Cold lemonade after a long run really ____.
+  apply_answer: hits the spot
+  apply_translation: Una limonada fría después de correr largo cae de maravilla.
+roleplay:
+  ai_role: brunch host and server
+  user_role: weekend diner
+  setting: A bright neighborhood café with an outdoor patio.
+  turns:
+  - speaker: ai
+    text: Good morning! Welcome to Maple Brunch. Table for two?
+  - speaker: user
+    goal: Pregunta si pueden sentarse en una mesa de la terraza.
+    suggested_lines:
+    - Yes, please. Could we sit at a table on the patio?
+    - Two, please. Do you have a table outside on the patio?
+  - speaker: ai
+    text: Right this way! Here are the menus. Are you ready to order?
+  - speaker: user
+    goal: Pide tostada de aguacate con huevos escalfados y pregunta si puedes cambiar el tocino por fruta.
+    suggested_lines:
+    - I will have the avocado toast with poached eggs. Can I swap the bacon for a side of fruit?
+    - Could I get the avocado toast with poached eggs and fruit instead of bacon?
+  - speaker: ai
+    text: No problem at all! I will bring that right out with your coffee.

@@ -1,0 +1,106 @@
+id: c1-defending-headcount-budget
+title: Defending headcount in budget review
+title_es: Defender contratación en revisión de presupuesto
+cefr: C1
+topic: work-and-career
+description: Presenta argumentos basados en datos ante finanzas para aprobar una nueva
+  plaza, cuantifica el costo de oportunidad y ofrece un compromiso por fases.
+phrases:
+- id: quantify-opportunity-cost
+  text: Leaving this role unfilled is costing us roughly forty thousand monthly in delayed deals.
+  translation: Dejar este puesto vacante nos está costando unos cuarenta mil mensuales en acuerdos retrasados.
+  visual_hint: 💸📉
+  cloze:
+  - 3
+  - 6
+  - 11
+  glossary:
+  - word: unfilled
+    meaning: vacante / sin cubrir
+    ipa: ˌʌnˈfɪld
+  - word: roughly
+    meaning: aproximadamente
+    ipa: ˈrʌfli
+- id: distinguish-capex-opex
+  text: This hire will pay for herself within two quarters through faster enterprise onboarding.
+  translation: Esta contratación se pagará sola en dos trimestres gracias a una incorporación empresarial más rápida.
+  visual_hint: 📈💼
+  cloze:
+  - 3
+  - 7
+  - 10
+  glossary:
+  - word: pay for herself
+    meaning: amortizarse / pagarse sola
+    ipa: peɪ fɔːr hɜːrˈself
+  - word: onboarding
+    meaning: incorporación de clientes
+    ipa: ˈɑːnbɔːrdɪŋ
+- id: phased-hiring-compromise
+  text: If we defer the second requisition to Q3, can we greenlight one senior specialist now?
+  translation: Si posponemos la segunda vacante al tercer trimestre, ¿podemos aprobar ahora a un especialista sénior?
+  visual_hint: 🗓️✅
+  cloze:
+  - 2
+  - 5
+  - 10
+  glossary:
+  - word: defer
+    meaning: aplazar / posponer
+    ipa: dɪˈfɜːr
+  - word: greenlight
+    meaning: dar luz verde / aprobar
+    ipa: ˈɡriːnlaɪt
+- id: idm-spread-too-thin
+  text: Our current analysts are spread too thin to absorb another migration.
+  translation: 'Nuestros analistas actuales están demasiado saturados para absorber otra migración. (spread too thin: abarcar demasiado con pocos recursos)'
+  visual_hint: 🧈😰
+  cloze:
+  - 4
+  - 5
+  - 6
+  glossary:
+  - word: spread too thin
+    meaning: sobrecargado / con recursos insuficientes
+    ipa: spred tuː θɪn
+  kind: idiom
+  apply_sentence: With three simultaneous launches, the engineering team is ____.
+  apply_answer: spread too thin
+  apply_translation: Con tres lanzamientos simultáneos, el equipo de ingeniería está demasiado saturado.
+- id: idm-make-a-case
+  text: Let me make a case for prioritizing revenue-generating headcount first.
+  translation: 'Permíteme argumentar a favor de priorizar primero el personal que genera ingresos. (make a case: defender una postura)'
+  visual_hint: ⚖️📊
+  cloze:
+  - 2
+  - 3
+  - 4
+  glossary:
+  - word: make a case
+    meaning: argumentar / defender una propuesta
+    ipa: meɪk ə keɪs
+  kind: expression
+  apply_sentence: She used churn metrics to ____ for hiring two support leads.
+  apply_answer: make a case
+  apply_translation: Usó métricas de abandono para argumentar a favor de contratar dos líderes de soporte.
+roleplay:
+  ai_role: VP of Finance
+  user_role: department director
+  setting: Annual headcount and OPEX review meeting.
+  turns:
+  - speaker: ai
+    text: We are under pressure to keep OPEX flat this half. Why can't your team absorb the workload?
+  - speaker: user
+    goal: Explica que el equipo está sobrecargado y cuantifica el costo de oportunidad mensual de dejar el puesto vacante.
+    suggested_lines:
+    - Our current analysts are spread too thin to absorb another migration. Leaving this role unfilled is costing us roughly forty thousand monthly in delayed deals.
+    - "Let me make a case for this hire: our analysts are spread too thin, and leaving this role unfilled costs us forty thousand monthly."
+  - speaker: ai
+    text: Forty thousand is significant, but two new hires at once is a tough sell right now.
+  - speaker: user
+    goal: Explica el retorno en dos trimestres y propón posponer la segunda vacante al Q3 si aprueban una ahora.
+    suggested_lines:
+    - This hire will pay for herself within two quarters through faster enterprise onboarding. If we defer the second requisition to Q3, can we greenlight one senior specialist now?
+    - If we defer the second requisition to Q3, can we greenlight one senior specialist now? She will pay for herself within two quarters.
+  - speaker: ai
+    text: That phased approach works for finance. Send over the updated Q3 forecast and you have my approval for one role.

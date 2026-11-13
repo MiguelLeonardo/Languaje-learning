@@ -1,0 +1,94 @@
+id: c1-pop-up-restaurant-review
+title: Reviewing a pop-up tasting menu
+title_es: Evaluar un menú degustación pop-up
+cefr: C1
+topic: food-and-drink
+description: Intercambia comentarios constructivos con el chef sobre ritmo del menú, acidez y texturas.
+phrases:
+- id: pacing-of-courses
+  text: The pacing between the seafood courses felt remarkably cohesive tonight.
+  translation: El ritmo entre los platos de mariscos se sintió notablemente cohesivo esta noche.
+  visual_hint: ⏱️🍽️
+  cloze:
+  - 1
+  - 7
+  glossary:
+  - word: pacing
+    meaning: ritmo / cadencia de servicio
+    ipa: ˈpeɪsɪŋ
+  - word: cohesive
+    meaning: cohesivo / bien integrado
+    ipa: koʊˈhiːsɪv
+- id: cut-through-richness
+  text: The pickled elderflower vinaigrette cut through the richness of the duck confit.
+  translation: La vinagreta de flor de saúco encurtida equilibró la untuosidad del confit de pato.
+  visual_hint: 🦆🌼
+  cloze:
+  - 4
+  - 7
+  glossary:
+  - word: richness
+    meaning: untuosidad / intensidad grasa
+    ipa: ˈrɪtʃnəs
+- id: slightly-overseasoned
+  text: If I were to nitpick, the bisque bordered on being slightly overseasoned.
+  translation: Si tuviera que ser exigente, la crema bisque rozó un punto ligeramente pasado de sal.
+  visual_hint: 🥣🧂
+  cloze:
+  - 4
+  - 10
+  glossary:
+  - word: nitpick
+    meaning: buscar detalles mínimos / ser puntilloso
+    ipa: ˈnɪtpɪk
+- id: tone-down
+  text: You might want to tone down the smoke on the dessert course so it doesn't linger.
+  translation: 'Quizás convenga suavizar el ahumado en el postre para que no invada el final. (tone down: moderar / suavizar)'
+  visual_hint: 🍮💨
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: tone down
+    meaning: 'tone down: moderar / atenuar'
+    ipa: toʊn daʊn
+  kind: phrasal_verb
+  apply_sentence: The sauce is delicious, though we should ____ the chili heat slightly.
+  apply_answer: tone down
+  apply_translation: La salsa está deliciosa, aunque deberíamos moderar un poco el picante del chile.
+- id: hit-the-nail-on-the-head
+  text: You hit the nail on the head regarding the balance between acidity and fat.
+  translation: 'Diste en el clavo respecto al equilibrio entre acidez y grasa. (hit the nail on the head: dar en el clavo)'
+  visual_hint: 🎯⚖️
+  cloze:
+  - 1
+  - 6
+  glossary:
+  - word: hit the nail on the head
+    meaning: 'hit the nail on the head: dar exactamente en el clavo'
+    ipa: hɪt ðə neɪl ɒn ðə hed
+  kind: idiom
+  apply_sentence: The food critic ____ when she praised the crust's crispness.
+  apply_answer: hit the nail on the head
+  apply_translation: La crítica gastronómica dio en el clavo al elogiar lo crujiente de la corteza.
+roleplay:
+  ai_role: pop-up chef
+  user_role: invited food writer
+  setting: A post-service chat at an intimate 20-seat pop-up dining room.
+  turns:
+  - speaker: ai
+    text: Thanks for coming to our preview dinner! I would love your candid thoughts on the tasting menu.
+  - speaker: user
+    goal: Elogia el ritmo entre platos y cómo la vinagreta equilibró la untuosidad del pato.
+    suggested_lines:
+    - The pacing between courses felt remarkably cohesive, and the elderflower vinaigrette cut through the duck's richness.
+    - I loved the pacing tonight—especially how the acidity cut through the richness of the duck confit.
+  - speaker: ai
+    text: Glad that landed well! Was there any dish that felt off-balance or heavy?
+  - speaker: user
+    goal: Da una crítica amable sobre la sal de la crema o sugiere suavizar el ahumado del postre.
+    suggested_lines:
+    - If I were to nitpick, the bisque was slightly overseasoned, and you might tone down the smoke on dessert.
+    - Just one minor note—perhaps tone down the smoke on the final course so the fruit shines.
+  - speaker: ai
+    text: You hit the nail on the head—we noticed that in prep too. We will recalibrate it before opening night!

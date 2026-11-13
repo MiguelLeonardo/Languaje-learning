@@ -1,0 +1,95 @@
+id: c2-daily-hybrid-rituals-burnout
+title: Preventing always-on remote burnout
+title_es: Prevenir el agotamiento por hiperconexión
+cefr: C2
+topic: daily-tech-and-media
+description: Establece límites temporales, normas asíncronas y rituales de desconexión para evitar el desgaste en el trabajo híbrido.
+phrases:
+- id: asynchronous-communication-norms
+  text: Explicit asynchronous communication norms liberate teams from performative instant-reply culture.
+  translation: Las normas explícitas de comunicación asíncrona liberan a los equipos de la cultura de respuesta instantánea performativa.
+  visual_hint: 📨🕊️
+  cloze:
+  - 1
+  - 6
+  glossary:
+  - word: performative
+    meaning: performativo / para aparentar cumplimiento
+    ipa: pərˈfɔːrmətɪv
+- id: cognitive-context-switching
+  text: Unchecked ping notifications fracture deep focus through relentless cognitive context switching.
+  translation: Las notificaciones constantes fragmentan la concentración profunda mediante un cambio de contexto cognitivo implacable.
+  visual_hint: 🔔🧩
+  cloze:
+  - 3
+  - 8
+  glossary:
+  - word: relentless
+    meaning: implacable / incesante
+    ipa: rɪˈlentləs
+- id: temporal-commute-ritual
+  text: Replacing the lost commute with a brief evening walk restores clear temporal boundaries at home.
+  translation: Reemplazar el trayecto perdido con un breve paseo vespertino restaura límites temporales claros en casa.
+  visual_hint: 🚶🌆
+  cloze:
+  - 9
+  - 10
+  glossary:
+  - word: temporal boundaries
+    meaning: límites temporales (entre trabajo y descanso)
+    ipa: ˈtempərəl ˈbaʊndəriz
+- id: idm-draw-the-line
+  text: Healthy teams draw the line at after-hours messaging unless a genuine outage occurs.
+  translation: 'Los equipos saludables ponen el límite en los mensajes fuera de horario salvo que ocurra una caída real. (draw the line: trazar la línea / poner un límite)'
+  visual_hint: 🛑🌙
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: draw the line
+    meaning: poner un límite firme
+    ipa: drɔː ðə laɪn
+  kind: idiom
+  apply_sentence: You must ____ at checking work email from bed if you want restorative sleep.
+  apply_answer: draw the line
+  apply_translation: Debes poner el límite en revisar el correo del trabajo desde la cama si quieres un sueño reparador.
+- id: idm-burn-out
+  text: High performers quietly burn out when availability is mistaken for measurable output.
+  translation: 'Los profesionales de alto rendimiento se agotan silenciosamente cuando la disponibilidad se confunde con resultados medibles. (burn out: agotarse / sufrir síndrome de desgaste)'
+  visual_hint: 🕯️😮‍💨
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: burn out
+    meaning: agotarse física y mentalmente por exceso de trabajo
+    ipa: bɜːrn aʊt
+  kind: phrasal_verb
+  apply_sentence: Without protected focus blocks, engineers ____ within months of a major launch.
+  apply_answer: burn out
+  apply_translation: Sin bloques de concentración protegidos, los ingenieros se agotan a los pocos meses de un lanzamiento importante.
+roleplay:
+  ai_role: engineering director
+  user_role: senior staff lead
+  setting: Retrospective on remote team sustainability and workload pacing.
+  turns:
+  - speaker: ai
+    text: Everyone hits their sprint goals, yet morale feels strangely brittle lately. What are we missing?
+  - speaker: user
+    goal: Advierte que los profesionales se agotan cuando se confunde disponibilidad con resultados y que las notificaciones fragmentan el enfoque.
+    suggested_lines:
+    - High performers quietly burn out when availability is mistaken for measurable output.
+    - Unchecked ping notifications fracture deep focus through relentless cognitive context switching.
+  - speaker: ai
+    text: That tracks—people reply to messages at ten at night just to look responsive.
+  - speaker: user
+    goal: Propón normas explícitas de comunicación asíncrona y poner el límite en los mensajes fuera de horario.
+    suggested_lines:
+    - Explicit asynchronous communication norms liberate teams from performative instant-reply culture.
+    - Healthy teams draw the line at after-hours messaging unless a genuine outage occurs.
+  - speaker: ai
+    text: And individually, how do you personally switch off when your desk is in your living room?
+  - speaker: user
+    goal: Explica que reemplazar el trayecto con un paseo vespertino restaura límites temporales claros.
+    suggested_lines:
+    - Replacing the lost commute with a brief evening walk restores clear temporal boundaries at home.

@@ -1,0 +1,95 @@
+id: b2-concussion-check-urgent-care
+title: Evaluating a mild head bump at urgent care
+title_es: Evaluación por golpe leve en la cabeza en urgencias
+cefr: B2
+topic: health-and-emergencies
+description: Describe cómo te golpeaste la cabeza al resbalar, pregunta por señales
+  de alarma y consulta si necesitas reposo antes de volar.
+phrases:
+- id: hit-my-head
+  text: I slipped on wet pavement and hit the back of my head.
+  translation: Me resbalé en el pavimento mojado y me golpeé la nuca.
+  visual_hint: 🤕🌧️
+  cloze:
+  - 6
+  - 8
+  - 11
+  glossary:
+  - word: pavement
+    meaning: pavimento / acera
+    ipa: ˈpeɪvmənt
+- id: red-flag-symptoms
+  text: Should I watch out for nausea, blurred vision, or unequal pupils?
+  translation: ¿Debo vigilar si tengo náuseas, visión borrosa o pupilas desiguales?
+  visual_hint: 👁️🚨
+  cloze:
+  - 5
+  - 6
+  - 7
+  glossary:
+  - word: blurred vision
+    meaning: visión borrosa
+    ipa: blɜːrd ˈvɪʒən
+- id: cognitive-rest
+  text: How many days of screen-free rest do you recommend before flying?
+  translation: ¿Cuántos días de descanso sin pantallas recomienda antes de volar?
+  visual_hint: 📵✈️
+  cloze:
+  - 4
+  - 5
+  - 10
+  glossary:
+  - word: screen-free
+    meaning: sin pantallas
+    ipa: skriːn friː
+- id: idm-pass-out-b2
+  text: I felt dizzy for a moment, though I didn't pass out.
+  translation: Me sentí mareado por un momento, aunque no me desmayé. (pass out = desmayarse)
+  visual_hint: 💫😵
+  cloze:
+  - 9
+  - 10
+  glossary:
+  - word: pass out
+    meaning: desmayarse / perder el conocimiento
+    ipa: pæs aʊt
+  kind: phrasal_verb
+  apply_sentence: Drink some water so you don't ____ in the heat.
+  apply_answer: pass out
+  apply_translation: Bebe algo de agua para que no te desmayes con el calor.
+- id: idm-rule-out-b2
+  text: Do we need a scan to rule out a mild concussion?
+  translation: ¿Necesitamos una tomografía para descartar una conmoción leve? (rule out = descartar)
+  visual_hint: 🧠🏥
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: rule out
+    meaning: descartar
+    ipa: ruːl aʊt
+  kind: phrasal_verb
+  apply_sentence: The doctor ordered blood work to ____ an infection.
+  apply_answer: rule out
+  apply_translation: El médico ordenó análisis de sangre para descartar una infección.
+roleplay:
+  ai_role: urgent care physician
+  user_role: patient
+  setting: Urgent care examination room after a fall.
+  turns:
+  - speaker: ai
+    text: Hi, I see you're here after a fall. Can you walk me through what happened?
+  - speaker: user
+    goal: Explica que resbalaste, te golpeaste la nuca y que no te desmayaste.
+    suggested_lines:
+    - I slipped on wet pavement and hit the back of my head.
+    - I felt dizzy for a moment, though I didn't pass out.
+  - speaker: ai
+    text: Your neurological exam is completely normal, and your pupils react equally, so a CT scan isn't necessary right now.
+  - speaker: user
+    goal: Pregunta qué síntomas de alerta vigilar y cuántos días de reposo sin pantallas necesitas antes de volar.
+    suggested_lines:
+    - Should I watch out for nausea, blurred vision, or unequal pupils?
+    - How many days of screen-free rest do you recommend before flying?
+  - speaker: ai
+    text: Take forty-eight hours of quiet rest, avoid screens tonight, and come back immediately if you develop worsening headaches or vomiting.

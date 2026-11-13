@@ -1,0 +1,111 @@
+id: c2-whistleblower-ethics-inquiry
+title: Navigating an internal ethics inquiry
+title_es: Gestionar una investigación ética interna
+cefr: C2
+topic: work-and-career
+description: Aborda una denuncia interna delicada junto a asesoría legal, equilibrando
+  transparencia, confidencialidad y deber fiduciario.
+phrases:
+- id: preserve-evidentiary-integrity
+  text: Our immediate obligation is to preserve evidentiary integrity without tipping off anyone involved.
+  translation: Nuestra obligación inmediata es preservar la integridad probatoria sin alertar a nadie implicado.
+  visual_hint: 🔒📂
+  cloze:
+  - 4
+  - 5
+  - 8
+  glossary:
+  - word: evidentiary
+    meaning: probatorio / relativo a las pruebas
+    ipa: ˌevɪˈdenʃəri
+  - word: tipping off
+    meaning: dar un soplo / alertar
+    ipa: ˈtɪpɪŋ ɔːf
+- id: uphold-non-retaliation
+  text: Strict non-retaliation protections must apply to the complainant from day one.
+  translation: Deben aplicarse protecciones estrictas contra represalias para la persona denunciante desde el primer día.
+  visual_hint: 🛡️⚖️
+  cloze:
+  - 1
+  - 6
+  - 8
+  glossary:
+  - word: non-retaliation
+    meaning: no represalia
+    ipa: ˌnɑːnrɪˌtæliˈeɪʃən
+  - word: complainant
+    meaning: denunciante / demandante
+    ipa: kəmˈpleɪnənt
+- id: engage-outside-counsel
+  text: To avoid any perceived conflict, we should retain independent outside counsel.
+  translation: Para evitar cualquier conflicto percibido, debemos contratar asesoría externa independiente.
+  visual_hint: 🏛️📜
+  cloze:
+  - 3
+  - 7
+  - 9
+  glossary:
+  - word: perceived
+    meaning: percibido / aparente
+    ipa: pərˈsiːvd
+  - word: retain
+    meaning: contratar (servicios legales)
+    ipa: rɪˈteɪn
+- id: idm-sweep-under-the-rug
+  text: Attempting to sweep this discrepancy under the rug would constitute a fiduciary breach.
+  translation: 'Intentar ocultar esta discrepancia bajo la alfombra constituiría un incumplimiento fiduciario. (sweep under the rug: encubrir)'
+  visual_hint: 🧹🚫
+  cloze:
+  - 2
+  - 5
+  - 10
+  glossary:
+  - word: sweep under the rug
+    meaning: ocultar / encubrir un problema
+    ipa: swiːp ˈʌndər ðə rʌɡ
+  kind: idiom
+  apply_sentence: Regulators punish firms that ____ compliance failures rather than disclosing them.
+  apply_answer: sweep under the rug
+  apply_translation: Los reguladores sancionan a las empresas que encubren fallos de cumplimiento en lugar de revelarlos.
+- id: idm-above-reproach
+  text: Every procedural step we take must remain utterly above reproach.
+  translation: 'Cada paso procesal que demos debe mantenerse completamente irreprochable. (above reproach: intachable)'
+  visual_hint: ✨⚖️
+  cloze:
+  - 1
+  - 6
+  - 7
+  glossary:
+  - word: above reproach
+    meaning: por encima de toda sospecha / intachable
+    ipa: əˈbʌv rɪˈproʊtʃ
+  kind: expression
+  apply_sentence: An independent chair ensures the governance review stays ____.
+  apply_answer: above reproach
+  apply_translation: Una presidencia independiente garantiza que la revisión de gobernanza sea intachable.
+roleplay:
+  ai_role: general counsel
+  user_role: chief compliance officer
+  setting: Closed-door emergency session following an anonymous whistleblower report on revenue recognition.
+  turns:
+  - speaker: ai
+    text: The anonymous report names a senior regional VP. Should we confront him informally before escalating?
+  - speaker: user
+    goal: Rechaza alertar al implicado y subraya la necesidad de preservar la integridad probatoria y no encubrir la discrepancia.
+    suggested_lines:
+    - Our immediate obligation is to preserve evidentiary integrity without tipping off anyone involved. Attempting to sweep this discrepancy under the rug would constitute a fiduciary breach.
+    - No—we must preserve evidentiary integrity without tipping off anyone involved, and never sweep a discrepancy like this under the rug.
+  - speaker: ai
+    text: Agreed. How do we ensure the investigation itself isn't challenged as biased?
+  - speaker: user
+    goal: Recomienda contratar asesoría externa independiente para que todo el proceso sea intachable.
+    suggested_lines:
+    - To avoid any perceived conflict, we should retain independent outside counsel. Every procedural step we take must remain utterly above reproach.
+    - We should retain independent outside counsel so that every procedural step remains utterly above reproach.
+  - speaker: ai
+    text: And what about the employee who submitted the report through the hotline?
+  - speaker: user
+    goal: Exige protecciones estrictas contra represalias desde el primer día.
+    suggested_lines:
+    - Strict non-retaliation protections must apply to the complainant from day one.
+    - We must enforce strict non-retaliation protections for the complainant from day one.

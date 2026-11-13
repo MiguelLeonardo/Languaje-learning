@@ -1,0 +1,95 @@
+id: c2-grammar-hedging
+title: Epistemic hedging, concession, and meta-discourse
+title_es: Matización epistémica, concesión y metadiscurso
+cefr: C2
+topic: grammar-and-connectors
+description: Expresa concesiones sutiles y distancia crítica con marcadores como 'ostensibly',
+  'be that as it may', 'notwithstanding' y 'by no means'.
+phrases:
+- id: be-that-as-it-may
+  text: Be that as it may, the underlying deficit persists.
+  translation: Sea como fuere, el déficit subyacente persiste.
+  visual_hint: 🤷📉
+  cloze:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  glossary:
+  - word: be that as it may
+    meaning: sea como fuere / aun así (concesivo)
+    ipa: biː ðæt æz ɪt meɪ
+  kind: idiom
+  apply_sentence: ____, we cannot afford to delay the structural reform.
+  apply_answer: Be that as it may
+  apply_translation: Sea como fuere, no podemos permitirnos retrasar la reforma estructural.
+- id: ostensibly-aimed-at
+  text: The measure is ostensibly aimed at curbing speculation.
+  translation: La medida apunta aparentemente a frenar la especulación.
+  visual_hint: 🎭📜
+  cloze:
+  - 3
+  glossary:
+  - word: ostensibly
+    meaning: aparentemente / supuestamente (con escepticismo)
+    ipa: ɑːˈstɛnsəbli
+  kind: expression
+  apply_sentence: He resigned ____ for personal reasons, though rumors suggest otherwise.
+  apply_answer: ostensibly
+  apply_translation: Renunció aparentemente por motivos personales, aunque los rumores
+    sugieren lo contrario.
+- id: notwithstanding-the-caveats
+  text: Notwithstanding those caveats, the thesis remains compelling.
+  translation: No obstante esas salvedades, la tesis sigue siendo convincente.
+  visual_hint: 📖⚖️
+  cloze:
+  - 0
+  glossary:
+  - word: notwithstanding
+    meaning: no obstante / a pesar de (muy formal)
+    ipa: ˌnɑːtwɪθˈstændɪŋ
+- id: by-no-means-exhaustive
+  text: This taxonomy is by no means exhaustive.
+  translation: Esta taxonomía no es en modo alguno exhaustiva.
+  visual_hint: 🗂️🔍
+  cloze:
+  - 3
+  - 4
+  - 5
+  glossary:
+  - word: by no means
+    meaning: en modo alguno / de ninguna manera
+    ipa: baɪ noʊ miːnz
+- id: for-all-its-merits
+  text: For all its merits, the framework lacks empirical grounding.
+  translation: Con todos sus méritos, el marco carece de base empírica.
+  visual_hint: 🏛️🔬
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: for all
+    meaning: a pesar de / con todo (concesivo)
+    ipa: fɔːr ɔːl
+roleplay:
+  ai_role: editorial director
+  user_role: senior columnist
+  setting: Critiquing a draft policy op-ed before publication.
+  turns:
+  - speaker: ai
+    text: The author argues that the new tax credit is purely altruistic.
+  - speaker: user
+    goal: Expresa escepticismo o matiz usando 'ostensibly' o 'by no means'.
+    suggested_lines:
+    - It is ostensibly aimed at small firms, yet the cap is by no means modest.
+    - Ostensibly yes, though its benefits are by no means evenly distributed.
+  - speaker: ai
+    text: True, though the piece does cite two solid case studies.
+  - speaker: user
+    goal: Concede ese punto y redirige usando 'Be that as it may', 'For all' o 'Notwithstanding'.
+    suggested_lines:
+    - Be that as it may, two anecdotes do not establish a trend.
+    - For all its merits, the argument falters on the fiscal math.
+  - speaker: ai
+    text: Sharp point. Let's tighten that paragraph before print.

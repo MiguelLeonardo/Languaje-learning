@@ -1,0 +1,95 @@
+id: b2-tech-phishing-email-alert
+title: Spotting and reporting a phishing email
+title_es: Detectar y reportar un correo de phishing
+cefr: B2
+topic: daily-tech-and-media
+description: Identifica dominios falsificados, enlaces sospechosos y mensajes de urgencia en correos fraudulentos.
+phrases:
+- id: inspect-sender-domain
+  text: Always inspect the sender domain before clicking any verification link.
+  translation: Inspecciona siempre el dominio del remitente antes de hacer clic en cualquier enlace de verificación.
+  visual_hint: 📧🔍
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: sender domain
+    meaning: dominio del remitente
+    ipa: ˈsendər doʊˈmeɪn
+- id: artificial-urgency-tactic
+  text: Scammers create artificial urgency to rush you into entering credentials.
+  translation: Los estafadores crean urgencia artificial para apresurarte a ingresar tus credenciales.
+  visual_hint: ⏳🚨
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: credentials
+    meaning: credenciales de acceso
+    ipa: krɪˈdenʃəlz
+- id: hover-over-url
+  text: Hovering over the button reveals a completely unrelated destination URL.
+  translation: Pasar el cursor sobre el botón revela una URL de destino completamente ajena.
+  visual_hint: 🖱️🔗
+  cloze:
+  - 0
+  - 7
+  glossary:
+  - word: destination URL
+    meaning: dirección web de destino
+    ipa: ˌdestɪˈneɪʃən juː-ɑːr-ˈel
+- id: idm-fall-for
+  text: Even experienced users can fall for a well-crafted phishing attempt.
+  translation: 'Incluso usuarios experimentados pueden caer en un intento de phishing bien elaborado. (fall for: caer en un engaño)'
+  visual_hint: 🎣⚠️
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: fall for
+    meaning: caer en (una trampa o engaño)
+    ipa: fɔːl fɔːr
+  kind: phrasal_verb
+  apply_sentence: Do not ____ fake delivery texts asking for a small customs fee.
+  apply_answer: fall for
+  apply_translation: No caigas en mensajes falsos de paquetería que piden una pequeña tarifa de aduana.
+- id: idm-weed-out
+  text: Reporting suspicious messages helps email filters weed out similar scams.
+  translation: 'Reportar mensajes sospechosos ayuda a los filtros de correo a eliminar estafas similares. (weed out: depurar / eliminar)'
+  visual_hint: 🛡️🧹
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: weed out
+    meaning: eliminar / filtrar lo indeseado
+    ipa: wiːd aʊt
+  kind: phrasal_verb
+  apply_sentence: Automated spam rules ____ most fraudulent invoices before they reach your inbox.
+  apply_answer: weed out
+  apply_translation: Las reglas automáticas de spam filtran la mayoría de las facturas fraudulentas antes de que lleguen a tu bandeja.
+roleplay:
+  ai_role: colleague
+  user_role: security-conscious teammate
+  setting: Desk area at an office when a strange email arrives.
+  turns:
+  - speaker: ai
+    text: Hey, I just got an email saying our cloud account will be suspended in two hours unless I log in here.
+  - speaker: user
+    goal: Advierte sobre la urgencia artificial y pídele que inspeccione el dominio del remitente.
+    suggested_lines:
+    - Scammers create artificial urgency to rush you into entering credentials.
+    - Always inspect the sender domain before clicking any verification link.
+  - speaker: ai
+    text: Oh, wait—the display name says support, but the actual address looks weird.
+  - speaker: user
+    goal: Sugiere pasar el cursor sobre el botón y comenta que cualquiera puede caer en un engaño así.
+    suggested_lines:
+    - Hovering over the button reveals a completely unrelated destination URL.
+    - Even experienced users can fall for a well-crafted phishing attempt.
+  - speaker: ai
+    text: Good catch! Should I just delete it?
+  - speaker: user
+    goal: Recomienda reportarlo para que los filtros eliminen estafas similares.
+    suggested_lines:
+    - Reporting suspicious messages helps email filters weed out similar scams.

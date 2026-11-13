@@ -1,0 +1,91 @@
+id: b1-splitting-the-bill
+title: Splitting the bill with friends
+title_es: Dividir la cuenta con amigos
+cefr: B1
+topic: food-and-drink
+description: Pide cuentas separadas, divide el total entre amigos y calcula la propina.
+phrases:
+- id: separate-checks
+  text: Could we get separate checks, or put it on two cards?
+  translation: ¿Podríamos tener cuentas separadas o dividirlo en dos tarjetas?
+  visual_hint: 🧾💳
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: separate
+    meaning: separado / distinto
+    ipa: ˈseprət
+- id: split-evenly
+  text: Let's just split the bill evenly among the four of us.
+  translation: Mejor dividamos la cuenta en partes iguales entre los cuatro.
+  visual_hint: ➗💵
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: evenly
+    meaning: en partes iguales / equitativamente
+    ipa: ˈiːvənli
+- id: service-included
+  text: Is the service charge already included in the total?
+  translation: ¿El cargo por servicio ya está incluido en el total?
+  visual_hint: 🧾❓
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: service charge
+    meaning: cargo por servicio / propina incluida
+    ipa: ˈsɜːrvɪs tʃɑːrdʒ
+- id: chip-in
+  text: If everyone chips in five dollars for the tip, we are covered.
+  translation: 'Si todos aportan cinco dólares para la propina, ya queda cubierto. (chip in: cooperar / aportar)'
+  visual_hint: 💰🤝
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: chip in
+    meaning: 'chip in: aportar dinero entre varios'
+    ipa: tʃɪp ɪn
+  kind: phrasal_verb
+  apply_sentence: We all decided to ____ to buy a birthday cake for Sam.
+  apply_answer: chip in
+  apply_translation: Todos decidimos cooperar para comprarle un pastel de cumpleaños a Sam.
+- id: call-it-even
+  text: You paid for coffee earlier, so let's call it even after tonight.
+  translation: 'Tú pagaste el café antes, así que quedamos a mano después de hoy. (call it even: quedar en paz / a mano)'
+  visual_hint: ☕⚖️
+  cloze:
+  - 7
+  - 9
+  glossary:
+  - word: call it even
+    meaning: 'call it even: quedar a mano / en paz'
+    ipa: kɔːl ɪt ˈiːvən
+  kind: expression
+  apply_sentence: Keep the change from lunch and we will ____.
+  apply_answer: call it even
+  apply_translation: Quédate con el cambio del almuerzo y quedamos a mano.
+roleplay:
+  ai_role: restaurant server
+  user_role: group diner
+  setting: A casual bistro at the end of a group dinner.
+  turns:
+  - speaker: ai
+    text: Here is your bill. How would you like to take care of this today?
+  - speaker: user
+    goal: Pregunta si el servicio ya está incluido y si pueden pagar en dos tarjetas.
+    suggested_lines:
+    - Is the service charge already included? Also, could we put it on two cards?
+    - Could we split this evenly on two cards? Is tip included?
+  - speaker: ai
+    text: Service is not included for parties of four, and yes, I can split it evenly on two cards.
+  - speaker: user
+    goal: Agradece y di que todos van a aportar para la propina en efectivo.
+    suggested_lines:
+    - Great, please split it evenly. Everyone will chip in cash for the tip.
+    - Thank you! Let's split the bill evenly on two cards, and we will leave the tip in cash.
+  - speaker: ai
+    text: Sounds perfect. I will be right back with your cards and receipts!

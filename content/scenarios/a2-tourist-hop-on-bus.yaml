@@ -1,0 +1,98 @@
+id: a2-tourist-hop-on-bus
+title: Taking a sightseeing tour bus
+title_es: Tomar el autobús turístico
+cefr: A2
+topic: travel-and-transport
+description: Compra pases de un día para el autobús turístico, pregunta por la audioguía
+  y las paradas principales.
+phrases:
+- id: day-pass-sightseeing
+  text: We want two twenty-four-hour passes for the sightseeing bus.
+  translation: Queremos dos pases de veinticuatro horas para el autobús turístico.
+  visual_hint: 🚌📸
+  cloze:
+  - 4
+  - 7
+  glossary:
+  - word: passes
+    meaning: pases / abonos
+    ipa: ˈpæsɪz
+  - word: sightseeing
+    meaning: turismo / visita de lugares de interés
+    ipa: ˈsaɪtsiːɪŋ
+- id: audio-guide-spanish
+  text: Does the bus have an audio guide in Spanish?
+  translation: ¿El autobús tiene audioguía en español?
+  visual_hint: 🎧🗣️
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: audio guide
+    meaning: audioguía
+    ipa: ˈɔːdioʊ ɡaɪd
+- id: stop-near-museum
+  text: Does this route stop near the modern art museum?
+  translation: ¿Esta ruta para cerca del museo de arte moderno?
+  visual_hint: 🖼️🚌
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: route
+    meaning: ruta / recorrido
+    ipa: ruːt
+  - word: near
+    meaning: cerca de
+    ipa: nɪr
+- id: tour-get-off
+  text: You can get off at any stop and catch the next bus.
+  translation: Puedes bajarte en cualquier parada y tomar el siguiente autobús. (get off = bajar de)
+  visual_hint: 🚏🚶
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: get off
+    meaning: bajarse de un vehículo
+    ipa: ɡet ɔːf
+  kind: phrasal_verb
+  apply_sentence: We will ____ at the cathedral and walk to the square.
+  apply_answer: get off
+  apply_translation: Nos bajaremos en la catedral y caminaremos hasta la plaza.
+- id: tour-worth-it
+  text: The upper deck view is totally worth it on sunny days.
+  translation: La vista del piso superior vale totalmente la pena en días soleados. (worth it = valer la pena)
+  visual_hint: ☀️🏙️
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: worth it
+    meaning: valer la pena
+    ipa: wɜːrθ ɪt
+  kind: expression
+  apply_sentence: The boat ride is a bit pricey, but it is ____.
+  apply_answer: worth it
+  apply_translation: El paseo en barco es un poco caro, pero vale la pena.
+roleplay:
+  ai_role: tour bus ticket seller
+  user_role: tourist
+  setting: A city center kiosk next to a double-decker sightseeing bus stop.
+  turns:
+  - speaker: ai
+    text: Good morning! Would you like tickets for the red or the blue tour route?
+  - speaker: user
+    goal: Pide dos pases de 24 horas y pregunta si la ruta para cerca del museo de arte moderno.
+    suggested_lines:
+    - We want two twenty-four-hour passes for the sightseeing bus. Does this route stop near the modern art museum?
+    - Two twenty-four-hour passes, please. Does the red route stop near the modern art museum?
+  - speaker: ai
+    text: Yes, the red route stops right in front of the museum at stop seven.
+  - speaker: user
+    goal: Pregunta si el autobús tiene audioguía en español.
+    suggested_lines:
+    - Does the bus have an audio guide in Spanish?
+    - Is there an audio guide in Spanish on board?
+  - speaker: ai
+    text: Yes, headphones are included! You can get off at any stop and catch the next bus every twenty minutes.

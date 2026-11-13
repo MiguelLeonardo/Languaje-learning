@@ -1,0 +1,99 @@
+id: c1-surgical-postop-discharge
+title: Reviewing post-operative discharge instructions
+title_es: Revisar indicaciones médicas de alta posoperatoria
+cefr: C1
+topic: health-and-emergencies
+description: Repasa con el equipo quirúrgico el cuidado de la herida, el reinicio
+  de anticoagulantes y los signos de alarma antes del alta hospitalaria.
+phrases:
+- id: wound-care-protocol
+  text: How should I manage dressing changes without compromising the sterile incision site?
+  translation: ¿Cómo debo manejar los cambios de vendaje sin comprometer el sitio estéril de la incisión?
+  visual_hint: 🩹🏥
+  cloze:
+  - 4
+  - 5
+  - 10
+  glossary:
+  - word: incision site
+    meaning: sitio de la incisión
+    ipa: ɪnˈsɪʒən saɪt
+- id: anticoagulant-bridging
+  text: When should I resume my maintenance anticoagulant relative to the surgical suture removal?
+  translation: ¿Cuándo debo retomar mi anticoagulante de mantenimiento en relación con el retiro de suturas?
+  visual_hint: 💊🗓️
+  cloze:
+  - 4
+  - 6
+  - 11
+  glossary:
+  - word: anticoagulant
+    meaning: anticoagulante
+    ipa: ˌæntikoʊˈæɡjələnt
+- id: infection-warning-signs
+  text: Which localized signs—such as purulent drainage or spreading erythema—warrant immediate readmission?
+  translation: ¿Qué signos locales —como secreción purulenta o eritema en expansión— ameritan reingreso inmediato?
+  visual_hint: 🚨🩺
+  cloze:
+  - 4
+  - 7
+  - 10
+  glossary:
+  - word: purulent
+    meaning: purulento / con pus
+    ipa: ˈpjʊrələnt
+  - word: erythema
+    meaning: eritema / enrojecimiento cutáneo
+    ipa: ˌerɪˈθiːmə
+- id: idm-taper-off-c1
+  text: Should I taper off the prescription analgesics gradually over five days?
+  translation: ¿Debo reducir gradualmente los analgésicos recetados durante cinco días? (taper off = reducir gradualmente)
+  visual_hint: 📉💊
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: taper off
+    meaning: reducir o suspender gradualmente
+    ipa: ˈteɪpər ɒf
+  kind: phrasal_verb
+  apply_sentence: The specialist advised me to ____ the corticosteroids rather than stopping abruptly.
+  apply_answer: taper off
+  apply_translation: El especialista me aconsejó reducir gradualmente los corticosteroides en lugar de suspenderlos de golpe.
+- id: idm-err-on-the-side-of-caution-c1
+  text: I would rather err on the side of caution regarding postoperative fever.
+  translation: Preferiría pecar de precavido respecto a la fiebre posoperatoria. (err on the side of caution)
+  visual_hint: 🛡️🌡️
+  cloze:
+  - 3
+  - 6
+  - 8
+  glossary:
+  - word: err on the side of caution
+    meaning: pecar de precavido / optar por lo más seguro
+    ipa: ɜːr ɒn ðə saɪd əv ˈkɔːʃən
+  kind: idiom
+  apply_sentence: Given her medical history, we decided to ____ and run the extra panel.
+  apply_answer: err on the side of caution
+  apply_translation: Dado su historial médico, decidimos pecar de precavidos y hacer el panel adicional.
+roleplay:
+  ai_role: surgical discharge nurse
+  user_role: recovering patient
+  setting: Post-operative recovery suite prior to hospital discharge.
+  turns:
+  - speaker: ai
+    text: Your vitals are stable and the surgeon cleared you for discharge. Do you have questions about your home care plan?
+  - speaker: user
+    goal: Pregunta cómo realizar el cambio de vendaje y cuándo retomar tu anticoagulante habitual.
+    suggested_lines:
+    - How should I manage dressing changes without compromising the sterile incision site?
+    - When should I resume my maintenance anticoagulant relative to the surgical suture removal?
+  - speaker: ai
+    text: Keep the waterproof dressing intact for forty-eight hours, and resume your anticoagulant tomorrow evening once hemostasis is confirmed.
+  - speaker: user
+    goal: Consulta cómo reducir los analgésicos y qué signos de infección requieren reingreso inmediato.
+    suggested_lines:
+    - Should I taper off the prescription analgesics gradually over five days?
+    - Which localized signs—such as purulent drainage or spreading erythema—warrant immediate readmission?
+  - speaker: ai
+    text: Yes, taper the analgesics over five days, and call our 24-hour surgical line immediately if you notice fever, purulent drainage, or spreading redness.

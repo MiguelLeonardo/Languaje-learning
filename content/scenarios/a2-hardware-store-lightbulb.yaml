@@ -1,0 +1,97 @@
+id: a2-hardware-store-lightbulb
+title: Shopping at a hardware store
+title_es: Comprar focos y extensiones en la ferretería
+cefr: A2
+topic: hotel-and-shopping
+description: Pide bombillas LED de luz cálida y un cable de extensión en una ferretería.
+phrases:
+- id: warm-led-bulbs
+  text: I need warm white LED lightbulbs for a desk lamp.
+  translation: Necesito focos LED de luz cálida para una lámpara de escritorio.
+  visual_hint: 💡🛋️
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: lightbulbs
+    meaning: focos / bombillas
+    ipa: ˈlaɪtbʌlbz
+  - word: warm white
+    meaning: blanco cálido
+    ipa: wɔːrm waɪt
+- id: extension-cord-length
+  text: Where can I find a three-meter extension cord?
+  translation: ¿Dónde puedo encontrar una extensión eléctrica de tres metros?
+  visual_hint: 🔌📏
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: extension cord
+    meaning: cable de extensión
+    ipa: ɪkˈstenʃən kɔːrd
+- id: aisle-number
+  text: Which aisle has electrical tape and small screwdrivers?
+  translation: ¿En qué pasillo están la cinta aislante y los destornilladores pequeños?
+  visual_hint: 🪛🛒
+  cloze:
+  - 1
+  - 7
+  glossary:
+  - word: aisle
+    meaning: pasillo
+    ipa: aɪl
+  - word: screwdrivers
+    meaning: destornilladores
+    ipa: ˈskruːˌdraɪvərz
+- id: idm-run-out-of-bulbs
+  text: We ran out of spare bulbs at the apartment.
+  translation: Se nos acabaron los focos de repuesto en el departamento.
+  visual_hint: 💡🚫
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: run out of
+    meaning: quedarse sin / acabarse
+    ipa: rʌn aʊt əv
+  kind: phrasal_verb
+  apply_sentence: I came to the store because we ____ AA batteries.
+  apply_answer: ran out of
+  apply_translation: Vine a la tienda porque se nos acabaron las pilas AA.
+- id: idm-in-stock-now
+  text: Are those energy-saving bulbs in stock right now?
+  translation: ¿Esos focos ahorradores están disponibles en inventario ahora mismo?
+  visual_hint: 📦✅
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: in stock
+    meaning: disponible / en existencia
+    ipa: ɪn stɑːk
+  kind: expression
+  apply_sentence: The black power strips are back ____ today.
+  apply_answer: in stock
+  apply_translation: Los multicontactos negros están disponibles de nuevo hoy.
+roleplay:
+  ai_role: hardware store associate
+  user_role: shopper
+  setting: A neighborhood hardware store.
+  turns:
+  - speaker: ai
+    text: Hi there! Working on a project today? How can I help?
+  - speaker: user
+    goal: Di que se te acabaron los focos y necesitas focos LED cálidos.
+    suggested_lines:
+    - We ran out of spare bulbs at the apartment.
+    - I need warm white LED lightbulbs for a desk lamp.
+  - speaker: ai
+    text: Those are in aisle four, right next to the lamps.
+  - speaker: user
+    goal: Pregunta dónde hay una extensión de tres metros y destornilladores.
+    suggested_lines:
+    - Where can I find a three-meter extension cord?
+    - Which aisle has electrical tape and small screwdrivers?
+  - speaker: ai
+    text: Extension cords are in aisle four too, and tools are one aisle over in aisle five.

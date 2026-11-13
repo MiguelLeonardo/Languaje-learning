@@ -1,0 +1,91 @@
+id: c1-artisan-chocolate-tasting
+title: Evaluating bean-to-bar chocolate
+title_es: Cata de chocolate bean-to-bar
+cefr: C1
+topic: food-and-drink
+description: Analiza porcentajes de cacao, tiempos de conchado y notas frutales en una chocolatería artesanal.
+phrases:
+- id: single-origin-cacao
+  text: This seventy-two percent single-origin bar comes from fermented Peruvian cacao.
+  translation: Esta barra de origen único al setenta y dos por ciento proviene de cacao peruano fermentado.
+  visual_hint: 🍫🇵🇪
+  cloze:
+  - 2
+  - 6
+  glossary:
+  - word: single-origin
+    meaning: de origen único (una sola región/finca)
+    ipa: ˈsɪŋɡl ˈɔːrɪdʒɪn
+- id: conching-process
+  text: Extended conching rounds out the harsh tannins and creates a velvety mouthfeel.
+  translation: El conchado prolongado suaviza los taninos ásperos y crea una sensación aterciopelada en boca.
+  visual_hint: 🍫⚙️
+  cloze:
+  - 1
+  - 10
+  glossary:
+  - word: mouthfeel
+    meaning: sensación táctil en el paladar
+    ipa: ˈmaʊθfiːl
+- id: red-berry-acidity
+  text: Unlike bulk commercial chocolate, this bar reveals bright red-berry acidity as it melts.
+  translation: A diferencia del chocolate comercial masivo, esta barra revela una acidez brillante a frutos rojos al fundirse.
+  visual_hint: 🍓🍫
+  cloze:
+  - 6
+  - 8
+  glossary:
+  - word: bulk
+    meaning: masivo / a granel
+    ipa: bʌlk
+- id: melt-away
+  text: Let a small square rest on your tongue and melt away slowly rather than chewing.
+  translation: 'Deja que un cuadrito repose en tu lengua y se deshaga lentamente en lugar de masticarlo. (melt away: deshacerse / fundirse)'
+  visual_hint: 👅🍫
+  cloze:
+  - 9
+  - 10
+  glossary:
+  - word: melt away
+    meaning: 'melt away: fundirse / disolverse'
+    ipa: melt əˈweɪ
+  kind: phrasal_verb
+  apply_sentence: Good butter should ____ smoothly on warm toasted sourdough.
+  apply_answer: melt away
+  apply_translation: La buena mantequilla debe fundirse suavemente sobre masa madre tostada tibia.
+- id: food-for-thought
+  text: Learning how fermentation shapes cacao flavor gave me real food for thought.
+  translation: 'Aprender cómo la fermentación moldea el sabor del cacao me dio mucho en qué pensar. (food for thought: tema de reflexión)'
+  visual_hint: 💡🍫
+  cloze:
+  - 9
+  - 11
+  glossary:
+  - word: food for thought
+    meaning: 'food for thought: algo que da mucho que pensar'
+    ipa: fuːd fɔːr θɔːt
+  kind: idiom
+  apply_sentence: The chef's talk on heirloom grains offered plenty of ____.
+  apply_answer: food for thought
+  apply_translation: La charla del chef sobre granos criollos ofreció mucho material para reflexionar.
+roleplay:
+  ai_role: bean-to-bar chocolatier
+  user_role: chocolate taster
+  setting: A small-batch chocolate workshop and tasting counter.
+  turns:
+  - speaker: ai
+    text: Welcome! Would you like to compare our seventy-two percent Peruvian bar with the Madagascar harvest?
+  - speaker: user
+    goal: Pregunta cómo influye el conchado en los taninos y la textura en boca.
+    suggested_lines:
+    - Yes, please. How does your conching process affect the tannins and overall mouthfeel?
+    - I'd love to—does extended conching round out the tannins in the Peruvian cacao?
+  - speaker: ai
+    text: We conch the Peruvian batch for forty-eight hours so it turns velvety while preserving bright red-berry acidity.
+  - speaker: user
+    goal: Describe que la acidez a frutos rojos al fundirse es muy distinta al chocolate comercial.
+    suggested_lines:
+    - Letting it melt away slowly really reveals that red-berry acidity—it's nothing like bulk chocolate.
+    - That velvety mouthfeel and bright berry note gave me real food for thought about fermentation.
+  - speaker: ai
+    text: Wait until you try the Madagascar bar next—it finishes with notes of roasted fig and espresso.

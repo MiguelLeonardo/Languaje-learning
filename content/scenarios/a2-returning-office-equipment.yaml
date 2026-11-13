@@ -1,0 +1,106 @@
+id: a2-returning-office-equipment
+title: Borrowing and returning office gear
+title_es: Pedir y devolver equipo de oficina
+cefr: A2
+topic: work-and-career
+description: Pide prestado un cargador o adaptador al área de soporte, firma el registro
+  y devuélvelo tras tu presentación.
+phrases:
+- id: borrow-spare-charger
+  text: May I borrow a spare laptop charger for today?
+  translation: ¿Puedo pedir prestado un cargador de portátil de repuesto para hoy?
+  visual_hint: 🔌💻
+  cloze:
+  - 2
+  - 4
+  - 6
+  glossary:
+  - word: borrow
+    meaning: pedir prestado
+    ipa: ˈbɑːroʊ
+  - word: spare
+    meaning: de repuesto / extra
+    ipa: sper
+- id: sign-the-log
+  text: Where do I sign my name to check it out?
+  translation: ¿Dónde firmo mi nombre para registrarlo?
+  visual_hint: ✍️📒
+  cloze:
+  - 3
+  - 5
+  - 7
+  glossary:
+  - word: sign
+    meaning: firmar
+    ipa: saɪn
+  - word: check out
+    meaning: registrar salida / pedir prestado
+    ipa: tʃek aʊt
+- id: return-after-meeting
+  text: I will bring the adapter back right after my meeting.
+  translation: Traeré el adaptador de vuelta justo después de mi reunión.
+  visual_hint: 🔁🔌
+  cloze:
+  - 2
+  - 4
+  - 8
+  glossary:
+  - word: adapter
+    meaning: adaptador
+    ipa: əˈdæptər
+  - word: right after
+    meaning: justo después de
+    ipa: raɪt ˈæftər
+- id: idm-give-back
+  text: Thanks for lending this, I will give it back soon.
+  translation: 'Gracias por prestarme esto, lo devolveré pronto. (give back: devolver)'
+  visual_hint: 🤝📦
+  cloze:
+  - 2
+  - 6
+  - 8
+  glossary:
+  - word: give back
+    meaning: devolver
+    ipa: ɡɪv bæk
+  kind: phrasal_verb
+  apply_sentence: Please ____ the office keys before you leave at five.
+  apply_answer: give back
+  apply_translation: Por favor, devuelve las llaves de la oficina antes de irte a las cinco.
+- id: idm-in-a-hurry
+  text: Sorry, I am in a hurry for my presentation.
+  translation: 'Disculpa, tengo prisa para mi presentación. (in a hurry: con prisa)'
+  visual_hint: 🏃‍♂️📊
+  cloze:
+  - 4
+  - 6
+  - 8
+  glossary:
+  - word: in a hurry
+    meaning: con prisa / apurado
+    ipa: ɪn ə ˈhɜːri
+  kind: expression
+  apply_sentence: We are ____ because the train leaves in five minutes.
+  apply_answer: in a hurry
+  apply_translation: Tenemos prisa porque el tren sale en cinco minutos.
+roleplay:
+  ai_role: IT support assistant
+  user_role: presenter
+  setting: IT help desk counter five minutes before a client presentation.
+  turns:
+  - speaker: ai
+    text: Hi! How can IT support help you today?
+  - speaker: user
+    goal: Di que tienes prisa para una presentación y pide prestado un cargador o adaptador.
+    suggested_lines:
+    - Sorry, I am in a hurry for my presentation. May I borrow a spare laptop charger for today?
+    - Hi! I am in a hurry. May I borrow a spare HDMI adapter?
+  - speaker: ai
+    text: Sure, here is an adapter and a charger. Please sign the equipment sheet first.
+  - speaker: user
+    goal: Pregunta dónde firmar y promete devolverlo justo después de la reunión.
+    suggested_lines:
+    - Where do I sign my name to check it out? I will bring the adapter back right after my meeting.
+    - Thanks! Where do I sign? I will give it back right after my meeting.
+  - speaker: ai
+    text: Right on the second line. Good luck with your presentation!

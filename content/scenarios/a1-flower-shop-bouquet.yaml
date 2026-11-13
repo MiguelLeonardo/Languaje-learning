@@ -1,0 +1,100 @@
+id: a1-flower-shop-bouquet
+title: Buying flowers at a florist
+title_es: Comprar un ramo en la florería
+cefr: A1
+topic: hotel-and-shopping
+description: Elige flores frescas, pregunta el precio del ramo y pide una tarjeta.
+phrases:
+- id: bouquet-of-roses
+  text: I would like a small bouquet of red roses.
+  translation: Quisiera un ramo pequeño de rosas rojas.
+  visual_hint: 💐🌹
+  cloze:
+  - 4
+  - 7
+  glossary:
+  - word: bouquet
+    meaning: ramo de flores
+    ipa: buːˈkeɪ
+  - word: roses
+    meaning: rosas
+    ipa: ˈroʊzɪz
+- id: how-much-bouquet
+  text: How much does this yellow flower bouquet cost?
+  translation: ¿Cuánto cuesta este ramo de flores amarillas?
+  visual_hint: 🌻💵
+  cloze:
+  - 1
+  - 7
+  glossary:
+  - word: flower
+    meaning: flor
+    ipa: ˈflaʊər
+  - word: cost
+    meaning: costar
+    ipa: kɒst
+- id: small-gift-card
+  text: Can you add a small card with a message?
+  translation: ¿Puede agregar una tarjeta pequeña con un mensaje?
+  visual_hint: 💌🌸
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: add
+    meaning: agregar
+    ipa: æd
+  - word: card
+    meaning: tarjeta
+    ipa: kɑːrd
+- id: idm-in-season
+  text: Which colorful flowers are in season right now?
+  translation: ¿Qué flores coloridas están de temporada ahora mismo?
+  visual_hint: 🌷📅
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: in season
+    meaning: de temporada
+    ipa: ɪn ˈsiːzən
+  kind: expression
+  apply_sentence: Tulips are ____ during the spring.
+  apply_answer: in season
+  apply_translation: Los tulipanes están de temporada durante la primavera.
+- id: idm-wrap-up-flowers
+  text: Could you wrap up the flowers in brown paper?
+  translation: ¿Podría envolver las flores en papel kraft?
+  visual_hint: 💐📦
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: wrap up
+    meaning: envolver
+    ipa: ræp ʌp
+  kind: phrasal_verb
+  apply_sentence: The florist will ____ the bouquet for my mom.
+  apply_answer: wrap up
+  apply_translation: El florista envolverá el ramo para mi mamá.
+roleplay:
+  ai_role: florist
+  user_role: customer
+  setting: A neighborhood flower shop.
+  turns:
+  - speaker: ai
+    text: Hello! Welcome to Sunny Florist. Are you looking for something special?
+  - speaker: user
+    goal: Pregunta qué flores están de temporada y pide un ramo pequeño de rosas rojas.
+    suggested_lines:
+    - Which colorful flowers are in season right now?
+    - I would like a small bouquet of red roses.
+  - speaker: ai
+    text: Our red roses and tulips are very fresh today! This bouquet is fifteen dollars.
+  - speaker: user
+    goal: Pide que envuelvan las flores en papel y que agreguen una tarjeta.
+    suggested_lines:
+    - Could you wrap up the flowers in brown paper?
+    - Can you add a small card with a message?
+  - speaker: ai
+    text: Certainly! Here is a pen so you can write your message.

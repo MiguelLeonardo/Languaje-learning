@@ -1,0 +1,111 @@
+id: b2-resolving-cross-team-conflict
+title: Resolving a cross-team bottleneck
+title_es: Resolver un conflicto entre equipos
+cefr: B2
+topic: work-and-career
+description: Aborda fricciones entre departamentos, enfoca la conversación en objetivos
+  compartidos y acuerda un proceso claro de entrega.
+phrases:
+- id: focus-on-shared-goal
+  text: Both of our teams want the customer launch to succeed.
+  translation: Ambos equipos queremos que el lanzamiento para el cliente tenga éxito.
+  visual_hint: 🤝🎯
+  cloze:
+  - 0
+  - 4
+  - 9
+  glossary:
+  - word: both
+    meaning: ambos
+    ipa: boʊθ
+  - word: succeed
+    meaning: tener éxito
+    ipa: səkˈsiːd
+- id: pinpoint-process-gap
+  text: The friction comes from last-minute handoffs without clear specs.
+  translation: La fricción viene de entregas de último minuto sin especificaciones claras.
+  visual_hint: ⚙️⚠️
+  cloze:
+  - 1
+  - 4
+  - 7
+  glossary:
+  - word: friction
+    meaning: fricción / roce
+    ipa: ˈfrɪkʃən
+  - word: specs
+    meaning: especificaciones técnicas
+    ipa: speks
+- id: agree-on-sla
+  text: How about a forty-eight-hour review window before every handoff?
+  translation: ¿Qué tal una ventana de revisión de cuarenta y ocho horas antes de cada entrega?
+  visual_hint: ⏱️📋
+  cloze:
+  - 3
+  - 4
+  - 8
+  glossary:
+  - word: review window
+    meaning: plazo o ventana de revisión
+    ipa: rɪˈvjuː ˈwɪndoʊ
+  - word: handoff
+    meaning: entrega / traspaso
+    ipa: ˈhændɔːf
+- id: idm-clear-the-air
+  text: I set up this call to clear the air between design and engineering.
+  translation: 'Organicé esta llamada para aclarar las cosas entre diseño e ingeniería. (clear the air: limar asperezas)'
+  visual_hint: 🌬️🤝
+  cloze:
+  - 5
+  - 7
+  - 9
+  glossary:
+  - word: clear the air
+    meaning: limar asperezas / aclarar tensiones
+    ipa: klɪr ði er
+  kind: idiom
+  apply_sentence: After the tense email thread, they met in person to ____.
+  apply_answer: clear the air
+  apply_translation: Tras la tensa cadena de correos, se reunieron en persona para limar asperezas.
+- id: idm-iron-out
+  text: Let's iron out the checklist details before next Monday.
+  translation: 'Resolvamos los detalles de la lista de verificación antes del próximo lunes. (iron out: pulir / resolver)'
+  visual_hint: 🧺✅
+  cloze:
+  - 1
+  - 2
+  - 5
+  glossary:
+  - word: iron out
+    meaning: resolver / pulir pequeños problemas
+    ipa: ˈaɪərn aʊt
+  kind: phrasal_verb
+  apply_sentence: Legal needs one more day to ____ the final contract wording.
+  apply_answer: iron out
+  apply_translation: El equipo legal necesita un día más para pulir la redacción final del contrato.
+roleplay:
+  ai_role: design team lead
+  user_role: engineering lead
+  setting: Mediation sync between Design and Engineering after two rushed handoffs.
+  turns:
+  - speaker: ai
+    text: Look, we feel like engineering keeps rejecting our mockups at the last minute.
+  - speaker: user
+    goal: Aclara que quieres limar asperezas y recuerda que ambos equipos quieren que el lanzamiento tenga éxito.
+    suggested_lines:
+    - I set up this call to clear the air between design and engineering. Both of our teams want the customer launch to succeed.
+    - I hear you, and I want to clear the air. Both of our teams want the launch to succeed.
+  - speaker: ai
+    text: True, we have the same goal. So where is the process breaking down?
+  - speaker: user
+    goal: Señala que la fricción viene de entregas sin especificaciones claras y propón una ventana de revisión de 48 horas.
+    suggested_lines:
+    - The friction comes from last-minute handoffs without clear specs. How about a forty-eight-hour review window before every handoff?
+    - Often we get last-minute handoffs without clear specs. Could we agree on a forty-eight-hour review window?
+  - speaker: ai
+    text: Forty-eight hours is reasonable if you give us a lightweight checklist.
+  - speaker: user
+    goal: Propón pulir juntos los detalles de la lista antes del lunes.
+    suggested_lines:
+    - Deal! Let's iron out the checklist details before next Monday.
+    - Sounds fair—let's iron out the checklist details before Monday.

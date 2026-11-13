@@ -1,0 +1,103 @@
+id: a1-making-coffee-plans
+title: Inviting someone for a quick coffee
+title_es: Invitar a alguien a tomar un café
+cefr: A1
+topic: social-and-smalltalk
+description: Invita a un conocido a tomar un café después del trabajo y acuerda el lugar y la hora.
+phrases:
+- id: grab-coffee-later
+  text: Would you like to get a coffee after work?
+  translation: ¿Te gustaría tomar un café después del trabajo?
+  visual_hint: ☕🕔
+  cloze:
+  - 4
+  - 6
+  - 8
+  glossary:
+  - word: would you like
+    meaning: ¿te gustaría?
+    ipa: wʊd juː laɪk
+  - word: after work
+    meaning: después del trabajo
+    ipa: ˈæftər wɜːrk
+- id: free-at-five
+  text: Are you free around five o'clock today?
+  translation: ¿Estás libre alrededor de las cinco hoy?
+  visual_hint: 🕔📆
+  cloze:
+  - 2
+  - 3
+  - 6
+  glossary:
+  - word: free
+    meaning: libre / disponible
+    ipa: friː
+  - word: around
+    meaning: alrededor de
+    ipa: əˈraʊnd
+- id: cafe-on-corner
+  text: There is a cozy cafe right on the corner.
+  translation: Hay una cafetería acogedora justo en la esquina.
+  visual_hint: 🏪☕
+  cloze:
+  - 3
+  - 4
+  - 8
+  glossary:
+  - word: cozy
+    meaning: acogedor
+    ipa: ˈkoʊzi
+  - word: corner
+    meaning: esquina
+    ipa: ˈkɔːrnər
+- id: idm-a1mc-catch-up
+  text: Let's meet soon so we can catch up.
+  translation: Reunámonos pronto para ponernos al día (contarnos las novedades).
+  visual_hint: 💬🤝
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: catch up
+    meaning: ponerse al día
+    ipa: kætʃ ʌp
+  kind: phrasal_verb
+  apply_sentence: I haven't seen Ana in months; we need to ____.
+  apply_answer: catch up
+  apply_translation: No he visto a Ana en meses; tenemos que ponernos al día.
+- id: idm-a1mc-sounds-good
+  text: Five o'clock sounds good to me!
+  translation: ¡Las cinco me parece bien! (expresión para aceptar un plan).
+  visual_hint: 👍😊
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: sounds good
+    meaning: suena bien / me parece bien
+    ipa: saʊndz ɡʊd
+  kind: expression
+  apply_sentence: Dinner at seven? That ____ to me.
+  apply_answer: sounds good
+  apply_translation: ¿Cenar a las siete? Eso me parece bien.
+roleplay:
+  ai_role: coworker (Emma)
+  user_role: colleague
+  setting: Leaving the office building at the end of the day.
+  turns:
+  - speaker: ai
+    text: Hey! What a busy Thursday. Are you heading straight home?
+  - speaker: user
+    goal: Invítala a tomar un café después del trabajo para ponerse al día.
+    suggested_lines:
+    - Would you like to get a coffee after work?
+    - Let's meet soon so we can catch up.
+  - speaker: ai
+    text: I'd love that! Where should we go?
+  - speaker: user
+    goal: Sugiere la cafetería acogedora de la esquina y pregunta si está libre a las cinco.
+    suggested_lines:
+    - There is a cozy cafe right on the corner. Are you free around five o'clock today?
+    - Let's go to the cafe on the corner at five.
+  - speaker: ai
+    text: Five o'clock sounds great! See you there in ten minutes.

@@ -1,0 +1,111 @@
+id: c1-aligning-exec-stakeholders
+title: Aligning misaligned executives
+title_es: Alinear a directivos con posturas opuestas
+cefr: C1
+topic: work-and-career
+description: Facilita el consenso entre dos vicepresidentes con prioridades opuestas,
+  reencuadra el debate en torno a objetivos comunes y logra una decisión vinculante.
+phrases:
+- id: reframe-around-okrs
+  text: Both proposals serve our retention OKR, just on different time horizons.
+  translation: Ambas propuestas sirven a nuestro OKR de retención, solo que en horizontes temporales distintos.
+  visual_hint: 🎯⏳
+  cloze:
+  - 2
+  - 5
+  - 9
+  glossary:
+  - word: retention
+    meaning: retención de clientes
+    ipa: rɪˈtenʃən
+  - word: time horizons
+    meaning: horizontes de tiempo / plazos
+    ipa: taɪm həˈraɪzənz
+- id: surface-hidden-tradeoff
+  text: If we optimize solely for speed, we risk eroding enterprise trust.
+  translation: Si optimizamos únicamente por velocidad, corremos el riesgo de erosionar la confianza empresarial.
+  visual_hint: ⚖️⚡
+  cloze:
+  - 3
+  - 7
+  - 9
+  glossary:
+  - word: solely
+    meaning: únicamente / exclusivamente
+    ipa: ˈsoʊlli
+  - word: eroding
+    meaning: erosionando / debilitando
+    ipa: ɪˈroʊdɪŋ
+- id: lock-in-decision
+  text: Can we agree on a single decision-maker before we leave this room?
+  translation: ¿Podemos acordar un único responsable de la decisión antes de salir de esta sala?
+  visual_hint: 🔐🤝
+  cloze:
+  - 3
+  - 5
+  - 6
+  glossary:
+  - word: single
+    meaning: único / solo
+    ipa: ˈsɪŋɡəl
+  - word: decision-maker
+    meaning: responsable de la decisión
+    ipa: dɪˈsɪʒən ˈmeɪkər
+- id: idm-bridge-the-gap
+  text: A staged rollout could bridge the gap between sales and compliance.
+  translation: 'Un despliegue por fases podría cerrar la brecha entre ventas y cumplimiento. (bridge the gap: acercar posturas)'
+  visual_hint: 🌉🤝
+  cloze:
+  - 4
+  - 6
+  - 8
+  glossary:
+  - word: bridge the gap
+    meaning: cerrar la brecha / conciliar diferencias
+    ipa: brɪdʒ ðə ɡæp
+  kind: idiom
+  apply_sentence: Weekly joint reviews helped ____ between product and support.
+  apply_answer: bridge the gap
+  apply_translation: Las revisiones semanales conjuntas ayudaron a cerrar la brecha entre producto y soporte.
+- id: idm-zero-in-on
+  text: Let's zero in on the two criteria that actually move the needle.
+  translation: 'Enfoquémonos en los dos criterios que realmente marcan la diferencia. (zero in on: centrarse de lleno en)'
+  visual_hint: 🎯🔎
+  cloze:
+  - 1
+  - 2
+  - 6
+  glossary:
+  - word: zero in on
+    meaning: centrarse específicamente en
+    ipa: ˈzɪroʊ ɪn ɑːn
+  kind: phrasal_verb
+  apply_sentence: In the audit, we need to ____ our highest-margin accounts.
+  apply_answer: zero in on
+  apply_translation: En la auditoría, debemos centrarnos en nuestras cuentas de mayor margen.
+roleplay:
+  ai_role: VP of Sales
+  user_role: chief of staff
+  setting: Executive alignment session where Sales wants an immediate launch and Legal wants a full audit.
+  turns:
+  - speaker: ai
+    text: Legal's audit will stall us for a month, and my team is losing deals every week we wait!
+  - speaker: user
+    goal: Reencuadra la tensión en torno al OKR de retención y señala el equilibrio entre velocidad y confianza empresarial.
+    suggested_lines:
+    - Both proposals serve our retention OKR, just on different time horizons. If we optimize solely for speed, we risk eroding enterprise trust.
+    - I hear the urgency—both teams serve our retention OKR, yet optimizing solely for speed risks eroding enterprise trust.
+  - speaker: ai
+    text: So what do you suggest? We cannot afford a full freeze until next quarter.
+  - speaker: user
+    goal: Propón enfocarse en los criterios clave y usar un despliegue por fases para acercar posturas entre ventas y cumplimiento.
+    suggested_lines:
+    - Let's zero in on the two criteria that actually move the needle. A staged rollout could bridge the gap between sales and compliance.
+    - A staged rollout could bridge the gap between sales and compliance if we zero in on the highest-risk items first.
+  - speaker: ai
+    text: A staged rollout for mid-market first while Legal finishes enterprise review could work. Who signs off on the tiers?
+  - speaker: user
+    goal: Pide acordar un único responsable de la decisión antes de terminar la reunión.
+    suggested_lines:
+    - Can we agree on a single decision-maker before we leave this room?
+    - Let's confirm a single decision-maker right now before we wrap up.

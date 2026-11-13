@@ -1,0 +1,96 @@
+id: c2-pharmacovigilance-adverse-event
+title: Reporting a rare drug interaction to pharmacovigilance
+title_es: Reportar interacción farmacológica rara a farmacovigilancia
+cefr: C2
+topic: health-and-emergencies
+description: Documenta ante el comité hospitalario de farmacovigilancia una interacción
+  farmacocinética grave, su puntaje de causalidad y la respuesta tras suspender el fármaco.
+phrases:
+- id: synergistic-toxicity
+  text: We suspect a pharmacokinetic interaction between the macrolide antibiotic and the statin.
+  translation: Sospechamos una interacción farmacocinética entre el antibiótico macrólido y la estatina.
+  visual_hint: 💊⚗️
+  cloze:
+  - 3
+  - 4
+  - 7
+  glossary:
+  - word: pharmacokinetic
+    meaning: farmacocinético
+    ipa: ˌfɑːrməkoʊkɪˈnetɪk
+- id: naranjo-causality-score
+  text: How does this presentation score on the Naranjo adverse drug reaction probability scale?
+  translation: ¿Qué puntuación obtiene este cuadro en la escala de probabilidad de reacciones adversas de Naranjo?
+  visual_hint: 📋⚖️
+  cloze:
+  - 7
+  - 8
+  - 12
+  glossary:
+  - word: adverse drug reaction
+    meaning: reacción adversa a medicamentos
+    ipa: ˈædvɜːrs drʌɡ riˈækʃən
+- id: dechallenge-rechallenge
+  text: Did liver enzymes normalize promptly following dechallenge of the suspected offending agent?
+  translation: ¿Se normalizaron rápidamente las enzimas hepáticas tras retirar el agente sospechoso?
+  visual_hint: 🧪📉
+  cloze:
+  - 3
+  - 6
+  - 10
+  glossary:
+  - word: dechallenge
+    meaning: retiro del fármaco sospechoso para evaluar mejoría
+    ipa: diːˈtʃælɪndʒ
+- id: idm-pin-down-c2
+  text: It is notoriously difficult to pin down idiosyncratic hepatotoxicity in polypharmacy cases.
+  translation: Es sumamente difícil precisar la hepatotoxicidad idiosincrásica en casos de polifarmacia. (pin down = precisar)
+  visual_hint: 🔍🧬
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: pin down
+    meaning: precisar / determinar con exactitud
+    ipa: pɪn daʊn
+  kind: phrasal_verb
+  apply_sentence: Clinicians struggled to ____ the exact trigger of the autoimmune flare.
+  apply_answer: pin down
+  apply_translation: Los médicos tuvieron dificultades para precisar el desencadenante exacto del brote autoinmune.
+- id: idm-by-the-book-c2
+  text: We documented every timestamp by the book for the regulatory pharmacovigilance dossier.
+  translation: Documentamos cada registro al pie de la letra para el expediente regulatorio de farmacovigilancia. (by the book)
+  visual_hint: 📚✅
+  cloze:
+  - 4
+  - 5
+  - 6
+  glossary:
+  - word: by the book
+    meaning: al pie de la letra / siguiendo estrictamente el protocolo
+    ipa: baɪ ðə bʊk
+  kind: idiom
+  apply_sentence: The laboratory audited every sample ____ to preserve chain-of-custody integrity.
+  apply_answer: by the book
+  apply_translation: El laboratorio auditó cada muestra al pie de la letra para preservar la integridad de la cadena de custodia.
+roleplay:
+  ai_role: pharmacovigilance director
+  user_role: clinical pharmacist
+  setting: Hospital medication safety committee review meeting.
+  turns:
+  - speaker: ai
+    text: Let's review the sentinel event report from the internal medicine ward. What mechanism do you suspect?
+  - speaker: user
+    goal: Señala la posible interacción farmacocinética y menciona la dificultad de precisar hepatotoxicidad en polifarmacia.
+    suggested_lines:
+    - We suspect a pharmacokinetic interaction between the macrolide antibiotic and the statin.
+    - It is notoriously difficult to pin down idiosyncratic hepatotoxicity in polypharmacy cases.
+  - speaker: ai
+    text: CYP3A4 inhibition fits the timeline. What happened after you discontinued the macrolide?
+  - speaker: user
+    goal: Pregunta por la normalización tras el retiro del fármaco, el puntaje en la escala de Naranjo y confirma el registro riguroso.
+    suggested_lines:
+    - Did liver enzymes normalize promptly following dechallenge of the suspected offending agent?
+    - How does this presentation score on the Naranjo adverse drug reaction probability scale?
+  - speaker: ai
+    text: Transaminases dropped fifty percent within 72 hours, giving us a Naranjo score of 7—probable causality—ready for regulatory submission.

@@ -1,0 +1,92 @@
+id: a1-earache-on-flight
+title: Telling a flight attendant your ears hurt
+title_es: Avisar a la azafata que te duelen los oídos
+cefr: A1
+topic: health-and-emergencies
+description: Dile a la azafata que te duelen los oídos por la presión del avión
+  y pide agua o chicle.
+phrases:
+- id: ears-hurt
+  text: Excuse me, my ears hurt from the airplane pressure.
+  translation: Disculpe, me duelen los oídos por la presión del avión.
+  visual_hint: 👂✈️
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: ears
+    meaning: oídos / orejas
+    ipa: ɪrz
+- id: glass-of-water
+  text: May I have a glass of water to swallow?
+  translation: ¿Me puede dar un vaso de agua para tragar?
+  visual_hint: 🥤💧
+  cloze:
+  - 4
+  - 6
+  glossary:
+  - word: swallow
+    meaning: tragar
+    ipa: ˈswɑːloʊ
+- id: chewing-gum
+  text: Do you have any chewing gum or earplugs?
+  translation: ¿Tiene chicle o tapones para los oídos?
+  visual_hint: 🍬🎧
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: chewing gum
+    meaning: chicle / goma de mascar
+    ipa: ˈtʃuːɪŋ ɡʌm
+- id: idm-feel-better-a1
+  text: Drinking water helps my ears feel better quickly.
+  translation: Beber agua ayuda a que mis oídos se sientan mejor rápido. (feel better = sentirse mejor)
+  visual_hint: 😊💧
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: feel better
+    meaning: sentirse mejor
+    ipa: fiːl ˈbetər
+  kind: expression
+  apply_sentence: I hope you ____ after some rest.
+  apply_answer: feel better
+  apply_translation: Espero que te sientas mejor después de descansar.
+- id: idm-go-away-a1
+  text: The pain will go away after we land.
+  translation: El dolor desaparecerá después de aterrizar. (go away = desaparecer)
+  visual_hint: 🛬😌
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: go away
+    meaning: desaparecer / irse
+    ipa: ɡoʊ əˈweɪ
+  kind: phrasal_verb
+  apply_sentence: Wait ten minutes and the noise will ____.
+  apply_answer: go away
+  apply_translation: Espera diez minutos y el ruido desaparecerá.
+roleplay:
+  ai_role: flight attendant
+  user_role: passenger
+  setting: Airplane cabin during descent.
+  turns:
+  - speaker: ai
+    text: Good afternoon! Can I get you anything before we land?
+  - speaker: user
+    goal: Explica que te duelen los oídos por la presión del avión.
+    suggested_lines:
+    - Excuse me, my ears hurt from the airplane pressure.
+    - May I have a glass of water to swallow?
+  - speaker: ai
+    text: Of course, cabin pressure can be uncomfortable. Would you like water or gum?
+  - speaker: user
+    goal: Pide agua y pregunta si tienen chicle o tapones.
+    suggested_lines:
+    - May I have a glass of water to swallow?
+    - Do you have any chewing gum or earplugs?
+  - speaker: ai
+    text: Here is a bottle of water and two mint gums. You will feel better soon!

@@ -1,0 +1,99 @@
+id: b1-blood-test-results
+title: Calling a clinic for blood test results
+title_es: Consultar resultados de análisis de sangre
+cefr: B1
+topic: health-and-emergencies
+description: Llama a la clínica para preguntar si tus análisis de sangre están listos,
+  pedir acceso al portal y saber si necesitas cita de seguimiento.
+phrases:
+- id: check-lab-results
+  text: I'm calling to check if my blood test results are ready yet.
+  translation: Llamo para ver si los resultados de mi análisis de sangre ya están listos.
+  visual_hint: 🩸📞
+  cloze:
+  - 6
+  - 8
+  - 10
+  glossary:
+  - word: blood test
+    meaning: análisis de sangre
+    ipa: blʌd test
+  - word: results
+    meaning: resultados
+    ipa: rɪˈzʌlts
+- id: patient-portal-access
+  text: Could you send the lab report to my email or patient portal?
+  translation: ¿Podrían enviar el informe del laboratorio a mi correo o al portal del paciente?
+  visual_hint: 💻📄
+  cloze:
+  - 4
+  - 5
+  - 11
+  glossary:
+  - word: lab report
+    meaning: informe de laboratorio
+    ipa: læb rɪˈpɔːrt
+- id: schedule-follow-up
+  text: Do I need a follow-up visit if my iron levels are low?
+  translation: ¿Necesito una consulta de seguimiento si mis niveles de hierro están bajos?
+  visual_hint: 📅🩺
+  cloze:
+  - 4
+  - 8
+  - 11
+  glossary:
+  - word: iron levels
+    meaning: niveles de hierro
+    ipa: ˈaɪərn ˈlevəlz
+- id: idm-follow-up-b1
+  text: I wanted to follow up on the tests from Tuesday.
+  translation: Quería hacer seguimiento a los análisis del martes. (follow up = dar seguimiento)
+  visual_hint: 🔄📋
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: follow up
+    meaning: dar seguimiento
+    ipa: ˈfɑːloʊ ʌp
+  kind: phrasal_verb
+  apply_sentence: I will ____ with the clinic tomorrow morning.
+  apply_answer: follow up
+  apply_translation: Haré seguimiento con la clínica mañana por la mañana.
+- id: idm-put-my-mind-at-ease-b1
+  text: Getting the normal results really put my mind at ease.
+  translation: Recibir los resultados normales realmente me tranquilizó. (put my mind at ease = tranquilizar)
+  visual_hint: 😌✅
+  cloze:
+  - 5
+  - 7
+  - 9
+  glossary:
+  - word: put my mind at ease
+    meaning: tranquilizarme / quitarme la preocupación
+    ipa: pʊt maɪ maɪnd æt iːz
+  kind: idiom
+  apply_sentence: The doctor's clear explanation ____ before the procedure.
+  apply_answer: put my mind at ease
+  apply_translation: La explicación clara del médico me tranquilizó antes del procedimiento.
+roleplay:
+  ai_role: clinic receptionist
+  user_role: patient
+  setting: Phone call with a neighborhood medical clinic.
+  turns:
+  - speaker: ai
+    text: Good morning, Oakwood Medical Clinic. How can I direct your call?
+  - speaker: user
+    goal: Di que llamas para dar seguimiento y saber si tus análisis de sangre están listos.
+    suggested_lines:
+    - I'm calling to check if my blood test results are ready yet.
+    - I wanted to follow up on the tests from Tuesday.
+  - speaker: ai
+    text: Let me pull up your chart. Yes, the doctor reviewed them this morning and everything is in the normal range.
+  - speaker: user
+    goal: Pide que te envíen el informe por correo o portal y pregunta si necesitas cita de control.
+    suggested_lines:
+    - Could you send the lab report to my email or patient portal?
+    - Do I need a follow-up visit if my iron levels are low?
+  - speaker: ai
+    text: No follow-up is needed! I've just uploaded the PDF to your patient portal.

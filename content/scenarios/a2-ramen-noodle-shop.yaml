@@ -1,0 +1,90 @@
+id: a2-ramen-noodle-shop
+title: Ordering at a ramen shop
+title_es: Pedir en un restaurante de ramen
+cefr: A2
+topic: food-and-drink
+description: Elige el caldo, el nivel de picante y los ingredientes extra para tu tazón de ramen.
+phrases:
+- id: rich-pork-broth
+  text: I would like the miso ramen with rich broth.
+  translation: Quisiera el ramen de miso con caldo concentrado.
+  visual_hint: 🍜🥣
+  cloze:
+  - 7
+  - 8
+  glossary:
+  - word: broth
+    meaning: caldo
+    ipa: brɔːθ
+- id: mild-spice
+  text: Make it mild spicy, please. Not too hot.
+  translation: Hágalo poco picante, por favor. No muy picoso.
+  visual_hint: 🌶️🤏
+  cloze:
+  - 2
+  glossary:
+  - word: mild
+    meaning: suave / poco picante
+    ipa: maɪld
+- id: soft-boiled-egg
+  text: Can I add an extra soft-boiled egg on top?
+  translation: ¿Puedo agregar un huevo tibio extra encima?
+  visual_hint: 🥚🍜
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: soft-boiled egg
+    meaning: huevo pasado por agua / tibio
+    ipa: sɔːft bɔɪld eɡ
+- id: warm-up
+  text: Hot ramen is the best way to warm up on a rainy day.
+  translation: 'El ramen caliente es la mejor forma de entrar en calor en un día lluvioso. (warm up: entrar en calor)'
+  visual_hint: 🌧️🍜🔥
+  cloze:
+  - 7
+  - 8
+  glossary:
+  - word: warm up
+    meaning: 'warm up: entrar en calor / calentar'
+    ipa: wɔːrm ʌp
+  kind: phrasal_verb
+  apply_sentence: Drink some hot tea to ____ after coming inside from the snow.
+  apply_answer: warm up
+  apply_translation: Toma un poco de té caliente para entrar en calor después de venir de la nieve.
+- id: on-the-side
+  text: Could you put the chili oil on the side?
+  translation: '¿Podría poner el aceite picante aparte? (on the side: aparte / por separado)'
+  visual_hint: 🌶️🥣
+  cloze:
+  - 6
+  - 8
+  glossary:
+  - word: on the side
+    meaning: 'on the side: aparte / por separado'
+    ipa: ɒn ðə saɪd
+  kind: expression
+  apply_sentence: I like salad dressing ____ so my lettuce stays crispy.
+  apply_answer: on the side
+  apply_translation: Me gusta el aderezo aparte para que mi lechuga quede crujiente.
+roleplay:
+  ai_role: ramen shop server
+  user_role: diner
+  setting: A cozy Japanese ramen counter on a chilly evening.
+  turns:
+  - speaker: ai
+    text: Welcome! Have a seat at the counter. Which ramen would you like?
+  - speaker: user
+    goal: Pide el ramen de miso con caldo concentrado y poco picante.
+    suggested_lines:
+    - I would like the miso ramen with rich broth. Make it mild spicy, please.
+    - Could I get the miso ramen, mild spicy?
+  - speaker: ai
+    text: Great choice. Would you like any extra toppings or chili oil?
+  - speaker: user
+    goal: Agrega un huevo tibio extra y pide el aceite picante aparte.
+    suggested_lines:
+    - Can I add an extra soft-boiled egg and put the chili oil on the side?
+    - Extra soft-boiled egg, please, with chili oil on the side.
+  - speaker: ai
+    text: You got it! Your steaming bowl will be ready in five minutes.

@@ -1,0 +1,101 @@
+id: c2-private-yacht-cabotage-compliance
+title: Maritime cabotage & bonded stores compliance
+title_es: Cumplimiento de cabotaje y provisiones en yate
+cefr: C2
+topic: travel-and-transport
+description: Resuelve ante la capitanía marítima exenciones de cabotaje, manifiestos
+  de provisiones en depósito y atestación de tripulación.
+phrases:
+- id: cabotage-charter-exemption
+  text: Does the vessel's commercial registry qualify for a temporary cabotage exemption in Greek waters?
+  translation: ¿El registro comercial de la embarcación califica para una exención temporal de cabotaje en aguas griegas?
+  visual_hint: 🛥️⚓
+  cloze:
+  - 9
+  - 10
+  glossary:
+  - word: cabotage
+    meaning: cabotaje / navegación comercial costera
+    ipa: ˈkæbətɪdʒ
+  - word: exemption
+    meaning: exención / dispensa
+    ipa: ɪɡˈzempʃən
+- id: bonded-stores-manifest
+  text: All duty-free fuel and bonded stores have been sealed and reconciled against the manifest.
+  translation: Todo el combustible libre de impuestos y las provisiones en depósito han sido precintados y conciliados con el manifiesto.
+  visual_hint: 📜⛽
+  cloze:
+  - 4
+  - 10
+  glossary:
+  - word: bonded stores
+    meaning: provisiones bajo control aduanero
+    ipa: ˈbɑːndɪd stɔːrz
+  - word: reconciled
+    meaning: conciliado / cuadrado
+    ipa: ˈrekənsaɪld
+- id: maritime-crew-attestation
+  text: Every non-EU crew member holds a valid seafarer's book and shore-leave attestation.
+  translation: Cada tripulante no perteneciente a la UE posee una libreta marítima válida y certificación de permiso en tierra.
+  visual_hint: 🛂⛵
+  cloze:
+  - 7
+  - 11
+  glossary:
+  - word: seafarer's book
+    meaning: libreta de embarque marítimo
+    ipa: ˈsiːferərz bʊk
+  - word: attestation
+    meaning: certificación / atestación
+    ipa: ˌæteˈsteɪʃən
+- id: yacht-dot-the-is
+  text: Port state inspectors expect us to dot the i's and cross the t's on ballast logs.
+  translation: Los inspectores del Estado rector del puerto esperan que cuidemos hasta el último detalle en los registros de lastre. (dot the i's = ser meticuloso)
+  visual_hint: 🖋️📋
+  cloze:
+  - 6
+  - 8
+  glossary:
+  - word: dot the i's
+    meaning: cuidar hasta el más mínimo detalle
+    ipa: dɑːt ði aɪz
+  kind: idiom
+  apply_sentence: Before clearing international waters, the purser must ____ on every customs declaration.
+  apply_answer: dot the i's
+  apply_translation: Antes de zarpar hacia aguas internacionales, el sobrecargo debe cuidar cada detalle en todas las declaraciones aduaneras.
+- id: yacht-clear-up
+  text: Let's clear up the discrepancy in the port-of-call log before requesting departure clearance.
+  translation: Aclaremos la discrepancia en el registro de escalas antes de solicitar el despacho de salida. (clear up = aclarar)
+  visual_hint: 🧭✅
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: clear up
+    meaning: aclarar / resolver una duda
+    ipa: klɪr ʌp
+  kind: phrasal_verb
+  apply_sentence: The harbor master asked us to ____ our tonnage certificate first.
+  apply_answer: clear up
+  apply_translation: El capitán del puerto nos pidió aclarar primero nuestro certificado de arqueo.
+roleplay:
+  ai_role: port state control officer
+  user_role: superyacht purser
+  setting: A Mediterranean harbor master's office during pre-charter port clearance.
+  turns:
+  - speaker: ai
+    text: Good morning, Purser. Before we issue departure clearance, I need clarity on your charter registry and bonded inventory.
+  - speaker: user
+    goal: Pregunta por la exención de cabotaje y confirma que las provisiones y el combustible están precintados y conciliados.
+    suggested_lines:
+    - Does the vessel's commercial registry qualify for a temporary cabotage exemption in Greek waters? Meanwhile, all duty-free fuel and bonded stores have been sealed and reconciled against the manifest.
+    - We are applying for a temporary cabotage exemption, and all bonded stores have been sealed and reconciled against the manifest.
+  - speaker: ai
+    text: Your exemption is valid for twenty-one days, provided every non-EU crew member's documentation is in order.
+  - speaker: user
+    goal: Confirma que toda la tripulación tiene libreta marítima válida y pide aclarar cualquier discrepancia en el registro de escalas.
+    suggested_lines:
+    - Every non-EU crew member holds a valid seafarer's book and shore-leave attestation. Let's clear up any discrepancy in the port-of-call log before requesting departure clearance.
+    - All non-EU crew hold valid seafarer's books, and we are ready to clear up any remaining log discrepancies.
+  - speaker: ai
+    text: Everything checks out. Here is your stamped port clearance—fair winds and following seas.

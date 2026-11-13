@@ -1,0 +1,111 @@
+id: b2-mentoring-junior-developer
+title: Mentoring a junior colleague
+title_es: Dar mentoría a un compañero junior
+cefr: B2
+topic: work-and-career
+description: Revisa el trabajo de un compañero junior de forma constructiva, guíalo
+  para detectar casos límite y fomenta su autonomía.
+phrases:
+- id: praise-solid-foundation
+  text: Your overall structure is clean, and the core logic works well.
+  translation: Tu estructura general está limpia y la lógica principal funciona bien.
+  visual_hint: 👏🧩
+  cloze:
+  - 2
+  - 4
+  - 7
+  glossary:
+  - word: overall
+    meaning: general / global
+    ipa: ˌoʊvərˈɔːl
+  - word: core logic
+    meaning: lógica principal
+    ipa: kɔːr ˈlɑːdʒɪk
+- id: guide-toward-edge-cases
+  text: What do you think happens if a user submits an empty form?
+  translation: ¿Qué crees que pasa si un usuario envía un formulario vacío?
+  visual_hint: 🤔🔍
+  cloze:
+  - 3
+  - 7
+  - 9
+  glossary:
+  - word: submits
+    meaning: envía
+    ipa: səbˈmɪts
+  - word: empty
+    meaning: vacío
+    ipa: ˈempti
+- id: encourage-ownership
+  text: Try writing a quick test for that case and let me know.
+  translation: Intenta escribir una prueba rápida para ese caso y avísame.
+  visual_hint: 🧪🚀
+  cloze:
+  - 1
+  - 3
+  - 6
+  glossary:
+  - word: test
+    meaning: prueba / test
+    ipa: test
+  - word: case
+    meaning: caso
+    ipa: keɪs
+- id: idm-think-through
+  text: Take ten minutes to think through the error handling first.
+  translation: 'Tómate diez minutos para analizar bien el manejo de errores primero. (think through: pensar detenidamente)'
+  visual_hint: 🧠⚙️
+  cloze:
+  - 4
+  - 5
+  - 7
+  glossary:
+  - word: think through
+    meaning: analizar detenidamente de principio a fin
+    ipa: θɪŋk θruː
+  kind: phrasal_verb
+  apply_sentence: Let's ____ the risks before we sign the contract.
+  apply_answer: think through
+  apply_translation: Analicemos bien los riesgos antes de firmar el contrato.
+- id: idm-ball-is-in-your-court
+  text: I left two small comments, so the ball is in your court.
+  translation: 'Dejé dos comentarios pequeños, así que ahora te toca a ti. (the ball is in your court: es tu turno)'
+  visual_hint: 🎾👉
+  cloze:
+  - 7
+  - 10
+  - 11
+  glossary:
+  - word: the ball is in your court
+    meaning: la pelota está en tu tejado / es tu turno
+    ipa: ðə bɔːl ɪz ɪn jʊr kɔːrt
+  kind: idiom
+  apply_sentence: We sent our best offer, and now ____.
+  apply_answer: the ball is in their court
+  apply_translation: Enviamos nuestra mejor oferta y ahora les toca a ellos decidir.
+roleplay:
+  ai_role: junior developer
+  user_role: senior mentor
+  setting: Pair-reviewing a pull request on a video call.
+  turns:
+  - speaker: ai
+    text: Thanks for looking at my pull request! Did I break anything?
+  - speaker: user
+    goal: Reconoce que la estructura es limpia y pregunta qué pasa si el usuario envía un formulario vacío.
+    suggested_lines:
+    - Your overall structure is clean, and the core logic works well. What do you think happens if a user submits an empty form?
+    - Nothing is broken! Your structure is clean, though what happens if a user submits an empty form?
+  - speaker: ai
+    text: Oh, good catch! Right now it might throw an unhandled error. Should I rewrite the whole function?
+  - speaker: user
+    goal: Anímalo a analizar primero el manejo de errores y a escribir una prueba rápida para ese caso.
+    suggested_lines:
+    - Not at all. Take ten minutes to think through the error handling first, then try writing a quick test for that case.
+    - No need to rewrite everything. Think through the error handling and write a quick test for that case.
+  - speaker: ai
+    text: That makes sense, I will add the validation and test now.
+  - speaker: user
+    goal: Cierra dando confianza y dejando la decisión en sus manos.
+    suggested_lines:
+    - Awesome, I left two small comments, so the ball is in your court. Ping me when it is ready!
+    - Great plan! The ball is in your court—let me know once you push the update.

@@ -1,0 +1,95 @@
+id: c1-grammar-subjunctive
+title: Mandative subjunctive and formal unreal structures
+title_es: Subjuntivo mandativo y estructuras irreales formales
+cefr: C1
+topic: grammar-and-connectors
+description: Emplea el subjuntivo en inglés formal ('suggest that he be', 'insist
+  that it remain') y formas irreales como 'were it not for' e 'it's high time'.
+phrases:
+- id: insist-that-it-be
+  text: The committee insisted that the clause be rewritten immediately.
+  translation: El comité insistió en que la cláusula fuera reescrita de inmediato.
+  visual_hint: 📜✍️
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: insist that + base verb
+    meaning: subjuntivo mandativo (be / infinitivo sin 'to')
+    ipa: biː
+  kind: expression
+  apply_sentence: The regulator demanded that the report ____ published in full.
+  apply_answer: be
+  apply_translation: El regulador exigió que el informe se publicara íntegro.
+- id: essential-that-everyone-attend
+  text: It is essential that everyone attend the briefing.
+  translation: Es esencial que todos asistan a la sesión informativa.
+  visual_hint: 🏛️👥
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: essential that + base verb
+    meaning: es esencial que... (sin -s en 3.ª persona)
+    ipa: əˈsɛnd
+  kind: expression
+  apply_sentence: It is vital that she ____ informed before the vote.
+  apply_answer: be
+  apply_translation: Es vital que ella sea informada antes de la votación.
+- id: were-it-not-for
+  text: Were it not for your intervention, the deal would fail.
+  translation: De no ser por tu intervención, el acuerdo fracasaría.
+  visual_hint: 🛟🤝
+  cloze:
+  - 0
+  - 1
+  - 2
+  - 3
+  glossary:
+  - word: were it not for
+    meaning: de no ser por (condicional invertida)
+    ipa: wɜːr ɪt nɑːt fɔːr
+- id: high-time-we-addressed
+  text: It is high time we addressed the root cause.
+  translation: Ya es hora de que abordemos la causa raíz.
+  visual_hint: ⏰🎯
+  cloze:
+  - 2
+  - 3
+  - 5
+  glossary:
+  - word: it is high time + past
+    meaning: ya es hora de que (con pasado simple)
+    ipa: haɪ taɪm
+- id: as-though-nothing-happened
+  text: He spoke as though nothing had happened at all.
+  translation: Habló como si no hubiera pasado nada en absoluto.
+  visual_hint: 🎭😐
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: as though
+    meaning: como si (situación irreal o hipotética)
+    ipa: æz ðoʊ
+roleplay:
+  ai_role: legal counsel
+  user_role: policy chair
+  setting: Drafting governance rules for an industry association.
+  turns:
+  - speaker: ai
+    text: How strict should the new data-retention clause be?
+  - speaker: user
+    goal: Usa el subjuntivo mandativo ('recommend that... be', 'insist that...').
+    suggested_lines:
+    - I recommend that every member be audited annually.
+    - We must insist that sensitive logs remain encrypted at all times.
+  - speaker: ai
+    text: Some members argue the transition period is too short.
+  - speaker: user
+    goal: Responde usando 'It is high time' o 'Were it not for'.
+    suggested_lines:
+    - It is high time we raised the baseline standard across the board.
+    - Were it not for this deadline, compliance would drag on for years.
+  - speaker: ai
+    text: Agreed. I will finalize the wording this afternoon.

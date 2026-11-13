@@ -1,0 +1,108 @@
+id: c2-rare-bookshop-first-edition
+title: Appraising a first-edition antiquarian book
+title_es: Evaluar primera edición y colación en librería anticuaria
+cefr: C2
+topic: hotel-and-shopping
+description: Examina la colación, la camisa original, manchas de humedad y procedencia de
+  una primera edición.
+phrases:
+- id: collated-complete-plates
+  text: Has this octavo volume been collated complete with all engraved plates and errata
+    slips?
+  translation: ¿Este volumen en octavo ha sido cotejado completo con todas sus láminas grabadas
+    y fe de erratas?
+  visual_hint: 📖🔍
+  cloze:
+  - 5
+  - 11
+  glossary:
+  - word: collated
+    meaning: cotejado / verificado página por página
+    ipa: kəˈleɪtɪd
+  - word: errata slips
+    meaning: hojas sueltas de fe de erratas
+    ipa: ɪˈrɑːtə slɪps
+- id: dust-jacket-price-clipped
+  text: The dust jacket is remarkably crisp, though it appears to have been price-clipped.
+  translation: La sobrecubierta está notablemente nítida, aunque parece haber tenido el precio
+    recortado.
+  visual_hint: 📚✂️
+  cloze:
+  - 1
+  - 11
+  glossary:
+  - word: dust jacket
+    meaning: sobrecubierta
+    ipa: dʌst ˈdʒækɪt
+  - word: price-clipped
+    meaning: con la esquina del precio recortada
+    ipa: praɪs klɪpt
+- id: minimal-foxing-hinges
+  text: Aside from minimal foxing on the endpapers, the original cloth hinges remain tight.
+  translation: Aparte de un moteado mínimo en las guardas, las bisagras originales de tela
+    siguen firmes.
+  visual_hint: 📜✨
+  cloze:
+  - 3
+  - 9
+  glossary:
+  - word: foxing
+    meaning: manchas de oxidación en papel antiguo
+    ipa: ˈfɑːksɪŋ
+  - word: hinges
+    meaning: bisagras / uniones del lomo
+    ipa: ˈhɪndʒɪz
+- id: idm-fetch-a-premium
+  text: An inscribed first issue in this state will invariably fetch a premium at auction.
+  translation: Una primera tirada dedicada en este estado invariablemente alcanzará una prima
+    en subasta.
+  visual_hint: 🔨💎
+  cloze:
+  - 9
+  - 11
+  glossary:
+  - word: fetch a premium
+    meaning: alcanzar un precio muy superior
+    ipa: fetʃ ə ˈpriːmiəm
+  kind: expression
+  apply_sentence: Signed copies with intact wraparound bands always ____.
+  apply_answer: fetch a premium
+  apply_translation: Los ejemplares firmados con fajas intactas siempre alcanzan una prima.
+- id: idm-hold-in-high-regard
+  text: Bibliophiles hold this printer's colophon in high regard for its typographical precision.
+  translation: Los bibliófilos tienen en alta estima el colofón de este impresor por su precisión
+    tipográfica.
+  visual_hint: 🖋️🏛️
+  cloze:
+  - 5
+  - 7
+  glossary:
+  - word: in high regard
+    meaning: en alta estima / muy valorado
+    ipa: ɪn haɪ rɪˈɡɑːrd
+  kind: expression
+  apply_sentence: Collectors hold early Kelmscott Press editions ____.
+  apply_answer: in high regard
+  apply_translation: Los coleccionistas tienen en alta estima las primeras ediciones de Kelmscott
+    Press.
+roleplay:
+  ai_role: antiquarian bookseller
+  user_role: rare book collector
+  setting: A wood-paneled rare bookshop with locked glass vitrines.
+  turns:
+  - speaker: ai
+    text: Here is the 1925 first edition you inquired about. Feel free to inspect the boards.
+  - speaker: user
+    goal: Pregunta si el volumen está cotejado completo y señala el estado de la sobrecubierta.
+    suggested_lines:
+    - Has this octavo volume been collated complete with all engraved plates and errata slips?
+    - The dust jacket is remarkably crisp, though it appears to have been price-clipped.
+  - speaker: ai
+    text: Yes, fully collated, and the price clip is noted on our catalog card.
+  - speaker: user
+    goal: Comenta el estado de las guardas y bisagras, y reconoce su valor en subasta.
+    suggested_lines:
+    - Aside from minimal foxing on the endpapers, the original cloth hinges remain tight.
+    - An inscribed first issue in this state will invariably fetch a premium at auction.
+  - speaker: ai
+    text: Indeed—we also have the original bookseller's receipt tucked inside for provenance.

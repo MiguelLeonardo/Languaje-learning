@@ -1,0 +1,101 @@
+id: c2-sustainable-aviation-fuel-procurement
+title: Sustainable aviation fuel procurement
+title_es: Adquisición de combustible sostenible de aviación
+cefr: C2
+topic: travel-and-transport
+description: Negocia créditos SAF book-and-claim, trazabilidad de materias primas
+  y mandatos de mezcla europeos en una cumbre aeronáutica.
+phrases:
+- id: book-and-claim-registry
+  text: We intend to retire Scope 3 emissions via an audited SAF book-and-claim registry.
+  translation: Pretendemos compensar las emisiones de Alcance 3 mediante un registro auditado de SAF bajo el modelo book-and-claim.
+  visual_hint: 🌱✈️
+  cloze:
+  - 3
+  - 11
+  glossary:
+  - word: retire
+    meaning: retirar / dar de baja créditos de carbono
+    ipa: rɪˈtaɪər
+  - word: book-and-claim
+    meaning: sistema contable de certificados sin entrega física directa
+    ipa: bʊk ænd kleɪm
+- id: feedstock-chain-of-custody
+  text: Can your refinery guarantee full chain-of-custody traceability for hydrotreated vegetable oil feedstocks?
+  translation: ¿Puede su refinería garantizar la trazabilidad completa de la cadena de custodia para materias primas de aceite vegetal hidrotratado?
+  visual_hint: 🔗🛢️
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: chain-of-custody
+    meaning: cadena de custodia
+    ipa: tʃeɪn əv ˈkʌstədi
+  - word: traceability
+    meaning: trazabilidad
+    ipa: ˌtreɪsəˈbɪləti
+- id: blending-mandate-uplift
+  text: Securing physical uplift at Frankfurt helps us exceed the upcoming European blending mandate.
+  translation: Asegurar el suministro físico en Fráncfort nos ayuda a superar el próximo mandato europeo de mezcla.
+  visual_hint: ⛽🇪🇺
+  cloze:
+  - 2
+  - 11
+  glossary:
+  - word: uplift
+    meaning: carga / suministro de combustible en aeronave
+    ipa: ˈʌplɪft
+  - word: blending mandate
+    meaning: mandato obligatorio de mezcla
+    ipa: ˈblendɪŋ ˈmændeɪt
+- id: saf-ahead-of-the-curve
+  text: Locking in multi-year offtake agreements puts our carrier ahead of the curve on decarbonization.
+  translation: Asegurar acuerdos de compra plurianuales sitúa a nuestra aerolínea a la vanguardia en descarbonización. (ahead of the curve = a la vanguardia)
+  visual_hint: 📈🌍
+  cloze:
+  - 8
+  - 11
+  glossary:
+  - word: ahead of the curve
+    meaning: adelantado a su tiempo / a la vanguardia
+    ipa: əˈhed əv ðə kɜːrv
+  kind: idiom
+  apply_sentence: Airlines investing in electric regional turboprops will stay ____ on emissions targets.
+  apply_answer: ahead of the curve
+  apply_translation: Las aerolíneas que invierten en turbohélices regionales eléctricos se mantendrán a la vanguardia en objetivos de emisiones.
+- id: saf-scale-up
+  text: How rapidly can your consortium scale up e-kerosene production once power-purchase agreements close?
+  translation: ¿Qué tan rápido puede su consorcio ampliar la producción de e-queroseno una vez que se cierren los acuerdos de compra de energía? (scale up = escalar)
+  visual_hint: 🏭⚡
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: scale up
+    meaning: ampliar / escalar producción
+    ipa: skeɪl ʌp
+  kind: phrasal_verb
+  apply_sentence: Subsidies are vital to ____ green hydrogen supply at major hubs.
+  apply_answer: scale up
+  apply_translation: Los subsidios son vitales para escalar el suministro de hidrógeno verde en los principales centros de conexión.
+roleplay:
+  ai_role: SAF refinery commercial director
+  user_role: airline sustainability VP
+  setting: A private bilateral meeting at an international aviation sustainability summit.
+  turns:
+  - speaker: ai
+    text: Thanks for meeting. With ReFuelEU targets tightening, how is your carrier structuring its 2027 fuel portfolio?
+  - speaker: user
+    goal: Explica que buscas retirar emisiones Alcance 3 vía book-and-claim y asegurar suministro físico en Fráncfort.
+    suggested_lines:
+    - We intend to retire Scope 3 emissions via an audited SAF book-and-claim registry, while securing physical uplift at Frankfurt to exceed the upcoming European blending mandate.
+    - We're combining book-and-claim Scope 3 retirement with physical uplift in Frankfurt to beat the blending mandate.
+  - speaker: ai
+    text: We can allocate forty thousand metric tons at Frankfurt, subject to a five-year offtake commitment.
+  - speaker: user
+    goal: Exige trazabilidad de cadena de custodia para las materias primas y pregunta qué tan rápido pueden escalar el e-queroseno.
+    suggested_lines:
+    - Can your refinery guarantee full chain-of-custody traceability for hydrotreated vegetable oil feedstocks, and how rapidly can your consortium scale up e-kerosene production once power-purchase agreements close?
+    - Before locking in an offtake, we need full chain-of-custody traceability and a timeline for how rapidly you can scale up e-kerosene.
+  - speaker: ai
+    text: Every batch carries ISCC-EU certification, and our e-kerosene plant scales to commercial volume by Q4 next year.

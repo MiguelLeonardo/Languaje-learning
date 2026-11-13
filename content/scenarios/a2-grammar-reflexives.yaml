@@ -1,0 +1,88 @@
+id: a2-grammar-reflexives
+title: Reflexive and indefinite pronouns
+title_es: Pronombres reflexivos e indefinidos
+cefr: A2
+topic: grammar-and-connectors
+description: Domina pronombres reflexivos (myself, yourself) e indefinidos (someone,
+  anything, nobody) en situaciones reales.
+phrases:
+- id: enjoy-yourself
+  text: I hope you enjoy yourself at the concert.
+  translation: Espero que te diviertas en el concierto.
+  visual_hint: 🎶😊
+  cloze:
+  - 4
+  glossary:
+  - word: enjoy yourself
+    meaning: divertirse / pasarla bien
+    ipa: ɪnˈdʒɔɪ jʊrˈsɛlf
+  kind: expression
+  apply_sentence: Did you make this dinner all by ____?
+  apply_answer: yourself
+  apply_translation: ¿Preparaste esta cena tú solo/a?
+- id: someone-left-phone
+  text: Someone left their phone on the counter.
+  translation: Alguien dejó su teléfono en el mostrador.
+  visual_hint: 📱🪑
+  cloze:
+  - 0
+  glossary:
+  - word: someone
+    meaning: alguien (en afirmativas)
+    ipa: ˈsʌmwʌn
+  kind: expression
+  apply_sentence: There is ____ waiting for you at the reception.
+  apply_answer: someone
+  apply_translation: Hay alguien esperándote en la recepción.
+- id: anything-else
+  text: Did you notice anything unusual in the report?
+  translation: ¿Notaste algo inusual en el informe?
+  visual_hint: 📄🔍
+  cloze:
+  - 3
+  glossary:
+  - word: anything
+    meaning: algo / cualquier cosa (preguntas y negativas)
+    ipa: ˈɛniθɪŋ
+- id: fixed-it-myself
+  text: I fixed the broken chair myself yesterday.
+  translation: Arreglé la silla rota yo mismo ayer.
+  visual_hint: 🪑🔧
+  cloze:
+  - 5
+  glossary:
+  - word: myself
+    meaning: yo mismo / por mí mismo
+    ipa: maɪˈsɛlf
+- id: nobody-knew
+  text: Nobody knew the password for the guest Wi-Fi.
+  translation: Nadie sabía la contraseña del Wi-Fi para invitados.
+  visual_hint: 📶🤷
+  cloze:
+  - 0
+  glossary:
+  - word: nobody
+    meaning: nadie (con verbo en afirmativo)
+    ipa: ˈnoʊbɑːdi
+roleplay:
+  ai_role: friend
+  user_role: friend
+  setting: Catching up after a busy weekend.
+  turns:
+  - speaker: ai
+    text: Hey! Did you do anything fun over the weekend?
+  - speaker: user
+    goal: Cuenta qué hiciste usando un pronombre reflexivo ('myself') o indefinido
+      ('something'/'everyone').
+    suggested_lines:
+    - Yes, I cooked a big dinner by myself for everyone.
+    - Not really, nobody was free, so I relaxed by myself.
+  - speaker: ai
+    text: Sounds nice! Did anyone visit you on Sunday?
+  - speaker: user
+    goal: Responde usando 'someone' o 'nobody'.
+    suggested_lines:
+    - Someone from my old job stopped by for coffee.
+    - No, nobody came over, so I had a quiet day.
+  - speaker: ai
+    text: Nice, we all need a quiet Sunday sometimes!

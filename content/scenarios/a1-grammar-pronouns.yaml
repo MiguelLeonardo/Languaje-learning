@@ -1,0 +1,89 @@
+id: a1-grammar-pronouns
+title: Subject, object, and possessive pronouns
+title_es: Pronombres personales y posesivos básicos
+cefr: A1
+topic: grammar-and-connectors
+description: Usa pronombres de sujeto, objeto y posesivos (me, my, mine, her, theirs)
+  en conversaciones cotidianas.
+phrases:
+- id: call-me-later
+  text: Please call me after work today.
+  translation: Por favor, llámame hoy después del trabajo. ('me' es pronombre de objeto)
+  visual_hint: 📞🙋
+  cloze:
+  - 2
+  glossary:
+  - word: me
+    meaning: me / a mí (pronombre de objeto)
+    ipa: miː
+  kind: expression
+  apply_sentence: Can you help ____ with this heavy box?
+  apply_answer: me
+  apply_translation: ¿Puedes ayudarme con esta caja pesada?
+- id: my-bag-hers
+  text: This is my bag, and that one is hers.
+  translation: Esta es mi bolsa, y aquella es suya (de ella).
+  visual_hint: 👜👩
+  cloze:
+  - 2
+  - 8
+  glossary:
+  - word: hers
+    meaning: suyo / suya (de ella, sin sustantivo)
+    ipa: hɜːrz
+  kind: expression
+  apply_sentence: I forgot my umbrella, so Maria lent me ____.
+  apply_answer: hers
+  apply_translation: Olvidé mi paraguas, así que María me prestó el suyo.
+- id: give-it-to-him
+  text: Give the ticket to him at the door.
+  translation: Dale el boleto a él en la puerta.
+  visual_hint: 🎟️👨
+  cloze:
+  - 4
+  glossary:
+  - word: him
+    meaning: a él / le (pronombre de objeto)
+    ipa: hɪm
+- id: our-keys-are-here
+  text: Our keys are on the desk, not theirs.
+  translation: Nuestras llaves están en el escritorio, no las de ellos.
+  visual_hint: 🔑🏢
+  cloze:
+  - 0
+  - 7
+  glossary:
+  - word: theirs
+    meaning: suyo / suyos (de ellos)
+    ipa: ðɛrz
+- id: is-this-yours
+  text: Excuse me, is this seat yours?
+  translation: Disculpa, ¿este asiento es tuyo?
+  visual_hint: 💺❓
+  cloze:
+  - 5
+  glossary:
+  - word: yours
+    meaning: tuyo / tuya (pronombre posesivo)
+    ipa: jʊrz
+roleplay:
+  ai_role: coworker
+  user_role: coworker
+  setting: Sorting out mixed-up items in a shared office.
+  turns:
+  - speaker: ai
+    text: Hey, I found a blue notebook on the table. Is it yours?
+  - speaker: user
+    goal: Responde usando un pronombre posesivo ('mine' o 'hers').
+    suggested_lines:
+    - No, it isn't mine. Maybe it is hers.
+    - Yes, that notebook is mine! Thank you.
+  - speaker: ai
+    text: Oh, great! Can I send the meeting notes to you and David?
+  - speaker: user
+    goal: Confirma usando pronombres de objeto ('me', 'him' o 'us').
+    suggested_lines:
+    - Yes, please send them to me and him.
+    - Sure, send them to us before lunch.
+  - speaker: ai
+    text: Done! Have a nice afternoon.

@@ -1,0 +1,108 @@
+id: b2-hosting-out-of-town-guest
+title: Hosting an out-of-town friend
+title_es: Recibir y guiar a un amigo que visita la ciudad
+cefr: B2
+topic: social-and-smalltalk
+description: Recibe en casa a un amigo de otra ciudad, hazlo sentir cómodo y sugiere planes locales auténticos.
+phrases:
+- id: make-yourself-at-home
+  text: Drop your bags in the guest room and make yourself at home.
+  translation: Deja tus maletas en la habitación de invitados y siéntete como en casa.
+  visual_hint: 🧳🏡
+  cloze:
+  - 5
+  - 8
+  - 11
+  glossary:
+  - word: guest room
+    meaning: habitación de invitados
+    ipa: ɡest ruːm
+  - word: make yourself at home
+    meaning: siéntete como en casa
+    ipa: meɪk jɔːrˈself æt hoʊm
+- id: skip-tourist-traps
+  text: Instead of tourist traps, I'll show you the neighborhood spots locals actually love.
+  translation: En lugar de trampas para turistas, te mostraré los sitios del barrio que la gente local realmente ama.
+  visual_hint: 🗺️☕
+  cloze:
+  - 2
+  - 7
+  - 11
+  glossary:
+  - word: tourist traps
+    meaning: trampas para turistas
+    ipa: ˈtʊrɪst træps
+  - word: locals
+    meaning: habitantes locales
+    ipa: ˈloʊkəlz
+- id: pace-yourself-jetlag
+  text: Take it easy this afternoon if you want to recover from the flight.
+  translation: Tómatelo con calma esta tarde si quieres recuperarte del vuelo.
+  visual_hint: 🛋️✈️
+  cloze:
+  - 2
+  - 8
+  - 11
+  glossary:
+  - word: take it easy
+    meaning: tomárselo con calma
+    ipa: teɪk ɪt ˈiːzi
+  - word: recover
+    meaning: recuperarse
+    ipa: rɪˈkʌvər
+- id: idm-b2hg-show-around
+  text: Tomorrow morning I'll take the day off to show you around the old town.
+  translation: Mañana por la mañana me tomaré el día libre para enseñarte el casco antiguo (hacer de guía).
+  visual_hint: 🚶‍♂️🏛️
+  cloze:
+  - 8
+  - 10
+  glossary:
+  - word: show around
+    meaning: enseñar un lugar a alguien
+    ipa: ʃoʊ əˈraʊnd
+  kind: phrasal_verb
+  apply_sentence: When my cousin visits Berlin, I'll ____ the best cafés.
+  apply_answer: show her around
+  apply_translation: Cuando mi prima visite Berlín, le enseñaré los mejores cafés.
+- id: idm-b2hg-off-the-beaten-path
+  text: We can visit a tiny jazz cellar that's completely off the beaten path.
+  translation: Podemos visitar un pequeño sótano de jazz que está totalmente fuera de lo turístico (poco conocido y auténtico).
+  visual_hint: 🎷🕯️
+  cloze:
+  - 8
+  - 11
+  glossary:
+  - word: off the beaten path
+    meaning: fuera de las rutas turísticas
+    ipa: ɔːf ðə ˈbiːtən pæθ
+  kind: idiom
+  apply_sentence: I prefer tiny villages ____ rather than crowded beaches.
+  apply_answer: off the beaten path
+  apply_translation: Prefiero pueblos pequeños poco conocidos en lugar de playas llenas de gente.
+roleplay:
+  ai_role: visiting friend (Claire)
+  user_role: host
+  setting: Welcoming your friend at your apartment door after her flight.
+  turns:
+  - speaker: ai
+    text: Hey! It feels so surreal to finally be here. Thank you so much for letting me stay!
+  - speaker: user
+    goal: Dale la bienvenida, dile que deje sus cosas y se sienta como en casa, y suggiérele descansar del vuelo.
+    suggested_lines:
+    - Drop your bags in the guest room and make yourself at home.
+    - Take it easy this afternoon if you want to recover from the flight.
+  - speaker: ai
+    text: Honestly, a shower and a coffee sound amazing. What do you have in mind for tomorrow?
+  - speaker: user
+    goal: Cuéntale que la llevarás a conocer el casco antiguo evitando las trampas para turistas.
+    suggested_lines:
+    - Tomorrow morning I'll take the day off to show you around the old town.
+    - Instead of tourist traps, I'll show you the neighborhood spots locals actually love.
+  - speaker: ai
+    text: That sounds way better than waiting in museum lines! Any fun evening ideas?
+  - speaker: user
+    goal: Sugiere un sitio auténtico y poco turístico, como un club de jazz escondido.
+    suggested_lines:
+    - We can visit a tiny jazz cellar that's completely off the beaten path.
+    - There's a hidden jazz spot off the beaten path we could check out.

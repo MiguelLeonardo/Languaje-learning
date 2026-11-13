@@ -1,0 +1,91 @@
+id: a1-daily-laundry-timer
+title: Doing laundry with a phone timer
+title_es: Lavar la ropa con un temporizador
+cefr: A1
+topic: daily-tech-and-media
+description: Pon la lavadora en casa y programa una alarma en tu teléfono para no olvidar la ropa.
+phrases:
+- id: put-clothes-inside
+  text: I put the dirty clothes inside the washing machine.
+  translation: Meto la ropa sucia dentro de la lavadora.
+  visual_hint: 👕🧺
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: washing machine
+    meaning: lavadora
+    ipa: ˈwɑːʃɪŋ məˌʃiːn
+- id: choose-cold-water
+  text: I always choose cold water for dark shirts.
+  translation: Siempre elijo agua fría para las camisas oscuras.
+  visual_hint: ❄️👚
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: cold water
+    meaning: agua fría
+    ipa: koʊld ˈwɔːtər
+- id: set-forty-minute-timer
+  text: I set a forty-minute timer on my phone.
+  translation: Pongo un temporizador de cuarenta minutos en mi teléfono.
+  visual_hint: ⏱️📱
+  cloze:
+  - 1
+  - 4
+  glossary:
+  - word: timer
+    meaning: temporizador / cronómetro
+    ipa: ˈtaɪmər
+- id: idm-hang-up
+  text: When the alarm rings, I hang up the wet clothes.
+  translation: 'Cuando suena la alarma, cuelgo la ropa mojada. (hang up: colgar)'
+  visual_hint: ⏰🧦
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: hang up
+    meaning: colgar (ropa, cuadros)
+    ipa: hæŋ ʌp
+  kind: phrasal_verb
+  apply_sentence: Let us ____ the towels outside in the sun.
+  apply_answer: hang up
+  apply_translation: Vamos a colgar las toallas afuera al sol.
+- id: idm-on-time
+  text: The phone reminder helps me finish laundry on time.
+  translation: 'El recordatorio del teléfono me ayuda a terminar la colada a tiempo. (on time: a tiempo)'
+  visual_hint: ✅🕒
+  cloze:
+  - 7
+  - 8
+  glossary:
+  - word: on time
+    meaning: a tiempo / puntual
+    ipa: ɑːn taɪm
+  kind: expression
+  apply_sentence: I always take the clothes out ____ before dinner.
+  apply_answer: on time
+  apply_translation: Siempre saco la ropa a tiempo antes de la cena.
+roleplay:
+  ai_role: sibling
+  user_role: roommate
+  setting: Apartment laundry corner on a Saturday morning.
+  turns:
+  - speaker: ai
+    text: Are you using the washing machine right now?
+  - speaker: user
+    goal: Di que metes la ropa sucia y eliges agua fría para las camisas oscuras.
+    suggested_lines:
+    - I put the dirty clothes inside the washing machine.
+    - I always choose cold water for dark shirts.
+  - speaker: ai
+    text: Smart! How will you remember when it finishes?
+  - speaker: user
+    goal: Explica que pones un temporizador de cuarenta minutos para terminar a tiempo.
+    suggested_lines:
+    - I set a forty-minute timer on my phone.
+    - The phone reminder helps me finish laundry on time.
+  - speaker: ai
+    text: Good idea! Then I can use it after you hang up your clothes.

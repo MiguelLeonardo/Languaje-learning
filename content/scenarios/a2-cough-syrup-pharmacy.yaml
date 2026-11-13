@@ -1,0 +1,92 @@
+id: a2-cough-syrup-pharmacy
+title: Buying cough syrup and throat lozenges
+title_es: Comprar jarabe para la tos y pastillas para la garganta
+cefr: A2
+topic: health-and-emergencies
+description: Explica en la farmacia que tienes tos seca desde hace tres días y pide
+  un medicamento que no dé sueño.
+phrases:
+- id: dry-cough
+  text: I have had a dry cough for three days.
+  translation: He tenido tos seca durante tres días.
+  visual_hint: 😷🗓️
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: dry cough
+    meaning: tos seca
+    ipa: draɪ kɒf
+- id: throat-lozenges
+  text: Do you recommend honey lozenges or cough syrup?
+  translation: ¿Recomienda pastillas de miel o jarabe para la tos?
+  visual_hint: 🍯💊
+  cloze:
+  - 4
+  - 7
+  glossary:
+  - word: lozenges
+    meaning: pastillas para la garganta
+    ipa: ˈlɑːzɪndʒɪz
+- id: non-drowsy-medicine
+  text: I need a non-drowsy medicine because I am driving.
+  translation: Necesito un medicamento que no dé sueño porque estoy conduciendo.
+  visual_hint: 🚗💊
+  cloze:
+  - 3
+  - 8
+  glossary:
+  - word: non-drowsy
+    meaning: que no produce sueño
+    ipa: nɑːn ˈdraʊzi
+- id: idm-calm-down-a2
+  text: This syrup helps calm down a bad cough at night.
+  translation: Este jarabe ayuda a calmar una tos fuerte por la noche. (calm down = calmar)
+  visual_hint: 🌙🧴
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: calm down
+    meaning: calmar / aliviar
+    ipa: kɑːm daʊn
+  kind: phrasal_verb
+  apply_sentence: Drink warm tea to ____ your sore throat.
+  apply_answer: calm down
+  apply_translation: Bebe té tibio para calmar tu dolor de garganta.
+- id: idm-all-day-long-a2
+  text: My throat feels scratchy all day long.
+  translation: Siento la garganta irritada durante todo el día. (all day long = todo el día)
+  visual_hint: ☀️😣
+  cloze:
+  - 4
+  - 6
+  glossary:
+  - word: all day long
+    meaning: durante todo el día
+    ipa: ɔːl deɪ lɔːŋ
+  kind: expression
+  apply_sentence: It rained ____ so we stayed inside.
+  apply_answer: all day long
+  apply_translation: Llovió todo el día, así que nos quedamos adentro.
+roleplay:
+  ai_role: pharmacist
+  user_role: customer
+  setting: Busy pharmacy counter in the afternoon.
+  turns:
+  - speaker: ai
+    text: Good afternoon! What symptoms are you having?
+  - speaker: user
+    goal: Explica que tienes tos seca desde hace tres días y la garganta irritada.
+    suggested_lines:
+    - I have had a dry cough for three days.
+    - My throat feels scratchy all day long.
+  - speaker: ai
+    text: I see. Do you need something for daytime or nighttime?
+  - speaker: user
+    goal: Pide una medicina que no cause sueño porque vas a manejar y pregunta por jarabe o pastillas.
+    suggested_lines:
+    - I need a non-drowsy medicine because I am driving.
+    - Do you recommend honey lozenges or cough syrup?
+  - speaker: ai
+    text: Take these non-drowsy honey lozenges during the day, and use the syrup before bed.

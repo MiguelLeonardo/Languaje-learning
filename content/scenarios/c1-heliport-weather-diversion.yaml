@@ -1,0 +1,102 @@
+id: c1-heliport-weather-diversion
+title: Coordinating a heliport weather diversion
+title_es: Coordinar desvío de helicóptero por clima
+cefr: C1
+topic: travel-and-transport
+description: Gestiona con operaciones aéreas mínimos visuales por niebla costera,
+  desvío a helipuerto alterno y retención de franja horaria.
+phrases:
+- id: coastal-fog-minima
+  text: Ceiling visibility at the downtown heliport has dropped below VFR landing minima.
+  translation: La visibilidad de techo en el helipuerto del centro ha caído por debajo de los mínimos de aterrizaje visual.
+  visual_hint: 🌫️🚁
+  cloze:
+  - 1
+  - 11
+  glossary:
+  - word: visibility
+    meaning: visibilidad
+    ipa: ˌvɪzəˈbɪləti
+  - word: minima
+    meaning: mínimos operativos
+    ipa: ˈmɪnɪmə
+- id: alternate-pad-dispatch
+  text: Should we divert to the inland airfield and dispatch a chauffeured transfer from there?
+  translation: ¿Deberíamos desviarnos al aeródromo interior y despachar un traslado con chofer desde allí?
+  visual_hint: 🚘🛣️
+  cloze:
+  - 2
+  - 8
+  glossary:
+  - word: divert
+    meaning: desviar una aeronave
+    ipa: daɪˈvɜːrt
+  - word: dispatch
+    meaning: despachar / enviar
+    ipa: dɪˈspætʃ
+- id: slot-reallocation-window
+  text: If the fog lifts by noon, can we retain our departure slot without penalty?
+  translation: Si la niebla se disipa al mediodía, ¿podemos conservar nuestra franja de salida sin penalización?
+  visual_hint: ⏱️📋
+  cloze:
+  - 8
+  - 11
+  glossary:
+  - word: retain
+    meaning: conservar / retener
+    ipa: rɪˈteɪn
+  - word: departure slot
+    meaning: franja horaria de salida
+    ipa: dɪˈpɑːrtʃər slɑːt
+- id: heli-play-it-by-ear
+  text: Given the shifting marine layer, we will have to play it by ear until the next METAR.
+  translation: Dada la capa marina cambiante, tendremos que improvisar sobre la marcha hasta el próximo reporte METAR. (play it by ear = decidir sobre la marcha)
+  visual_hint: 🌊📡
+  cloze:
+  - 9
+  - 11
+  - 12
+  glossary:
+  - word: play it by ear
+    meaning: decidir sobre la marcha sin plan rígido
+    ipa: pleɪ ɪt baɪ ɪr
+  kind: idiom
+  apply_sentence: With crosswinds fluctuating, the crew chose to ____ for thirty minutes.
+  apply_answer: play it by ear
+  apply_translation: Con los vientos cruzados fluctuando, la tripulación eligió decidir sobre la marcha durante treinta minutos.
+- id: heli-call-off
+  text: Safety comes first, so we are prepared to call off the rotor transfer if gusts intensify.
+  translation: La seguridad es lo primero, así que estamos preparados para cancelar el traslado en helicóptero si las ráfagas se intensifican. (call off = cancelar)
+  visual_hint: 💨🛑
+  cloze:
+  - 8
+  - 9
+  glossary:
+  - word: call off
+    meaning: cancelar / suspender
+    ipa: kɔːl ɔːf
+  kind: phrasal_verb
+  apply_sentence: Air traffic control may ____ low-altitude sightseeing flights during storms.
+  apply_answer: call off
+  apply_translation: El control de tráfico aéreo puede cancelar los vuelos turísticos de baja altitud durante tormentas.
+roleplay:
+  ai_role: heliport flight dispatcher
+  user_role: executive travel coordinator
+  setting: An operations briefing call twenty minutes before a coastal helicopter charter.
+  turns:
+  - speaker: ai
+    text: Charter Ops here. Thick advection fog just rolled over the harbor pad.
+  - speaker: user
+    goal: Confirma si cayó por debajo de mínimos VFR y pregunta si conviene desviarse al aeródromo interior con traslado terrestre.
+    suggested_lines:
+    - Has ceiling visibility at the downtown heliport dropped below VFR landing minima? Should we divert to the inland airfield and dispatch a chauffeured transfer from there?
+    - If visibility is below VFR minima, should we divert to the inland airfield and dispatch a car?
+  - speaker: ai
+    text: Yes, we are below minima right now, though the forecast shows clearing around noon.
+  - speaker: user
+    goal: Pregunta si pueden conservar la franja de salida sin penalización y di que están listos para cancelar si empeora.
+    suggested_lines:
+    - If the fog lifts by noon, can we retain our departure slot without penalty? Safety comes first, so we are prepared to call off the rotor transfer if gusts intensify.
+    - Can we retain our afternoon slot without penalty while we play it by ear, or call off the flight if needed?
+  - speaker: ai
+    text: I can hold your noon slot at no extra charge and keep a sedan on standby at the inland airfield.

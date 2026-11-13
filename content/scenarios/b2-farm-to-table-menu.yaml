@@ -1,0 +1,94 @@
+id: b2-farm-to-table-menu
+title: Asking about farm-to-table sourcing
+title_es: Preguntar por cocina de granja a la mesa
+cefr: B2
+topic: food-and-drink
+description: Consulta sobre ingredientes de temporada, granjas locales y métodos de cocción en un bistró.
+phrases:
+- id: locally-sourced
+  text: How much of tonight's menu is locally sourced from nearby farms?
+  translation: ¿Qué parte del menú de esta noche proviene de granjas locales cercanas?
+  visual_hint: 🚜🥬
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: locally sourced
+    meaning: de origen / abastecimiento local
+    ipa: ˈloʊkəli sɔːrst
+- id: peak-season
+  text: The chef rotates the menu weekly to feature produce at peak season.
+  translation: El chef rota el menú semanalmente para destacar productos en su punto óptimo de temporada.
+  visual_hint: 🍅📅
+  cloze:
+  - 7
+  - 10
+  glossary:
+  - word: produce
+    meaning: productos agrícolas frescos
+    ipa: ˈprɑːduːs
+  - word: peak season
+    meaning: temporada alta / punto óptimo
+    ipa: piːk ˈsiːzən
+- id: wood-fired-hearth
+  text: Are the heirloom carrots roasted over the wood-fired hearth?
+  translation: ¿Las zanahorias criollas se asan en el horno de leña?
+  visual_hint: 🥕🔥
+  cloze:
+  - 2
+  - 7
+  glossary:
+  - word: heirloom
+    meaning: variedad tradicional / criolla
+    ipa: ˈerlʊm
+- id: go-with
+  text: Which side dish would go best with the herb-crusted trout?
+  translation: '¿Qué guarnición combinaría mejor con la trucha con costra de hierbas? (go with: combinar con)'
+  visual_hint: 🐟🌿
+  cloze:
+  - 4
+  - 6
+  glossary:
+  - word: go with
+    meaning: 'go with: combinar o quedar bien con'
+    ipa: ɡoʊ wɪð
+  kind: phrasal_verb
+  apply_sentence: Crisp white wine tends to ____ delicate seafood dishes.
+  apply_answer: go with
+  apply_translation: El vino blanco fresco suele combinar bien con platos delicados de mariscos.
+- id: from-scratch
+  text: Everything from our sourdough to the cultured butter is made from scratch.
+  translation: 'Todo, desde nuestra masa madre hasta la mantequilla fermentada, se hace desde cero. (from scratch: desde cero)'
+  visual_hint: 🧈🍞
+  cloze:
+  - 10
+  - 11
+  glossary:
+  - word: from scratch
+    meaning: 'from scratch: hecho desde cero / artesanalmente'
+    ipa: frʌm skrætʃ
+  kind: idiom
+  apply_sentence: It takes more time, but baking a pie ____ tastes much better.
+  apply_answer: from scratch
+  apply_translation: Lleva más tiempo, pero hornear una tarta desde cero sabe mucho mejor.
+roleplay:
+  ai_role: farm-to-table server
+  user_role: curious diner
+  setting: An intimate seasonal bistro with an open wood-fired kitchen.
+  turns:
+  - speaker: ai
+    text: Good evening! Our menu changes every Friday depending on the harvest. Any questions?
+  - speaker: user
+    goal: Pregunta qué parte del menú proviene de granjas locales y si las zanahorias se asan a la leña.
+    suggested_lines:
+    - How much of tonight's menu is locally sourced? Also, are the heirloom carrots roasted over the wood-fired hearth?
+    - Where do you source your produce, and are those carrots wood-fired?
+  - speaker: ai
+    text: About ninety percent comes from within thirty miles, and yes, the carrots are blistered over oak embers.
+  - speaker: user
+    goal: Pregunta qué guarnición combina mejor con la trucha con hierbas.
+    suggested_lines:
+    - Which side dish would go best with the herb-crusted trout?
+    - What would you recommend to go with the trout?
+  - speaker: ai
+    text: The charred broccolini with preserved lemon balances the richness of the fish beautifully.

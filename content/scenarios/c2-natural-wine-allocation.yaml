@@ -1,0 +1,94 @@
+id: c2-natural-wine-allocation
+title: Negotiating natural wine allocation
+title_es: Negociar cupos de vino natural
+cefr: C2
+topic: food-and-drink
+description: Negocia con un importador la asignación anual de botellas de mínima intervención para tu cava.
+phrases:
+- id: low-intervention-vintages
+  text: Our cellar prioritizes low-intervention vintages from biodynamic micro-estates.
+  translation: Nuestra cava prioriza añadas de mínima intervención provenientes de microbodegas biodinámicas.
+  visual_hint: 🍷🌿
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: low-intervention
+    meaning: de mínima intervención enológica
+    ipa: loʊ ˌɪntərˈvenʃən
+  - word: biodynamic
+    meaning: biodinámico
+    ipa: ˌbaɪoʊdaɪˈnæmɪk
+- id: cellar-allocation
+  text: Given the tiny harvest, can you guarantee a six-case allocation for our autumn list?
+  translation: Dada la escasa cosecha, ¿puede garantizarnos un cupo de seis cajas para nuestra carta de otoño?
+  visual_hint: 📦🍾
+  cloze:
+  - 8
+  - 9
+  glossary:
+  - word: allocation
+    meaning: asignación / cupo limitado
+    ipa: ˌæləˈkeɪʃən
+- id: volatile-acidity
+  text: A hint of volatile acidity adds lift, provided it doesn't veer into vinegar.
+  translation: Un toque de acidez volátil aporta vivacidad, siempre que no derive en vinagre.
+  visual_hint: 🍷🔬
+  cloze:
+  - 3
+  - 9
+  glossary:
+  - word: volatile acidity
+    meaning: acidez volátil (en cata de vinos)
+    ipa: ˈvɑːlətl əˈsɪdəti
+- id: hold-back
+  text: We usually hold back a third of the shipment to let the bottles settle after transit.
+  translation: 'Normalmente reservamos un tercio del envío para dejar reposar las botellas tras el transporte. (hold back: retener / reservar)'
+  visual_hint: 🍾⏳
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: hold back
+    meaning: 'hold back: reservar / retener'
+    ipa: hoʊld bæk
+  kind: phrasal_verb
+  apply_sentence: The sommelier decided to ____ two cases of the 2018 vintage for aging.
+  apply_answer: hold back
+  apply_translation: El sumiller decidió reservar dos cajas de la añada 2018 para guarda.
+- id: par-for-the-course
+  text: Bottle variation across unfiltered skin-contact wines is par for the course.
+  translation: 'La variación entre botellas en vinos brisados sin filtrar es lo habitual. (par for the course: lo normal / esperable)'
+  visual_hint: 🍊🍷
+  cloze:
+  - 7
+  - 10
+  glossary:
+  - word: par for the course
+    meaning: 'par for the course: lo habitual / de esperar'
+    ipa: pɑːr fɔːr ðə kɔːrs
+  kind: idiom
+  apply_sentence: Seasonal price swings for wild truffles are ____ in fine dining.
+  apply_answer: par for the course
+  apply_translation: Las oscilaciones estacionales de precio en la trufa silvestre son lo habitual en alta cocina.
+roleplay:
+  ai_role: boutique wine importer
+  user_role: head sommelier
+  setting: A quiet trade tasting room reviewing autumn cellar allocations.
+  turns:
+  - speaker: ai
+    text: The Jura producer only bottled four hundred cases this year, so demand is fierce. How many cases were you hoping for?
+  - speaker: user
+    goal: Explica tu enfoque en mínima intervención y solicita un cupo garantizado de seis cajas.
+    suggested_lines:
+    - Our cellar prioritizes low-intervention vintages, so can you guarantee a six-case allocation for our autumn list?
+    - Since we focus on biodynamic micro-estates, we'd love a six-case allocation if possible.
+  - speaker: ai
+    text: I can lock in four cases now and revisit two more once the spring container clears customs.
+  - speaker: user
+    goal: Acepta el trato, menciona que reservarás parte para reposo y comenta la acidez volátil.
+    suggested_lines:
+    - Deal—we will hold back half to settle after transit, and some bottle variation is par for the course.
+    - That works; we value a touch of volatile acidity for lift, and we will hold back a third to rest.
+  - speaker: ai
+    text: Splendid. I will send the allocation contract over before five o'clock.

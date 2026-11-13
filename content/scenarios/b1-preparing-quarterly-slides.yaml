@@ -1,0 +1,106 @@
+id: b1-preparing-quarterly-slides
+title: Reviewing quarterly presentation slides
+title_es: Revisar diapositivas trimestrales
+cefr: B1
+topic: work-and-career
+description: Colabora con un compañero para simplificar gráficos densos y alinear los
+  puntos clave antes de la reunión trimestral.
+phrases:
+- id: simplify-dense-chart
+  text: Slide four has too much text, so let's simplify the chart.
+  translation: La diapositiva cuatro tiene demasiado texto, así que simplifiquemos el gráfico.
+  visual_hint: 📊✂️
+  cloze:
+  - 3
+  - 5
+  - 8
+  glossary:
+  - word: slide
+    meaning: diapositiva
+    ipa: slaɪd
+  - word: simplify
+    meaning: simplificar
+    ipa: ˈsɪmplɪfaɪ
+- id: highlight-key-takeaway
+  text: What is the main takeaway we want leadership to remember?
+  translation: ¿Cuál es la conclusión principal que queremos que recuerde la dirección?
+  visual_hint: 🎯💡
+  cloze:
+  - 3
+  - 4
+  - 9
+  glossary:
+  - word: takeaway
+    meaning: conclusión / punto clave
+    ipa: ˈteɪkəweɪ
+  - word: leadership
+    meaning: dirección / liderazgo
+    ipa: ˈliːdərʃɪp
+- id: split-speaking-parts
+  text: I can cover the sales numbers if you present the roadmap.
+  translation: Yo puedo cubrir las cifras de ventas si tú presentas la hoja de ruta.
+  visual_hint: 🗣️📈
+  cloze:
+  - 2
+  - 4
+  - 9
+  glossary:
+  - word: cover
+    meaning: cubrir / presentar una parte
+    ipa: ˈkʌvər
+  - word: roadmap
+    meaning: hoja de ruta / plan
+    ipa: ˈroʊdmæp
+- id: idm-cut-down-on
+  text: We should cut down on bullet points across the whole deck.
+  translation: 'Deberíamos reducir las viñetas en toda la presentación. (cut down on: reducir)'
+  visual_hint: 📉📝
+  cloze:
+  - 2
+  - 3
+  - 5
+  glossary:
+  - word: cut down on
+    meaning: reducir el uso de
+    ipa: kʌt daʊn ɑːn
+  kind: phrasal_verb
+  apply_sentence: The team wants to ____ unnecessary meetings this month.
+  apply_answer: cut down on
+  apply_translation: El equipo quiere reducir las reuniones innecesarias este mes.
+- id: idm-on-the-same-page
+  text: Let's rehearse once so we are on the same page.
+  translation: 'Ensayemos una vez para estar en sintonía. (on the same page: de acuerdo / alineados)'
+  visual_hint: 📖🤝
+  cloze:
+  - 1
+  - 7
+  - 9
+  glossary:
+  - word: on the same page
+    meaning: alineados / en la misma sintonía
+    ipa: ɑːn ðə seɪm peɪdʒ
+  kind: idiom
+  apply_sentence: Before calling the client, let's make sure we are ____.
+  apply_answer: on the same page
+  apply_translation: Antes de llamar al cliente, asegurémonos de estar alineados.
+roleplay:
+  ai_role: presentation co-presenter
+  user_role: marketing analyst
+  setting: Reviewing the Q3 slide deck together before the leadership meeting.
+  turns:
+  - speaker: ai
+    text: I just shared the latest version of the Q3 deck. What do you think?
+  - speaker: user
+    goal: Sugiere simplificar la diapositiva cuatro y reducir las viñetas en toda la presentación.
+    suggested_lines:
+    - Slide four has too much text, so let's simplify the chart. We should cut down on bullet points across the whole deck.
+    - It looks good, though we should cut down on bullet points and simplify the chart on slide four.
+  - speaker: ai
+    text: Good point, I will turn that into three clean numbers. How should we split the presentation?
+  - speaker: user
+    goal: Ofrece cubrir las cifras de ventas si tu compañero presenta la hoja de ruta y propón ensayar una vez.
+    suggested_lines:
+    - I can cover the sales numbers if you present the roadmap. Let's rehearse once so we are on the same page.
+    - I can cover the sales numbers while you present the roadmap, and let's rehearse once.
+  - speaker: ai
+    text: Perfect, let's do a quick run-through in ten minutes!

@@ -1,0 +1,89 @@
+id: a1-grammar-quantifiers
+title: 'Countable and uncountable nouns: some, any, much, many'
+title_es: 'Contables e incontables: some, any, much, many'
+cefr: A1
+topic: grammar-and-connectors
+description: Aprende a pedir y preguntar cantidades con 'some', 'any', 'much', 'many'
+  y 'a lot of'.
+phrases:
+- id: need-some-milk
+  text: We need some milk and a few apples.
+  translation: Necesitamos algo de leche y unas cuantas manzanas.
+  visual_hint: 🥛🍎
+  cloze:
+  - 2
+  glossary:
+  - word: some
+    meaning: algo de / unos (en oraciones afirmativas)
+    ipa: sʌm
+  kind: expression
+  apply_sentence: I would like ____ water, please.
+  apply_answer: some
+  apply_translation: Quisiera algo de agua, por favor.
+- id: do-we-have-any
+  text: Do we have any coffee left in the kitchen?
+  translation: ¿Nos queda algo de café en la cocina? ('any' en preguntas)
+  visual_hint: ☕❓
+  cloze:
+  - 3
+  glossary:
+  - word: any
+    meaning: algo de / nada de (en preguntas y negativas)
+    ipa: ˈɛni
+  kind: expression
+  apply_sentence: Are there ____ tomatoes in the fridge?
+  apply_answer: any
+  apply_translation: ¿Hay tomates en el refrigerador?
+- id: not-much-time
+  text: I don't have much time before the bus.
+  translation: No tengo mucho tiempo antes del autobús. ('much' con incontables)
+  visual_hint: ⏱️🚌
+  cloze:
+  - 3
+  glossary:
+  - word: much
+    meaning: mucho (con sustantivos incontables)
+    ipa: mʌtʃ
+- id: how-many-eggs
+  text: How many eggs do we need for the cake?
+  translation: ¿Cuántos huevos necesitamos para el pastel? ('many' con contables)
+  visual_hint: 🥚🎂
+  cloze:
+  - 1
+  glossary:
+  - word: how many
+    meaning: cuántos / cuántas (para contables)
+    ipa: haʊ ˈmɛni
+- id: a-lot-of-fruit
+  text: There is a lot of fresh fruit on sale.
+  translation: Hay mucha fruta fresca en oferta.
+  visual_hint: 🍓🏷️
+  cloze:
+  - 2
+  - 3
+  - 4
+  glossary:
+  - word: a lot of
+    meaning: mucho / muchos (contables e incontables)
+    ipa: ə lɑːt ʌv
+roleplay:
+  ai_role: roommate
+  user_role: roommate
+  setting: Checking the fridge before going to the grocery store.
+  turns:
+  - speaker: ai
+    text: I am making a shopping list. Do we have any eggs?
+  - speaker: user
+    goal: Responde usando 'any' o 'some' para decir qué hay o falta.
+    suggested_lines:
+    - No, we don't have any eggs, but we have some milk.
+    - We have some eggs, so we don't need any.
+  - speaker: ai
+    text: Okay, and how much cheese is left?
+  - speaker: user
+    goal: Indica la cantidad usando 'not much' o 'a lot of'.
+    suggested_lines:
+    - There isn't much cheese left, let's buy more.
+    - We have a lot of cheese, we are fine.
+  - speaker: ai
+    text: Great, I'll head to the market now!

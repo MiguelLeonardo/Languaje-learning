@@ -1,0 +1,111 @@
+id: b1-running-client-demo
+title: Running a product demo
+title_es: Hacer una demostración de producto
+cefr: B1
+topic: work-and-career
+description: Comparte tu pantalla, muestra las funciones principales del producto y responde
+  dudas del cliente en vivo.
+phrases:
+- id: share-screen-check
+  text: Can everyone see my screen clearly before we begin?
+  translation: ¿Todos pueden ver mi pantalla con claridad antes de empezar?
+  visual_hint: 🖥️👀
+  cloze:
+  - 2
+  - 4
+  - 8
+  glossary:
+  - word: clearly
+    meaning: con claridad
+    ipa: ˈklɪrli
+  - word: begin
+    meaning: comenzar / empezar
+    ipa: bɪˈɡɪn
+- id: highlight-main-workflow
+  text: Let me show you how this dashboard saves your team time.
+  translation: Déjame mostrarte cómo este panel le ahorra tiempo a tu equipo.
+  visual_hint: 📊⏱️
+  cloze:
+  - 2
+  - 6
+  - 9
+  glossary:
+  - word: dashboard
+    meaning: panel de control
+    ipa: ˈdæʃbɔːrd
+  - word: saves time
+    meaning: ahorra tiempo
+    ipa: seɪvz taɪm
+- id: follow-up-question
+  text: That is a great question, let me send details afterward.
+  translation: Esa es una gran pregunta, déjame enviarte los detalles después.
+  visual_hint: ❓📩
+  cloze:
+  - 4
+  - 7
+  - 9
+  glossary:
+  - word: details
+    meaning: detalles
+    ipa: ˈdiːteɪlz
+  - word: afterward
+    meaning: después / más tarde
+    ipa: ˈæftərwərd
+- id: idm-walk-through
+  text: Next, I will walk you through the reporting feature step by step.
+  translation: 'A continuación, te guiaré paso a paso por la función de reportes. (walk through: explicar paso a paso)'
+  visual_hint: 🚶‍♂️📈
+  cloze:
+  - 3
+  - 5
+  - 7
+  glossary:
+  - word: walk through
+    meaning: explicar o recorrer paso a paso
+    ipa: wɔːk θruː
+  kind: phrasal_verb
+  apply_sentence: Could you ____ the new onboarding checklist with me?
+  apply_answer: walk through
+  apply_translation: ¿Podrías guiarme paso a paso por la nueva lista de incorporación?
+- id: idm-in-a-nutshell
+  text: In a nutshell, the tool automates your weekly invoices.
+  translation: 'En pocas palabras, la herramienta automatiza tus facturas semanales. (in a nutshell: en resumen)'
+  visual_hint: 🥜⚡
+  cloze:
+  - 2
+  - 5
+  - 7
+  glossary:
+  - word: in a nutshell
+    meaning: en pocas palabras / en resumen
+    ipa: ɪn ə ˈnʌtʃel
+  kind: idiom
+  apply_sentence: ____, we need to cut costs by ten percent this quarter.
+  apply_answer: In a nutshell
+  apply_translation: En resumen, necesitamos reducir los costos un diez por ciento este trimestre.
+roleplay:
+  ai_role: prospective client
+  user_role: product specialist
+  setting: Live 20-minute video demo of a SaaS workflow tool.
+  turns:
+  - speaker: ai
+    text: Hi! Thanks for setting up this demo. We are ready whenever you are.
+  - speaker: user
+    goal: Confirma que todos ven tu pantalla y resume brevemente qué automatiza la herramienta.
+    suggested_lines:
+    - Can everyone see my screen clearly before we begin? In a nutshell, the tool automates your weekly invoices.
+    - Can you see my screen clearly? Let me show you how this dashboard saves your team time.
+  - speaker: ai
+    text: Yes, we can see it clearly! How does the reporting section work?
+  - speaker: user
+    goal: Guía al cliente paso a paso por la función de reportes.
+    suggested_lines:
+    - Next, I will walk you through the reporting feature step by step.
+    - Sure, let me walk you through the reporting feature right now.
+  - speaker: ai
+    text: That looks clean. Does it integrate with our existing accounting software?
+  - speaker: user
+    goal: Responde que es una buena pregunta y ofrece enviar los detalles técnicos después de la llamada.
+    suggested_lines:
+    - That is a great question, let me send details afterward.
+    - Great question! Yes it does, and I will send the integration details afterward.

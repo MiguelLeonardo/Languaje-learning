@@ -1,0 +1,97 @@
+id: c1-grammar-clefts
+title: Cleft sentences and fronting for emphasis
+title_es: Oraciones hendidas y anteposición para dar énfasis
+cefr: C1
+topic: grammar-and-connectors
+description: Destaca información clave en presentaciones y debates con estructuras
+  como 'It is... that', 'What... is' y 'All that...'.
+phrases:
+- id: what-concerns-me-is
+  text: What concerns me most is the lack of transparency.
+  translation: Lo que más me preocupa es la falta de transparencia.
+  visual_hint: 🔎⚖️
+  cloze:
+  - 0
+  - 4
+  glossary:
+  - word: what ... is
+    meaning: lo que ... es (oración hendida con Wh-)
+    ipa: wʌt ... ɪz
+  kind: expression
+  apply_sentence: ____ we need right now is a clear contingency plan.
+  apply_answer: What
+  apply_translation: Lo que necesitamos ahora mismo es un plan de contingencia claro.
+- id: it-was-only-when
+  text: It was only when the data leaked that they acted.
+  translation: Fue solo cuando se filtraron los datos que actuaron.
+  visual_hint: 💡⏱️
+  cloze:
+  - 0
+  - 1
+  - 2
+  - 7
+  glossary:
+  - word: it was only when ... that
+    meaning: fue solo cuando ... que (énfasis temporal)
+    ipa: ɪt wʌz ˈoʊnli wɛn
+  kind: expression
+  apply_sentence: ____ leadership stepped in that the dispute was resolved.
+  apply_answer: It was only when
+  apply_translation: Fue solo cuando intervino la dirección que se resolvió la disputa.
+- id: all-we-ask-is
+  text: All we ask is that the timeline remain realistic.
+  translation: Todo lo que pedimos es que el cronograma siga siendo realista.
+  visual_hint: 📅🙏
+  cloze:
+  - 0
+  - 3
+  glossary:
+  - word: all ... is
+    meaning: todo lo que ... es (enfoque restrictivo)
+    ipa: ɔːl ... ɪz
+- id: the-reason-why-is
+  text: The reason why costs surged is poor supplier oversight.
+  translation: La razón por la que se dispararon los costos es la escasa supervisión.
+  visual_hint: 📈💸
+  cloze:
+  - 0
+  - 1
+  - 2
+  glossary:
+  - word: the reason why ... is
+    meaning: la razón por la que ... es
+    ipa: ðə ˈriːzən waɪ
+- id: it-is-precisely-this
+  text: It is precisely this agility that sets us apart.
+  translation: Es precisamente esta agilidad lo que nos distingue.
+  visual_hint: ⚡🏆
+  cloze:
+  - 0
+  - 1
+  - 2
+  - 5
+  glossary:
+  - word: it is precisely ... that
+    meaning: es precisamente ... lo que
+    ipa: ɪt ɪz prɪˈsaɪsli
+roleplay:
+  ai_role: chief financial officer
+  user_role: strategy lead
+  setting: Defending a budget reallocation in an executive review.
+  turns:
+  - speaker: ai
+    text: Why are we shifting funds away from paid ads this quarter?
+  - speaker: user
+    goal: Enfatiza el punto clave usando 'What... is' o 'The reason why... is'.
+    suggested_lines:
+    - What matters most right now is improving organic retention.
+    - The reason why we're pivoting is that acquisition costs doubled.
+  - speaker: ai
+    text: Fair point, though the sales team is worried about lead volume.
+  - speaker: user
+    goal: Responde usando una hendida con 'It is... that' o 'All we... is'.
+    suggested_lines:
+    - It is precisely this reallocation that will protect our margins.
+    - All we ask is a six-week pilot to prove the uplift.
+  - speaker: ai
+    text: Alright, you have six weeks. Make the numbers count.

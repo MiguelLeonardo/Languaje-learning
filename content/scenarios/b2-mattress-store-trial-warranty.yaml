@@ -1,0 +1,101 @@
+id: b2-mattress-store-trial-warranty
+title: Evaluating a mattress trial warranty
+title_es: Evaluar garantía y prueba de colchón en tienda
+cefr: B2
+topic: hotel-and-shopping
+description: Compara firmeza de colchones, pregunta por el periodo de prueba en casa y la
+  cobertura de garantía.
+phrases:
+- id: firmness-spinal-support
+  text: I'm a side sleeper, so I need medium firmness without losing spinal support.
+  translation: Duermo de lado, así que necesito firmeza media sin perder soporte para la columna.
+  visual_hint: 🛏️🦴
+  cloze:
+  - 7
+  - 11
+  glossary:
+  - word: firmness
+    meaning: firmeza
+    ipa: ˈfɜːrmnəs
+  - word: spinal support
+    meaning: soporte para la columna
+    ipa: ˈspaɪnəl səˈpɔːrt
+- id: hundred-night-trial
+  text: How does your one-hundred-night home trial work if it feels uncomfortable?
+  translation: ¿Cómo funciona su prueba en casa de cien noches si resulta incómodo?
+  visual_hint: 🌙🏠
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: home trial
+    meaning: prueba en casa
+    ipa: hoʊm ˈtraɪəl
+- id: sagging-warranty-threshold
+  text: What depth of sagging triggers a replacement under the ten-year warranty?
+  translation: ¿Qué profundidad de hundimiento activa un reemplazo bajo la garantía de diez
+    años?
+  visual_hint: 📏📜
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: sagging
+    meaning: hundimiento / deformación
+    ipa: ˈsæɡɪŋ
+  - word: replacement
+    meaning: reemplazo
+    ipa: rɪˈpleɪsmənt
+- id: idm-sleep-on-it
+  text: This is a big purchase, so I'd like to sleep on it before deciding.
+  translation: Es una compra importante, así que me gustaría consultarlo con la almohada antes
+    de decidir.
+  visual_hint: 💭🛏️
+  cloze:
+  - 9
+  - 10
+  glossary:
+  - word: sleep on it
+    meaning: consultarlo con la almohada / pensarlo hasta mañana
+    ipa: sliːp ɑːn ɪt
+  kind: idiom
+  apply_sentence: I'll ____ tonight and call the showroom in the morning.
+  apply_answer: sleep on it
+  apply_translation: Lo consultaré con la almohada esta noche y llamaré a la tienda por la
+    mañana.
+- id: idm-read-fine-print
+  text: Always read the fine print to check for hidden restocking fees.
+  translation: Lee siempre la letra pequeña para revisar si hay cargos ocultos por reposición.
+  visual_hint: 🔍📄
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: fine print
+    meaning: letra pequeña (cláusulas)
+    ipa: faɪn prɪnt
+  kind: expression
+  apply_sentence: Make sure you check the ____ on the return policy.
+  apply_answer: fine print
+  apply_translation: Asegúrate de revisar la letra pequeña de la política de devoluciones.
+roleplay:
+  ai_role: sleep specialist
+  user_role: mattress shopper
+  setting: A modern mattress showroom.
+  turns:
+  - speaker: ai
+    text: Welcome in! Are you looking for a plush, medium, or firm mattress today?
+  - speaker: user
+    goal: Explica que duermes de lado y buscas firmeza media con buen soporte lumbar.
+    suggested_lines:
+    - I'm a side sleeper, so I need medium firmness without losing spinal support.
+    - How does your one-hundred-night home trial work if it feels uncomfortable?
+  - speaker: ai
+    text: Our hybrid model suits side sleepers well, and returns within 100 nights are free.
+  - speaker: user
+    goal: Pregunta qué nivel de hundimiento cubre la garantía y di que lo pensarás esta noche.
+    suggested_lines:
+    - What depth of sagging triggers a replacement under the ten-year warranty?
+    - This is a big purchase, so I'd like to sleep on it before deciding.
+  - speaker: ai
+    text: Anything over one inch of sagging is covered! Take my card and reach out anytime.

@@ -1,0 +1,108 @@
+id: c1-diplomatic-dinner-disagreement
+title: Navigating a polite disagreement at dinner
+title_es: Gestionar un desacuerdo con diplomacia en una cena
+cefr: C1
+topic: social-and-smalltalk
+description: Expresa una postura distinta en una cena social sin generar tensión, reconociendo matices y manteniendo la cordialidad.
+phrases:
+- id: see-merit-in-both
+  text: I can certainly see the merit in that view, though my own experience points slightly elsewhere.
+  translation: Ciertamente veo el mérito en ese punto de vista, aunque mi propia experiencia apunta un poco hacia otro lado.
+  visual_hint: 🍷⚖️
+  cloze:
+  - 2
+  - 4
+  - 12
+  glossary:
+  - word: merit
+    meaning: mérito / validez
+    ipa: ˈmerɪt
+  - word: point elsewhere
+    meaning: apuntar en otra dirección
+    ipa: pɔɪnt ˈelswer
+- id: nuanced-middle-ground
+  text: Perhaps the truth lies somewhere in between rather than at either extreme.
+  translation: Quizás la verdad resida en algún punto intermedio más que en cualquiera de los extremos.
+  visual_hint: 🧭💬
+  cloze:
+  - 0
+  - 3
+  - 11
+  glossary:
+  - word: lies
+    meaning: reside / se encuentra
+    ipa: laɪz
+  - word: extreme
+    meaning: extremo
+    ipa: ɪkˈstriːm
+- id: preserve-warm-atmosphere
+  text: We clearly care about the same outcome, even if we differ on how to get there.
+  translation: Claramente nos importa el mismo resultado, aunque diferamos en cómo llegar a él.
+  visual_hint: 🤝🍽️
+  cloze:
+  - 1
+  - 5
+  - 10
+  glossary:
+  - word: outcome
+    meaning: resultado
+    ipa: ˈaʊtkʌm
+  - word: differ
+    meaning: diferir / discrepar
+    ipa: ˈdɪfər
+- id: idm-c1dd-agree-to-disagree
+  text: Let's agree to disagree on city zoning and enjoy the rest of this fantastic meal.
+  translation: Aceptemos que tenemos opiniones distintas sobre la zonificación urbana y disfrutemos el resto de esta comida fantástica (cerrar un debate sin conflicto).
+  visual_hint: 🍝🕊️
+  cloze:
+  - 1
+  - 3
+  glossary:
+  - word: agree to disagree
+    meaning: aceptar el desacuerdo cordialmente
+    ipa: əˈɡriː tuː ˌdɪsəˈɡriː
+  kind: idiom
+  apply_sentence: After an hour of debating film endings, we decided to ____.
+  apply_answer: agree to disagree
+  apply_translation: Tras una hora debatiendo finales de películas, decidimos aceptar nuestras diferencias.
+- id: idm-c1dd-touch-a-nerve
+  text: I didn't mean to touch a nerve; I was only playing devil's advocate.
+  translation: No quise tocar una fibra sensible; solo estaba haciendo de abogado del diablo (provocar una reacción delicada sin querer).
+  visual_hint: 😬💬
+  cloze:
+  - 4
+  - 6
+  glossary:
+  - word: touch a nerve
+    meaning: tocar una fibra sensible
+    ipa: tʌtʃ ə nɜːrv
+  kind: idiom
+  apply_sentence: Bringing up his old job seemed to ____ at the party.
+  apply_answer: touch a nerve
+  apply_translation: Mencionar su antiguo trabajo pareció tocar una fibra sensible en la fiesta.
+roleplay:
+  ai_role: dinner guest (Julian)
+  user_role: dinner guest
+  setting: Intimate dinner party where a lively debate on remote work vs. office culture comes up.
+  turns:
+  - speaker: ai
+    text: Let's be honest—companies that allow full-time remote work are doomed to lose all sense of culture.
+  - speaker: user
+    goal: Reconoce el mérito de su postura, pero sugiere con tacto que tu experiencia apunta a otro matiz.
+    suggested_lines:
+    - I can certainly see the merit in that view, though my own experience points slightly elsewhere.
+    - Perhaps the truth lies somewhere in between rather than at either extreme.
+  - speaker: ai
+    text: Oh, sorry if I came across a bit strong there—I just miss spontaneous hallway chats!
+  - speaker: user
+    goal: Tranquilízalo aclarando que buscan el mismo resultado y que no hay tensión.
+    suggested_lines:
+    - We clearly care about the same outcome, even if we differ on how to get there.
+    - Not at all! You didn't touch a nerve; it's a great topic.
+  - speaker: ai
+    text: True, hybrid schedules probably capture the best of both worlds. Shall we toast to that?
+  - speaker: user
+    goal: Propón aceptar los matices cordialmente y disfrutar el resto de la cena.
+    suggested_lines:
+    - Let's agree to disagree on the exact ratio and enjoy the rest of this fantastic meal.
+    - Cheers to that! Let's enjoy dinner.

@@ -1,0 +1,111 @@
+id: c2-hotel-asset-acquisition-audit
+title: Boutique hotel acquisition walkthrough
+title_es: Auditoría operativa previa a la compra de hotel boutique
+cefr: C2
+topic: hotel-and-shopping
+description: Evalúa el estado de mantenimiento diferido, la eficiencia energética y los contratos
+  de concesión de un hotel.
+phrases:
+- id: deferred-maintenance-capex
+  text: Our engineering audit flagged substantial deferred maintenance in the chiller plant
+    and roof membrane.
+  translation: Nuestra auditoría de ingeniería señaló un mantenimiento diferido sustancial
+    en la planta enfriadora y la membrana del techo.
+  visual_hint: 🏨🔧
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: deferred maintenance
+    meaning: mantenimiento diferido / postergado
+    ipa: dɪˈfɜːrd ˈmeɪntənəns
+- id: revpar-adr-erosion
+  text: Has aging room inventory depressed your ADR and RevPAR relative to the competitive
+    set?
+  translation: ¿El inventario de habitaciones envejecido ha reducido su tarifa promedio y
+    RevPAR frente al grupo competitivo?
+  visual_hint: 📉🏨
+  cloze:
+  - 1
+  - 12
+  glossary:
+  - word: aging
+    meaning: envejecido / anticuado
+    ipa: ˈeɪdʒɪŋ
+  - word: competitive set
+    meaning: grupo competitivo de hoteles
+    ipa: kəmˈpetɪtɪv set
+- id: ff-and-e-reserve
+  text: We'll need to escrow an immediate FF&E reserve to bring the suites up to brand standard.
+  translation: Tendremos que depositar en garantía una reserva inmediata de mobiliario y equipo
+    para llevar las suites al estándar de marca.
+  visual_hint: 🛋️💼
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: escrow
+    meaning: depositar en custodia / garantía
+    ipa: ˈeskroʊ
+  - word: reserve
+    meaning: reserva de capital
+    ipa: rɪˈzɜːrv
+- id: idm-paper-over-cracks
+  text: Cosmetic lobby renovations merely paper over the cracks in outdated plumbing infrastructure.
+  translation: Las renovaciones cosméticas del lobby simplemente maquillan las fallas de una
+    infraestructura de plomería obsoleta.
+  visual_hint: 🎭🧱
+  cloze:
+  - 4
+  - 7
+  glossary:
+  - word: paper over the cracks
+    meaning: ocultar problemas graves con soluciones superficiales
+    ipa: ˈpeɪpər ˈoʊvər ðə kræks
+  kind: idiom
+  apply_sentence: Fresh paint won't ____ in a failing HVAC system.
+  apply_answer: paper over the cracks
+  apply_translation: La pintura fresca no ocultará las fallas de un sistema de climatización
+    defectuoso.
+- id: idm-factor-into-valuation
+  text: We must factor in those capital outlays before closing our revised valuation.
+  translation: Debemos tomar en cuenta esos desembolsos de capital antes de cerrar nuestra
+    valuación revisada.
+  visual_hint: 📊💰
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: factor in
+    meaning: tomar en cuenta / incorporar en un cálculo
+    ipa: ˈfæktər ɪn
+  kind: phrasal_verb
+  apply_sentence: Buyers always ____ seismic retrofitting when pricing an older property.
+  apply_answer: factor in
+  apply_translation: Los compradores siempre toman en cuenta el refuerzo sísmico al fijar el precio de
+    una propiedad antigua.
+roleplay:
+  ai_role: selling hotelier
+  user_role: hospitality acquisitions director
+  setting: Mechanical room and penthouse inspection of a 90-key boutique hotel.
+  turns:
+  - speaker: ai
+    text: As you can see, we just refreshed the lobby and rooftop bar last spring.
+  - speaker: user
+    goal: Señala el mantenimiento diferido en climatización y advierte sobre soluciones superficiales.
+    suggested_lines:
+    - Our engineering audit flagged substantial deferred maintenance in the chiller plant
+      and roof membrane.
+    - Cosmetic lobby renovations merely paper over the cracks in outdated plumbing infrastructure.
+  - speaker: ai
+    text: Fair point—the chillers are original, though occupancy has remained above eighty
+      percent.
+  - speaker: user
+    goal: Pregunta por el impacto en ADR/RevPAR y exige incorporar la reserva de mobiliario
+      en la valuación.
+    suggested_lines:
+    - Has aging room inventory depressed your ADR and RevPAR relative to the competitive set?
+    - We must factor those capital outlays into our revised valuation before closing.
+  - speaker: ai
+    text: Let's review the engineering capex schedule with our brokers and adjust the escrow
+      terms.

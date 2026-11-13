@@ -1,0 +1,91 @@
+id: a2-grammar-quantifiers
+title: 'Quantifiers: too much, too many, enough, a few, a little'
+title_es: 'Cuantificadores: too much, too many, enough, a few, a little'
+cefr: A2
+topic: grammar-and-connectors
+description: Expresa exceso o suficiencia con 'too much', 'too many', 'enough', 'a
+  few' y 'a little'.
+phrases:
+- id: too-much-sugar
+  text: There is too much sugar in this iced tea.
+  translation: Hay demasiada azúcar en este té helado.
+  visual_hint: 🧋🍬
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: too much
+    meaning: demasiado/a (para incontables)
+    ipa: tuː mʌtʃ
+  kind: expression
+  apply_sentence: We spent ____ money on takeout this month.
+  apply_answer: too much
+  apply_translation: Gastamos demasiado dinero en comida para llevar este mes.
+- id: too-many-emails
+  text: I get too many emails every Monday morning.
+  translation: Recibo demasiados correos cada lunes por la mañana.
+  visual_hint: 📧😫
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: too many
+    meaning: demasiados/as (para contables)
+    ipa: tuː ˈmɛni
+  kind: expression
+  apply_sentence: There are ____ cars on this narrow street.
+  apply_answer: too many
+  apply_translation: Hay demasiados autos en esta calle estrecha.
+- id: not-enough-chairs
+  text: We don't have enough chairs for everyone.
+  translation: No tenemos suficientes sillas para todos.
+  visual_hint: 🪑👥
+  cloze:
+  - 3
+  glossary:
+  - word: enough
+    meaning: suficiente / suficientes
+    ipa: ɪˈnʌf
+- id: a-few-minutes
+  text: Wait a few minutes; I am almost ready.
+  translation: Espera unos pocos minutos; ya casi estoy listo.
+  visual_hint: ⏳✌️
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: a few
+    meaning: unos pocos / algunos (contables)
+    ipa: ə fjuː
+- id: a-little-patience
+  text: With a little patience, you will learn fast.
+  translation: Con un poco de paciencia, aprenderás rápido.
+  visual_hint: 🧘🌱
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: a little
+    meaning: un poco de (incontables)
+    ipa: ə ˈlɪtəl
+roleplay:
+  ai_role: event planner
+  user_role: assistant
+  setting: Checking preparations ten minutes before a workshop starts.
+  turns:
+  - speaker: ai
+    text: Are we ready for the workshop? How does the room look?
+  - speaker: user
+    goal: Menciona un problema usando 'not enough' o 'too many'.
+    suggested_lines:
+    - We don't have enough chairs, and there are too many bags on the floor.
+    - There isn't enough water, and the room has too many tables.
+  - speaker: ai
+    text: Good catch! How much time do we have left?
+  - speaker: user
+    goal: Responde usando 'a few' o 'a little'.
+    suggested_lines:
+    - We only have a few minutes before people arrive.
+    - We still have a little time, about ten minutes.
+  - speaker: ai
+    text: Let's fix it right away!

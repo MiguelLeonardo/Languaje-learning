@@ -1,0 +1,101 @@
+id: a1-hotel-luggage-storage
+title: Leaving luggage at the hotel
+title_es: Guardar las maletas en el hotel
+cefr: A1
+topic: hotel-and-shopping
+description: Pide dejar tus maletas en recepción antes del check-in o después de entregar
+  la habitación.
+phrases:
+- id: leave-bags-here
+  text: Can I leave my bags here until three o'clock?
+  translation: ¿Puedo dejar mis maletas aquí hasta las tres?
+  visual_hint: 🧳🕒
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: leave
+    meaning: dejar
+    ipa: liːv
+  - word: bags
+    meaning: maletas / bolsos
+    ipa: bæɡz
+- id: two-suitcases
+  text: I have two large suitcases and a small backpack.
+  translation: Tengo dos maletas grandes y una mochila pequeña.
+  visual_hint: 🧳🎒
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: suitcases
+    meaning: maletas
+    ipa: ˈsuːtkeɪsɪz
+  - word: backpack
+    meaning: mochila
+    ipa: ˈbækpæk
+- id: claim-ticket
+  text: Do you give me a ticket for my luggage?
+  translation: ¿Me da un boleto para mi equipaje?
+  visual_hint: 🎫🧳
+  cloze:
+  - 5
+  - 8
+  glossary:
+  - word: ticket
+    meaning: boleto / comprobante
+    ipa: ˈtɪkɪt
+  - word: luggage
+    meaning: equipaje
+    ipa: ˈlʌɡɪdʒ
+- id: idm-pick-up-bags
+  text: I will pick up my suitcases later this afternoon.
+  translation: Recogeré mis maletas más tarde hoy por la tarde.
+  visual_hint: 🧳👋
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: pick up
+    meaning: recoger
+    ipa: pɪk ʌp
+  kind: phrasal_verb
+  apply_sentence: Please ____ your bags at the front desk.
+  apply_answer: pick up
+  apply_translation: Por favor, recoja sus maletas en la recepción.
+- id: idm-free-of-charge
+  text: Is the luggage storage service free of charge for guests?
+  translation: ¿El servicio de guardaequipaje es gratuito para los huéspedes?
+  visual_hint: 🆓🏨
+  cloze:
+  - 5
+  - 7
+  glossary:
+  - word: free of charge
+    meaning: gratuito / sin costo
+    ipa: friː əv tʃɑːrdʒ
+  kind: expression
+  apply_sentence: Hotel Wi-Fi is ____ for all guests.
+  apply_answer: free of charge
+  apply_translation: El Wi-Fi del hotel es gratuito para todos los huéspedes.
+roleplay:
+  ai_role: hotel receptionist
+  user_role: hotel guest
+  setting: A hotel lobby front desk in the morning.
+  turns:
+  - speaker: ai
+    text: Good morning! Welcome to the City Hotel. How can I help you?
+  - speaker: user
+    goal: Pregunta si puedes dejar tus maletas hasta las tres y si el servicio es gratuito.
+    suggested_lines:
+    - Can I leave my bags here until three o'clock?
+    - Is the luggage storage service free of charge for guests?
+  - speaker: ai
+    text: Yes, of course! It is free for guests. How many bags do you have?
+  - speaker: user
+    goal: Di cuántas maletas tienes y pregunta si te dan un comprobante.
+    suggested_lines:
+    - I have two large suitcases and a small backpack.
+    - Do you give me a ticket for my luggage?
+  - speaker: ai
+    text: Here is your luggage ticket. Just show it when you pick up your bags!

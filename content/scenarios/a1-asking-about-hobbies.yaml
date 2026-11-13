@@ -1,0 +1,103 @@
+id: a1-asking-about-hobbies
+title: Asking about hobbies and free time
+title_es: Preguntar por pasatiempos y tiempo libre
+cefr: A1
+topic: social-and-smalltalk
+description: Pregunta a un compañero qué le gusta hacer en su tiempo libre y comparte tus pasatiempos favoritos.
+phrases:
+- id: free-time-question
+  text: What do you like to do in your free time?
+  translation: ¿Qué te gusta hacer en tu tiempo libre?
+  visual_hint: 🎨⏰
+  cloze:
+  - 3
+  - 7
+  - 8
+  glossary:
+  - word: like to
+    meaning: gustar
+    ipa: laɪk tuː
+  - word: free time
+    meaning: tiempo libre
+    ipa: friː taɪm
+- id: play-guitar-weekends
+  text: I like to play the guitar on weekends.
+  translation: Me gusta tocar la guitarra los fines de semana.
+  visual_hint: 🎸📅
+  cloze:
+  - 3
+  - 5
+  - 7
+  glossary:
+  - word: play the guitar
+    meaning: tocar la guitarra
+    ipa: pleɪ ðə ɡɪˈtɑːr
+  - word: weekends
+    meaning: fines de semana
+    ipa: ˈwiːkendz
+- id: love-cooking-home
+  text: I also love cooking simple meals at home.
+  translation: También me encanta cocinar comidas sencillas en casa.
+  visual_hint: 🍳🏠
+  cloze:
+  - 2
+  - 3
+  - 7
+  glossary:
+  - word: love
+    meaning: encantar / amar
+    ipa: lʌv
+  - word: cooking
+    meaning: cocinar
+    ipa: ˈkʊkɪŋ
+- id: idm-a1ah-hang-out
+  text: On Sundays, I usually hang out with my friends at the park.
+  translation: Los domingos suelo pasar el rato con mis amigos en el parque (reunirse de forma relajada).
+  visual_hint: 🌳👫
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: hang out
+    meaning: pasar el rato
+    ipa: hæŋ aʊt
+  kind: phrasal_verb
+  apply_sentence: Do you want to ____ after class today?
+  apply_answer: hang out
+  apply_translation: ¿Quieres pasar el rato después de clase hoy?
+- id: idm-a1ah-into-music
+  text: I am really into music and old movies.
+  translation: Me interesa mucho la música y las películas antiguas (tener mucho gusto por algo).
+  visual_hint: 🎶🎬
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: be into
+    meaning: gustar mucho / estar interesado en
+    ipa: ˈɪntuː
+  kind: expression
+  apply_sentence: My sister is really ____ photography right now.
+  apply_answer: into
+  apply_translation: A mi hermana le gusta mucho la fotografía ahora mismo.
+roleplay:
+  ai_role: friendly classmate (Maya)
+  user_role: classmate
+  setting: Chatting in the break room before class starts.
+  turns:
+  - speaker: ai
+    text: Hi! We finally have a quiet weekend coming up. Do you have any plans?
+  - speaker: user
+    goal: Pregúntale qué le gusta hacer en su tiempo libre.
+    suggested_lines:
+    - What do you like to do in your free time?
+    - What are your favorite hobbies?
+  - speaker: ai
+    text: I love painting and riding my bike in the park. What about you?
+  - speaker: user
+    goal: Cuéntale que te gusta tocar la guitarra y pasar el rato con amigos.
+    suggested_lines:
+    - I like to play the guitar on weekends.
+    - On Sundays, I usually hang out with my friends at the park.
+  - speaker: ai
+    text: That sounds awesome! Maybe we can go to the park together sometime.

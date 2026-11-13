@@ -1,0 +1,94 @@
+id: b2-craft-brewery-flight
+title: Tasting a craft beer flight
+title_es: Degustación en una cervecería artesanal
+cefr: B2
+topic: food-and-drink
+description: Pide un vuelo de degustación, compara notas de lúpulo y malta, y elige una pinta.
+phrases:
+- id: tasting-flight
+  text: Could we put together a tasting flight of four seasonal pours?
+  translation: ¿Podríamos armar un vuelo de degustación de cuatro cervezas de temporada?
+  visual_hint: 🍺🪵
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: tasting flight
+    meaning: tabla o vuelo de degustación
+    ipa: ˈteɪstɪŋ flaɪt
+- id: hoppy-bitterness
+  text: I prefer a crisp pilsner without overpowering hop bitterness.
+  translation: Prefiero una pilsner fresca sin un amargor de lúpulo abrumador.
+  visual_hint: 🌾🍺
+  cloze:
+  - 6
+  - 8
+  glossary:
+  - word: overpowering
+    meaning: abrumador / demasiado intenso
+    ipa: ˌoʊvərˈpaʊərɪŋ
+  - word: bitterness
+    meaning: amargor
+    ipa: ˈbɪtərnəs
+- id: malty-finish
+  text: This amber ale has a toasted caramel malt backbone and a clean finish.
+  translation: Esta amber ale tiene una base de malta caramelo tostada y un final limpio.
+  visual_hint: 🍯🍺
+  cloze:
+  - 7
+  - 12
+  glossary:
+  - word: backbone
+    meaning: columna vertebral / base estructural
+    ipa: ˈbækboʊn
+- id: stand-out
+  text: The grapefruit IPA really stands out from the rest of the lineup.
+  translation: 'La IPA de toronja realmente destaca entre el resto de la selección. (stand out: sobresalir)'
+  visual_hint: 🌟🍺
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: stand out
+    meaning: 'stand out: destacar / sobresalir'
+    ipa: stænd aʊt
+  kind: phrasal_verb
+  apply_sentence: Her homemade sourdough always ____ at neighborhood potlucks.
+  apply_answer: stands out
+  apply_translation: Su masa madre casera siempre destaca en las reuniones vecinales.
+- id: right-up-my-alley
+  text: A dry-hopped pale ale with citrus notes is right up my alley.
+  translation: 'Una pale ale con dry-hop y notas cítricas es justo mi estilo. (right up my alley: justo lo mío)'
+  visual_hint: 🍋🎯
+  cloze:
+  - 8
+  - 11
+  glossary:
+  - word: right up my alley
+    meaning: 'right up my alley: justo de mi gusto / estilo'
+    ipa: raɪt ʌp maɪ ˈæli
+  kind: idiom
+  apply_sentence: Spicy street tacos are ____ whenever I visit Mexico City.
+  apply_answer: right up my alley
+  apply_translation: Los tacos callejeros picantes son justo lo mío cuando visito Ciudad de México.
+roleplay:
+  ai_role: brewery taproom bartender
+  user_role: craft beer guest
+  setting: A sunlit microbrewery taproom with twelve rotating taps.
+  turns:
+  - speaker: ai
+    text: Welcome to Copper Kettle Brewing! Are you looking for a full pint or a flight today?
+  - speaker: user
+    goal: Pide armar un vuelo de degustación de cuatro cervezas de temporada.
+    suggested_lines:
+    - Could we put together a tasting flight of four seasonal pours?
+    - Let's start with a tasting flight of four seasonal beers, please.
+  - speaker: ai
+    text: Sure! Do you lean toward hoppy IPAs, crisp lagers, or darker malty styles?
+  - speaker: user
+    goal: Di que prefieres cervezas frescas sin amargor abrumador y que una pale ale cítrica es justo tu estilo.
+    suggested_lines:
+    - I prefer a crisp pilsner without overpowering hop bitterness, though a citrusy pale ale is right up my alley.
+    - Nothing too bitter, please—crisp lagers or a citrus pale ale are right up my alley.
+  - speaker: ai
+    text: Got it! I will pour our Czech pilsner, citrus pale ale, amber ale, and wheat beer.

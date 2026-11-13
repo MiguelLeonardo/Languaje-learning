@@ -1,0 +1,100 @@
+id: b2-watch-repair-restoration
+title: Servicing a mechanical wristwatch
+title_es: Solicitar mantenimiento de reloj mecánico
+cefr: B2
+topic: hotel-and-shopping
+description: Consulta con un relojero sobre la calibración de un reloj automático, piezas
+  originales y hermeticidad.
+phrases:
+- id: losing-seconds-daily
+  text: My automatic watch has been losing about twenty seconds a day.
+  translation: Mi reloj automático ha estado atrasándose unos veinte segundos al día.
+  visual_hint: ⌚⏱️
+  cloze:
+  - 5
+  - 7
+  glossary:
+  - word: automatic watch
+    meaning: reloj automático
+    ipa: ˌɔːtəˈmætɪk wɑːtʃ
+- id: keep-original-dial
+  text: Please service the movement without polishing the case or replacing the original dial.
+  translation: Por favor, den servicio al movimiento sin pulir la caja ni cambiar la carátula
+    original.
+  visual_hint: ⚙️⌚
+  cloze:
+  - 3
+  - 5
+  glossary:
+  - word: movement
+    meaning: movimiento / maquinaria
+    ipa: ˈmuːvmənt
+  - word: polishing
+    meaning: pulir
+    ipa: ˈpɑːlɪʃɪŋ
+- id: pressure-test-seals
+  text: Will you pressure-test the gaskets to restore its water resistance?
+  translation: ¿Harán prueba de presión a los empaques para restaurar su resistencia al agua?
+  visual_hint: 💧🔍
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: pressure-test
+    meaning: hacer prueba de presión
+    ipa: ˈpreʃər test
+  - word: gaskets
+    meaning: empaques / juntas
+    ipa: ˈɡæskɪts
+- id: idm-overhaul-movement
+  text: It hasn't been serviced in eight years, so it needs a full overhaul.
+  translation: No ha recibido mantenimiento en ocho años, así que necesita una revisión completa.
+  visual_hint: 🔧⌚
+  cloze:
+  - 11
+  - 12
+  glossary:
+  - word: full overhaul
+    meaning: revisión y restauración completa
+    ipa: fʊl ˈoʊvərhɔːl
+  kind: expression
+  apply_sentence: A mechanical caliber needs a ____ every five to seven years.
+  apply_answer: full overhaul
+  apply_translation: Un calibre mecánico necesita una revisión completa cada cinco a siete
+    años.
+- id: idm-keep-ticking
+  text: Proper lubrication will keep this heirloom ticking for decades.
+  translation: Una lubricación adecuada mantendrá esta reliquia funcionando por décadas.
+  visual_hint: ⏳✨
+  cloze:
+  - 4
+  - 6
+  glossary:
+  - word: keep ticking
+    meaning: mantener en marcha / funcionando
+    ipa: kiːp ˈtɪkɪŋ
+  kind: idiom
+  apply_sentence: Regular cleaning will ____ your vintage timepiece smoothly.
+  apply_answer: keep ticking
+  apply_translation: Una limpieza regular mantendrá tu reloj vintage funcionando sin problemas.
+roleplay:
+  ai_role: watchmaker
+  user_role: watch owner
+  setting: A quiet horology workshop with magnifying loupes on the counter.
+  turns:
+  - speaker: ai
+    text: Good afternoon! That's a lovely vintage timepiece. How is it running?
+  - speaker: user
+    goal: Explica que el reloj se atrasa veinte segundos al día y necesita revisión completa.
+    suggested_lines:
+    - My automatic watch has been losing about twenty seconds a day.
+    - It hasn't been serviced in eight years, so it needs a full overhaul.
+  - speaker: ai
+    text: Dry oils usually cause that. Would you like us to polish the scratches too?
+  - speaker: user
+    goal: Pide no pulir la caja ni cambiar la carátula y pregunta por la prueba de hermeticidad.
+    suggested_lines:
+    - Please service the movement without polishing the case or replacing the original dial.
+    - Will you pressure-test the gaskets to restore its water resistance?
+  - speaker: ai
+    text: Understood—we'll preserve the original patina and pressure-test new seals.

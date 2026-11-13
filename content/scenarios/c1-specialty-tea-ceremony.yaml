@@ -1,0 +1,94 @@
+id: c1-specialty-tea-ceremony
+title: Exploring single-estate oolong tea
+title_es: Degustación de té oolong de origen único
+cefr: C1
+topic: food-and-drink
+description: Conversa con un maestro de té sobre infusiones gongfu, tiempos de extracción y notas minerales.
+phrases:
+- id: multiple-infusions
+  text: How many infusions can these high-mountain oolong leaves sustain before losing nuance?
+  translation: ¿Cuántas infusiones soportan estas hojas de oolong de alta montaña antes de perder matices?
+  visual_hint: 🍵⛰️
+  cloze:
+  - 2
+  - 8
+  glossary:
+  - word: sustain
+    meaning: sostener / resistir
+    ipa: səˈsteɪn
+  - word: nuance
+    meaning: matiz / sutileza
+    ipa: ˈnuːɑːns
+- id: steeping-temperature
+  text: Dropping the water temperature slightly prevents astringency in the first steep.
+  translation: Bajar ligeramente la temperatura del agua evita la astringencia en la primera infusión.
+  visual_hint: 🌡️🫖
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: astringency
+    meaning: astringencia / sequedad en boca
+    ipa: əˈstrɪndʒənsi
+- id: mineral-finish
+  text: There is a lingering orchid aroma followed by a crisp mineral finish.
+  translation: Hay un aroma persistente a orquídea seguido de un final mineral nítido.
+  visual_hint: 🌸🪨
+  cloze:
+  - 3
+  - 10
+  glossary:
+  - word: lingering
+    meaning: persistente / duradero
+    ipa: ˈlɪŋɡərɪŋ
+- id: bring-out-aroma
+  text: Warming the clay teapot beforehand helps bring out the roasted aromatics.
+  translation: 'Calentar la tetera de arcilla de antemano ayuda a resaltar los aromas tostados. (bring out: hacer resaltar)'
+  visual_hint: 🫖🔥
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: bring out
+    meaning: 'bring out: resaltar / realzar'
+    ipa: brɪŋ aʊt
+  kind: phrasal_verb
+  apply_sentence: A pinch of flaky sea salt will ____ the sweetness of dark chocolate.
+  apply_answer: bring out
+  apply_translation: Una pizca de sal marina en escamas resaltará el dulzor del chocolate amargo.
+- id: a-far-cry-from
+  text: Whole-leaf gongfu brewing is a far cry from mass-produced tea bags.
+  translation: 'La preparación gongfu de hoja entera está a años luz de las bolsitas de té industriales. (a far cry from: muy distinto de)'
+  visual_hint: 🍃✨
+  cloze:
+  - 5
+  - 7
+  glossary:
+  - word: a far cry from
+    meaning: 'a far cry from: muy distante o distinto de'
+    ipa: ə fɑːr kraɪ frʌm
+  kind: idiom
+  apply_sentence: Freshly milled heirloom corn tortillas are ____ store-bought wraps.
+  apply_answer: a far cry from
+  apply_translation: Las tortillas de maíz criollo recién molido están muy lejos de las tortillas comerciales.
+roleplay:
+  ai_role: tea master
+  user_role: tea connoisseur
+  setting: A serene teahouse counter set with Yixing clay teaware.
+  turns:
+  - speaker: ai
+    text: Welcome to the tasting table. Today we are steeping an Ali Shan high-mountain oolong.
+  - speaker: user
+    goal: Pregunta cuántas infusiones resisten las hojas antes de perder matices y por qué ajustas la temperatura.
+    suggested_lines:
+    - How many infusions can these high-mountain oolong leaves sustain before losing nuance?
+    - What steeping temperature do you use to prevent astringency across multiple infusions?
+  - speaker: ai
+    text: Easily six to seven infusions at around ninety degrees Celsius, which keeps the orchid aromatics intact.
+  - speaker: user
+    goal: Comenta el aroma a orquídea y el final mineral, contrastándolo con el té comercial.
+    suggested_lines:
+    - The lingering orchid aroma and crisp mineral finish are remarkable—a far cry from standard tea bags.
+    - Warming the clay pot really brings out the aromatics; it is a far cry from ordinary tea.
+  - speaker: ai
+    text: Let's pour the third steep now—watch how the sweetness deepens on the palate.

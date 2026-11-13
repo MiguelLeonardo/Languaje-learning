@@ -1,0 +1,106 @@
+id: a2-rescheduling-client-call
+title: Rescheduling a client call
+title_es: Reprogramar una llamada con un cliente
+cefr: A2
+topic: work-and-career
+description: Discúlpate por un conflicto de horario, propón dos horas alternativas y
+  confirma la invitación del calendario.
+phrases:
+- id: apologize-for-change
+  text: I am sorry, but I have a schedule conflict tomorrow.
+  translation: Lo siento, pero tengo un conflicto de horario mañana.
+  visual_hint: 📅😅
+  cloze:
+  - 2
+  - 6
+  - 7
+  glossary:
+  - word: schedule
+    meaning: horario / agenda
+    ipa: ˈskedʒuːl
+  - word: conflict
+    meaning: conflicto / cruce
+    ipa: ˈkɑːnflɪkt
+- id: propose-new-time
+  text: Could we move our call to Thursday at three?
+  translation: ¿Podríamos mover nuestra llamada al jueves a las tres?
+  visual_hint: 🔄🕒
+  cloze:
+  - 2
+  - 4
+  - 6
+  glossary:
+  - word: move
+    meaning: mover / cambiar de fecha
+    ipa: muːv
+  - word: call
+    meaning: llamada
+    ipa: kɔːl
+- id: send-calendar-invite
+  text: I will send you an updated calendar invite right away.
+  translation: Te enviaré una invitación de calendario actualizada de inmediato.
+  visual_hint: ✉️📆
+  cloze:
+  - 2
+  - 5
+  - 6
+  glossary:
+  - word: updated
+    meaning: actualizado / actualizada
+    ipa: ˌʌpˈdeɪtɪd
+  - word: invite
+    meaning: invitación
+    ipa: ˈɪnvaɪt
+- id: idm-push-back
+  text: Can we push back our meeting by one hour?
+  translation: '¿Podemos retrasar nuestra reunión una hora? (push back: posponer)'
+  visual_hint: ⏩⏰
+  cloze:
+  - 2
+  - 3
+  - 7
+  glossary:
+  - word: push back
+    meaning: posponer / retrasar
+    ipa: pʊʃ bæk
+  kind: phrasal_verb
+  apply_sentence: We had to ____ the flight because of heavy rain.
+  apply_answer: push back
+  apply_translation: Tuvimos que posponer el vuelo por la lluvia fuerte.
+- id: idm-work-for-you
+  text: Does Friday morning work for you instead?
+  translation: '¿Te funciona mejor el viernes por la mañana? (work for you: venirte bien)'
+  visual_hint: 🗓️👍
+  cloze:
+  - 1
+  - 3
+  - 5
+  glossary:
+  - word: work for you
+    meaning: venirte bien / acomodarte
+    ipa: wɜːrk fɔːr juː
+  kind: expression
+  apply_sentence: Any time after noon will ____ tomorrow.
+  apply_answer: work for you
+  apply_translation: Cualquier hora después del mediodía te vendrá bien mañana.
+roleplay:
+  ai_role: client
+  user_role: account representative
+  setting: Quick phone call to reschedule tomorrow's check-in.
+  turns:
+  - speaker: ai
+    text: Hi! I saw your message about tomorrow's call. What happened?
+  - speaker: user
+    goal: Discúlpate por el conflicto de horario y pregunta si pueden mover la llamada al jueves a las tres.
+    suggested_lines:
+    - I am sorry, but I have a schedule conflict tomorrow. Could we move our call to Thursday at three?
+    - Sorry about the change, I have a schedule conflict. Can we push back our meeting to Thursday at three?
+  - speaker: ai
+    text: I have another meeting at three on Thursday. Do you have another option?
+  - speaker: user
+    goal: Pregunta si el viernes por la mañana le viene bien y ofrece enviar la invitación actualizada.
+    suggested_lines:
+    - Does Friday morning work for you instead? I will send you an updated calendar invite right away.
+    - What about Friday morning? Does that work for you instead?
+  - speaker: ai
+    text: Yes, Friday at ten works great for me. Thanks for letting me know!

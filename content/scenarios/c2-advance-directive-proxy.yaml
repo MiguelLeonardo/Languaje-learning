@@ -1,0 +1,96 @@
+id: c2-advance-directive-proxy
+title: Drafting an advance healthcare directive
+title_es: Redactar directiva médica anticipada y poder sanitario
+cefr: C2
+topic: health-and-emergencies
+description: Define con un bioeticista clínico tu poder duradero de atención médica,
+  los límites de soporte vital y la validez legal internacional del documento.
+phrases:
+- id: durable-power-attorney
+  text: I want to designate a durable healthcare proxy with unambiguous decision-making authority.
+  translation: Quiero designar un apoderado sanitario duradero con autoridad decisoria inequívoca.
+  visual_hint: 📜⚖️
+  cloze:
+  - 5
+  - 7
+  - 9
+  glossary:
+  - word: healthcare proxy
+    meaning: apoderado de decisiones médicas
+    ipa: ˈhelθker ˈprɑːksi
+- id: life-sustaining-interventions
+  text: How granularly should the directive specify thresholds for mechanical ventilation and artificial nutrition?
+  translation: ¿Con qué grado de detalle debe especificar la directiva los umbrales para ventilación mecánica y nutrición artificial?
+  visual_hint: 🏥📝
+  cloze:
+  - 5
+  - 8
+  - 11
+  glossary:
+  - word: thresholds
+    meaning: umbrales / límites definidos
+    ipa: ˈθreʃhoʊldz
+- id: reciprocity-across-jurisdictions
+  text: Will this notarized living will retain legal reciprocity if I'm hospitalized abroad?
+  translation: ¿Conservará este testamento vital notariado reciprocidad legal si soy hospitalizado en el extranjero?
+  visual_hint: 🌍⚖️
+  cloze:
+  - 2
+  - 7
+  - 11
+  glossary:
+  - word: reciprocity
+    meaning: reciprocidad / reconocimiento mutuo legal
+    ipa: ˌresɪˈprɑːsəti
+- id: idm-spell-out-c2
+  text: The document should spell out my palliative preferences to prevent family conflict.
+  translation: El documento debe especificar claramente mis preferencias paliativas para evitar conflictos familiares. (spell out)
+  visual_hint: ✍️🕊️
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: spell out
+    meaning: detallar / expresar de forma explícita
+    ipa: spel aʊt
+  kind: phrasal_verb
+  apply_sentence: Clear institutional guidelines ____ the escalation pathway for surrogates.
+  apply_answer: spell out
+  apply_translation: Las directrices institucionales claras detallan la ruta de escalamiento para los representantes.
+- id: idm-leave-nothing-to-chance-c2
+  text: Regarding end-of-life autonomy, it is prudent to leave nothing to chance.
+  translation: Respecto a la autonomía al final de la vida, es prudente no dejar nada al azar. (leave nothing to chance)
+  visual_hint: 🛡️📜
+  cloze:
+  - 7
+  - 8
+  - 10
+  glossary:
+  - word: leave nothing to chance
+    meaning: no dejar nada al azar
+    ipa: liːv ˈnʌθɪŋ tuː tʃæns
+  kind: idiom
+  apply_sentence: Before embarking on the expedition, the medical team chose to ____.
+  apply_answer: leave nothing to chance
+  apply_translation: Antes de emprender la expedición, el equipo médico optó por no dejar nada al azar.
+roleplay:
+  ai_role: clinical bioethicist
+  user_role: patient
+  setting: Hospital bioethics and advance care planning office.
+  turns:
+  - speaker: ai
+    text: Welcome. Establishing an advance directive while you have full capacity is one of the clearest gifts you can give your family.
+  - speaker: user
+    goal: Explica que deseas designar un apoderado sanitario duradero y especificar con detalle tus preferencias paliativas.
+    suggested_lines:
+    - I want to designate a durable healthcare proxy with unambiguous decision-making authority.
+    - The document should spell out my palliative preferences to prevent family conflict.
+  - speaker: ai
+    text: Naming both a primary and an alternate proxy ensures continuity, and explicit comfort-care triggers remove guesswork for clinicians.
+  - speaker: user
+    goal: Pregunta qué tan detallados deben ser los límites de soporte vital y si el documento tendrá validez en el extranjero.
+    suggested_lines:
+    - How granularly should the directive specify thresholds for mechanical ventilation and artificial nutrition?
+    - Will this notarized living will retain legal reciprocity if I'm hospitalized abroad?
+  - speaker: ai
+    text: Specify time-limited trials for ventilation, and carry a certified apostilled translation alongside your digital medical ID when traveling internationally.

@@ -1,0 +1,108 @@
+id: c2-art-opening-vernissage
+title: Critiquing contemporary art at a vernissage
+title_es: Conversar sobre arte contemporáneo en una inauguración
+cefr: C2
+topic: social-and-smalltalk
+description: Intercambia impresiones sofisticadas sobre una exposición contemporánea, su curaduría y el simbolismo de las obras.
+phrases:
+- id: juxtaposition-of-mediums
+  text: The juxtaposition of industrial scrap with delicate textiles creates an arresting visual tension.
+  translation: La yuxtaposición de chatarra industrial con textiles delicados crea una tensión visual cautivadora.
+  visual_hint: 🖼️✨
+  cloze:
+  - 1
+  - 6
+  - 9
+  glossary:
+  - word: juxtaposition
+    meaning: yuxtaposición / contraste cercano
+    ipa: ˌdʒʌkstəpəˈzɪʃən
+  - word: arresting
+    meaning: cautivador / impactante
+    ipa: əˈrestɪŋ
+- id: curatorial-narrative
+  text: What elevates the show is the curatorial restraint—nothing feels gratuitously theatrical.
+  translation: Lo que eleva la muestra es la contención curatorial; nada se siente gratuitamente teatral.
+  visual_hint: 🏛️🎨
+  cloze:
+  - 1
+  - 6
+  - 9
+  glossary:
+  - word: curatorial restraint
+    meaning: contención curatorial
+    ipa: ˌkjʊrəˈtɔːriəl rɪˈstreɪnt
+  - word: gratuitously
+    meaning: gratuitamente / sin justificación
+    ipa: ɡrəˈtuːɪtəsli
+- id: visceral-response
+  text: Even without reading the wall text, the installation elicits a remarkably visceral response.
+  translation: Incluso sin leer la ficha de sala, la instalación provoca una respuesta notablemente visceral.
+  visual_hint: 🎭💭
+  cloze:
+  - 6
+  - 8
+  - 11
+  glossary:
+  - word: elicits
+    meaning: provoca / suscita
+    ipa: ɪˈlɪsɪts
+  - word: visceral
+    meaning: visceral / instintivo
+    ipa: ˈvɪsərəl
+- id: idm-c2av-food-for-thought
+  text: That final room certainly offers plenty of food for thought on urban memory.
+  translation: Esa última sala sin duda ofrece mucho material para reflexionar sobre la memoria urbana (motivo de reflexión profunda).
+  visual_hint: 🧠🖼️
+  cloze:
+  - 6
+  - 8
+  glossary:
+  - word: food for thought
+    meaning: motivo de reflexión
+    ipa: fuːd fɔːr θɔːt
+  kind: idiom
+  apply_sentence: The curator's opening lecture gave the audience real ____.
+  apply_answer: food for thought
+  apply_translation: La charla inaugural del curador dio al público verdadero motivo de reflexión.
+- id: idm-c2av-speak-volumes
+  text: The artist's refusal to title the pieces speaks volumes about intentional ambiguity.
+  translation: La negativa del artista a titular las piezas lo dice todo sobre su ambigüedad intencional (ser muy elocuente sin palabras).
+  visual_hint: 🤫🎨
+  cloze:
+  - 7
+  - 8
+  glossary:
+  - word: speak volumes
+    meaning: decir mucho / ser muy elocuente
+    ipa: spiːk ˈvɑːljuːmz
+  kind: idiom
+  apply_sentence: Her quiet expression at the auction ____ about her disappointment.
+  apply_answer: spoke volumes
+  apply_translation: Su expresión silenciosa en la subasta dijo mucho sobre su decepción.
+roleplay:
+  ai_role: art collector (Beatrice)
+  user_role: gallery guest
+  setting: Champagne reception at a contemporary gallery vernissage.
+  turns:
+  - speaker: ai
+    text: Quite a bold centerpiece in the main hall, isn't it? What's your initial take on the sculpture?
+  - speaker: user
+    goal: Comenta el contraste de materiales y la contención curatorial de la muestra.
+    suggested_lines:
+    - The juxtaposition of industrial scrap with delicate textiles creates an arresting visual tension.
+    - What elevates the show is the curatorial restraint—nothing feels gratuitously theatrical.
+  - speaker: ai
+    text: Precisely! And I noticed none of the works carry explanatory titles—just numbers.
+  - speaker: user
+    goal: Señala que la ausencia de títulos es muy elocuente y que la obra provoca una respuesta visceral sin textos.
+    suggested_lines:
+    - The artist's refusal to title the pieces speaks volumes about intentional ambiguity.
+    - Even without reading the wall text, the installation elicits a remarkably visceral response.
+  - speaker: ai
+    text: Couldn't have put it better myself. Have you seen the sound piece in the back room yet?
+  - speaker: user
+    goal: Responde que esa sala invita profundamente a reflexionar y sugiere ir a verla juntos.
+    suggested_lines:
+    - That final room certainly offers plenty of food for thought on urban memory—shall we take another look?
+    - Yes, it offers plenty of food for thought; let's stroll back there.

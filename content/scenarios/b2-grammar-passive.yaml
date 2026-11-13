@@ -1,0 +1,98 @@
+id: b2-grammar-passive
+title: Causative and reporting passives
+title_es: Pasiva causativa y pasiva de reporte
+cefr: B2
+topic: grammar-and-connectors
+description: Domina estructuras como 'have something done', 'is believed to' y 'get
+  + participio' en contextos formales y cotidianos.
+phrases:
+- id: have-laptop-repaired
+  text: I need to have my laptop repaired before Monday.
+  translation: Necesito que me reparen la laptop antes del lunes. (causativa)
+  visual_hint: 💻🔧
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: have + obj + pp
+    meaning: hacer que alguien haga algo por ti
+    ipa: hæv ... ˈdʌn
+  kind: expression
+  apply_sentence: We are going to ____ the office painted next week.
+  apply_answer: have
+  apply_translation: Vamos a mandar pintar la oficina la próxima semana.
+- id: is-believed-to-have
+  text: The policy is believed to have reduced turnover significantly.
+  translation: Se cree que la política ha reducido la rotación significativamente.
+  visual_hint: 📊📉
+  cloze:
+  - 2
+  - 3
+  - 4
+  glossary:
+  - word: is believed to
+    meaning: se cree que (pasiva impersonal)
+    ipa: ɪz bɪˈliːvd tuː
+  kind: expression
+  apply_sentence: The new regulation ____ boost small-business growth.
+  apply_answer: is expected to
+  apply_translation: Se espera que la nueva normativa impulse el crecimiento de las
+    pymes.
+- id: got-promoted-last
+  text: She got promoted to senior lead after the audit.
+  translation: La ascendieron a líder sénior después de la auditoría.
+  visual_hint: 📈🎉
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: get + past participle
+    meaning: pasiva coloquial para cambios o eventos
+    ipa: ɡɛt
+- id: needs-to-be-signed
+  text: Every contract needs to be signed by legal counsel.
+  translation: Cada contrato necesita ser firmado por el asesor legal.
+  visual_hint: ✍️⚖️
+  cloze:
+  - 2
+  - 3
+  - 4
+  glossary:
+  - word: needs to be + pp
+    meaning: necesita ser... (necesidad en pasiva)
+    ipa: niːdz tuː biː
+- id: it-is-widely-assumed
+  text: It is widely assumed that remote work is permanent.
+  translation: Se asume ampliamente que el trabajo remoto es permanente.
+  visual_hint: 🏠💼
+  cloze:
+  - 0
+  - 1
+  - 2
+  - 3
+  glossary:
+  - word: it is widely assumed
+    meaning: se asume de forma generalizada que
+    ipa: ɪt ɪz ˈwaɪdli əˈsuːmd
+roleplay:
+  ai_role: operations manager
+  user_role: facilities coordinator
+  setting: Planning office upgrades and addressing rumors about a move.
+  turns:
+  - speaker: ai
+    text: What maintenance tasks are still pending for the third floor?
+  - speaker: user
+    goal: Explica qué se mandará hacer usando 'have something done' o 'needs to be'.
+    suggested_lines:
+    - We are having the air conditioning serviced tomorrow morning.
+    - The lighting needs to be replaced before the team moves in.
+  - speaker: ai
+    text: People are also asking if we are expanding next quarter.
+  - speaker: user
+    goal: Responde usando una pasiva de reporte ('is expected to', 'is believed to'
+      o 'it is assumed').
+    suggested_lines:
+    - The new wing is expected to open by October.
+    - It is widely believed that two more teams will join us.
+  - speaker: ai
+    text: Good to know. Keep me posted on the contractors.

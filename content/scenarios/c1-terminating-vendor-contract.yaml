@@ -1,0 +1,111 @@
+id: c1-terminating-vendor-contract
+title: Offboarding an underperforming vendor
+title_es: Finalizar contrato con un proveedor
+cefr: C1
+topic: work-and-career
+description: Comunica con profesionalismo la no renovación de un contrato, cita métricas
+  incumplidas con objetividad y asegura una transición ordenada.
+phrases:
+- id: cite-missed-kpis
+  text: Despite three remediation plans, uptime remained below our contractual threshold.
+  translation: A pesar de tres planes de remediación, la disponibilidad siguió por debajo del umbral contractual.
+  visual_hint: 📉📄
+  cloze:
+  - 2
+  - 4
+  - 8
+  glossary:
+  - word: remediation
+    meaning: remediación / corrección
+    ipa: rɪˌmiːdiˈeɪʃən
+  - word: threshold
+    meaning: umbral / límite mínimo
+    ipa: ˈθreʃhoʊld
+- id: state-non-renewal-clearly
+  text: Consequently, we have decided not to renew the master services agreement.
+  translation: En consecuencia, hemos decidido no renovar el acuerdo marco de servicios.
+  visual_hint: 🛑📑
+  cloze:
+  - 0
+  - 6
+  - 10
+  glossary:
+  - word: consequently
+    meaning: en consecuencia / por lo tanto
+    ipa: ˈkɑːnsɪkwəntli
+  - word: agreement
+    meaning: acuerdo / contrato
+    ipa: əˈɡriːmənt
+- id: ensure-orderly-handover
+  text: Our priority is an orderly data export over the next thirty days.
+  translation: Nuestra prioridad es una exportación ordenada de datos durante los próximos treinta días.
+  visual_hint: 🗄️🔄
+  cloze:
+  - 4
+  - 6
+  - 9
+  glossary:
+  - word: orderly
+    meaning: ordenado / estructurado
+    ipa: ˈɔːrdərli
+  - word: export
+    meaning: exportación
+    ipa: ˈekspɔːrt
+- id: idm-part-ways
+  text: It is in both parties' interest to part ways amicably this quarter.
+  translation: 'Conviene a ambas partes separar caminos de forma amistosa este trimestre. (part ways: terminar una relación)'
+  visual_hint: 🤝🚪
+  cloze:
+  - 7
+  - 8
+  - 9
+  glossary:
+  - word: part ways
+    meaning: separar caminos / dar por terminada una relación
+    ipa: pɑːrt weɪz
+  kind: expression
+  apply_sentence: After years of differing visions, the co-founders agreed to ____.
+  apply_answer: part ways
+  apply_translation: Tras años de visiones distintas, los cofundadores acordaron separar caminos.
+- id: idm-wind-down
+  text: Let's wind down active integrations without disrupting our end users.
+  translation: 'Reduzcamos gradualmente las integraciones activas sin afectar a nuestros usuarios finales. (wind down: ir cerrando)'
+  visual_hint: 🔽⚙️
+  cloze:
+  - 1
+  - 2
+  - 6
+  glossary:
+  - word: wind down
+    meaning: cerrar o reducir gradualmente
+    ipa: waɪnd daʊn
+  kind: phrasal_verb
+  apply_sentence: The company plans to ____ its legacy portal by December.
+  apply_answer: wind down
+  apply_translation: La empresa planea cerrar gradualmente su portal antiguo para diciembre.
+roleplay:
+  ai_role: vendor account director
+  user_role: procurement and ops lead
+  setting: Formal contract review call 45 days before renewal notice deadline.
+  turns:
+  - speaker: ai
+    text: Thanks for joining. We were hoping to discuss pricing tiers for next year's renewal.
+  - speaker: user
+    goal: Cita objetivamente los incumplimientos tras los planes de remediación y comunica la decisión de no renovar.
+    suggested_lines:
+    - Despite three remediation plans, uptime remained below our contractual threshold. Consequently, we have decided not to renew the master services agreement.
+    - Before discussing pricing, uptime remained below our contractual threshold despite three remediation plans, so we will not be renewing.
+  - speaker: ai
+    text: I understand your frustration, though we just hired a new reliability lead. Is there any room to reconsider?
+  - speaker: user
+    goal: Reafirma con cortesía que conviene separar caminos amigablemente y enfoca la charla en la exportación ordenada de datos.
+    suggested_lines:
+    - We appreciate the effort, but it is in both parties' interest to part ways amicably this quarter. Our priority is an orderly data export over the next thirty days.
+    - It is best for both sides to part ways amicably. Let's focus on an orderly data export over the next thirty days.
+  - speaker: ai
+    text: Understood. We will honor all offboarding terms and assign an engineer to support the export.
+  - speaker: user
+    goal: Agradece la colaboración y propón ir cerrando las integraciones activas sin afectar a los usuarios finales.
+    suggested_lines:
+    - Thank you. Let's wind down active integrations without disrupting our end users.
+    - Appreciate that—let's wind down active integrations smoothly without disrupting end users.

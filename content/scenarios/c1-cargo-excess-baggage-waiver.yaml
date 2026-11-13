@@ -1,0 +1,104 @@
+id: c1-cargo-excess-baggage-waiver
+title: Negotiating an excess-baggage waiver
+title_es: Negociar exención de exceso de equipaje
+cefr: C1
+topic: travel-and-transport
+description: Negocia en el mostrador de aerolínea tarifas de prensa, manejo especial
+  para equipo audiovisual y documentación ATA Carnet.
+phrases:
+- id: media-credentials-waiver
+  text: Under your airline's media credentials policy, we qualify for a reduced excess-baggage rate.
+  translation: Bajo la política de credenciales de prensa de su aerolínea, calificamos para una tarifa reducida de exceso de equipaje.
+  visual_hint: 🎥✈️
+  cloze:
+  - 4
+  - 7
+  - 11
+  glossary:
+  - word: credentials
+    meaning: credenciales / acreditación
+    ipa: krəˈdenʃəlz
+  - word: qualify for
+    meaning: calificar para / tener derecho a
+    ipa: ˈkwɑːlɪfaɪ fɔːr
+- id: ata-carnet-clearance
+  text: These Pelican cases contain calibrated camera rigs covered by an ATA Carnet.
+  translation: Estos maletines Pelican contienen equipos de cámara calibrados cubiertos por un cuaderno ATA.
+  visual_hint: 📦📷
+  cloze:
+  - 4
+  - 6
+  glossary:
+  - word: calibrated
+    meaning: calibrado
+    ipa: ˈkælɪbreɪtɪd
+  - word: rigs
+    meaning: equipos / aparejos
+    ipa: rɪɡz
+- id: fragile-oversize-handling
+  text: Could we route the oversized tripod cases through special handling rather than the main carousel?
+  translation: ¿Podríamos canalizar los maletines sobredimensionados de trípodes por manejo especial en lugar de la cinta principal?
+  visual_hint: 🧳⚠️
+  cloze:
+  - 2
+  - 4
+  - 9
+  glossary:
+  - word: oversized
+    meaning: sobredimensionado
+    ipa: ˈoʊvərsaɪzd
+  - word: special handling
+    meaning: manejo especial
+    ipa: ˈspeʃəl ˈhændlɪŋ
+- id: cargo-meet-halfway
+  text: Given our frequent-flyer tier, could the station manager meet us halfway on the surcharge?
+  translation: Dado nuestro nivel de viajero frecuente, ¿podría el gerente de estación llegar a un punto medio con el recargo? (meet halfway = ceder ambas partes)
+  visual_hint: 🤝💼
+  cloze:
+  - 8
+  - 10
+  glossary:
+  - word: meet halfway
+    meaning: llegar a un acuerdo intermedio
+    ipa: miːt ˌhæfˈweɪ
+  kind: idiom
+  apply_sentence: If we consolidate two cases, would you ____ on the overweight fee?
+  apply_answer: meet us halfway
+  apply_translation: Si consolidamos dos maletines, ¿llegarían a un punto medio con la tarifa por sobrepeso?
+- id: cargo-iron-out
+  text: Let's iron out the weight discrepancy before the check-in cutoff.
+  translation: Resolvamos la discrepancia de peso antes del cierre de facturación. (iron out = resolver detalles)
+  visual_hint: ⚖️📝
+  cloze:
+  - 1
+  - 2
+  - 5
+  glossary:
+  - word: iron out
+    meaning: limar asperezas / resolver detalles
+    ipa: ˈaɪərn aʊt
+  kind: phrasal_verb
+  apply_sentence: The crew arrived early to ____ customs paperwork with the agent.
+  apply_answer: iron out
+  apply_translation: El equipo llegó temprano para resolver los detalles del papeleo aduanero con el agente.
+roleplay:
+  ai_role: airline station supervisor
+  user_role: documentary producer
+  setting: A priority check-in counter with six heavy equipment cases on carts.
+  turns:
+  - speaker: ai
+    text: Good morning. Six cases totaling one hundred eighty kilos will incur a substantial overweight surcharge.
+  - speaker: user
+    goal: Invoca la política de credenciales de prensa y menciona que los equipos están cubiertos por un cuaderno ATA.
+    suggested_lines:
+    - Under your airline's media credentials policy, we qualify for a reduced excess-baggage rate. These Pelican cases contain calibrated camera rigs covered by an ATA Carnet.
+    - We have valid media credentials and an ATA Carnet; under your policy, we qualify for the reduced media rate.
+  - speaker: ai
+    text: Let me verify your press accreditation in the system. Even with the media discount, two cases exceed the thirty-two-kilo limit.
+  - speaker: user
+    goal: Pide llegar a un punto medio con el recargo y solicita manejo especial en lugar de la cinta principal.
+    suggested_lines:
+    - Given our frequent-flyer tier, could the station manager meet us halfway on the surcharge? Also, could we route the oversized tripod cases through special handling rather than the main carousel?
+    - Can we redistribute a few batteries to meet halfway, and route the fragile cases through special handling?
+  - speaker: ai
+    text: Redistributing six kilos works. I will waive the oversized fee and tag them for special handling.

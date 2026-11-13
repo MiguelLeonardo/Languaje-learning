@@ -1,0 +1,95 @@
+id: a2-tech-video-call-audio
+title: Fixing audio on a video call
+title_es: Arreglar el audio en una videollamada
+cefr: A2
+topic: daily-tech-and-media
+description: Resuelve problemas de micrófono, pantalla congelada y mala conexión durante una videollamada.
+phrases:
+- id: microphone-is-muted
+  text: Your microphone is still muted on the screen.
+  translation: Tu micrófono sigue silenciado en la pantalla.
+  visual_hint: 🎙️🔇
+  cloze:
+  - 1
+  - 4
+  glossary:
+  - word: muted
+    meaning: silenciado / en silencio
+    ipa: ˈmjuːtɪd
+- id: video-keeps-freezing
+  text: Your video keeps freezing every few seconds.
+  translation: Tu video se congela cada pocos segundos.
+  visual_hint: 🧊💻
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: freezing
+    meaning: congelándose / trabándose
+    ipa: ˈfriːzɪŋ
+- id: switch-to-headphones
+  text: Let me switch to my wired headphones for better sound.
+  translation: Déjame cambiar a mis audífonos con cable para mejor sonido.
+  visual_hint: 🎧🔊
+  cloze:
+  - 2
+  - 6
+  glossary:
+  - word: wired
+    meaning: con cable / alámbrico
+    ipa: ˈwaɪərd
+- id: idm-cut-out
+  text: Your voice started to cut out when you walked outside.
+  translation: 'Tu voz empezó a cortarse cuando saliste afuera. (cut out: cortarse / interrumpirse)'
+  visual_hint: 📶🗣️
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: cut out
+    meaning: cortarse / interrumpirse (una señal o audio)
+    ipa: kʌt aʊt
+  kind: phrasal_verb
+  apply_sentence: The call might ____ when the train goes through a tunnel.
+  apply_answer: cut out
+  apply_translation: La llamada podría cortarse cuando el tren pase por un túnel.
+- id: idm-log-back-in
+  text: I will hang up and log back in with the link.
+  translation: 'Voy a colgar y volver a entrar con el enlace. (log back in: volver a iniciar sesión)'
+  visual_hint: 🔄🔗
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: log back in
+    meaning: volver a conectarse / iniciar sesión de nuevo
+    ipa: lɔːɡ bæk ɪn
+  kind: phrasal_verb
+  apply_sentence: If the app crashes, close it and ____ right away.
+  apply_answer: log back in
+  apply_translation: Si la app se cierra sola, ciérrala y vuelve a entrar de inmediato.
+roleplay:
+  ai_role: cousin
+  user_role: caller
+  setting: Evening family video call from home.
+  turns:
+  - speaker: ai
+    text: Hey! I can see you waving, but I cannot hear anything at all.
+  - speaker: user
+    goal: Avisa que su micrófono está silenciado y ofrece cambiar a audífonos con cable.
+    suggested_lines:
+    - Your microphone is still muted on the screen.
+    - Let me switch to my wired headphones for better sound.
+  - speaker: ai
+    text: Oh, my bad! Can you hear me clearly now?
+  - speaker: user
+    goal: Di que su voz se corta y que el video se congela cada pocos segundos.
+    suggested_lines:
+    - Your voice started to cut out when you walked outside.
+    - Your video keeps freezing every few seconds.
+  - speaker: ai
+    text: Let me move closer to the router. Should I restart the call?
+  - speaker: user
+    goal: Di que colgarás y volverás a entrar con el enlace.
+    suggested_lines:
+    - I will hang up and log back in with the link.

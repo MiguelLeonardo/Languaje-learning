@@ -1,0 +1,94 @@
+id: b1-hotel-fire-alarm-evacuation
+title: Following hotel fire alarm evacuation
+title_es: Seguir instrucciones de evacuación por alarma en hotel
+cefr: B1
+topic: health-and-emergencies
+description: Sigue las indicaciones del personal del hotel durante una alarma de incendio,
+  ubica las escaleras de emergencia y el punto de reunión.
+phrases:
+- id: emergency-stairwell
+  text: The fire alarm went off, so where is the nearest stairwell?
+  translation: Sonó la alarma de incendio, ¿dónde está la escalera más cercana?
+  visual_hint: 🚨🪜
+  cloze:
+  - 1
+  - 2
+  - 10
+  glossary:
+  - word: stairwell
+    meaning: hueco de la escalera / escalera de emergencia
+    ipa: ˈsterwel
+- id: assembly-point
+  text: Where is the designated outdoor assembly point for hotel guests?
+  translation: ¿Dónde está el punto de reunión exterior asignado para los huéspedes?
+  visual_hint: 🏨📍
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: assembly point
+    meaning: punto de reunión
+    ipa: əˈsembli pɔɪnt
+- id: all-clear-signal
+  text: How will we know when it's safe to go back inside?
+  translation: ¿Cómo sabremos cuándo es seguro volver a entrar?
+  visual_hint: ✅🏢
+  cloze:
+  - 6
+  - 8
+  - 9
+  glossary:
+  - word: safe
+    meaning: seguro
+    ipa: seɪf
+- id: idm-go-off-b1
+  text: Did the smoke alarm go off because of a real fire?
+  translation: ¿La alarma de humo sonó por un incendio real? (go off = sonar / activarse)
+  visual_hint: 🔔🔥
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: go off
+    meaning: sonar / activarse (una alarma)
+    ipa: ɡoʊ ɒf
+  kind: phrasal_verb
+  apply_sentence: My phone alarm will ____ at six in the morning.
+  apply_answer: go off
+  apply_translation: La alarma de mi teléfono sonará a las seis de la mañana.
+- id: idm-stay-calm-b1
+  text: Everyone should stay calm and avoid using the elevators.
+  translation: Todos deben mantener la calma y evitar usar los ascensores. (stay calm = mantener la calma)
+  visual_hint: 🧘‍♂️🚫
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: stay calm
+    meaning: mantener la calma
+    ipa: steɪ kɑːm
+  kind: expression
+  apply_sentence: In an emergency, it is important to ____ and listen carefully.
+  apply_answer: stay calm
+  apply_translation: En una emergencia, es importante mantener la calma y escuchar con atención.
+roleplay:
+  ai_role: hotel safety officer
+  user_role: hotel guest
+  setting: Hotel hallway during a fire alarm activation.
+  turns:
+  - speaker: ai
+    text: Attention, please! Follow the green exit signs and do not use the elevators.
+  - speaker: user
+    goal: Pregunta dónde está la escalera más cercana y si la alarma sonó por un incendio real.
+    suggested_lines:
+    - The fire alarm went off, so where is the nearest stairwell?
+    - Did the smoke alarm go off because of a real fire?
+  - speaker: ai
+    text: The stairwell is right past the ice machine on your left. Firefighters are checking a kitchen sensor now.
+  - speaker: user
+    goal: Pregunta dónde queda el punto de reunión afuera y cómo sabrán cuándo regresar.
+    suggested_lines:
+    - Where is the designated outdoor assembly point for hotel guests?
+    - How will we know when it's safe to go back inside?
+  - speaker: ai
+    text: Gather across the street by the fountain, and our manager will announce the all-clear.

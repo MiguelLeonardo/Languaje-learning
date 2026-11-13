@@ -1,0 +1,101 @@
+id: a1-toy-store-gift-wrap
+title: Buying a toy and gift wrap
+title_es: Comprar un juguete y pedir envoltura
+cefr: A1
+topic: hotel-and-shopping
+description: Busca un regalo de cumpleaños para un niño y pide que lo envuelvan.
+phrases:
+- id: gift-for-niece
+  text: I am looking for a birthday gift for a six-year-old.
+  translation: Busco un regalo de cumpleaños para un niño de seis años.
+  visual_hint: 🎁🎂
+  cloze:
+  - 6
+  - 9
+  glossary:
+  - word: birthday
+    meaning: cumpleaños
+    ipa: ˈbɜːrθdeɪ
+  - word: gift
+    meaning: regalo
+    ipa: ɡɪft
+- id: popular-board-game
+  text: Do you have a fun board game for kids?
+  translation: ¿Tiene algún juego de mesa divertido para niños?
+  visual_hint: 🎲👧
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: board game
+    meaning: juego de mesa
+    ipa: bɔːrd ɡeɪm
+  - word: kids
+    meaning: niños
+    ipa: kɪdz
+- id: batteries-included
+  text: Does this toy train come with batteries included?
+  translation: ¿Este tren de juguete viene con pilas incluidas?
+  visual_hint: 🚂🔋
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: toy
+    meaning: juguete
+    ipa: tɔɪ
+  - word: batteries
+    meaning: pilas / baterías
+    ipa: ˈbætəriz
+- id: idm-look-for-gift
+  text: Let's look around the toy aisle for a puzzle.
+  translation: Echemos un vistazo por el pasillo de juguetes para buscar un rompecabezas.
+  visual_hint: 🧩👀
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: look around
+    meaning: echar un vistazo / recorrer
+    ipa: lʊk əˈraʊnd
+  kind: phrasal_verb
+  apply_sentence: Take your time and ____ the shop.
+  apply_answer: look around
+  apply_translation: Tómate tu tiempo y recorre la tienda.
+- id: idm-gift-wrapped
+  text: Can I have this present gift-wrapped at the counter?
+  translation: ¿Me pueden envolver este regalo en el mostrador?
+  visual_hint: 🎀🎁
+  cloze:
+  - 5
+  - 8
+  glossary:
+  - word: gift-wrapped
+    meaning: envuelto para regalo
+    ipa: ˈɡɪft ræpt
+  kind: expression
+  apply_sentence: I want this book ____ for my friend's party.
+  apply_answer: gift-wrapped
+  apply_translation: Quiero este libro envuelto para regalo para la fiesta de mi amigo.
+roleplay:
+  ai_role: toy store clerk
+  user_role: shopper
+  setting: A colorful toy store on a Saturday afternoon.
+  turns:
+  - speaker: ai
+    text: Hi! Welcome to Happy Toys. Can I help you find something?
+  - speaker: user
+    goal: Di que buscas un regalo de cumpleaños para un niño de seis años y pregunta por juegos
+      de mesa.
+    suggested_lines:
+    - I am looking for a birthday gift for a six-year-old.
+    - Do you have a fun board game for kids?
+  - speaker: ai
+    text: Yes! This animal board game and this toy train are both very popular.
+  - speaker: user
+    goal: Pregunta si el tren incluye pilas y si lo pueden envolver para regalo.
+    suggested_lines:
+    - Does this toy train come with batteries included?
+    - Can I have this present gift-wrapped at the counter?
+  - speaker: ai
+    text: Yes, batteries are inside, and gift wrap is free! Follow me.

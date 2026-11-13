@@ -1,0 +1,91 @@
+id: c2-foraging-ethnobotany-dinner
+title: Wild foraging & flavor chemistry
+title_es: Recolección silvestre y química del sabor
+cefr: C2
+topic: food-and-drink
+description: Conversa con un etnobotánico sobre ética de recolección costera, compuestos aromáticos y fermentos silvestres.
+phrases:
+- id: sustainable-harvest-threshold
+  text: We never harvest more than ten percent of a coastal sea-fennel patch to preserve regeneration.
+  translation: Nunca recolectamos más del diez por ciento de un parche de hinojo marino para preservar su regeneración.
+  visual_hint: 🌿🌊
+  cloze:
+  - 6
+  - 14
+  glossary:
+  - word: regeneration
+    meaning: regeneración natural
+    ipa: rɪˌdʒenəˈreɪʃən
+- id: volatile-terpenes
+  text: Crushing wild spruce tips releases volatile terpenes that echo bright green mango.
+  translation: Triturar brotes silvestres de abeto libera terpenos volátiles que recuerdan al mango verde brillante.
+  visual_hint: 🌲🥭
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: terpenes
+    meaning: terpenos (compuestos aromáticos vegetales)
+    ipa: ˈtɜːrpiːnz
+- id: lacto-fermentation-brine
+  text: A two-percent lacto-fermentation brine tames the astringency of unripe elderberries.
+  translation: Una salmuera de lactofermentación al dos por ciento doma la astringencia de las bayas de saúco verdes.
+  visual_hint: 🫙🫐
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: brine
+    meaning: salmuera
+    ipa: braɪn
+- id: stumble-upon
+  text: On foggy mornings we occasionally stumble upon wild chanterelles beneath old-growth oaks.
+  translation: 'En mañanas con niebla a veces nos topamos con rebozuelos silvestres bajo robles centenarios. (stumble upon: encontrar por casualidad)'
+  visual_hint: 🍄🌳
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: stumble upon
+    meaning: 'stumble upon: toparse con / encontrar por casualidad'
+    ipa: ˈstʌmbl əˈpɒn
+  kind: phrasal_verb
+  apply_sentence: Botanists sometimes ____ forgotten heirloom varieties in remote mountain valleys.
+  apply_answer: stumble upon
+  apply_translation: Los botánicos a veces se topan con variedades criollas olvidadas en valles montañosos remotos.
+- id: rule-of-thumb
+  text: As a rule of thumb, never forage near roadsides where heavy metals accumulate.
+  translation: 'Como regla general, nunca recolectes cerca de carreteras donde se acumulan metales pesados. (rule of thumb: regla práctica)'
+  visual_hint: 📏🌿
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: rule of thumb
+    meaning: 'rule of thumb: regla práctica / criterio general'
+    ipa: ruːl əv θʌm
+  kind: idiom
+  apply_sentence: A good ____ in fermentation is to weigh both vegetables and water before salting.
+  apply_answer: rule of thumb
+  apply_translation: Una buena regla práctica en fermentación es pesar tanto los vegetales como el agua antes de salar.
+roleplay:
+  ai_role: culinary ethnobotanist
+  user_role: research chef
+  setting: A coastal test kitchen overlooking rocky tide pools.
+  turns:
+  - speaker: ai
+    text: Look at these sea-fennel shoots we gathered at dawn. How do you plan to incorporate them into tonight's tasting?
+  - speaker: user
+    goal: Explica cómo planeas preservar su regeneración y cómo aprovecharás sus compuestos aromáticos o salmuera.
+    suggested_lines:
+    - First, we observed the ten-percent harvest threshold for regeneration, and now I am infusing the volatile terpenes into cold oil.
+    - A two-percent lacto-fermentation brine will tame their sharpness while keeping the coastal aromatics intact.
+  - speaker: ai
+    text: Smart approach—heating them directly would flash off those delicate top notes. Any other foraging guidelines for your kitchen team?
+  - speaker: user
+    goal: Menciona la regla práctica de evitar carreteras y lo emocionante de toparse con hongos silvestres.
+    suggested_lines:
+    - As a rule of thumb, we never forage near roadsides, though we did stumble upon chanterelles deeper in the woods.
+    - Our strict rule of thumb is avoiding roadsides for heavy metals; everything else we stumble upon is logged by GPS.
+  - speaker: ai
+    text: That level of ecological rigor is what separates thoughtful gastronomy from mere novelty.

@@ -1,0 +1,108 @@
+id: b1-potluck-dinner-planning
+title: Coordinating a potluck dinner with friends
+title_es: Coordinar una cena compartida entre amigos
+cefr: B1
+topic: social-and-smalltalk
+description: Organiza una cena donde cada invitado lleva un plato, revisa restricciones alimentarias y asigna categorías.
+phrases:
+- id: everyone-brings-dish
+  text: Let's do a potluck so nobody has to cook everything alone.
+  translation: Hagamos una cena compartida para que nadie tenga que cocinar todo solo.
+  visual_hint: 🍲🤝
+  cloze:
+  - 3
+  - 5
+  - 9
+  glossary:
+  - word: potluck
+    meaning: cena donde cada invitado lleva un plato
+    ipa: ˈpɑːtlʌk
+  - word: alone
+    meaning: solo
+    ipa: əˈloʊn
+- id: check-dietary-needs
+  text: Does anyone coming have food allergies or vegetarian preferences?
+  translation: ¿Alguien de los que vienen tiene alergias alimentarias o preferencias vegetarianas?
+  visual_hint: 🥗⚠️
+  cloze:
+  - 3
+  - 4
+  - 7
+  glossary:
+  - word: food allergies
+    meaning: alergias alimentarias
+    ipa: fuːd ˈælərdʒiz
+  - word: preferences
+    meaning: preferencias
+    ipa: ˈprefrənsɪz
+- id: sign-up-for-dessert
+  text: I'll handle the main course if someone wants to cover dessert.
+  translation: Yo me encargo del plato principal si alguien quiere cubrir el postre.
+  visual_hint: 🍝🍰
+  cloze:
+  - 1
+  - 4
+  - 9
+  glossary:
+  - word: handle
+    meaning: encargarse de
+    ipa: ˈhændl
+  - word: main course
+    meaning: plato principal
+    ipa: meɪn kɔːrs
+- id: idm-b1pd-pitch-in
+  text: If we all pitch in with one side dish, dinner will be effortless.
+  translation: Si todos colaboramos con una guarnición, la cena será muy fácil (aportar cada uno su parte).
+  visual_hint: 🙌🥗
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: pitch in
+    meaning: colaborar / aportar entre todos
+    ipa: pɪtʃ ɪn
+  kind: phrasal_verb
+  apply_sentence: If everyone can ____ ten dollars, we can buy a group gift.
+  apply_answer: pitch in
+  apply_translation: Si todos pueden aportar diez dólares, podemos comprar un regalo grupal.
+- id: idm-b1pd-from-scratch
+  text: Don't feel pressured to bake anything from scratch—store-bought is totally fine!
+  translation: No te sientas presionado por hornear algo desde cero; ¡comprado en tienda está perfecto! (preparar sin ingredientes prefabricados).
+  visual_hint: 🥧🛒
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: from scratch
+    meaning: desde cero
+    ipa: frʌm skrætʃ
+  kind: idiom
+  apply_sentence: My grandmother always makes her pasta sauce ____.
+  apply_answer: from scratch
+  apply_translation: Mi abuela siempre hace su salsa de pasta desde cero.
+roleplay:
+  ai_role: friend (Hannah)
+  user_role: organizer
+  setting: Planning Saturday's friend gathering over a quick phone call.
+  turns:
+  - speaker: ai
+    text: Hey! I'm excited for Saturday. How should we organize the food for eight people?
+  - speaker: user
+    goal: Propón hacer una cena compartida para que todos colaboren y nadie cocine todo solo.
+    suggested_lines:
+    - Let's do a potluck so nobody has to cook everything alone.
+    - If we all pitch in with one side dish, dinner will be effortless.
+  - speaker: ai
+    text: Love that idea! Should I make a salad or bring a cake?
+  - speaker: user
+    goal: Dile que tú haces el plato principal, pregúntale si cubre el postre y aclara que no tiene que hacerlo desde cero.
+    suggested_lines:
+    - I'll handle the main course if someone wants to cover dessert.
+    - Don't feel pressured to bake anything from scratch—store-bought is totally fine!
+  - speaker: ai
+    text: Awesome, I'll pick up a lemon tart from the bakery. Any allergies to keep in mind?
+  - speaker: user
+    goal: Pregunta o confirma si alguien tiene alergias alimentarias o preferencias vegetarianas.
+    suggested_lines:
+    - Does anyone coming have food allergies or vegetarian preferences?
+    - No allergies, though Marco is vegetarian, so a tart is perfect!

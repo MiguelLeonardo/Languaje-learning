@@ -1,0 +1,95 @@
+id: b1-bicycle-shop-tune-up
+title: Getting a bicycle tuned up
+title_es: Llevar la bicicleta al taller de reparación
+cefr: B1
+topic: hotel-and-shopping
+description: Describe un problema con los frenos y pide presupuesto y tiempo de entrega en
+  el taller.
+phrases:
+- id: brakes-squeaking
+  text: My rear brake has been squeaking and feels a bit loose.
+  translation: Mi freno trasero ha estado rechinando y se siente un poco flojo.
+  visual_hint: 🚲🔧
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: rear brake
+    meaning: freno trasero
+    ipa: rɪr breɪk
+  - word: squeaking
+    meaning: rechinando
+    ipa: ˈskwiːkɪŋ
+- id: estimate-before-work
+  text: Could you give me an estimate before replacing any parts?
+  translation: ¿Podría darme un presupuesto antes de reemplazar alguna pieza?
+  visual_hint: 📋💵
+  cloze:
+  - 5
+  - 7
+  glossary:
+  - word: estimate
+    meaning: presupuesto / cotización
+    ipa: ˈestɪmət
+- id: when-ready-pickup
+  text: When do you think the bike will be ready for pickup?
+  translation: ¿Cuándo cree que la bicicleta estará lista para recoger?
+  visual_hint: 🚲🕒
+  cloze:
+  - 7
+  - 10
+  glossary:
+  - word: pickup
+    meaning: recogida / entrega
+    ipa: ˈpɪkʌp
+- id: idm-drop-off-bike
+  text: I'd like to drop off my commuter bike for a tune-up.
+  translation: Me gustaría dejar mi bicicleta de uso diario para una afinación.
+  visual_hint: 🚲🛠️
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: drop off
+    meaning: dejar (algo en un lugar)
+    ipa: drɑːp ɔːf
+  kind: phrasal_verb
+  apply_sentence: You can ____ your bike before work and pick it up at five.
+  apply_answer: drop off
+  apply_translation: Puedes dejar tu bicicleta antes del trabajo y recogerla a las cinco.
+- id: idm-wear-and-tear
+  text: The mechanic said the chain just has normal wear and tear.
+  translation: El mecánico dijo que la cadena solo tiene desgaste normal por uso.
+  visual_hint: ⛓️⚙️
+  cloze:
+  - 8
+  - 10
+  glossary:
+  - word: wear and tear
+    meaning: desgaste por el uso normal
+    ipa: wer ənd ter
+  kind: idiom
+  apply_sentence: After three years of commuting, the tires show some ____.
+  apply_answer: wear and tear
+  apply_translation: Después de tres años de ir al trabajo, las llantas muestran algo de desgaste.
+roleplay:
+  ai_role: bike mechanic
+  user_role: cyclist
+  setting: A busy local bicycle repair shop.
+  turns:
+  - speaker: ai
+    text: Hey there! Bring your bike right in. What seems to be the issue?
+  - speaker: user
+    goal: Di que quieres dejar la bici para afinación y describe el problema del freno trasero.
+    suggested_lines:
+    - I'd like to drop off my commuter bike for a tune-up.
+    - My rear brake has been squeaking and feels a bit loose.
+  - speaker: ai
+    text: Got it—likely just worn brake pads and normal wear and tear on the cables.
+  - speaker: user
+    goal: Pide un presupuesto antes de cambiar piezas y pregunta cuándo estará lista.
+    suggested_lines:
+    - Could you give me an estimate before replacing any parts?
+    - When do you think the bike will be ready for pickup?
+  - speaker: ai
+    text: A basic tune-up is fifty-five dollars, and it will be ready tomorrow at noon.

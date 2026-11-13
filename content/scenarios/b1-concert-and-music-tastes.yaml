@@ -1,0 +1,103 @@
+id: b1-concert-and-music-tastes
+title: Talking about concerts and music tastes
+title_es: Hablar de conciertos y gustos musicales
+cefr: B1
+topic: social-and-smalltalk
+description: Comparte tus géneros musicales favoritos, comenta cómo estuvo un concierto reciente y recomienda un artista.
+phrases:
+- id: live-music-energy
+  text: Nothing beats the energy of seeing a favorite band perform live.
+  translation: Nada supera la energía de ver a una banda favorita tocar en vivo.
+  visual_hint: 🎤🔥
+  cloze:
+  - 1
+  - 3
+  - 9
+  glossary:
+  - word: nothing beats
+    meaning: nada supera a
+    ipa: ˈnʌθɪŋ biːts
+  - word: perform live
+    meaning: tocar en vivo
+    ipa: pərˈfɔːrm laɪv
+- id: soundtrack-for-work
+  text: Lately I've been listening to indie folk while I work.
+  translation: Últimamente he estado escuchando indie folk mientras trabajo.
+  visual_hint: 🎧🌿
+  cloze:
+  - 0
+  - 3
+  - 7
+  glossary:
+  - word: lately
+    meaning: últimamente
+    ipa: ˈleɪtli
+  - word: indie folk
+    meaning: folk independiente
+    ipa: ˈɪndi foʊk
+- id: sold-out-tickets
+  text: Tickets sold out in ten minutes, so I felt lucky to get one.
+  translation: Las entradas se agotaron en diez minutos, así que me sentí afortunado de conseguir una.
+  visual_hint: 🎟️⚡
+  cloze:
+  - 0
+  - 2
+  - 9
+  glossary:
+  - word: sold out
+    meaning: agotadas
+    ipa: soʊld aʊt
+  - word: lucky
+    meaning: afortunado
+    ipa: ˈlʌki
+- id: idm-b1cm-cup-of-tea
+  text: Heavy metal isn't really my cup of tea, though I respect the musicianship.
+  translation: El heavy metal no es realmente lo mío, aunque respeto el talento musical (no ser del gusto de uno).
+  visual_hint: 🍵🎸
+  cloze:
+  - 4
+  - 6
+  glossary:
+  - word: cup of tea
+    meaning: de mi agrado / lo mío
+    ipa: kʌp əv tiː
+  kind: idiom
+  apply_sentence: Horror movies aren't my ____, so I'll skip tonight.
+  apply_answer: cup of tea
+  apply_translation: Las películas de terror no son lo mío, así que me salto la de esta noche.
+- id: idm-b1cm-on-repeat
+  text: I've had their new acoustic album on repeat all week.
+  translation: He tenido su nuevo álbum acústico en repetición toda la semana (escuchar sin parar).
+  visual_hint: 🔁🎶
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: on repeat
+    meaning: en repetición constante
+    ipa: ɒn rɪˈpiːt
+  kind: expression
+  apply_sentence: That catchy summer song has been ____ in my car.
+  apply_answer: on repeat
+  apply_translation: Esa canción pegadiza del verano ha estado en repetición en mi coche.
+roleplay:
+  ai_role: coworker (Elena)
+  user_role: music fan
+  setting: Chatting while waiting for a shared ride after a team dinner.
+  turns:
+  - speaker: ai
+    text: Didn't you go to that outdoor music festival on Saturday? How was it?
+  - speaker: user
+    goal: Dile que estuvo increíble, que nada supera la energía en vivo y que tuviste suerte con la entrada.
+    suggested_lines:
+    - Nothing beats the energy of seeing a favorite band perform live.
+    - Tickets sold out in ten minutes, so I felt lucky to get one.
+  - speaker: ai
+    text: Nice! What kind of music are you usually into?
+  - speaker: user
+    goal: Menciona qué escuchas últimamente y qué género no es tanto de tu gusto.
+    suggested_lines:
+    - Lately I've been listening to indie folk while I work.
+    - Heavy metal isn't really my cup of tea, though I respect the musicianship.
+  - speaker: ai
+    text: I love indie folk too! Send me a playlist link if you have one.

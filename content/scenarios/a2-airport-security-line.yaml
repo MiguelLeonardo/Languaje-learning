@@ -1,0 +1,103 @@
+id: a2-airport-security-line
+title: Going through airport security
+title_es: Pasar el control de seguridad del aeropuerto
+cefr: A2
+topic: travel-and-transport
+description: Sigue las instrucciones del control de seguridad para líquidos, portátiles
+  y objetos personales.
+phrases:
+- id: take-out-laptop
+  text: Do I need to take my laptop out of my bag?
+  translation: ¿Necesito sacar mi portátil de la mochila?
+  visual_hint: 💻🎒
+  cloze:
+  - 6
+  - 10
+  glossary:
+  - word: laptop
+    meaning: computadora portátil
+    ipa: ˈlæptɑːp
+  - word: bag
+    meaning: bolsa / mochila
+    ipa: bæɡ
+- id: liquids-small-bag
+  text: All liquids must fit inside a clear plastic bag.
+  translation: Todos los líquidos deben caber dentro de una bolsa de plástico transparente.
+  visual_hint: 🧴🛍️
+  cloze:
+  - 1
+  - 6
+  glossary:
+  - word: liquids
+    meaning: líquidos
+    ipa: ˈlɪkwɪdz
+  - word: clear
+    meaning: transparente
+    ipa: klɪr
+- id: empty-your-pockets
+  text: Please empty your pockets and remove your belt.
+  translation: Por favor, vacía tus bolsillos y quítate el cinturón.
+  visual_hint: 👖🔑
+  cloze:
+  - 1
+  - 3
+  - 5
+  glossary:
+  - word: empty
+    meaning: vaciar
+    ipa: ˈempti
+  - word: belt
+    meaning: cinturón
+    ipa: belt
+- id: security-take-off
+  text: You have to take off your jacket before the scanner.
+  translation: Tienes que quitarte la chaqueta antes del escáner. (take off = quitarse ropa)
+  visual_hint: 🧥🛂
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: take off
+    meaning: quitarse una prenda
+    ipa: teɪk ɔːf
+  kind: phrasal_verb
+  apply_sentence: Travelers often need to ____ their boots at security.
+  apply_answer: take off
+  apply_translation: Los viajeros a menudo necesitan quitarse las botas en seguridad.
+- id: security-just-in-case
+  text: Bring an empty water bottle just in case you get thirsty.
+  translation: Trae una botella de agua vacía por si acaso te da sed. (just in case = por si acaso)
+  visual_hint: 💧🛫
+  cloze:
+  - 5
+  - 6
+  - 7
+  glossary:
+  - word: just in case
+    meaning: por si acaso
+    ipa: dʒʌst ɪn keɪs
+  kind: expression
+  apply_sentence: Keep your passport handy ____ the officer asks for it.
+  apply_answer: just in case
+  apply_translation: Ten tu pasaporte a mano por si acaso el oficial te lo pide.
+roleplay:
+  ai_role: security officer
+  user_role: traveler
+  setting: An airport security screening lane with trays and X-ray belts.
+  turns:
+  - speaker: ai
+    text: Next passenger, please! Place your carry-on bag in a grey tray.
+  - speaker: user
+    goal: Pregunta si debes sacar tu portátil de la mochila.
+    suggested_lines:
+    - Do I need to take my laptop out of my bag?
+    - Should I put my laptop in a separate tray?
+  - speaker: ai
+    text: Yes, put your laptop and your clear plastic bag of liquids in a separate tray.
+  - speaker: user
+    goal: Confirma que vaciaste tus bolsillos y pregunta si debes quitarte la chaqueta.
+    suggested_lines:
+    - I emptied my pockets. Do I have to take off my jacket before the scanner?
+    - Should I take off my jacket and belt as well?
+  - speaker: ai
+    text: Yes, please take off your jacket and step through the scanner when the light turns green.

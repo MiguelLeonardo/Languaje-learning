@@ -1,0 +1,100 @@
+id: b1-boutique-hotel-spa-booking
+title: Booking a hotel spa treatment
+title_es: Reservar un masaje en el spa del hotel
+cefr: B1
+topic: hotel-and-shopping
+description: Reserva un masaje relajante en el spa del hotel, consulta precios y pregunta
+  por acceso al sauna.
+phrases:
+- id: deep-tissue-slot
+  text: Do you have any availability for a sixty-minute massage this evening?
+  translation: ¿Tienen disponibilidad para un masaje de sesenta minutos esta tarde?
+  visual_hint: 💆‍♀️🕕
+  cloze:
+  - 4
+  - 7
+  glossary:
+  - word: availability
+    meaning: disponibilidad
+    ipa: əˌveɪləˈbɪləti
+  - word: massage
+    meaning: masaje
+    ipa: məˈsɑːʒ
+- id: sauna-steam-included
+  text: Does a spa treatment include access to the sauna and steam room?
+  translation: ¿Un tratamiento de spa incluye acceso al sauna y al baño de vapor?
+  visual_hint: 🧖‍♂️💨
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: treatment
+    meaning: tratamiento
+    ipa: ˈtriːtmənt
+  - word: steam room
+    meaning: baño de vapor
+    ipa: stiːm ruːm
+- id: charge-to-room
+  text: Can I charge the treatment directly to my hotel room?
+  translation: ¿Puedo cargar el tratamiento directamente a mi habitación del hotel?
+  visual_hint: 🏨💳
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: charge
+    meaning: cargar a la cuenta
+    ipa: tʃɑːrdʒ
+- id: idm-book-in-advance
+  text: Guests usually need to book in advance for weekend slots.
+  translation: Los huéspedes suelen tener que reservar con anticipación para los horarios
+    de fin de semana.
+  visual_hint: 📅✨
+  cloze:
+  - 4
+  - 6
+  glossary:
+  - word: book in advance
+    meaning: reservar con anticipación
+    ipa: bʊk ɪn ədˈvæns
+  kind: expression
+  apply_sentence: You should ____ if you want an evening massage.
+  apply_answer: book in advance
+  apply_translation: Deberías reservar con anticipación si quieres un masaje por la tarde.
+- id: idm-unwind-after-flight
+  text: I really need to unwind after a long overnight flight.
+  translation: Realmente necesito relajarme después de un largo vuelo nocturno.
+  visual_hint: 😌✈️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: unwind
+    meaning: relajarse / desconectar
+    ipa: ʌnˈwaɪnd
+  kind: expression
+  apply_sentence: A warm bath is the best way to ____ after traveling.
+  apply_answer: unwind
+  apply_translation: Un baño tibio es la mejor manera de relajarse después de viajar.
+roleplay:
+  ai_role: spa receptionist
+  user_role: hotel guest
+  setting: The tranquil reception desk of a boutique hotel spa.
+  turns:
+  - speaker: ai
+    text: Good afternoon, welcome to the Serenity Spa. How may I help you?
+  - speaker: user
+    goal: Di que necesitas relajarte tras un vuelo y pregunta si hay disponibilidad para un
+      masaje hoy.
+    suggested_lines:
+    - I really need to unwind after a long overnight flight.
+    - Do you have any availability for a sixty-minute massage this evening?
+  - speaker: ai
+    text: We have an opening at 6:30 PM! Would you like to reserve it?
+  - speaker: user
+    goal: Pregunta si incluye acceso al sauna y si puedes cargarlo a tu habitación.
+    suggested_lines:
+    - Does a spa treatment include access to the sauna and steam room?
+    - Can I charge the treatment directly to my hotel room?
+  - speaker: ai
+    text: Yes to both! Arrive fifteen minutes early to enjoy the sauna.

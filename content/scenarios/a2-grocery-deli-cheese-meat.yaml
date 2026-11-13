@@ -1,0 +1,90 @@
+id: a2-grocery-deli-cheese-meat
+title: Buying at the supermarket deli
+title_es: Comprar en la charcutería del súper
+cefr: A2
+topic: food-and-drink
+description: Pide queso y embutidos rebanados por peso y prueba una muestra en el supermercado.
+phrases:
+- id: thin-slices
+  text: Can I get two hundred grams of turkey, sliced thin?
+  translation: ¿Me da doscientos gramos de pavo, rebanado fino?
+  visual_hint: 🥩⚖️
+  cloze:
+  - 8
+  - 9
+  glossary:
+  - word: sliced
+    meaning: rebanado / cortado en lonchas
+    ipa: slaɪst
+- id: try-a-sample
+  text: Could I taste a small piece of that cheddar first?
+  translation: ¿Podría probar un trocito de ese queso cheddar primero?
+  visual_hint: 🧀😋
+  cloze:
+  - 2
+  glossary:
+  - word: taste
+    meaning: probar / degustar
+    ipa: teɪst
+- id: wrap-separately
+  text: Could you wrap the cheese and ham separately, please?
+  translation: ¿Podría envolver el queso y el jamón por separado, por favor?
+  visual_hint: 📦🧀
+  cloze:
+  - 2
+  - 7
+  glossary:
+  - word: wrap
+    meaning: envolver
+    ipa: ræp
+- id: run-out-of
+  text: We ran out of cheese at home, so I came early.
+  translation: 'Se nos acabó el queso en casa, así que vine temprano. (run out of: quedarse sin)'
+  visual_hint: 🧀❌🏠
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: run out of
+    meaning: 'run out of: quedarse sin / agotarse'
+    ipa: rʌn aʊt əv
+  kind: phrasal_verb
+  apply_sentence: We need to buy milk because we ____ it this morning.
+  apply_answer: ran out of
+  apply_translation: Necesitamos comprar leche porque se nos acabó esta mañana.
+- id: fresh-out
+  text: Sorry, we are fresh out of roast beef right now.
+  translation: 'Lo siento, se nos acaba de terminar el roast beef. (fresh out of: recién agotado)'
+  visual_hint: 🚫🥩
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: fresh out
+    meaning: 'fresh out: recién agotado'
+    ipa: freʃ aʊt
+  kind: idiom
+  apply_sentence: I wanted a croissant, but the bakery is ____ of them.
+  apply_answer: fresh out
+  apply_translation: Quería un croissant, pero en la panadería se acaban de agotar.
+roleplay:
+  ai_role: deli counter attendant
+  user_role: shopper
+  setting: The deli counter inside a busy grocery store.
+  turns:
+  - speaker: ai
+    text: Number forty-two! Who is next? What can I slice for you today?
+  - speaker: user
+    goal: Pide 200 gramos de pavo en rebanadas finas.
+    suggested_lines:
+    - Can I get two hundred grams of turkey, sliced thin?
+    - Two hundred grams of sliced turkey, thin please.
+  - speaker: ai
+    text: Sure thing. Anything else from the cheese case?
+  - speaker: user
+    goal: Pide probar un trozo pequeño de queso cheddar y pide que lo envuelvan por separado.
+    suggested_lines:
+    - Could I taste a small piece of that cheddar first? Please wrap them separately.
+    - Can I try the cheddar? If it is good, please wrap it separately.
+  - speaker: ai
+    text: Here is a sample for you. Let me know how much you would like!

@@ -1,0 +1,103 @@
+id: c1-electric-vehicle-roadtrip-charging
+title: Resolving EV charging network outages
+title_es: Resolver fallos en red de carga eléctrica
+cefr: C1
+topic: travel-and-transport
+description: Soluciona errores de autenticación roaming, baja potencia de carga y reinicios
+  remotos con soporte técnico en ruta.
+phrases:
+- id: roaming-charging-handshake
+  text: The fast charger is failing to authenticate our fleet roaming card during the handshake.
+  translation: El cargador rápido no logra autenticar nuestra tarjeta de roaming de flota durante el enlace inicial.
+  visual_hint: 🔌💳
+  cloze:
+  - 6
+  - 9
+  - 13
+  glossary:
+  - word: authenticate
+    meaning: autenticar / validar
+    ipa: ɔːˈθentɪkeɪt
+  - word: handshake
+    meaning: protocolo de enlace inicial
+    ipa: ˈhændʃeɪk
+- id: throttled-charging-curve
+  text: The station appears to be throttling output to thirty kilowatts despite our battery preconditioning.
+  translation: La estación parece estar limitando la salida a treinta kilovatios a pesar del preacondicionamiento de nuestra batería.
+  visual_hint: 🔋📉
+  cloze:
+  - 5
+  - 13
+  glossary:
+  - word: throttling
+    meaning: limitando / estrangulando la potencia
+    ipa: ˈθrɑːtlɪŋ
+  - word: preconditioning
+    meaning: preacondicionamiento térmico
+    ipa: ˌpriːkənˈdɪʃənɪŋ
+- id: remote-session-reset
+  text: Could you initiate a remote reboot on pedestal four so we can resume charging?
+  translation: ¿Podría iniciar un reinicio remoto en el pedestal cuatro para que podamos reanudar la carga?
+  visual_hint: 🔄⚡
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: initiate
+    meaning: iniciar / activar
+    ipa: ɪˈnɪʃieɪt
+  - word: reboot
+    meaning: reinicio
+    ipa: ˈriːbuːt
+- id: ev-back-on-track
+  text: Once the billing glitch is cleared, we will be back on track for tonight's ferry.
+  translation: Una vez resuelto el fallo de facturación, volveremos a estar encaminados para el ferry de esta noche. (back on track = de vuelta al plan)
+  visual_hint: ⛴️🛣️
+  cloze:
+  - 9
+  - 10
+  - 11
+  glossary:
+  - word: back on track
+    meaning: de vuelta en camino / según lo previsto
+    ipa: bæk ɑːn træk
+  kind: idiom
+  apply_sentence: Switching to the backup corridor put our delivery schedule ____.
+  apply_answer: back on track
+  apply_translation: Cambiar al corredor de respaldo puso nuestro calendario de entregas de vuelta según lo previsto.
+- id: ev-rule-out
+  text: We already swapped cables to rule out a hardware fault on our vehicle.
+  translation: Ya intercambiamos los cables para descartar un fallo de hardware en nuestro vehículo. (rule out = descartar)
+  visual_hint: 🔧🚗
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: rule out
+    meaning: descartar una posibilidad
+    ipa: ruːl aʊt
+  kind: phrasal_verb
+  apply_sentence: Technicians ran diagnostics to ____ a grid voltage drop.
+  apply_answer: rule out
+  apply_translation: Los técnicos ejecutaron diagnósticos para descartar una caída de voltaje en la red.
+roleplay:
+  ai_role: EV network support engineer
+  user_role: fleet driver
+  setting: A highway ultra-fast charging hub during an interstate road trip.
+  turns:
+  - speaker: ai
+    text: Network Operations, this is Maya. I see a stalled session at hub forty-two—what is happening on your end?
+  - speaker: user
+    goal: Explica que el cargador falla al autenticar la tarjeta roaming y que ya descartaste un fallo del vehículo.
+    suggested_lines:
+    - The fast charger is failing to authenticate our fleet roaming card during the handshake. We already swapped cables to rule out a hardware fault on our vehicle.
+    - Our fleet roaming card is failing the handshake, and we already ruled out a vehicle fault by swapping pedestals.
+  - speaker: ai
+    text: I see a stuck authorization token on pedestal four. Let me clear that from the backend.
+  - speaker: user
+    goal: Pide un reinicio remoto y advierte si la potencia seguirá limitada tras el preacondicionamiento.
+    suggested_lines:
+    - Could you initiate a remote reboot on pedestal four so we can resume charging? Earlier it was throttling output to thirty kilowatts despite our battery preconditioning.
+    - Please initiate a remote reboot on pedestal four, and check why it was throttling output despite preconditioning.
+  - speaker: ai
+    text: Reboot complete and full 250-kilowatt output is restored. Tap your card once more and you should be back on track.

@@ -1,0 +1,95 @@
+id: c2-tech-attention-economy-design
+title: Critiquing attention economy and dark patterns
+title_es: Crítica a la economía de la atención y patrones oscuros
+cefr: C2
+topic: daily-tech-and-media
+description: Analiza el diseño persuasivo, los refuerzos variables y los patrones oscuros en aplicaciones de consumo.
+phrases:
+- id: variable-reward-schedules
+  text: Infinite scroll exploits variable reward schedules akin to slot machines to prolong dwell time.
+  translation: El desplazamiento infinito explota programas de recompensa variable similares a los de las tragamonedas para prolongar el tiempo de permanencia.
+  visual_hint: 🎰📲
+  cloze:
+  - 3
+  - 11
+  glossary:
+  - word: dwell time
+    meaning: tiempo de permanencia
+    ipa: dwel taɪm
+- id: asymmetric-cancellation-friction
+  text: Dark patterns weaponize asymmetric friction, making sign-ups effortless while burying cancellation behind labyrinthine menus.
+  translation: Los patrones oscuros utilizan la fricción asimétrica como arma, haciendo el registro inmediato mientras ocultan la cancelación tras menús laberínticos.
+  visual_hint: 🕸️🚫
+  cloze:
+  - 3
+  - 10
+  glossary:
+  - word: labyrinthine
+    meaning: laberíntico / enrevesado
+    ipa: ˌlæbəˈrɪnθɪn
+- id: informed-user-agency
+  text: Humane interface design restores user agency through deliberate friction and transparent default settings.
+  translation: El diseño de interfaces ético devuelve la autonomía al usuario mediante fricción deliberada y ajustes predeterminados transparentes.
+  visual_hint: 🧭✨
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: agency
+    meaning: autonomía / capacidad de decisión
+    ipa: ˈeɪdʒənsi
+- id: idm-prey-on
+  text: Confirm-shaming pop-ups prey on cognitive fatigue when users skim past fine print late at night.
+  translation: 'Las ventanas emergentes de culpa manipulada se aprovechan de la fatiga cognitiva cuando los usuarios leen por encima la letra pequeña de noche. (prey on: aprovecharse de)'
+  visual_hint: 🧠⚠️
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: prey on
+    meaning: aprovecharse de / explotar (una debilidad)
+    ipa: preɪ ɑːn
+  kind: phrasal_verb
+  apply_sentence: Predatory ad networks ____ impulsive late-night browsing habits.
+  apply_answer: prey on
+  apply_translation: Las redes publicitarias predatorias se aprovechan de los hábitos impulsivos de navegación nocturna.
+- id: idm-boil-down-to
+  text: Much of the engagement debate boils down to whether revenue incentives align with user well-being.
+  translation: 'Gran parte del debate sobre la interacción se reduce a si los incentivos de ingresos se alinean con el bienestar del usuario. (boil down to: reducirse a / resumirse en)'
+  visual_hint: ⚖️💡
+  cloze:
+  - 5
+  - 7
+  glossary:
+  - word: boil down to
+    meaning: reducirse a / resumirse en lo esencial
+    ipa: bɔɪl daʊn tuː
+  kind: phrasal_verb
+  apply_sentence: Ethical product choices ultimately ____ valuing long-term trust over short-term clicks.
+  apply_answer: boil down to
+  apply_translation: Las decisiones éticas de producto en última instancia se reducen a valorar la confianza a largo plazo por encima de los clics inmediatos.
+roleplay:
+  ai_role: growth product manager
+  user_role: UX ethics researcher
+  setting: Product review seminar debating engagement metrics vs. humane design.
+  turns:
+  - speaker: ai
+    text: Our retention jumped eighteen percent after adding autoplay and streak reminders. Isn't that proof users love it?
+  - speaker: user
+    goal: Explica cómo el desplazamiento infinito explota recompensas variables y que las ventanas de culpa se aprovechan de la fatiga cognitiva.
+    suggested_lines:
+    - Infinite scroll exploits variable reward schedules akin to slot machines to prolong dwell time.
+    - Confirm-shaming pop-ups prey on cognitive fatigue when users skim past fine print late at night.
+  - speaker: ai
+    text: Still, every competitor uses nudges, and we also need low-friction onboarding.
+  - speaker: user
+    goal: Señala la fricción asimétrica de los patrones oscuros y cómo el diseño ético devuelve autonomía al usuario.
+    suggested_lines:
+    - Dark patterns weaponize asymmetric friction, making sign-ups effortless while burying cancellation behind labyrinthine menus.
+    - Humane interface design restores user agency through deliberate friction and transparent default settings.
+  - speaker: ai
+    text: So where do we draw the line between helpful reminders and manipulation?
+  - speaker: user
+    goal: Resume que el debate se reduce a alinear los incentivos de ingresos con el bienestar del usuario.
+    suggested_lines:
+    - Much of the engagement debate boils down to whether revenue incentives align with user well-being.

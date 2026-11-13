@@ -1,0 +1,92 @@
+id: b1-takeout-missing-item
+title: Fixing a missing takeout item
+title_es: Reclamar un artículo faltante para llevar
+cefr: B1
+topic: food-and-drink
+description: Llama al restaurante cuando falta un plato en tu pedido para llevar y acuerda una solución.
+phrases:
+- id: missing-from-bag
+  text: I just picked up my takeout order, and one item is missing.
+  translation: Acabo de recoger mi pedido para llevar y falta un artículo.
+  visual_hint: 🛍️❓
+  cloze:
+  - 5
+  - 11
+  glossary:
+  - word: takeout
+    meaning: comida para llevar
+    ipa: ˈteɪkaʊt
+  - word: missing
+    meaning: faltante / que falta
+    ipa: ˈmɪsɪŋ
+- id: order-number
+  text: My order number is four-eight-two under the name Rivera.
+  translation: Mi número de pedido es cuatro-ocho-dos a nombre de Rivera.
+  visual_hint: 🧾🔢
+  cloze:
+  - 2
+  glossary:
+  - word: order number
+    meaning: número de pedido
+    ipa: ˈɔːrdər ˈnʌmbər
+- id: refund-or-credit
+  text: Could you either send a driver or issue a refund for the salad?
+  translation: ¿Podrían enviar un repartidor o hacer un reembolso por la ensalada?
+  visual_hint: 🥗💳
+  cloze:
+  - 7
+  - 9
+  glossary:
+  - word: refund
+    meaning: reembolso / devolución
+    ipa: ˈriːfʌnd
+- id: mix-up
+  text: It looks like there was a mix-up at the packing counter.
+  translation: 'Parece que hubo una confusión en el mostrador de empaque. (mix-up: confusión / error)'
+  visual_hint: 📦🔄
+  cloze:
+  - 6
+  glossary:
+  - word: mix-up
+    meaning: 'mix-up: confusión / enredo'
+    ipa: ˈmɪks ʌp
+  kind: expression
+  apply_sentence: Sorry about the ____; I accidentally gave you the wrong bag.
+  apply_answer: mix-up
+  apply_translation: Perdón por la confusión; sin querer te di la bolsa equivocada.
+- id: make-up-for
+  text: We will include a free dessert to make up for the mistake.
+  translation: 'Incluiremos un postre gratis para compensar el error. (make up for: compensar)'
+  visual_hint: 🍰🙏
+  cloze:
+  - 7
+  - 8
+  glossary:
+  - word: make up for
+    meaning: 'make up for: compensar / enmendar'
+    ipa: meɪk ʌp fɔːr
+  kind: phrasal_verb
+  apply_sentence: He arrived late, so he bought coffee to ____ it.
+  apply_answer: make up for
+  apply_translation: Llegó tarde, así que compró café para compensarlo.
+roleplay:
+  ai_role: restaurant shift manager
+  user_role: takeout customer
+  setting: A phone call to a restaurant after picking up a takeout bag.
+  turns:
+  - speaker: ai
+    text: Good evening, Green Bowl Kitchen. How can I help you?
+  - speaker: user
+    goal: Explica que falta un artículo en tu pedido para llevar y da tu número de orden.
+    suggested_lines:
+    - I just picked up my takeout order, and one item is missing. My order number is 482.
+    - Hi, there was a mix-up with my takeout order 482; the salad is missing.
+  - speaker: ai
+    text: I am so sorry about that mix-up! Would you like us to refund the salad or send one over?
+  - speaker: user
+    goal: Pide un reembolso por la ensalada si es más rápido.
+    suggested_lines:
+    - Could you please issue a refund for the salad?
+    - A refund for the salad would be great, thank you.
+  - speaker: ai
+    text: Done! I also added a store credit to make up for the inconvenience.

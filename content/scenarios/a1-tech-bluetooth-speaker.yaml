@@ -1,0 +1,95 @@
+id: a1-tech-bluetooth-speaker
+title: Connecting a Bluetooth speaker
+title_es: Conectar una bocina Bluetooth
+cefr: A1
+topic: daily-tech-and-media
+description: Empareja tu teléfono con una bocina Bluetooth y ajusta el volumen de la música.
+phrases:
+- id: turn-on-bluetooth
+  text: First, turn on Bluetooth on your phone.
+  translation: Primero, enciende el Bluetooth en tu teléfono.
+  visual_hint: 📶📱
+  cloze:
+  - 1
+  - 3
+  glossary:
+  - word: Bluetooth
+    meaning: tecnología inalámbrica Bluetooth
+    ipa: ˈbluːtuːθ
+- id: select-speaker-name
+  text: Select the speaker name from the list.
+  translation: Selecciona el nombre de la bocina de la lista.
+  visual_hint: 🔊📋
+  cloze:
+  - 0
+  - 2
+  glossary:
+  - word: speaker
+    meaning: bocina / altavoz
+    ipa: ˈspiːkər
+- id: music-is-playing
+  text: Now the music is playing clearly.
+  translation: Ahora la música se escucha con claridad.
+  visual_hint: 🎵✨
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: clearly
+    meaning: con claridad
+    ipa: ˈklɪrli
+- id: idm-turn-up
+  text: Can you turn up the volume a bit?
+  translation: '¿Puedes subir un poco el volumen? (turn up: subir el volumen)'
+  visual_hint: 🔊⬆️
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: turn up
+    meaning: subir (el volumen o la intensidad)
+    ipa: tɜːrn ʌp
+  kind: phrasal_verb
+  apply_sentence: Please ____ the radio so we can hear the news.
+  apply_answer: turn up
+  apply_translation: Por favor sube la radio para que podamos escuchar las noticias.
+- id: idm-right-away
+  text: The phone connects to the speaker right away.
+  translation: 'El teléfono se conecta a la bocina de inmediato. (right away: de inmediato)'
+  visual_hint: ⚡🔗
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: right away
+    meaning: de inmediato / enseguida
+    ipa: raɪt əˈweɪ
+  kind: expression
+  apply_sentence: When I press play, the song starts ____.
+  apply_answer: right away
+  apply_translation: Cuando presiono reproducir, la canción empieza de inmediato.
+roleplay:
+  ai_role: roommate
+  user_role: friend
+  setting: Living room while unpacking a new portable speaker.
+  turns:
+  - speaker: ai
+    text: I bought this small Bluetooth speaker, but my phone is not connected yet.
+  - speaker: user
+    goal: Explica que primero debe encender el Bluetooth y elegir el nombre de la bocina.
+    suggested_lines:
+    - First, turn on Bluetooth on your phone.
+    - Select the speaker name from the list.
+  - speaker: ai
+    text: Oh, I see it! Look, it paired!
+  - speaker: user
+    goal: Di que se conecta de inmediato y que la música suena con claridad.
+    suggested_lines:
+    - The phone connects to the speaker right away.
+    - Now the music is playing clearly.
+  - speaker: ai
+    text: Awesome! Is the volume okay for you?
+  - speaker: user
+    goal: Pide subir un poco el volumen.
+    suggested_lines:
+    - Can you turn up the volume a bit?

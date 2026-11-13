@@ -1,0 +1,103 @@
+id: a2-complimenting-outfit-style
+title: Giving and receiving friendly compliments
+title_es: Hacer y recibir cumplidos con naturalidad
+cefr: A2
+topic: social-and-smalltalk
+description: Haz un cumplido sincero sobre la ropa o el estilo de alguien y responde con amabilidad cuando te elogien.
+phrases:
+- id: love-your-jacket
+  text: I really love your jacket; that color looks great on you.
+  translation: Me encanta tu chaqueta; ese color te queda muy bien.
+  visual_hint: 🧥✨
+  cloze:
+  - 2
+  - 4
+  - 8
+  glossary:
+  - word: jacket
+    meaning: chaqueta
+    ipa: ˈdʒækɪt
+  - word: look great on
+    meaning: quedar muy bien a alguien
+    ipa: lʊk ɡreɪt ɒn
+- id: bought-on-sale
+  text: Thanks! I actually found it on sale last week.
+  translation: ¡Gracias! De hecho la encontré en oferta la semana pasada.
+  visual_hint: 🏷️😊
+  cloze:
+  - 2
+  - 6
+  - 8
+  glossary:
+  - word: actually
+    meaning: de hecho
+    ipa: ˈæktʃuəli
+  - word: on sale
+    meaning: en oferta / rebajada
+    ipa: ɒn seɪl
+- id: suits-your-style
+  text: Those sneakers really match your casual style.
+  translation: Esas zapatillas combinan muy bien con tu estilo casual.
+  visual_hint: 👟👌
+  cloze:
+  - 1
+  - 3
+  - 6
+  glossary:
+  - word: sneakers
+    meaning: zapatillas deportivas
+    ipa: ˈsniːkərz
+  - word: match
+    meaning: combinar con
+    ipa: mætʃ
+- id: idm-a2co-pick-up
+  text: Where did you pick up that cool vintage bag?
+  translation: ¿Dónde conseguiste ese bolso vintage tan genial? (comprar o encontrar algo por casualidad).
+  visual_hint: 👜🛍️
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: pick up
+    meaning: conseguir / comprar
+    ipa: pɪk ʌp
+  kind: phrasal_verb
+  apply_sentence: I need to ____ some fresh flowers before dinner.
+  apply_answer: pick up
+  apply_translation: Necesito comprar flores frescas antes de la cena.
+- id: idm-a2co-made-my-day
+  text: Thank you so much, you just made my day!
+  translation: ¡Muchas gracias, me acabas de alegrar el día! (hacer muy feliz a alguien).
+  visual_hint: 🌟😄
+  cloze:
+  - 6
+  - 8
+  glossary:
+  - word: make someone's day
+    meaning: alegrarle el día a alguien
+    ipa: meɪk maɪ deɪ
+  kind: idiom
+  apply_sentence: Hearing that good news really ____.
+  apply_answer: made my day
+  apply_translation: Escuchar esa buena noticia realmente me alegró el día.
+roleplay:
+  ai_role: friend (Sofia)
+  user_role: friend
+  setting: Meeting outside a cafe before lunch.
+  turns:
+  - speaker: ai
+    text: Hey! You look awesome today. That sweater really suits you!
+  - speaker: user
+    goal: Agradece el cumplido y dile que lo encontraste en oferta la semana pasada.
+    suggested_lines:
+    - Thanks! I actually found it on sale last week.
+    - Thank you so much, you just made my day!
+  - speaker: ai
+    text: What a great find! Do you like my new denim jacket?
+  - speaker: user
+    goal: Dile que te encanta su chaqueta y pregúntale dónde la consiguió.
+    suggested_lines:
+    - I really love your jacket; that color looks great on you.
+    - Where did you pick up that cool jacket?
+  - speaker: ai
+    text: I got it at the weekend market downtown. We should go there together next time!

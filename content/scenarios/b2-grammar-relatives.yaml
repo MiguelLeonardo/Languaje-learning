@@ -1,0 +1,95 @@
+id: b2-grammar-relatives
+title: Non-defining and prepositional relative clauses
+title_es: Relativas explicativas y con preposición
+cefr: B2
+topic: grammar-and-connectors
+description: Añade información extra entre comas y usa estructuras formales con preposición
+  ('in which', 'by whom', 'which').
+phrases:
+- id: proposal-which-took
+  text: The proposal, which took months to draft, passed unanimously.
+  translation: La propuesta, que tomó meses redactar, se aprobó por unanimidad.
+  visual_hint: 📑✅
+  cloze:
+  - 2
+  glossary:
+  - word: ', which'
+    meaning: lo cual / la cual (explicativa entre comas)
+    ipa: wɪtʃ
+  kind: expression
+  apply_sentence: The keynote speaker, ____ arrived late, still gave a brilliant talk.
+  apply_answer: who
+  apply_translation: El orador principal, que llegó tarde, aun así dio una charla
+    brillante.
+- id: way-in-which
+  text: The manner in which she handled the crisis impressed everyone.
+  translation: La manera en que ella manejó la crisis impresionó a todos.
+  visual_hint: 🧭👏
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: in which
+    meaning: en el/la cual (registro formal)
+    ipa: ɪn wɪtʃ
+  kind: expression
+  apply_sentence: That was the exact moment ____ everything changed.
+  apply_answer: at which
+  apply_translation: Ese fue el momento exacto en el que todo cambió.
+- id: which-meant-we-had
+  text: The server crashed, which meant we had to reschedule.
+  translation: El servidor falló, lo cual significó que tuvimos que reprogramar.
+  visual_hint: 🖥️⚠️
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: ', which meant'
+    meaning: lo cual significó (refiriéndose a toda la oración)
+    ipa: wɪtʃ mɛnt
+- id: clients-for-whom
+  text: The clients for whom we built the platform renewed early.
+  translation: Los clientes para quienes construimos la plataforma renovaron antes.
+  visual_hint: 🤝💼
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: for whom
+    meaning: para quienes (formal con preposición)
+    ipa: fɔːr huːm
+- id: several-of-whom
+  text: We interviewed ten candidates, several of whom spoke three languages.
+  translation: Entrevistamos a diez candidatos, varios de los cuales hablaban tres
+    idiomas.
+  visual_hint: 🗣️🌍
+  cloze:
+  - 4
+  - 5
+  - 6
+  glossary:
+  - word: several of whom
+    meaning: varios de los cuales
+    ipa: ˈsɛvrəl ʌv huːm
+roleplay:
+  ai_role: board member
+  user_role: project director
+  setting: Briefing a board member on a complex product launch.
+  turns:
+  - speaker: ai
+    text: How did the pilot launch go in the European market?
+  - speaker: user
+    goal: Resume el resultado añadiendo un comentario con ', which'.
+    suggested_lines:
+    - We hit our target early, which meant we could expand the trial.
+    - The pilot, which lasted six weeks, exceeded our retention goals.
+  - speaker: ai
+    text: Impressive. What stood out about the local partners?
+  - speaker: user
+    goal: Usa una relativa con preposición o cuantificador ('in which', 'for whom',
+      'most of whom').
+    suggested_lines:
+    - We worked with five distributors, most of whom were ready on day one.
+    - The speed with which they adapted was remarkable.
+  - speaker: ai
+    text: That gives us a lot of confidence for Q4.

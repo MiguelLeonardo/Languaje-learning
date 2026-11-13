@@ -1,0 +1,108 @@
+id: a1-office-coffee-break
+title: Coffee break with coworkers
+title_es: Pausa para el café con compañeros
+cefr: A1
+topic: work-and-career
+description: Conversa brevemente en la cocina de la oficina, ofrece café o té y pregunta
+  cómo va la mañana.
+phrases:
+- id: want-some-coffee
+  text: Would you like a cup of coffee or tea?
+  translation: ¿Quieres una taza de café o té?
+  visual_hint: ☕🍵
+  cloze:
+  - 0
+  - 4
+  - 6
+  glossary:
+  - word: cup
+    meaning: taza
+    ipa: kʌp
+  - word: coffee
+    meaning: café
+    ipa: ˈkɔːfi
+- id: busy-morning
+  text: My morning is very busy, thank you for asking.
+  translation: Mi mañana está muy ocupada, gracias por preguntar.
+  visual_hint: ⏰📋
+  cloze:
+  - 1
+  - 4
+  - 6
+  glossary:
+  - word: morning
+    meaning: mañana
+    ipa: ˈmɔːrnɪŋ
+  - word: busy
+    meaning: ocupado / ocupada
+    ipa: ˈbɪzi
+- id: milk-and-sugar
+  text: I take my coffee with milk and one sugar.
+  translation: Tomo mi café con leche y un poco de azúcar.
+  visual_hint: 🥛🍬
+  cloze:
+  - 1
+  - 5
+  - 8
+  glossary:
+  - word: milk
+    meaning: leche
+    ipa: mɪlk
+  - word: sugar
+    meaning: azúcar
+    ipa: ˈʃʊɡər
+- id: idm-take-a-break
+  text: Let's take a break for ten minutes now.
+  translation: 'Tomemos un descanso de diez minutos ahora. (take a break: hacer una
+    pausa)'
+  visual_hint: ⏸️☕
+  cloze:
+  - 1
+  - 3
+  - 5
+  glossary:
+  - word: take a break
+    meaning: tomar un descanso
+    ipa: teɪk ə breɪk
+  kind: expression
+  apply_sentence: You look tired, please ____ from your computer.
+  apply_answer: take a break
+  apply_translation: Te ves cansado, por favor tómate un descanso de la computadora.
+- id: idm-catch-up
+  text: Let's catch up over coffee after lunch today.
+  translation: 'Pongámonos al día tomando un café hoy después de almorzar. (catch up:
+    ponerse al día)'
+  visual_hint: 💬☕
+  cloze:
+  - 1
+  - 2
+  - 4
+  glossary:
+  - word: catch up
+    meaning: ponerse al día
+    ipa: kætʃ ʌp
+  kind: phrasal_verb
+  apply_sentence: I want to ____ with you about the weekend.
+  apply_answer: catch up
+  apply_translation: Quiero ponerme al día contigo sobre el fin de semana.
+roleplay:
+  ai_role: friendly coworker
+  user_role: office colleague
+  setting: Office kitchen during a short morning break.
+  turns:
+  - speaker: ai
+    text: Hi there! How is your morning going so far?
+  - speaker: user
+    goal: Di que tu mañana está muy ocupada y ofrece una taza de café o té.
+    suggested_lines:
+    - My morning is very busy, thank you for asking. Would you like a cup of coffee or tea?
+    - Busy morning! Would you like a cup of coffee or tea?
+  - speaker: ai
+    text: Yes, please! Coffee sounds great right now.
+  - speaker: user
+    goal: Pregunta si toma el café con leche o azúcar y menciona cómo lo tomas tú.
+    suggested_lines:
+    - Do you take milk or sugar? I take my coffee with milk and one sugar.
+    - Milk or sugar? I take my coffee with milk and one sugar.
+  - speaker: ai
+    text: Just black for me, thanks. Let's take a break for ten minutes and chat!

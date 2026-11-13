@@ -1,0 +1,92 @@
+id: b2-grammar-reported
+title: Reporting verbs and nuanced indirect speech
+title_es: Verbos de reporte y estilo indirecto con matices
+cefr: B2
+topic: grammar-and-connectors
+description: Evita repetir 'said' usando verbos precisos como 'insist on', 'deny',
+  'advise' y 'warn against'.
+phrases:
+- id: denied-leaking-data
+  text: The vendor denied leaking any customer data.
+  translation: El proveedor negó haber filtrado datos de clientes.
+  visual_hint: 🚫🔒
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: deny + -ing
+    meaning: negar haber hecho algo
+    ipa: dɪˈnaɪ
+  kind: expression
+  apply_sentence: He ____ having seen the confidential memo.
+  apply_answer: denied
+  apply_translation: Él negó haber visto el memorando confidencial.
+- id: insisted-on-reviewing
+  text: She insisted on reviewing the contract before signing.
+  translation: Ella insistió en revisar el contrato antes de firmar.
+  visual_hint: 🔍📄
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: insist on + -ing
+    meaning: insistir en hacer algo
+    ipa: ɪnˈsɪst ɑːn
+  kind: expression
+  apply_sentence: The auditor ____ checking every single receipt.
+  apply_answer: insisted on
+  apply_translation: El auditor insistió en revisar cada recibo.
+- id: warned-against-rushing
+  text: Our advisor warned us against rushing the merger.
+  translation: Nuestro asesor nos advirtió en contra de apresurar la fusión.
+  visual_hint: ⚠️🛑
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: warn against + -ing
+    meaning: advertir contra / desaconsejar
+    ipa: wɔːrn əˈɡɛnst
+- id: apologized-for-missing
+  text: He apologized for missing the morning briefing.
+  translation: Él se disculpó por haberse perdido la reunión matutina.
+  visual_hint: 🙇‍♂️🕘
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: apologize for + -ing
+    meaning: disculparse por
+    ipa: əˈpɑːlədʒaɪz fɔːr
+- id: urged-team-to-verify
+  text: The lead urged the team to verify every source.
+  translation: La líder instó al equipo a verificar cada fuente.
+  visual_hint: 📢✔️
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: urge someone to
+    meaning: instar / exhortar a alguien a
+    ipa: ɜːrdʒ
+roleplay:
+  ai_role: compliance officer
+  user_role: department head
+  setting: Debriefing after a tense vendor negotiation.
+  turns:
+  - speaker: ai
+    text: How did the vendor respond when you raised the delay?
+  - speaker: user
+    goal: Usa un verbo de reporte como 'denied', 'apologized for' o 'claimed'.
+    suggested_lines:
+    - They apologized for missing the deadline, though they denied causing the bottleneck.
+    - They insisted on blaming customs, but eventually apologized for the delay.
+  - speaker: ai
+    text: And what did legal recommend we do next?
+  - speaker: user
+    goal: Usa 'warned us against' o 'urged us to'.
+    suggested_lines:
+    - Legal warned us against signing a new extension without penalties.
+    - They urged us to document every delivery milestone.
+  - speaker: ai
+    text: Wise advice. Let's put that in writing today.

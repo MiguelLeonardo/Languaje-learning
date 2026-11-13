@@ -1,0 +1,96 @@
+id: c1-sleep-study-consultation
+title: Discussing sleep apnea diagnostic results
+title_es: Analizar resultados de estudio del sueño con especialista
+cefr: C1
+topic: health-and-emergencies
+description: Revisa con el neumólogo los índices de tu polisomnografía, la saturación
+  nocturna de oxígeno y las opciones de terapia CPAP.
+phrases:
+- id: apnea-hypopnea-index
+  text: Does my apnea-hypopnea index classify as moderate or severe obstructive sleep apnea?
+  translation: ¿Mi índice de apnea-hipopnea se clasifica como apnea obstructiva del sueño moderada o grave?
+  visual_hint: 😴📊
+  cloze:
+  - 2
+  - 3
+  - 9
+  glossary:
+  - word: obstructive sleep apnea
+    meaning: apnea obstructiva del sueño
+    ipa: əbˈstrʌktɪv sliːp ˈæpniə
+- id: oxygen-desaturation-nadir
+  text: What was my lowest nocturnal oxygen desaturation nadir during REM sleep?
+  translation: ¿Cuál fue mi punto más bajo de desaturación nocturna de oxígeno durante el sueño REM?
+  visual_hint: 🫁📉
+  cloze:
+  - 4
+  - 5
+  - 7
+  glossary:
+  - word: nadir
+    meaning: punto mínimo o más bajo
+    ipa: ˈneɪdɪr
+- id: cpap-titration-pressure
+  text: Would an auto-titrating CPAP mask accommodate positional fluctuations better than fixed pressure?
+  translation: ¿Una mascarilla CPAP autoajustable se adaptaría mejor a las fluctuaciones posicionales que una presión fija?
+  visual_hint: 😷💨
+  cloze:
+  - 2
+  - 5
+  - 6
+  glossary:
+  - word: fluctuations
+    meaning: fluctuaciones / variaciones
+    ipa: ˌflʌktʃuˈeɪʃənz
+- id: idm-wear-down-c1
+  text: Fragmented sleep has started to wear down my daytime cognitive focus.
+  translation: El sueño fragmentado ha empezado a desgastar mi concentración cognitiva diurna. (wear down = desgastar)
+  visual_hint: 🧠🔋
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: wear down
+    meaning: desgastar / agotar poco a poco
+    ipa: wer daʊn
+  kind: phrasal_verb
+  apply_sentence: Chronic shift work can ____ the body's circadian rhythm.
+  apply_answer: wear down
+  apply_translation: El trabajo por turnos crónico puede desgastar el ritmo circadiano del cuerpo.
+- id: idm-get-to-the-bottom-of-c1
+  text: This polysomnography finally helped us get to the bottom of my fatigue.
+  translation: Esta polisomnografía finalmente nos ayudó a llegar al fondo de mi fatiga. (get to the bottom of)
+  visual_hint: 🔍🩺
+  cloze:
+  - 5
+  - 8
+  - 9
+  glossary:
+  - word: get to the bottom of
+    meaning: llegar al fondo de / esclarecer la causa
+    ipa: ɡet tuː ðə ˈbɑːtəm əv
+  kind: idiom
+  apply_sentence: We need additional imaging to ____ this persistent inflammation.
+  apply_answer: get to the bottom of
+  apply_translation: Necesitamos estudios de imagen adicionales para llegar al fondo de esta inflamación persistente.
+roleplay:
+  ai_role: sleep medicine specialist
+  user_role: patient
+  setting: Pulmonary and sleep disorders clinic consultation.
+  turns:
+  - speaker: ai
+    text: Good morning. I've reviewed your overnight polysomnography report—let's walk through the metrics together.
+  - speaker: user
+    goal: Pregunta cómo se clasifica tu índice de apnea-hipopnea y cuál fue tu desaturación mínima en fase REM.
+    suggested_lines:
+    - Does my apnea-hypopnea index classify as moderate or severe obstructive sleep apnea?
+    - What was my lowest nocturnal oxygen desaturation nadir during REM sleep?
+  - speaker: ai
+    text: Your AHI is 24 events per hour, which places you in the moderate range, with an oxygen nadir of 85 percent during REM.
+  - speaker: user
+    goal: Comenta el desgaste cognitivo diurno y pregunta si conviene un equipo CPAP autoajustable.
+    suggested_lines:
+    - Fragmented sleep has started to wear down my daytime cognitive focus.
+    - Would an auto-titrating CPAP mask accommodate positional fluctuations better than fixed pressure?
+  - speaker: ai
+    text: An auto-titrating unit is ideal for positional shifts and should restore your daytime alertness within two weeks.

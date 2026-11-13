@@ -1,0 +1,108 @@
+id: c1-welcoming-expat-circle
+title: Integrating into an expat social circle
+title_es: Integrarse en un círculo social de expatriados
+cefr: C1
+topic: social-and-smalltalk
+description: Participa en una reunión de recién llegados en el extranjero, comparte el choque cultural y construye redes de apoyo.
+phrases:
+- id: finding-my-footing
+  text: The first few months abroad are always about finding your footing in a new routine.
+  translation: Los primeros meses en el extranjero siempre consisten en encontrar tu equilibrio en una nueva rutina.
+  visual_hint: 🧭🌍
+  cloze:
+  - 7
+  - 9
+  - 14
+  glossary:
+  - word: finding your footing
+    meaning: encontrar tu equilibrio / adaptarte
+    ipa: ˈfaɪndɪŋ jʊr ˈfʊtɪŋ
+  - word: routine
+    meaning: rutina
+    ipa: ruːˈtiːn
+- id: culture-shock-waves
+  text: Culture shock tends to hit in waves rather than all at once.
+  translation: El choque cultural suele llegar por oleadas más que todo de golpe.
+  visual_hint: 🌊🧠
+  cloze:
+  - 0
+  - 5
+  - 10
+  glossary:
+  - word: culture shock
+    meaning: choque cultural
+    ipa: ˈkʌltʃər ʃɑːk
+  - word: in waves
+    meaning: por oleadas / de forma intermitente
+    ipa: ɪn weɪvz
+- id: shared-expat-bonds
+  text: Connecting with people who've navigated the same bureaucracy is hugely reassuring.
+  translation: Conectar con personas que han lidiado con la misma burocracia resulta enormemente reconfortante.
+  visual_hint: 📄🤝
+  cloze:
+  - 4
+  - 7
+  - 10
+  glossary:
+  - word: bureaucracy
+    meaning: burocracia
+    ipa: bjʊˈrɑːkrəsi
+  - word: reassuring
+    meaning: reconfortante / tranquilizador
+    ipa: ˌriːəˈʃʊrɪŋ
+- id: idm-c1we-feel-out-of-place
+  text: It's completely normal to feel out of place until you build a local circle.
+  translation: Es totalmente normal sentirse fuera de lugar hasta que construyes un círculo local (no encajar aún).
+  visual_hint: 🧩🏠
+  cloze:
+  - 5
+  - 7
+  glossary:
+  - word: out of place
+    meaning: fuera de lugar
+    ipa: aʊt əv pleɪs
+  kind: idiom
+  apply_sentence: At first, I felt ____ at the formal gala, but everyone was kind.
+  apply_answer: out of place
+  apply_translation: Al principio me sentí fuera de lugar en la gala formal, pero todos fueron amables.
+- id: idm-c1we-settle-in
+  text: Once you settle in and learn the neighborhood rhythms, the city starts feeling like home.
+  translation: Una vez que te instalas y aprendes el ritmo del barrio, la ciudad empieza a sentirse como hogar (adaptarse a un nuevo sitio).
+  visual_hint: 🏙️🔑
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: settle in
+    meaning: instalarse / adaptarse
+    ipa: ˈsetl ɪn
+  kind: phrasal_verb
+  apply_sentence: Give yourself a few weeks to ____ before making big plans.
+  apply_answer: settle in
+  apply_translation: Date unas semanas para instalarte antes de hacer grandes planes.
+roleplay:
+  ai_role: fellow expat (Nadia)
+  user_role: newcomer
+  setting: Casual Friday evening meetup for newcomers in Amsterdam.
+  turns:
+  - speaker: ai
+    text: Welcome! How long have you been in the city so far? Everything still feels overwhelming at week three!
+  - speaker: user
+    goal: Valida su sensación explicando que los primeros meses sirven para adaptarse y que el choque cultural llega por oleadas.
+    suggested_lines:
+    - The first few months abroad are always about finding your footing in a new routine.
+    - Culture shock tends to hit in waves rather than all at once.
+  - speaker: ai
+    text: That's so comforting to hear. Sometimes I feel totally lost just trying to sort out my transit card!
+  - speaker: user
+    goal: Dile que es normal sentirse fuera de lugar al principio y que hablar con quienes pasaron por lo mismo reconforta.
+    suggested_lines:
+    - It's completely normal to feel out of place until you build a local circle.
+    - Connecting with people who've navigated the same bureaucracy is hugely reassuring.
+  - speaker: ai
+    text: Definitely! How long did it take before you started feeling comfortable here?
+  - speaker: user
+    goal: Comenta que en cuanto te instalas y conoces el ritmo del barrio, la ciudad se siente como casa.
+    suggested_lines:
+    - Once you settle in and learn the neighborhood rhythms, the city starts feeling like home.
+    - Once you settle in, it gets much easier—happy to share my favorite local spots!

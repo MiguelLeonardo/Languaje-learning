@@ -1,0 +1,106 @@
+id: a1-booking-meeting-room
+title: Booking a meeting room
+title_es: Reservar una sala de reuniones
+cefr: A1
+topic: work-and-career
+description: Pregunta en recepción si una sala está libre, indica la hora y el número
+  de personas y pide un proyector.
+phrases:
+- id: room-available
+  text: Is the small meeting room free at two o'clock?
+  translation: ¿Está libre la sala de reuniones pequeña a las dos?
+  visual_hint: 🚪🕑
+  cloze:
+  - 2
+  - 5
+  - 7
+  glossary:
+  - word: meeting room
+    meaning: sala de reuniones
+    ipa: ˈmiːtɪŋ ruːm
+  - word: free
+    meaning: libre / disponible
+    ipa: friː
+- id: how-many-people
+  text: We need a room for six people today.
+  translation: Necesitamos una sala para seis personas hoy.
+  visual_hint: 👥🪑
+  cloze:
+  - 1
+  - 3
+  - 5
+  glossary:
+  - word: need
+    meaning: necesitar
+    ipa: niːd
+  - word: people
+    meaning: personas
+    ipa: ˈpiːpəl
+- id: need-projector
+  text: Does the room have a big screen or projector?
+  translation: ¿La sala tiene una pantalla grande o proyector?
+  visual_hint: 📽️🖥️
+  cloze:
+  - 3
+  - 5
+  - 8
+  glossary:
+  - word: screen
+    meaning: pantalla
+    ipa: skriːn
+  - word: projector
+    meaning: proyector
+    ipa: prəˈdʒektər
+- id: idm-write-down
+  text: Please write down my name on the room list.
+  translation: 'Por favor, anota mi nombre en la lista de la sala. (write down: anotar)'
+  visual_hint: ✍️📋
+  cloze:
+  - 1
+  - 2
+  - 4
+  glossary:
+  - word: write down
+    meaning: anotar / escribir
+    ipa: raɪt daʊn
+  kind: phrasal_verb
+  apply_sentence: Can you ____ the time of the meeting?
+  apply_answer: write down
+  apply_translation: ¿Puedes anotar la hora de la reunión?
+- id: idm-on-time
+  text: Our team always starts the meeting on time.
+  translation: 'Nuestro equipo siempre empieza la reunión a tiempo. (on time: puntual)'
+  visual_hint: ⏱️✅
+  cloze:
+  - 2
+  - 3
+  - 7
+  glossary:
+  - word: on time
+    meaning: a tiempo / puntual
+    ipa: ɑːn taɪm
+  kind: expression
+  apply_sentence: Please arrive ____ for the client call at ten.
+  apply_answer: on time
+  apply_translation: Por favor, llega a tiempo para la llamada con el cliente a las diez.
+roleplay:
+  ai_role: office coordinator
+  user_role: team member
+  setting: Front desk near the office conference rooms.
+  turns:
+  - speaker: ai
+    text: Good morning! Do you need to book a conference room today?
+  - speaker: user
+    goal: Pregunta si la sala pequeña está libre a las dos y di que es para seis personas.
+    suggested_lines:
+    - Is the small meeting room free at two o'clock? We need a room for six people today.
+    - Yes, please. Is the small meeting room free at two o'clock for six people?
+  - speaker: ai
+    text: Let me check. Yes, Room B is open at two!
+  - speaker: user
+    goal: Pregunta si la sala tiene pantalla grande o proyector y pide que anoten tu nombre.
+    suggested_lines:
+    - Does the room have a big screen or projector? Please write down my name on the room list.
+    - Great! Does the room have a big screen or projector?
+  - speaker: ai
+    text: Yes, Room B has a big screen. I have your name down for two o'clock!

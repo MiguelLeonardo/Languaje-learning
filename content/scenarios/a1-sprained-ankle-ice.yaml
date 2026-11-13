@@ -1,0 +1,92 @@
+id: a1-sprained-ankle-ice
+title: Asking for ice for a twisted ankle
+title_es: Pedir hielo por torcedura de tobillo
+cefr: A1
+topic: health-and-emergencies
+description: Pide una bolsa de hielo en la recepción del gimnasio después de torcerte
+  el tobillo en las escaleras.
+phrases:
+- id: twisted-my-ankle
+  text: Excuse me, I twisted my ankle on the stairs.
+  translation: Disculpe, me torcí el tobillo en las escaleras.
+  visual_hint: 🦶🪜
+  cloze:
+  - 3
+  - 5
+  glossary:
+  - word: ankle
+    meaning: tobillo
+    ipa: ˈæŋkəl
+- id: bag-of-ice
+  text: Could I have a small bag of ice, please?
+  translation: ¿Me podría dar una bolsa pequeña de hielo, por favor?
+  visual_hint: 🧊🛍️
+  cloze:
+  - 5
+  - 7
+  glossary:
+  - word: ice
+    meaning: hielo
+    ipa: aɪs
+- id: hard-to-walk
+  text: It hurts a lot when I try to walk.
+  translation: Me duele mucho cuando intento caminar.
+  visual_hint: 😣🚶
+  cloze:
+  - 1
+  - 8
+  glossary:
+  - word: hurts
+    meaning: duele
+    ipa: hɜːrts
+- id: idm-slow-down-a1
+  text: I need to slow down and rest my foot.
+  translation: Necesito bajar el ritmo y descansar mi pie. (slow down = ir más despacio)
+  visual_hint: 🐢🦶
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: slow down
+    meaning: ir más despacio
+    ipa: sloʊ daʊn
+  kind: phrasal_verb
+  apply_sentence: Please ____; you are walking too fast for me.
+  apply_answer: slow down
+  apply_translation: Por favor, ve más despacio; estás caminando muy rápido para mí.
+- id: idm-take-a-break-a1
+  text: Can we take a break on this bench?
+  translation: ¿Podemos tomar un descanso en esta banca? (take a break = descansar)
+  visual_hint: 🪑😌
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: take a break
+    meaning: tomar un descanso
+    ipa: teɪk ə breɪk
+  kind: expression
+  apply_sentence: Let's ____ for five minutes and drink water.
+  apply_answer: take a break
+  apply_translation: Tomemos un descanso de cinco minutos y bebamos agua.
+roleplay:
+  ai_role: gym receptionist
+  user_role: visitor
+  setting: Front desk of a sports center.
+  turns:
+  - speaker: ai
+    text: Hi there! Are you okay? You are limping.
+  - speaker: user
+    goal: Explica que te torciste el tobillo en las escaleras y te duele al caminar.
+    suggested_lines:
+    - Excuse me, I twisted my ankle on the stairs.
+    - It hurts a lot when I try to walk.
+  - speaker: ai
+    text: Oh no! Please sit down on the bench right here. What do you need?
+  - speaker: user
+    goal: Pide una bolsa pequeña de hielo y di que necesitas descansar el pie.
+    suggested_lines:
+    - Could I have a small bag of ice, please?
+    - I need to slow down and rest my foot.
+  - speaker: ai
+    text: Here is a fresh ice pack wrapped in a towel. Keep your foot up!

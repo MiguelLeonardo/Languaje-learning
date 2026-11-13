@@ -1,0 +1,106 @@
+id: b2-extended-stay-hotel-discount
+title: Negotiating an extended hotel stay
+title_es: Negociar tarifa por estancia prolongada
+cefr: B2
+topic: hotel-and-shopping
+description: Negocia una tarifa semanal con el gerente del hotel e incluye escritorio ergonómico
+  y lavandería.
+phrases:
+- id: weekly-rate-reduction
+  text: Since I'm staying for three weeks, could you offer a reduced weekly rate?
+  translation: Dado que me quedaré tres semanas, ¿podrían ofrecer una tarifa semanal reducida?
+  visual_hint: 🏨🗓️
+  cloze:
+  - 9
+  - 10
+  glossary:
+  - word: reduced
+    meaning: reducida / rebajada
+    ipa: rɪˈduːst
+  - word: weekly rate
+    meaning: tarifa semanal
+    ipa: ˈwiːkli reɪt
+- id: dedicated-workspace
+  text: I'll be working remotely, so a quiet room with a proper desk is essential.
+  translation: Trabajaré de forma remota, así que una habitación tranquila con un escritorio
+    adecuado es esencial.
+  visual_hint: 💻🪑
+  cloze:
+  - 3
+  - 10
+  glossary:
+  - word: remotely
+    meaning: de forma remota
+    ipa: rɪˈmoʊtli
+  - word: proper
+    meaning: adecuado / en condiciones
+    ipa: ˈprɑːpər
+- id: waive-parking-laundry
+  text: Could we also bundle complimentary laundry service or waived parking into the package?
+  translation: ¿Podríamos incluir también servicio de lavandería gratuito o estacionamiento
+    exento en el paquete?
+  visual_hint: 🧺🚗
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: complimentary
+    meaning: de cortesía / gratuito
+    ipa: ˌkɑːmplɪˈmentəri
+  - word: waived
+    meaning: exento / condonado
+    ipa: weɪvd
+- id: idm-meet-halfway
+  text: If that rate is too steep, perhaps we can meet halfway on the perks.
+  translation: Si esa tarifa es muy alta, quizá podamos llegar a un punto medio con los beneficios.
+  visual_hint: 🤝🏨
+  cloze:
+  - 9
+  - 10
+  glossary:
+  - word: meet halfway
+    meaning: llegar a un punto medio / ceder ambas partes
+    ipa: miːt ˈhæfweɪ
+  kind: idiom
+  apply_sentence: The manager agreed to ____ by waiving the resort fee.
+  apply_answer: meet halfway
+  apply_translation: El gerente aceptó llegar a un punto medio eximiendo la tarifa de resort.
+- id: idm-lock-in-rate
+  text: Let's lock in this corporate rate before peak conference season starts.
+  translation: Aseguremos esta tarifa corporativa antes de que empiece la temporada alta de
+    conferencias.
+  visual_hint: 🔒💵
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: lock in
+    meaning: asegurar / fijar (un precio o acuerdo)
+    ipa: lɑːk ɪn
+  kind: phrasal_verb
+  apply_sentence: Booking early lets you ____ a much lower nightly rate.
+  apply_answer: lock in
+  apply_translation: Reservar con anticipación te permite fijar una tarifa por noche mucho
+    más baja.
+roleplay:
+  ai_role: hotel sales manager
+  user_role: remote consultant
+  setting: Hotel manager's office beside the lobby.
+  turns:
+  - speaker: ai
+    text: Thanks for stopping by! You mentioned needing a room for most of next month?
+  - speaker: user
+    goal: Pide una tarifa semanal reducida por tres semanas y explica que necesitas un escritorio
+      tranquilo.
+    suggested_lines:
+    - Since I'm staying for three weeks, could you offer a reduced weekly rate?
+    - I'll be working remotely, so a quiet room with a proper desk is essential.
+  - speaker: ai
+    text: We can place you in a corner suite and take fifteen percent off the nightly rate.
+  - speaker: user
+    goal: Negocia incluir lavandería o estacionamiento exento y propón fijar la tarifa hoy.
+    suggested_lines:
+    - Could we also bundle complimentary laundry service or waived parking into the package?
+    - Let's lock in this corporate rate before peak conference season starts.
+  - speaker: ai
+    text: Deal—I'll waive parking for the full stay and email the confirmation right now.

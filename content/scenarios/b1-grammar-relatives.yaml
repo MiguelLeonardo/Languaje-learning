@@ -1,0 +1,87 @@
+id: b1-grammar-relatives
+title: 'Defining relative clauses: who, which, that, where, whose'
+title_es: Oraciones de relativo especificativas
+cefr: B1
+topic: grammar-and-connectors
+description: Describe personas, cosas y lugares con precisión usando 'who', 'which',
+  'that', 'where' y 'whose'.
+phrases:
+- id: person-who-helped
+  text: She is the neighbor who helped me move in.
+  translation: Ella es la vecina que me ayudó a mudarme.
+  visual_hint: 📦🤝
+  cloze:
+  - 4
+  glossary:
+  - word: who
+    meaning: que / quien (para personas)
+    ipa: huː
+  kind: expression
+  apply_sentence: The doctor ____ treated me was very kind.
+  apply_answer: who
+  apply_translation: El médico que me atendió fue muy amable.
+- id: cafe-where-we-met
+  text: That is the cafe where we had our first interview.
+  translation: Esa es la cafetería donde tuvimos nuestra primera entrevista.
+  visual_hint: ☕📍
+  cloze:
+  - 4
+  glossary:
+  - word: where
+    meaning: donde (para lugares)
+    ipa: wɛr
+  kind: expression
+  apply_sentence: This is the town ____ my parents grew up.
+  apply_answer: where
+  apply_translation: Este es el pueblo donde crecieron mis padres.
+- id: app-which-tracks
+  text: I use an app which tracks my daily expenses.
+  translation: Uso una aplicación que registra mis gastos diarios.
+  visual_hint: 📱💸
+  cloze:
+  - 4
+  glossary:
+  - word: which
+    meaning: que / la cual (para cosas)
+    ipa: wɪtʃ
+- id: colleague-whose-car
+  text: He is the colleague whose car broke down yesterday.
+  translation: Él es el colega cuyo auto se averió ayer.
+  visual_hint: 🚗🛠️
+  cloze:
+  - 4
+  glossary:
+  - word: whose
+    meaning: cuyo / cuya (posesión)
+    ipa: huːz
+- id: book-that-changed
+  text: This is the book that changed how I study.
+  translation: Este es el libro que cambió mi forma de estudiar.
+  visual_hint: 📖💡
+  cloze:
+  - 4
+  glossary:
+  - word: that
+    meaning: que (para personas o cosas en definitorias)
+    ipa: ðæt
+roleplay:
+  ai_role: recruiter
+  user_role: candidate
+  setting: Describing past projects and tools during a job interview.
+  turns:
+  - speaker: ai
+    text: Tell me about a project or tool you enjoyed working with.
+  - speaker: user
+    goal: Describe una herramienta o proyecto usando 'which' o 'that'.
+    suggested_lines:
+    - I built a dashboard that helped our team track sales.
+    - I used a system which automated our weekly reports.
+  - speaker: ai
+    text: Great! And who did you collaborate with most closely?
+  - speaker: user
+    goal: Describe a una persona usando 'who' o 'whose'.
+    suggested_lines:
+    - I worked with a designer who had great attention to detail.
+    - My mentor was a manager whose feedback really helped me grow.
+  - speaker: ai
+    text: That sounds like a strong team dynamic.

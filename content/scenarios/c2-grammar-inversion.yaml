@@ -1,0 +1,94 @@
+id: c2-grammar-inversion
+title: Rhetorical and literary inversion
+title_es: Inversión retórica y literaria de alto registro
+cefr: C2
+topic: grammar-and-connectors
+description: Domina inversiones sofisticadas como 'So... that', 'Such was...', 'Little
+  did...' y 'Be that as it may' para prosa y oratoria.
+phrases:
+- id: such-was-the-impact
+  text: Such was the public outcry that the bill was withdrawn.
+  translation: Tal fue la protesta pública que el proyecto de ley fue retirado.
+  visual_hint: 📢🏛️
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: such was ... that
+    meaning: tal fue ... que (inversión enfática)
+    ipa: sʌtʃ wʌz
+  kind: expression
+  apply_sentence: ____ the complexity of the case that three panels were convened.
+  apply_answer: Such was
+  apply_translation: Tal era la complejidad del caso que se convocaron tres paneles.
+- id: so-pervasive-was
+  text: So pervasive was the skepticism that few investors committed.
+  translation: Tan generalizado era el escepticismo que pocos inversores se comprometieron.
+  visual_hint: 🤨📉
+  cloze:
+  - 0
+  - 2
+  glossary:
+  - word: so + adj + was
+    meaning: tan [adjetivo] era... (inversión literaria)
+    ipa: soʊ
+  kind: expression
+  apply_sentence: ____ compelling was the argument that the board reversed its stance.
+  apply_answer: So
+  apply_translation: Tan convincente fue el argumento que la junta revirtió su postura.
+- id: little-did-anyone-suspect
+  text: Little did anyone suspect how rapidly the market would shift.
+  translation: Poco sospechaba nadie cuán rápido cambiaría el mercado.
+  visual_hint: 🌊😲
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: little did ... suspect
+    meaning: poco sospechaba / ni se imaginaba
+    ipa: ˈlɪtəl dɪd
+- id: not-since-the-nineties
+  text: Not since the nineties have we witnessed such volatility.
+  translation: No desde los años noventa habíamos presenciado tal volatilidad.
+  visual_hint: 📊⚡
+  cloze:
+  - 0
+  - 1
+  - 4
+  glossary:
+  - word: not since ... have
+    meaning: no desde ... se ha (inversión temporal)
+    ipa: nɑːt sɪns
+- id: only-by-dint-of
+  text: Only by dint of persistence did she secure the fellowship.
+  translation: Solo a fuerza de persistencia logró asegurar la beca.
+  visual_hint: 🏅💪
+  cloze:
+  - 0
+  - 5
+  glossary:
+  - word: by dint of
+    meaning: a fuerza de / mediante
+    ipa: baɪ dɪnt ʌv
+roleplay:
+  ai_role: keynote moderator
+  user_role: economist
+  setting: Delivering analytical commentary at an international summit.
+  turns:
+  - speaker: ai
+    text: Looking back at last year's currency shock, what struck you most?
+  - speaker: user
+    goal: Responde usando una inversión retórica ('Such was...', 'So... was', o 'Little
+      did...').
+    suggested_lines:
+    - Such was the speed of contagion that central banks had hours to react.
+    - Little did most analysts realize how fragile liquidity had become.
+  - speaker: ai
+    text: Have we seen anything comparable in recent decades?
+  - speaker: user
+    goal: Usa 'Not since...' u 'Only by...' con inversión sujeto-auxiliar.
+    suggested_lines:
+    - Not since 2008 have we seen sovereign spreads widen so abruptly.
+    - Only by coordinating policy early did several economies avoid a deeper slump.
+  - speaker: ai
+    text: A sobering perspective—thank you for that analysis.

@@ -1,0 +1,95 @@
+id: b1-department-store-loyalty-discount
+title: Asking about store discounts
+title_es: Consultar descuentos y ajuste de precios
+cefr: B1
+topic: hotel-and-shopping
+description: Pregunta por descuentos de membresía, cupones y políticas de igualación de precios.
+phrases:
+- id: member-discount-apply
+  text: Does my loyalty member discount apply to items already on sale?
+  translation: ¿Mi descuento de miembro aplica a artículos que ya están en oferta?
+  visual_hint: 🏷️💳
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: loyalty member
+    meaning: miembro del programa de fidelidad
+    ipa: ˈlɔɪəlti ˈmembər
+  - word: apply
+    meaning: aplicar
+    ipa: əˈplaɪ
+- id: price-match-policy
+  text: Do you offer a price match if I find it cheaper online?
+  translation: ¿Ofrecen igualación de precio si lo encuentro más barato en línea?
+  visual_hint: 📱💵
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: price match
+    meaning: igualación de precio
+    ipa: praɪs mætʃ
+- id: sign-up-coupon
+  text: If I sign up for emails today, do I get ten percent off?
+  translation: Si me suscribo al correo hoy, ¿obtengo diez por ciento de descuento?
+  visual_hint: 📧💯
+  cloze:
+  - 2
+  - 11
+  glossary:
+  - word: percent off
+    meaning: por ciento de descuento
+    ipa: pərˈsent ɔːf
+- id: idm-ring-up-total
+  text: Before you ring up the total, let me scan my coupon.
+  translation: Antes de cobrar el total, déjeme escanear mi cupón.
+  visual_hint: 🧾📲
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: ring up
+    meaning: registrar / cobrar en caja
+    ipa: rɪŋ ʌp
+  kind: phrasal_verb
+  apply_sentence: The cashier forgot to ____ the birthday discount.
+  apply_answer: ring up
+  apply_translation: El cajero olvidó registrar el descuento de cumpleaños.
+- id: idm-bang-for-buck
+  text: Buying the bundle definitely gives you more bang for your buck.
+  translation: Comprar el paquete definitivamente te da más valor por tu dinero.
+  visual_hint: 💰📦
+  cloze:
+  - 7
+  - 10
+  glossary:
+  - word: bang for your buck
+    meaning: mejor relación calidad-precio
+    ipa: bæŋ fɔːr jʊr bʌk
+  kind: idiom
+  apply_sentence: Wait for the seasonal clearance to get more ____.
+  apply_answer: bang for your buck
+  apply_translation: Espera a la liquidación de temporada para obtener más por tu dinero.
+roleplay:
+  ai_role: cashier
+  user_role: shopper
+  setting: Checkout counter at a large department store.
+  turns:
+  - speaker: ai
+    text: Hi! Did you find everything you were looking for today?
+  - speaker: user
+    goal: Pregunta si tu descuento de membresía aplica a artículos en oferta y si igualan
+      precios.
+    suggested_lines:
+    - Does my loyalty member discount apply to items already on sale?
+    - Do you offer a price match if I find it cheaper online?
+  - speaker: ai
+    text: We do price-match major retailers, though member coupons exclude clearance items.
+  - speaker: user
+    goal: Pide escanear tu cupón antes de que cobre el total.
+    suggested_lines:
+    - Before you ring up the total, let me scan my coupon.
+    - If I sign up for emails today, do I get ten percent off?
+  - speaker: ai
+    text: Perfect, that coupon took another fifteen dollars off your total!

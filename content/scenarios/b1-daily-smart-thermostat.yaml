@@ -1,0 +1,95 @@
+id: b1-daily-smart-thermostat
+title: Programming a smart thermostat
+title_es: Programar un termostato inteligente
+cefr: B1
+topic: daily-tech-and-media
+description: Configura horarios y modo ecológico en el termostato inteligente para ahorrar energía en casa.
+phrases:
+- id: schedule-heating-hours
+  text: We can schedule the heating to start an hour before breakfast.
+  translation: Podemos programar la calefacción para que empiece una hora antes del desayuno.
+  visual_hint: 🌡️⏰
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: heating
+    meaning: calefacción
+    ipa: ˈhiːtɪŋ
+- id: eco-mode-away
+  text: Eco mode lowers the temperature automatically when nobody is home.
+  translation: El modo ecológico baja la temperatura automáticamente cuando no hay nadie en casa.
+  visual_hint: 🌿🏠
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: temperature
+    meaning: temperatura
+    ipa: ˈtemprətʃər
+- id: adjust-remotely-app
+  text: I can adjust the living room temperature remotely from the app.
+  translation: Puedo ajustar la temperatura de la sala de forma remota desde la aplicación.
+  visual_hint: 📱🛋️
+  cloze:
+  - 2
+  - 7
+  glossary:
+  - word: remotely
+    meaning: a distancia / de forma remota
+    ipa: rɪˈmoʊtli
+- id: idm-turn-down
+  text: Let us turn down the thermostat by two degrees at night.
+  translation: 'Bajemos el termostato dos grados por la noche. (turn down: bajar la intensidad)'
+  visual_hint: ❄️🛏️
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: turn down
+    meaning: bajar (la temperatura, el volumen)
+    ipa: tɜːrn daʊn
+  kind: phrasal_verb
+  apply_sentence: Please ____ the air conditioning if the room gets too cold.
+  apply_answer: turn down
+  apply_translation: Por favor baja el aire acondicionado si la habitación se enfría demasiado.
+- id: idm-pay-off
+  text: Buying a smart thermostat will pay off on our winter utility bill.
+  translation: 'Comprar un termostato inteligente valdrá la pena en nuestra factura de invierno. (pay off: dar frutos / compensar)'
+  visual_hint: 💡💰
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: pay off
+    meaning: dar resultado / compensar la inversión
+    ipa: peɪ ɔːf
+  kind: phrasal_verb
+  apply_sentence: Turning off unused lights every day will ____ by the end of the month.
+  apply_answer: pay off
+  apply_translation: Apagar las luces que no se usan todos los días dará frutos al final del mes.
+roleplay:
+  ai_role: partner
+  user_role: homeowner
+  setting: Hallway next to the newly installed wall thermostat.
+  turns:
+  - speaker: ai
+    text: Our electricity bill was high last month. How does this new thermostat help?
+  - speaker: user
+    goal: Explica que se puede programar la calefacción y que el modo ecológico baja la temperatura al salir.
+    suggested_lines:
+    - We can schedule the heating to start an hour before breakfast.
+    - Eco mode lowers the temperature automatically when nobody is home.
+  - speaker: ai
+    text: Nice! What if we come home earlier than planned?
+  - speaker: user
+    goal: Di que puedes ajustar la temperatura a distancia desde la aplicación.
+    suggested_lines:
+    - I can adjust the living room temperature remotely from the app.
+  - speaker: ai
+    text: That is convenient. Should we change anything for sleeping?
+  - speaker: user
+    goal: Propón bajar dos grados por la noche y comenta que compensará en la factura de invierno.
+    suggested_lines:
+    - Let us turn down the thermostat by two degrees at night.
+    - Buying a smart thermostat will pay off on our winter utility bill.

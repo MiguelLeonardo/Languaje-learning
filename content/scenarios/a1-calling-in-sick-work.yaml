@@ -1,0 +1,106 @@
+id: a1-calling-in-sick-work
+title: Calling in sick to work
+title_es: Avisar que estás enfermo en el trabajo
+cefr: A1
+topic: work-and-career
+description: Llama o escribe a tu jefe para avisar que tienes fiebre, no puedes ir hoy
+  y descansarás en casa.
+phrases:
+- id: feel-sick-today
+  text: Good morning, I feel sick and have a fever.
+  translation: Buenos días, me siento enfermo y tengo fiebre.
+  visual_hint: 🤒📞
+  cloze:
+  - 3
+  - 4
+  - 8
+  glossary:
+  - word: sick
+    meaning: enfermo / enferma
+    ipa: sɪk
+  - word: fever
+    meaning: fiebre
+    ipa: ˈfiːvər
+- id: cannot-come-in
+  text: I cannot come to the office today.
+  translation: No puedo ir a la oficina hoy.
+  visual_hint: 🏠🚫
+  cloze:
+  - 1
+  - 2
+  - 5
+  glossary:
+  - word: cannot
+    meaning: no puedo
+    ipa: ˈkænɑːt
+  - word: office
+    meaning: oficina
+    ipa: ˈɔːfɪs
+- id: doctor-appointment
+  text: I am going to see a doctor this morning.
+  translation: Voy a ver a un médico esta mañana.
+  visual_hint: 🩺🏥
+  cloze:
+  - 4
+  - 6
+  - 8
+  glossary:
+  - word: doctor
+    meaning: médico / doctor
+    ipa: ˈdɑːktər
+  - word: this morning
+    meaning: esta mañana
+    ipa: ðɪs ˈmɔːrnɪŋ
+- id: idm-call-in-sick
+  text: I need to call in sick for one day.
+  translation: 'Necesito avisar que estoy enfermo por un día. (call in sick: pedir baja por enfermedad)'
+  visual_hint: 📱🤒
+  cloze:
+  - 3
+  - 4
+  - 5
+  glossary:
+  - word: call in sick
+    meaning: avisar que no vas por enfermedad
+    ipa: kɔːl ɪn sɪk
+  kind: expression
+  apply_sentence: Maria has a bad cold, so she will ____ today.
+  apply_answer: call in sick
+  apply_translation: María tiene un resfriado fuerte, así que avisará que está enferma hoy.
+- id: idm-get-better
+  text: I hope to get better and return tomorrow.
+  translation: 'Espero mejorarme y volver mañana. (get better: recuperarse)'
+  visual_hint: 💪🙂
+  cloze:
+  - 3
+  - 4
+  - 7
+  glossary:
+  - word: get better
+    meaning: mejorarse / recuperarse
+    ipa: ɡet ˈbetər
+  kind: phrasal_verb
+  apply_sentence: Drink lots of water and ____ soon!
+  apply_answer: get better
+  apply_translation: ¡Toma mucha agua y mejórate pronto!
+roleplay:
+  ai_role: team manager
+  user_role: employee
+  setting: Short morning phone call with your manager from home.
+  turns:
+  - speaker: ai
+    text: Good morning! This is David speaking. How are you?
+  - speaker: user
+    goal: Di que te sientes enfermo, tienes fiebre y no puedes ir a la oficina hoy.
+    suggested_lines:
+    - Good morning, I feel sick and have a fever. I cannot come to the office today.
+    - Hi David, I need to call in sick today because I have a fever.
+  - speaker: ai
+    text: Oh no, I am sorry to hear that. Are you going to see a doctor?
+  - speaker: user
+    goal: Confirma que vas al médico esta mañana y que esperas volver mañana.
+    suggested_lines:
+    - Yes, I am going to see a doctor this morning. I hope to get better and return tomorrow.
+    - I am going to see a doctor this morning, and I hope to return tomorrow.
+  - speaker: ai
+    text: Please rest and take care of yourself. Get better soon!

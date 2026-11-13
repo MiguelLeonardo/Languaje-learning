@@ -1,0 +1,106 @@
+id: a2-ordering-team-lunch
+title: Ordering lunch for the team
+title_es: Pedir el almuerzo para el equipo
+cefr: A2
+topic: work-and-career
+description: Pregunta a tus compañeros qué quieren almorzar, verifica alergias y confirma
+  el pedido con el restaurante.
+phrases:
+- id: food-allergies-check
+  text: Does anyone on the team have any food allergies?
+  translation: ¿Alguien en el equipo tiene alguna alergia alimentaria?
+  visual_hint: 🥗⚠️
+  cloze:
+  - 1
+  - 4
+  - 8
+  glossary:
+  - word: anyone
+    meaning: alguien
+    ipa: ˈeniwʌn
+  - word: allergies
+    meaning: alergias
+    ipa: ˈælərdʒiz
+- id: vegetarian-option
+  text: We should include two vegetarian bowls in the order.
+  translation: Deberíamos incluir dos platos vegetarianos en el pedido.
+  visual_hint: 🥑🥣
+  cloze:
+  - 2
+  - 4
+  - 8
+  glossary:
+  - word: vegetarian
+    meaning: vegetariano / vegetariana
+    ipa: ˌvedʒəˈteriən
+  - word: order
+    meaning: pedido
+    ipa: ˈɔːrdər
+- id: delivery-arrival-time
+  text: Can you deliver the food to reception by twelve thirty?
+  translation: ¿Pueden entregar la comida en recepción antes de las doce y media?
+  visual_hint: 🛵🕧
+  cloze:
+  - 2
+  - 5
+  - 7
+  glossary:
+  - word: deliver
+    meaning: entregar / llevar
+    ipa: dɪˈlɪvər
+  - word: reception
+    meaning: recepción
+    ipa: rɪˈsepʃən
+- id: idm-chip-in
+  text: Everyone can chip in ten dollars for the pizza.
+  translation: 'Todos pueden aportar diez dólares para la pizza. (chip in: poner dinero entre todos)'
+  visual_hint: 💵🍕
+  cloze:
+  - 2
+  - 3
+  - 5
+  glossary:
+  - word: chip in
+    meaning: cooperar / poner dinero juntos
+    ipa: tʃɪp ɪn
+  kind: phrasal_verb
+  apply_sentence: Let's all ____ to buy a birthday cake for Sam.
+  apply_answer: chip in
+  apply_translation: Cooperemos todos para comprar un pastel de cumpleaños para Sam.
+- id: idm-on-the-house
+  text: Because it is a big order, drinks are on the house.
+  translation: 'Como es un pedido grande, las bebidas corren por cuenta de la casa. (on the house: gratis / cortesía)'
+  visual_hint: 🥤🎁
+  cloze:
+  - 5
+  - 8
+  - 10
+  glossary:
+  - word: on the house
+    meaning: cortesía de la casa / gratis
+    ipa: ɑːn ðə haʊs
+  kind: idiom
+  apply_sentence: The waiter smiled and said dessert was ____ tonight.
+  apply_answer: on the house
+  apply_translation: El mesero sonrió y dijo que el postre era cortesía de la casa esta noche.
+roleplay:
+  ai_role: restaurant order clerk
+  user_role: office coordinator
+  setting: Calling a local cafe to place a lunch order for eight coworkers.
+  turns:
+  - speaker: ai
+    text: Hello, Green Bowl Cafe! How can I help you today?
+  - speaker: user
+    goal: Di que quieres hacer un pedido de almuerzo para ocho personas, incluyendo dos platos vegetarianos.
+    suggested_lines:
+    - Hi! I would like to order lunch for eight people. We should include two vegetarian bowls in the order.
+    - Hello, we need lunch for eight people, with two vegetarian bowls please.
+  - speaker: ai
+    text: Got it. Does anyone have any food allergies we should know about?
+  - speaker: user
+    goal: Menciona que una persona es alérgica a las nueces y pregunta si pueden entregar a las 12:30 en recepción.
+    suggested_lines:
+    - Yes, one person has a nut allergy. Can you deliver the food to reception by twelve thirty?
+    - One colleague is allergic to nuts. Can you deliver to reception by twelve thirty?
+  - speaker: ai
+    text: No problem, we will label the allergy box clearly. Since it is a big order, iced tea is on the house!

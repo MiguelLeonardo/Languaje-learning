@@ -1,0 +1,93 @@
+id: b1-grammar-reported
+title: 'Reported speech: statements, questions, and requests'
+title_es: 'Estilo indirecto: afirmaciones, preguntas y peticiones'
+cefr: B1
+topic: grammar-and-connectors
+description: Reporta lo que alguien dijo, preguntó o pidió usando 'said that', 'told
+  me to' y 'asked if'.
+phrases:
+- id: said-she-was-busy
+  text: She said that she was busy until five.
+  translation: Ella dijo que estaba ocupada hasta las cinco.
+  visual_hint: 🗣️🕔
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: said that
+    meaning: dijo que (sin objeto indirecto)
+    ipa: sɛd ðæt
+  kind: expression
+  apply_sentence: Mark ____ he would join us for dinner.
+  apply_answer: said that
+  apply_translation: Mark dijo que se uniría a nosotros para cenar.
+- id: told-me-to-wait
+  text: The guard told me to wait by the gate.
+  translation: El guardia me dijo que esperara junto a la puerta.
+  visual_hint: 🛂⏳
+  cloze:
+  - 2
+  - 3
+  - 4
+  glossary:
+  - word: told me to
+    meaning: me dijo que... (orden o petición)
+    ipa: toʊld miː tuː
+  kind: expression
+  apply_sentence: The doctor ____ take this medicine twice a day.
+  apply_answer: told me to
+  apply_translation: El médico me dijo que tomara esta medicina dos veces al día.
+- id: asked-if-i-had
+  text: He asked if I had finished the draft.
+  translation: Él preguntó si yo había terminado el borrador.
+  visual_hint: ❓📝
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: asked if
+    meaning: preguntó si (preguntas de sí/no)
+    ipa: æskt ɪf
+- id: asked-where-lived
+  text: They asked where I lived before moving here.
+  translation: Preguntaron dónde vivía antes de mudarme aquí.
+  visual_hint: 🏠🗺️
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: asked where
+    meaning: preguntó dónde (sin inversión)
+    ipa: æskt wɛr
+- id: promised-to-call
+  text: Elena promised to call us back this evening.
+  translation: Elena prometió devolvernos la llamada esta noche.
+  visual_hint: 📞🤝
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: promised to
+    meaning: prometió (hacer algo)
+    ipa: ˈprɑːmɪst tuː
+roleplay:
+  ai_role: team lead
+  user_role: team member
+  setting: Relaying a message from a client call.
+  turns:
+  - speaker: ai
+    text: I missed the client call. What did Sarah say?
+  - speaker: user
+    goal: Reporta una afirmación usando 'said that' o 'told us'.
+    suggested_lines:
+    - She said that she liked the new design.
+    - She told us that the budget was approved.
+  - speaker: ai
+    text: That's great news! Did she ask for any changes?
+  - speaker: user
+    goal: Reporta una pregunta o petición usando 'asked if' o 'asked us to'.
+    suggested_lines:
+    - She asked if we could move the launch to Friday.
+    - She asked us to send the final invoice today.
+  - speaker: ai
+    text: Got it, let's get that sent right away.

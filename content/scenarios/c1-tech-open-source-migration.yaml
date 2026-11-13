@@ -1,0 +1,95 @@
+id: c1-tech-open-source-migration
+title: Migrating to open-source tools
+title_es: Migrar a herramientas de código abierto
+cefr: C1
+topic: daily-tech-and-media
+description: Evalúa la portabilidad de datos, el bloqueo de proveedor y el autoalojamiento al migrar flujos digitales.
+phrases:
+- id: avoid-vendor-lock-in
+  text: Relying on proprietary formats leaves small teams vulnerable to steep vendor lock-in.
+  translation: Depender de formatos propietarios deja a los equipos pequeños vulnerables a un fuerte bloqueo de proveedor.
+  visual_hint: 🔒🏢
+  cloze:
+  - 2
+  - 9
+  glossary:
+  - word: vendor lock-in
+    meaning: dependencia o bloqueo de proveedor
+    ipa: ˈvendər lɑːk ɪn
+- id: prioritize-data-portability
+  text: Standardizing on open Markdown files guarantees long-term data portability across platforms.
+  translation: Estandarizar en archivos Markdown abiertos garantiza la portabilidad de datos a largo plazo entre plataformas.
+  visual_hint: 📄🔄
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: portability
+    meaning: portabilidad / facilidad de traslado
+    ipa: ˌpɔːrtəˈbɪləti
+- id: self-hosted-maintenance-tradeoff
+  text: Running a self-hosted instance lowers licensing costs but demands disciplined security patching.
+  translation: Mantener una instancia autoalojada reduce costos de licencia, pero exige disciplina en los parches de seguridad.
+  visual_hint: 🖥️🔧
+  cloze:
+  - 2
+  - 9
+  glossary:
+  - word: patching
+    meaning: aplicación de parches / actualizaciones
+    ipa: ˈpætʃɪŋ
+- id: idm-phase-out
+  text: We plan to phase out our legacy cloud suite over two quarters without disrupting projects.
+  translation: 'Planeamos retirar gradualmente nuestra suite en la nube heredada durante dos trimestres sin interrumpir proyectos. (phase out: eliminar gradualmente)'
+  visual_hint: 📉🗓️
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: phase out
+    meaning: retirar o eliminar gradualmente
+    ipa: feɪz aʊt
+  kind: phrasal_verb
+  apply_sentence: Many organizations ____ single-vendor tools once open standards mature.
+  apply_answer: phase out
+  apply_translation: Muchas organizaciones retiran gradualmente las herramientas de un solo proveedor cuando maduran los estándares abiertos.
+- id: idm-fall-back-on
+  text: Automated nightly exports ensure we always have clean backups to fall back on during migration.
+  translation: 'Las exportaciones nocturnas automáticas aseguran copias limpias a las que recurrir durante la migración. (fall back on: recurrir a / contar con respaldo)'
+  visual_hint: 💾🛡️
+  cloze:
+  - 9
+  - 11
+  glossary:
+  - word: fall back on
+    meaning: recurrir a / apoyarse en un respaldo
+    ipa: fɔːl bæk ɑːn
+  kind: phrasal_verb
+  apply_sentence: If the new sync client stalls, users can ____ the web interface temporarily.
+  apply_answer: fall back on
+  apply_translation: Si el nuevo cliente de sincronización se detiene, los usuarios pueden recurrir temporalmente a la interfaz web.
+roleplay:
+  ai_role: operations lead
+  user_role: systems architect
+  setting: Strategy meeting after a surprise SaaS subscription price hike.
+  turns:
+  - speaker: ai
+    text: Our software vendor just doubled per-seat pricing again. Should we bite the bullet or switch?
+  - speaker: user
+    goal: Advierte sobre el bloqueo de proveedor y defiende la portabilidad con formatos abiertos.
+    suggested_lines:
+    - Relying on proprietary formats leaves small teams vulnerable to steep vendor lock-in.
+    - Standardizing on open Markdown files guarantees long-term data portability across platforms.
+  - speaker: ai
+    text: Fair point, though I worry about the overhead of managing our own servers.
+  - speaker: user
+    goal: Reconoce el equilibrio entre costos y parches de seguridad, y propón una retirada gradual.
+    suggested_lines:
+    - Running a self-hosted instance lowers licensing costs but demands disciplined security patching.
+    - We plan to phase out our legacy cloud suite over two quarters without disrupting projects.
+  - speaker: ai
+    text: What happens if something breaks mid-transfer?
+  - speaker: user
+    goal: Asegura que las exportaciones nocturnas brindan un respaldo fiable al que recurrir.
+    suggested_lines:
+    - Automated nightly exports ensure we always have clean backups to fall back on during migration.

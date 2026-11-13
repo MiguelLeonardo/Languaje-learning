@@ -1,0 +1,111 @@
+id: c2-ipo-roadshow-institutional-qa
+title: IPO roadshow institutional Q&A
+title_es: Preguntas con inversores en salida a bolsa
+cefr: C2
+topic: work-and-career
+description: Responde preguntas incisivas de inversores institucionales sobre economía
+  unitaria, compresión de márgenes y asignación de capital con solvencia financiera.
+phrases:
+- id: defend-unit-economics
+  text: Gross margin compression reflects deliberate cloud-region expansion rather than pricing erosion.
+  translation: La compresión del margen bruto refleja una expansión deliberada de regiones en la nube y no una erosión de precios.
+  visual_hint: 📊☁️
+  cloze:
+  - 1
+  - 4
+  - 8
+  glossary:
+  - word: compression
+    meaning: compresión / reducción
+    ipa: kəmˈpreʃən
+  - word: erosion
+    meaning: erosión / deterioro
+    ipa: ɪˈroʊʒən
+- id: articulate-capital-allocation
+  text: Proceeds will be earmarked for high-ROIC enterprise R&D and disciplined debt retirement.
+  translation: Los fondos se destinarán a I+D empresarial de alto retorno y a una reducción disciplinada de deuda.
+  visual_hint: 💰🏛️
+  cloze:
+  - 0
+  - 3
+  - 9
+  glossary:
+  - word: proceeds
+    meaning: ingresos / fondos recaudados
+    ipa: ˈproʊsiːdz
+  - word: earmarked
+    meaning: asignados / destinados
+    ipa: ˈɪrmɑːrkt
+- id: project-operating-leverage
+  text: As cohort retention compounds, we expect meaningful operating leverage by fiscal twenty-eight.
+  translation: A medida que se acumula la retención por cohortes, prevemos un apalancamiento operativo significativo para el año fiscal veintiocho.
+  visual_hint: 📈🚀
+  cloze:
+  - 2
+  - 6
+  - 7
+  glossary:
+  - word: cohort
+    meaning: cohorte (grupo de clientes)
+    ipa: ˈkoʊhɔːrt
+  - word: operating leverage
+    meaning: apalancamiento operativo
+    ipa: ˈɑːpəreɪtɪŋ ˈlevərɪdʒ
+- id: idm-weather-the-storm
+  text: Our net-dollar retention above 120 percent equips us to weather the storm of macro tightening.
+  translation: 'Nuestra retención neta en dólares superior al 120 por ciento nos prepara para capear el temporal del ajuste macroeconómico. (weather the storm: superar la crisis)'
+  visual_hint: ⛈️⚓
+  cloze:
+  - 7
+  - 9
+  - 11
+  glossary:
+  - word: weather the storm
+    meaning: capear el temporal / superar una crisis
+    ipa: ˈweðər ðə stɔːrm
+  kind: idiom
+  apply_sentence: Diversified recurring revenue helped the firm ____ during the downturn.
+  apply_answer: weather the storm
+  apply_translation: Los ingresos recurrentes diversificados ayudaron a la empresa a capear el temporal durante la recesión.
+- id: idm-pencil-out
+  text: At scale, the acquisition payback period continues to pencil out under fourteen months.
+  translation: 'A escala, el periodo de recuperación de adquisición sigue cuadrando por debajo de catorce meses. (pencil out: resultar rentable en números)'
+  visual_hint: ✏️💵
+  cloze:
+  - 5
+  - 8
+  - 9
+  glossary:
+  - word: pencil out
+    meaning: cuadrar / resultar financieramente viable
+    ipa: ˈpensəl aʊt
+  kind: phrasal_verb
+  apply_sentence: Once we factored in logistics, the discount promotion didn't ____.
+  apply_answer: pencil out
+  apply_translation: Una vez incluida la logística, la promoción con descuento no cuadró financieramente.
+roleplay:
+  ai_role: institutional portfolio manager
+  user_role: chief financial officer
+  setting: One-on-one institutional investor meeting during an IPO roadshow in New York.
+  turns:
+  - speaker: ai
+    text: Your top-line growth is impressive, but gross margins dipped 200 basis points last quarter. Is pricing power slipping?
+  - speaker: user
+    goal: Aclara que la compresión de margen se debe a expansión deliberada de infraestructura y que el periodo de recuperación sigue cuadrando bajo 14 meses.
+    suggested_lines:
+    - Gross margin compression reflects deliberate cloud-region expansion rather than pricing erosion. At scale, the acquisition payback period continues to pencil out under fourteen months.
+    - Pricing power remains intact; gross margin compression reflects deliberate cloud-region expansion, and payback still pencils out under fourteen months.
+  - speaker: ai
+    text: Fair enough. How will you deploy the primary IPO proceeds if macro conditions tighten further?
+  - speaker: user
+    goal: Detalla la asignación disciplinada de capital y explica cómo la retención neta les permite capear el ajuste macroeconómico.
+    suggested_lines:
+    - Proceeds will be earmarked for high-ROIC enterprise R&D and disciplined debt retirement. Our net-dollar retention above 120 percent equips us to weather the storm of macro tightening.
+    - We are earmarking proceeds for high-ROIC R&D and debt retirement, while 120 percent net-dollar retention helps us weather the storm.
+  - speaker: ai
+    text: And when should public shareholders expect sustained operating leverage?
+  - speaker: user
+    goal: Explica cómo la retención por cohortes impulsa el apalancamiento operativo hacia el año fiscal 2028.
+    suggested_lines:
+    - As cohort retention compounds, we expect meaningful operating leverage by fiscal twenty-eight.
+    - With cohort retention compounding, meaningful operating leverage materializes by fiscal twenty-eight.

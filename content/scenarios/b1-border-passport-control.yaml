@@ -1,0 +1,102 @@
+id: b1-border-passport-control
+title: Going through passport control
+title_es: Pasar el control de pasaportes
+cefr: B1
+topic: travel-and-transport
+description: Responde al oficial de migración sobre el motivo de tu viaje, duración
+  de la estancia y boleto de regreso.
+phrases:
+- id: purpose-of-visit
+  text: I am visiting for a ten-day sightseeing trip and staying with friends.
+  translation: Estoy de visita para un viaje turístico de diez días y me quedo con amigos.
+  visual_hint: 🛂🌍
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: sightseeing trip
+    meaning: viaje turístico
+    ipa: ˈsaɪtsiːɪŋ trɪp
+  - word: staying with
+    meaning: alojarse con
+    ipa: ˈsteɪɪŋ wɪð
+- id: return-flight-confirmation
+  text: Here is my return flight confirmation and my hotel booking.
+  translation: Aquí está mi confirmación de vuelo de regreso y mi reserva de hotel.
+  visual_hint: 🎫🏨
+  cloze:
+  - 3
+  - 5
+  glossary:
+  - word: return flight
+    meaning: vuelo de regreso
+    ipa: rɪˈtɜːrn flaɪt
+  - word: confirmation
+    meaning: confirmación
+    ipa: ˌkɑːnfərˈmeɪʃən
+- id: nothing-to-declare
+  text: I have nothing to declare at customs beyond personal items.
+  translation: No tengo nada que declarar en aduana más allá de artículos personales.
+  visual_hint: 🧳✅
+  cloze:
+  - 4
+  - 6
+  glossary:
+  - word: declare
+    meaning: declarar en aduana
+    ipa: dɪˈkler
+  - word: customs
+    meaning: aduana
+    ipa: ˈkʌstəmz
+- id: border-hand-over
+  text: Please hand over your passport and landing card at the booth.
+  translation: Por favor, entrega tu pasaporte y tarjeta de desembarque en la cabina. (hand over = entregar)
+  visual_hint: 📘🛂
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: hand over
+    meaning: entregar en mano
+    ipa: hænd ˈoʊvər
+  kind: phrasal_verb
+  apply_sentence: Travelers must ____ their customs form before exiting.
+  apply_answer: hand over
+  apply_translation: Los viajeros deben entregar su formulario de aduana antes de salir.
+- id: border-first-time
+  text: As a matter of fact, this is my first time visiting this country.
+  translation: De hecho, esta es mi primera vez visitando este país. (as a matter of fact = de hecho)
+  visual_hint: 🗺️✨
+  cloze:
+  - 0
+  - 2
+  - 4
+  glossary:
+  - word: as a matter of fact
+    meaning: de hecho / en realidad
+    ipa: æz ə ˈmætər əv fækt
+  kind: expression
+  apply_sentence: ____, my connecting flight leaves from the same terminal.
+  apply_answer: As a matter of fact
+  apply_translation: De hecho, mi vuelo de conexión sale de la misma terminal.
+roleplay:
+  ai_role: immigration officer
+  user_role: arriving traveler
+  setting: An international airport passport control booth.
+  turns:
+  - speaker: ai
+    text: Good afternoon. Passport, please. What is the purpose of your visit?
+  - speaker: user
+    goal: Explica que vienes de turismo por diez días y te quedas con amigos.
+    suggested_lines:
+    - I am visiting for a ten-day sightseeing trip and staying with friends.
+    - I'm here on vacation for ten days, staying with friends.
+  - speaker: ai
+    text: Have you been here before, and do you have proof of your return flight?
+  - speaker: user
+    goal: Di que es tu primera vez y muestra la confirmación de tu vuelo de regreso.
+    suggested_lines:
+    - As a matter of fact, this is my first time visiting this country. Here is my return flight confirmation and my hotel booking.
+    - It is my first time here. Here is my return flight confirmation.
+  - speaker: ai
+    text: Everything looks in order. Welcome, and please proceed to baggage claim.

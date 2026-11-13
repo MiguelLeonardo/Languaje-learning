@@ -1,0 +1,111 @@
+id: c2-board-ai-governance-briefing
+title: Briefing the board on AI risk
+title_es: Informar al consejo sobre riesgos de IA
+cefr: C2
+topic: work-and-career
+description: Expón ante un consejo escéptico los riesgos regulatorios, de propiedad
+  intelectual y reputacionales de adoptar IA con rigor y templanza.
+phrases:
+- id: frame-regulatory-exposure
+  text: Unvetted model outputs expose us to both copyright liability and regulatory scrutiny.
+  translation: Las salidas de modelos sin auditar nos exponen tanto a responsabilidad por derechos de autor como a escrutinio regulatorio.
+  visual_hint: ⚖️🤖
+  cloze:
+  - 0
+  - 3
+  - 9
+  glossary:
+  - word: unvetted
+    meaning: sin verificar / sin auditar
+    ipa: ʌnˈvetɪd
+  - word: scrutiny
+    meaning: escrutinio / examen minucioso
+    ipa: ˈskruːtəni
+- id: balance-innovation-guardrails
+  text: Our mandate is not to ban experimentation, but to ring-fence proprietary data.
+  translation: Nuestro mandato no es prohibir la experimentación, sino blindar los datos propietarios.
+  visual_hint: 🛡️📊
+  cloze:
+  - 5
+  - 9
+  - 10
+  glossary:
+  - word: mandate
+    meaning: mandato / directriz
+    ipa: ˈmændeɪt
+  - word: ring-fence
+    meaning: aislar / blindar
+    ipa: ˈrɪŋfens
+- id: establish-board-oversight
+  text: Quarterly red-teaming audits will give the audit committee verifiable assurance.
+  translation: Las auditorías trimestrales de simulación de ataques darán al comité de auditoría garantías verificables.
+  visual_hint: 🔍🏛️
+  cloze:
+  - 1
+  - 6
+  - 8
+  glossary:
+  - word: red-teaming
+    meaning: pruebas adversarias de seguridad
+    ipa: ˈred ˌtiːmɪŋ
+  - word: assurance
+    meaning: garantía / certeza
+    ipa: əˈʃʊrəns
+- id: idm-double-edged-sword
+  text: Generative tooling is a double-edged sword that accelerates delivery while amplifying compliance risk.
+  translation: 'Las herramientas generativas son un arma de doble filo que acelera la entrega mientras amplifica el riesgo normativo. (double-edged sword: ventaja con riesgo)'
+  visual_hint: ⚔️⚖️
+  cloze:
+  - 4
+  - 5
+  - 9
+  glossary:
+  - word: double-edged sword
+    meaning: arma de doble filo
+    ipa: ˌdʌbəl ˌedʒd ˈsɔːrd
+  kind: idiom
+  apply_sentence: Aggressive automation proved to be a ____ for customer retention.
+  apply_answer: double-edged sword
+  apply_translation: La automatización agresiva resultó ser un arma de doble filo para la retención de clientes.
+- id: idm-err-on-the-side-of-caution
+  text: Until EU guidelines crystallize, we should err on the side of caution with client data.
+  translation: 'Hasta que se concreten las directrices europeas, debemos pecar de precavidos con los datos de clientes. (err on the side of caution: extremar la prudencia)'
+  visual_hint: 🛡️📜
+  cloze:
+  - 6
+  - 9
+  - 11
+  glossary:
+  - word: err on the side of caution
+    meaning: pecar de prudente / extremar precauciones
+    ipa: ɜːr ɑːn ðə saɪd əv ˈkɔːʃən
+  kind: expression
+  apply_sentence: Given the ambiguous statute, counsel advised us to ____.
+  apply_answer: err on the side of caution
+  apply_translation: Dada la ambigüedad de la norma, el área legal nos aconsejó extremar la prudencia.
+roleplay:
+  ai_role: board audit chair
+  user_role: chief risk officer
+  setting: Quarterly board risk committee briefing on enterprise AI deployment.
+  turns:
+  - speaker: ai
+    text: Competitors are shipping AI features weekly, yet you are asking us to slow down. Why?
+  - speaker: user
+    goal: Explica que la IA es un arma de doble filo y detalla la exposición regulatoria y de derechos de autor de salidas sin auditar.
+    suggested_lines:
+    - Generative tooling is a double-edged sword that accelerates delivery while amplifying compliance risk. Unvetted model outputs expose us to both copyright liability and regulatory scrutiny.
+    - We are not halting progress, but unvetted model outputs expose us to copyright liability and regulatory scrutiny.
+  - speaker: ai
+    text: Are you proposing a company-wide moratorium until regulators issue final rules?
+  - speaker: user
+    goal: Aclara que el mandato es blindar los datos propietarios sin prohibir la experimentación, pecando de prudencia con datos de clientes.
+    suggested_lines:
+    - Our mandate is not to ban experimentation, but to ring-fence proprietary data. Until EU guidelines crystallize, we should err on the side of caution with client data.
+    - Not a moratorium—our mandate is to ring-fence proprietary data while erring on the side of caution with client data.
+  - speaker: ai
+    text: How will the board verify that these guardrails actually hold in production?
+  - speaker: user
+    goal: Propón auditorías trimestrales de red-teaming para dar garantías verificables al comité.
+    suggested_lines:
+    - Quarterly red-teaming audits will give the audit committee verifiable assurance.
+    - We will institute quarterly red-teaming audits to give the committee verifiable assurance.

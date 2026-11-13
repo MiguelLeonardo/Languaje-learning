@@ -1,0 +1,95 @@
+id: c1-tech-deepfake-verification
+title: Verifying suspected deepfake media
+title_es: Verificar contenido sospechoso de deepfake
+cefr: C1
+topic: daily-tech-and-media
+description: Evalúa artefactos sintéticos, metadatos y marcas de procedencia para detectar videos o audios manipulados.
+phrases:
+- id: synthetic-rendering-artifacts
+  text: Unnatural blinking and edge-blurring around the jawline often betray synthetic rendering artifacts.
+  translation: El parpadeo antinatural y el desenfoque en los bordes de la mandíbula suelen delatar artefactos de renderizado sintético.
+  visual_hint: 🎭🔍
+  cloze:
+  - 7
+  - 9
+  glossary:
+  - word: betray
+    meaning: delatar / revelar involuntariamente
+    ipa: bɪˈtreɪ
+- id: cryptographic-provenance-metadata
+  text: Cryptographic provenance metadata helps newsrooms confirm whether raw footage was altered after capture.
+  translation: Los metadatos criptográficos de procedencia ayudan a las redacciones a confirmar si el metraje original fue alterado tras la captura.
+  visual_hint: 🔐🎥
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: provenance
+    meaning: procedencia / trazabilidad de origen
+    ipa: ˈprɑːvənəns
+- id: corroborate-independent-angles
+  text: Forensic analysts corroborate a disputed clip by cross-referencing independent camera angles and audio acoustics.
+  translation: Los analistas forenses corroboran un clip disputado contrastando ángulos de cámara independientes y la acústica del audio.
+  visual_hint: 📹🎙️
+  cloze:
+  - 2
+  - 6
+  glossary:
+  - word: corroborate
+    meaning: corroborar / confirmar con pruebas
+    ipa: kəˈrɑːbəreɪt
+- id: idm-zero-in-on
+  text: Detection tools zero in on subtle cadence mismatches between lip movement and vocal pitch.
+  translation: 'Las herramientas de detección se enfocan en desajustes sutiles de cadencia entre el movimiento labial y el tono vocal. (zero in on: enfocarse con precisión en)'
+  visual_hint: 🎯👄
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: zero in on
+    meaning: centrarse con precisión en
+    ipa: ˈzɪroʊ ɪn ɑːn
+  kind: phrasal_verb
+  apply_sentence: Investigators began to ____ inconsistencies in the lighting shadows across the room.
+  apply_answer: zero in on
+  apply_translation: Los investigadores empezaron a enfocarse con precisión en las inconsistencias de las sombras de iluminación en la sala.
+- id: idm-see-through
+  text: Training viewers to pause and question emotional triggers helps them see through fabricated clips.
+  translation: 'Capacitar a la audiencia para hacer una pausa y cuestionar detonantes emocionales les ayuda a detectar clips fabricados. (see through: calar / no dejarse engañar por)'
+  visual_hint: 🧠🛡️
+  cloze:
+  - 9
+  - 10
+  glossary:
+  - word: see through
+    meaning: ver más allá de / detectar un engaño
+    ipa: siː θruː
+  kind: phrasal_verb
+  apply_sentence: Experienced editors quickly ____ cloned voice recordings that lack ambient room tone.
+  apply_answer: see through
+  apply_translation: Los editores experimentados detectan rápidamente las grabaciones de voz clonadas que carecen de tono ambiental.
+roleplay:
+  ai_role: desk editor
+  user_role: media verification lead
+  setting: Breaking-news verification desk reviewing a viral political clip.
+  turns:
+  - speaker: ai
+    text: This leaked video is trending fast, and two blogs already ran with it. Does it look authentic to you?
+  - speaker: user
+    goal: Señala los artefactos sintéticos en los bordes y explica en qué se enfocan las herramientas de detección.
+    suggested_lines:
+    - Unnatural blinking and edge-blurring around the jawline often betray synthetic rendering artifacts.
+    - Detection tools zero in on subtle cadence mismatches between lip movement and vocal pitch.
+  - speaker: ai
+    text: Interesting—how can we prove conclusively whether it was manipulated before publishing a debunk?
+  - speaker: user
+    goal: Explica el uso de metadatos criptográficos de procedencia y la corroboración con ángulos independientes.
+    suggested_lines:
+    - Cryptographic provenance metadata helps newsrooms confirm whether raw footage was altered after capture.
+    - Forensic analysts corroborate a disputed clip by cross-referencing independent camera angles and audio acoustics.
+  - speaker: ai
+    text: Right, we should also add a short explainer so our readers know what red flags to watch for.
+  - speaker: user
+    goal: Coincide en que entrenar a la audiencia les ayuda a no dejarse engañar por clips fabricados.
+    suggested_lines:
+    - Training viewers to pause and question emotional triggers helps them see through fabricated clips.

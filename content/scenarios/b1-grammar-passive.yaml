@@ -1,0 +1,96 @@
+id: b1-grammar-passive
+title: Passive voice in present, past, and future
+title_es: Voz pasiva en presente, pasado y futuro
+cefr: B1
+topic: grammar-and-connectors
+description: Enfócate en la acción o el resultado usando la voz pasiva (is made, was
+  built, will be sent).
+phrases:
+- id: coffee-grown-here
+  text: This coffee is grown in small mountain farms.
+  translation: Este café se cultiva en pequeñas fincas de montaña.
+  visual_hint: ☕⛰️
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: is grown
+    meaning: es cultivado / se cultiva (pasiva presente)
+    ipa: ɪz ɡroʊn
+  kind: expression
+  apply_sentence: These shoes ____ in Italy using recycled leather.
+  apply_answer: are made
+  apply_translation: Estos zapatos están hechos en Italia con cuero reciclado.
+- id: bridge-built-in
+  text: The old stone bridge was built in 1890.
+  translation: El viejo puente de piedra fue construido en 1890.
+  visual_hint: 🌉🏛️
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: was built
+    meaning: fue construido (pasiva pasado)
+    ipa: wʌz bɪlt
+  kind: expression
+  apply_sentence: The package ____ to your office yesterday afternoon.
+  apply_answer: was delivered
+  apply_translation: El paquete fue entregado en tu oficina ayer por la tarde.
+- id: results-will-be-sent
+  text: Your test results will be sent by email tomorrow.
+  translation: Los resultados de tu examen serán enviados por correo mañana.
+  visual_hint: 📧📋
+  cloze:
+  - 3
+  - 4
+  - 5
+  glossary:
+  - word: will be sent
+    meaning: serán enviados (pasiva futuro)
+    ipa: wɪl biː sɛnt
+- id: room-is-being-cleaned
+  text: Please wait; the conference room is being cleaned.
+  translation: Por favor espera; la sala de conferencias está siendo limpiada.
+  visual_hint: 🧹🏢
+  cloze:
+  - 5
+  - 6
+  - 7
+  glossary:
+  - word: is being cleaned
+    meaning: está siendo limpiada (pasiva continua)
+    ipa: ɪz ˈbiːɪŋ kliːnd
+- id: flight-has-been-delayed
+  text: Our flight has been delayed due to heavy fog.
+  translation: Nuestro vuelo ha sido retrasado debido a la densa niebla.
+  visual_hint: ✈️🌫️
+  cloze:
+  - 2
+  - 3
+  - 4
+  glossary:
+  - word: has been delayed
+    meaning: ha sido retrasado (pasiva presente perfecto)
+    ipa: hæz biːn dɪˈleɪd
+roleplay:
+  ai_role: tour guide
+  user_role: visitor
+  setting: Visiting a historic chocolate factory and museum.
+  turns:
+  - speaker: ai
+    text: Welcome to the museum! Do you have any questions about the building?
+  - speaker: user
+    goal: Pregunta cuándo fue construido o cómo se hace el chocolate usando voz pasiva.
+    suggested_lines:
+    - When was this factory built?
+    - Where are the cocoa beans grown?
+  - speaker: ai
+    text: It was built in 1925, and our beans are sourced from Ecuador.
+  - speaker: user
+    goal: Pregunta cuándo se enviarán las muestras o si la tienda está abierta usando
+      pasiva.
+    suggested_lines:
+    - Will free samples be given out at the end?
+    - Has the gift shop been renovated recently?
+  - speaker: ai
+    text: Yes, samples are handed out right after the tasting room!

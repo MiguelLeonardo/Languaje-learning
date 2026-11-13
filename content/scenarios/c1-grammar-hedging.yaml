@@ -1,0 +1,100 @@
+id: c1-grammar-hedging
+title: Academic hedging and cautious stance
+title_es: Matización académica y postura cautelosa (hedging)
+cefr: C1
+topic: grammar-and-connectors
+description: Evita afirmaciones absolutas en ensayos y debates usando 'arguably',
+  'to some extent', 'insofar as' y 'tend to'.
+phrases:
+- id: arguably-most-influential
+  text: This is arguably the most influential study on urban mobility.
+  translation: Este es posiblemente el estudio más influyente sobre movilidad urbana.
+  visual_hint: 📚⚖️
+  cloze:
+  - 2
+  glossary:
+  - word: arguably
+    meaning: posiblemente / cabría sostener que
+    ipa: ˈɑːrɡjuəbli
+  kind: expression
+  apply_sentence: Hybrid work is ____ the biggest shift in office culture this decade.
+  apply_answer: arguably
+  apply_translation: El trabajo híbrido es posiblemente el mayor cambio en la cultura
+    de oficina de esta década.
+- id: valid-insofar-as
+  text: The model is valid insofar as the sample remains unbiased.
+  translation: El modelo es válido en la medida en que la muestra siga sin sesgos.
+  visual_hint: 🔬📏
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: insofar as
+    meaning: en la medida en que
+    ipa: ˌɪnsoʊˈfɑːr æz
+  kind: expression
+  apply_sentence: The forecast holds true ____ inflation stays below three percent.
+  apply_answer: insofar as
+  apply_translation: El pronóstico se mantiene válido en la medida en que la inflación
+    siga por debajo del tres por ciento.
+- id: to-a-certain-extent
+  text: To a certain extent, automation displaces routine tasks.
+  translation: Hasta cierto punto, la automatización desplaza las tareas rutinarias.
+  visual_hint: 🤖📊
+  cloze:
+  - 0
+  - 1
+  - 2
+  - 3
+  glossary:
+  - word: to a certain extent
+    meaning: hasta cierto punto
+    ipa: tuː ə ˈsɜːrtən ɪkˈstɛnt
+- id: tend-to-overlook
+  text: Short-term metrics tend to overlook long-term brand trust.
+  translation: Las métricas a corto plazo tienden a pasar por alto la confianza a
+    largo plazo.
+  visual_hint: ⏳🔍
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: tend to
+    meaning: tender a (generalización cautelosa)
+    ipa: tɛnd tuː
+- id: it-would-appear-that
+  text: It would appear that early adoption correlates with higher retention.
+  translation: Parecería que la adopción temprana se correlaciona con una mayor retención.
+  visual_hint: 📈🤔
+  cloze:
+  - 0
+  - 1
+  - 2
+  - 3
+  glossary:
+  - word: it would appear that
+    meaning: parecería que (matiz formal)
+    ipa: ɪt wʊd əˈpɪr ðæt
+roleplay:
+  ai_role: journal reviewer
+  user_role: researcher
+  setting: Defending findings during a peer-review Q&A.
+  turns:
+  - speaker: ai
+    text: Your conclusion sounds quite absolute. Does the data really prove causation?
+  - speaker: user
+    goal: Matiza tu postura usando 'to a certain extent' o 'it would appear that'.
+    suggested_lines:
+    - To a certain extent, yes, though it would appear that external factors also
+      play a role.
+    - We only claim causation insofar as the control group remained stable.
+  - speaker: ai
+    text: That is more measured. How does your paper compare to prior work?
+  - speaker: user
+    goal: Compara usando 'arguably' o 'tend to'.
+    suggested_lines:
+    - Earlier studies tend to overlook regional differences, whereas ours is arguably
+      more granular.
+    - Our dataset is arguably the broadest, though smaller studies tend to agree.
+  - speaker: ai
+    text: With those caveats, I am happy to recommend acceptance.

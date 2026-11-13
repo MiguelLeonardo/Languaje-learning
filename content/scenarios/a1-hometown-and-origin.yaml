@@ -1,0 +1,103 @@
+id: a1-hometown-and-origin
+title: Talking about where you are from
+title_es: Hablar de tu ciudad y país de origen
+cefr: A1
+topic: social-and-smalltalk
+description: Pregunta de dónde es una persona, menciona tu ciudad de origen y describe brevemente cómo es.
+phrases:
+- id: where-are-you-from
+  text: Where are you from originally?
+  translation: ¿De dónde eres originalmente?
+  visual_hint: 🌍❓
+  cloze:
+  - 0
+  - 3
+  - 4
+  glossary:
+  - word: from
+    meaning: de (origen)
+    ipa: frʌm
+  - word: originally
+    meaning: originalmente
+    ipa: əˈrɪdʒənəli
+- id: born-in-mexico
+  text: I am from a small town near Guadalajara.
+  translation: Soy de un pueblo pequeño cerca de Guadalajara.
+  visual_hint: 🏘️📍
+  cloze:
+  - 2
+  - 4
+  - 6
+  glossary:
+  - word: small town
+    meaning: pueblo pequeño
+    ipa: smɔːl taʊn
+  - word: near
+    meaning: cerca de
+    ipa: nɪr
+- id: sunny-friendly-city
+  text: My hometown is very sunny and people are friendly.
+  translation: Mi ciudad natal es muy soleada y la gente es amable.
+  visual_hint: ☀️😊
+  cloze:
+  - 1
+  - 4
+  - 8
+  glossary:
+  - word: hometown
+    meaning: ciudad natal
+    ipa: ˈhoʊmtaʊn
+  - word: friendly
+    meaning: amable / simpático
+    ipa: ˈfrendli
+- id: idm-a1ho-grow-up
+  text: I grew up near the coast with my two brothers.
+  translation: Crecí cerca de la costa con mis dos hermanos (pasar la infancia en un lugar).
+  visual_hint: 🌊👦
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: grow up
+    meaning: crecer / criarse
+    ipa: ɡroʊ ʌp
+  kind: phrasal_verb
+  apply_sentence: Where did your parents ____?
+  apply_answer: grow up
+  apply_translation: ¿Dónde crecieron tus padres?
+- id: idm-a1ho-far-away
+  text: My city is far away, so I miss my family.
+  translation: Mi ciudad está muy lejos, así que extraño a mi familia (a gran distancia).
+  visual_hint: ✈️💭
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: far away
+    meaning: muy lejos
+    ipa: fɑːr əˈweɪ
+  kind: expression
+  apply_sentence: The train station is not ____ from here.
+  apply_answer: far away
+  apply_translation: La estación de tren no está muy lejos de aquí.
+roleplay:
+  ai_role: new neighbor (Daniel)
+  user_role: resident
+  setting: Waiting together at a neighborhood bus stop.
+  turns:
+  - speaker: ai
+    text: Good morning! I love your accent. Where are you from?
+  - speaker: user
+    goal: Dile de dónde eres y menciona dónde creciste.
+    suggested_lines:
+    - I am from a small town near Guadalajara.
+    - I grew up near the coast with my two brothers.
+  - speaker: ai
+    text: Oh, nice! I have always wanted to visit. What is your hometown like?
+  - speaker: user
+    goal: Describe el clima y la gente de tu ciudad, y pregúntale de dónde es él.
+    suggested_lines:
+    - My hometown is very sunny and people are friendly. Where are you from originally?
+    - It is warm and sunny. What about you?
+  - speaker: ai
+    text: I'm from Chicago, so I definitely prefer sunny weather!

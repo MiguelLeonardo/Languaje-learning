@@ -1,0 +1,101 @@
+id: b2-travel-insurance-delay-claim
+title: Filing a travel delay insurance claim
+title_es: Reclamar al seguro por retraso de vuelo
+cefr: B2
+topic: travel-and-transport
+description: Solicita un certificado escrito de retraso a la aerolínea y reúne recibos
+  detallados para tu seguro de viaje.
+phrases:
+- id: written-delay-confirmation
+  text: Could the airline issue a written statement confirming the six-hour delay?
+  translation: ¿Podría la aerolínea emitir un comunicado por escrito confirmando el retraso de seis horas?
+  visual_hint: 📄✈️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: issue
+    meaning: emitir / expedir
+    ipa: ˈɪʃuː
+  - word: statement
+    meaning: declaración / certificado
+    ipa: ˈsteɪtmənt
+- id: itemized-hotel-receipts
+  text: My travel insurer requires itemized receipts for overnight accommodation and meals.
+  translation: Mi aseguradora de viajes exige recibos desglosados por el alojamiento nocturno y las comidas.
+  visual_hint: 🧾🏨
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: itemized
+    meaning: desglosado / detallado
+    ipa: ˈaɪtəmaɪzd
+  - word: accommodation
+    meaning: alojamiento
+    ipa: əˌkɑːməˈdeɪʃən
+- id: out-of-pocket-expenses
+  text: How soon will out-of-pocket expenses be reimbursed under this policy?
+  translation: ¿Qué tan pronto se reembolsarán los gastos pagados de mi bolsillo bajo esta póliza?
+  visual_hint: 💸📋
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: out-of-pocket
+    meaning: pagado de tu propio bolsillo
+    ipa: ˌaʊt əv ˈpɑːkɪt
+  - word: reimbursed
+    meaning: reembolsado
+    ipa: ˌriːɪmˈbɜːrst
+- id: claim-hold-onto
+  text: Make sure you hold onto every boarding pass until the claim settles.
+  translation: Asegúrate de conservar cada tarjeta de embarque hasta que se resuelva la reclamación. (hold onto = conservar)
+  visual_hint: 🎫📌
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: hold onto
+    meaning: guardar / conservar algo
+    ipa: hoʊld ˈɑːntuː
+  kind: phrasal_verb
+  apply_sentence: Please ____ your taxi receipts so we can submit them later.
+  apply_answer: hold onto
+  apply_translation: Por favor, conserva tus recibos de taxi para que podamos presentarlos más tarde.
+- id: claim-silver-lining
+  text: The hotel voucher was a welcome silver lining to an exhausting layover.
+  translation: El vale de hotel fue un lado positivo bienvenido tras una escala agotadora. (silver lining = lado positivo)
+  visual_hint: 🌤️🛏️
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: silver lining
+    meaning: el lado positivo de una mala situación
+    ipa: ˈsɪlvər ˈlaɪnɪŋ
+  kind: idiom
+  apply_sentence: Upgrading our seats was the ____ of a three-hour delay.
+  apply_answer: silver lining
+  apply_translation: Mejorar nuestros asientos fue el lado positivo de un retraso de tres horas.
+roleplay:
+  ai_role: travel insurance claims specialist
+  user_role: insured traveler
+  setting: A phone call with a travel insurance claims representative after a six-hour flight delay.
+  turns:
+  - speaker: ai
+    text: Travel Assistance Claims, speaking. How can I help with your delayed trip?
+  - speaker: user
+    goal: Explica que tu aseguradora pide recibos desglosados y confirma qué documentos necesitas de la aerolínea.
+    suggested_lines:
+    - My flight was delayed six hours. Should the airline issue a written statement confirming the delay, along with itemized receipts for accommodation and meals?
+    - I need to file a delay claim. Do you require a written statement from the airline and itemized receipts?
+  - speaker: ai
+    text: Yes, please upload the airline delay letter, your boarding passes, and itemized receipts through our portal.
+  - speaker: user
+    goal: Pregunta qué tan pronto se reembolsarán los gastos pagados de tu bolsillo.
+    suggested_lines:
+    - How soon will out-of-pocket expenses be reimbursed under this policy?
+    - Once I submit everything, how long does it take for out-of-pocket expenses to be reimbursed?
+  - speaker: ai
+    text: Standard delay claims are processed within five business days via direct deposit.

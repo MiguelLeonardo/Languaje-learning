@@ -1,0 +1,92 @@
+id: a2-lost-glasses-optician
+title: Getting broken glasses fixed at an optician
+title_es: Reparar lentes rotos en una óptica
+cefr: A2
+topic: health-and-emergencies
+description: Pide ayuda urgente en una óptica para reparar el armazón de tus lentes
+  o conseguir lentes de contacto diarios.
+phrases:
+- id: broke-my-glasses
+  text: My glasses broke this morning and I cannot read signs.
+  translation: Mis lentes se rompieron esta mañana y no puedo leer los letreros.
+  visual_hint: 👓💥
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: glasses
+    meaning: lentes / gafas
+    ipa: ˈɡlæsɪz
+- id: fix-the-frame
+  text: Can you fix this bent frame or replace the screw?
+  translation: ¿Puede arreglar este armazón doblado o cambiar el tornillo?
+  visual_hint: 🔧👓
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: frame
+    meaning: armazón / montura
+    ipa: freɪm
+- id: daily-contact-lenses
+  text: Can I buy a small pack of daily contact lenses?
+  translation: ¿Puedo comprar un paquete pequeño de lentes de contacto diarios?
+  visual_hint: 👁️📦
+  cloze:
+  - 7
+  - 9
+  glossary:
+  - word: contact lenses
+    meaning: lentes de contacto
+    ipa: ˈkɑːntækt ˈlenzɪz
+- id: idm-in-a-hurry-a2
+  text: I am in a hurry because my train leaves soon.
+  translation: Tengo prisa porque mi tren sale pronto. (in a hurry = con prisa)
+  visual_hint: 🚆⏱️
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: in a hurry
+    meaning: con prisa / apurado
+    ipa: ɪn ə ˈhɜːri
+  kind: expression
+  apply_sentence: Sorry, I can't chat; I am ____ to catch the bus.
+  apply_answer: in a hurry
+  apply_translation: Perdón, no puedo charlar; tengo prisa por tomar el autobús.
+- id: idm-pick-up-a2
+  text: What time can I pick up the repaired glasses?
+  translation: ¿A qué hora puedo recoger los lentes reparados? (pick up = recoger)
+  visual_hint: 🕒👓
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: pick up
+    meaning: recoger
+    ipa: pɪk ʌp
+  kind: phrasal_verb
+  apply_sentence: I need to ____ my package at the post office.
+  apply_answer: pick up
+  apply_translation: Necesito recoger mi paquete en la oficina de correos.
+roleplay:
+  ai_role: optician
+  user_role: customer
+  setting: Downtown optician shop.
+  turns:
+  - speaker: ai
+    text: Welcome! How can I help you with your eyewear today?
+  - speaker: user
+    goal: Explica que se te rompieron los lentes y pregunta si pueden arreglar el armazón o tornillo.
+    suggested_lines:
+    - My glasses broke this morning and I cannot read signs.
+    - Can you fix this bent frame or replace the screw?
+  - speaker: ai
+    text: Let me check. The screw fell out, so I can replace it in fifteen minutes.
+  - speaker: user
+    goal: Di que tienes prisa por tu tren y pregunta a qué hora puedes recogerlos.
+    suggested_lines:
+    - I am in a hurry because my train leaves soon.
+    - What time can I pick up the repaired glasses?
+  - speaker: ai
+    text: Come back in fifteen minutes and they will be ready for you!

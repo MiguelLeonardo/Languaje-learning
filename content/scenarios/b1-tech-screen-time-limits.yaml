@@ -1,0 +1,95 @@
+id: b1-tech-screen-time-limits
+title: Setting daily screen time limits
+title_es: Limitar el tiempo de pantalla diario
+cefr: B1
+topic: daily-tech-and-media
+description: Configura límites de uso diario en tus aplicaciones y activa el modo de concentración antes de dormir.
+phrases:
+- id: weekly-screen-report
+  text: My weekly screen report showed five hours a day.
+  translation: Mi informe semanal de pantalla mostró cinco horas al día.
+  visual_hint: 📊📱
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: screen report
+    meaning: informe de tiempo de pantalla
+    ipa: skriːn rɪˈpɔːrt
+- id: enable-focus-mode
+  text: I enable focus mode during work hours to avoid distractions.
+  translation: Activo el modo de concentración durante el horario laboral para evitar distracciones.
+  visual_hint: 🎯🔕
+  cloze:
+  - 1
+  - 7
+  glossary:
+  - word: distractions
+    meaning: distracciones
+    ipa: dɪˈstrækʃənz
+- id: grayscale-screen-bedtime
+  text: Switching the display to grayscale makes scrolling less tempting.
+  translation: Cambiar la pantalla a escala de grises hace que deslizar sea menos tentador.
+  visual_hint: 🌑📲
+  cloze:
+  - 4
+  - 7
+  glossary:
+  - word: grayscale
+    meaning: escala de grises
+    ipa: ˈɡreɪskeɪl
+- id: idm-cut-down-on
+  text: I set a thirty-minute timer to cut down on social media.
+  translation: 'Puse un límite de treinta minutos para reducir el uso de redes sociales. (cut down on: reducir)'
+  visual_hint: ⏳✂️
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: cut down on
+    meaning: reducir / disminuir el consumo de algo
+    ipa: kʌt daʊn ɑːn
+  kind: phrasal_verb
+  apply_sentence: She wants to ____ late-night video streaming this month.
+  apply_answer: cut down on
+  apply_translation: Ella quiere reducir el consumo de videos en streaming por la noche este mes.
+- id: idm-wind-down
+  text: Turning off screens at ten helps me wind down before sleep.
+  translation: 'Apagar las pantallas a las diez me ayuda a relajarme antes de dormir. (wind down: relajarse / desconectar)'
+  visual_hint: 🌙😌
+  cloze:
+  - 7
+  - 8
+  glossary:
+  - word: wind down
+    meaning: relajarse / bajar el ritmo antes de descansar
+    ipa: waɪnd daʊn
+  kind: phrasal_verb
+  apply_sentence: Reading a paper book is a great way to ____ after work.
+  apply_answer: wind down
+  apply_translation: Leer un libro en papel es una excelente forma de relajarse después del trabajo.
+roleplay:
+  ai_role: coworker
+  user_role: friend
+  setting: Office break room over afternoon tea.
+  turns:
+  - speaker: ai
+    text: Have you checked your phone usage stats lately? Mine are scary!
+  - speaker: user
+    goal: Comparte tu informe semanal y explica que pusiste un límite para reducir las redes sociales.
+    suggested_lines:
+    - My weekly screen report showed five hours a day.
+    - I set a thirty-minute timer to cut down on social media.
+  - speaker: ai
+    text: That sounds practical. Does it actually stop you from opening apps?
+  - speaker: user
+    goal: Explica que activas el modo de concentración y cambias la pantalla a escala de grises.
+    suggested_lines:
+    - I enable focus mode during work hours to avoid distractions.
+    - Switching the display to grayscale makes scrolling less tempting.
+  - speaker: ai
+    text: Good tip! Do you also have a rule for bedtime?
+  - speaker: user
+    goal: Di que apagar las pantallas a las diez te ayuda a relajarte antes de dormir.
+    suggested_lines:
+    - Turning off screens at ten helps me wind down before sleep.

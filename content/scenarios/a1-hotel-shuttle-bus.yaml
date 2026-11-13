@@ -1,0 +1,98 @@
+id: a1-hotel-shuttle-bus
+title: Taking the hotel shuttle bus
+title_es: Tomar el autobús del hotel
+cefr: A1
+topic: travel-and-transport
+description: Pregunta en el aeropuerto dónde para el autobús del hotel, su frecuencia
+  y si es gratuito.
+phrases:
+- id: where-shuttle-stop
+  text: Where does the hotel shuttle bus stop?
+  translation: ¿Dónde para el autobús de enlace del hotel?
+  visual_hint: 🚐🏨
+  cloze:
+  - 4
+  - 6
+  glossary:
+  - word: shuttle bus
+    meaning: autobús de traslado / enlace
+    ipa: ˈʃʌtəl bʌs
+  - word: stop
+    meaning: parar / detenerse
+    ipa: stɑːp
+- id: how-often-shuttle
+  text: How often does the shuttle come?
+  translation: ¿Cada cuánto pasa el autobús del hotel?
+  visual_hint: 🕒🚐
+  cloze:
+  - 1
+  - 4
+  glossary:
+  - word: how often
+    meaning: con qué frecuencia / cada cuánto
+    ipa: haʊ ˈɔːfən
+- id: is-shuttle-free
+  text: Is the shuttle free for hotel guests?
+  translation: ¿El transporte es gratis para los huéspedes del hotel?
+  visual_hint: 🆓🏨
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: free
+    meaning: gratuito / gratis
+    ipa: friː
+  - word: guests
+    meaning: huéspedes
+    ipa: ɡests
+- id: shuttle-get-on
+  text: We can get on the shuttle outside door two.
+  translation: Podemos subir al autobús afuera de la puerta dos. (get on = subir a)
+  visual_hint: 🚪🚐
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: get on
+    meaning: subir a un vehículo
+    ipa: ɡet ɑːn
+  kind: phrasal_verb
+  apply_sentence: Passengers ____ the bus at the front door.
+  apply_answer: get on
+  apply_translation: Los pasajeros suben al autobús por la puerta delantera.
+- id: shuttle-in-a-hurry
+  text: I am in a hurry to reach the hotel.
+  translation: Tengo prisa por llegar al hotel. (in a hurry = con prisa)
+  visual_hint: 🏃‍♂️🏨
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: in a hurry
+    meaning: tener prisa / apurado
+    ipa: ɪn ə ˈhɜːri
+  kind: expression
+  apply_sentence: We are ____ because our meeting starts soon.
+  apply_answer: in a hurry
+  apply_translation: Tenemos prisa porque nuestra reunión empieza pronto.
+roleplay:
+  ai_role: airport information staff
+  user_role: traveler
+  setting: An airport arrivals information desk near the exit doors.
+  turns:
+  - speaker: ai
+    text: Welcome! How can I help you today?
+  - speaker: user
+    goal: Pregunta dónde para el autobús de enlace del hotel.
+    suggested_lines:
+    - Where does the hotel shuttle bus stop?
+    - Excuse me, where can I catch the hotel shuttle bus?
+  - speaker: ai
+    text: You can get on the shuttle outside door two.
+  - speaker: user
+    goal: Pregunta cada cuánto pasa y si es gratis para huéspedes.
+    suggested_lines:
+    - How often does the shuttle come? Is the shuttle free for hotel guests?
+    - Is it free for hotel guests, and how often does it come?
+  - speaker: ai
+    text: Yes, it is completely free and it comes every fifteen minutes.

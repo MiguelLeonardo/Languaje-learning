@@ -1,0 +1,93 @@
+id: b2-food-waste-composting-cafe
+title: Discussing zero-waste café practices
+title_es: Prácticas de cero desperdicio en cafetería
+cefr: B2
+topic: food-and-drink
+description: Conversa sobre envases compostables, descuentos por taza reutilizable y reducción de merma alimentaria.
+phrases:
+- id: reusable-tumbler
+  text: Do you offer a discount if I bring my own reusable tumbler?
+  translation: ¿Ofrecen algún descuento si traigo mi propio termo reutilizable?
+  visual_hint: ♻️☕
+  cloze:
+  - 9
+  - 10
+  glossary:
+  - word: reusable
+    meaning: reutilizable
+    ipa: ˌriːˈjuːzəbl
+  - word: tumbler
+    meaning: vaso térmico / termo
+    ipa: ˈtʌmblər
+- id: compostable-lid
+  text: Are your takeaway cups and lids genuinely compostable in city bins?
+  translation: ¿Sus vasos y tapas para llevar son realmente compostables en los contenedores municipales?
+  visual_hint: 🌱🥤
+  cloze:
+  - 7
+  glossary:
+  - word: compostable
+    meaning: compostable / biodegradable en compost
+    ipa: kəmˈpoʊstəbl
+- id: surplus-pastries
+  text: What happens to surplus pastries at the end of the day?
+  translation: ¿Qué pasa con los panes y pasteles sobrantes al final del día?
+  visual_hint: 🥐📦
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: surplus
+    meaning: excedente / sobrante
+    ipa: ˈsɜːrpləs
+- id: cut-down-on
+  text: We started baking smaller batches to cut down on food waste.
+  translation: 'Empezamos a hornear lotes más pequeños para reducir el desperdicio de comida. (cut down on: reducir)'
+  visual_hint: 📉🍞
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: cut down on
+    meaning: 'cut down on: reducir el consumo o cantidad de'
+    ipa: kʌt daʊn ɒn
+  kind: phrasal_verb
+  apply_sentence: I am trying to ____ single-use plastic when I buy groceries.
+  apply_answer: cut down on
+  apply_translation: Estoy tratando de reducir el plástico de un solo uso cuando compro víveres.
+- id: in-the-long-run
+  text: Switching to returnable glass jars saves money in the long run.
+  translation: 'Cambiar a frascos de vidrio retornables ahorra dinero a largo plazo. (in the long run: a largo plazo)'
+  visual_hint: 🫙⏳
+  cloze:
+  - 8
+  - 10
+  glossary:
+  - word: in the long run
+    meaning: 'in the long run: a largo plazo'
+    ipa: ɪn ðə lɔːŋ rʌn
+  kind: idiom
+  apply_sentence: Buying quality kitchen knives is cheaper ____ than replacing cheap ones.
+  apply_answer: in the long run
+  apply_translation: Comprar cuchillos de cocina de calidad sale más barato a largo plazo que reemplazar los baratos.
+roleplay:
+  ai_role: eco-conscious café owner
+  user_role: regular customer
+  setting: A zero-waste neighborhood café with a bulk dry-goods corner.
+  turns:
+  - speaker: ai
+    text: Morning! Thanks for bringing your own mug today—we take fifty cents off for that.
+  - speaker: user
+    goal: Pregunta si sus vasos para llevar son compostables y qué hacen con el excedente de panadería.
+    suggested_lines:
+    - That's great! Are your takeaway cups genuinely compostable, and what happens to surplus pastries at closing?
+    - I love that policy. What do you do with surplus pastries at the end of the day?
+  - speaker: ai
+    text: Our cups are plant-based compostable, and we donate leftover pastries through a local food-rescue app.
+  - speaker: user
+    goal: Comenta que reducir el desperdicio así ahorra recursos a largo plazo.
+    suggested_lines:
+    - That really helps cut down on food waste, and it makes sense in the long run.
+    - Smart approach—it cuts down on waste and builds community in the long run.
+  - speaker: ai
+    text: Exactly! Here is your oat flat white. Have a wonderful morning!

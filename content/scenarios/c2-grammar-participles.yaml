@@ -1,0 +1,96 @@
+id: c2-grammar-participles
+title: Participle clauses and absolute constructions
+title_es: Cláusulas de participio y construcciones absolutas
+cefr: C2
+topic: grammar-and-connectors
+description: Sintetiza relaciones de causa, tiempo y condición con elegancia usando
+  participios y cláusulas absolutas.
+phrases:
+- id: having-weighed-the-risks
+  text: Having weighed the legal risks, the board deferred the vote.
+  translation: Habiendo sopesado los riesgos legales, la junta aplazó la votación.
+  visual_hint: ⚖️🗳️
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: having + pp
+    meaning: habiendo + participio (anterioridad)
+    ipa: ˈhævɪŋ
+  kind: expression
+  apply_sentence: ____ exhausted every diplomatic channel, they imposed tariffs.
+  apply_answer: Having
+  apply_translation: Habiendo agotado toda vía diplomática, impusieron aranceles.
+- id: all-things-considered
+  text: All things considered, the transition proceeded remarkably smoothly.
+  translation: Considerándolo todo, la transición avanzó sorprendentemente bien.
+  visual_hint: 🧩✨
+  cloze:
+  - 0
+  - 1
+  - 2
+  glossary:
+  - word: all things considered
+    meaning: considerándolo todo (cláusula absoluta)
+    ipa: ɔːl θɪŋz kənˈsɪdərd
+  kind: expression
+  apply_sentence: ____, the outcome exceeded our most optimistic projections.
+  apply_answer: All things considered
+  apply_translation: Considerándolo todo, el resultado superó nuestras proyecciones
+    más optimistas.
+- id: caught-off-guard
+  text: Caught off guard by the ruling, the firm issued a brief.
+  translation: Tomada por sorpresa por el fallo, la firma emitió un comunicado.
+  visual_hint: ⚡📜
+  cloze:
+  - 0
+  - 1
+  - 2
+  glossary:
+  - word: caught off guard
+    meaning: tomado por sorpresa (participio pasado)
+    ipa: kɔːt ɔːf ɡɑːrd
+- id: weather-permitting
+  text: Weather permitting, the restoration will conclude by autumn.
+  translation: Si el tiempo lo permite, la restauración concluirá en otoño.
+  visual_hint: 🌦️🏛️
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: weather permitting
+    meaning: si el tiempo lo permite (absoluta)
+    ipa: ˈwɛðər pərˈmɪtɪŋ
+- id: there-being-no-objection
+  text: There being no further objections, the motion stands carried.
+  translation: No habiendo más objeciones, la moción queda aprobada.
+  visual_hint: 🔨✅
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: there being
+    meaning: no habiendo / al haber (formal absoluto)
+    ipa: ðɛr ˈbiːɪŋ
+roleplay:
+  ai_role: arbitrator
+  user_role: senior partner
+  setting: Summarizing a multi-party settlement at a formal hearing.
+  turns:
+  - speaker: ai
+    text: Counsel, are both parties ready to enter the final stipulation?
+  - speaker: user
+    goal: Abre con una cláusula de participio ('Having reviewed...', 'Caught...').
+    suggested_lines:
+    - Having reviewed the revised schedule, our client is prepared to sign.
+    - Having reconciled the outstanding figures, we see no remaining barrier.
+  - speaker: ai
+    text: And how do you assess the compromise overall?
+  - speaker: user
+    goal: Usa una construcción absoluta ('All things considered', 'There being...',
+      'Time permitting').
+    suggested_lines:
+    - All things considered, it is a balanced outcome for both sides.
+    - There being no further amendments, we move to ratify today.
+  - speaker: ai
+    text: Very well. Let the record reflect the agreement.

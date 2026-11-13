@@ -1,0 +1,95 @@
+id: c1-daily-ergonomic-home-office
+title: Optimizing an ergonomic home office
+title_es: Optimizar una oficina en casa ergonómica
+cefr: C1
+topic: daily-tech-and-media
+description: Ajusta la iluminación, la acústica y la postura de tu espacio de trabajo híbrido para evitar fatiga.
+phrases:
+- id: calibrate-monitor-glare
+  text: Positioning the monitor perpendicular to the window eliminates harsh afternoon screen glare.
+  translation: Colocar el monitor perpendicular a la ventana elimina el reflejo molesto de la pantalla por la tarde.
+  visual_hint: 🖥️☀️
+  cloze:
+  - 3
+  - 9
+  glossary:
+  - word: glare
+    meaning: reflejo / deslumbramiento
+    ipa: ɡler
+- id: acoustic-foam-dampening
+  text: Soft furnishings and acoustic panels dampen hollow room echo during client calls.
+  translation: Los textiles y paneles acústicos amortiguan el eco hueco de la habitación durante las llamadas con clientes.
+  visual_hint: 🎙️🧱
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: dampen
+    meaning: amortiguar / atenuar
+    ipa: ˈdæmpən
+- id: eye-level-posture
+  text: Raising the display to eye level relieves chronic neck strain after long coding sessions.
+  translation: Elevar la pantalla al nivel de los ojos alivia la tensión cervical crónica tras largas sesiones de programación.
+  visual_hint: 🪑👀
+  cloze:
+  - 4
+  - 7
+  glossary:
+  - word: strain
+    meaning: tensión / esfuerzo excesivo
+    ipa: streɪn
+- id: idm-dial-in
+  text: It took a week of minor adjustments to dial in the ideal standing desk height.
+  translation: 'Llevó una semana de ajustes menores afinar la altura ideal del escritorio de pie. (dial in: calibrar / ajustar con precisión)'
+  visual_hint: 🎛️📏
+  cloze:
+  - 7
+  - 8
+  glossary:
+  - word: dial in
+    meaning: ajustar con precisión / calibrar
+    ipa: ˈdaɪəl ɪn
+  kind: phrasal_verb
+  apply_sentence: Use the colorimeter to ____ accurate brightness before editing photos.
+  apply_answer: dial in
+  apply_translation: Usa el colorímetro para calibrar un brillo preciso antes de editar fotos.
+- id: idm-ward-off
+  text: Taking hourly stretch breaks helps ward off repetitive wrist fatigue.
+  translation: 'Hacer pausas cada hora para estirarse ayuda a prevenir la fatiga repetitiva de muñeca. (ward off: prevenir / ahuyentar)'
+  visual_hint: 🧘⏱️
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: ward off
+    meaning: prevenir / evitar algo negativo
+    ipa: wɔːrd ɔːf
+  kind: phrasal_verb
+  apply_sentence: Warm bias lighting behind the screen can ____ eye strain at night.
+  apply_answer: ward off
+  apply_translation: Una iluminación ambiental cálida detrás de la pantalla puede prevenir la fatiga visual por la noche.
+roleplay:
+  ai_role: remote teammate
+  user_role: workspace advisor
+  setting: Casual video check-in while upgrading a spare bedroom into an office.
+  turns:
+  - speaker: ai
+    text: I moved my desk into the spare room, but my neck hurts and calls sound echoey. Any tips?
+  - speaker: user
+    goal: Aconseja elevar la pantalla al nivel de los ojos y usar paneles o textiles para amortiguar el eco.
+    suggested_lines:
+    - Raising the display to eye level relieves chronic neck strain after long coding sessions.
+    - Soft furnishings and acoustic panels dampen hollow room echo during client calls.
+  - speaker: ai
+    text: Good idea. Also, the afternoon sun hits my screen right around three o'clock.
+  - speaker: user
+    goal: Sugiere colocar el monitor perpendicular a la ventana y calibrar la altura del escritorio.
+    suggested_lines:
+    - Positioning the monitor perpendicular to the window eliminates harsh afternoon screen glare.
+    - It took a week of minor adjustments to dial in the ideal standing desk height.
+  - speaker: ai
+    text: What about wrist soreness from typing all day?
+  - speaker: user
+    goal: Recomienda pausas cada hora para estirarse y prevenir la fatiga repetitiva.
+    suggested_lines:
+    - Taking hourly stretch breaks helps ward off repetitive wrist fatigue.

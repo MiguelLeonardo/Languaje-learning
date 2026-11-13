@@ -1,0 +1,100 @@
+id: b2-cross-border-driving-permit
+title: Cross-border driving permits & vignettes
+title_es: Permisos y viñetas para conducir entre países
+cefr: B2
+topic: travel-and-transport
+description: Verifica en la agencia de alquiler la autorización transfronteriza, viñetas
+  de autopista y zonas de bajas emisiones.
+phrases:
+- id: cross-border-authorization
+  text: Does this rental policy permit cross-border travel into neighboring countries?
+  translation: ¿Esta póliza de alquiler permite viajar al extranjero hacia países vecinos?
+  visual_hint: 🚗🛂
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: permit
+    meaning: permitir / autorizar
+    ipa: pərˈmɪt
+  - word: cross-border
+    meaning: transfronterizo / entre países
+    ipa: ˌkrɔːsˈbɔːrdər
+- id: highway-vignette-sticker
+  text: Do we need to buy a motorway vignette before crossing the border?
+  translation: ¿Necesitamos comprar una viñeta de autopista antes de cruzar la frontera?
+  visual_hint: 🛣️🏷️
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: motorway vignette
+    meaning: viñeta / pegatina de peaje en autopista
+    ipa: ˈmoʊtərweɪ vɪnˈjet
+- id: low-emission-zone-permit
+  text: Is the vehicle registered for urban low-emission zones in Germany?
+  translation: ¿El vehículo está registrado para las zonas urbanas de bajas emisiones en Alemania?
+  visual_hint: 🌿🏙️
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: registered
+    meaning: registrado / dado de alta
+    ipa: ˈredʒɪstərd
+  - word: low-emission
+    meaning: de bajas emisiones
+    ipa: loʊ ɪˈmɪʃən
+- id: border-read-up-on
+  text: We should read up on local speed limits before leaving.
+  translation: Deberíamos informarnos sobre los límites de velocidad locales antes de salir. (read up on = informarse / leer sobre)
+  visual_hint: 📖🚦
+  cloze:
+  - 2
+  - 3
+  - 4
+  glossary:
+  - word: read up on
+    meaning: informarse / investigar sobre un tema
+    ipa: riːd ʌp ɑːn
+  kind: phrasal_verb
+  apply_sentence: Always ____ winter tire laws before driving into the Alps.
+  apply_answer: read up on
+  apply_translation: Infórmate siempre sobre las leyes de neumáticos de invierno antes de conducir hacia los Alpes.
+- id: border-by-the-book
+  text: Border police check rental paperwork strictly by the book.
+  translation: La policía fronteriza revisa los documentos del alquiler estrictamente al pie de la letra. (by the book = según las normas)
+  visual_hint: 📘👮
+  cloze:
+  - 6
+  - 7
+  - 8
+  glossary:
+  - word: by the book
+    meaning: estrictamente según las normas
+    ipa: baɪ ðə bʊk
+  kind: expression
+  apply_sentence: Ensure your vehicle registration is handled ____.
+  apply_answer: by the book
+  apply_translation: Asegúrate de que el registro de tu vehículo se gestione estrictamente según las normas.
+roleplay:
+  ai_role: rental branch supervisor
+  user_role: road-trip driver
+  setting: A car rental office near a European border hub.
+  turns:
+  - speaker: ai
+    text: Here are your keys. Are you staying within the country, or driving abroad?
+  - speaker: user
+    goal: Pregunta si la póliza permite viajar a países vecinos y si necesitas viñeta de autopista.
+    suggested_lines:
+    - Does this rental policy permit cross-border travel into neighboring countries? Do we need to buy a motorway vignette before crossing the border?
+    - We plan to drive into Austria and Germany. Does the policy permit cross-border travel, and do we need a motorway vignette?
+  - speaker: ai
+    text: Cross-border travel to Western Europe is covered for a small fee, and you will need an Austrian vignette.
+  - speaker: user
+    goal: Pregunta si el vehículo está registrado para zonas urbanas de bajas emisiones en Alemania.
+    suggested_lines:
+    - Is the vehicle registered for urban low-emission zones in Germany?
+    - Does the windshield already have the green sticker for German low-emission zones?
+  - speaker: ai
+    text: Yes, the green emission badge is on the windshield, and I will add the cross-border authorization to your contract.

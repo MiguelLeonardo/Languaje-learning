@@ -1,0 +1,96 @@
+id: c1-poison-control-triage
+title: Consulting poison control after chemical exposure
+title_es: Consultar al centro de toxicología por exposición accidental
+cefr: C1
+topic: health-and-emergencies
+description: Comunica con precisión al centro de toxicología el agente químico,
+  la vía de exposición y las medidas iniciales aplicadas.
+phrases:
+- id: chemical-exposure-route
+  text: The cleaning solvent splashed onto his forearms and triggered acute respiratory irritation.
+  translation: El solvente de limpieza salpicó sus antebrazos y provocó irritación respiratoria aguda.
+  visual_hint: 🧪⚠️
+  cloze:
+  - 2
+  - 4
+  - 10
+  glossary:
+  - word: solvent
+    meaning: solvente / disolvente
+    ipa: ˈsɑːlvənt
+- id: sds-active-ingredient
+  text: I have the safety data sheet listing sodium hypochlorite as the primary agent.
+  translation: Tengo la hoja de datos de seguridad que indica hipoclorito de sodio como agente principal.
+  visual_hint: 📄🔬
+  cloze:
+  - 4
+  - 5
+  - 7
+  glossary:
+  - word: safety data sheet
+    meaning: hoja de datos de seguridad
+    ipa: ˈseɪfti ˈdeɪtə ʃiːt
+- id: decontamination-timeline
+  text: We flushed the skin for fifteen minutes; should we induce vomiting or avoid it?
+  translation: Enjuagamos la piel durante quince minutos; ¿debemos inducir el vómito o evitarlo?
+  visual_hint: 🚰🚑
+  cloze:
+  - 2
+  - 9
+  - 10
+  glossary:
+  - word: flushed
+    meaning: enjuagamos con abundante agua
+    ipa: flʌʃt
+- id: idm-act-up-c1
+  text: His wheezing started to act up twenty minutes after ventilating the room.
+  translation: Sus sibilancias empezaron a empeorar veinte minutos después de ventilar la habitación. (act up = agravarse)
+  visual_hint: 🫁💨
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: act up
+    meaning: agravarse / dar problemas
+    ipa: ækt ʌp
+  kind: phrasal_verb
+  apply_sentence: My asthma tends to ____ whenever the air quality drops.
+  apply_answer: act up
+  apply_translation: Mi asma tiende a agravarse cada vez que baja la calidad del aire.
+- id: idm-out-of-the-woods-c1
+  text: Once his airway stabilizes, will he be out of the woods?
+  translation: Una vez que se estabilice su vía aérea, ¿estará fuera de peligro? (out of the woods)
+  visual_hint: 🌲🏥
+  cloze:
+  - 7
+  - 9
+  - 10
+  glossary:
+  - word: out of the woods
+    meaning: fuera de peligro
+    ipa: aʊt əv ðə wʊdz
+  kind: idiom
+  apply_sentence: The fever broke, though the physician warned we aren't ____ yet.
+  apply_answer: out of the woods
+  apply_translation: La fiebre cedió, aunque el médico advirtió que aún no estamos fuera de peligro.
+roleplay:
+  ai_role: toxicology triage specialist
+  user_role: workplace safety coordinator
+  setting: Emergency phone call to a regional poison control center.
+  turns:
+  - speaker: ai
+    text: Regional Poison Control, this is Dr. Vance. Tell me the substance involved and the person's current symptoms.
+  - speaker: user
+    goal: Explica cómo ocurrió la exposición y especifica el agente químico según la hoja de seguridad.
+    suggested_lines:
+    - The cleaning solvent splashed onto his forearms and triggered acute respiratory irritation.
+    - I have the safety data sheet listing sodium hypochlorite as the primary agent.
+  - speaker: ai
+    text: Good that you have the SDS. Keep him in fresh air and never induce vomiting with corrosive agents.
+  - speaker: user
+    goal: Indica que ya lavaron la piel 15 minutos, menciona que las sibilancias empeoraron y pregunta cuándo estará fuera de peligro.
+    suggested_lines:
+    - His wheezing started to act up twenty minutes after ventilating the room.
+    - Once his airway stabilizes, will he be out of the woods?
+  - speaker: ai
+    text: Because he is wheezing, dispatch EMS for bronchodilator monitoring; I will transmit our toxicology protocol directly to the receiving ER.

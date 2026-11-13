@@ -1,0 +1,104 @@
+id: c1-luxury-hotel-vip-buyout
+title: Coordinating a VIP resort wing buyout
+title_es: Coordinar reserva privada de ala VIP en resort
+cefr: C1
+topic: hotel-and-shopping
+description: Negocia la reserva exclusiva de un ala completa de hotel para un equipo ejecutivo
+  con privacidad y catering.
+phrases:
+- id: exclusive-wing-buyout
+  text: We're looking to arrange an exclusive buyout of the east villa wing for four nights.
+  translation: Buscamos coordinar una reserva exclusiva de toda el ala este de villas por
+    cuatro noches.
+  visual_hint: 🏝️🔐
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: exclusive buyout
+    meaning: reserva exclusiva de un área completa
+    ipa: ɪkˈskluːsɪv ˈbaɪaʊt
+- id: discreet-private-entrance
+  text: Our principals require a discreet private entrance and dedicated keycard-restricted
+    elevator access.
+  translation: Nuestros directivos requieren una entrada privada discreta y acceso exclusivo
+    en elevador con tarjeta.
+  visual_hint: 🚪🛡️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: discreet
+    meaning: discreta
+    ipa: dɪˈskriːt
+  - word: dedicated
+    meaning: exclusivo / dedicado
+    ipa: ˈdedɪkeɪtɪd
+- id: attrition-cancellation-clause
+  text: Could we build a flexible attrition clause into the master agreement?
+  translation: ¿Podríamos incluir una cláusula flexible de reducción de habitaciones en el
+    contrato principal?
+  visual_hint: 📑✍️
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: attrition clause
+    meaning: cláusula de reducción sin penalización
+    ipa: əˈtrɪʃən klɔːz
+- id: idm-iron-out-logistics
+  text: Let's iron out the catering and security logistics before signing the addendum.
+  translation: Resolvamos los detalles de catering y seguridad antes de firmar el anexo.
+  visual_hint: 🤝📋
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: iron out
+    meaning: resolver / pulir detalles
+    ipa: ˈaɪərn aʊt
+  kind: phrasal_verb
+  apply_sentence: We need one more call to ____ the arrival schedule.
+  apply_answer: iron out
+  apply_translation: Necesitamos una llamada más para pulir los detalles del horario de llegada.
+- id: idm-above-and-beyond
+  text: Your concierge team always goes above and beyond for high-profile delegations.
+  translation: Su equipo de conserjería siempre supera las expectativas para delegaciones
+    de alto perfil.
+  visual_hint: 🌟🏨
+  cloze:
+  - 5
+  - 7
+  glossary:
+  - word: above and beyond
+    meaning: ir más allá de lo esperado
+    ipa: əˈbʌv ənd bɪˈjɑːnd
+  kind: idiom
+  apply_sentence: The staff went ____ to prepare kosher meals at midnight.
+  apply_answer: above and beyond
+  apply_translation: El personal fue más allá de lo esperado para preparar comidas kosher
+    a medianoche.
+roleplay:
+  ai_role: director of VIP services
+  user_role: executive assistant
+  setting: Private boardroom at a five-star coastal resort.
+  turns:
+  - speaker: ai
+    text: Thank you for visiting. Tell me about the privacy requirements for your executive
+      retreat.
+  - speaker: user
+    goal: Propón la reserva exclusiva del ala este y detalla el acceso privado discreto.
+    suggested_lines:
+    - We're looking to arrange an exclusive buyout of the east villa wing for four nights.
+    - Our principals require a discreet private entrance and dedicated keycard-restricted
+      elevator access.
+  - speaker: ai
+    text: The east wing can be isolated with its own security perimeter and private driveway.
+  - speaker: user
+    goal: Solicita una cláusula flexible de reducción y propón pulir los detalles antes de
+      firmar.
+    suggested_lines:
+    - Could we build a flexible attrition clause into the master agreement?
+    - Let's iron out the catering and security logistics before signing the addendum.
+  - speaker: ai
+    text: We can allow a fifteen percent attrition window up to thirty days prior.

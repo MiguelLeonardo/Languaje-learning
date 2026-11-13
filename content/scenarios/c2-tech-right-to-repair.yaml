@@ -1,0 +1,95 @@
+id: c2-tech-right-to-repair
+title: Debating the right to repair
+title_es: Debatir el derecho a reparar
+cefr: C2
+topic: daily-tech-and-media
+description: Argumenta sobre la obsolescencia programada, el emparejamiento de piezas y la legislación del derecho a reparar.
+phrases:
+- id: parts-pairing-locks
+  text: Software-enforced parts pairing needlessly bricks third-party battery replacements on modern handsets.
+  translation: El emparejamiento de piezas impuesto por software inutiliza innecesariamente los reemplazos de batería de terceros en teléfonos modernos.
+  visual_hint: 🔋🔒
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: bricks
+    meaning: inutiliza por completo (un dispositivo)
+    ipa: brɪks
+- id: planned-obsolescence-waste
+  text: Glue-sealed chassis accelerate planned obsolescence and swell global e-waste streams.
+  translation: Los chasis sellados con pegamento aceleran la obsolescencia programada y engrosan los flujos globales de basura electrónica.
+  visual_hint: ♻️📱
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: e-waste
+    meaning: residuos electrónicos / basura electrónica
+    ipa: ˈiː weɪst
+- id: mandatory-repairability-index
+  text: A mandatory repairability index empowers consumers to weigh longevity before purchasing hardware.
+  translation: Un índice obligatorio de reparabilidad empodera a los consumidores para sopesar la durabilidad antes de comprar hardware.
+  visual_hint: 🛠️📊
+  cloze:
+  - 2
+  - 6
+  glossary:
+  - word: longevity
+    meaning: longevidad / vida útil prolongada
+    ipa: lɔːnˈdʒevəti
+- id: idm-push-back-against
+  text: Independent technicians are uniting to push back against restrictive diagnostic tool monopolies.
+  translation: 'Los técnicos independientes se están uniendo para oponerse a los monopolios restrictivos de herramientas de diagnóstico. (push back against: oponerse / resistir)'
+  visual_hint: 🧰✊
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: push back against
+    meaning: oponerse activamente a / resistir
+    ipa: pʊʃ bæk əˈɡenst
+  kind: phrasal_verb
+  apply_sentence: Consumer advocates continue to ____ proprietary screw heads designed solely to deter repairs.
+  apply_answer: push back against
+  apply_translation: Los defensores del consumidor siguen oponiéndose a los tornillos propietarios diseñados únicamente para disuadir reparaciones.
+- id: idm-write-off
+  text: Denying schematic access forces households to write off otherwise salvageable laptops after minor faults.
+  translation: 'Negar el acceso a esquemas eléctricos obliga a los hogares a dar por perdidos portátiles reparables tras fallos menores. (write off: dar por perdido / descartar)'
+  visual_hint: 💻🗑️
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: write off
+    meaning: dar por perdido / descartar por inservible
+    ipa: raɪt ɔːf
+  kind: phrasal_verb
+  apply_sentence: Without affordable replacement screens, users simply ____ cracked tablets as total losses.
+  apply_answer: write off
+  apply_translation: Sin pantallas de repuesto asequibles, los usuarios simplemente dan por perdidas las tabletas rotas.
+roleplay:
+  ai_role: hardware lobbyist
+  user_role: consumer rights advocate
+  setting: Legislative hearing on consumer electronics durability standards.
+  turns:
+  - speaker: ai
+    text: Restricting repairs to authorized centers protects intellectual property and prevents unsafe battery swaps.
+  - speaker: user
+    goal: Rebate señalando cómo el emparejamiento de piezas inutiliza baterías y cómo el sellado con pegamento acelera la basura electrónica.
+    suggested_lines:
+    - Software-enforced parts pairing needlessly bricks third-party battery replacements on modern handsets.
+    - Glue-sealed chassis accelerate planned obsolescence and swell global e-waste streams.
+  - speaker: ai
+    text: Even so, publishing internal schematics could expose proprietary board layouts to competitors.
+  - speaker: user
+    goal: Explica que negar esquemas obliga a dar por perdidos portátiles reparables y que los técnicos se oponen a esos monopolios.
+    suggested_lines:
+    - Denying schematic access forces households to write off otherwise salvageable laptops after minor faults.
+    - Independent technicians are uniting to push back against restrictive diagnostic tool monopolies.
+  - speaker: ai
+    text: What policy compromise would actually help buyers at the point of sale?
+  - speaker: user
+    goal: Propón un índice obligatorio de reparabilidad para que los consumidores evalúen la durabilidad.
+    suggested_lines:
+    - A mandatory repairability index empowers consumers to weigh longevity before purchasing hardware.

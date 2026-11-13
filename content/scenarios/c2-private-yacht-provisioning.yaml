@@ -1,0 +1,108 @@
+id: c2-private-yacht-provisioning
+title: Coordinating luxury yacht provisioning
+title_es: Gestionar aprovisionamiento de lujo para yate privado
+cefr: C2
+topic: hotel-and-shopping
+description: Coordina suministros libres de impuestos, vinos de guarda y entregas en muelle
+  bajo estricta cadena de frío.
+phrases:
+- id: bonded-stores-customs
+  text: Ensure the bonded stores manifest clears port customs prior to our dawn departure.
+  translation: Asegure que el manifiesto de suministros en depósito aduanero pase aduana antes
+    de nuestra salida al alba.
+  visual_hint: 🛥️🛃
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: bonded stores
+    meaning: suministros libres de impuestos bajo aduana
+    ipa: ˈbɑːndɪd stɔːrz
+  - word: clears
+    meaning: despacha / supera (aduana)
+    ipa: klɪrz
+- id: unbroken-cold-chain
+  text: The dry-aged wagyu and live shellfish must arrive via an unbroken cold chain at berth
+    four.
+  translation: El wagyu madurado en seco y los mariscos vivos deben llegar mediante cadena
+    de frío ininterrumpida al muelle cuatro.
+  visual_hint: 🧊🦞
+  cloze:
+  - 8
+  - 9
+  glossary:
+  - word: cold chain
+    meaning: cadena de frío
+    ipa: koʊld tʃeɪn
+  - word: berth
+    meaning: muelle / amarre
+    ipa: bɜːrθ
+- id: provenance-vintages-cellar
+  text: Our chief stewardess requires temperature-logged provenance for all grand cru vintages.
+  translation: Nuestra sobrecargo requiere trazabilidad con registro térmico para todas las
+    añadas grand cru.
+  visual_hint: 🍷🌡️
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: provenance
+    meaning: trazabilidad / procedencia
+    ipa: ˈprɑːvənəns
+- id: idm-leave-nothing-to-chance
+  text: With charter guests boarding at noon, we cannot leave anything to chance.
+  translation: Con los huéspedes del chárter embarcando al mediodía, no podemos dejar nada
+    al azar.
+  visual_hint: ⏱️🎯
+  cloze:
+  - 8
+  - 11
+  glossary:
+  - word: leave anything to chance
+    meaning: dejar nada al azar
+    ipa: liːv ˈeniθɪŋ tə tʃæns
+  kind: idiom
+  apply_sentence: Double-check every manifest so we ____ during the crossing.
+  apply_answer: leave nothing to chance
+  apply_translation: Verifica cada manifiesto para no dejar nada al azar durante la travesía.
+- id: idm-source-short-notice
+  text: Can your purveyor track down white Alba truffles on such short notice?
+  translation: ¿Puede su proveedor conseguir trufas blancas de Alba con tan poca antelación?
+  visual_hint: 🍄📞
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: track down
+    meaning: localizar / conseguir (algo difícil)
+    ipa: træk daʊn
+  kind: phrasal_verb
+  apply_sentence: Our concierge managed to ____ vintage Champagne before sunset.
+  apply_answer: track down
+  apply_translation: Nuestro conserje logró conseguir champán añejo antes del atardecer.
+roleplay:
+  ai_role: yacht provisioning agent
+  user_role: chief purser
+  setting: Private marina dockside office before a Mediterranean charter.
+  turns:
+  - speaker: ai
+    text: Morning! Your dry goods are palletized, and the refrigerated van is en route.
+  - speaker: user
+    goal: Exige despacho aduanero antes del alba y cadena de frío ininterrumpida para carnes
+      y mariscos.
+    suggested_lines:
+    - Ensure the bonded stores manifest clears port customs prior to our dawn departure.
+    - The dry-aged wagyu and live shellfish must arrive via an unbroken cold chain at berth
+      four.
+  - speaker: ai
+    text: Customs clearance is stamped, and the reefers are holding steady at two degrees
+      Celsius.
+  - speaker: user
+    goal: Pide registro térmico de los vinos y pregunta si pueden conseguir trufas de Alba
+      con poca antelación.
+    suggested_lines:
+    - Our chief stewardess requires temperature-logged provenance for all grand cru vintages.
+    - Can your purveyor track down white Alba truffles on such short notice?
+  - speaker: ai
+    text: Our Turin supplier is flying two kilos in tonight—everything will be aboard by 6:00
+      AM.

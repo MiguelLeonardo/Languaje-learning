@@ -1,0 +1,106 @@
+id: b2-pushing-back-scope-creep
+title: Pushing back on scope creep
+title_es: Frenar cambios fuera de alcance
+cefr: B2
+topic: work-and-career
+description: Reconoce una nueva petición del cliente, explica su impacto en plazos y
+  presupuesto y propón alternativas realistas.
+phrases:
+- id: acknowledge-request-value
+  text: That is a valuable idea, though it falls outside our agreed scope.
+  translation: Es una idea valiosa, aunque queda fuera del alcance que acordamos.
+  visual_hint: 💡📏
+  cloze:
+  - 3
+  - 6
+  - 10
+  glossary:
+  - word: falls outside
+    meaning: queda fuera de
+    ipa: fɔːlz ˌaʊtˈsaɪd
+  - word: scope
+    meaning: alcance del proyecto
+    ipa: skoʊp
+- id: explain-timeline-impact
+  text: Adding custom analytics now would delay the launch by two weeks.
+  translation: Añadir analítica personalizada ahora retrasaría el lanzamiento dos semanas.
+  visual_hint: ⏳📊
+  cloze:
+  - 1
+  - 5
+  - 7
+  glossary:
+  - word: delay
+    meaning: retrasar
+    ipa: dɪˈleɪ
+  - word: custom
+    meaning: personalizado / a medida
+    ipa: ˈkʌstəm
+- id: propose-phase-two
+  text: We can log this for phase two or swap out another feature.
+  translation: Podemos registrarlo para la fase dos o intercambiarlo por otra función.
+  visual_hint: 🔄2️⃣
+  cloze:
+  - 2
+  - 5
+  - 8
+  glossary:
+  - word: phase two
+    meaning: segunda fase
+    ipa: feɪz tuː
+  - word: swap out
+    meaning: intercambiar / sustituir
+    ipa: swɑːp aʊt
+- id: idm-move-the-goalposts
+  text: If we keep adding features, we are moving the goalposts mid-sprint.
+  translation: 'Si seguimos añadiendo funciones, estamos cambiando las reglas a mitad del sprint. (move the goalposts: cambiar las condiciones sobre la marcha)'
+  visual_hint: 🥅🔄
+  cloze:
+  - 6
+  - 7
+  - 9
+  glossary:
+  - word: move the goalposts
+    meaning: cambiar las reglas o metas sobre la marcha
+    ipa: muːv ðə ˈɡoʊlpoʊsts
+  kind: idiom
+  apply_sentence: It is unfair to ____ right before the final review.
+  apply_answer: move the goalposts
+  apply_translation: Es injusto cambiar las reglas justo antes de la revisión final.
+- id: idm-draw-the-line
+  text: We need to draw the line here to protect our launch quality.
+  translation: 'Debemos poner un límite aquí para proteger la calidad del lanzamiento. (draw the line: trazar un límite)'
+  visual_hint: ✏️🛑
+  cloze:
+  - 3
+  - 4
+  - 9
+  glossary:
+  - word: draw the line
+    meaning: poner un límite firme
+    ipa: drɔː ðə laɪn
+  kind: expression
+  apply_sentence: I am happy to help, but I ____ at working every Sunday.
+  apply_answer: draw the line
+  apply_translation: Con gusto ayudo, pero pongo el límite en trabajar todos los domingos.
+roleplay:
+  ai_role: stakeholder
+  user_role: product manager
+  setting: Mid-project sync where a stakeholder requests an unscheduled reporting module.
+  turns:
+  - speaker: ai
+    text: Before we wrap up, could we also squeeze in a custom analytics export for Friday's release?
+  - speaker: user
+    goal: Reconoce que la idea es valiosa pero queda fuera del alcance acordado y explica que retrasaría el lanzamiento.
+    suggested_lines:
+    - That is a valuable idea, though it falls outside our agreed scope. Adding custom analytics now would delay the launch by two weeks.
+    - I see the value, but it falls outside our agreed scope and would delay Friday's release.
+  - speaker: ai
+    text: Surely it is just one extra button on the dashboard, right?
+  - speaker: user
+    goal: Explica con firmeza que hay que poner un límite para proteger la calidad y propón pasarlo a fase dos o intercambiar otra función.
+    suggested_lines:
+    - We need to draw the line here to protect our launch quality. We can log this for phase two or swap out another feature.
+    - It requires backend changes too, so we can log this for phase two or swap out another feature.
+  - speaker: ai
+    text: Fair enough—let's protect Friday's launch and put the export at the top of phase two.

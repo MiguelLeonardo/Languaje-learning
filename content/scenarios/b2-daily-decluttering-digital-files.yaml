@@ -1,0 +1,95 @@
+id: b2-daily-decluttering-digital-files
+title: Decluttering digital files and photos
+title_es: Ordenar archivos y fotos digitales
+cefr: B2
+topic: daily-tech-and-media
+description: Organiza carpetas desordenadas, elimina duplicados y crea una estructura clara en la nube.
+phrases:
+- id: consistent-folder-hierarchy
+  text: Adopting a consistent folder hierarchy by year keeps tax documents easy to find.
+  translation: Adoptar una jerarquía de carpetas coherente por año mantiene los documentos fiscales fáciles de encontrar.
+  visual_hint: 📁🗂️
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: hierarchy
+    meaning: jerarquía / estructura ordenada
+    ipa: ˈhaɪərɑːrki
+- id: remove-duplicate-screenshots
+  text: Blurry photos and duplicate screenshots quietly eat up gigabytes of cloud space.
+  translation: Las fotos borrosas y las capturas duplicadas consumen silenciosamente gigabytes de espacio en la nube.
+  visual_hint: 🖼️🗑️
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: duplicate
+    meaning: duplicado / repetido
+    ipa: ˈduːplɪkət
+- id: archive-completed-projects
+  text: Moving completed projects into an archive folder prevents desktop clutter.
+  translation: Mover los proyectos terminados a una carpeta de archivo evita el desorden en el escritorio.
+  visual_hint: 📦💻
+  cloze:
+  - 5
+  - 8
+  glossary:
+  - word: clutter
+    meaning: desorden / acumulación
+    ipa: ˈklʌtər
+- id: idm-sort-through
+  text: I spent Sunday morning trying to sort through five thousand unorganized downloads.
+  translation: 'Pasé el domingo por la mañana intentando clasificar cinco mil descargas desordenadas. (sort through: revisar y ordenar)'
+  visual_hint: 🔍📥
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: sort through
+    meaning: revisar y clasificar / ordenar
+    ipa: sɔːrt θruː
+  kind: phrasal_verb
+  apply_sentence: Take twenty minutes on Friday to ____ your inbox and delete old newsletters.
+  apply_answer: sort through
+  apply_translation: Tómate veinte minutos el viernes para revisar tu bandeja y borrar boletines viejos.
+- id: idm-clean-up
+  text: Setting a monthly reminder helps you clean up temporary files before they pile up.
+  translation: 'Poner un recordatorio mensual te ayuda a limpiar archivos temporales antes de que se acumulen. (clean up: limpiar / ordenar)'
+  visual_hint: 🧹📅
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: clean up
+    meaning: limpiar / poner en orden
+    ipa: kliːn ʌp
+  kind: phrasal_verb
+  apply_sentence: We need to ____ the shared team drive before the new interns arrive.
+  apply_answer: clean up
+  apply_translation: Necesitamos ordenar la unidad compartida del equipo antes de que lleguen los nuevos pasantes.
+roleplay:
+  ai_role: friend
+  user_role: organizer
+  setting: Weekend coffee at home with laptops side by side.
+  turns:
+  - speaker: ai
+    text: My desktop has three hundred screenshots on it and I can never find my receipts!
+  - speaker: user
+    goal: Explica que las capturas duplicadas ocupan espacio y sugiere revisar y clasificar las descargas.
+    suggested_lines:
+    - Blurry photos and duplicate screenshots quietly eat up gigabytes of cloud space.
+    - I spent Sunday morning trying to sort through five thousand unorganized downloads.
+  - speaker: ai
+    text: Where do you even start with that many files?
+  - speaker: user
+    goal: Recomienda adoptar una jerarquía de carpetas por año y archivar proyectos terminados.
+    suggested_lines:
+    - Adopting a consistent folder hierarchy by year keeps tax documents easy to find.
+    - Moving completed projects into an archive folder prevents desktop clutter.
+  - speaker: ai
+    text: That sounds way calmer. How do you stop it from getting messy again?
+  - speaker: user
+    goal: Sugiere poner un recordatorio mensual para limpiar archivos temporales.
+    suggested_lines:
+    - Setting a monthly reminder helps you clean up temporary files before they pile up.

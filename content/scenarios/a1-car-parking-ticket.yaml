@@ -1,0 +1,101 @@
+id: a1-car-parking-ticket
+title: Paying at a parking garage
+title_es: Pagar en un estacionamiento
+cefr: A1
+topic: travel-and-transport
+description: Pregunta dónde pagar tu boleto de estacionamiento, la tarifa por hora y
+  cómo salir del garaje.
+phrases:
+- id: where-pay-parking
+  text: Where do I pay for my parking ticket?
+  translation: ¿Dónde pago mi boleto de estacionamiento?
+  visual_hint: 🅿️🎫
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: parking ticket
+    meaning: boleto de estacionamiento
+    ipa: ˈpɑːrkɪŋ ˈtɪkɪt
+  - word: pay for
+    meaning: pagar por
+    ipa: peɪ fɔːr
+- id: how-much-hour
+  text: How much does parking cost per hour?
+  translation: ¿Cuánto cuesta estacionar por hora?
+  visual_hint: 💲⏱️
+  cloze:
+  - 4
+  - 6
+  glossary:
+  - word: cost
+    meaning: costar
+    ipa: kɔːst
+  - word: per hour
+    meaning: por hora
+    ipa: pɜːr ˈaʊər
+- id: machine-takes-card
+  text: Does the payment machine take credit cards?
+  translation: ¿La máquina de pago acepta tarjetas de crédito?
+  visual_hint: 💳🅿️
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: payment machine
+    meaning: máquina de pago
+    ipa: ˈpeɪmənt məˈʃiːn
+  - word: credit cards
+    meaning: tarjetas de crédito
+    ipa: ˈkredɪt kɑːrdz
+- id: parking-drive-out
+  text: Insert your validated ticket to drive out of the garage.
+  translation: Inserta tu boleto validado para salir conduciendo del garaje. (drive out = salir conduciendo)
+  visual_hint: 🚗➡️
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: drive out
+    meaning: salir conduciendo
+    ipa: draɪv aʊt
+  kind: phrasal_verb
+  apply_sentence: Wait for the green light before you ____ of the lot.
+  apply_answer: drive out
+  apply_translation: Espera la luz verde antes de salir conduciendo del estacionamiento.
+- id: parking-make-sure
+  text: Make sure you keep your ticket in your pocket.
+  translation: Asegúrate de guardar tu boleto en el bolsillo. (make sure = asegurarse)
+  visual_hint: 🧥🎫
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: make sure
+    meaning: asegurarse de
+    ipa: meɪk ʃʊr
+  kind: expression
+  apply_sentence: Please ____ the car doors are locked.
+  apply_answer: make sure
+  apply_translation: Por favor, asegúrate de que las puertas del coche estén cerradas.
+roleplay:
+  ai_role: parking attendant
+  user_role: driver
+  setting: A public parking garage booth near the elevator.
+  turns:
+  - speaker: ai
+    text: Hello! Can I help you with your parking?
+  - speaker: user
+    goal: Pregunta dónde pagar tu boleto y cuánto cuesta por hora.
+    suggested_lines:
+    - Where do I pay for my parking ticket? How much does parking cost per hour?
+    - Where do I pay for my parking ticket?
+  - speaker: ai
+    text: The payment machine is next to the elevator. It costs three dollars per hour.
+  - speaker: user
+    goal: Pregunta si la máquina acepta tarjetas de crédito.
+    suggested_lines:
+    - Does the payment machine take credit cards?
+    - Can I pay with a credit card at the machine?
+  - speaker: ai
+    text: Yes, it takes cards and cash. Insert your validated ticket to drive out at the gate.

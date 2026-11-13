@@ -1,0 +1,103 @@
+id: a2-weekend-trip-recap
+title: Sharing how your weekend trip went
+title_es: Contar cómo te fue en un viaje de fin de semana
+cefr: A2
+topic: social-and-smalltalk
+description: Cuéntale a un amigo adónde fuiste el fin de semana, qué hiciste y qué fue lo que más te gustó.
+phrases:
+- id: went-to-mountains
+  text: I went to a quiet cabin in the mountains last weekend.
+  translation: Fui a una cabaña tranquila en las montañas el fin de semana pasado.
+  visual_hint: 🏔️🏡
+  cloze:
+  - 1
+  - 4
+  - 7
+  glossary:
+  - word: cabin
+    meaning: cabaña
+    ipa: ˈkæbɪn
+  - word: mountains
+    meaning: montañas
+    ipa: ˈmaʊntənz
+- id: weather-was-perfect
+  text: Luckily, the weather was sunny and perfect for hiking.
+  translation: Por suerte, el clima estuvo soleado y perfecto para hacer senderismo.
+  visual_hint: 🥾☀️
+  cloze:
+  - 0
+  - 2
+  - 7
+  glossary:
+  - word: luckily
+    meaning: por suerte
+    ipa: ˈlʌkɪli
+  - word: hiking
+    meaning: senderismo
+    ipa: ˈhaɪkɪŋ
+- id: best-part-lake
+  text: The best part was swimming in the clear blue lake.
+  translation: Lo mejor fue nadar en el lago azul y cristalino.
+  visual_hint: 🏊‍♂️💧
+  cloze:
+  - 1
+  - 4
+  - 8
+  glossary:
+  - word: best part
+    meaning: la mejor parte
+    ipa: best pɑːrt
+  - word: lake
+    meaning: lago
+    ipa: leɪk
+- id: idm-a2wt-get-away
+  text: It felt great to get away from the noisy city for two days.
+  translation: Se sintió genial escapar de la ciudad ruidosa por dos días (tomarse un respiro fuera).
+  visual_hint: 🚗🌲
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: get away
+    meaning: escaparse / salir de la rutina
+    ipa: ɡet əˈweɪ
+  kind: phrasal_verb
+  apply_sentence: We need to ____ to the beach for a few days.
+  apply_answer: get away
+  apply_translation: Necesitamos escaparnos a la playa unos días.
+- id: idm-a2wt-had-a-blast
+  text: Honestly, we had a blast around the campfire at night.
+  translation: Sinceramente, la pasamos increíble alrededor de la fogata por la noche (divertirse muchísimo).
+  visual_hint: 🔥🎉
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: have a blast
+    meaning: pasarlo increíble
+    ipa: hæv ə blæst
+  kind: idiom
+  apply_sentence: The kids ____ at the birthday party yesterday.
+  apply_answer: had a blast
+  apply_translation: Los niños la pasaron increíble en la fiesta de cumpleaños ayer.
+roleplay:
+  ai_role: friend (Liam)
+  user_role: friend
+  setting: Monday morning coffee chat at the office kitchen.
+  turns:
+  - speaker: ai
+    text: Hey! Welcome back. How was your weekend trip?
+  - speaker: user
+    goal: Cuéntale que fuiste a una cabaña en las montañas para escapar de la ciudad.
+    suggested_lines:
+    - I went to a quiet cabin in the mountains last weekend.
+    - It felt great to get away from the noisy city for two days.
+  - speaker: ai
+    text: That sounds super relaxing! Did you get good weather?
+  - speaker: user
+    goal: Dile que el clima estuvo perfecto para caminar y que lo mejor fue nadar en el lago.
+    suggested_lines:
+    - Luckily, the weather was sunny and perfect for hiking.
+    - The best part was swimming in the clear blue lake.
+  - speaker: ai
+    text: Amazing! I definitely need a mountain trip soon too.

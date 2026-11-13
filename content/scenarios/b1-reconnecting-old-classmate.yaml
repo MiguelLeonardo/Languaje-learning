@@ -1,0 +1,108 @@
+id: b1-reconnecting-old-classmate
+title: Bumping into an old classmate
+title_es: Reencontrarse con un antiguo compañero de clase
+cefr: B1
+topic: social-and-smalltalk
+description: Saluda con sorpresa a un antiguo compañero de estudios, ponte al día sobre su trabajo y acuerda volver a verse.
+phrases:
+- id: havent-seen-in-ages
+  text: I can't believe it's you; I haven't seen you in ages!
+  translation: No puedo creer que seas tú; ¡no te he visto en siglos!
+  visual_hint: 😲👋
+  cloze:
+  - 2
+  - 6
+  - 9
+  glossary:
+  - word: in ages
+    meaning: en siglos / hace muchísimo tiempo
+    ipa: ɪn ˈeɪdʒɪz
+  - word: believe
+    meaning: creer
+    ipa: bɪˈliːv
+- id: what-have-you-been-up-to
+  text: What have you been up to since we graduated?
+  translation: ¿Qué has estado haciendo desde que nos graduamos?
+  visual_hint: 🎓💬
+  cloze:
+  - 3
+  - 6
+  - 8
+  glossary:
+  - word: be up to
+    meaning: estar haciendo / tramando
+    ipa: biː ʌp tuː
+  - word: graduated
+    meaning: nos graduamos
+    ipa: ˈɡrædʒueɪtɪd
+- id: still-working-design
+  text: Are you still working in graphic design or did you switch fields?
+  translation: ¿Sigues trabajando en diseño gráfico o cambiaste de área?
+  visual_hint: 🎨💼
+  cloze:
+  - 2
+  - 5
+  - 10
+  glossary:
+  - word: graphic design
+    meaning: diseño gráfico
+    ipa: ˈɡræfɪk dɪˈzaɪn
+  - word: switch fields
+    meaning: cambiar de área profesional
+    ipa: swɪtʃ fiːldz
+- id: idm-b1rc-small-world
+  text: Running into you at this bookstore—what a small world!
+  translation: Encontrarme contigo en esta librería... ¡qué pequeño es el mundo! (sorpresa ante una coincidencia).
+  visual_hint: 🌍📚
+  cloze:
+  - 7
+  - 8
+  glossary:
+  - word: small world
+    meaning: qué pequeño es el mundo
+    ipa: smɔːl wɜːrld
+  kind: idiom
+  apply_sentence: You know my cousin from Madrid too? What a ____!
+  apply_answer: small world
+  apply_translation: ¿También conoces a mi primo de Madrid? ¡Qué pequeño es el mundo!
+- id: idm-b1rc-keep-in-touch
+  text: Let's exchange numbers so we can keep in touch properly.
+  translation: Intercambiemos teléfonos para poder mantener el contacto como se debe (seguir comunicándose).
+  visual_hint: 📱🤝
+  cloze:
+  - 6
+  - 8
+  glossary:
+  - word: keep in touch
+    meaning: mantener el contacto
+    ipa: kiːp ɪn tʌtʃ
+  kind: expression
+  apply_sentence: Even after moving abroad, we promised to ____.
+  apply_answer: keep in touch
+  apply_translation: Incluso después de mudarnos al extranjero, prometimos mantener el contacto.
+roleplay:
+  ai_role: old classmate (Diego)
+  user_role: former classmate
+  setting: Bumping into each other in line at a neighborhood bookstore.
+  turns:
+  - speaker: ai
+    text: Wait a second... is that you? I almost walked right past you!
+  - speaker: user
+    goal: Salúdalo con sorpresa diciendo que hace siglos que no lo ves y qué pequeño es el mundo.
+    suggested_lines:
+    - I can't believe it's you; I haven't seen you in ages!
+    - Running into you at this bookstore—what a small world!
+  - speaker: ai
+    text: Seriously! It must be at least four years since university. How have you been?
+  - speaker: user
+    goal: Cuéntale brevemente cómo estás y pregúntale qué ha hecho desde la graduación y si sigue en diseño.
+    suggested_lines:
+    - What have you been up to since we graduated?
+    - Are you still working in graphic design or did you switch fields?
+  - speaker: ai
+    text: I'm actually leading a small UX team now! Let's grab lunch next week to catch up properly.
+  - speaker: user
+    goal: Acepta con gusto y propón intercambiar números para mantener el contacto.
+    suggested_lines:
+    - Let's exchange numbers so we can keep in touch properly.
+    - That sounds great! Let's swap numbers so we can keep in touch.

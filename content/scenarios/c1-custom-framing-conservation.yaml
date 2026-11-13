@@ -1,0 +1,108 @@
+id: c1-custom-framing-conservation
+title: Commissioning museum-grade framing
+title_es: Encargar enmarcado de conservación para obra gráfica
+cefr: C1
+topic: hotel-and-shopping
+description: Especifica vidrio antirreflejante con filtro UV y materiales libres de ácido
+  para enmarcar un grabado.
+phrases:
+- id: acid-free-matboard
+  text: I need archival, acid-free matboard so the paper won't yellow over time.
+  translation: Necesito paspartú de conservación libre de ácido para que el papel no amarillee
+    con el tiempo.
+  visual_hint: 🖼️📜
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: archival
+    meaning: de grado archivo / conservación
+    ipa: ɑːrˈkaɪvəl
+  - word: matboard
+    meaning: paspartú
+    ipa: ˈmætbɔːrd
+- id: uv-filtering-glazing
+  text: Let's upgrade to ninety-nine percent UV-filtering museum glass to prevent fading.
+  translation: Pasemos a vidrio de museo con filtro UV del noventa y nueve por ciento para
+    evitar decoloración.
+  visual_hint: ☀️🛡️
+  cloze:
+  - 6
+  - 10
+  glossary:
+  - word: museum glass
+    meaning: vidrio de museo antirreflejante
+    ipa: mjuːˈziːəm ɡlæs
+  - word: fading
+    meaning: decoloración
+    ipa: ˈfeɪdɪŋ
+- id: reversible-hinging
+  text: Please use reversible Japanese paper hinges rather than dry-mounting the print.
+  translation: Por favor usen bisagras reversibles de papel japonés en lugar de adherir el
+    grabado en seco.
+  visual_hint: 📐🎨
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: reversible
+    meaning: reversible
+    ipa: rɪˈvɜːrsəbl
+  - word: hinges
+    meaning: bisagras / pestañas de montaje
+    ipa: ˈhɪndʒɪz
+- id: idm-stand-test-of-time
+  text: Conservation framing ensures the lithograph will stand the test of time.
+  translation: El enmarcado de conservación garantiza que la litografía resista el paso del
+    tiempo.
+  visual_hint: ⏳🖼️
+  cloze:
+  - 6
+  - 9
+  glossary:
+  - word: stand the test of time
+    meaning: resistir el paso del tiempo
+    ipa: stænd ðə test əv taɪm
+  kind: idiom
+  apply_sentence: Solid walnut frames truly ____.
+  apply_answer: stand the test of time
+  apply_translation: Los marcos de nogal macizo realmente resisten el paso del tiempo.
+- id: idm-cut-corners-materials
+  text: With an original print, we shouldn't cut corners on backing materials.
+  translation: Con un grabado original, no deberíamos escatimar en los materiales de respaldo.
+  visual_hint: ✂️🚫
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: cut corners
+    meaning: escatimar / hacer algo a medias por ahorrar
+    ipa: kʌt ˈkɔːrnərz
+  kind: idiom
+  apply_sentence: Never ____ on UV glazing if the piece hangs near a window.
+  apply_answer: cut corners
+  apply_translation: Nunca escatimes en vidrio UV si la pieza cuelga cerca de una ventana.
+roleplay:
+  ai_role: master framer
+  user_role: art collector
+  setting: A custom framing atelier with wood moldings and mat samples.
+  turns:
+  - speaker: ai
+    text: This signed lithograph is in remarkable condition. What aesthetic did you have in
+      mind?
+  - speaker: user
+    goal: Especifica paspartú libre de ácido y vidrio de museo con filtro UV.
+    suggested_lines:
+    - I need archival, acid-free matboard so the paper won't yellow over time.
+    - Let's upgrade to ninety-nine percent UV-filtering museum glass to prevent fading.
+  - speaker: ai
+    text: Wise choice. Would you prefer a float mount or a traditional window mat?
+  - speaker: user
+    goal: Pide montaje reversible con bisagras de papel japonés y enfatiza no escatimar en
+      materiales.
+    suggested_lines:
+    - Please use reversible Japanese paper hinges rather than dry-mounting the print.
+    - With an original print, we shouldn't cut corners on backing materials.
+  - speaker: ai
+    text: Agreed—we'll use mulberry paper hinges and sealed archival backing. Ready in two
+      weeks.
