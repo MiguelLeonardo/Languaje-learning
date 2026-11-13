@@ -48641,13 +48641,18 @@
             type: 'guided',
             support: 'partial',
             exercises: scenario.phrases.map(p => {
-              const idiomTarget = getIdiomTarget(p);
               const info = getIdiomFocus(scenario.id, p.id, p);
-              const idiomMeaning = info.meaning || p.translation;
+              const firstHint = t => String(t || '').split(/\s+/).map(w => {
+                const c = w.replace(/[.,!?]+$/, '');
+                return (c.length > 1 ? c[0] + '_'.repeat(c.length - 1) : c) + w.slice(c.length);
+              }).join(' ');
+              const tokens = (p.text || '').split(/\s+/);
+              const mask = computeIdiomTokenMask(tokens, info.terms);
+              const maskedSentence = tokens.map((tok, idx) => mask[idx] ? firstHint(tok) : tok).join(' ');
               return mk(
                 p, 'guided', 'partial', 0.75,
-                'Practica únicamente el modismo o expresión clave resaltada (escucha la guía de audio si lo necesitas).',
-                idiomTarget, idiomMeaning, p.glossary || [], idiomTarget, idiomTarget, p.text
+                'Practica la frase completa ayudándote con las letras incompletas únicamente en el modismo.',
+                maskedSentence, p.translation, p.glossary || [], p.text, p.text
               );
             })
           },
@@ -49341,7 +49346,7 @@
         } else if (ex.type === 'guided') {
           guidanceBannerHtml = `
             <div class="mb-2 inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold shadow-xs">
-              <span>💡</span><span>Practica solo las palabras del modismo (no necesitas decir toda la frase).</span>
+              <span>💡</span><span>Practica la frase completa guiándote por las letras incompletas del modismo.</span>
             </div>
           `;
         } else if (ex.type === 'completion') {
