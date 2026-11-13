@@ -42692,12 +42692,15 @@
       let wordAudioChunks = [];
       let wordRecorder = null;
       let chosenMime = '';
+      let resolveStopPromise = null;
       const androidNoParallel = isAndroidBrowser() && localStorage.getItem('sf_android_no_parallel_rec') === '1';
 
       const startWordAudioRecorder = async () => {
         if (androidNoParallel || !window.MediaRecorder || ended) return;
         try {
-          await VoiceSession.ensureMicPermission();
+          if (!VoiceSession.stream) {
+            await VoiceSession.ensureMicPermission();
+          }
           if (ended || !VoiceSession.stream) return;
           const mimeCandidates = ['audio/webm;codecs=opus', 'audio/webm', 'audio/mp4', 'audio/aac', ''];
           if (typeof MediaRecorder.isTypeSupported === 'function') {
@@ -42712,26 +42715,57 @@
           };
           wordRecorder.onstop = () => {
             try {
-              if (!wordAudioChunks.length) return;
-              const mime = wordRecorder.mimeType || chosenMime || 'audio/webm';
-              const blob = new Blob(wordAudioChunks, { type: mime });
-              if (!blob.size) return;
-              state.wordAudioUrls = state.wordAudioUrls || {};
-              if (state.wordAudioUrls[wordIndex]) {
-                try { URL.revokeObjectURL(state.wordAudioUrls[wordIndex]); } catch (_) {}
-              }
-              state.wordAudioUrls[wordIndex] = URL.createObjectURL(blob);
-              const playBtn = document.getElementById(`btn-play-word-audio-${wordIndex}`);
-              if (playBtn) {
-                playBtn.removeAttribute('disabled');
-                playBtn.classList.remove('opacity-40', 'cursor-not-allowed');
+              if (wordAudioChunks.length) {
+                const mime = wordRecorder.mimeType || chosenMime || 'audio/webm';
+                const blob = new Blob(wordAudioChunks, { type: mime });
+                if (blob.size > 0) {
+                  state.wordAudioUrls = state.wordAudioUrls || {};
+                  if (state.wordAudioUrls[wordIndex]) {
+                    try { URL.revokeObjectURL(state.wordAudioUrls[wordIndex]); } catch (_) {}
+                  }
+                  state.wordAudioUrls[wordIndex] = URL.createObjectURL(blob);
+                  const playBtn = document.getElementById(`btn-play-word-audio-${wordIndex}`);
+                  if (playBtn) {
+                    playBtn.removeAttribute('disabled');
+                    playBtn.classList.remove('opacity-40', 'cursor-not-allowed');
+                  }
+                }
               }
             } catch (_) {}
+            if (resolveStopPromise) {
+              resolveStopPromise();
+              resolveStopPromise = null;
+            }
           };
-          wordRecorder.start(200);
+          wordRecorder.start(150);
           state._wordMediaRecorder = wordRecorder;
         } catch (_) {}
       };
+
+      const stopWordAudioRecorderAndWait = () => new Promise((resolve) => {
+        const activeRec = state._wordMediaRecorder || wordRecorder;
+        if (!activeRec || activeRec.state !== 'recording') {
+          state._wordMediaRecorder = null;
+          return resolve();
+        }
+        let settled = false;
+        const done = () => {
+          if (settled) return;
+          settled = true;
+          state._wordMediaRecorder = null;
+          resolve();
+        };
+        resolveStopPromise = done;
+        setTimeout(done, 400);
+        try {
+          activeRec.requestData && activeRec.requestData();
+        } catch (_) {}
+        try {
+          activeRec.stop();
+        } catch (_) {
+          done();
+        }
+      });
 
       rec.onresult = (e) => {
         if (e.results && e.results[0]) {
@@ -42757,10 +42791,8 @@
       rec.onend = async () => {
         ended = true;
         state._activeWordTrainerRec = null;
-        if (state._wordMediaRecorder && state._wordMediaRecorder.state === 'recording') {
-          try { state._wordMediaRecorder.stop(); } catch (_) {}
-          state._wordMediaRecorder = null;
-        }
+        await stopWordAudioRecorderAndWait();
+
         const clean = s => (s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
         const expClean = clean(targetWord);
         const heardClean = clean(heardTranscript);
@@ -42785,8 +42817,8 @@
       };
 
       try {
+        await startWordAudioRecorder();
         rec.start();
-        startWordAudioRecorder();
       } catch (err) {
         ended = true;
         state._activeWordTrainerRec = null;
