@@ -1,0 +1,93 @@
+id: b1-tech-cloud-backup
+title: Backing up files to the cloud
+title_es: Hacer copia de seguridad en la nube
+cefr: B1
+topic: daily-tech-and-media
+description: Libera espacio en tu teléfono subiendo fotos y documentos a la nube.
+phrases:
+- id: storage-almost-full
+  text: My phone storage is almost full because of videos.
+  translation: El almacenamiento de mi teléfono está casi lleno por los videos.
+  visual_hint: 💾⚠️
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: storage
+    meaning: almacenamiento
+    ipa: ˈstɔːrɪdʒ
+- id: sync-photos-automatically
+  text: You can sync your photos automatically over Wi-Fi.
+  translation: Puedes sincronizar tus fotos automáticamente por Wi-Fi.
+  visual_hint: ☁️📸
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: sync
+    meaning: sincronizar
+    ipa: sɪŋk
+- id: upgrade-cloud-plan
+  text: I might upgrade my cloud plan for extra space.
+  translation: Quizás mejore mi plan en la nube para tener espacio extra.
+  visual_hint: ☁️⬆️
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: upgrade
+    meaning: mejorar / actualizar
+    ipa: ˈʌpɡreɪd
+- id: idm-back-up
+  text: Always back up your files before resetting a device.
+  translation: 'Siempre haz una copia de seguridad antes de restablecer un dispositivo. (back
+    up: respaldar)'
+  visual_hint: 💿✅
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: back up
+    meaning: hacer copia de seguridad
+    ipa: bæk ʌp
+  kind: phrasal_verb
+  apply_sentence: I ____ my work folder to an external drive every Friday.
+  apply_answer: back up
+  apply_translation: Hago copia de seguridad de mi carpeta de trabajo en un disco externo cada
+    viernes.
+- id: idm-free-up
+  text: Deleting old downloads will free up several gigabytes.
+  translation: 'Borrar descargas antiguas liberará varios gigabytes. (free up: liberar)'
+  visual_hint: 🧹📱
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: free up
+    meaning: liberar
+    ipa: friː ʌp
+  kind: phrasal_verb
+  apply_sentence: Removing unused apps can ____ space quickly.
+  apply_answer: free up
+  apply_translation: Eliminar aplicaciones sin uso puede liberar espacio rápidamente.
+roleplay:
+  ai_role: phone store specialist
+  user_role: customer
+  setting: Electronics store counter before trading in an old phone.
+  turns:
+  - speaker: ai
+    text: Before we transfer your data to the new phone, how is your storage looking?
+  - speaker: user
+    goal: Explica que tu almacenamiento está casi lleno y quieres respaldar tus archivos.
+    suggested_lines:
+    - My phone storage is almost full because of videos.
+    - Always back up your files before resetting a device.
+  - speaker: ai
+    text: Good idea. Have you turned on automatic cloud sync yet?
+  - speaker: user
+    goal: Di que quieres sincronizar fotos y liberar espacio antes de cambiar de teléfono.
+    suggested_lines:
+    - I might upgrade my cloud plan for extra space.
+    - Deleting old downloads will free up several gigabytes.
+  - speaker: ai
+    text: Great! Once the upload finishes, we can start the transfer.

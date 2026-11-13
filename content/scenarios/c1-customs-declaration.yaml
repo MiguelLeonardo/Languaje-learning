@@ -3,12 +3,14 @@ title: Customs inspection & commercial samples
 title_es: Inspección de aduana y muestras comerciales
 cefr: C1
 topic: travel-and-transport
-description: Explica en control aduanero el ingreso temporal de prototipos para una feria tecnológica sin fines
-  de venta.
+description: Explica en control aduanero el ingreso temporal de prototipos para una
+  feria tecnológica sin fines de venta.
 phrases:
 - id: temporary-importation
-  text: These hardware prototypes are strictly for exhibition at the trade summit and not for resale.
-  translation: Estos prototipos de hardware son estrictamente para exhibición en la cumbre comercial y no para reventa.
+  text: These hardware prototypes are strictly for exhibition at the trade summit
+    and not for resale.
+  translation: Estos prototipos de hardware son estrictamente para exhibición en la
+    cumbre comercial y no para reventa.
   visual_hint: 🛂📦
   cloze:
   - 2
@@ -22,9 +24,10 @@ phrases:
     meaning: reventa
     ipa: ˈriːseɪl
 - id: ata-carnet-document
-  text: Here is our itemized ATA Carnet certifying that all equipment will be re-exported next Friday.
-  translation: Aquí está nuestro cuaderno ATA detallado certificando que todo el equipo será reexportado el próximo
-    viernes.
+  text: Here is our itemized ATA Carnet certifying that all equipment will be re-exported
+    next Friday.
+  translation: Aquí está nuestro cuaderno ATA detallado certificando que todo el equipo
+    será reexportado el próximo viernes.
   visual_hint: 📑✈️
   cloze:
   - 3
@@ -39,7 +42,8 @@ phrases:
     ipa: ˌriːɪkˈspɔːrtɪd
 - id: serial-numbers-match
   text: Every serial number on the pelican case corresponds directly to the manifest.
-  translation: Cada número de serie en el maletín protector corresponde directamente con el manifiesto de carga.
+  translation: Cada número de serie en el maletín protector corresponde directamente
+    con el manifiesto de carga.
   visual_hint: 🔢🧳
   cloze:
   - 1
@@ -52,54 +56,10 @@ phrases:
   - word: manifest
     meaning: manifiesto de carga
     ipa: ˈmænɪfest
-- id: nominal-commercial-value
-  text: They are non-functional display units carrying only nominal commercial value.
-  translation: Son unidades de demostración no funcionales con un valor comercial meramente simbólico.
-  visual_hint: 🏷️💻
-  cloze:
-  - 2
-  - 4
-  - 7
-  glossary:
-  - word: display units
-    meaning: unidades de exhibición
-    ipa: dɪˈspleɪ ˈjuːnɪts
-  - word: nominal
-    meaning: nominal / simbólico
-    ipa: ˈnɑːmɪnəl
-- id: customs-stamp-departure
-  text: Which counter should we report to upon departure to have the export voucher stamped?
-  translation: ¿A qué mostrador debemos presentarnos al salir para que sellen el comprobante de exportación?
-  visual_hint: 🖋️🛫
-  cloze:
-  - 4
-  - 7
-  - 13
-  glossary:
-  - word: upon departure
-    meaning: al momento de partir
-    ipa: əˈpɑːn dɪˈpɑːrtʃər
-  - word: stamped
-    meaning: sellado
-    ipa: stæmpt
-- id: open-for-inspection
-  text: I'd be happy to unlock the cases so you can verify the contents firsthand.
-  translation: Con gusto abro los maletines para que pueda verificar el contenido de primera mano.
-  visual_hint: 🔓🔍
-  cloze:
-  - 4
-  - 9
-  - 12
-  glossary:
-  - word: verify
-    meaning: verificar
-    ipa: ˈverɪfaɪ
-  - word: firsthand
-    meaning: de primera mano / directamente
-    ipa: ˌfɜːrstˈhænd
 - id: customs-by-the-book
   text: The officer always does everything by the book at this border.
-  translation: El oficial siempre hace todo según el reglamento en esta frontera. (by the book = siguiendo las reglas)
+  translation: El oficial siempre hace todo según el reglamento en esta frontera.
+    (by the book = siguiendo las reglas)
   visual_hint: 📘🛃
   cloze:
   - 3
@@ -111,10 +71,12 @@ phrases:
   kind: idiom
   apply_sentence: The pilot insisted on doing the checks ____ before takeoff.
   apply_answer: by the book
-  apply_translation: El piloto insistió en hacer las revisiones al pie de la letra antes del despegue.
+  apply_translation: El piloto insistió en hacer las revisiones al pie de la letra
+    antes del despegue.
 - id: customs-red-flag
   text: Mismatched serial numbers could raise a red flag with customs.
-  translation: Números de serie que no coinciden podrían levantar sospechas en la aduana. (red flag = señal de alerta)
+  translation: Números de serie que no coinciden podrían levantar sospechas en la
+    aduana. (red flag = señal de alerta)
   visual_hint: 🚩📦
   cloze:
   - 3
@@ -126,25 +88,31 @@ phrases:
   kind: idiom
   apply_sentence: A last-minute one-way ticket might be a ____ for security.
   apply_answer: red flag
-  apply_translation: Un billete de ida de última hora podría ser una señal de alerta para seguridad.
+  apply_translation: Un billete de ida de última hora podría ser una señal de alerta
+    para seguridad.
 roleplay:
   ai_role: customs officer
   user_role: conference exhibitor
   setting: International airport red channel customs inspection desk.
   turns:
   - speaker: ai
-    text: Good morning. I see you're declaring three equipment cases. What is the commercial purpose of these devices?
+    text: Good morning. I see you're declaring three equipment cases. What is the
+      commercial purpose of these devices?
   - speaker: user
     goal: Explica que son prototipos para exhibición en la feria y no están a la venta.
     suggested_lines:
-    - These hardware prototypes are strictly for exhibition at the trade summit and not for resale.
+    - These hardware prototypes are strictly for exhibition at the trade summit and
+      not for resale.
     - They are non-functional display units carrying only nominal commercial value.
   - speaker: ai
-    text: Do you have temporary import documentation showing they will leave the country with you?
+    text: Do you have temporary import documentation showing they will leave the country
+      with you?
   - speaker: user
-    goal: Entrega el cuaderno ATA y menciona que los números de serie coinciden con el manifiesto.
+    goal: Entrega el cuaderno ATA y menciona que los números de serie coinciden con
+      el manifiesto.
     suggested_lines:
-    - Here is our itemized ATA Carnet certifying that all equipment will be re-exported next Friday.
+    - Here is our itemized ATA Carnet certifying that all equipment will be re-exported
+      next Friday.
     - Every serial number on the pelican case corresponds directly to the manifest.
   - speaker: ai
     text: Let me inspect the first case and check the serial tags.
@@ -158,7 +126,9 @@ roleplay:
   - speaker: user
     goal: Pregunta a qué mostrador acudir al salir del país para sellar la reexportación.
     suggested_lines:
-    - Which counter should we report to upon departure to have the export voucher stamped?
+    - Which counter should we report to upon departure to have the export voucher
+      stamped?
     - Where do we get the export voucher stamped upon departure?
   - speaker: ai
-    text: Report to Customs Desk B in Terminal 2 before checking the cases. Welcome and enjoy the summit!
+    text: Report to Customs Desk B in Terminal 2 before checking the cases. Welcome
+      and enjoy the summit!

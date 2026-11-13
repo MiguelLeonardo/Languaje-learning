@@ -1,0 +1,94 @@
+id: b2-grammar-modals
+title: Modals of deduction and past regret
+title_es: Modales de deducción y arrepentimiento pasado
+cefr: B2
+topic: grammar-and-connectors
+description: Formula deducciones lógicas (must have, can't have) y críticas o arrepentimientos
+  pasados (should have, ought to).
+phrases:
+- id: must-have-forgotten
+  text: He must have forgotten about the rescheduled call.
+  translation: Él debe de haberse olvidado de la llamada reprogramada. (deducción
+    casi segura)
+  visual_hint: 📞🤦
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: must have + pp
+    meaning: debe de haber... (deducción lógica)
+    ipa: mʌst hæv
+  kind: expression
+  apply_sentence: The streets are soaked; it ____ rained heavily overnight.
+  apply_answer: must have
+  apply_translation: Las calles están empapadas; debe de haber llovido fuerte anoche.
+- id: cant-have-seen-email
+  text: She can't have seen the email yet, or she would have replied.
+  translation: Ella no puede haber visto el correo todavía, o habría respondido.
+  visual_hint: 📧❓
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: can't have + pp
+    meaning: no puede haber... (imposibilidad lógica)
+    ipa: kænt hæv
+- id: should-have-backed-up
+  text: I should have backed up the files before updating.
+  translation: Debería haber hecho una copia de seguridad antes de actualizar.
+  visual_hint: 💾⚠️
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: should have + pp
+    meaning: debería haber... (arrepentimiento)
+    ipa: ʃʊd hæv
+  kind: expression
+  apply_sentence: We ____ left earlier to avoid the rush-hour traffic.
+  apply_answer: should have
+  apply_translation: Deberíamos haber salido antes para evitar el tráfico de hora
+    punta.
+- id: ought-to-double-check
+  text: We ought to double-check the figures before publishing.
+  translation: Deberíamos revisar dos veces las cifras antes de publicar.
+  visual_hint: 🔢🧐
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: ought to
+    meaning: debería (obligación moral o consejo)
+    ipa: ˈɔːt tuː
+- id: would-rather-wait
+  text: I would rather wait until tomorrow than rush the release.
+  translation: Preferiría esperar hasta mañana antes que apresurar el lanzamiento.
+  visual_hint: 🛑📆
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: would rather
+    meaning: preferiría
+    ipa: wʊd ˈræðər
+roleplay:
+  ai_role: incident responder
+  user_role: engineer
+  setting: Post-mortem chat after a website outage.
+  turns:
+  - speaker: ai
+    text: Why did the staging config end up in production?
+  - speaker: user
+    goal: Haz una deducción lógica usando 'must have' o 'can't have'.
+    suggested_lines:
+    - Someone must have merged the wrong branch.
+    - The automated check can't have run before deployment.
+  - speaker: ai
+    text: Yeah, the logs look empty. What could we have done differently?
+  - speaker: user
+    goal: Expresa qué se debería haber hecho usando 'should have' o 'ought to'.
+    suggested_lines:
+    - We should have tested the rollback script first.
+    - We ought to add a manual approval step.
+  - speaker: ai
+    text: Agreed. Let's add that to the action items.

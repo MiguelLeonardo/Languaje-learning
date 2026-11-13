@@ -3,14 +3,14 @@ title: Negotiating a wholesale showroom order
 title_es: Negociar pedido mayorista en showroom
 cefr: C1
 topic: hotel-and-shopping
-description: Negocia cantidades mínimas por color, exclusividad territorial y pago a 60 días con un proveedor de
-  moda.
+description: Negocia cantidades mínimas por color, exclusividad territorial y pago
+  a 60 días con un proveedor de moda.
 phrases:
 - id: lower-moq-per-colorway
-  text: Since we're testing this knitwear line in our flagship store, could we lower the MOQ to twelve units per
-    colorway?
-  translation: Como estamos probando esta línea de tejido en nuestra tienda principal, ¿podríamos bajar el mínimo
-    a doce unidades por color?
+  text: Since we're testing this knitwear line in our flagship store, could we lower
+    the MOQ to twelve units per colorway?
+  translation: Como estamos probando esta línea de tejido en nuestra tienda principal,
+    ¿podríamos bajar el mínimo a doce unidades por color?
   visual_hint: 🧶📋
   cloze:
   - 6
@@ -20,9 +20,10 @@ phrases:
     meaning: combinación de color
     ipa: ˈkʌlərweɪ
 - id: neighborhood-exclusivity
-  text: We'd commit to the full autumn capsule if you grant us six-block boutique exclusivity.
-  translation: Nos comprometeríamos con toda la cápsula de otoño si nos otorgan exclusividad en un radio de seis
-    cuadras.
+  text: We'd commit to the full autumn capsule if you grant us six-block boutique
+    exclusivity.
+  translation: Nos comprometeríamos con toda la cápsula de otoño si nos otorgan exclusividad
+    en un radio de seis cuadras.
   visual_hint: 🏪🤝
   cloze:
   - 4
@@ -32,9 +33,10 @@ phrases:
     meaning: colección cápsula
     ipa: ˈkæpsjuːl
 - id: net-sixty-payment-terms
-  text: Can we structure payment as thirty percent upon order confirmation and net-sixty after delivery?
-  translation: ¿Podemos estructurar el pago con treinta por ciento al confirmar y el resto a sesenta días tras la
-    entrega?
+  text: Can we structure payment as thirty percent upon order confirmation and net-sixty
+    after delivery?
+  translation: ¿Podemos estructurar el pago con treinta por ciento al confirmar y
+    el resto a sesenta días tras la entrega?
   visual_hint: 🏦📅
   cloze:
   - 4
@@ -43,43 +45,10 @@ phrases:
   - word: net-sixty
     meaning: pago a 60 días
     ipa: net ˈsɪksti
-- id: late-shipment-discount
-  text: Let's include a clause specifying a ten-percent discount if shipments slip past September first.
-  translation: Incluyamos una cláusula de diez por ciento de descuento si el envío se retrasa después del primero
-    de septiembre.
-  visual_hint: 📦⏱️
-  cloze:
-  - 4
-  - 9
-  glossary:
-  - word: slip past
-    meaning: retrasarse más allá de
-    ipa: slɪp pæst
-- id: duty-paid-incoterms
-  text: Shipping under DDP Incoterms keeps our landed unit cost predictable.
-  translation: Enviar bajo modalidad DDP mantiene predecible nuestro costo unitario puesto en tienda.
-  visual_hint: 🚢🧮
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: landed cost
-    meaning: costo total puesto en destino
-    ipa: ˈlændɪd kɔːst
-- id: sign-line-sheet-today
-  text: Send the amended line sheet and we'll countersign the purchase order this afternoon.
-  translation: Envíe la hoja de pedido actualizada y firmaremos la orden de compra esta tarde.
-  visual_hint: ✍️📄
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: purchase order
-    meaning: orden de compra
-    ipa: ˈpɜːrtʃəs ˈɔːrdər
 - id: idm-scale-back-order
   text: We may scale back the autumn knitwear order if freight tariffs rise again.
-  translation: Quizás reduzcamos el pedido de tejido de otoño si los aranceles de flete vuelven a subir.
+  translation: Quizás reduzcamos el pedido de tejido de otoño si los aranceles de
+    flete vuelven a subir.
   visual_hint: 🧥📉
   cloze:
   - 4
@@ -89,9 +58,11 @@ phrases:
     meaning: reducir / recortar escala
     ipa: skeɪl bæk
   kind: phrasal_verb
-  apply_sentence: Several boutiques chose to ____ their initial minimum quantities this season.
+  apply_sentence: Several boutiques chose to ____ their initial minimum quantities
+    this season.
   apply_answer: scale back
-  apply_translation: Varias boutiques optaron por reducir sus cantidades mínimas iniciales esta temporada.
+  apply_translation: Varias boutiques optaron por reducir sus cantidades mínimas iniciales
+    esta temporada.
 - id: idm-ball-in-your-court
   text: We've matched your target margin, so the ball is in your court now.
   translation: Igualamos tu margen objetivo, así que ahora la pelota está en tu cancha.
@@ -106,40 +77,51 @@ phrases:
   kind: idiom
   apply_sentence: Once the showroom sends the revised lookbook, the ____ to finalize.
   apply_answer: ball is in your court
-  apply_translation: En cuanto el showroom envíe el catálogo revisado, te toca a ti decidir para cerrar.
+  apply_translation: En cuanto el showroom envíe el catálogo revisado, te toca a ti
+    decidir para cerrar.
 roleplay:
   ai_role: showroom sales director
   user_role: boutique buyer
   setting: Private showroom appointment during fashion week.
   turns:
   - speaker: ai
-    text: Welcome to the showroom! Normally our wholesale minimum is twenty-four pieces per colorway.
+    text: Welcome to the showroom! Normally our wholesale minimum is twenty-four pieces
+      per colorway.
   - speaker: user
-    goal: Propón reducir el pedido mínimo a doce unidades por color para probar la línea.
+    goal: Propón reducir el pedido mínimo a doce unidades por color para probar la
+      línea.
     suggested_lines:
-    - Since we're testing this knitwear line in our flagship store, could we lower the MOQ to twelve units per colorway?
+    - Since we're testing this knitwear line in our flagship store, could we lower
+      the MOQ to twelve units per colorway?
     - We'd commit to the full autumn capsule if you grant us six-block boutique exclusivity.
   - speaker: ai
-    text: If you order across four styles in the autumn capsule, we can approve twelve units per color.
+    text: If you order across four styles in the autumn capsule, we can approve twelve
+      units per color.
   - speaker: user
     goal: Pide exclusividad zonal de seis cuadras a cambio de comprar toda la colección.
     suggested_lines:
     - We'd commit to the full autumn capsule if you grant us six-block boutique exclusivity.
-    - Can we structure payment as thirty percent upon order confirmation and net-sixty after delivery?
+    - Can we structure payment as thirty percent upon order confirmation and net-sixty
+      after delivery?
   - speaker: ai
-    text: None of our existing stockists are in your district, so we can write territorial exclusivity into the
-      order.
+    text: None of our existing stockists are in your district, so we can write territorial
+      exclusivity into the order.
   - speaker: user
     goal: Propón pagar 30% al confirmar y el saldo a 60 días de la entrega.
     suggested_lines:
-    - Can we structure payment as thirty percent upon order confirmation and net-sixty after delivery?
-    - Let's include a clause specifying a ten-percent discount if shipments slip past September first.
+    - Can we structure payment as thirty percent upon order confirmation and net-sixty
+      after delivery?
+    - Let's include a clause specifying a ten-percent discount if shipments slip past
+      September first.
   - speaker: ai
-    text: With two trade references, our finance team can approve 30% deposit and net-60 on the balance.
+    text: With two trade references, our finance team can approve 30% deposit and
+      net-60 on the balance.
   - speaker: user
-    goal: Solicita una cláusula de descuento si el despacho se retrasa después de septiembre.
+    goal: Solicita una cláusula de descuento si el despacho se retrasa después de
+      septiembre.
     suggested_lines:
-    - Let's include a clause specifying a ten-percent discount if shipments slip past September first.
+    - Let's include a clause specifying a ten-percent discount if shipments slip past
+      September first.
     - Shipping under DDP Incoterms keeps our landed unit cost predictable.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

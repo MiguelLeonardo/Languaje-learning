@@ -1,0 +1,97 @@
+id: c2-tech-cybersecurity-incident
+title: Responding to an e-commerce security breach
+title_es: Responder ante una brecha de seguridad
+cefr: C2
+topic: daily-tech-and-media
+description: Contiene un incidente de relleno de credenciales en una cuenta de compras y exige
+  transparencia.
+phrases:
+- id: credential-stuffing-intrusion
+  text: The unauthorized order stemmed from a credential-stuffing attack using leaked hashes.
+  translation: El pedido no autorizado se originó por un ataque de relleno de credenciales con
+    hashes filtrados.
+  visual_hint: 🚨🔐
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: credential-stuffing
+    meaning: relleno de credenciales
+    ipa: krəˈdenʃəl ˈstʌfɪŋ
+- id: revoke-active-sessions
+  text: First, invalidate all active session tokens and rotate every reused password.
+  translation: Primero, invalida todos los tokens de sesión activos y rota cada contraseña reutilizada.
+  visual_hint: 🔄🔑
+  cloze:
+  - 1
+  - 4
+  glossary:
+  - word: invalidate
+    meaning: invalidar / anular
+    ipa: ɪnˈvælɪdeɪt
+- id: hardware-security-key
+  text: Hardware passkeys neutralize phishing vectors that SMS codes leave exposed.
+  translation: Las llaves de acceso por hardware neutralizan vectores de phishing que los códigos
+    SMS dejan expuestos.
+  visual_hint: 🗝️🛡️
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: neutralize
+    meaning: neutralizar
+    ipa: ˈnuːtrəlaɪz
+- id: idm-nip-in-the-bud
+  text: Freezing the virtual card immediately helped nip the fraud in the bud.
+  translation: 'Congelar la tarjeta virtual de inmediato ayudó a cortar el fraude de raíz. (nip
+    in the bud: cortar de raíz)'
+  visual_hint: 💳✂️
+  cloze:
+  - 7
+  - 11
+  glossary:
+  - word: nip in the bud
+    meaning: cortar de raíz
+    ipa: nɪp ɪn ðə bʌd
+  kind: idiom
+  apply_sentence: Automated anomaly alerts can ____ account takeovers before funds leave.
+  apply_answer: nip in the bud
+  apply_translation: Las alertas automáticas de anomalías pueden cortar de raíz los robos de
+    cuentas antes de que salgan fondos.
+- id: idm-zero-in-on
+  text: Forensic logs allowed us to zero in on the exact IP range involved.
+  translation: 'Los registros forenses nos permitieron centrarnos en el rango exacto de IP involucrado.
+    (zero in on: enfocarse exactamente en)'
+  visual_hint: 🎯🖥️
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: zero in on
+    meaning: enfocarse con precisión en
+    ipa: ˈzɪroʊ ɪn ɑːn
+  kind: phrasal_verb
+  apply_sentence: The incident team will ____ the compromised API endpoint first.
+  apply_answer: zero in on
+  apply_translation: El equipo de incidentes se enfocará primero en el endpoint de API comprometido.
+roleplay:
+  ai_role: trust and safety lead
+  user_role: affected customer
+  setting: Escalated incident call after an unauthorized e-commerce purchase.
+  turns:
+  - speaker: ai
+    text: Thank you for escalating this promptly. We have flagged the suspicious checkout.
+  - speaker: user
+    goal: Explica el origen del ataque y cómo cortaste el fraude de raíz congelando la tarjeta.
+    suggested_lines:
+    - The unauthorized order stemmed from a credential-stuffing attack using leaked hashes.
+    - Freezing the virtual card immediately helped nip the fraud in the bud.
+  - speaker: ai
+    text: Good thinking. What remediation steps have you taken on your side?
+  - speaker: user
+    goal: Detalla la invalidación de sesiones y la adopción de llaves de acceso por hardware.
+    suggested_lines:
+    - First, invalidate all active session tokens and rotate every reused password.
+    - Hardware passkeys neutralize phishing vectors that SMS codes leave exposed.
+  - speaker: ai
+    text: Excellent. I am reversing the charge and locking the shipping address now.

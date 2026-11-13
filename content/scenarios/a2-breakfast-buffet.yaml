@@ -3,7 +3,8 @@ title: At the breakfast buffet
 title_es: En el buffet de desayuno
 cefr: A2
 topic: food-and-drink
-description: Pregunta qué incluye el buffet, pide huevos revueltos recién hechos y leche sin lactosa.
+description: Pregunta qué incluye el buffet, pide huevos revueltos recién hechos y
+  leche sin lactosa.
 phrases:
 - id: buffet-included
   text: Good morning, is the breakfast buffet included with my room?
@@ -38,39 +39,6 @@ phrases:
   - word: lactose-free
     meaning: sin lactosa
     ipa: ˈlæktoʊs friː
-- id: sit-by-window
-  text: Can we sit at that sunny table by the window?
-  translation: ¿Podemos sentarnos en esa mesa soleada junto a la ventana?
-  visual_hint: 🪟☀️
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: sunny
-    meaning: soleada
-    ipa: ˈsʌni
-- id: refill-coffee-pot
-  text: Could we get a pot of hot coffee for the table?
-  translation: ¿Nos podría traer una jarra de café caliente para la mesa?
-  visual_hint: ☕🫖
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: pot
-    meaning: jarra / cafetera
-    ipa: pɑːt
-- id: until-what-time
-  text: Until what time is the buffet open today?
-  translation: ¿Hasta qué hora está abierto el buffet hoy?
-  visual_hint: 🕙🍽️
-  cloze:
-  - 2
-  - 5
-  glossary:
-  - word: until
-    meaning: hasta
-    ipa: ənˈtɪl
 - id: help-yourself
   text: Please help yourself to the eggs and fruit.
   translation: 'Sírvase usted mismo los huevos y la fruta. (help yourself: sírvete)'

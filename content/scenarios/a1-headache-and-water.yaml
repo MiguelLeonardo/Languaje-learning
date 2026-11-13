@@ -3,7 +3,8 @@ title: Telling a guide you feel dizzy
 title_es: Avisar que tienes dolor de cabeza en un tour
 cefr: A1
 topic: health-and-emergencies
-description: Dile al guía turístico que tienes dolor de cabeza por el calor y necesitas sentarte a la sombra.
+description: Dile al guía turístico que tienes dolor de cabeza por el calor y necesitas
+  sentarte a la sombra.
 phrases:
 - id: have-a-headache
   text: Excuse me, I have a headache from the heat.
@@ -38,39 +39,6 @@ phrases:
   - word: cold water
     meaning: agua fría
     ipa: koʊld ˈwɔːtər
-- id: rest-for-ten-minutes
-  text: I just need to rest here for ten minutes.
-  translation: Solo necesito descansar aquí diez minutos.
-  visual_hint: ⏱️😌
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: rest
-    meaning: descansar
-    ipa: rest
-- id: take-an-aspirin
-  text: I have a mild pain pill in my small bag.
-  translation: Traigo una pastilla suave para el dolor en mi bolso.
-  visual_hint: 💊👜
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: pill
-    meaning: pastilla
-    ipa: pɪl
-- id: feeling-okay-now
-  text: Thank you, the cool air helps a lot!
-  translation: ¡Gracias, el aire fresco ayuda mucho!
-  visual_hint: 🌬️👍
-  cloze:
-  - 2
-  - 5
-  glossary:
-  - word: helps
-    meaning: ayuda
-    ipa: helps
 - id: idm-feel-under-the-weather-a1
   text: I feel under the weather, I need some water.
   translation: Me siento mal, necesito agua. (feel under the weather = sentirse indispuesto)

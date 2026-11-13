@@ -3,11 +3,13 @@ title: Reporting a delayed suitcase
 title_es: Reportar una maleta demorada
 cefr: B1
 topic: travel-and-transport
-description: Reporta en el mostrador de equipaje que tu maleta no salió en la banda y deja la dirección de tu hotel.
+description: Reporta en el mostrador de equipaje que tu maleta no salió en la banda
+  y deja la dirección de tu hotel.
 phrases:
 - id: bag-didnt-arrive
   text: Hi, my flight from Chicago just landed, but my checked bag didn't come out.
-  translation: Hola, mi vuelo de Chicago acaba de aterrizar, pero mi maleta documentada no salió.
+  translation: Hola, mi vuelo de Chicago acaba de aterrizar, pero mi maleta documentada
+    no salió.
   visual_hint: 🧳❓
   cloze:
   - 4
@@ -38,42 +40,10 @@ phrases:
   - word: hard-shell
     meaning: de carcasa rígida
     ipa: hɑːrd ʃel
-- id: deliver-to-hotel-desk
-  text: Could the courier deliver it directly to the Grand Hotel front desk tonight?
-  translation: ¿Podría el mensajero entregarla directamente en la recepción del Grand Hotel esta noche?
-  visual_hint: 🚐🏨
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: courier
-    meaning: servicio de mensajería
-    ipa: ˈkʊriər
-- id: overnight-toiletry-kit
-  text: Do you provide an overnight toiletry kit while we wait for the bag?
-  translation: ¿Proporcionan un kit de aseo nocturno mientras esperamos la maleta?
-  visual_hint: 🪥🧴
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: toiletry kit
-    meaning: neceser / kit de aseo
-    ipa: ˈtɔɪlətri kɪt
-- id: tracking-reference-code
-  text: I'll save this tracking number so I can check the delivery status online.
-  translation: Guardaré este número de rastreo para revisar el estado de entrega en línea.
-  visual_hint: 📲🔢
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: tracking
-    meaning: seguimiento / rastreo
-    ipa: ˈtrækɪŋ
 - id: suitcase-fingers-crossed
   text: Fingers crossed my suitcase arrives on tomorrow's first flight.
-  translation: Ojalá mi maleta llegue en el primer vuelo de mañana. (fingers crossed = ojalá)
+  translation: Ojalá mi maleta llegue en el primer vuelo de mañana. (fingers crossed
+    = ojalá)
   visual_hint: 🤞🧳
   cloze:
   - 3
@@ -85,10 +55,12 @@ phrases:
   kind: idiom
   apply_sentence: We have no seats yet, but ____ the airline finds us one.
   apply_answer: fingers crossed
-  apply_translation: Aún no tenemos asientos, pero ojalá la aerolínea nos encuentre uno.
+  apply_translation: Aún no tenemos asientos, pero ojalá la aerolínea nos encuentre
+    uno.
 - id: suitcase-show-up
   text: If my bag doesn't show up tonight, please call the hotel.
-  translation: Si mi maleta no aparece esta noche, por favor llame al hotel. (show up = aparecer)
+  translation: Si mi maleta no aparece esta noche, por favor llame al hotel. (show
+    up = aparecer)
   visual_hint: 🧳❓
   cloze:
   - 3
@@ -121,7 +93,8 @@ roleplay:
     - Here is the baggage claim sticker attached to my boarding pass.
     - It's a medium navy-blue hard-shell suitcase with a red ribbon on the handle.
   - speaker: ai
-    text: 'Good news: the scanner shows it''s coming on the next flight in three hours. Can you describe the bag?'
+    text: 'Good news: the scanner shows it''s coming on the next flight in three hours.
+      Can you describe the bag?'
   - speaker: user
     goal: Describe tu maleta azul marino rígida con cinta roja.
     suggested_lines:

@@ -3,11 +3,13 @@ title: Discussing sourdough fermentation
 title_es: Conversar sobre masa madre y fermentación
 cefr: C1
 topic: food-and-drink
-description: Habla con un maestro panadero sobre hidratación de harinas integrales, fermentación en frío y corteza.
+description: Habla con un maestro panadero sobre hidratación de harinas integrales,
+  fermentación en frío y corteza.
 phrases:
 - id: high-hydration-crumb
   text: How do you achieve such an open, custardy crumb at eighty-percent hydration?
-  translation: ¿Cómo logran una miga tan alveolada y cremosa con un ochenta por ciento de hidratación?
+  translation: ¿Cómo logran una miga tan alveolada y cremosa con un ochenta por ciento
+    de hidratación?
   visual_hint: 🍞🫧
   cloze:
   - 4
@@ -29,7 +31,8 @@ phrases:
     ipa: koʊld rɪˈtɑːrd
 - id: stone-milled-rye-starter
   text: Do you feed your levain with whole rye to boost enzymatic activity?
-  translation: ¿Alimentan su masa madre con centeno integral para impulsar la actividad enzimática?
+  translation: ¿Alimentan su masa madre con centeno integral para impulsar la actividad
+    enzimática?
   visual_hint: 🌾🫙
   cloze:
   - 4
@@ -38,42 +41,10 @@ phrases:
   - word: levain
     meaning: masa madre activa / fermento
     ipa: ləˈvæn
-- id: steam-injection-crust
-  text: That caramelized, shattering crust clearly comes from heavy steam during the firstifteen minutes.
-  translation: Esa corteza caramelizada y crujiente claramente proviene del vapor intenso en los primeros minutos.
-  visual_hint: 🔥🥖
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: shattering
-    meaning: ultracrujiente / quebradiza
-    ipa: ˈʃætərɪŋ
-- id: autolyse-before-salt
-  text: Giving the flour a one-hour autolyse before adding salt makes extensibility effortless.
-  translation: Darle a la harina una autólisis de una hora antes de la sal facilita mucho la extensibilidad.
-  visual_hint: 🥣💧
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: autolyse
-    meaning: autólisis (reposo de agua y harina)
-    ipa: ˈɔːtoʊlaɪz
-- id: take-home-country-loaf
-  text: I'll take a country boule and a jar of your dehydrated starter culture.
-  translation: Me llevaré una hogaza rústica y un frasco de su cultivo de masa madre.
-  visual_hint: 🛍️🍞
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: boule
-    meaning: hogaza redonda
-    ipa: buːl
 - id: bread-and-butter
   text: That crusty country loaf is our bread and butter.
-  translation: 'Esa hogaza rústica es nuestro sustento principal. (bread and butter: sustento básico)'
+  translation: 'Esa hogaza rústica es nuestro sustento principal. (bread and butter:
+    sustento básico)'
   visual_hint: 🍞🧈
   cloze:
   - 3
@@ -88,7 +59,8 @@ phrases:
   apply_translation: Enseñar es mi sustento principal, pero también escribo.
 - id: good-things-come-to-those-who-wait
   text: Good things come to those who wait, especially with sourdough.
-  translation: Lo bueno se hace esperar, sobre todo con la masa madre. (good things come to those who wait)
+  translation: Lo bueno se hace esperar, sobre todo con la masa madre. (good things
+    come to those who wait)
   visual_hint: ⏳🥖
   cloze:
   - 3
@@ -100,14 +72,16 @@ phrases:
   kind: idiom
   apply_sentence: Don't rush; ____, after all.
   apply_answer: good things come to those who wait
-  apply_translation: No te apresures; al fin y al cabo, lo bueno llega a quien sabe esperar.
+  apply_translation: No te apresures; al fin y al cabo, lo bueno llega a quien sabe
+    esperar.
 roleplay:
   ai_role: master baker
   user_role: bread baker
   setting: An artisanal sourdough bakery counter after the morning bake.
   turns:
   - speaker: ai
-    text: Here is a warm country loaf just out of the deck oven. Look at that blistered crust!
+    text: Here is a warm country loaf just out of the deck oven. Look at that blistered
+      crust!
   - speaker: user
     goal: Pregunta cómo logran esa miga tan abierta con 80% de hidratación.
     suggested_lines:
@@ -121,18 +95,22 @@ roleplay:
     - Does a twenty-four-hour cold retard in the walk-in sharpen the lactic tang?
     - Do you feed your levain with whole rye to boost enzymatic activity?
   - speaker: ai
-    text: Exactly—cold proofing at four degrees develops complex sweetness without harsh sourness.
+    text: Exactly—cold proofing at four degrees develops complex sweetness without
+      harsh sourness.
   - speaker: user
     goal: Pregunta si alimentan la masa madre con centeno integral.
     suggested_lines:
     - Do you feed your levain with whole rye to boost enzymatic activity?
-    - That caramelized, shattering crust clearly comes from heavy steam during the firstifteen minutes.
+    - That caramelized, shattering crust clearly comes from heavy steam during the
+      firstifteen minutes.
   - speaker: ai
     text: Yes, thirty percent dark rye keeps the starter vigorous year-round.
   - speaker: user
     goal: Comenta el efecto del vapor en la corteza caramelizada y compra una hogaza.
     suggested_lines:
-    - That caramelized, shattering crust clearly comes from heavy steam during the firstifteen minutes.
-    - Giving the flour a one-hour autolyse before adding salt makes extensibility effortless.
+    - That caramelized, shattering crust clearly comes from heavy steam during the
+      firstifteen minutes.
+    - Giving the flour a one-hour autolyse before adding salt makes extensibility
+      effortless.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

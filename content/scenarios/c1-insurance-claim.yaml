@@ -3,11 +3,13 @@ title: Filing a medical insurance claim
 title_es: Gestionar un reclamo con el seguro
 cefr: C1
 topic: health-and-emergencies
-description: Defiende la cobertura de tu póliza médica de viaje y solicita el reembolso de gastos clínicos.
+description: Defiende la cobertura de tu póliza médica de viaje y solicita el reembolso
+  de gastos clínicos.
 phrases:
 - id: covered-under-policy
   text: According to my policy terms, emergency outpatient care is fully covered.
-  translation: Según los términos de mi póliza, la atención ambulatoria de urgencia está totalmente cubierta.
+  translation: Según los términos de mi póliza, la atención ambulatoria de urgencia
+    está totalmente cubierta.
   visual_hint: 📄🏥
   cloze:
   - 3
@@ -42,55 +44,10 @@ phrases:
   - word: reimbursement
     meaning: reembolso de gastos
     ipa: ˌriːɪmˈbɜːrsmənt
-- id: direct-billing
-  text: Can your case management team arrange direct billing with the clinic?
-  translation: ¿Puede su equipo de gestión de casos coordinar el pago directo con la clínica?
-  visual_hint: 🏥💳
-  cloze:
-  - 3
-  - 6
-  - 7
-  glossary:
-  - word: arrange
-    meaning: coordinar / gestionar
-    ipa: əˈreɪndʒ
-  - word: direct billing
-    meaning: facturación directa
-    ipa: dəˈrekt ˈbɪlɪŋ
-- id: reimbursement-timeline
-  text: Once I upload the receipts, what is the standard turnaround time for reimbursement?
-  translation: Una vez que suba los recibos, ¿cuál es el plazo estándar de respuesta para el reembolso?
-  visual_hint: ⏱️💸
-  cloze:
-  - 2
-  - 8
-  - 9
-  - 12
-  glossary:
-  - word: turnaround time
-    meaning: tiempo de tramitación
-    ipa: ˈtɜːrnəraʊnd taɪm
-  - word: reimbursement
-    meaning: reembolso
-    ipa: ˌriːɪmˈbɜːrsmənt
-- id: claim-reference-number
-  text: Please email me the claim reference number so I have a written audit trail.
-  translation: Por favor envíeme por correo el número de referencia del reclamo para tener un registro escrito.
-  visual_hint: 📧🔢
-  cloze:
-  - 4
-  - 5
-  - 12
-  glossary:
-  - word: claim
-    meaning: reclamo / siniestro
-    ipa: kleɪm
-  - word: audit trail
-    meaning: registro de auditoría / respaldo
-    ipa: ˈɔːdɪt treɪl
 - id: idm-fine-print-c1
   text: You should read the fine print on this claim carefully.
-  translation: Deberías leer con atención la letra pequeña de esta reclamación. (fine print = letra pequeña)
+  translation: Deberías leer con atención la letra pequeña de esta reclamación. (fine
+    print = letra pequeña)
   visual_hint: 📄🔍
   cloze:
   - 3
@@ -105,7 +62,8 @@ phrases:
   apply_translation: Nunca leo la letra pequeña antes de firmar.
 - id: idm-jump-through-hoops-c1
   text: I had to jump through hoops to get reimbursed.
-  translation: Tuve que pasar por mil trámites para que me reembolsaran. (jump through hoops = cumplir muchos requisitos)
+  translation: Tuve que pasar por mil trámites para que me reembolsaran. (jump through
+    hoops = cumplir muchos requisitos)
   visual_hint: 🤹💸
   cloze:
   - 3
@@ -117,7 +75,8 @@ phrases:
   kind: idiom
   apply_sentence: They make applicants ____ before approving anything.
   apply_answer: jump through hoops
-  apply_translation: Hacen que los solicitantes pasen por mil trámites antes de aprobar nada.
+  apply_translation: Hacen que los solicitantes pasen por mil trámites antes de aprobar
+    nada.
 roleplay:
   ai_role: insurance claims specialist
   user_role: policyholder
@@ -137,4 +96,5 @@ roleplay:
     - I've already attached the itemized hospital invoice and the medical report.
     - Could you please expedite the reimbursement given the amount involved?
   - speaker: ai
-    text: I see the documents now. I've escalated your reimbursement for approval within forty-eight hours.
+    text: I see the documents now. I've escalated your reimbursement for approval
+      within forty-eight hours.

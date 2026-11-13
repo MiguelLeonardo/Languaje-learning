@@ -3,7 +3,8 @@ title: Buying harbor ferry tickets
 title_es: Comprar boletos de ferry
 cefr: A1
 topic: travel-and-transport
-description: Compra dos boletos para el barco del puerto, pregunta si puedes sentarte afuera y a qué hora regresa.
+description: Compra dos boletos para el barco del puerto, pregunta si puedes sentarte
+  afuera y a qué hora regresa.
 phrases:
 - id: two-ferry-tickets
   text: Two adult tickets for the island ferry, please.
@@ -38,42 +39,10 @@ phrases:
   - word: last
     meaning: último
     ipa: læst
-- id: how-long-crossing
-  text: Is the boat ride thirty minutes long?
-  translation: ¿El paseo en barco dura treinta minutos?
-  visual_hint: ⏱️⚓
-  cloze:
-  - 2
-  - 4
-  glossary:
-  - word: boat ride
-    meaning: viaje en barco
-    ipa: boʊt raɪd
-- id: life-jackets-under-seat
-  text: Where do we wait for boarding?
-  translation: ¿Dónde esperamos para abordar?
-  visual_hint: 🚶‍♂️🪧
-  cloze:
-  - 2
-  - 4
-  glossary:
-  - word: wait
-    meaning: esperar
-    ipa: weɪt
-- id: enjoy-the-breeze
-  text: Thank you! It is a great day for the water.
-  translation: ¡Gracias! Es un gran día para navegar.
-  visual_hint: 🌊😊
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: water
-    meaning: agua / mar
-    ipa: ˈwɔːtər
 - id: ferry-take-a-seat
   text: Take a seat on the top deck and enjoy the view.
-  translation: Siéntate en la cubierta superior y disfruta de la vista. (take a seat = sentarse)
+  translation: Siéntate en la cubierta superior y disfruta de la vista. (take a seat
+    = sentarse)
   visual_hint: 💺⛴️
   cloze:
   - 3
@@ -88,7 +57,8 @@ phrases:
   apply_translation: Por favor, siéntate aquí mientras esperamos el barco.
 - id: ferry-have-a-look
   text: Let's have a look at the harbor map before the ferry leaves.
-  translation: Echemos un vistazo al mapa del puerto antes de que salga el ferri. (have a look = echar un vistazo)
+  translation: Echemos un vistazo al mapa del puerto antes de que salga el ferri.
+    (have a look = echar un vistazo)
   visual_hint: 👀🗺️
   cloze:
   - 4

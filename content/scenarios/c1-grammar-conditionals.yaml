@@ -1,0 +1,96 @@
+id: c1-grammar-conditionals
+title: Inverted and mixed conditionals
+title_es: Condicionales invertidos y mixtos
+cefr: C1
+topic: grammar-and-connectors
+description: Usa condicionales formales sin 'if' (Had we..., Were it not for..., Should
+  you...) y condicionales mixtos.
+phrases:
+- id: had-we-known
+  text: Had we known about the clause, we would have renegotiated.
+  translation: De haber sabido sobre la cláusula, habríamos renegociado.
+  visual_hint: 📄🔍
+  cloze:
+  - 0
+  - 2
+  glossary:
+  - word: had we known
+    meaning: de haber sabido (= if we had known)
+    ipa: hæd wiː noʊn
+  kind: expression
+  apply_sentence: ____ earlier, we could have secured the venue.
+  apply_answer: Had we acted
+  apply_translation: De haber actuado antes, podríamos haber asegurado el lugar.
+- id: were-it-not-for
+  text: Were it not for her mentorship, I wouldn't be leading this lab.
+  translation: De no ser por su mentoría, no estaría dirigiendo este laboratorio.
+  visual_hint: 🧪👩‍🏫
+  cloze:
+  - 0
+  - 2
+  glossary:
+  - word: were it not for
+    meaning: de no ser por
+    ipa: wɜːr ɪt nɑːt fɔːr
+  kind: expression
+  apply_sentence: ____ the grant, the archive would have closed.
+  apply_answer: Were it not for
+  apply_translation: De no ser por la subvención, el archivo habría cerrado.
+- id: should-you-require
+  text: Should you require further documentation, please contact our office.
+  translation: En caso de que necesite documentación adicional, contacte con nuestra
+    oficina.
+  visual_hint: 🏢📬
+  cloze:
+  - 0
+  - 2
+  glossary:
+  - word: should you require
+    meaning: si llegara a necesitar (formal)
+    ipa: ʃʊd juː rɪˈkwaɪər
+- id: mixed-conditional-regret
+  text: If they had invested in solar earlier, energy bills would be lower now.
+  translation: Si hubieran invertido en energía solar antes, las facturas serían más
+    bajas ahora.
+  visual_hint: ☀️⚡
+  cloze:
+  - 2
+  - 9
+  glossary:
+  - word: would be ... now
+    meaning: sería ... ahora (condicional mixto)
+    ipa: wʊd biː naʊ
+- id: but-for-quick-action
+  text: But for the crew's quick action, the cargo would have spoiled.
+  translation: De no haber sido por la rápida acción de la tripulación, la carga se
+    habría echado a perder.
+  visual_hint: 🚢⏱️
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: but for
+    meaning: de no ser por / si no fuera por
+    ipa: bʌt fɔːr
+roleplay:
+  ai_role: audit partner
+  user_role: compliance officer
+  setting: Reviewing a past procurement decision and future safeguards.
+  turns:
+  - speaker: ai
+    text: Looking back at last year's vendor contract, what went wrong?
+  - speaker: user
+    goal: Expresa qué habría cambiado usando 'Had we...' o un condicional mixto.
+    suggested_lines:
+    - Had we spotted the renewal clause, we would have renegotiated.
+    - If we had audited them earlier, our costs would be lower now.
+  - speaker: ai
+    text: And what kept the team afloat during the transition?
+  - speaker: user
+    goal: Agradece o atribuye mérito usando 'Were it not for' o 'But for'.
+    suggested_lines:
+    - Were it not for the legal team, we would have missed the deadline.
+    - But for their quick response, the project would have stalled.
+  - speaker: ai
+    text: Good lessons learned. Should you need sign-off on the new policy, send it
+      over.

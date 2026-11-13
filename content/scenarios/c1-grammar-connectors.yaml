@@ -1,0 +1,91 @@
+id: c1-grammar-connectors
+title: Academic and executive discourse linkers
+title_es: Conectores académicos y ejecutivos
+cefr: C1
+topic: grammar-and-connectors
+description: Articula concesiones, causas y contrastes precisos con 'albeit', 'notwithstanding',
+  'hence', 'conversely' e 'inasmuch as'.
+phrases:
+- id: albeit-gradual-recovery
+  text: The market showed a steady, albeit gradual, recovery.
+  translation: El mercado mostró una recuperación constante, aunque gradual.
+  visual_hint: 📈🕰️
+  cloze:
+  - 5
+  glossary:
+  - word: albeit
+    meaning: aunque / si bien (sin verbo)
+    ipa: ɔːlˈbiːɪt
+  kind: expression
+  apply_sentence: The solution is effective, ____ somewhat expensive.
+  apply_answer: albeit
+  apply_translation: La solución es eficaz, aunque algo costosa.
+- id: notwithstanding-setbacks
+  text: Notwithstanding early setbacks, the clinical trial succeeded.
+  translation: A pesar de los contratiempos iniciales, el ensayo clínico tuvo éxito.
+  visual_hint: 🧬✅
+  cloze:
+  - 0
+  glossary:
+  - word: notwithstanding
+    meaning: no obstante / a pesar de
+    ipa: ˌnɑːtwɪθˈstændɪŋ
+  kind: expression
+  apply_sentence: ____ the tight schedule, every milestone was met.
+  apply_answer: Notwithstanding
+  apply_translation: A pesar del calendario ajustado, se cumplió cada hito.
+- id: hence-need-oversight
+  text: Data volume tripled; hence the need for stricter oversight.
+  translation: El volumen de datos se triplicó; de ahí la necesidad de una supervisión
+    más estricta.
+  visual_hint: 🗄️🔒
+  cloze:
+  - 3
+  glossary:
+  - word: hence
+    meaning: de ahí / por consiguiente
+    ipa: hens
+- id: conversely-rural-areas
+  text: Urban rents surged; conversely, rural demand remained flat.
+  translation: Los alquileres urbanos se dispararon; por el contrario, la demanda
+    rural se mantuvo estable.
+  visual_hint: 🏙️🌾
+  cloze:
+  - 3
+  glossary:
+  - word: conversely
+    meaning: por el contrario / a la inversa
+    ipa: kənˈvɜːrsli
+- id: inasmuch-as-clarifies
+  text: The policy helps inasmuch as it clarifies compliance rules.
+  translation: La política ayuda en la medida en que aclara las normas de cumplimiento.
+  visual_hint: 📜✔️
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: inasmuch as
+    meaning: en la medida en que / puesto que
+    ipa: ˌɪnəzˈmʌtʃ æz
+roleplay:
+  ai_role: journal editor
+  user_role: researcher
+  setting: Discussing peer-review feedback on a submitted paper.
+  turns:
+  - speaker: ai
+    text: The reviewers liked your methodology, though they questioned the sample
+      size.
+  - speaker: user
+    goal: Reconoce la limitación y defiende el resultado usando 'albeit' o 'notwithstanding'.
+    suggested_lines:
+    - Notwithstanding the modest sample, the effect size was robust.
+    - It offers a clear, albeit preliminary, framework.
+  - speaker: ai
+    text: How do you explain the divergence between the two cohorts?
+  - speaker: user
+    goal: Explica causa o contraste con 'hence' o 'conversely'.
+    suggested_lines:
+    - Cohort A had prior training; conversely, Cohort B started from scratch.
+    - Attrition rose in winter, hence the need for weighted averages.
+  - speaker: ai
+    text: That clarifies things nicely. Please include that in the revision.

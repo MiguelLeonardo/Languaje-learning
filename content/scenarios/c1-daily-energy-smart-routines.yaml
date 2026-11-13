@@ -1,0 +1,94 @@
+id: c1-daily-energy-smart-routines
+title: Optimizing household energy routines
+title_es: Optimizar rutinas de consumo energético
+cefr: C1
+topic: daily-tech-and-media
+description: Programa electrodomésticos fuera de horas pico y analiza tarifas dinámicas de electricidad.
+phrases:
+- id: off-peak-tariff
+  text: Shifting laundry cycles to off-peak hours noticeably trims our utility bill.
+  translation: Mover los ciclos de lavado a horas valle reduce notablemente nuestra factura
+    eléctrica.
+  visual_hint: ⚡📉
+  cloze:
+  - 4
+  - 7
+  glossary:
+  - word: off-peak
+    meaning: hora valle / fuera de pico
+    ipa: ˌɔːf ˈpiːk
+- id: standby-phantom-load
+  text: Smart power strips eliminate phantom standby load overnight.
+  translation: Las regletas inteligentes eliminan el consumo fantasma en espera durante la noche.
+  visual_hint: 🔌🌙
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: standby
+    meaning: en espera / reposo
+    ipa: ˈstændbaɪ
+- id: thermostat-schedule-adaptive
+  text: An adaptive thermostat learns occupancy patterns without manual tweaking.
+  translation: Un termostato adaptativo aprende los patrones de ocupación sin ajustes manuales.
+  visual_hint: 🌡️🏠
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: occupancy
+    meaning: ocupación
+    ipa: ˈɑːkjəpənsi
+- id: idm-phase-out
+  text: We plan to phase out older halogen bulbs by winter.
+  translation: 'Planeamos eliminar gradualmente las bombillas halógenas antiguas para el invierno.
+    (phase out: retirar gradualmente)'
+  visual_hint: 💡♻️
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: phase out
+    meaning: eliminar gradualmente
+    ipa: feɪz aʊt
+  kind: phrasal_verb
+  apply_sentence: The city will ____ gas heaters in new apartment buildings.
+  apply_answer: phase out
+  apply_translation: La ciudad eliminará gradualmente los calentadores de gas en edificios nuevos.
+- id: idm-pay-off
+  text: The upfront cost of smart meters will pay off within eighteen months.
+  translation: 'El costo inicial de los medidores inteligentes se amortizará en dieciocho meses.
+    (pay off: rendir frutos / amortizarse)'
+  visual_hint: 💰📅
+  cloze:
+  - 7
+  - 8
+  glossary:
+  - word: pay off
+    meaning: valer la pena / amortizarse
+    ipa: peɪ ɔːf
+  kind: phrasal_verb
+  apply_sentence: Insulating the attic tends to ____ during the very first winter.
+  apply_answer: pay off
+  apply_translation: Aislar el ático suele amortizarse durante el primer invierno.
+roleplay:
+  ai_role: home energy auditor
+  user_role: homeowner
+  setting: Kitchen walkthrough reviewing smart meter usage graphs.
+  turns:
+  - speaker: ai
+    text: Your baseline draw spikes every evening between six and nine. What is running then?
+  - speaker: user
+    goal: Explica cómo planeas mover electrodomésticos a horas valle y eliminar consumo fantasma.
+    suggested_lines:
+    - Shifting laundry cycles to off-peak hours noticeably trims our utility bill.
+    - Smart power strips eliminate phantom standby load overnight.
+  - speaker: ai
+    text: Smart move. Are you also considering replacing the older lighting and thermostat?
+  - speaker: user
+    goal: Menciona que retirarás las halógenas y que la inversión se amortizará pronto.
+    suggested_lines:
+    - We plan to phase out older halogen bulbs by winter.
+    - The upfront cost of smart meters will pay off within eighteen months.
+  - speaker: ai
+    text: With those changes, you should cut peak demand by nearly a third.

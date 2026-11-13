@@ -1,0 +1,92 @@
+id: a2-daily-package-tracking
+title: Tracking a delayed online package
+title_es: Rastrear un paquete retrasado
+cefr: A2
+topic: daily-tech-and-media
+description: Consulta el número de seguimiento de un pedido que aún no ha llegado.
+phrases:
+- id: tracking-number-email
+  text: I received a tracking number in my email.
+  translation: Recibí un número de seguimiento en mi correo.
+  visual_hint: 📧🔢
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: tracking number
+    meaning: número de seguimiento
+    ipa: ˈtrækɪŋ ˈnʌmbər
+- id: status-in-transit
+  text: The website says my parcel is still in transit.
+  translation: El sitio web dice que mi paquete sigue en tránsito.
+  visual_hint: 🚚📍
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: parcel
+    meaning: paquete / encomienda
+    ipa: ˈpɑːrsəl
+- id: expected-two-days-ago
+  text: The delivery was expected two days ago.
+  translation: La entrega se esperaba hace dos días.
+  visual_hint: 📅❗
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: expected
+    meaning: esperado / previsto
+    ipa: ɪkˈspektɪd
+- id: idm-look-into
+  text: Could you look into why the shipment stopped?
+  translation: '¿Podrías investigar por qué se detuvo el envío? (look into: investigar / revisar)'
+  visual_hint: 🔍📦
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: look into
+    meaning: investigar / revisar
+    ipa: lʊk ˈɪntuː
+  kind: phrasal_verb
+  apply_sentence: Support promised to ____ the billing error today.
+  apply_answer: look into
+  apply_translation: Soporte prometió revisar el error de facturación hoy.
+- id: idm-keep-posted
+  text: Please keep me posted if the delivery date changes.
+  translation: 'Por favor mantenme al tanto si cambia la fecha de entrega. (keep someone posted:
+    mantener informado)'
+  visual_hint: 📲💬
+  cloze:
+  - 1
+  - 3
+  glossary:
+  - word: keep posted
+    meaning: mantener al tanto
+    ipa: kiːp ˈpoʊstɪd
+  kind: idiom
+  apply_sentence: Text me later to ____ on your arrival time.
+  apply_answer: keep me posted
+  apply_translation: Escríbeme luego para mantenerme al tanto de tu hora de llegada.
+roleplay:
+  ai_role: customer support chat agent
+  user_role: shopper
+  setting: Online store live chat support window.
+  turns:
+  - speaker: ai
+    text: Hi! Thanks for contacting ShopFast. How can I help?
+  - speaker: user
+    goal: Di que tienes un número de seguimiento, pero el paquete debía llegar hace dos días.
+    suggested_lines:
+    - I received a tracking number in my email.
+    - The delivery was expected two days ago.
+  - speaker: ai
+    text: I am sorry for the delay. Let me check your order status.
+  - speaker: user
+    goal: Pide que investiguen por qué se detuvo y que te mantengan al tanto.
+    suggested_lines:
+    - Could you look into why the shipment stopped?
+    - Please keep me posted if the delivery date changes.
+  - speaker: ai
+    text: It just cleared the local hub and will arrive tomorrow morning!

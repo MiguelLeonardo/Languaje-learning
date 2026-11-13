@@ -1,0 +1,99 @@
+id: a2-tech-slow-wifi-router
+title: Restarting a slow Wi-Fi router
+title_es: Reiniciar un router Wi-Fi lento
+cefr: A2
+topic: daily-tech-and-media
+description: Explica que el internet está lento y reinicia el router de casa.
+phrases:
+- id: connection-keeps-dropping
+  text: My Wi-Fi connection keeps dropping during video calls.
+  translation: Mi conexión Wi-Fi se sigue cayendo durante las videollamadas.
+  visual_hint: 📶❌
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: connection
+    meaning: conexión
+    ipa: kəˈnekʃən
+  - word: dropping
+    meaning: cayéndose / cortándose
+    ipa: ˈdrɑːpɪŋ
+- id: unplug-the-router
+  text: Try unplugging the router for thirty seconds.
+  translation: Intenta desenchufar el router durante treinta segundos.
+  visual_hint: 🔌⏳
+  cloze:
+  - 1
+  - 3
+  glossary:
+  - word: router
+    meaning: enrutador / router
+    ipa: ˈraʊtər
+- id: blinking-green-light
+  text: The green light on the modem is blinking.
+  translation: La luz verde del módem está parpadeando.
+  visual_hint: 🟢💡
+  cloze:
+  - 5
+  - 7
+  glossary:
+  - word: blinking
+    meaning: parpadeando
+    ipa: ˈblɪŋkɪŋ
+- id: idm-switch-off
+  text: Let us switch off the router and restart it.
+  translation: 'Apaguemos el router y reiniciémoslo. (switch off: apagar)'
+  visual_hint: 🔘🔄
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: switch off
+    meaning: apagar
+    ipa: swɪtʃ ɔːf
+  kind: phrasal_verb
+  apply_sentence: Remember to ____ the monitor before leaving.
+  apply_answer: switch off
+  apply_translation: Recuerda apagar el monitor antes de salir.
+- id: idm-back-up-running
+  text: Great, the internet is back up and running now.
+  translation: 'Genial, el internet volvió a funcionar ahora. (back up and running: funcionando
+    de nuevo)'
+  visual_hint: 🚀📶
+  cloze:
+  - 4
+  - 7
+  glossary:
+  - word: back up and running
+    meaning: funcionando de nuevo
+    ipa: bæk ʌp ænd ˈrʌnɪŋ
+  kind: expression
+  apply_sentence: After the update, the website was ____ in five minutes.
+  apply_answer: back up and running
+  apply_translation: Después de la actualización, el sitio web volvió a funcionar en cinco minutos.
+roleplay:
+  ai_role: internet support agent
+  user_role: customer
+  setting: Phone call with home internet customer support.
+  turns:
+  - speaker: ai
+    text: Hello, HomeNet Support speaking. How can I assist you today?
+  - speaker: user
+    goal: Explica que tu Wi-Fi se corta durante las videollamadas y la luz parpadea.
+    suggested_lines:
+    - My Wi-Fi connection keeps dropping during video calls.
+    - The green light on the modem is blinking.
+  - speaker: ai
+    text: I see. Could you switch off the router and wait thirty seconds?
+  - speaker: user
+    goal: Di que vas a apagar y reiniciar el router.
+    suggested_lines:
+    - Let us switch off the router and restart it.
+    - I will unplug the router for thirty seconds.
+  - speaker: ai
+    text: Perfect. Let me know once the lights stay solid green.
+  - speaker: user
+    goal: Confirma que el internet ya está funcionando de nuevo.
+    suggested_lines:
+    - Great, the internet is back up and running now.

@@ -1,0 +1,87 @@
+id: b2-grammar-adverbs
+title: Adverbial modifiers and speaker stance
+title_es: Modificadores adverbiales y postura del hablante
+cefr: B2
+topic: grammar-and-connectors
+description: 'Enriquece tu discurso con adverbios de precisión y postura: remarkably,
+  virtually, frankly, barely y utterly.'
+phrases:
+- id: remarkably-calm-crisis
+  text: She remained remarkably calm during the power outage.
+  translation: Se mantuvo extraordinariamente tranquila durante el apagón.
+  visual_hint: 🕯️🧘
+  cloze:
+  - 2
+  glossary:
+  - word: remarkably
+    meaning: notablemente / extraordinariamente
+    ipa: rɪˈmɑːrkəbli
+- id: virtually-impossible-predict
+  text: It is virtually impossible to predict the exact turnout.
+  translation: Es prácticamente imposible predecir la asistencia exacta.
+  visual_hint: 📊🔮
+  cloze:
+  - 2
+  glossary:
+  - word: virtually
+    meaning: prácticamente / casi
+    ipa: ˈvɜːrtʃuəli
+  kind: expression
+  apply_sentence: The two versions are ____ identical.
+  apply_answer: virtually
+  apply_translation: Las dos versiones son prácticamente idénticas.
+- id: frankly-needs-redesign
+  text: Frankly, the onboarding flow needs a complete redesign.
+  translation: Francamente, el flujo de bienvenida necesita un rediseño completo.
+  visual_hint: 💬🎨
+  cloze:
+  - 0
+  glossary:
+  - word: frankly
+    meaning: francamente (para dar opinión directa)
+    ipa: ˈfræŋkli
+  kind: expression
+  apply_sentence: ____, I don't think the current budget is realistic.
+  apply_answer: Frankly
+  apply_translation: Francamente, no creo que el presupuesto actual sea realista.
+- id: barely-audible-mic
+  text: His voice was barely audible over the crowd.
+  translation: Su voz era apenas audible por encima de la multitud.
+  visual_hint: 🎙️👥
+  cloze:
+  - 3
+  glossary:
+  - word: barely
+    meaning: apenas / a duras penas
+    ipa: ˈberli
+- id: utterly-exhausted-hike
+  text: We were utterly exhausted after the twelve-mile hike.
+  translation: Estábamos completamente agotados tras la caminata de doce millas.
+  visual_hint: 🥾😫
+  cloze:
+  - 2
+  glossary:
+  - word: utterly
+    meaning: completamente / absolutamente
+    ipa: ˈʌtərli
+roleplay:
+  ai_role: product manager
+  user_role: UX researcher
+  setting: Debriefing after a user-testing session.
+  turns:
+  - speaker: ai
+    text: So, how did the new checkout prototype perform in testing?
+  - speaker: user
+    goal: Da una evaluación directa usando 'frankly' o 'remarkably'.
+    suggested_lines:
+    - Frankly, the payment screen needs a complete redesign.
+    - Users stayed remarkably patient, though they got confused.
+  - speaker: ai
+    text: Ouch. Was anything working well, or was it all broken?
+  - speaker: user
+    goal: Matiza usando 'virtually', 'barely' o 'utterly'.
+    suggested_lines:
+    - The error text was barely visible on mobile screens.
+    - The search bar was virtually effortless, which helped.
+  - speaker: ai
+    text: Got it—let's prioritize fixing those mobile errors first.

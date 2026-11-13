@@ -1,0 +1,92 @@
+id: b1-grammar-comparatives
+title: Nuanced comparatives and gradual change
+title_es: Comparativos con matices y cambio gradual
+cefr: B1
+topic: grammar-and-connectors
+description: Matiza comparaciones con 'far better', 'slightly less', 'just as...as'
+  y cambios graduales ('more and more').
+phrases:
+- id: far-better-now
+  text: The audio quality is far better now.
+  translation: La calidad del audio es muchísimo mejor ahora.
+  visual_hint: 🎧🔊
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: far better
+    meaning: mucho mejor
+    ipa: fɑːr ˈbetər
+  kind: expression
+  apply_sentence: Studying in the morning is ____ for me than at night.
+  apply_answer: far better
+  apply_translation: Estudiar por la mañana es mucho mejor para mí que por la noche.
+- id: slightly-less-sugar
+  text: This recipe uses slightly less sugar than usual.
+  translation: Esta receta usa un poco menos de azúcar de lo habitual.
+  visual_hint: 🍰🥄
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: slightly
+    meaning: ligeramente / un poco
+    ipa: ˈslaɪtli
+- id: just-as-important
+  text: Rest is just as important as exercise.
+  translation: El descanso es igual de importante que el ejercicio.
+  visual_hint: 😴🏃
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: just as ... as
+    meaning: igual de ... que
+    ipa: dʒʌst æz ... æz
+  kind: expression
+  apply_sentence: Listening is ____ speaking when learning a language.
+  apply_answer: just as important as
+  apply_translation: Escuchar es igual de importante que hablar al aprender un idioma.
+- id: more-and-more-popular
+  text: Remote work is becoming more and more popular.
+  translation: El trabajo remoto se está volviendo cada vez más popular.
+  visual_hint: 💻📈
+  cloze:
+  - 4
+  - 7
+  glossary:
+  - word: more and more
+    meaning: cada vez más
+    ipa: mɔːr ænd mɔːr
+- id: much-easier-expected
+  text: The software was much easier to use than I expected.
+  translation: El programa fue mucho más fácil de usar de lo que esperaba.
+  visual_hint: 🖥️👌
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: much easier
+    meaning: mucho más fácil
+    ipa: mʌtʃ ˈiːziər
+roleplay:
+  ai_role: fitness coach
+  user_role: client
+  setting: Reviewing a weekly workout and nutrition plan.
+  turns:
+  - speaker: ai
+    text: How does your energy feel compared to last month?
+  - speaker: user
+    goal: Compara tu energía usando 'far better' o 'much easier'.
+    suggested_lines:
+    - My energy is far better now!
+    - Waking up early is much easier than I expected.
+  - speaker: ai
+    text: That's great progress! Are you sleeping well too?
+  - speaker: user
+    goal: Usa 'just as important as' o 'slightly less'.
+    suggested_lines:
+    - Yes, I know rest is just as important as exercise.
+    - I'm drinking slightly less coffee at night.
+  - speaker: ai
+    text: Keep it up, consistency is everything!

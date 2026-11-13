@@ -1,0 +1,88 @@
+id: a1-grammar-prepositions
+title: 'Prepositions of time and place: in, on, at'
+title_es: 'Preposiciones de tiempo y lugar: in, on, at'
+cefr: A1
+topic: grammar-and-connectors
+description: Aprende a usar 'in', 'on' y 'at' para hablar de horas, días y ubicaciones
+  básicas.
+phrases:
+- id: meet-at-three
+  text: Let's meet at three o'clock.
+  translation: Nos vemos a las tres en punto. ('at' se usa para horas exactas)
+  visual_hint: 🕒🤝
+  cloze:
+  - 2
+  glossary:
+  - word: at
+    meaning: a / en (para horas exactas)
+    ipa: æt
+  kind: expression
+  apply_sentence: The train leaves ____ five o'clock.
+  apply_answer: at
+  apply_translation: El tren sale a las cinco en punto.
+- id: class-on-monday
+  text: My English class is on Monday.
+  translation: Mi clase de inglés es el lunes. ('on' se usa para días de la semana)
+  visual_hint: 📅📚
+  cloze:
+  - 4
+  glossary:
+  - word: 'on'
+    meaning: el / en (para días de la semana)
+    ipa: ɑːn
+- id: born-in-july
+  text: My birthday is in July.
+  translation: Mi cumpleaños es en julio. ('in' se usa para meses y años)
+  visual_hint: 🎂📆
+  cloze:
+  - 3
+  glossary:
+  - word: in
+    meaning: en (para meses, años, estaciones)
+    ipa: ɪn
+- id: keys-on-table
+  text: Your keys are on the table.
+  translation: Tus llaves están sobre la mesa.
+  visual_hint: 🔑🪑
+  cloze:
+  - 3
+  glossary:
+  - word: on the table
+    meaning: sobre la mesa
+    ipa: ɑːn ðə ˈteɪbəl
+- id: bank-next-to-cafe
+  text: The bank is next to the cafe.
+  translation: El banco está al lado de la cafetería.
+  visual_hint: 🏦☕
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: next to
+    meaning: al lado de / junto a
+    ipa: nekst tuː
+  kind: expression
+  apply_sentence: The pharmacy is ____ the supermarket.
+  apply_answer: next to
+  apply_translation: La farmacia está al lado del supermercado.
+roleplay:
+  ai_role: colleague
+  user_role: colleague
+  setting: Planning a quick coffee meeting at the office.
+  turns:
+  - speaker: ai
+    text: When is our team meeting?
+  - speaker: user
+    goal: Di el día y la hora usando 'on' y 'at'.
+    suggested_lines:
+    - It is on Monday at three o'clock.
+    - Let's meet on Monday at ten.
+  - speaker: ai
+    text: Got it! Where is the new cafe?
+  - speaker: user
+    goal: Explica dónde está usando 'next to'.
+    suggested_lines:
+    - It is next to the bank.
+    - The cafe is next to our office.
+  - speaker: ai
+    text: Perfect, see you there!

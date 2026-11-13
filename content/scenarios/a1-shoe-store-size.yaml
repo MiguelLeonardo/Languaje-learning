@@ -3,7 +3,8 @@ title: Trying on running shoes
 title_es: Probarse zapatos deportivos
 cefr: A1
 topic: hotel-and-shopping
-description: Pide unos tenis para correr en talla nueve, pruébatelos y comenta que son muy cómodos.
+description: Pide unos tenis para correr en talla nueve, pruébatelos y comenta que
+  son muy cómodos.
 phrases:
 - id: size-nine-shoes
   text: Do you have these blue running shoes in size nine?
@@ -38,39 +39,6 @@ phrases:
   - word: comfortable
     meaning: cómodos
     ipa: ˈkʌmfərtəbəl
-- id: pair-of-white-socks
-  text: I will take the shoes and one pack of white socks.
-  translation: Me llevo los zapatos y un paquete de calcetines blancos.
-  visual_hint: 🧦🛍️
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: socks
-    meaning: calcetines / medias
-    ipa: sɑːks
-- id: half-size-bigger
-  text: Nine is my exact size; I don't need a bigger one.
-  translation: Nueve es mi talla exacta; no necesito uno más grande.
-  visual_hint: 📏✅
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: bigger
-    meaning: más grande
-    ipa: ˈbɪɡər
-- id: keep-the-shoebox
-  text: Yes, please put them inside the shoebox.
-  translation: Sí, por favor póngalos dentro de la caja de zapatos.
-  visual_hint: 📦👟
-  cloze:
-  - 2
-  - 4
-  glossary:
-  - word: shoebox
-    meaning: caja de zapatos
-    ipa: ˈʃuːbɑːks
 - id: idm-put-on-sneakers
   text: Please sit down and put on the left sneaker first.
   translation: Por favor siéntese y póngase primero el tenis izquierdo.
@@ -100,7 +68,8 @@ phrases:
   kind: phrasal_verb
   apply_sentence: Those popular boots ____ fast during the winter sale.
   apply_answer: sold out
-  apply_translation: Esas botas populares se agotaron rápido durante la rebaja de invierno.
+  apply_translation: Esas botas populares se agotaron rápido durante la rebaja de
+    invierno.
 roleplay:
   ai_role: shoe sales associate
   user_role: shopper

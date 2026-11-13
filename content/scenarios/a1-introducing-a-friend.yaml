@@ -3,7 +3,8 @@ title: Introducing two friends
 title_es: Presentar a dos amigos
 cefr: A1
 topic: social-and-smalltalk
-description: Presenta a tu amiga Ana a tu compañero de trabajo Tom en una cafetería y conversen sobre de dónde son.
+description: Presenta a tu amiga Ana a tu compañero de trabajo Tom en una cafetería
+  y conversen sobre de dónde son.
 phrases:
 - id: meet-my-friend-ana
   text: Hi Tom! I want you to meet my good friend, Ana.
@@ -38,39 +39,6 @@ phrases:
   - word: together
     meaning: juntos
     ipa: təˈɡeðər
-- id: sit-at-our-table
-  text: Would you like to sit and have coffee with us?
-  translation: ¿Te gustaría sentarte y tomar un café con nosotros?
-  visual_hint: ☕🪑
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: with us
-    meaning: con nosotros
-    ipa: wɪð ʌs
-- id: love-the-sunny-weather
-  text: You brought the warm sunny weather with you!
-  translation: ¡Trajiste el clima cálido y soleado contigo!
-  visual_hint: ☀️😄
-  cloze:
-  - 2
-  - 5
-  glossary:
-  - word: weather
-    meaning: clima / tiempo
-    ipa: ˈweðər
-- id: see-you-on-monday
-  text: Great chatting with you, Tom! See you on Monday.
-  translation: ¡Qué gusto charlar contigo, Tom! Nos vemos el lunes.
-  visual_hint: 🙌📅
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: Monday
-    meaning: lunes
-    ipa: ˈmʌndeɪ
 - id: idm-a1if-this-is
   text: Anna, this is my best friend, Carlos. He's very kind.
   translation: Anna, este es mi mejor amigo, Carlos. Es muy amable. (presentación)

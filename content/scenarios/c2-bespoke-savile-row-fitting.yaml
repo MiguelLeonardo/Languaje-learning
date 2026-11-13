@@ -3,11 +3,14 @@ title: Baste fitting at a bespoke tailor
 title_es: Ajuste de hilván en sastrería a medida
 cefr: C2
 topic: hotel-and-shopping
-description: Evalúa con un maestro cortador la caída del lienzo de lana fría, la altura de sisa y el giro de solapa.
+description: Evalúa con un maestro cortador la caída del lienzo de lana fría, la altura
+  de sisa y el giro de solapa.
 phrases:
 - id: floating-horsehair-canvas
-  text: The floating horsehair canvas gives the chest a remarkably natural three-dimensional roll.
-  translation: El entretelado flotante de crin le da al pecho una caída tridimensional notablemente natural.
+  text: The floating horsehair canvas gives the chest a remarkably natural three-dimensional
+    roll.
+  translation: El entretelado flotante de crin le da al pecho una caída tridimensional
+    notablemente natural.
   visual_hint: 🧥🪡
   cloze:
   - 4
@@ -17,9 +20,10 @@ phrases:
     meaning: entretela flotante cosida a mano
     ipa: ˈfloʊtɪŋ ˈkænvəs
 - id: high-armhole-mobility
-  text: Cutting a high armhole with extra fullness across the shoulder blades allows effortless reach without collar
-    gap.
-  translation: Cortar una sisa alta con holgura en los omóplatos permite mover los brazos sin que el cuello se separe.
+  text: Cutting a high armhole with extra fullness across the shoulder blades allows
+    effortless reach without collar gap.
+  translation: Cortar una sisa alta con holgura en los omóplatos permite mover los
+    brazos sin que el cuello se separe.
   visual_hint: 📐👔
   cloze:
   - 5
@@ -29,9 +33,10 @@ phrases:
     meaning: separación indeseada del cuello del saco
     ipa: ˈkɑːlər ɡæp
 - id: pitch-of-right-sleeve
-  text: Because my right shoulder drops a quarter inch, let's rotate the right sleeve pitch slightly forward.
-  translation: Como mi hombro derecho cae un cuarto de pulgada, rotemos ligeramente hacia adelante el aplomo de
-    la manga derecha.
+  text: Because my right shoulder drops a quarter inch, let's rotate the right sleeve
+    pitch slightly forward.
+  translation: Como mi hombro derecho cae un cuarto de pulgada, rotemos ligeramente
+    hacia adelante el aplomo de la manga derecha.
   visual_hint: 🪞📌
   cloze:
   - 5
@@ -40,43 +45,10 @@ phrases:
   - word: sleeve pitch
     meaning: ángulo de aplomo de la manga
     ipa: sliːv pɪtʃ
-- id: working-surgeon-cuffs
-  text: For the forward fitting next month, we'll finish the four working horn buttons on the cuffs.
-  translation: Para la siguiente prueba el próximo mes, terminaremos los cuatro ojales practicables con botones
-    de asta en los puños.
-  visual_hint: 🔘✨
-  cloze:
-  - 5
-  - 10
-  glossary:
-  - word: working cuffs
-    meaning: ojales de puño practicables (funcionales)
-    ipa: ˈwɜːrkɪŋ kʌfs
-- id: high-twist-fresco-wool
-  text: This high-twist fresco weave breathes exceptionally well in humid summer climates.
-  translation: Este tejido fresco de alta torsión transpira excepcionalmente bien en climas húmedos de verano.
-  visual_hint: 🌬️🧵
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: high-twist
-    meaning: hilo de alta torsión resistente a arrugas
-    ipa: haɪ twɪst
-- id: impeccable-craftsmanship
-  text: We'll reconvene in four weeks for the forward baste—thank you, Master Cutter.
-  translation: Nos reuniremos en cuatro semanas para la segunda prueba; muchas gracias, maestro.
-  visual_hint: 🤝🎩
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: reconvene
-    meaning: volver a reunirse
-    ipa: ˌriːkənˈviːn
 - id: idm-taper-off-lapel
   text: Ask the cutter to let the lapel roll taper off gracefully toward the button.
-  translation: Pide al cortador que deje que la vuelta de la solapa se afine suavemente hacia el botón.
+  translation: Pide al cortador que deje que la vuelta de la solapa se afine suavemente
+    hacia el botón.
   visual_hint: 🪡🤵
   cloze:
   - 4
@@ -88,10 +60,12 @@ phrases:
   kind: phrasal_verb
   apply_sentence: Notice how the shoulder seam should ____ cleanly without puckering.
   apply_answer: taper off
-  apply_translation: Fíjate cómo la costura del hombro debe afinarse limpiamente sin arrugarse.
+  apply_translation: Fíjate cómo la costura del hombro debe afinarse limpiamente sin
+    arrugarse.
 - id: idm-cut-above-rest
   text: Hand-padded canvas chest pieces are a cut above the rest in longevity.
-  translation: Las entretelas de lona picadas a mano están muy por encima del resto en durabilidad.
+  translation: Las entretelas de lona picadas a mano están muy por encima del resto
+    en durabilidad.
   visual_hint: ✂️👑
   cloze:
   - 4
@@ -103,41 +77,53 @@ phrases:
   kind: idiom
   apply_sentence: With horn buttons and Milanese buttonholes, this overcoat is ____.
   apply_answer: a cut above the rest
-  apply_translation: Con botones de cuerno y ojales milaneses, este abrigo está muy por encima del resto.
+  apply_translation: Con botones de cuerno y ojales milaneses, este abrigo está muy
+    por encima del resto.
 roleplay:
   ai_role: master cutter
   user_role: client
   setting: Fitting room at a traditional Savile Row tailoring house.
   turns:
   - speaker: ai
-    text: Welcome to your first baste fitting! Let's see how the chalk-stripe worsted drapes on your shoulders.
+    text: Welcome to your first baste fitting! Let's see how the chalk-stripe worsted
+      drapes on your shoulders.
   - speaker: user
-    goal: Elogia la caída tridimensional que aporta la entretela flotante cosida a mano.
+    goal: Elogia la caída tridimensional que aporta la entretela flotante cosida a
+      mano.
     suggested_lines:
-    - The floating horsehair canvas gives the chest a remarkably natural three-dimensional roll.
-    - Cutting a high armhole with extra fullness across the shoulder blades allows effortless reach without collar
-      gap.
+    - The floating horsehair canvas gives the chest a remarkably natural three-dimensional
+      roll.
+    - Cutting a high armhole with extra fullness across the shoulder blades allows
+      effortless reach without collar gap.
   - speaker: ai
-    text: Raise your arms forward as if holding a steering wheel—notice how the collar hugs your neck?
+    text: Raise your arms forward as if holding a steering wheel—notice how the collar
+      hugs your neck?
   - speaker: user
-    goal: Destaca cómo la sisa alta permite movilidad sin despegar el cuello de la camisa.
+    goal: Destaca cómo la sisa alta permite movilidad sin despegar el cuello de la
+      camisa.
     suggested_lines:
-    - Cutting a high armhole with extra fullness across the shoulder blades allows effortless reach without collar
-      gap.
-    - Because my right shoulder drops a quarter inch, let's rotate the right sleeve pitch slightly forward.
+    - Cutting a high armhole with extra fullness across the shoulder blades allows
+      effortless reach without collar gap.
+    - Because my right shoulder drops a quarter inch, let's rotate the right sleeve
+      pitch slightly forward.
   - speaker: ai
     text: Good eye—there is a faint diagonal crease at the back of the right scye.
   - speaker: user
-    goal: Pide ajustar el ángulo de la manga derecha para compensar la caída natural del hombro.
+    goal: Pide ajustar el ángulo de la manga derecha para compensar la caída natural
+      del hombro.
     suggested_lines:
-    - Because my right shoulder drops a quarter inch, let's rotate the right sleeve pitch slightly forward.
-    - For the forward fitting next month, we'll finish the four working horn buttons on the cuffs.
+    - Because my right shoulder drops a quarter inch, let's rotate the right sleeve
+      pitch slightly forward.
+    - For the forward fitting next month, we'll finish the four working horn buttons
+      on the cuffs.
   - speaker: ai
-    text: I've re-chalked the right sleeve head and let out the waist suppression by three millimeters.
+    text: I've re-chalked the right sleeve head and let out the waist suppression
+      by three millimeters.
   - speaker: user
     goal: Confirma el acabado con cuatro botones de asta funcionales en los puños.
     suggested_lines:
-    - For the forward fitting next month, we'll finish the four working horn buttons on the cuffs.
+    - For the forward fitting next month, we'll finish the four working horn buttons
+      on the cuffs.
     - This high-twist fresco weave breathes exceptionally well in humid summer climates.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

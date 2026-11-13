@@ -3,7 +3,8 @@ title: Returning a faulty item
 title_es: Devolver un producto defectuoso
 cefr: B2
 topic: hotel-and-shopping
-description: Explica el fallo de un dispositivo electrónico y solicita un reembolso con el recibo.
+description: Explica el fallo de un dispositivo electrónico y solicita un reembolso
+  con el recibo.
 phrases:
 - id: stopped-working
   text: I bought these headphones yesterday, but the left side stopped working.
@@ -42,54 +43,10 @@ phrases:
   glossary:
   - word: credit back
     meaning: reintegrar / abonar de vuelta
-- id: under-warranty
-  text: Since it's still under warranty, I'd prefer an immediate replacement.
-  translation: Dado que aún está en garantía, preferiría un reemplazo inmediato.
-  visual_hint: 📜🔄
-  cloze:
-  - 4
-  - 8
-  - 9
-  glossary:
-  - word: warranty
-    meaning: garantía
-    ipa: ˈwɔːrənti
-  - word: replacement
-    meaning: reemplazo
-    ipa: rɪˈpleɪsmənt
-- id: original-packaging
-  text: I brought the original packaging along with the digital invoice.
-  translation: Traje el empaque original junto con la factura digital.
-  visual_hint: 📦🧾
-  cloze:
-  - 3
-  - 4
-  - 9
-  glossary:
-  - word: packaging
-    meaning: empaque / embalaje
-    ipa: ˈpækɪdʒɪŋ
-  - word: invoice
-    meaning: factura
-    ipa: ˈɪnvɔɪs
-- id: speak-to-supervisor
-  text: If store credit is the only option, could we check with a supervisor?
-  translation: Si el crédito de tienda es la única opción, ¿podríamos consultarlo con un supervisor?
-  visual_hint: 🧑‍💼💬
-  cloze:
-  - 2
-  - 9
-  - 12
-  glossary:
-  - word: store credit
-    meaning: crédito en la tienda
-    ipa: stɔːr ˈkredɪt
-  - word: supervisor
-    meaning: supervisor / encargado
-    ipa: ˈsuːpərvaɪzər
 - id: idm-back-up-claim
   text: I took unboxing photos to back up my claim that the mug arrived cracked.
-  translation: Tomé fotos al abrir la caja para respaldar mi reclamo de que la taza llegó agrietada.
+  translation: Tomé fotos al abrir la caja para respaldar mi reclamo de que la taza
+    llegó agrietada.
   visual_hint: 📦📸
   cloze:
   - 4
@@ -101,10 +58,12 @@ phrases:
   kind: phrasal_verb
   apply_sentence: Having the shipping video will ____ your request for a full refund.
   apply_answer: back up
-  apply_translation: Tener el video del envío respaldará tu solicitud de reembolso total.
+  apply_translation: Tener el video del envío respaldará tu solicitud de reembolso
+    total.
 - id: idm-meet-halfway
   text: If a full refund isn't possible, could you meet me halfway with store credit?
-  translation: Si no es posible un reembolso completo, ¿podríamos llegar a un punto medio con crédito en tienda?
+  translation: Si no es posible un reembolso completo, ¿podríamos llegar a un punto
+    medio con crédito en tienda?
   visual_hint: 🤝💳
   cloze:
   - 4
@@ -114,9 +73,11 @@ phrases:
     meaning: llegar a un punto medio / ceder ambos
     ipa: miːt ˌhæfˈweɪ
   kind: idiom
-  apply_sentence: Both the buyer and seller agreed to ____ to resolve the dispute quickly.
+  apply_sentence: Both the buyer and seller agreed to ____ to resolve the dispute
+    quickly.
   apply_answer: meet halfway
-  apply_translation: Tanto el comprador como el vendedor acordaron llegar a un punto medio para resolver rápido.
+  apply_translation: Tanto el comprador como el vendedor acordaron llegar a un punto
+    medio para resolver rápido.
 roleplay:
   ai_role: store supervisor
   user_role: customer

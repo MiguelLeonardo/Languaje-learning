@@ -3,7 +3,8 @@ title: Buying a bus ticket
 title_es: Comprar un boleto de autobús
 cefr: A1
 topic: travel-and-transport
-description: Compra un boleto hacia el centro, pregunta por la parada y el horario de salida.
+description: Compra un boleto hacia el centro, pregunta por la parada y el horario
+  de salida.
 phrases:
 - id: ticket-downtown
   text: One ticket to downtown, please.
@@ -43,51 +44,10 @@ phrases:
   - word: bus stop
     meaning: parada de autobús
     ipa: bʌs stɑːp
-- id: next-bus-time
-  text: What time is the next bus?
-  translation: ¿A qué hora sale el próximo autobús?
-  visual_hint: 🕒🚌
-  cloze:
-  - 1
-  - 4
-  glossary:
-  - word: time
-    meaning: hora
-    ipa: taɪm
-  - word: next
-    meaning: próximo / siguiente
-    ipa: nekst
-- id: pay-by-card
-  text: Can I pay by credit card here?
-  translation: ¿Puedo pagar con tarjeta de crédito aquí?
-  visual_hint: 💳🚌
-  cloze:
-  - 2
-  - 5
-  glossary:
-  - word: pay
-    meaning: pagar
-    ipa: peɪ
-  - word: credit card
-    meaning: tarjeta de crédito
-    ipa: ˈkredɪt kɑːrd
-- id: return-ticket
-  text: A return ticket for today, please.
-  translation: Un boleto de ida y vuelta para hoy, por favor.
-  visual_hint: 🔁🎫
-  cloze:
-  - 1
-  - 2
-  glossary:
-  - word: return ticket
-    meaning: boleto de ida y vuelta
-    ipa: rɪˈtɜːrn ˈtɪkɪt
-  - word: today
-    meaning: hoy
-    ipa: təˈdeɪ
 - id: bus-pick-up-ticket
   text: Please pick up your ticket at the window before the bus leaves.
-  translation: Por favor, recoge tu boleto en la ventanilla antes de que salga el autobús. (pick up = recoger)
+  translation: Por favor, recoge tu boleto en la ventanilla antes de que salga el
+    autobús. (pick up = recoger)
   visual_hint: 🎫🚌
   cloze:
   - 4
@@ -102,7 +62,8 @@ phrases:
   apply_translation: ¿Puedes recoger mi bolso de la estación de autobuses más tarde?
 - id: bus-right-away
   text: Buy the ticket right away, because the bus is almost full.
-  translation: Compra el boleto de inmediato, porque el autobús está casi lleno. (right away = enseguida)
+  translation: Compra el boleto de inmediato, porque el autobús está casi lleno. (right
+    away = enseguida)
   visual_hint: ⚡🚌
   cloze:
   - 3

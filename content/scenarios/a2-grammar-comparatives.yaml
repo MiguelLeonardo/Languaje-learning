@@ -1,0 +1,96 @@
+id: a2-grammar-comparatives
+title: Comparisons with as...as and modifiers
+title_es: Comparaciones con as...as y modificadores
+cefr: A2
+topic: grammar-and-connectors
+description: Compara igualdad y diferencia usando 'as...as', 'not as...as' y modificadores
+  como 'a bit' o 'much'.
+phrases:
+- id: as-fast-as-train
+  text: The metro is as fast as a taxi.
+  translation: El metro es tan rápido como un taxi.
+  visual_hint: 🚇🚕
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: as ... as
+    meaning: tan ... como
+    ipa: æz ... æz
+  kind: expression
+  apply_sentence: My new phone is ____ fast as my laptop.
+  apply_answer: as
+  apply_translation: Mi nuevo teléfono es tan rápido como mi portátil.
+- id: not-as-busy-as
+  text: Tuesday is not as busy as Friday.
+  translation: El martes no está tan concurrido como el viernes.
+  visual_hint: 📅🏪
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: not as ... as
+    meaning: no tan ... como
+    ipa: nɑːt æz ... æz
+- id: a-bit-quieter
+  text: This neighborhood is a bit quieter than downtown.
+  translation: Este barrio es un poco más tranquilo que el centro.
+  visual_hint: 🏡🤫
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: a bit
+    meaning: un poco (antes de comparativo)
+    ipa: ə bɪt
+  - word: quieter
+    meaning: más tranquilo
+    ipa: ˈkwaɪətər
+  kind: expression
+  apply_sentence: Today feels ____ colder than yesterday.
+  apply_answer: a bit
+  apply_translation: Hoy se siente un poco más frío que ayer.
+- id: much-more-comfortable
+  text: These shoes are much more comfortable.
+  translation: Estos zapatos son mucho más cómodos.
+  visual_hint: 👟😌
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: much more
+    meaning: mucho más
+    ipa: mʌtʃ mɔːr
+- id: traffic-worse-than
+  text: The traffic is worse than last week.
+  translation: El tráfico está peor que la semana pasada. ('worse' es el comparativo
+    de 'bad')
+  visual_hint: 🚗🚦
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: worse
+    meaning: peor (comparativo de bad)
+    ipa: wɜːrs
+roleplay:
+  ai_role: real estate agent
+  user_role: apartment hunter
+  setting: Comparing two apartments for rent.
+  turns:
+  - speaker: ai
+    text: So, what do you think of this apartment compared to the first one?
+  - speaker: user
+    goal: Compara el ruido o tamaño usando 'a bit' o 'much more'.
+    suggested_lines:
+    - This neighborhood is a bit quieter than downtown.
+    - The living room is much more comfortable.
+  - speaker: ai
+    text: True! And what about the commute to your office?
+  - speaker: user
+    goal: Compara el transporte usando 'as...as' o 'not as...as'.
+    suggested_lines:
+    - The metro here is as fast as a taxi.
+    - The bus is not as busy as the other line.
+  - speaker: ai
+    text: That makes daily life much easier. Would you like to apply?

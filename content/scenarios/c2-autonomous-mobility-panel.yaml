@@ -3,13 +3,14 @@ title: Debating urban autonomous transit policy
 title_es: Debatir políticas de movilidad autónoma
 cefr: C2
 topic: travel-and-transport
-description: Participa en un panel de urbanismo sobre flotas autónomas compartidas, transporte público e infraestructura
-  peatonal.
+description: Participa en un panel de urbanismo sobre flotas autónomas compartidas,
+  transporte público e infraestructura peatonal.
 phrases:
 - id: induced-congestion-paradox
-  text: Replacing private cars one-for-one with empty roaming robotaxis risks worsening induced congestion.
-  translation: Reemplazar autos privados uno por uno con robotaxis circulando vacíos corre el riesgo de agravar
-    la congestión inducida.
+  text: Replacing private cars one-for-one with empty roaming robotaxis risks worsening
+    induced congestion.
+  translation: Reemplazar autos privados uno por uno con robotaxis circulando vacíos
+    corre el riesgo de agravar la congestión inducida.
   visual_hint: 🤖🚗
   cloze:
   - 4
@@ -19,10 +20,10 @@ phrases:
     meaning: empeorar / agravar
     ipa: ˈwɜːrsənɪŋ
 - id: first-mile-feeder-integration
-  text: Autonomous shuttles deliver the highest civic return when integrated as first-mile feeders into high-capacity
-    rail.
-  translation: Las lanzaderas autónomas rinden el mayor beneficio cívico cuando se integran como alimentadores de
-    primera milla hacia el tren.
+  text: Autonomous shuttles deliver the highest civic return when integrated as first-mile
+    feeders into high-capacity rail.
+  translation: Las lanzaderas autónomas rinden el mayor beneficio cívico cuando se
+    integran como alimentadores de primera milla hacia el tren.
   visual_hint: 🚊🔄
   cloze:
   - 5
@@ -32,9 +33,10 @@ phrases:
     meaning: rutas alimentadoras de primera milla
     ipa: fɜːrst maɪl ˈfiːdərz
 - id: curbside-pricing-telemetry
-  text: Dynamic curbside pricing and anonymized telemetry sharing should be preconditions for operating permits.
-  translation: La tarificación dinámica de bordillos y el intercambio de telemetría anónima deberían ser requisitos
-    para los permisos.
+  text: Dynamic curbside pricing and anonymized telemetry sharing should be preconditions
+    for operating permits.
+  translation: La tarificación dinámica de bordillos y el intercambio de telemetría
+    anónima deberían ser requisitos para los permisos.
   visual_hint: 📊🏙️
   cloze:
   - 4
@@ -43,45 +45,10 @@ phrases:
   - word: preconditions
     meaning: requisitos previos / condiciones
     ipa: ˌpriːkənˈdɪʃənz
-- id: reclaim-streetscape-pedestrians
-  text: Our ultimate metric of success is reclaiming asphalt for Micromobility, trees, and pedestrian plazas.
-  translation: Nuestra métrica definitiva de éxito es recuperar el asfalto para micromovilidad, árboles y plazas
-    peatonales.
-  visual_hint: 🌳🚶‍♀️
-  cloze:
-  - 4
-  - 9
-  glossary:
-  - word: reclaiming
-    meaning: recuperar (espacio público)
-    ipa: rɪˈkleɪmɪŋ
-- id: equitable-suburban-access
-  text: Subsidizing off-peak autonomous microtransit can bridge transit deserts in underserved suburbs.
-  translation: Subsidiar el microtransporte autónomo fuera de hora punta puede cubrir zonas sin transporte en la
-    periferia.
-  visual_hint: 🏘️🚌
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: underserved
-    meaning: desatendidos / con pocos servicios
-    ipa: ˌʌndərˈsɜːrvd
-- id: algorithmic-safety-audits
-  text: Independent algorithmic safety audits must precede any expansion of driverless operating domains.
-  translation: Las auditorías independientes de seguridad algorítmica deben preceder cualquier expansión operativa.
-  visual_hint: 🛡️🔍
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: precede
-    meaning: preceder / ir antes de
-    ipa: prɪˈsiːd
 - id: mobility-double-edged-sword
   text: Autonomous transit is a double-edged sword for suburban commuters.
-  translation: El transporte autónomo es un arma de doble filo para los viajeros suburbanos. (double-edged sword
-    = con ventajas y riesgos)
+  translation: El transporte autónomo es un arma de doble filo para los viajeros suburbanos.
+    (double-edged sword = con ventajas y riesgos)
   visual_hint: ⚔️🚗
   cloze:
   - 3
@@ -93,11 +60,12 @@ phrases:
   kind: idiom
   apply_sentence: Dynamic curbside pricing can be a ____ for local shops.
   apply_answer: double-edged sword
-  apply_translation: El precio dinámico de la acera puede ser un arma de doble filo para los comercios locales.
+  apply_translation: El precio dinámico de la acera puede ser un arma de doble filo
+    para los comercios locales.
 - id: mobility-kick-the-can
   text: Cities keep kicking the can down the road on congestion pricing.
-  translation: Las ciudades siguen posponiendo el problema del cobro por congestión. (kick the can down the road
-    = aplazar un problema)
+  translation: Las ciudades siguen posponiendo el problema del cobro por congestión.
+    (kick the can down the road = aplazar un problema)
   visual_hint: 🥫🛣️
   cloze:
   - 3
@@ -109,41 +77,53 @@ phrases:
   kind: idiom
   apply_sentence: We can't keep ____ on safety audits any longer.
   apply_answer: kicking the can down the road
-  apply_translation: No podemos seguir posponiendo el problema de las auditorías de seguridad por más tiempo.
+  apply_translation: No podemos seguir posponiendo el problema de las auditorías de
+    seguridad por más tiempo.
 roleplay:
   ai_role: urban transport commissioner
   user_role: mobility researcher
   setting: Keynote panel at a global smart-cities summit.
   turns:
   - speaker: ai
-    text: Proponents claim autonomous vehicles will eliminate urban traffic overnight. What does your data show?
+    text: Proponents claim autonomous vehicles will eliminate urban traffic overnight.
+      What does your data show?
   - speaker: user
     goal: Advierte que sustituir autos por robotaxis vacíos puede aumentar la congestión.
     suggested_lines:
-    - Replacing private cars one-for-one with empty roaming robotaxis risks worsening induced congestion.
-    - Autonomous shuttles deliver the highest civic return when integrated as first-mile feeders into high-capacity
-      rail.
+    - Replacing private cars one-for-one with empty roaming robotaxis risks worsening
+      induced congestion.
+    - Autonomous shuttles deliver the highest civic return when integrated as first-mile
+      feeders into high-capacity rail.
   - speaker: ai
-    text: So how should municipalities integrate autonomous fleets without cannibalizing mass transit?
+    text: So how should municipalities integrate autonomous fleets without cannibalizing
+      mass transit?
   - speaker: user
-    goal: Explica que su mayor valor está en conectar el primer tramo con el tren masivo.
+    goal: Explica que su mayor valor está en conectar el primer tramo con el tren
+      masivo.
     suggested_lines:
-    - Autonomous shuttles deliver the highest civic return when integrated as first-mile feeders into high-capacity
-      rail.
-    - Dynamic curbside pricing and anonymized telemetry sharing should be preconditions for operating permits.
+    - Autonomous shuttles deliver the highest civic return when integrated as first-mile
+      feeders into high-capacity rail.
+    - Dynamic curbside pricing and anonymized telemetry sharing should be preconditions
+      for operating permits.
   - speaker: ai
-    text: That's a compelling framework. What regulatory levers should cities retain over curb space?
+    text: That's a compelling framework. What regulatory levers should cities retain
+      over curb space?
   - speaker: user
     goal: Propón tarifas dinámicas de acera y telemetría anónima para otorgar permisos.
     suggested_lines:
-    - Dynamic curbside pricing and anonymized telemetry sharing should be preconditions for operating permits.
-    - Our ultimate metric of success is reclaiming asphalt for Micromobility, trees, and pedestrian plazas.
+    - Dynamic curbside pricing and anonymized telemetry sharing should be preconditions
+      for operating permits.
+    - Our ultimate metric of success is reclaiming asphalt for Micromobility, trees,
+      and pedestrian plazas.
   - speaker: ai
-    text: If we price drop-off zones dynamically, how should cities reinvest that revenue?
+    text: If we price drop-off zones dynamically, how should cities reinvest that
+      revenue?
   - speaker: user
     goal: Concluye que el verdadero éxito es recuperar espacio público para los peatones.
     suggested_lines:
-    - Our ultimate metric of success is reclaiming asphalt for Micromobility, trees, and pedestrian plazas.
-    - Subsidizing off-peak autonomous microtransit can bridge transit deserts in underserved suburbs.
+    - Our ultimate metric of success is reclaiming asphalt for Micromobility, trees,
+      and pedestrian plazas.
+    - Subsidizing off-peak autonomous microtransit can bridge transit deserts in underserved
+      suburbs.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

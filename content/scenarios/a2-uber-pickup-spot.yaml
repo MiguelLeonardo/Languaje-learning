@@ -3,7 +3,8 @@ title: Confirming a rideshare pickup spot
 title_es: Confirmar punto de recogida con el conductor
 cefr: A2
 topic: travel-and-transport
-description: Llama a tu conductor de aplicación para explicarle exactamente en qué esquina estás esperando.
+description: Llama a tu conductor de aplicación para explicarle exactamente en qué
+  esquina estás esperando.
 phrases:
 - id: waiting-by-pharmacy
   text: Hi! I'm your passenger. I'm standing in front of the green pharmacy.
@@ -38,42 +39,10 @@ phrases:
   - word: wearing
     meaning: llevando puesto / vistiendo
     ipa: ˈwerɪŋ
-- id: see-your-silver-car
-  text: I see your silver Toyota with the hazard lights on now!
-  translation: ¡Ya veo tu Toyota plateado con las luces intermitentes encendidas!
-  visual_hint: 🚗✨
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: hazard lights
-    meaning: luces preventivas / intermitentes
-    ipa: ˈhæzərd laɪts
-- id: check-license-plate
-  text: Just checking your license plate—is this ride for Alex?
-  translation: 'Solo verificando la placa: ¿este viaje es para Alex?'
-  visual_hint: 🔢✅
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: license plate
-    meaning: placa / matrícula
-    ipa: ˈlaɪsəns pleɪt
-- id: take-the-highway
-  text: Thanks for finding us! Is the highway faster tonight?
-  translation: ¡Gracias por encontrarnos! ¿La autopista es más rápida esta noche?
-  visual_hint: 🛣️🌙
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: highway
-    meaning: autopista
-    ipa: ˈhaɪweɪ
 - id: uber-pull-over
   text: Can you pull over next to the pharmacy, please?
-  translation: ¿Puede detenerse junto a la farmacia, por favor? (pull over = orillarse y parar)
+  translation: ¿Puede detenerse junto a la farmacia, por favor? (pull over = orillarse
+    y parar)
   visual_hint: 🚗🛑
   cloze:
   - 3

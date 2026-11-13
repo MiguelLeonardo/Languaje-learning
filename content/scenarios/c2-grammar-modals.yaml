@@ -1,0 +1,97 @@
+id: c2-grammar-modals
+title: Subtle modality, counterfactuals, and lest
+title_es: Modalidad sutil, contrafactuales y 'lest'
+cefr: C2
+topic: grammar-and-connectors
+description: Expresa matices de probabilidad, innecesidad pasada y precaución formal
+  con 'might well have', 'needn't have', 'lest' y 'were to'.
+phrases:
+- id: might-well-have-prevented
+  text: An earlier warning might well have prevented the bottleneck.
+  translation: Una advertencia previa bien podría haber evitado el cuello de botella.
+  visual_hint: ⚠️🚦
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: might well have
+    meaning: bien podría haber (alta probabilidad)
+    ipa: maɪt wel hæv
+  kind: expression
+  apply_sentence: A simpler interface ____ doubled user adoption.
+  apply_answer: might well have
+  apply_translation: Una interfaz más simple bien podría haber duplicado la adopción.
+- id: neednt-have-printed
+  text: We needn't have printed copies; everyone read the PDF.
+  translation: No hacía falta que imprimiéramos copias; todos leyeron el PDF. (se
+    hizo innecesariamente)
+  visual_hint: 🖨️📱
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: needn't have + pp
+    meaning: no hacía falta haber... (pero se hizo)
+    ipa: ˈniːdənt hæv
+  kind: expression
+  apply_sentence: You ____ brought a coat; the hall is quite warm.
+  apply_answer: needn't have
+  apply_translation: No hacía falta que trajeras abrigo; la sala está bastante cálida.
+- id: lest-we-forget
+  text: Keep a written log, lest key assumptions be forgotten.
+  translation: Lleva un registro escrito, no sea que se olviden los supuestos clave.
+    ('lest' + subjuntivo)
+  visual_hint: 📓✍️
+  cloze:
+  - 4
+  - 7
+  glossary:
+  - word: lest
+    meaning: no sea que / para evitar que
+    ipa: lest
+- id: were-supply-to-falter
+  text: Were supply chains to falter, reserves would cover six weeks.
+  translation: Si las cadenas de suministro llegaran a fallar, las reservas cubrirían
+    seis semanas.
+  visual_hint: 🚢📦
+  cloze:
+  - 0
+  - 3
+  glossary:
+  - word: were X to + verb
+    meaning: si X llegara a...
+    ipa: wɜːr ... tuː
+- id: could-conceivably-trigger
+  text: A sudden rate hike could conceivably cool the housing market.
+  translation: Una subida repentina de tipos podría concebiblemente enfriar el mercado
+    inmobiliario.
+  visual_hint: 🏦🏠
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: conceivably
+    meaning: concebiblemente / posiblemente
+    ipa: kənˈsiːvəbli
+roleplay:
+  ai_role: risk committee chair
+  user_role: chief economist
+  setting: Stress-testing contingency plans during an executive briefing.
+  turns:
+  - speaker: ai
+    text: Looking at last quarter's liquidity crunch, did we overreact by holding
+      extra cash?
+  - speaker: user
+    goal: Evalúa la decisión pasada usando 'needn't have' o 'might well have'.
+    suggested_lines:
+    - We needn't have worried about short-term credit, as it turned out.
+    - Still, a lighter buffer might well have rattled depositors.
+  - speaker: ai
+    text: Fair point. How resilient are we if shipping lanes stall next winter?
+  - speaker: user
+    goal: Plantea el escenario hipotético usando 'Were ... to...' o 'lest'.
+    suggested_lines:
+    - Were shipping lanes to stall, our reserves would cover six weeks.
+    - We should lock in secondary suppliers now, lest delays compound.
+  - speaker: ai
+    text: Prudent and thorough. Let's ratify the contingency plan.

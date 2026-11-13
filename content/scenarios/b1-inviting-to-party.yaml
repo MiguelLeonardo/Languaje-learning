@@ -3,12 +3,13 @@ title: Inviting friends to a weekend barbecue
 title_es: Invitar amigos a un asado de fin de semana
 cefr: B1
 topic: social-and-smalltalk
-description: Invita a un amigo a una reunión en tu terraza, coordina la hora y sugiere qué bebida o postre puede
-  traer.
+description: Invita a un amigo a una reunión en tu terraza, coordina la hora y sugiere
+  qué bebida o postre puede traer.
 phrases:
 - id: hosting-barbecue
   text: We're hosting a casual barbecue on our patio this Saturday afternoon.
-  translation: Vamos a organizar un asado informal en nuestro patio este sábado por la tarde.
+  translation: Vamos a organizar un asado informal en nuestro patio este sábado por
+    la tarde.
   visual_hint: 🍔☀️
   cloze:
   - 1
@@ -51,53 +52,10 @@ phrases:
   - word: bring along
     meaning: traer contigo
     ipa: brɪŋ əˈlɔːŋ
-- id: veggie-burgers-too
-  text: We'll grill burgers and veggies, so there's plenty of food for everyone.
-  translation: Asaremos hamburguesas y verduras, así que habrá mucha comida para todos.
-  visual_hint: 🌽🥩
-  cloze:
-  - 1
-  - 7
-  glossary:
-  - word: grill
-    meaning: asar a la parrilla
-    ipa: ɡrɪl
-  - word: plenty of
-    meaning: abundante / suficiente
-    ipa: ˈplenti əv
-- id: just-bring-drinks
-  text: You don't need to bring anything, maybe just your favorite drinks.
-  translation: No necesitas traer nada, tal vez solo tus bebidas favoritas.
-  visual_hint: 🥤🧊
-  cloze:
-  - 4
-  - 9
-  - 10
-  glossary:
-  - word: maybe
-    meaning: tal vez / quizás
-    ipa: ˈmeɪbi
-  - word: favorite
-    meaning: favoritas
-    ipa: ˈfeɪvərɪt
-- id: text-you-address
-  text: I'll text you the exact pin and buzzer code on Friday.
-  translation: Te enviaré por mensaje la ubicación exacta y el código del timbre el viernes.
-  visual_hint: 📍📱
-  cloze:
-  - 1
-  - 5
-  - 7
-  glossary:
-  - word: pin
-    meaning: ubicación en el mapa
-    ipa: pɪn
-  - word: buzzer code
-    meaning: código del interfón / timbre
-    ipa: ˈbʌzər koʊd
 - id: idm-b1ip-drop-by
   text: Feel free to drop by any time after four o'clock.
-  translation: Siéntete libre de pasar por casa cuando quieras después de las cuatro (visitar sin avisar).
+  translation: Siéntete libre de pasar por casa cuando quieras después de las cuatro
+    (visitar sin avisar).
   visual_hint: 🍖🔥
   cloze:
   - 3
@@ -112,7 +70,8 @@ phrases:
   apply_translation: Quizás pase por tu casa más tarde a devolverte el libro.
 - id: idm-b1ip-the-more
   text: The more, the merrier, so bring anyone you want along.
-  translation: Cuantos más, mejor, así que trae a quien quieras (mientras más gente, más diversión).
+  translation: Cuantos más, mejor, así que trae a quien quieras (mientras más gente,
+    más diversión).
   visual_hint: 🎈👥
   cloze:
   - 3

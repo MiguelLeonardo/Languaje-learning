@@ -3,12 +3,14 @@ title: Complex multi-leg itinerary rerouting
 title_es: Reubicación de itinerario internacional complejo
 cefr: C2
 topic: travel-and-transport
-description: Gestiona en mostrador ejecutivo una reprogramación interlineal con transferencia de equipaje ante cierre
-  de espacio aéreo.
+description: Gestiona en mostrador ejecutivo una reprogramación interlineal con transferencia
+  de equipaje ante cierre de espacio aéreo.
 phrases:
 - id: interline-endorsement
-  text: Given the airspace closure, could you endorse our tickets over to your alliance carrier via Zurich?
-  translation: Dado el cierre del espacio aéreo, ¿podría endosar nuestros boletos a su aerolínea aliada vía Zúrich?
+  text: Given the airspace closure, could you endorse our tickets over to your alliance
+    carrier via Zurich?
+  translation: Dado el cierre del espacio aéreo, ¿podría endosar nuestros boletos
+    a su aerolínea aliada vía Zúrich?
   visual_hint: 🌐✈️
   cloze:
   - 2
@@ -22,8 +24,10 @@ phrases:
     meaning: aerolínea de la misma alianza
     ipa: əˈlaɪəns ˈkæriər
 - id: through-checked-luggage
-  text: We need assurance that our checked luggage will be interlined through to the final destination.
-  translation: Necesitamos la seguridad de que nuestro equipaje documentado será transferido hasta el destino final.
+  text: We need assurance that our checked luggage will be interlined through to the
+    final destination.
+  translation: Necesitamos la seguridad de que nuestro equipaje documentado será transferido
+    hasta el destino final.
   visual_hint: 🧳🏷️
   cloze:
   - 2
@@ -37,9 +41,10 @@ phrases:
     meaning: transferido entre aerolíneas
     ipa: ˈɪntərlaɪnd
 - id: minimum-connecting-time
-  text: Does the forty-minute layover in Munich satisfy the legal minimum connecting time for non-Schengen transit?
-  translation: ¿Cumple la escala de cuarenta minutos en Múnich con el tiempo mínimo legal de conexión para tránsito
-    fuera de Schengen?
+  text: Does the forty-minute layover in Munich satisfy the legal minimum connecting
+    time for non-Schengen transit?
+  translation: ¿Cumple la escala de cuarenta minutos en Múnich con el tiempo mínimo
+    legal de conexión para tránsito fuera de Schengen?
   visual_hint: ⏱️🛂
   cloze:
   - 3
@@ -52,59 +57,10 @@ phrases:
   - word: minimum connecting time
     meaning: tiempo mínimo de conexión
     ipa: ˈmɪnɪməm kəˈnektɪŋ taɪm
-- id: preserve-cabin-class
-  text: If business class is waitlist-only on the first leg, we'd request involuntary downgrade compensation.
-  translation: Si la clase ejecutiva solo tiene lista de espera en el primer tramo, solicitaríamos compensación
-    por cambio involuntario de cabina.
-  visual_hint: 💺⚖️
-  cloze:
-  - 4
-  - 8
-  - 12
-  - 13
-  glossary:
-  - word: leg
-    meaning: tramo de vuelo
-    ipa: leɡ
-  - word: downgrade
-    meaning: bajada de categoría de cabina
-    ipa: ˈdaʊnɡreɪd
-- id: reissue-e-ticket
-  text: Please ensure the e-ticket numbers are revalidated so we don't hit a snag at the transfer gate.
-  translation: Por favor asegúrese de que los números de boleto electrónico sean revalidados para no tener contratiempos
-    en la puerta de conexión.
-  visual_hint: 🎫✅
-  cloze:
-  - 6
-  - 12
-  - 16
-  glossary:
-  - word: revalidated
-    meaning: revalidados / reemitidos
-    ipa: ˌriːˈvælɪdeɪtɪd
-  - word: hit a snag
-    meaning: toparse con un contratiempo
-    ipa: hɪt ə snæɡ
-- id: keynote-commitment
-  text: Time is of the essence, as I'm slated to deliver the opening keynote at nine tomorrow morning.
-  translation: El tiempo es crucial, ya que estoy programado para dar la conferencia inaugural mañana a las nueve
-    de la mañana.
-  visual_hint: 🎙️🕘
-  cloze:
-  - 3
-  - 7
-  - 11
-  glossary:
-  - word: time is of the essence
-    meaning: el tiempo apremia / es crucial
-    ipa: taɪm ɪz əv ði ˈesəns
-  - word: slated to
-    meaning: programado para
-    ipa: ˈsleɪtɪd tə
 - id: lounge-pull-out-all-stops
   text: The agent promised to pull out all the stops for my keynote.
-  translation: La agente prometió hacer todo lo posible para mi conferencia. (pull out all the stops = esforzarse
-    al máximo)
+  translation: La agente prometió hacer todo lo posible para mi conferencia. (pull
+    out all the stops = esforzarse al máximo)
   visual_hint: 🎹🛫
   cloze:
   - 4
@@ -116,10 +72,12 @@ phrases:
   kind: idiom
   apply_sentence: Our hosts will ____ to welcome the delegates tonight.
   apply_answer: pull out all the stops
-  apply_translation: Nuestros anfitriones harán todo lo posible por recibir a los delegados esta noche.
+  apply_translation: Nuestros anfitriones harán todo lo posible por recibir a los
+    delegados esta noche.
 - id: lounge-tall-order
   text: Rebooking four legs in two hours is a tall order.
-  translation: Reprogramar cuatro tramos en dos horas es una tarea difícil. (a tall order = algo muy exigente)
+  translation: Reprogramar cuatro tramos en dos horas es una tarea difícil. (a tall
+    order = algo muy exigente)
   visual_hint: 🧗📋
   cloze:
   - 3
@@ -131,40 +89,55 @@ phrases:
   kind: idiom
   apply_sentence: Clearing every document in ten minutes is a ____.
   apply_answer: tall order
-  apply_translation: Revisar todos los documentos en diez minutos es una tarea muy exigente.
+  apply_translation: Revisar todos los documentos en diez minutos es una tarea muy
+    exigente.
 roleplay:
   ai_role: concierge desk supervisor
   user_role: international keynote speaker
   setting: Executive airline lounge during an unexpected European airspace disruption.
   turns:
   - speaker: ai
-    text: Good evening. Due to the weather system over Frankfurt, your direct flight has been suspended. How can
-      we best reroute you?
+    text: Good evening. Due to the weather system over Frankfurt, your direct flight
+      has been suspended. How can we best reroute you?
   - speaker: user
-    goal: Explica que das la conferencia inaugural mañana y pide endosar el boleto vía Zúrich.
+    goal: Explica que das la conferencia inaugural mañana y pide endosar el boleto
+      vía Zúrich.
     suggested_lines:
-    - Given the airspace closure, could you endorse our tickets over to your alliance carrier via Zurich?
-    - Time is of the essence, as I'm slated to deliver the opening keynote at nine tomorrow morning.
+    - Given the airspace closure, could you endorse our tickets over to your alliance
+      carrier via Zurich?
+    - Time is of the essence, as I'm slated to deliver the opening keynote at nine
+      tomorrow morning.
   - speaker: ai
-    text: 'We have two options: via Munich with a forty-minute connection, or via Zurich leaving in fifty minutes.'
+    text: 'We have two options: via Munich with a forty-minute connection, or via
+      Zurich leaving in fifty minutes.'
   - speaker: user
-    goal: Pregunta si cuarenta minutos en Múnich cumplen el tiempo mínimo legal de conexión.
+    goal: Pregunta si cuarenta minutos en Múnich cumplen el tiempo mínimo legal de
+      conexión.
     suggested_lines:
-    - Does the forty-minute layover in Munich satisfy the legal minimum connecting time for non-Schengen transit?
+    - Does the forty-minute layover in Munich satisfy the legal minimum connecting
+      time for non-Schengen transit?
     - Is forty minutes enough for non-Schengen minimum connecting time?
   - speaker: ai
-    text: Zurich is much safer at seventy-five minutes, and I can confirm two seats in Business Class.
+    text: Zurich is much safer at seventy-five minutes, and I can confirm two seats
+      in Business Class.
   - speaker: user
-    goal: Pide garantía de que el equipaje será transferido y el boleto electrónico revalidado.
+    goal: Pide garantía de que el equipaje será transferido y el boleto electrónico
+      revalidado.
     suggested_lines:
-    - We need assurance that our checked luggage will be interlined through to the final destination.
-    - Please ensure the e-ticket numbers are revalidated so we don't hit a snag at the transfer gate.
+    - We need assurance that our checked luggage will be interlined through to the
+      final destination.
+    - Please ensure the e-ticket numbers are revalidated so we don't hit a snag at
+      the transfer gate.
   - speaker: ai
-    text: I've reissued the 13-digit e-tickets and sent a priority telex to baggage control to transfer your bags.
+    text: I've reissued the 13-digit e-tickets and sent a priority telex to baggage
+      control to transfer your bags.
   - speaker: user
     goal: Agradece la gestión y confirma la puerta de salida hacia Zúrich.
     suggested_lines:
-    - Thank you for revalidating the e-tickets; which gate does the Zurich flight depart from?
-    - Please ensure the e-ticket numbers are revalidated so we don't hit a snag at the transfer gate.
+    - Thank you for revalidating the e-tickets; which gate does the Zurich flight
+      depart from?
+    - Please ensure the e-ticket numbers are revalidated so we don't hit a snag at
+      the transfer gate.
   - speaker: ai
-    text: Gate B24, boarding in twenty minutes. Have a seamless flight and a great keynote!
+    text: Gate B24, boarding in twenty minutes. Have a seamless flight and a great
+      keynote!

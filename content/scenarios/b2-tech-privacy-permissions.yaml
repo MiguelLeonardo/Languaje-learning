@@ -1,0 +1,95 @@
+id: b2-tech-privacy-permissions
+title: Auditing app privacy and tracking permissions
+title_es: Revisar permisos de privacidad en aplicaciones
+cefr: B2
+topic: daily-tech-and-media
+description: Revisa los permisos de ubicación, micrófono y rastreo de las aplicaciones de tu
+  teléfono.
+phrases:
+- id: revoke-background-location
+  text: I decided to revoke background location access from retail apps.
+  translation: Decidí revocar el acceso a la ubicación en segundo plano de las aplicaciones
+    de tiendas.
+  visual_hint: 📍🚫
+  cloze:
+  - 3
+  - 5
+  glossary:
+  - word: revoke
+    meaning: revocar / retirar
+    ipa: rɪˈvoʊk
+- id: opt-out-targeted-ads
+  text: Most platforms let you opt out of personalized ad tracking.
+  translation: La mayoría de las plataformas te permiten excluirte del rastreo de anuncios personalizados.
+  visual_hint: 🛡️📊
+  cloze:
+  - 4
+  - 7
+  glossary:
+  - word: personalized
+    meaning: personalizado
+    ipa: ˈpɜːrsənəlaɪzd
+- id: data-broker-consent
+  text: Read the privacy prompt carefully before granting microphone permissions.
+  translation: Lee el aviso de privacidad con cuidado antes de conceder permisos de micrófono.
+  visual_hint: 🎙️🔍
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: granting
+    meaning: conceder / otorgar
+    ipa: ˈɡræntɪŋ
+- id: idm-give-away
+  text: Free quizzes often give away more personal data than people realize.
+  translation: 'Los cuestionarios gratuitos suelen revelar más datos personales de lo que la
+    gente nota. (give away: revelar / regalar)'
+  visual_hint: 🕵️‍♂️💬
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: give away
+    meaning: revelar / entregar sin querer
+    ipa: ɡɪv əˈweɪ
+  kind: phrasal_verb
+  apply_sentence: Public Wi-Fi hotspots can ____ your browsing habits.
+  apply_answer: give away
+  apply_translation: Las redes Wi-Fi públicas pueden revelar tus hábitos de navegación.
+- id: idm-fine-print
+  text: Always check the fine print before accepting new terms of service.
+  translation: 'Siempre revisa la letra pequeña antes de aceptar nuevos términos de servicio.
+    (fine print: letra pequeña)'
+  visual_hint: 📜🔎
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: fine print
+    meaning: letra pequeña
+    ipa: faɪn prɪnt
+  kind: idiom
+  apply_sentence: The ____ revealed that the app shares contacts with third parties.
+  apply_answer: fine print
+  apply_translation: La letra pequeña reveló que la aplicación comparte contactos con terceros.
+roleplay:
+  ai_role: digital privacy coach
+  user_role: smartphone owner
+  setting: Community workshop on protecting personal data on mobile devices.
+  turns:
+  - speaker: ai
+    text: When was the last time you audited the permissions on your phone?
+  - speaker: user
+    goal: Cuenta qué permisos revocaste y cómo te excluyes del rastreo de anuncios.
+    suggested_lines:
+    - I decided to revoke background location access from retail apps.
+    - Most platforms let you opt out of personalized ad tracking.
+  - speaker: ai
+    text: Great start! What about apps that ask for microphone or contact access?
+  - speaker: user
+    goal: Menciona que revisas los avisos de privacidad y la letra pequeña.
+    suggested_lines:
+    - Read the privacy prompt carefully before granting microphone permissions.
+    - Always check the fine print before accepting new terms of service.
+  - speaker: ai
+    text: You are ahead of ninety percent of users already!

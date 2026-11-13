@@ -3,7 +3,8 @@ title: Finding luggage at baggage claim
 title_es: Buscar equipaje en la banda
 cefr: A2
 topic: travel-and-transport
-description: Pregunta en el área de llegadas en qué carrusel salen las maletas de tu vuelo y dónde están los carritos.
+description: Pregunta en el área de llegadas en qué carrusel salen las maletas de
+  tu vuelo y dónde están los carritos.
 phrases:
 - id: which-carousel-madrid
   text: Excuse me, which baggage carousel is for the flight from Madrid?
@@ -38,42 +39,10 @@ phrases:
   - word: checked
     meaning: documentamos / facturamos
     ipa: tʃekt
-- id: exit-toward-trains
-  text: After we pick up our bags, which way is the airport train?
-  translation: Después de recoger las maletas, ¿hacia dónde está el tren del aeropuerto?
-  visual_hint: 🚆➡️
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: pick up
-    meaning: recoger
-    ipa: pɪk ʌp
-- id: nothing-to-declare
-  text: We only have personal clothes, so we take the green exit.
-  translation: Solo traemos ropa personal, así que salimos por el carril verde.
-  visual_hint: 🟢🛂
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: personal
-    meaning: personal
-    ipa: ˈpɜːrsənəl
-- id: thanks-for-directions
-  text: Thank you, I can see our blue suitcase coming out now!
-  translation: ¡Gracias, ya veo salir nuestra maleta azul!
-  visual_hint: 🧳🙌
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: suitcase
-    meaning: maleta
-    ipa: ˈsuːtkeɪs
 - id: baggage-look-out-for
   text: Look out for a red tag on my big suitcase.
-  translation: Fíjate en una etiqueta roja en mi maleta grande. (look out for = estar atento a)
+  translation: Fíjate en una etiqueta roja en mi maleta grande. (look out for = estar
+    atento a)
   visual_hint: 🔎🧳
   cloze:
   - 3
@@ -88,7 +57,8 @@ phrases:
   apply_translation: Fíjate en las señales amarillas que indican la salida.
 - id: baggage-hang-on
   text: Hang on, I think my ski bag is coming now.
-  translation: Espera un momento, creo que mi bolsa de esquí ya viene. (hang on = esperar un momento)
+  translation: Espera un momento, creo que mi bolsa de esquí ya viene. (hang on =
+    esperar un momento)
   visual_hint: ✋🎿
   cloze:
   - 3

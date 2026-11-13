@@ -3,11 +3,13 @@ title: Discussing single-origin coffee
 title_es: Conversar sobre café de especialidad
 cefr: B2
 topic: food-and-drink
-description: Conversa con un tostador sobre notas florales, molienda para filtro V60 y tueste ligero.
+description: Conversa con un tostador sobre notas florales, molienda para filtro V60
+  y tueste ligero.
 phrases:
 - id: washed-ethiopian-beans
   text: I'm drawn to light-roast Ethiopian beans with floral and bergamot notes.
-  translation: Me atraen los granos etíopes de tueste claro con notas florales y de bergamota.
+  translation: Me atraen los granos etíopes de tueste claro con notas florales y de
+    bergamota.
   visual_hint: ☕🌸
   cloze:
   - 3
@@ -18,7 +20,8 @@ phrases:
     ipa: laɪt roʊst
 - id: grind-for-pour-over
   text: Could you leave the bag whole-bean? I grind fresh for a V60 pour-over.
-  translation: ¿Podría dejar la bolsa en grano entero? Muelo al momento para filtro V60.
+  translation: ¿Podría dejar la bolsa en grano entero? Muelo al momento para filtro
+    V60.
   visual_hint: ⚙️🫖
   cloze:
   - 4
@@ -38,42 +41,10 @@ phrases:
   - word: bring out
     meaning: resaltar / sacar a relucir
     ipa: brɪŋ aʊt
-- id: roast-date-degassing
-  text: Since it was roasted yesterday, should I let it degas for a few days?
-  translation: Como se tostó ayer, ¿debería dejarlo desgasificar unos días?
-  visual_hint: 📦⏳
-  cloze:
-  - 4
-  - 9
-  glossary:
-  - word: degas
-    meaning: desgasificar (reposar tras el tueste)
-    ipa: diːˈɡæs
-- id: natural-process-fruity
-  text: How does the natural-process Colombian compare in body and acidity?
-  translation: ¿Cómo se compara el colombiano de proceso natural en cuerpo y acidez?
-  visual_hint: 🍒☕
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: body
-    meaning: cuerpo / densidad en boca
-    ipa: ˈbɑːdi
-- id: monthly-bean-subscription
-  text: I'd love to sign up for your monthly roaster's choice subscription.
-  translation: Me encantaría suscribirme a su selección mensual del tostador.
-  visual_hint: 📬☕
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: sign up
-    meaning: inscribirse / suscribirse
-    ipa: saɪn ʌp
 - id: an-acquired-taste
   text: Fruity natural-process coffee is an acquired taste for many.
-  translation: El café frutal de proceso natural es un gusto que se adquiere. (an acquired taste)
+  translation: El café frutal de proceso natural es un gusto que se adquiere. (an
+    acquired taste)
   visual_hint: ☕🍓
   cloze:
   - 3
@@ -88,7 +59,8 @@ phrases:
   apply_translation: El regaliz negro es sin duda un gusto adquirido para la mayoría.
 - id: dial-in
   text: We need to dial in the grind for this espresso.
-  translation: 'Necesitamos ajustar bien la molienda para este espresso. (dial in: afinar)'
+  translation: 'Necesitamos ajustar bien la molienda para este espresso. (dial in:
+    afinar)'
   visual_hint: ⚙️☕
   cloze:
   - 3

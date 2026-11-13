@@ -3,11 +3,13 @@ title: Debating at a dinner party
 title_es: Debatir en una cena
 cefr: C2
 topic: social-and-smalltalk
-description: Expresa matices, discrepa con elegancia y usa expresiones idiomáticas en una conversación social.
+description: Expresa matices, discrepa con elegancia y usa expresiones idiomáticas
+  en una conversación social.
 phrases:
 - id: devils-advocate
   text: Just to play devil's advocate, couldn't remote work actually isolate people?
-  translation: Solo por llevar la contraria, ¿no podría el teletrabajo aislar a las personas?
+  translation: Solo por llevar la contraria, ¿no podría el teletrabajo aislar a las
+    personas?
   visual_hint: 😈⚖️
   cloze:
   - 3
@@ -43,65 +45,10 @@ phrases:
   - word: belonging
     meaning: pertenencia
     ipa: bɪˈlɔːŋɪŋ
-- id: agree-to-disagree
-  text: Fair enough, let's agree to disagree on that one.
-  translation: Me parece justo, aceptemos que no estamos de acuerdo en eso.
-  visual_hint: 🤷
-  cloze:
-  - 3
-  - 4
-  - 5
-  glossary:
-  - word: agree to disagree
-    meaning: aceptar diferencias de opinión sin seguir discutiendo
-- id: unintended-consequences
-  text: We shouldn't overlook the unintended consequences of algorithmic curation.
-  translation: No deberíamos pasar por alto las consecuencias imprevistas de la curaduría algorítmica.
-  visual_hint: 🧠⚖️
-  cloze:
-  - 2
-  - 4
-  - 5
-  glossary:
-  - word: overlook
-    meaning: pasar por alto
-    ipa: ˌoʊvərˈlʊk
-  - word: unintended
-    meaning: imprevistas / no intencionadas
-    ipa: ˌʌnɪnˈtendɪd
-- id: common-ground
-  text: Even if we diverge on regulation, we clearly share common ground on ethics.
-  translation: Incluso si discrepamos en la regulación, claramente compartimos puntos en común sobre la ética.
-  visual_hint: 🤝🌐
-  cloze:
-  - 3
-  - 9
-  - 10
-  glossary:
-  - word: diverge
-    meaning: divergir / discrepar
-    ipa: daɪˈvɜːrdʒ
-  - word: common ground
-    meaning: terreno común / acuerdo base
-    ipa: ˈkɑːmən ɡraʊnd
-- id: empirical-evidence
-  text: Anecdotes are compelling, yet the empirical evidence points toward a more nuanced reality.
-  translation: Las anécdotas son convincentes, pero la evidencia empírica apunta hacia una realidad más matizada.
-  visual_hint: 📊🔬
-  cloze:
-  - 2
-  - 5
-  - 11
-  glossary:
-  - word: compelling
-    meaning: convincente
-    ipa: kəmˈpelɪŋ
-  - word: empirical
-    meaning: empírica
-    ipa: ɪmˈpɪrɪkəl
 - id: idm-c2dd-devils-advocate
   text: Allow me to play devil's advocate for a moment, if I may.
-  translation: Permítame hacer de abogado del diablo un momento, si me lo permite (defender lo contrario).
+  translation: Permítame hacer de abogado del diablo un momento, si me lo permite
+    (defender lo contrario).
   visual_hint: 🍷⚖️
   cloze:
   - 4
@@ -145,8 +92,8 @@ roleplay:
   - speaker: user
     goal: Reconoce su punto pero matiza.
     suggested_lines:
-    - I see where you're coming from, but I'd take that with a grain of salt. It's not so much a question of productivity
-      as one of belonging.
+    - I see where you're coming from, but I'd take that with a grain of salt. It's
+      not so much a question of productivity as one of belonging.
   - speaker: ai
     text: Belonging? People can build community online just as well.
   - speaker: user

@@ -3,13 +3,14 @@ title: Restoring a listed heritage property
 title_es: Discutir normativas de patrimonio arquitectónico
 cefr: C2
 topic: hotel-and-shopping
-description: Debate con el arquitecto conservador la restauración de fachadas de piedra caliza y aislamiento oculto
-  en un edificio histórico.
+description: Debate con el arquitecto conservador la restauración de fachadas de piedra
+  caliza y aislamiento oculto en un edificio histórico.
 phrases:
 - id: preserve-ashlar-facade
-  text: The heritage commission requires us to repoint the limestone ashlar facade using breathable lime mortar.
-  translation: La comisión de patrimonio nos exige rejuntar la fachada de sillería caliza usando mortero de cal
-    transpirable.
+  text: The heritage commission requires us to repoint the limestone ashlar facade
+    using breathable lime mortar.
+  translation: La comisión de patrimonio nos exige rejuntar la fachada de sillería
+    caliza usando mortero de cal transpirable.
   visual_hint: 🏛️🧱
   cloze:
   - 5
@@ -19,9 +20,10 @@ phrases:
     meaning: transpirable / permeable al vapor
     ipa: ˈbriːðəbəl
 - id: slim-profile-double-glazing
-  text: Can we mill bespoke timber sashes that house slim-profile vacuum glazing without altering the sightlines?
-  translation: ¿Podemos fabricar bastidores de madera a medida con doble acristalamiento al vacío sin alterar los
-    perfiles visuales?
+  text: Can we mill bespoke timber sashes that house slim-profile vacuum glazing without
+    altering the sightlines?
+  translation: ¿Podemos fabricar bastidores de madera a medida con doble acristalamiento
+    al vacío sin alterar los perfiles visuales?
   visual_hint: 🪟📐
   cloze:
   - 5
@@ -31,9 +33,10 @@ phrases:
     meaning: perfiles visuales / líneas arquitectónicas
     ipa: ˈsaɪtlaɪnz
 - id: conceal-heat-pump-ducting
-  text: Running the heat-pump conduits beneath the suspended floor voids preserves the ornate plaster cornices.
-  translation: Pasar los conductos de climatización bajo el entrepiso preserva intactas las cornisas históricas
-    de yeso.
+  text: Running the heat-pump conduits beneath the suspended floor voids preserves
+    the ornate plaster cornices.
+  translation: Pasar los conductos de climatización bajo el entrepiso preserva intactas
+    las cornisas históricas de yeso.
   visual_hint: 🛠️🏛️
   cloze:
   - 4
@@ -42,44 +45,10 @@ phrases:
   - word: cornices
     meaning: cornisas ornamentales
     ipa: ˈkɔːrnɪsɪz
-- id: structural-underpinning-signoff
-  text: Once the structural engineer signs off on the basement underpinning, we can lodge the listed-building consent.
-  translation: En cuanto el ingeniero estructural firme la cimentación del sótano, presentaremos la solicitud de
-    licencia patrimonial.
-  visual_hint: 📋✍️
-  cloze:
-  - 5
-  - 10
-  glossary:
-  - word: underpinning
-    meaning: recalce de cimentación
-    ipa: ˈʌndərpɪnɪŋ
-- id: salvage-original-parquet
-  text: Every original oak parquet herringbone batten will be numbered, lifted, and relaid over acoustic matting.
-  translation: Cada tablilla original del parqué de roble en espiga será numerada, levantada y recolocada sobre
-    base acústica.
-  visual_hint: 🪵🔢
-  cloze:
-  - 5
-  - 10
-  glossary:
-  - word: salvage
-    meaning: recuperar / restaurar piezas originales
-    ipa: ˈsælvɪdʒ
-- id: sympathetic-modernization
-  text: It's a textbook example of sympathetic modernization honoring historical fabric.
-  translation: Es un ejemplo modelo de modernización respetuosa con el tejido histórico.
-  visual_hint: 🌟🏛️
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: sympathetic
-    meaning: respetuosa / armónica con el entorno
-    ipa: ˌsɪmpəˈθetɪk
 - id: idm-shore-up-masonry
   text: Lime mortar repairs will shore up the Georgian facade without trapping damp.
-  translation: Las reparaciones con mortero de cal reforzarán la fachada georgiana sin atrapar humedad.
+  translation: Las reparaciones con mortero de cal reforzarán la fachada georgiana
+    sin atrapar humedad.
   visual_hint: 🏛️🧱
   cloze:
   - 4
@@ -91,10 +60,12 @@ phrases:
   kind: phrasal_verb
   apply_sentence: Engineers had to ____ the vaulted cellar before opening the courtyard.
   apply_answer: shore up
-  apply_translation: Los ingenieros tuvieron que apuntalar la bóveda del sótano antes de abrir el patio.
+  apply_translation: Los ingenieros tuvieron que apuntalar la bóveda del sótano antes
+    de abrir el patio.
 - id: idm-turn-blind-eye
   text: Conservation officers will never turn a blind eye to unauthorized PVC windows.
-  translation: Los inspectores de patrimonio nunca harán la vista gorda ante ventanas de PVC sin permiso.
+  translation: Los inspectores de patrimonio nunca harán la vista gorda ante ventanas
+    de PVC sin permiso.
   visual_hint: 👁️📜
   cloze:
   - 4
@@ -104,41 +75,58 @@ phrases:
     meaning: hacer la vista gorda
     ipa: tɜːrn ə blaɪnd aɪ
   kind: idiom
-  apply_sentence: You cannot ____ to listed-building covenants during an adaptive reuse.
+  apply_sentence: You cannot ____ to listed-building covenants during an adaptive
+    reuse.
   apply_answer: turn a blind eye
-  apply_translation: No puedes hacer la vista gorda ante las normas de patrimonio durante una rehabilitación.
+  apply_translation: No puedes hacer la vista gorda ante las normas de patrimonio
+    durante una rehabilitación.
 roleplay:
   ai_role: conservation architect
   user_role: property steward
   setting: On-site architectural review inside a Grade-II listed townhouse.
   turns:
   - speaker: ai
-    text: We've received the conservation officer's preliminary notes on the townhouse exterior.
+    text: We've received the conservation officer's preliminary notes on the townhouse
+      exterior.
   - speaker: user
-    goal: Recuerda la exigencia de usar mortero de cal transpirable en la fachada histórica.
+    goal: Recuerda la exigencia de usar mortero de cal transpirable en la fachada
+      histórica.
     suggested_lines:
-    - The heritage commission requires us to repoint the limestone ashlar facade using breathable lime mortar.
-    - Can we mill bespoke timber sashes that house slim-profile vacuum glazing without altering the sightlines?
+    - The heritage commission requires us to repoint the limestone ashlar facade using
+      breathable lime mortar.
+    - Can we mill bespoke timber sashes that house slim-profile vacuum glazing without
+      altering the sightlines?
   - speaker: ai
-    text: Yes—Portland cement would trap moisture and spall the nineteenth-century stone.
+    text: Yes—Portland cement would trap moisture and spall the nineteenth-century
+      stone.
   - speaker: user
-    goal: Pregunta si pueden instalar vidrio al vacío ultrafino manteniendo la carpintería original.
+    goal: Pregunta si pueden instalar vidrio al vacío ultrafino manteniendo la carpintería
+      original.
     suggested_lines:
-    - Can we mill bespoke timber sashes that house slim-profile vacuum glazing without altering the sightlines?
-    - Running the heat-pump conduits beneath the suspended floor voids preserves the ornate plaster cornices.
+    - Can we mill bespoke timber sashes that house slim-profile vacuum glazing without
+      altering the sightlines?
+    - Running the heat-pump conduits beneath the suspended floor voids preserves the
+      ornate plaster cornices.
   - speaker: ai
-    text: Vacuum-insulated glass is only six millimeters thick, so the historic glazing bars remain identical.
+    text: Vacuum-insulated glass is only six millimeters thick, so the historic glazing
+      bars remain identical.
   - speaker: user
-    goal: Propón ocultar los conductos bajo el piso para proteger las cornisas de yeso.
+    goal: Propón ocultar los conductos bajo el piso para proteger las cornisas de
+      yeso.
     suggested_lines:
-    - Running the heat-pump conduits beneath the suspended floor voids preserves the ornate plaster cornices.
-    - Once the structural engineer signs off on the basement underpinning, we can lodge the listed-building consent.
+    - Running the heat-pump conduits beneath the suspended floor voids preserves the
+      ornate plaster cornices.
+    - Once the structural engineer signs off on the basement underpinning, we can
+      lodge the listed-building consent.
   - speaker: ai
-    text: Routing through the floor voids is brilliant—zero impact on the lath-and-plaster ceilings.
+    text: Routing through the floor voids is brilliant—zero impact on the lath-and-plaster
+      ceilings.
   - speaker: user
     goal: Indica que presentarán el expediente en cuanto se firme el cálculo estructural.
     suggested_lines:
-    - Once the structural engineer signs off on the basement underpinning, we can lodge the listed-building consent.
-    - Every original oak parquet herringbone batten will be numbered, lifted, and relaid over acoustic matting.
+    - Once the structural engineer signs off on the basement underpinning, we can
+      lodge the listed-building consent.
+    - Every original oak parquet herringbone batten will be numbered, lifted, and
+      relaid over acoustic matting.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

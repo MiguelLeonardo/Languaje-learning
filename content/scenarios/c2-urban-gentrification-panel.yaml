@@ -3,12 +3,14 @@ title: Debating urban preservation and housing
 title_es: Debatir preservación cultural y vivienda urbana
 cefr: C2
 topic: social-and-smalltalk
-description: Analiza en un foro vecinal cómo equilibrar la revitalización de barrios históricos sin desplazar al
-  comercio tradicional.
+description: Analiza en un foro vecinal cómo equilibrar la revitalización de barrios
+  históricos sin desplazar al comercio tradicional.
 phrases:
 - id: vitality-without-displacement
-  text: The central dilemma is how we welcome public-realm investment without triggering residential displacement.
-  translation: El dilema central es cómo recibir inversión en el espacio público sin detonar el desplazamiento vecinal.
+  text: The central dilemma is how we welcome public-realm investment without triggering
+    residential displacement.
+  translation: El dilema central es cómo recibir inversión en el espacio público sin
+    detonar el desplazamiento vecinal.
   visual_hint: 🏘️⚖️
   cloze:
   - 4
@@ -18,9 +20,10 @@ phrases:
     meaning: desplazamiento de residentes originales
     ipa: dɪsˈpleɪsmənt
 - id: commercial-rent-stabilization
-  text: Protecting legacy family bakeries and workshops requires commercial community land trusts, not just nostalgia.
-  translation: Proteger las panaderías y talleres históricos requiere fideicomisos comunitarios de suelo comercial,
-    no solo nostalgia.
+  text: Protecting legacy family bakeries and workshops requires commercial community
+    land trusts, not just nostalgia.
+  translation: Proteger las panaderías y talleres históricos requiere fideicomisos
+    comunitarios de suelo comercial, no solo nostalgia.
   visual_hint: 🥖🏪
   cloze:
   - 4
@@ -30,9 +33,10 @@ phrases:
     meaning: fideicomisos comunitarios de tierra
     ipa: lænd trʌsts
 - id: gentle-infill-density
-  text: Allowing gentle four-story infill near transit stops relieves pressure on existing rent-controlled apartments.
-  translation: Permitir vivienda de mediana altura cerca del transporte alivia la presión sobre los departamentos
-    de renta protegida.
+  text: Allowing gentle four-story infill near transit stops relieves pressure on
+    existing rent-controlled apartments.
+  translation: Permitir vivienda de mediana altura cerca del transporte alivia la
+    presión sobre los departamentos de renta protegida.
   visual_hint: 🚊🏢
   cloze:
   - 4
@@ -41,42 +45,10 @@ phrases:
   - word: infill
     meaning: densificación urbana armónica en huecos existentes
     ipa: ˈɪnfɪl
-- id: living-neighborhood-not-museum
-  text: A historic quarter thrives as a living intergenerational community, never as a velvet-roped museum.
-  translation: Un barrio histórico prospera como una comunidad intergeneracional viva, nunca como un museo de vitrina.
-  visual_hint: 🌳🤝
-  cloze:
-  - 4
-  - 9
-  glossary:
-  - word: intergenerational
-    meaning: intergeneracional
-    ipa: ˌɪntərdʒenəˈreɪʃənəl
-- id: participatory-budgeting
-  text: Allocating storefront improvement grants through participatory budgeting gives residents real agency.
-  translation: Asignar fondos de mejora de fachadas mediante presupuesto participativo da voz real a los vecinos.
-  visual_hint: 🗳️🏛️
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: agency
-    meaning: capacidad de decisión / protagonismo
-    ipa: ˈeɪdʒənsi
-- id: inclusive-urban-fabric
-  text: When long-time elders and young families share the same square, the urban fabric stays resilient.
-  translation: Cuando los vecinos de toda la vida y las familias jóvenes comparten la plaza, el tejido urbano perdura.
-  visual_hint: 💛🏙️
-  cloze:
-  - 5
-  - 10
-  glossary:
-  - word: urban fabric
-    meaning: tejido urbano y social
-    ipa: ˈɜːrbən ˈfæbrɪk
 - id: idm-c2ug-priced-out
   text: Long-term residents are being priced out of their own neighborhoods.
-  translation: Los residentes de toda la vida están siendo expulsados de sus barrios por los precios.
+  translation: Los residentes de toda la vida están siendo expulsados de sus barrios
+    por los precios.
   visual_hint: 🏙️💸
   cloze:
   - 3
@@ -88,10 +60,12 @@ phrases:
   kind: phrasal_verb
   apply_sentence: Young families are being ____ out of the city centre.
   apply_answer: priced
-  apply_translation: Las familias jóvenes están siendo expulsadas del centro por los precios.
+  apply_translation: Las familias jóvenes están siendo expulsadas del centro por los
+    precios.
 - id: idm-c2ug-double-edged
   text: Urban renewal is a double-edged sword for working-class communities.
-  translation: La renovación urbana es un arma de doble filo para las comunidades obreras (con pros y contras).
+  translation: La renovación urbana es un arma de doble filo para las comunidades
+    obreras (con pros y contras).
   visual_hint: 🏘️⚔️
   cloze:
   - 3
@@ -110,32 +84,47 @@ roleplay:
   setting: Community townhall in a historic district undergoing rapid change.
   turns:
   - speaker: ai
-    text: New cafes and transit upgrades are arriving fast, but long-time residents fear being priced out.
+    text: New cafes and transit upgrades are arriving fast, but long-time residents
+      fear being priced out.
   - speaker: user
     goal: Plantea el reto de mejorar el espacio público sin desplazar a los vecinos.
     suggested_lines:
-    - The central dilemma is how we welcome public-realm investment without triggering residential displacement.
-    - Protecting legacy family bakeries and workshops requires commercial community land trusts, not just nostalgia.
+    - The central dilemma is how we welcome public-realm investment without triggering
+      residential displacement.
+    - Protecting legacy family bakeries and workshops requires commercial community
+      land trusts, not just nostalgia.
   - speaker: ai
-    text: What concrete mechanisms can keep neighborhood artisans and family shops anchored here?
+    text: What concrete mechanisms can keep neighborhood artisans and family shops
+      anchored here?
   - speaker: user
-    goal: Propón fideicomisos de suelo comercial para proteger los comercios históricos del barrio.
+    goal: Propón fideicomisos de suelo comercial para proteger los comercios históricos
+      del barrio.
     suggested_lines:
-    - Protecting legacy family bakeries and workshops requires commercial community land trusts, not just nostalgia.
-    - Allowing gentle four-story infill near transit stops relieves pressure on existing rent-controlled apartments.
+    - Protecting legacy family bakeries and workshops requires commercial community
+      land trusts, not just nostalgia.
+    - Allowing gentle four-story infill near transit stops relieves pressure on existing
+      rent-controlled apartments.
   - speaker: ai
-    text: Some preservationists oppose any new construction at all—doesn't freezing supply backfire?
+    text: Some preservationists oppose any new construction at all—doesn't freezing
+      supply backfire?
   - speaker: user
-    goal: Explica cómo la vivienda de mediana densidad junto al transporte reduce la presión inmobiliaria.
+    goal: Explica cómo la vivienda de mediana densidad junto al transporte reduce
+      la presión inmobiliaria.
     suggested_lines:
-    - Allowing gentle four-story infill near transit stops relieves pressure on existing rent-controlled apartments.
-    - A historic quarter thrives as a living intergenerational community, never as a velvet-roped museum.
+    - Allowing gentle four-story infill near transit stops relieves pressure on existing
+      rent-controlled apartments.
+    - A historic quarter thrives as a living intergenerational community, never as
+      a velvet-roped museum.
   - speaker: ai
-    text: That balance between architectural heritage and affordable supply is exactly what our charter needs.
+    text: That balance between architectural heritage and affordable supply is exactly
+      what our charter needs.
   - speaker: user
-    goal: Cierra afirmando que un barrio histórico debe ser una comunidad viva y no un museo.
+    goal: Cierra afirmando que un barrio histórico debe ser una comunidad viva y no
+      un museo.
     suggested_lines:
-    - A historic quarter thrives as a living intergenerational community, never as a velvet-roped museum.
-    - Allocating storefront improvement grants through participatory budgeting gives residents real agency.
+    - A historic quarter thrives as a living intergenerational community, never as
+      a velvet-roped museum.
+    - Allocating storefront improvement grants through participatory budgeting gives
+      residents real agency.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

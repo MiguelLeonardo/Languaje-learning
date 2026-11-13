@@ -3,11 +3,13 @@ title: Coordinating vacation rental check-in
 title_es: Coordinar llegada a departamento vacacional
 cefr: B1
 topic: hotel-and-shopping
-description: Llama al anfitrión de tu alojamiento para confirmar el código de la cerradura digital y el estacionamiento.
+description: Llama al anfitrión de tu alojamiento para confirmar el código de la cerradura
+  digital y el estacionamiento.
 phrases:
 - id: arrived-at-front-gate
   text: Hi! We just pulled up in front of the townhouse; how do we unlock the keypad?
-  translation: ¡Hola! Acabamos de llegar frente a la casa; ¿cómo abrimos el teclado numérico?
+  translation: ¡Hola! Acabamos de llegar frente a la casa; ¿cómo abrimos el teclado
+    numérico?
   visual_hint: 🏡🔢
   cloze:
   - 5
@@ -18,7 +20,8 @@ phrases:
     ipa: ˈkiːpæd
 - id: press-pound-after-code
   text: Do I press the hash key before or after entering the four-digit pin?
-  translation: ¿Presiono la tecla de gato antes o después de ingresar el código de cuatro dígitos?
+  translation: ¿Presiono la tecla de gato antes o después de ingresar el código de
+    cuatro dígitos?
   visual_hint: '#️⃣🔓'
   cloze:
   - 4
@@ -38,42 +41,10 @@ phrases:
   - word: driveway
     meaning: entrada para auto / cochera
     ipa: ˈdraɪvweɪ
-- id: thermostat-and-recycling
-  text: Where is the heating thermostat, and which bin outside is for recycling?
-  translation: ¿Dónde está el termostato de calefacción y qué contenedor es para reciclaje?
-  visual_hint: 🌡️♻️
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: bin
-    meaning: contenedor / bote
-    ipa: bɪn
-- id: checkout-instructions-binder
-  text: We see the welcome binder on the kitchen island with the Wi-Fi QR code.
-  translation: Ya vimos la carpeta de bienvenida en la barra de la cocina con el código QR del wifi.
-  visual_hint: 📖📶
-  cloze:
-  - 4
-  - 9
-  glossary:
-  - word: binder
-    meaning: carpeta informativa
-    ipa: ˈbaɪndər
-- id: message-if-anything-needed
-  text: The apartment is spotless—thank you for the local coffee beans!
-  translation: El departamento está impecable; ¡gracias por el café local!
-  visual_hint: ☕🌟
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: spotless
-    meaning: impecable / reluciente
-    ipa: ˈspɑːtləs
 - id: idm-check-in-smoothly
   text: Thanks for sending the lockbox code so we can check in smoothly.
-  translation: Gracias por enviar el código de la cajita para poder registrarnos sin problemas.
+  translation: Gracias por enviar el código de la cajita para poder registrarnos sin
+    problemas.
   visual_hint: 🔑🏡
   cloze:
   - 4
@@ -85,7 +56,8 @@ phrases:
   kind: phrasal_verb
   apply_sentence: What time are we allowed to ____ if our flight lands early?
   apply_answer: check in
-  apply_translation: ¿A qué hora podemos hacer el registro si nuestro vuelo aterriza temprano?
+  apply_translation: ¿A qué hora podemos hacer el registro si nuestro vuelo aterriza
+    temprano?
 - id: idm-touch-base
   text: I'll touch base with you once we drop our bags at the apartment.
   translation: Me pondré en contacto contigo en cuanto dejemos las maletas en el apartamento.
@@ -100,7 +72,8 @@ phrases:
   kind: idiom
   apply_sentence: Let's ____ tomorrow morning to arrange the key handoff.
   apply_answer: touch base
-  apply_translation: Pongámonos en contacto mañana por la mañana para coordinar la entrega de llaves.
+  apply_translation: Pongámonos en contacto mañana por la mañana para coordinar la
+    entrega de llaves.
 roleplay:
   ai_role: property host
   user_role: guest
@@ -114,7 +87,8 @@ roleplay:
     - Hi! We just pulled up in front of the townhouse; how do we unlock the keypad?
     - Do I press the hash key before or after entering the four-digit pin?
   - speaker: ai
-    text: Wake the screen with your palm, type 4829, and press the checkmark at the bottom right.
+    text: Wake the screen with your palm, type 4829, and press the checkmark at the
+      bottom right.
   - speaker: user
     goal: Pregunta si se presiona el signo de número antes o después del código.
     suggested_lines:
@@ -128,7 +102,8 @@ roleplay:
     - Should we park in the driveway on the left or on the street with a permit?
     - Where is the heating thermostat, and which bin outside is for recycling?
   - speaker: ai
-    text: Park right in the left driveway spot—it's reserved exclusively for your unit.
+    text: Park right in the left driveway spot—it's reserved exclusively for your
+      unit.
   - speaker: user
     goal: Pregunta dónde está el termostato y cuál es el bote de reciclaje.
     suggested_lines:

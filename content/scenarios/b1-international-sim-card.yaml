@@ -3,11 +3,13 @@ title: Buying an eSIM data plan at arrivals
 title_es: Comprar un plan de datos eSIM al aterrizar
 cefr: B1
 topic: travel-and-transport
-description: Compra una eSIM de datos para dos semanas, pide ayuda para escanear el código QR y activar el roaming.
+description: Compra una eSIM de datos para dos semanas, pide ayuda para escanear el
+  código QR y activar el roaming.
 phrases:
 - id: two-week-esim-plan
   text: Hi, I'm staying for two weeks and need an eSIM with plenty of mobile data.
-  translation: Hola, me quedo dos semanas y necesito una eSIM con suficientes datos móviles.
+  translation: Hola, me quedo dos semanas y necesito una eSIM con suficientes datos
+    móviles.
   visual_hint: 📱🌐
   cloze:
   - 5
@@ -29,7 +31,8 @@ phrases:
     ipa: ˈteðərɪŋ
 - id: scan-qr-to-install
   text: Could you help me scan the activation QR code in my phone settings?
-  translation: ¿Podría ayudarme a escanear el código QR de activación en los ajustes de mi teléfono?
+  translation: ¿Podría ayudarme a escanear el código QR de activación en los ajustes
+    de mi teléfono?
   visual_hint: 📷⚙️
   cloze:
   - 4
@@ -38,39 +41,6 @@ phrases:
   - word: settings
     meaning: ajustes / configuración
     ipa: ˈsetɪŋz
-- id: keep-whatsapp-number
-  text: Will my regular WhatsApp number keep working while I use this data line?
-  translation: ¿Mi número habitual de WhatsApp seguirá funcionando mientras use esta línea de datos?
-  visual_hint: 💬✅
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: keep working
-    meaning: seguir funcionando
-    ipa: kiːp ˈwɜːrkɪŋ
-- id: coverage-in-mountains
-  text: How is the network coverage if we drive up to the national park?
-  translation: ¿Qué tal es la cobertura de red si conducimos hacia el parque nacional?
-  visual_hint: ⛰️📡
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: coverage
-    meaning: cobertura de señal
-    ipa: ˈkʌvərɪdʒ
-- id: turn-off-home-roaming
-  text: I'll switch data roaming off on my home SIM to avoid extra charges.
-  translation: Desactivaré el roaming de datos en mi SIM principal para evitar cobros extra.
-  visual_hint: 🚫💸
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: avoid
-    meaning: evitar
-    ipa: əˈvɔɪd
 - id: sim-set-up
   text: Can you help me set up the eSIM on my phone?
   translation: ¿Puedes ayudarme a configurar la eSIM en mi teléfono? (set up = configurar)
@@ -88,7 +58,8 @@ phrases:
   apply_translation: El hotel te organizará un taxi mañana por la mañana.
 - id: sim-keep-in-touch
   text: I want to keep in touch with my family using WhatsApp.
-  translation: Quiero mantenerme en contacto con mi familia usando WhatsApp. (keep in touch = mantener contacto)
+  translation: Quiero mantenerme en contacto con mi familia usando WhatsApp. (keep
+    in touch = mantener contacto)
   visual_hint: 💬🌍
   cloze:
   - 3

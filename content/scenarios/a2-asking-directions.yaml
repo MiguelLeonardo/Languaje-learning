@@ -42,48 +42,10 @@ phrases:
   - word: far
     meaning: lejos
     ipa: fɑːr
-- id: could-you-repeat
-  text: Could you repeat that, please?
-  translation: ¿Podría repetir eso, por favor?
-  visual_hint: 🔁
-  cloze:
-  - 2
-  glossary:
-  - word: repeat
-    meaning: repetir
-    ipa: rɪˈpiːt
-- id: cross-the-bridge
-  text: Should I cross the bridge or turn left at the corner?
-  translation: ¿Debo cruzar el puente o girar a la izquierda en la esquina?
-  visual_hint: 🌉⬅️
-  cloze:
-  - 2
-  - 6
-  - 10
-  glossary:
-  - word: cross
-    meaning: cruzar
-    ipa: krɔːs
-  - word: corner
-    meaning: esquina
-    ipa: ˈkɔːrnər
-- id: show-on-map
-  text: Could you show me on my phone map, please?
-  translation: ¿Podría mostrármelo en el mapa de mi teléfono, por favor?
-  visual_hint: 📱🗺️
-  cloze:
-  - 2
-  - 7
-  glossary:
-  - word: show
-    meaning: mostrar / enseñar
-    ipa: ʃoʊ
-  - word: map
-    meaning: mapa
-    ipa: mæp
 - id: directions-end-up
   text: If you turn left here, you will end up at the river.
-  translation: Si giras a la izquierda aquí, terminarás en el río. (end up = terminar en)
+  translation: Si giras a la izquierda aquí, terminarás en el río. (end up = terminar
+    en)
   visual_hint: 🧭🌉
   cloze:
   - 4
@@ -98,7 +60,8 @@ phrases:
   apply_translation: Tomamos el autobús equivocado y terminamos en otro pueblo.
 - id: directions-turn-around
   text: You went too far, so turn around and walk back.
-  translation: Fuiste demasiado lejos, así que date la vuelta y camina de regreso. (turn around = dar la vuelta)
+  translation: Fuiste demasiado lejos, así que date la vuelta y camina de regreso.
+    (turn around = dar la vuelta)
   visual_hint: 🔄🗺️
   cloze:
   - 3

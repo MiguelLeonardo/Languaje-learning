@@ -3,7 +3,8 @@ title: Tasting artisanal cheeses
 title_es: Probar quesos artesanales en el mercado
 cefr: B1
 topic: food-and-drink
-description: Pide probar un queso de cabra curado, pregunta cómo conservarlo en un viaje y compra una cuña.
+description: Pide probar un queso de cabra curado, pregunta cómo conservarlo en un
+  viaje y compra una cuña.
 phrases:
 - id: sample-aged-cheddar
   text: Could I try a small sample of the aged goat cheese?
@@ -38,42 +39,10 @@ phrases:
   - word: goes best
     meaning: combina mejor
     ipa: ɡoʊz best
-- id: vacuum-seal-travel
-  text: Could you vacuum-seal a half-pound wedge so I can pack it?
-  translation: ¿Podría sellar al vacío una cuña de media libra para llevarla de viaje?
-  visual_hint: 📦✈️
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: vacuum-seal
-    meaning: sellar al vacío
-    ipa: ˈvækjuːm siːl
-- id: unpasteurized-milk
-  text: Is this made with raw milk or pasteurized sheep's milk?
-  translation: ¿Está hecho con leche cruda o leche de oveja pasteurizada?
-  visual_hint: 🐑🥛
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: pasteurized
-    meaning: pasteurizada
-    ipa: ˈpæstʃəraɪzd
-- id: keep-at-room-temp
-  text: Take it out of the fridge thirty minutes before serving.
-  translation: Sácalo del refrigerador treinta minutos antes de servir.
-  visual_hint: 🌡️🍽️
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: serving
-    meaning: servir
-    ipa: ˈsɜːrvɪŋ
 - id: melts-in-your-mouth
   text: This aged cheese just melts in your mouth, honestly.
-  translation: 'Este queso curado se derrite en la boca, de verdad. (melts in your mouth: deliciosamente suave)'
+  translation: 'Este queso curado se derrite en la boca, de verdad. (melts in your
+    mouth: deliciosamente suave)'
   visual_hint: 🧀😍
   cloze:
   - 3
@@ -88,7 +57,8 @@ phrases:
   apply_translation: Prueba este pastel; se derrite en la boca y sabe increíble.
 - id: a-matter-of-taste
   text: Blue cheese is a matter of taste, I suppose.
-  translation: 'El queso azul es cuestión de gustos, supongo. (a matter of taste: cuestión de gustos)'
+  translation: 'El queso azul es cuestión de gustos, supongo. (a matter of taste:
+    cuestión de gustos)'
   visual_hint: 🧀🤔
   cloze:
   - 3

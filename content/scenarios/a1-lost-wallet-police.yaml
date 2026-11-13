@@ -3,7 +3,8 @@ title: Reporting a lost wallet to police
 title_es: Reportar pérdida de billetera a la policía
 cefr: A1
 topic: health-and-emergencies
-description: Explica a un oficial de policía que perdiste tu billetera marrón cerca de la estación y deja tu teléfono.
+description: Explica a un oficial de policía que perdiste tu billetera marrón cerca
+  de la estación y deja tu teléfono.
 phrases:
 - id: lost-my-wallet
   text: Excuse me, Officer. I lost my wallet in the park.
@@ -38,39 +39,6 @@ phrases:
   - word: inside
     meaning: adentro / en el interior
     ipa: ɪnˈsaɪd
-- id: write-my-phone-number
-  text: Here is my name and my hotel phone number.
-  translation: Aquí están mi nombre y el teléfono de mi hotel.
-  visual_hint: 📝🏨
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: name
-    meaning: nombre
-    ipa: neɪm
-- id: keep-passport-at-hotel
-  text: Thankfully, my passport is safe at the hotel.
-  translation: Por suerte, mi pasaporte está seguro en el hotel.
-  visual_hint: 🛂✅
-  cloze:
-  - 2
-  - 5
-  glossary:
-  - word: safe
-    meaning: seguro / a salvo
-    ipa: seɪf
-- id: call-if-someone-brings-it
-  text: Thank you, Officer! Please call me if someone finds it.
-  translation: ¡Gracias, oficial! Por favor llámeme si alguien la encuentra.
-  visual_hint: 📞🙏
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: finds
-    meaning: encuentra
-    ipa: faɪndz
 - id: idm-fill-out-a1
   text: Do I need to fill out this form?
   translation: ¿Tengo que rellenar este formulario? (fill out = rellenar)
@@ -128,7 +96,8 @@ roleplay:
     - My ID card and bank card are inside it.
     - Here is my name and my hotel phone number.
   - speaker: ai
-    text: Please lock your bank card on your phone app right now, and leave your contact info.
+    text: Please lock your bank card on your phone app right now, and leave your contact
+      info.
   - speaker: user
     goal: Deja tu nombre y el número de teléfono de tu hotel.
     suggested_lines:

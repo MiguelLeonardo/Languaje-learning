@@ -1,0 +1,92 @@
+id: a2-grammar-connectors
+title: Sequence and contrast connectors
+title_es: Conectores de secuencia y contraste
+cefr: A2
+topic: grammar-and-connectors
+description: Organiza historias y opiniones con conectores de orden (first, then)
+  y contraste (however, although).
+phrases:
+- id: first-wash-then-cut
+  text: First, wash the fruit, and then cut it.
+  translation: Primero, lava la fruta y luego córtala.
+  visual_hint: 🍎🔪
+  cloze:
+  - 0
+  - 5
+  glossary:
+  - word: first
+    meaning: primero
+    ipa: fɜːrst
+  - word: then
+    meaning: luego / después
+    ipa: ðen
+- id: cheap-however-far
+  text: The flight was cheap; however, the airport was far.
+  translation: El vuelo fue barato; sin embargo, el aeropuerto estaba lejos.
+  visual_hint: ✈️🚕
+  cloze:
+  - 4
+  glossary:
+  - word: however
+    meaning: sin embargo
+    ipa: haʊˈevər
+  kind: expression
+  apply_sentence: The food was good; ____, the service was slow.
+  apply_answer: however
+  apply_translation: La comida estuvo buena; sin embargo, el servicio fue lento.
+- id: although-it-rained
+  text: Although it rained, we enjoyed the picnic.
+  translation: Aunque llovió, disfrutamos del picnic.
+  visual_hint: 🌧️🧺
+  cloze:
+  - 0
+  glossary:
+  - word: although
+    meaning: aunque
+    ipa: ɔːlˈðoʊ
+  kind: expression
+  apply_sentence: ____ he was tired, he finished his homework.
+  apply_answer: Although
+  apply_translation: Aunque estaba cansado, terminó su tarea.
+- id: before-leaving-check
+  text: Check your passport before leaving the house.
+  translation: Revisa tu pasaporte antes de salir de casa.
+  visual_hint: 🛂🚪
+  cloze:
+  - 3
+  glossary:
+  - word: before
+    meaning: antes de
+    ipa: bɪˈfɔːr
+- id: after-that-relaxed
+  text: After that, we relaxed at the beach.
+  translation: Después de eso, nos relajamos en la playa.
+  visual_hint: 🏖️😌
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: after that
+    meaning: después de eso
+    ipa: ˈæftər ðæt
+roleplay:
+  ai_role: friend
+  user_role: friend
+  setting: Sharing how your Saturday went.
+  turns:
+  - speaker: ai
+    text: Hey! What did you do on Saturday?
+  - speaker: user
+    goal: Cuenta dos actividades en orden usando 'first' y 'then'.
+    suggested_lines:
+    - First, I went to the market, and then I cooked lunch.
+    - First, I cleaned my room, and then I met a friend.
+  - speaker: ai
+    text: Nice! Did the weather stay sunny?
+  - speaker: user
+    goal: Contrasta el clima o un problema usando 'although' o 'however'.
+    suggested_lines:
+    - Although it rained in the afternoon, we still had fun.
+    - It was cloudy; however, we walked in the park.
+  - speaker: ai
+    text: Sounds like a great weekend anyway!

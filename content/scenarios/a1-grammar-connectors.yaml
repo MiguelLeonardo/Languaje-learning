@@ -1,0 +1,87 @@
+id: a1-grammar-connectors
+title: 'Simple connectors: and, but, so, because'
+title_es: 'Conectores simples: and, but, so, because'
+cefr: A1
+topic: grammar-and-connectors
+description: Une ideas básicas en presente para expresar suma (and), contraste (but),
+  resultado (so) y razón (because).
+phrases:
+- id: tea-and-toast
+  text: I like tea and toast for breakfast.
+  translation: Me gusta el té y el pan tostado para el desayuno.
+  visual_hint: 🍵🍞
+  cloze:
+  - 3
+  glossary:
+  - word: and
+    meaning: y (para sumar ideas)
+    ipa: ænd
+- id: tired-but-happy
+  text: I am tired, but I am happy.
+  translation: Estoy cansado, pero estoy feliz.
+  visual_hint: 😴😊
+  cloze:
+  - 3
+  glossary:
+  - word: but
+    meaning: pero (para contraste)
+    ipa: bʌt
+- id: raining-so-umbrella
+  text: It is raining, so I need an umbrella.
+  translation: Está lloviendo, así que necesito un paraguas.
+  visual_hint: 🌧️☂️
+  cloze:
+  - 3
+  glossary:
+  - word: so
+    meaning: así que / por eso (resultado)
+    ipa: soʊ
+  kind: expression
+  apply_sentence: The store is closed, ____ we can go tomorrow.
+  apply_answer: so
+  apply_translation: La tienda está cerrada, así que podemos ir mañana.
+- id: stay-home-because-sick
+  text: I stay home because I am sick.
+  translation: Me quedo en casa porque estoy enfermo.
+  visual_hint: 🏠🤒
+  cloze:
+  - 3
+  glossary:
+  - word: because
+    meaning: porque (para dar una razón)
+    ipa: bɪˈkɔːz
+  kind: expression
+  apply_sentence: I wear a coat ____ it is very cold.
+  apply_answer: because
+  apply_translation: Llevo abrigo porque hace mucho frío.
+- id: coffee-or-juice
+  text: Do you want coffee or orange juice?
+  translation: ¿Quieres café o jugo de naranja?
+  visual_hint: ☕🍊
+  cloze:
+  - 4
+  glossary:
+  - word: or
+    meaning: o (para dar opciones)
+    ipa: ɔːr
+roleplay:
+  ai_role: friend
+  user_role: friend
+  setting: Texting and talking about weekend plans.
+  turns:
+  - speaker: ai
+    text: Hey! Are you coming to the park today?
+  - speaker: user
+    goal: Responde usando 'but' o 'because'.
+    suggested_lines:
+    - I want to go, but I am tired.
+    - I stay home because it is raining.
+  - speaker: ai
+    text: Oh, I understand. Want to watch a movie at home instead?
+  - speaker: user
+    goal: Acepta y agrega una idea usando 'and' o 'so'.
+    suggested_lines:
+    - Yes! I have popcorn and soda.
+    - I am free, so let's watch a movie!
+  - speaker: ai
+    text: Sounds great! I will bring snacks.

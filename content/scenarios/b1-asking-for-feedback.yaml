@@ -3,11 +3,14 @@ title: Requesting feedback after a presentation
 title_es: Pedir retroalimentación tras una presentación
 cefr: B1
 topic: work-and-career
-description: Pide a tu directora comentarios concretos después de tu primera presentación ante el comité.
+description: Pide a tu directora comentarios concretos después de tu primera presentación
+  ante el comité.
 phrases:
 - id: how-did-the-pitch-land
-  text: Thanks for backing me up in there! Do you have two minutes to share how you felt the presentation went?
-  translation: ¡Gracias por apoyarme ahí dentro! ¿Tienes dos minutos para contarme cómo sentiste que salió la presentación?
+  text: Thanks for backing me up in there! Do you have two minutes to share how you
+    felt the presentation went?
+  translation: ¡Gracias por apoyarme ahí dentro! ¿Tienes dos minutos para contarme
+    cómo sentiste que salió la presentación?
   visual_hint: 📊🤝
   cloze:
   - 6
@@ -17,8 +20,10 @@ phrases:
     meaning: respaldarme / apoyarme
     ipa: ˈbækɪŋ miː ʌp
 - id: pacing-of-data-slides
-  text: Did the pacing on the financial slides feel right, or did I rush through the charts?
-  translation: ¿El ritmo en las diapositivas financieras se sintió bien, o pasé demasiado rápido por los gráficos?
+  text: Did the pacing on the financial slides feel right, or did I rush through the
+    charts?
+  translation: ¿El ritmo en las diapositivas financieras se sintió bien, o pasé demasiado
+    rápido por los gráficos?
   visual_hint: 📈⏱️
   cloze:
   - 5
@@ -28,8 +33,10 @@ phrases:
     meaning: ritmo de exposición
     ipa: ˈpeɪsɪŋ
 - id: pause-after-key-numbers
-  text: Next time I'll pause for three seconds after the key numbers so the takeaway sinks in.
-  translation: La próxima vez haré una pausa de tres segundos después de las cifras clave para que la idea se asiente.
+  text: Next time I'll pause for three seconds after the key numbers so the takeaway
+    sinks in.
+  translation: La próxima vez haré una pausa de tres segundos después de las cifras
+    clave para que la idea se asiente.
   visual_hint: ⏸️🎯
   cloze:
   - 5
@@ -38,43 +45,10 @@ phrases:
   - word: sinks in
     meaning: asimilarse / quedar claro en la audiencia
     ipa: sɪŋks ɪn
-- id: one-thing-to-improve
-  text: Is there one specific thing I should tighten up before next month's steering committee?
-  translation: ¿Hay algún punto específico que deba pulir antes del comité del próximo mes?
-  visual_hint: 🔧🌟
-  cloze:
-  - 4
-  - 9
-  glossary:
-  - word: tighten up
-    meaning: pulir / ajustar mejor
-    ipa: ˈtaɪtən ʌp
-- id: put-summary-up-front
-  text: Putting the executive summary on the very first slide is a great tip.
-  translation: Poner el resumen ejecutivo en la primera diapositiva es un gran consejo.
-  visual_hint: 💡📑
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: up front
-    meaning: al principio / por delante
-    ipa: ʌp frʌnt
-- id: appreciate-honest-coaching
-  text: I really appreciate your honest coaching—it helps me grow so much faster.
-  translation: Valoro muchísimo tu retroalimentación honesta; me ayuda a crecer mucho más rápido.
-  visual_hint: 🙏🚀
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: coaching
-    meaning: mentoría / guía
-    ipa: ˈkoʊtʃɪŋ
 - id: idm-constructive-criticism
   text: I would really welcome some constructive criticism on my talk.
-  translation: 'Agradecería mucho algunas críticas constructivas sobre mi charla. (constructive criticism: críticas
-    útiles)'
+  translation: 'Agradecería mucho algunas críticas constructivas sobre mi charla.
+    (constructive criticism: críticas útiles)'
   visual_hint: 🗣️🔧
   cloze:
   - 3
@@ -89,7 +63,8 @@ phrases:
   apply_translation: Los buenos jefes dan críticas constructivas en vez de solo quejarse.
 - id: idm-take-on-board
   text: I will take on board your suggestions for next time.
-  translation: 'Tendré en cuenta tus sugerencias la próxima vez. (take on board: aceptar y considerar)'
+  translation: 'Tendré en cuenta tus sugerencias la próxima vez. (take on board: aceptar
+    y considerar)'
   visual_hint: 📝👂
   cloze:
   - 3
@@ -112,28 +87,36 @@ roleplay:
   - speaker: user
     goal: Agradece su respaldo y pide dos minutos para saber cómo vio tu presentación.
     suggested_lines:
-    - Thanks for backing me up in there! Do you have two minutes to share how you felt the presentation went?
-    - Did the pacing on the financial slides feel right, or did I rush through the charts?
+    - Thanks for backing me up in there! Do you have two minutes to share how you
+      felt the presentation went?
+    - Did the pacing on the financial slides feel right, or did I rush through the
+      charts?
   - speaker: ai
     text: Your opening hook was strong. Where did you feel least comfortable?
   - speaker: user
     goal: Pregunta si el ritmo en las diapositivas de datos fue adecuado.
     suggested_lines:
-    - Did the pacing on the financial slides feel right, or did I rush through the charts?
-    - Next time I'll pause for three seconds after the key numbers so the takeaway sinks in.
+    - Did the pacing on the financial slides feel right, or did I rush through the
+      charts?
+    - Next time I'll pause for three seconds after the key numbers so the takeaway
+      sinks in.
   - speaker: ai
     text: Pausing briefly on Slide 4 would help the executives digest the cost savings.
   - speaker: user
     goal: Toma nota de hacer una pausa después de las cifras clave.
     suggested_lines:
-    - Next time I'll pause for three seconds after the key numbers so the takeaway sinks in.
-    - Is there one specific thing I should tighten up before next month's steering committee?
+    - Next time I'll pause for three seconds after the key numbers so the takeaway
+      sinks in.
+    - Is there one specific thing I should tighten up before next month's steering
+      committee?
   - speaker: ai
     text: Spot on. Overall, your confidence and structure were a huge step forward.
   - speaker: user
-    goal: Pregunta qué aspecto puntual deberías pulir para la reunión del próximo mes.
+    goal: Pregunta qué aspecto puntual deberías pulir para la reunión del próximo
+      mes.
     suggested_lines:
-    - Is there one specific thing I should tighten up before next month's steering committee?
+    - Is there one specific thing I should tighten up before next month's steering
+      committee?
     - Putting the executive summary on the very first slide is a great tip.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

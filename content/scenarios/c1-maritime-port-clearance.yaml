@@ -3,12 +3,14 @@ title: Coordinating marina port clearance
 title_es: Coordinar despacho portuario y atraque
 cefr: C1
 topic: travel-and-transport
-description: Gestiona por radio VHF y en capitanía de puerto el atraque, conexión eléctrica y despacho de entrada.
+description: Gestiona por radio VHF y en capitanía de puerto el atraque, conexión
+  eléctrica y despacho de entrada.
 phrases:
 - id: request-berth-assignment
-  text: Good afternoon, Harbormaster. We're a forty-five-foot sloop requesting a stern-to berth for three nights.
-  translation: Buenas tardes, Capitán de Puerto. Somos un velero de cuarenta y cinco pies solicitando atraque de
-    popa por tres noches.
+  text: Good afternoon, Harbormaster. We're a forty-five-foot sloop requesting a stern-to
+    berth for three nights.
+  translation: Buenas tardes, Capitán de Puerto. Somos un velero de cuarenta y cinco
+    pies solicitando atraque de popa por tres noches.
   visual_hint: ⛵⚓
   cloze:
   - 4
@@ -19,7 +21,8 @@ phrases:
     ipa: stɜːrn tuː bɜːrθ
 - id: shore-power-and-water
   text: Does Slip C-14 have thirty-amp shore power and potable water hookups?
-  translation: ¿El amarre C-14 cuenta con conexión eléctrica de treinta amperios y toma de agua potable?
+  translation: ¿El amarre C-14 cuenta con conexión eléctrica de treinta amperios y
+    toma de agua potable?
   visual_hint: 🔌💧
   cloze:
   - 3
@@ -29,8 +32,10 @@ phrases:
     meaning: toma eléctrica de tierra
     ipa: ʃɔːr ˈpaʊər
 - id: crew-list-and-registry
-  text: Here are our ship's registry papers, hull insurance certificate, and stamped crew manifest.
-  translation: Aquí están los documentos de registro del barco, póliza de casco y lista de tripulación sellada.
+  text: Here are our ship's registry papers, hull insurance certificate, and stamped
+    crew manifest.
+  translation: Aquí están los documentos de registro del barco, póliza de casco y
+    lista de tripulación sellada.
   visual_hint: 📑🛂
   cloze:
   - 4
@@ -39,44 +44,10 @@ phrases:
   - word: manifest
     meaning: rol de tripulación / manifiesto
     ipa: ˈmænɪfest
-- id: fuel-bunkering-dock
-  text: Tomorrow morning we'd like to top off diesel at the fuel dock before the charter guests embark.
-  translation: Mañana temprano quisiéramos recargar diésel en el muelle de combustible antes de que embarquen los
-    invitados.
-  visual_hint: ⛽🌅
-  cloze:
-  - 5
-  - 11
-  glossary:
-  - word: top off
-    meaning: llenar por completo el tanque
-    ipa: tɑːp ɔːf
-- id: blackwater-pump-out
-  text: We'll also schedule a holding-tank pump-out on Channel 9 prior to departure.
-  translation: También programaremos el vaciado del tanque de aguas residuales por el canal 9 antes de zarpar.
-  visual_hint: 📻♻️
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: prior to
-    meaning: antes de / previo a
-    ipa: ˈpraɪər tuː
-- id: weather-bulletin-posted
-  text: Thank you—we'll check the morning barometric bulletin at your office.
-  translation: Gracias; revisaremos el boletín barométrico matutino en su oficina.
-  visual_hint: 🌡️🧭
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: bulletin
-    meaning: boletín / reporte
-    ipa: ˈbʊlətɪn
 - id: marina-show-the-ropes
   text: The harbor master will show us the ropes at the marina.
-  translation: El capitán de puerto nos enseñará cómo funcionan las cosas en la marina. (show the ropes = enseñar
-    lo básico)
+  translation: El capitán de puerto nos enseñará cómo funcionan las cosas en la marina.
+    (show the ropes = enseñar lo básico)
   visual_hint: ⚓🪢
   cloze:
   - 3
@@ -88,10 +59,12 @@ phrases:
   kind: idiom
   apply_sentence: A veteran skipper showed the new crew ____ on the docks.
   apply_answer: the ropes
-  apply_translation: Un capitán veterano enseñó a la nueva tripulación cómo funcionaba todo en los muelles.
+  apply_translation: Un capitán veterano enseñó a la nueva tripulación cómo funcionaba
+    todo en los muelles.
 - id: marina-smooth-sailing
   text: Once the paperwork is posted, it should be smooth sailing.
-  translation: Una vez publicados los documentos, todo debería ir sobre ruedas. (smooth sailing = sin dificultades)
+  translation: Una vez publicados los documentos, todo debería ir sobre ruedas. (smooth
+    sailing = sin dificultades)
   visual_hint: ⛵😌
   cloze:
   - 3
@@ -110,11 +83,13 @@ roleplay:
   setting: Port authority office at a Mediterranean marina.
   turns:
   - speaker: ai
-    text: Harbormaster's office, welcome to Palma Marina! What is your vessel's length and draft?
+    text: Harbormaster's office, welcome to Palma Marina! What is your vessel's length
+      and draft?
   - speaker: user
     goal: Solicita un atraque de popa por tres noches para un velero de 45 pies.
     suggested_lines:
-    - Good afternoon, Harbormaster. We're a forty-five-foot sloop requesting a stern-to berth for three nights.
+    - Good afternoon, Harbormaster. We're a forty-five-foot sloop requesting a stern-to
+      berth for three nights.
     - Does Slip C-14 have thirty-amp shore power and potable water hookups?
   - speaker: ai
     text: With a two-meter draft, I can assign you to Slip C-14 on the outer pontoon.
@@ -122,20 +97,24 @@ roleplay:
     goal: Pregunta si el amarre C-14 tiene toma eléctrica y agua potable.
     suggested_lines:
     - Does Slip C-14 have thirty-amp shore power and potable water hookups?
-    - Here are our ship's registry papers, hull insurance certificate, and stamped crew manifest.
+    - Here are our ship's registry papers, hull insurance certificate, and stamped
+      crew manifest.
   - speaker: ai
     text: Yes, C-14 has full pedestal utilities. May I inspect your vessel documents?
   - speaker: user
     goal: Entrega el registro de la embarcación, seguro y lista de tripulación.
     suggested_lines:
-    - Here are our ship's registry papers, hull insurance certificate, and stamped crew manifest.
-    - Tomorrow morning we'd like to top off diesel at the fuel dock before the charter guests embark.
+    - Here are our ship's registry papers, hull insurance certificate, and stamped
+      crew manifest.
+    - Tomorrow morning we'd like to top off diesel at the fuel dock before the charter
+      guests embark.
   - speaker: ai
     text: All documents are in order. Here is your marina gate keycard.
   - speaker: user
     goal: Coordina recargar diésel mañana temprano antes de que suban los invitados.
     suggested_lines:
-    - Tomorrow morning we'd like to top off diesel at the fuel dock before the charter guests embark.
+    - Tomorrow morning we'd like to top off diesel at the fuel dock before the charter
+      guests embark.
     - We'll also schedule a holding-tank pump-out on Channel 9 prior to departure.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

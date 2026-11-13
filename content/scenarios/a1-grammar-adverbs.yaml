@@ -1,0 +1,99 @@
+id: a1-grammar-adverbs
+title: Adverbs of frequency in daily routines
+title_es: Adverbios de frecuencia en la rutina diaria
+cefr: A1
+topic: grammar-and-connectors
+description: Usa adverbios de frecuencia básicos (always, usually, sometimes, never)
+  para hablar de tus hábitos diarios.
+phrases:
+- id: always-drink-water
+  text: I always drink water in the morning.
+  translation: Siempre bebo agua por la mañana. (always = siempre, va antes del verbo)
+  visual_hint: 💧☀️
+  cloze:
+  - 1
+  glossary:
+  - word: always
+    meaning: siempre (100% de las veces)
+    ipa: ˈɔːlweɪz
+  - word: morning
+    meaning: mañana
+    ipa: ˈmɔːrnɪŋ
+- id: usually-take-bus
+  text: She usually takes the bus to work.
+  translation: Ella normalmente toma el autobús para ir al trabajo.
+  visual_hint: 🚌💼
+  cloze:
+  - 1
+  glossary:
+  - word: usually
+    meaning: normalmente / por lo general
+    ipa: ˈjuːʒuəli
+- id: sometimes-cook-dinner
+  text: We sometimes cook dinner at home.
+  translation: A veces cocinamos la cena en casa.
+  visual_hint: 🍳🏠
+  cloze:
+  - 1
+  glossary:
+  - word: sometimes
+    meaning: a veces
+    ipa: ˈsʌmtaɪmz
+  - word: dinner
+    meaning: cena
+    ipa: ˈdɪnər
+- id: never-late-for-class
+  text: He is never late for class.
+  translation: Él nunca llega tarde a clase. (con el verbo 'to be', el adverbio va
+    después)
+  visual_hint: ⏰🎓
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: never
+    meaning: nunca
+    ipa: ˈnevər
+  - word: late for
+    meaning: tarde para
+    ipa: leɪt fɔːr
+  kind: expression
+  apply_sentence: My sister is ____ late for work.
+  apply_answer: never
+  apply_translation: Mi hermana nunca llega tarde al trabajo.
+- id: every-day-walk
+  text: I walk my dog every day.
+  translation: Paseo a mi perro todos los días. ('every day' va al final de la frase)
+  visual_hint: 🐕🚶
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: every day
+    meaning: todos los días
+    ipa: ˈevri deɪ
+  kind: expression
+  apply_sentence: We study English ____ after lunch.
+  apply_answer: every day
+  apply_translation: Estudiamos inglés todos los días después de almorzar.
+roleplay:
+  ai_role: new classmate
+  user_role: student
+  setting: Chatting during a break at an English school.
+  turns:
+  - speaker: ai
+    text: Hi! What do you usually do in the morning?
+  - speaker: user
+    goal: Di algo que siempre o normalmente haces por la mañana.
+    suggested_lines:
+    - I always drink water in the morning.
+    - I usually take the bus to class.
+  - speaker: ai
+    text: Nice! Do you cook dinner at home?
+  - speaker: user
+    goal: Responde usando 'sometimes' o 'every day'.
+    suggested_lines:
+    - Yes, we sometimes cook dinner at home.
+    - I cook at home every day.
+  - speaker: ai
+    text: Great! See you in class tomorrow.

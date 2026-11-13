@@ -3,8 +3,8 @@ title: Hosting a themed dinner party
 title_es: Ser anfitrión de una cena temática
 cefr: B2
 topic: food-and-drink
-description: Presenta los platos a tus invitados en una cena mediterránea, ofrece maridaje y comparte la historia
-  de la receta.
+description: Presenta los platos a tus invitados en una cena mediterránea, ofrece
+  maridaje y comparte la historia de la receta.
 phrases:
 - id: make-yourselves-at-home
   text: Come on in, everyone! Hang up your coats and make yourselves at home.
@@ -19,7 +19,8 @@ phrases:
     ipa: meɪk jɔːrˈselvz æt hoʊm
 - id: slow-braised-lamb
   text: Tonight's main dish is slow-braised lamb shoulder with pomegranate and mint.
-  translation: El plato principal de esta noche es paleta de cordero braseada lentamente con granada y menta.
+  translation: El plato principal de esta noche es paleta de cordero braseada lentamente
+    con granada y menta.
   visual_hint: 🍖🌿
   cloze:
   - 3
@@ -30,7 +31,8 @@ phrases:
     ipa: sloʊ breɪzd
 - id: family-recipe-twist
   text: It's my grandmother's recipe, though I added smoked paprika for extra warmth.
-  translation: Es la receta de mi abuela, aunque agregué pimentón ahumado para darle calidez.
+  translation: Es la receta de mi abuela, aunque agregué pimentón ahumado para darle
+    calidez.
   visual_hint: 👵🌶️
   cloze:
   - 4
@@ -39,42 +41,10 @@ phrases:
   - word: smoked paprika
     meaning: pimentón ahumado
     ipa: smoʊkt pəˈpriːkə
-- id: help-yourselves-seconds
-  text: Please help yourselves to seconds—there is plenty of saffron rice left.
-  translation: Por favor sírvanse una segunda porción; queda bastante arroz con azafrán.
-  visual_hint: 🍚🥄
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: seconds
-    meaning: segunda porción / repetir plato
-    ipa: ˈsekəndz
-- id: citrus-almond-tart
-  text: For dessert, I baked a flourless orange and almond tart.
-  translation: De postre, horneé una tarta de naranja y almendras sin harina.
-  visual_hint: 🍊🥧
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: flourless
-    meaning: sin harina
-    ipa: ˈflaʊərləs
-- id: toast-to-good-friends
-  text: Let's raise a glass to good friends and unforgettable evenings!
-  translation: ¡Levantemos la copa por los buenos amigos y las noches inolvidables!
-  visual_hint: 🥂✨
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: raise a glass
-    meaning: brindar / alzar la copa
-    ipa: reɪz ə ɡlæs
 - id: dig-in
   text: Everyone, dig in before the lamb gets cold!
-  translation: '¡Todos, a comer antes de que el cordero se enfríe! (dig in: empezar a comer)'
+  translation: '¡Todos, a comer antes de que el cordero se enfríe! (dig in: empezar
+    a comer)'
   visual_hint: 🍖🍴
   cloze:
   - 2
@@ -89,7 +59,8 @@ phrases:
   apply_translation: No me esperes, empieza a comer mientras está caliente.
 - id: the-icing-on-the-cake
   text: The citrus tart was the icing on the cake.
-  translation: 'La tarta de cítricos fue la guinda del pastel. (the icing on the cake: la guinda)'
+  translation: 'La tarta de cítricos fue la guinda del pastel. (the icing on the cake:
+    la guinda)'
   visual_hint: 🍰🎂
   cloze:
   - 3

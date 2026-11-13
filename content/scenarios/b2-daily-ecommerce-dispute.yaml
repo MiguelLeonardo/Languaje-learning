@@ -1,0 +1,94 @@
+id: b2-daily-ecommerce-dispute
+title: Resolving a missing parcel dispute
+title_es: Resolver una disputa por paquete extraviado
+cefr: B2
+topic: daily-tech-and-media
+description: Escala un reclamo ante una tienda en línea cuando el paquete figura como entregado
+  pero no llegó.
+phrases:
+- id: marked-as-delivered
+  text: The carrier marked the parcel as delivered, yet nothing arrived.
+  translation: El transportista marcó el paquete como entregado, pero no llegó nada.
+  visual_hint: 📦❓
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: carrier
+    meaning: empresa transportista
+    ipa: ˈkæriər
+- id: proof-of-delivery
+  text: Could you share the photo proof of delivery from the courier?
+  translation: ¿Podrían compartir la foto de prueba de entrega del mensajero?
+  visual_hint: 📸🚚
+  cloze:
+  - 4
+  - 6
+  glossary:
+  - word: proof of delivery
+    meaning: prueba de entrega
+    ipa: pruːf əv dɪˈlɪvəri
+- id: open-formal-claim
+  text: I would like to open a formal claim with the seller.
+  translation: Quisiera abrir un reclamo formal con el vendedor.
+  visual_hint: 📝⚖️
+  cloze:
+  - 5
+  - 7
+  glossary:
+  - word: claim
+    meaning: reclamo / reclamación
+    ipa: kleɪm
+- id: idm-follow-up
+  text: If there is no update by Friday, I will follow up with my bank.
+  translation: 'Si no hay novedades para el viernes, haré seguimiento con mi banco. (follow
+    up: dar seguimiento)'
+  visual_hint: 🏦📞
+  cloze:
+  - 10
+  - 11
+  glossary:
+  - word: follow up
+    meaning: dar seguimiento
+    ipa: ˈfɑːloʊ ʌp
+  kind: phrasal_verb
+  apply_sentence: Please ____ with the warehouse manager tomorrow morning.
+  apply_answer: follow up
+  apply_translation: Por favor, haz seguimiento con el gerente del almacén mañana por la mañana.
+- id: idm-ball-is-in-court
+  text: I uploaded the security camera clip, so the ball is in your court.
+  translation: 'Subí el video de la cámara de seguridad, así que ahora les toca a ustedes. (the
+    ball is in someone''s court: le toca actuar a alguien)'
+  visual_hint: 🎾💼
+  cloze:
+  - 8
+  - 12
+  glossary:
+  - word: ball is in your court
+    meaning: ahora te toca actuar
+    ipa: bɔːl ɪz ɪn jʊr kɔːrt
+  kind: idiom
+  apply_sentence: We sent the signed form; now ____.
+  apply_answer: the ball is in their court
+  apply_translation: Enviamos el formulario firmado; ahora les toca actuar a ellos.
+roleplay:
+  ai_role: marketplace dispute agent
+  user_role: buyer
+  setting: Marketplace resolution center chat.
+  turns:
+  - speaker: ai
+    text: 'Hello, I see you reported an issue with order #88412. What happened?'
+  - speaker: user
+    goal: Explica que aparece como entregado pero no llegó y pide la foto de prueba de entrega.
+    suggested_lines:
+    - The carrier marked the parcel as delivered, yet nothing arrived.
+    - Could you share the photo proof of delivery from the courier?
+  - speaker: ai
+    text: Looking at the photo, the driver left it at a different building door.
+  - speaker: user
+    goal: Pide abrir un reclamo formal y menciona que darás seguimiento si no se resuelve.
+    suggested_lines:
+    - I would like to open a formal claim with the seller.
+    - If there is no update by Friday, I will follow up with my bank.
+  - speaker: ai
+    text: Understood. I have approved an immediate replacement shipment for you.

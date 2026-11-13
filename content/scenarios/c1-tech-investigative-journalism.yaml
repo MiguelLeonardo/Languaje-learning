@@ -1,0 +1,97 @@
+id: c1-tech-investigative-journalism
+title: Evaluating investigative journalism vs. live feeds
+title_es: Periodismo de investigación frente a redes
+cefr: C1
+topic: daily-tech-and-media
+description: Compara la profundidad del periodismo de investigación con la inmediatez de las
+  redes sociales.
+phrases:
+- id: corroborated-documentary-evidence
+  text: Long-form reporting relies on corroborated documentary evidence rather than hot takes.
+  translation: El reportaje de fondo se basa en pruebas documentales corroboradas en lugar de
+    opiniones impulsivas.
+  visual_hint: 📑🔍
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: corroborated
+    meaning: corroborado / confirmado
+    ipa: kəˈrɑːbəreɪtɪd
+- id: editorial-oversight-standards
+  text: Strict editorial oversight filters out unverified rumors before publication.
+  translation: Una estricta supervisión editorial filtra los rumores sin verificar antes de
+    publicar.
+  visual_hint: ✍️📰
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: oversight
+    meaning: supervisión
+    ipa: ˈoʊvərsaɪt
+- id: paywall-sustainability-model
+  text: Reader-funded paywalls sustain investigative desks that ad clicks cannot support.
+  translation: Los muros de pago financiados por lectores sostienen redacciones de investigación
+    que los clics no cubren.
+  visual_hint: 💳🗞️
+  cloze:
+  - 1
+  - 3
+  glossary:
+  - word: paywall
+    meaning: muro de pago
+    ipa: ˈpeɪwɔːl
+- id: idm-boil-down-to
+  text: Ultimately, credible reporting boils down to transparency about methods.
+  translation: 'En última instancia, el periodismo creíble se reduce a la transparencia en sus
+    métodos. (boil down to: reducirse a)'
+  visual_hint: 🧪📰
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: boil down to
+    meaning: reducirse a / resumirse en
+    ipa: bɔɪl daʊn tuː
+  kind: phrasal_verb
+  apply_sentence: The debate ____ whether platforms should label sponsored content.
+  apply_answer: boils down to
+  apply_translation: El debate se reduce a si las plataformas deben etiquetar el contenido patrocinado.
+- id: idm-jump-the-gun
+  text: Live-blogging outlets sometimes jump the gun just to break a story first.
+  translation: 'Los medios en directo a veces se precipitan solo por dar la primicia primero.
+    (jump the gun: precipitarse)'
+  visual_hint: 🏃‍♂️⏱️
+  cloze:
+  - 3
+  - 5
+  glossary:
+  - word: jump the gun
+    meaning: precipitarse / adelantarse
+    ipa: dʒʌmp ðə ɡʌn
+  kind: idiom
+  apply_sentence: We should wait for the official audit rather than ____.
+  apply_answer: jump the gun
+  apply_translation: Deberíamos esperar la auditoría oficial en lugar de precipitarnos.
+roleplay:
+  ai_role: podcast host
+  user_role: media critic
+  setting: Recording a podcast episode on the future of digital news.
+  turns:
+  - speaker: ai
+    text: When breaking news unfolds on social feeds in seconds, why pay for slow journalism?
+  - speaker: user
+    goal: Explica que la velocidad hace precipitarse y destaca las pruebas corroboradas.
+    suggested_lines:
+    - Live-blogging outlets sometimes jump the gun just to break a story first.
+    - Long-form reporting relies on corroborated documentary evidence rather than hot takes.
+  - speaker: ai
+    text: Fair point, though many readers still balk at paying for subscriptions.
+  - speaker: user
+    goal: Defiende los muros de pago y resume que todo se reduce a la transparencia.
+    suggested_lines:
+    - Reader-funded paywalls sustain investigative desks that ad clicks cannot support.
+    - Ultimately, credible reporting boils down to transparency about methods.
+  - speaker: ai
+    text: A compelling case for supporting independent newsrooms!

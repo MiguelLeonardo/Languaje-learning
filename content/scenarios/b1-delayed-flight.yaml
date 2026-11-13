@@ -3,7 +3,8 @@ title: Dealing with a delayed flight
 title_es: Vuelo retrasado en el aeropuerto
 cefr: B1
 topic: travel-and-transport
-description: Gestiona una conexión perdida en el aeropuerto y pide reprogramar tu vuelo.
+description: Gestiona una conexión perdida en el aeropuerto y pide reprogramar tu
+  vuelo.
 phrases:
 - id: flight-delayed
   text: My flight has been delayed and I might miss my connection.
@@ -43,40 +44,10 @@ phrases:
   - word: entitled to
     meaning: tener derecho a
     ipa: ɪnˈtaɪtəld tuː
-- id: direct-routing
-  text: Is there any seat available on a partner airline tonight?
-  translation: ¿Hay algún asiento disponible en una aerolínea asociada esta noche?
-  visual_hint: 🛫💺
-  cloze:
-  - 3
-  - 4
-  - 7
-  glossary:
-  - word: available
-    meaning: disponible
-    ipa: əˈveɪləbəl
-  - word: partner airline
-    meaning: aerolínea aliada
-    ipa: ˈpɑːrtnər ˈerlaɪn
-- id: boarding-gate-change
-  text: Will the new boarding pass be sent to my mobile app?
-  translation: ¿Se enviará la nueva tarjeta de embarque a mi aplicación móvil?
-  visual_hint: 📲🎫
-  cloze:
-  - 3
-  - 4
-  - 6
-  glossary:
-  - word: boarding pass
-    meaning: pase de abordar
-    ipa: ˈbɔːrdɪŋ pæs
-  - word: sent
-    meaning: enviado
-    ipa: sent
 - id: delay-same-boat
   text: Don't worry, we are all in the same boat with this delay.
-  translation: No te preocupes, todos estamos en la misma situación con este retraso. (in the same boat = en la
-    misma situación)
+  translation: No te preocupes, todos estamos en la misma situación con este retraso.
+    (in the same boat = en la misma situación)
   visual_hint: ⛵✈️
   cloze:
   - 4
@@ -91,7 +62,8 @@ phrases:
   apply_translation: La huelga afecta a todos, así que todos estamos en la misma situación.
 - id: delay-kill-time
   text: We have five hours to kill time before the next flight.
-  translation: Tenemos cinco horas para matar el tiempo antes del próximo vuelo. (kill time = pasar el rato)
+  translation: Tenemos cinco horas para matar el tiempo antes del próximo vuelo. (kill
+    time = pasar el rato)
   visual_hint: ⌛📖
   cloze:
   - 3
@@ -118,7 +90,8 @@ roleplay:
   - speaker: ai
     text: Let me look at alternative routes for you.
   - speaker: user
-    goal: Pide que te reprogramen en el siguiente vuelo disponible y pregunta por el vale de comida.
+    goal: Pide que te reprogramen en el siguiente vuelo disponible y pregunta por
+      el vale de comida.
     suggested_lines:
     - Could you rebook me on the next available flight to London?
     - Are we entitled to a meal voucher while we wait?

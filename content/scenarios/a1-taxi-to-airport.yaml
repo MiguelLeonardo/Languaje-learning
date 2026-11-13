@@ -3,7 +3,8 @@ title: Taking a taxi to the airport
 title_es: Tomar un taxi al aeropuerto
 cefr: A1
 topic: travel-and-transport
-description: Sube a un taxi, indica que vas a la terminal internacional y pregunta cuánto cuesta el viaje.
+description: Sube a un taxi, indica que vas a la terminal internacional y pregunta
+  cuánto cuesta el viaje.
 phrases:
 - id: to-airport-terminal
   text: Hello! To the international airport, Terminal 2, please.
@@ -38,39 +39,6 @@ phrases:
   - word: drive
     meaning: trayecto en auto
     ipa: draɪv
-- id: pay-by-card-taxi
-  text: Here we are! Can I pay with my card?
-  translation: ¡Aquí estamos! ¿Puedo pagar con mi tarjeta?
-  visual_hint: 💳🚕
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: here we are
-    meaning: aquí estamos / llegamos
-    ipa: hɪr wiː ɑːr
-- id: need-a-receipt-taxi
-  text: Could I have a printed receipt, please?
-  translation: ¿Me podría dar un recibo impreso, por favor?
-  visual_hint: 🧾🙌
-  cloze:
-  - 2
-  - 4
-  glossary:
-  - word: printed
-    meaning: impreso
-    ipa: ˈprɪntɪd
-- id: thank-you-safe-drive
-  text: Thank you for the safe ride! Have a good day.
-  translation: ¡Gracias por el viaje seguro! Que tenga un buen día.
-  visual_hint: 😊👋
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: ride
-    meaning: viaje / traslado
-    ipa: raɪd
 - id: taxi-hop-in
   text: Hop in, and I will put your bags in the trunk.
   translation: Sube, y yo pondré tus maletas en el maletero. (hop in = subir rápido)

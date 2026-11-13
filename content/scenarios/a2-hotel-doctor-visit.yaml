@@ -3,7 +3,8 @@ title: Asking the hotel for an English-speaking doctor
 title_es: Pedir en recepción un médico que hable inglés
 cefr: A2
 topic: health-and-emergencies
-description: Llama a la recepción del hotel porque tu compañero tiene fiebre y dolor de oído y necesitan un médico.
+description: Llama a la recepción del hotel porque tu compañero tiene fiebre y dolor
+  de oído y necesitan un médico.
 phrases:
 - id: english-speaking-doctor
   text: Hello, does the hotel have an English-speaking doctor on call?
@@ -18,7 +19,8 @@ phrases:
     ipa: ɑːn kɔːl
 - id: earache-and-fever
   text: My travel partner has a strong earache and a fever of thirty-eight point five.
-  translation: Mi compañero de viaje tiene un fuerte dolor de oído y fiebre de treinta y ocho punto cinco.
+  translation: Mi compañero de viaje tiene un fuerte dolor de oído y fiebre de treinta
+    y ocho punto cinco.
   visual_hint: 🤒👂
   cloze:
   - 4
@@ -29,7 +31,8 @@ phrases:
     ipa: ˈɪreɪk
 - id: come-to-our-room
   text: Could the doctor come to Room 508 this afternoon so he doesn't have to travel?
-  translation: ¿Podría el médico venir a la habitación 508 esta tarde para que no tenga que salir?
+  translation: ¿Podría el médico venir a la habitación 508 esta tarde para que no
+    tenga que salir?
   visual_hint: 🚪🩺
   cloze:
   - 5
@@ -38,42 +41,10 @@ phrases:
   - word: travel
     meaning: desplazarse / salir
     ipa: ˈtrævəl
-- id: printed-receipt-for-insurance
-  text: Will the doctor give us an official medical receipt for our travel insurance?
-  translation: ¿El médico nos dará un recibo oficial para nuestro seguro de viaje?
-  visual_hint: 🧾✈️
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: official
-    meaning: oficial / con sello
-    ipa: əˈfɪʃəl
-- id: send-up-thermometer
-  text: In the meantime, could housekeeping bring up extra bottled water?
-  translation: Mientras tanto, ¿podrían subirnos agua embotellada extra?
-  visual_hint: 💧🛎️
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: in the meantime
-    meaning: mientras tanto
-    ipa: ɪn ðə ˈmiːntaɪm
-- id: thank-you-for-arranging
-  text: Thank you so much for arranging the visit so quickly!
-  translation: ¡Muchas gracias por coordinar la visita tan rápido!
-  visual_hint: 🙏✨
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: arranging
-    meaning: coordinar / gestionar
-    ipa: əˈreɪndʒɪŋ
 - id: idm-make-an-appointment-a2
   text: Can you help me make an appointment with a doctor?
-  translation: ¿Puede ayudarme a pedir una cita con un médico? (make an appointment = pedir cita)
+  translation: ¿Puede ayudarme a pedir una cita con un médico? (make an appointment
+    = pedir cita)
   visual_hint: 📅🩺
   cloze:
   - 3
@@ -114,21 +85,24 @@ roleplay:
     - Hello, does the hotel have an English-speaking doctor on call?
     - My travel partner has a strong earache and a fever of thirty-eight point five.
   - speaker: ai
-    text: Yes, we work with an international clinic two blocks away, or a doctor can visit your room.
+    text: Yes, we work with an international clinic two blocks away, or a doctor can
+      visit your room.
   - speaker: user
     goal: Explica que tu compañero tiene dolor de oído y fiebre de 38.5.
     suggested_lines:
     - My travel partner has a strong earache and a fever of thirty-eight point five.
     - Could the doctor come to Room 508 this afternoon so he doesn't have to travel?
   - speaker: ai
-    text: A room visit is very convenient when someone has a fever. Let me call Dr. Meyer right now.
+    text: A room visit is very convenient when someone has a fever. Let me call Dr.
+      Meyer right now.
   - speaker: user
     goal: Pide que el médico acuda a la habitación 508 esta tarde.
     suggested_lines:
     - Could the doctor come to Room 508 this afternoon so he doesn't have to travel?
     - Will the doctor give us an official medical receipt for our travel insurance?
   - speaker: ai
-    text: Dr. Meyer can be at Room 508 in forty minutes. The consultation fee is ninety euros.
+    text: Dr. Meyer can be at Room 508 in forty minutes. The consultation fee is ninety
+      euros.
   - speaker: user
     goal: Pregunta si el médico entregará recibo oficial para el seguro de viaje.
     suggested_lines:

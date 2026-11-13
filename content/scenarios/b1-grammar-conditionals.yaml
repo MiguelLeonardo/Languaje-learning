@@ -1,0 +1,93 @@
+id: b1-grammar-conditionals
+title: First and second conditionals in real decisions
+title_es: Primer y segundo condicional en decisiones reales
+cefr: B1
+topic: grammar-and-connectors
+description: Expresa consecuencias probables (first conditional, unless) y situaciones
+  hipotéticas (second conditional).
+phrases:
+- id: if-leave-now-catch
+  text: If we leave now, we will catch the early bus.
+  translation: Si salimos ahora, alcanzaremos el autobús temprano.
+  visual_hint: 🚌⏱️
+  cloze:
+  - 0
+  - 5
+  glossary:
+  - word: if ... will
+    meaning: si ... (condicional real futuro)
+    ipa: ɪf ... wɪl
+- id: unless-book-soon
+  text: We won't get seats unless we book today.
+  translation: No conseguiremos asientos a menos que reservemos hoy. ('unless' = si
+    no)
+  visual_hint: 🎟️📅
+  cloze:
+  - 4
+  glossary:
+  - word: unless
+    meaning: a menos que / salvo que
+    ipa: ənˈles
+  kind: expression
+  apply_sentence: You will miss the flight ____ you hurry.
+  apply_answer: unless
+  apply_translation: Perderás el vuelo a menos que te des prisa.
+- id: if-had-more-time
+  text: If I had more free time, I would learn piano.
+  translation: Si tuviera más tiempo libre, aprendería piano. (situación hipotética)
+  visual_hint: 🎹💭
+  cloze:
+  - 2
+  - 7
+  glossary:
+  - word: would
+    meaning: indica acción hipotética (-ría)
+    ipa: wʊd
+  kind: expression
+  apply_sentence: If I lived near the sea, I ____ swim every morning.
+  apply_answer: would
+  apply_translation: Si viviera cerca del mar, nadaría todas las mañanas.
+- id: might-cancel-if-rains
+  text: They might cancel the match if it rains heavily.
+  translation: Puede que cancelen el partido si llueve fuerte.
+  visual_hint: 🌧️🏟️
+  cloze:
+  - 1
+  - 5
+  glossary:
+  - word: might
+    meaning: puede que / podría (posibilidad)
+    ipa: maɪt
+- id: if-were-you
+  text: If I were you, I would ask for a receipt.
+  translation: Si yo fuera tú, pediría un recibo.
+  visual_hint: 🧾💡
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: if I were you
+    meaning: si yo fuera tú / en tu lugar
+    ipa: ɪf aɪ wɜːr juː
+roleplay:
+  ai_role: travel buddy
+  user_role: travel buddy
+  setting: Planning an outdoor weekend trip with uncertain weather.
+  turns:
+  - speaker: ai
+    text: The forecast says there is a chance of rain this Saturday. What should we
+      do?
+  - speaker: user
+    goal: Propón un plan real usando 'if ... will' o 'unless'.
+    suggested_lines:
+    - If it rains, we will visit the art museum instead.
+    - We won't get good rooms unless we book tonight.
+  - speaker: ai
+    text: Good thinking. What would you do if we had a whole week off?
+  - speaker: user
+    goal: Responde con un segundo condicional ('If I had..., I would...').
+    suggested_lines:
+    - If I had a whole week, I would rent a cabin in the mountains.
+    - If I had more time, I would drive along the coast.
+  - speaker: ai
+    text: That sounds like a dream trip! Let's start with this weekend.

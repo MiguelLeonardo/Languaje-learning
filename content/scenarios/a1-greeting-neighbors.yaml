@@ -3,7 +3,8 @@ title: Greeting a new neighbor
 title_es: Saludar a un vecino nuevo
 cefr: A1
 topic: social-and-smalltalk
-description: Saluda a tu vecino en el pasillo, dile tu nombre y número de apartamento y ofrécele ayuda.
+description: Saluda a tu vecino en el pasillo, dile tu nombre y número de apartamento
+  y ofrécele ayuda.
 phrases:
 - id: welcome-to-building
   text: Hi! Welcome to the building. I am Leo.
@@ -49,49 +50,6 @@ phrases:
   - word: boxes
     meaning: cajas
     ipa: ˈbɑːksɪz
-- id: quiet-neighborhood
-  text: This is a very friendly and quiet street.
-  translation: Esta es una calle muy amigable y tranquila.
-  visual_hint: 🌳😊
-  cloze:
-  - 4
-  - 6
-  glossary:
-  - word: friendly
-    meaning: amigable
-    ipa: ˈfrendli
-  - word: street
-    meaning: calle
-    ipa: striːt
-- id: supermarket-on-corner
-  text: There is a good supermarket on the corner.
-  translation: Hay un buen supermercado en la esquina.
-  visual_hint: 🛒🏪
-  cloze:
-  - 3
-  - 4
-  glossary:
-  - word: supermarket
-    meaning: supermercado
-    ipa: ˈsuːpərmɑːrkɪt
-  - word: on the corner
-    meaning: en la esquina
-    ipa: ɑːn ðə ˈkɔːrnər
-- id: knock-on-my-door
-  text: Let me know if you need anything. See you soon!
-  translation: Avísame si necesitas algo. ¡Nos vemos pronto!
-  visual_hint: 🙌✨
-  cloze:
-  - 2
-  - 6
-  - 9
-  glossary:
-  - word: let me know
-    meaning: avísame / hazme saber
-    ipa: let miː noʊ
-  - word: soon
-    meaning: pronto
-    ipa: suːn
 - id: idm-a1gn-move-in
   text: Hello! I will move in next door on Monday.
   translation: ¡Hola! Me mudaré a la casa de al lado el lunes (instalarse en una vivienda).
@@ -106,7 +64,8 @@ phrases:
   kind: phrasal_verb
   apply_sentence: Our new friends will ____ upstairs next week.
   apply_answer: move in
-  apply_translation: Nuestros nuevos amigos se mudarán al piso de arriba la próxima semana.
+  apply_translation: Nuestros nuevos amigos se mudarán al piso de arriba la próxima
+    semana.
 - id: idm-a1gn-nice-to-meet
   text: It's nice to meet you, and welcome to the building!
   translation: Mucho gusto en conocerte, ¡y bienvenido al edificio! (fórmula de saludo)

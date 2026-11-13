@@ -3,12 +3,13 @@ title: Debriefing a Michelin kitchen service
 title_es: Analizar el servicio en cocina Michelin
 cefr: C2
 topic: food-and-drink
-description: Evalúa junto al chef ejecutivo la sincronización del pase, el punto de cocción del pichón y la reducción
-  de mermas.
+description: Evalúa junto al chef ejecutivo la sincronización del pase, el punto de
+  cocción del pichón y la reducción de mermas.
 phrases:
 - id: cadence-at-the-pass
   text: The cadence at the pass during the eight-o'clock rush was remarkably composed.
-  translation: La cadencia en el pase durante la hora punta de las ocho fue notablemente serena.
+  translation: La cadencia en el pase durante la hora punta de las ocho fue notablemente
+    serena.
   visual_hint: 👨‍🍳⏱️
   cloze:
   - 4
@@ -18,8 +19,10 @@ phrases:
     meaning: cadencia / ritmo
     ipa: ˈkeɪdəns
 - id: maillard-caramelization
-  text: Searing the squab on the plancha yielded an immaculate Maillard crust without gray banding.
-  translation: Sellar el pichón en la plancha logró una costra de Maillard inmaculada sin sobrecocción interior.
+  text: Searing the squab on the plancha yielded an immaculate Maillard crust without
+    gray banding.
+  translation: Sellar el pichón en la plancha logró una costra de Maillard inmaculada
+    sin sobrecocción interior.
   visual_hint: 🔥🍖
   cloze:
   - 4
@@ -29,8 +32,10 @@ phrases:
     meaning: produjo / dio como resultado
     ipa: ˈjiːldɪd
 - id: upcycling-vegetable-trimmings
-  text: Lacto-fermenting the root trimmings into a glaze is a masterclass in zero-waste gastronomy.
-  translation: Lactofermentar los recortes de tubérculos para hacer un glaseado es una cátedra de cocina sin desperdicio.
+  text: Lacto-fermenting the root trimmings into a glaze is a masterclass in zero-waste
+    gastronomy.
+  translation: Lactofermentar los recortes de tubérculos para hacer un glaseado es
+    una cátedra de cocina sin desperdicio.
   visual_hint: 🥕♻️
   cloze:
   - 4
@@ -39,43 +44,10 @@ phrases:
   - word: trimmings
     meaning: recortes / mermas de cocina
     ipa: ˈtrɪmɪŋz
-- id: tighten-interval-courses
-  text: If we shave ninety seconds off the palate cleanser, the transition to savory finals will feel effortless.
-  translation: Si acortamos noventa segundos el limpiador de paladar, la transición a los platos finales se sentirá
-    fluida.
-  visual_hint: 🍧⚡
-  cloze:
-  - 5
-  - 11
-  glossary:
-  - word: shave off
-    meaning: recortar / reducir sutilmente
-    ipa: ʃeɪv ɔːf
-- id: emulsion-stability
-  text: Mounting the jus withcultured whey butter kept the emulsion glossy right to the table.
-  translation: Montar el jugo con mantequilla de suero mantuvo la emulsión brillante hasta la mesa.
-  visual_hint: 🥄✨
-  cloze:
-  - 4
-  - 9
-  glossary:
-  - word: glossy
-    meaning: brillante / satinada
-    ipa: ˈɡlɔːsi
-- id: brigade-morale
-  text: Precision without shouting is what sets a world-class brigade apart.
-  translation: La precisión sin gritos es lo que distingue a una brigada de clase mundial.
-  visual_hint: 🤝🌟
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: sets apart
-    meaning: distingue / diferencia
-    ipa: sets əˈpɑːrt
 - id: in-the-weeds
   text: We were in the weeds during the second seating.
-  translation: 'Estábamos desbordados durante el segundo turno. (in the weeds: desbordado de trabajo)'
+  translation: 'Estábamos desbordados durante el segundo turno. (in the weeds: desbordado
+    de trabajo)'
   visual_hint: 👨‍🍳🌿
   cloze:
   - 3
@@ -90,7 +62,8 @@ phrases:
   apply_translation: Con tres plazos, estoy completamente desbordado esta semana.
 - id: hit-the-ground-running
   text: New cooks need to hit the ground running here.
-  translation: Los cocineros nuevos deben arrancar a toda marcha aquí. (hit the ground running)
+  translation: Los cocineros nuevos deben arrancar a toda marcha aquí. (hit the ground
+    running)
   visual_hint: 🏃‍♂️⭐
   cloze:
   - 3
@@ -102,39 +75,51 @@ phrases:
   kind: idiom
   apply_sentence: The new manager had to ____ on day one.
   apply_answer: hit the ground running
-  apply_translation: La nueva gerente tuvo que arrancar a toda marcha desde el primer día.
+  apply_translation: La nueva gerente tuvo que arrancar a toda marcha desde el primer
+    día.
 roleplay:
   ai_role: chef de cuisine
   user_role: visiting culinary director
   setting: Post-service debrief at the pass of a three-Michelin-star kitchen.
   turns:
   - speaker: ai
-    text: That was a 95-cover Saturday service. How did the workflow look from the pass?
+    text: That was a 95-cover Saturday service. How did the workflow look from the
+      pass?
   - speaker: user
     goal: Destaca la serenidad y el ritmo en el pase durante la hora punta.
     suggested_lines:
     - The cadence at the pass during the eight-o'clock rush was remarkably composed.
-    - Searing the squab on the plancha yielded an immaculate Maillard crust without gray banding.
+    - Searing the squab on the plancha yielded an immaculate Maillard crust without
+      gray banding.
   - speaker: ai
-    text: We redesigned the meat station layout last week. How did the squab plates come across?
+    text: We redesigned the meat station layout last week. How did the squab plates
+      come across?
   - speaker: user
     goal: Elogia el sellado del pichón y su punto exacto de cocción.
     suggested_lines:
-    - Searing the squab on the plancha yielded an immaculate Maillard crust without gray banding.
-    - Lacto-fermenting the root trimmings into a glaze is a masterclass in zero-waste gastronomy.
+    - Searing the squab on the plancha yielded an immaculate Maillard crust without
+      gray banding.
+    - Lacto-fermenting the root trimmings into a glaze is a masterclass in zero-waste
+      gastronomy.
   - speaker: ai
-    text: Our saucier has been turning all our root vegetable trimmings into the reduction glaze.
+    text: Our saucier has been turning all our root vegetable trimmings into the reduction
+      glaze.
   - speaker: user
     goal: Resalta el aprovechamiento de mermas mediante lactofermentación.
     suggested_lines:
-    - Lacto-fermenting the root trimmings into a glaze is a masterclass in zero-waste gastronomy.
-    - If we shave ninety seconds off the palate cleanser, the transition to savory finals will feel effortless.
+    - Lacto-fermenting the root trimmings into a glaze is a masterclass in zero-waste
+      gastronomy.
+    - If we shave ninety seconds off the palate cleanser, the transition to savory
+      finals will feel effortless.
   - speaker: ai
-    text: Was there any bottleneck in the tasting progression that we should refine for tomorrow?
+    text: Was there any bottleneck in the tasting progression that we should refine
+      for tomorrow?
   - speaker: user
     goal: Sugiere acortar noventa segundos la pausa antes del plato fuerte final.
     suggested_lines:
-    - If we shave ninety seconds off the palate cleanser, the transition to savory finals will feel effortless.
-    - Mounting the jus withcultured whey butter kept the emulsion glossy right to the table.
+    - If we shave ninety seconds off the palate cleanser, the transition to savory
+      finals will feel effortless.
+    - Mounting the jus withcultured whey butter kept the emulsion glossy right to
+      the table.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

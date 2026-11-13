@@ -3,14 +3,14 @@ title: Coordinating an aviation weather diversion
 title_es: Coordinar desvío meteorológico de vuelo
 cefr: C2
 topic: travel-and-transport
-description: Toma decisiones rápidas con despacho de vuelo ante vientos cruzados severos, calculando combustible
-  de reserva y aeropuerto alterno.
+description: Toma decisiones rápidas con despacho de vuelo ante vientos cruzados severos,
+  calculando combustible de reserva y aeropuerto alterno.
 phrases:
 - id: crosswind-exceeds-limits
-  text: Crosswinds at Keflavik just exceeded thirty-five knots, so we should execute our alternate diversion to
-    Glasgow.
-  translation: Los vientos cruzados en Keflavik acaban de superar los treinta y cinco nudos, por lo que debemos
-    ejecutar el desvío alterno a Glasgow.
+  text: Crosswinds at Keflavik just exceeded thirty-five knots, so we should execute
+    our alternate diversion to Glasgow.
+  translation: Los vientos cruzados en Keflavik acaban de superar los treinta y cinco
+    nudos, por lo que debemos ejecutar el desvío alterno a Glasgow.
   visual_hint: ✈️🌩️
   cloze:
   - 5
@@ -20,9 +20,10 @@ phrases:
     meaning: superaron / excedieron
     ipa: ɪkˈsiːdɪd
 - id: holding-fuel-margin
-  text: Committing to the alternate now preserves a comfortable forty-five-minute holding fuel margin.
-  translation: Confirmar el alterno ahora preserva un margen cómodo de cuarenta y cinco minutos de combustible de
-    reserva.
+  text: Committing to the alternate now preserves a comfortable forty-five-minute
+    holding fuel margin.
+  translation: Confirmar el alterno ahora preserva un margen cómodo de cuarenta y
+    cinco minutos de combustible de reserva.
   visual_hint: ⛽🧭
   cloze:
   - 4
@@ -32,8 +33,10 @@ phrases:
     meaning: margen de seguridad
     ipa: ˈmɑːrdʒɪn
 - id: slot-and-ground-handling
-  text: Have our ground handlers in Glasgow secured a turnaround slot and customs standby?
-  translation: ¿Nuestro equipo de tierra en Glasgow ya aseguró turno de plataforma y aduana en espera?
+  text: Have our ground handlers in Glasgow secured a turnaround slot and customs
+    standby?
+  translation: ¿Nuestro equipo de tierra en Glasgow ya aseguró turno de plataforma
+    y aduana en espera?
   visual_hint: 🛬📋
   cloze:
   - 4
@@ -42,44 +45,10 @@ phrases:
   - word: turnaround slot
     meaning: franja operativa de escala
     ipa: ˈtɜːrnəraʊnd slɑːt
-- id: crew-duty-time-cap
-  text: Let's verify that a ninety-minute refuel stop won't push the flight deck past their statutory duty-time
-    cap.
-  translation: Verifiquemos que una escala de noventa minutos no lleve a la tripulación más allá del límite legal
-    de horas de servicio.
-  visual_hint: ⏱️👨‍✈️
-  cloze:
-  - 5
-  - 11
-  glossary:
-  - word: duty-time cap
-    meaning: límite legal de jornada de vuelo
-    ipa: ˈduːti taɪm kæp
-- id: passenger-briefing-cabin
-  text: Ask the purser to brief the cabin calmly once the new arrival estimate is locked.
-  translation: Pida al sobrecargo informar a la cabina con serenidad en cuanto se confirme la nueva hora estimada.
-  visual_hint: 🎙️💺
-  cloze:
-  - 5
-  - 10
-  glossary:
-  - word: purser
-    meaning: jefe de cabina / sobrecargo
-    ipa: ˈpɜːrsər
-- id: seamless-operational-call
-  text: Decisive call—safety margins and crew legality always take precedence.
-  translation: 'Decisión acertada: los márgenes de seguridad y la normativa de tripulación siempre tienen prioridad.'
-  visual_hint: 🛡️✅
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: take precedence
-    meaning: tener prioridad absoluta
-    ipa: teɪk ˈpresɪdəns
 - id: charter-err-on-caution
   text: The captain will err on the side of caution and divert.
-  translation: El capitán optará por la prudencia y se desviará. (err on the side of caution = ser prudente)
+  translation: El capitán optará por la prudencia y se desviará. (err on the side
+    of caution = ser prudente)
   visual_hint: 🛩️⛈️
   cloze:
   - 3
@@ -94,7 +63,8 @@ phrases:
   apply_translation: En una tormenta, es sensato ser prudente con la ruta.
 - id: charter-bite-the-bullet
   text: We have to bite the bullet and accept the diversion cost.
-  translation: Tenemos que apretar los dientes y aceptar el costo del desvío. (bite the bullet = afrontar algo difícil)
+  translation: Tenemos que apretar los dientes y aceptar el costo del desvío. (bite
+    the bullet = afrontar algo difícil)
   visual_hint: 💥💶
   cloze:
   - 3
@@ -113,18 +83,23 @@ roleplay:
   setting: Operations control center monitoring a transatlantic charter flight.
   turns:
   - speaker: ai
-    text: 'Operations update: Keflavik runway 28 is reporting severe wind shear and braking action poor.'
+    text: 'Operations update: Keflavik runway 28 is reporting severe wind shear and
+      braking action poor.'
   - speaker: user
     goal: Propón activar el desvío al aeropuerto alterno de Glasgow por vientos cruzados.
     suggested_lines:
-    - Crosswinds at Keflavik just exceeded thirty-five knots, so we should execute our alternate diversion to Glasgow.
-    - Committing to the alternate now preserves a comfortable forty-five-minute holding fuel margin.
+    - Crosswinds at Keflavik just exceeded thirty-five knots, so we should execute
+      our alternate diversion to Glasgow.
+    - Committing to the alternate now preserves a comfortable forty-five-minute holding
+      fuel margin.
   - speaker: ai
-    text: The captain concurs—staying in the holding stack much longer will eat into contingency fuel.
+    text: The captain concurs—staying in the holding stack much longer will eat into
+      contingency fuel.
   - speaker: user
     goal: Destaca que desviar ahora mantiene intacto el margen de 45 minutos de reserva.
     suggested_lines:
-    - Committing to the alternate now preserves a comfortable forty-five-minute holding fuel margin.
+    - Committing to the alternate now preserves a comfortable forty-five-minute holding
+      fuel margin.
     - Have our ground handlers in Glasgow secured a turnaround slot and customs standby?
   - speaker: ai
     text: I'm filing the amended flight plan with Eurocontrol right now.
@@ -132,13 +107,16 @@ roleplay:
     goal: Pregunta si el personal de tierra en Glasgow aseguró plataforma y aduana.
     suggested_lines:
     - Have our ground handlers in Glasgow secured a turnaround slot and customs standby?
-    - Let's verify that a ninety-minute refuel stop won't push the flight deck past their statutory duty-time cap.
+    - Let's verify that a ninety-minute refuel stop won't push the flight deck past
+      their statutory duty-time cap.
   - speaker: ai
     text: Glasgow FBO confirmed apron parking and rapid refueling on arrival.
   - speaker: user
-    goal: Pide verificar que la escala no exceda el límite legal de jornada de los pilotos.
+    goal: Pide verificar que la escala no exceda el límite legal de jornada de los
+      pilotos.
     suggested_lines:
-    - Let's verify that a ninety-minute refuel stop won't push the flight deck past their statutory duty-time cap.
+    - Let's verify that a ninety-minute refuel stop won't push the flight deck past
+      their statutory duty-time cap.
     - Ask the purser to brief the cabin calmly once the new arrival estimate is locked.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

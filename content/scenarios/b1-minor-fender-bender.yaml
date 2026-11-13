@@ -3,8 +3,8 @@ title: Handling a minor parking lot bump
 title_es: Intercambiar datos tras un choque leve
 cefr: B1
 topic: health-and-emergencies
-description: Mantén la calma tras un roce leve en un estacionamiento, verifica que todos estén bien y toma fotos
-  del seguro.
+description: Mantén la calma tras un roce leve en un estacionamiento, verifica que
+  todos estén bien y toma fotos del seguro.
 phrases:
 - id: everyone-okay-in-car
   text: First of all, are you and your passengers completely okay?
@@ -18,8 +18,10 @@ phrases:
     meaning: antes que nada / lo primero
     ipa: fɜːrst əv ɔːl
 - id: just-a-paint-scrape
-  text: Everyone is fine, thank goodness—it looks like just a minor paint scrape on the corner bumper.
-  translation: Todos estamos bien, por suerte; parece solo un raspón leve de pintura en la esquina del parachoques.
+  text: Everyone is fine, thank goodness—it looks like just a minor paint scrape on
+    the corner bumper.
+  translation: Todos estamos bien, por suerte; parece solo un raspón leve de pintura
+    en la esquina del parachoques.
   visual_hint: 🔍🚙
   cloze:
   - 5
@@ -29,8 +31,10 @@ phrases:
     meaning: raspón / roce superficial
     ipa: skreɪp
 - id: exchange-insurance-details
-  text: Let's exchange photos of our driver's licenses, registration, and insurance cards.
-  translation: Intercambiemos fotos de nuestras licencias de conducir, registro y pólizas de seguro.
+  text: Let's exchange photos of our driver's licenses, registration, and insurance
+    cards.
+  translation: Intercambiemos fotos de nuestras licencias de conducir, registro y
+    pólizas de seguro.
   visual_hint: 🪪📸
   cloze:
   - 3
@@ -39,39 +43,6 @@ phrases:
   - word: exchange
     meaning: intercambiar
     ipa: ɪksˈtʃeɪndʒ
-- id: take-wide-angle-photos
-  text: I'll also take a few wide photos of both cars' positions for the rental agency's report.
-  translation: También tomaré unas fotos amplias de ambos autos para el reporte de la agencia de alquiler.
-  visual_hint: 📱🚗
-  cloze:
-  - 5
-  - 10
-  glossary:
-  - word: positions
-    meaning: posiciones / ubicación
-    ipa: pəˈzɪʃənz
-- id: no-need-for-ambulance
-  text: Since nobody is injured and both cars drive fine, we can file the claim online.
-  translation: Como nadie está herido y ambos autos circulan bien, podemos subir el reporte en línea.
-  visual_hint: 💻✅
-  cloze:
-  - 5
-  - 10
-  glossary:
-  - word: injured
-    meaning: herido / lesionado
-    ipa: ˈɪndʒərd
-- id: drive-safely-home
-  text: Thanks for handling this so calmly and politely—drive safely!
-  translation: Gracias por manejar esto con tanta calma y cortesía; ¡buen viaje!
-  visual_hint: 🙏🛣️
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: calmly
-    meaning: con calma
-    ipa: ˈkɑːmli
 - id: idm-no-harm-done-b1
   text: Nobody is hurt, so no harm done, right?
   translation: Nadie está herido, así que no pasó nada grave, ¿verdad? (no harm done)
@@ -113,27 +84,33 @@ roleplay:
     goal: Pregunta primero si el otro conductor y sus pasajeros están bien.
     suggested_lines:
     - First of all, are you and your passengers completely okay?
-    - Everyone is fine, thank goodness—it looks like just a minor paint scrape on the corner bumper.
+    - Everyone is fine, thank goodness—it looks like just a minor paint scrape on
+      the corner bumper.
   - speaker: ai
     text: Yes, we're fine! We were only moving at five miles an hour.
   - speaker: user
     goal: Tranquiliza al conductor indicando que solo es un raspón leve en el parachoques.
     suggested_lines:
-    - Everyone is fine, thank goodness—it looks like just a minor paint scrape on the corner bumper.
-    - Let's exchange photos of our driver's licenses, registration, and insurance cards.
+    - Everyone is fine, thank goodness—it looks like just a minor paint scrape on
+      the corner bumper.
+    - Let's exchange photos of our driver's licenses, registration, and insurance
+      cards.
   - speaker: ai
     text: Let's pull into these two empty spaces so we aren't blocking the lane.
   - speaker: user
     goal: Propón intercambiar fotos de licencias, registro y seguro.
     suggested_lines:
-    - Let's exchange photos of our driver's licenses, registration, and insurance cards.
-    - I'll also take a few wide photos of both cars' positions for the rental agency's report.
+    - Let's exchange photos of our driver's licenses, registration, and insurance
+      cards.
+    - I'll also take a few wide photos of both cars' positions for the rental agency's
+      report.
   - speaker: ai
     text: Here is my insurance card and phone number—feel free to snap a photo.
   - speaker: user
     goal: Toma fotos amplias de ambos autos para el reporte de la agencia.
     suggested_lines:
-    - I'll also take a few wide photos of both cars' positions for the rental agency's report.
+    - I'll also take a few wide photos of both cars' positions for the rental agency's
+      report.
     - Since nobody is injured and both cars drive fine, we can file the claim online.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

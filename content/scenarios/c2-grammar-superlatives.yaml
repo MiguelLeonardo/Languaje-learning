@@ -1,0 +1,91 @@
+id: c2-grammar-superlatives
+title: Mastery superlatives and absolute expressions
+title_es: Superlativos de maestría y expresiones absolutas
+cefr: C2
+topic: grammar-and-connectors
+description: 'Expresa el grado superlativo con elegancia idiomática: ''par excellence'',
+  ''the epitome of'', ''beyond compare'' y ''in the extreme''.'
+phrases:
+- id: epitome-of-diplomacy
+  text: Her speech was the epitome of tactful diplomacy.
+  translation: Su discurso fue la quintaesencia de la diplomacia discreta.
+  visual_hint: 🕊️🎤
+  cloze:
+  - 4
+  glossary:
+  - word: the epitome of
+    meaning: la personificación / el colmo de
+    ipa: ði ɪˈpɪtəmi əv
+  kind: expression
+  apply_sentence: That courtyard garden is ____ tranquility.
+  apply_answer: the epitome of
+  apply_translation: Ese jardín interior es la personificación de la tranquilidad.
+- id: craftsmanship-beyond-compare
+  text: The violin's resonance is a marvel of craftsmanship beyond compare.
+  translation: La resonancia del violín es una maravilla de artesanía incomparable.
+  visual_hint: 🎻✨
+  cloze:
+  - 8
+  - 9
+  glossary:
+  - word: beyond compare
+    meaning: incomparable / sin parangón
+    ipa: bɪˈjɑːnd kəmˈper
+  kind: idiom
+  apply_sentence: The view from the alpine ridge is ____.
+  apply_answer: beyond compare
+  apply_translation: La vista desde la cresta alpina es incomparable.
+- id: par-excellence-storyteller
+  text: She remains a courtroom storyteller par excellence.
+  translation: Sigue siendo una narradora de tribunales por excelencia.
+  visual_hint: ⚖️📖
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: par excellence
+    meaning: por excelencia / insuperable
+    ipa: pɑːr ˌeksəˈlɑːns
+- id: simplistic-in-the-extreme
+  text: Reducing the crisis to a single cause is simplistic in the extreme.
+  translation: Reducir la crisis a una sola causa es simplista hasta el extremo.
+  visual_hint: 🧩⚠️
+  cloze:
+  - 9
+  - 11
+  glossary:
+  - word: in the extreme
+    meaning: en grado sumo / hasta el extremo
+    ipa: ɪn ði ɪkˈstriːm
+- id: very-least-acknowledge
+  text: The very least we can do is acknowledge their dissent.
+  translation: Lo mínimo que podemos hacer es reconocer su disenso.
+  visual_hint: 🤝💬
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: the very least
+    meaning: lo más mínimo
+    ipa: ðə ˈveri liːst
+roleplay:
+  ai_role: museum curator
+  user_role: art historian
+  setting: Previewing a retrospective exhibition before opening night.
+  turns:
+  - speaker: ai
+    text: What draws you most to this late-period portrait?
+  - speaker: user
+    goal: Elogia la obra usando 'the epitome of' o 'beyond compare'.
+    suggested_lines:
+    - The brushwork is a study in restraint beyond compare.
+    - It is the epitome of quiet psychological depth.
+  - speaker: ai
+    text: Some reviewers dismiss his early sketches as minor footnotes.
+  - speaker: user
+    goal: Rebate esa idea usando 'in the extreme' o 'the very least'.
+    suggested_lines:
+    - Dismissing those sketches is shortsighted in the extreme.
+    - The very least they deserve is a dedicated gallery wall.
+  - speaker: ai
+    text: Well said—I'm glad we included them in the main hall.

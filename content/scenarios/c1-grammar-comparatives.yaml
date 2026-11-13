@@ -1,0 +1,98 @@
+id: c1-grammar-comparatives
+title: High-register and idiomatic comparisons
+title_es: Comparaciones de alto registro e idiomáticas
+cefr: C1
+topic: grammar-and-connectors
+description: Formula comparaciones precisas y persuasivas con 'every bit as', 'pale
+  in comparison', 'considerably more' e 'infinitely preferable'.
+phrases:
+- id: every-bit-as-vital
+  text: Retention is every bit as vital as customer acquisition.
+  translation: La retención es exactamente igual de vital que la captación de clientes.
+  visual_hint: 🔄📊
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: every bit as ... as
+    meaning: exactamente igual de ... que
+    ipa: ˈevri bɪt æz
+  kind: idiom
+  apply_sentence: The sequel is ____ as gripping as the original film.
+  apply_answer: every bit
+  apply_translation: La secuela es exactamente igual de apasionante que la película
+    original.
+- id: pale-in-comparison
+  text: Minor savings pale in comparison to the long-term risk.
+  translation: Los ahorros menores palidecen en comparación con el riesgo a largo
+    plazo.
+  visual_hint: ⚖️⚠️
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: pale in comparison
+    meaning: palidecer en comparación
+    ipa: peɪl ɪn kəmˈpærɪsən
+  kind: idiom
+  apply_sentence: Yesterday's delays ____ in comparison to last winter's shutdown.
+  apply_answer: pale
+  apply_translation: Los retrasos de ayer palidecen en comparación con el cierre del
+    invierno pasado.
+- id: infinitely-preferable-compromise
+  text: A mediated settlement is infinitely preferable to litigation.
+  translation: Un acuerdo mediado es infinitamente preferible a un litigio.
+  visual_hint: 🤝⚖️
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: infinitely preferable
+    meaning: infinitamente preferible
+    ipa: ˈɪnfɪnətli ˈprefərəbəl
+- id: considerably-more-nuanced
+  text: Her analysis was considerably more nuanced than the brief.
+  translation: Su análisis fue considerablemente más matizado que el resumen.
+  visual_hint: 📝🔍
+  cloze:
+  - 3
+  - 5
+  glossary:
+  - word: considerably
+    meaning: considerablemente
+    ipa: kənˈsɪdərəbli
+  - word: nuanced
+    meaning: matizado / sutil
+    ipa: ˈnuːɑːnst
+- id: all-the-less-convincing
+  text: The argument is all the less convincing without empirical data.
+  translation: El argumento resulta tanto menos convincente sin datos empíricos.
+  visual_hint: 📉📑
+  cloze:
+  - 3
+  - 5
+  glossary:
+  - word: all the less
+    meaning: tanto menos / aún menos
+    ipa: ɔːl ðə les
+roleplay:
+  ai_role: legal counsel
+  user_role: senior partner
+  setting: Evaluating dispute resolution strategies in a boardroom.
+  turns:
+  - speaker: ai
+    text: Should we prepare for court, or push for mediation first?
+  - speaker: user
+    goal: Defiende la mediación usando 'infinitely preferable' o 'pale in comparison'.
+    suggested_lines:
+    - A mediated settlement is infinitely preferable to litigation.
+    - Legal fees pale in comparison to the reputational damage of a trial.
+  - speaker: ai
+    text: True, though the other side expects strict confidentiality.
+  - speaker: user
+    goal: Compara prioridades usando 'every bit as' o 'considerably more'.
+    suggested_lines:
+    - Confidentiality is every bit as vital as speed in this deal.
+    - Mediation is considerably more flexible than a public hearing.
+  - speaker: ai
+    text: Agreed. I will draft the mediation proposal today.

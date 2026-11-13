@@ -3,12 +3,14 @@ title: Navigating a national rail strike
 title_es: Reorganizar ruta durante huelga ferroviaria
 cefr: C1
 topic: travel-and-transport
-description: Coordina en ventanilla internacional una ruta alternativa combinando tren de servicio mínimo y autobús
-  transfronterizo.
+description: Coordina en ventanilla internacional una ruta alternativa combinando
+  tren de servicio mínimo y autobús transfronterizo.
 phrases:
 - id: guaranteed-minimum-service
-  text: Which cross-border trains are operating under the mandatory minimum-service schedule today?
-  translation: ¿Qué trenes transfronterizos están operando hoy bajo el horario obligatorio de servicios mínimos?
+  text: Which cross-border trains are operating under the mandatory minimum-service
+    schedule today?
+  translation: ¿Qué trenes transfronterizos están operando hoy bajo el horario obligatorio
+    de servicios mínimos?
   visual_hint: 🚄📋
   cloze:
   - 3
@@ -18,8 +20,10 @@ phrases:
     meaning: obligatorio
     ipa: ˈmændətɔːri
 - id: reroute-via-geneva
-  text: If the Lyon corridor is shut, could we route through Geneva and connect to the Swiss network?
-  translation: Si el corredor de Lyon está cerrado, ¿podríamos ir vía Ginebra y conectar con la red suiza?
+  text: If the Lyon corridor is shut, could we route through Geneva and connect to
+    the Swiss network?
+  translation: Si el corredor de Lyon está cerrado, ¿podríamos ir vía Ginebra y conectar
+    con la red suiza?
   visual_hint: 🗺️🇨🇭
   cloze:
   - 5
@@ -29,8 +33,10 @@ phrases:
     meaning: corredor ferroviario
     ipa: ˈkɔːrɪdɔːr
 - id: cross-honor-rail-ticket
-  text: Will the Swiss operator cross-honor our existing first-class Eurail reservation without a supplement?
-  translation: ¿El operador suizo aceptará nuestra reserva actual de primera clase sin cobrar suplemento?
+  text: Will the Swiss operator cross-honor our existing first-class Eurail reservation
+    without a supplement?
+  translation: ¿El operador suizo aceptará nuestra reserva actual de primera clase
+    sin cobrar suplemento?
   visual_hint: 🎫🤝
   cloze:
   - 4
@@ -39,42 +45,10 @@ phrases:
   - word: cross-honor
     meaning: reconocer boletos entre operadores
     ipa: krɔːs ˈɑːnər
-- id: issue-control-coupon
-  text: Please print the strike-rerouting endorsement slip so the onboard inspector sees the authorization.
-  translation: Por favor imprima el volante de reubicación por huelga para que el inspector a bordo vea la autorización.
-  visual_hint: 🖨️✅
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: endorsement slip
-    meaning: comprobante de endoso / autorización
-    ipa: ɪnˈdɔːrsmənt slɪp
-- id: coach-transfer-fallback
-  text: If the afternoon connection slips, is there an express coach running from the border station?
-  translation: Si falla la conexión de la tarde, ¿hay algún autobús expreso desde la estación fronteriza?
-  visual_hint: 🚌🔄
-  cloze:
-  - 5
-  - 10
-  glossary:
-  - word: slips
-    meaning: se retrasa / falla
-    ipa: slɪps
-- id: grateful-for-quick-thinking
-  text: That Geneva workaround saves our entire conference trip—thank you!
-  translation: Esa alternativa por Ginebra salva todo nuestro viaje al congreso; ¡gracias!
-  visual_hint: 🙌🚆
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: workaround
-    meaning: solución alternativa
-    ipa: ˈwɜːrkəraʊnd
 - id: strike-think-on-feet
   text: With the strike, you have to think on your feet.
-  translation: Con la huelga, hay que pensar rápido y improvisar. (think on your feet = reaccionar rápido)
+  translation: Con la huelga, hay que pensar rápido y improvisar. (think on your feet
+    = reaccionar rápido)
   visual_hint: 🧠🚆
   cloze:
   - 3
@@ -86,11 +60,12 @@ phrases:
   kind: idiom
   apply_sentence: A good guide can ____ when a road closes unexpectedly.
   apply_answer: think on their feet
-  apply_translation: Un buen guía sabe reaccionar rápido cuando una carretera se cierra inesperadamente.
+  apply_translation: Un buen guía sabe reaccionar rápido cuando una carretera se cierra
+    inesperadamente.
 - id: strike-back-to-square-one
   text: Our route via Geneva failed, so we are back to square one.
-  translation: Nuestra ruta por Ginebra falló, así que volvimos al punto de partida. (back to square one = empezar
-    de nuevo)
+  translation: Nuestra ruta por Ginebra falló, así que volvimos al punto de partida.
+    (back to square one = empezar de nuevo)
   visual_hint: 🔙🚧
   cloze:
   - 4
@@ -102,39 +77,52 @@ phrases:
   kind: idiom
   apply_sentence: The canceled flight sent us ____ with our travel plans.
   apply_answer: back to square one
-  apply_translation: El vuelo cancelado nos devolvió al punto de partida con nuestros planes de viaje.
+  apply_translation: El vuelo cancelado nos devolvió al punto de partida con nuestros
+    planes de viaje.
 roleplay:
   ai_role: international rail agent
   user_role: business traveler
   setting: Central station international travel center during a 24-hour strike.
   turns:
   - speaker: ai
-    text: Good morning. As you know, only one in three high-speed trains is running today due to the strike.
+    text: Good morning. As you know, only one in three high-speed trains is running
+      today due to the strike.
   - speaker: user
-    goal: Pregunta qué trenes internacionales operan bajo el horario de servicios mínimos.
+    goal: Pregunta qué trenes internacionales operan bajo el horario de servicios
+      mínimos.
     suggested_lines:
-    - Which cross-border trains are operating under the mandatory minimum-service schedule today?
-    - If the Lyon corridor is shut, could we route through Geneva and connect to the Swiss network?
+    - Which cross-border trains are operating under the mandatory minimum-service
+      schedule today?
+    - If the Lyon corridor is shut, could we route through Geneva and connect to the
+      Swiss network?
   - speaker: ai
-    text: The 10:40 to Milan via Lyon is canceled, but the Swiss border line remains open.
+    text: The 10:40 to Milan via Lyon is canceled, but the Swiss border line remains
+      open.
   - speaker: user
     goal: Propón desviar la ruta vía Ginebra para conectar con la red suiza.
     suggested_lines:
-    - If the Lyon corridor is shut, could we route through Geneva and connect to the Swiss network?
-    - Will the Swiss operator cross-honor our existing first-class Eurail reservation without a supplement?
+    - If the Lyon corridor is shut, could we route through Geneva and connect to the
+      Swiss network?
+    - Will the Swiss operator cross-honor our existing first-class Eurail reservation
+      without a supplement?
   - speaker: ai
     text: Routing via Geneva gets you into Milan only ninety minutes later than planned!
   - speaker: user
     goal: Pregunta si el operador suizo aceptará el boleto actual sin suplemento.
     suggested_lines:
-    - Will the Swiss operator cross-honor our existing first-class Eurail reservation without a supplement?
-    - Please print the strike-rerouting endorsement slip so the onboard inspector sees the authorization.
+    - Will the Swiss operator cross-honor our existing first-class Eurail reservation
+      without a supplement?
+    - Please print the strike-rerouting endorsement slip so the onboard inspector
+      sees the authorization.
   - speaker: ai
-    text: Yes, we have a reciprocal disruption agreement with SBB today—no supplement required.
+    text: Yes, we have a reciprocal disruption agreement with SBB today—no supplement
+      required.
   - speaker: user
     goal: Pide imprimir el comprobante de autorización para mostrarlo al inspector.
     suggested_lines:
-    - Please print the strike-rerouting endorsement slip so the onboard inspector sees the authorization.
-    - If the afternoon connection slips, is there an express coach running from the border station?
+    - Please print the strike-rerouting endorsement slip so the onboard inspector
+      sees the authorization.
+    - If the afternoon connection slips, is there an express coach running from the
+      border station?
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

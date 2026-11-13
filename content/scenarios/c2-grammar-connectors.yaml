@@ -1,0 +1,96 @@
+id: c2-grammar-connectors
+title: Nuanced concessive and logical linkers
+title_es: Conectores concesivos y lógicos de alta precisión
+cefr: C2
+topic: grammar-and-connectors
+description: Conecta argumentos complejos con 'be that as it may', 'much as', 'by
+  the same token', 'insofar as' y 'thereby'.
+phrases:
+- id: be-that-as-it-may
+  text: Be that as it may, the deadline remains non-negotiable.
+  translation: Sea como fuere, el plazo sigue siendo innegociable.
+  visual_hint: 📆⚖️
+  cloze:
+  - 0
+  - 4
+  glossary:
+  - word: be that as it may
+    meaning: sea como fuere / aun así
+    ipa: biː ðæt æz ɪt meɪ
+  kind: idiom
+  apply_sentence: The budget is tight; ____, we cannot compromise on safety.
+  apply_answer: be that as it may
+  apply_translation: El presupuesto es ajustado; sea como fuere, no podemos comprometer
+    la seguridad.
+- id: much-as-i-admire
+  text: Much as I admire his ambition, the timeline is untenable.
+  translation: Por mucho que admire su ambición, el cronograma es insostenible.
+  visual_hint: ⏳🤔
+  cloze:
+  - 0
+  - 3
+  glossary:
+  - word: much as
+    meaning: por mucho que
+    ipa: mʌtʃ æz
+  - word: untenable
+    meaning: insostenible
+    ipa: ʌnˈtenəbəl
+  kind: expression
+  apply_sentence: ____ I would love to attend, I have prior commitments.
+  apply_answer: Much as
+  apply_translation: Por mucho que me encantaría asistir, tengo compromisos previos.
+- id: by-the-same-token
+  text: Autonomy fosters ownership; by the same token, it demands accountability.
+  translation: La autonomía fomenta el compromiso; del mismo modo, exige responsabilidad.
+  visual_hint: ⚖️🔑
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: by the same token
+    meaning: del mismo modo / por la misma razón
+    ipa: baɪ ðə seɪm ˈtoʊkən
+- id: insofar-as-protects
+  text: The treaty is binding insofar as it governs cross-border trade.
+  translation: El tratado es vinculante en la medida en que regula el comercio transfronterizo.
+  visual_hint: 🌐📜
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: insofar as
+    meaning: en la medida en que
+    ipa: ˌɪnsoʊˈfɑːr æz
+- id: thereby-eliminating-bottleneck
+  text: They decentralized approvals, thereby eliminating the main bottleneck.
+  translation: Descentralizaron las aprobaciones, eliminando así el principal cuello
+    de botella.
+  visual_hint: 🔀🚀
+  cloze:
+  - 3
+  glossary:
+  - word: thereby
+    meaning: así / de ese modo (+ -ing)
+    ipa: ˌðerˈbaɪ
+roleplay:
+  ai_role: dean of faculty
+  user_role: department chair
+  setting: Debating a curriculum overhaul in a university senate.
+  turns:
+  - speaker: ai
+    text: Faculty worry that interdisciplinary tracks might dilute core rigor.
+  - speaker: user
+    goal: Concede el punto y matiza usando 'Much as' o 'insofar as'.
+    suggested_lines:
+    - Much as I respect that concern, core seminars remain mandatory.
+    - The concern holds insofar as electives lack clear prerequisites.
+  - speaker: ai
+    text: Still, we have very little time before the fall catalog prints.
+  - speaker: user
+    goal: Cierra el argumento con 'Be that as it may' o 'by the same token'.
+    suggested_lines:
+    - Be that as it may, delaying another year would hurt enrollment.
+    - By the same token, approving the pilot now lets us iterate early.
+  - speaker: ai
+    text: You make a persuasive case. Let's put the pilot to a vote.

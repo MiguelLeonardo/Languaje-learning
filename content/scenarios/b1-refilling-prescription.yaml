@@ -3,12 +3,14 @@ title: Replacing lost medication while traveling
 title_es: Solicitar reposición de receta médica en viaje
 cefr: B1
 topic: health-and-emergencies
-description: Explica en una clínica de viajeros que tu equipaje con tu medicamento para la presión se extravió y
-  muestras la foto de tu receta.
+description: Explica en una clínica de viajeros que tu equipaje con tu medicamento
+  para la presión se extravió y muestras la foto de tu receta.
 phrases:
 - id: airline-delayed-my-bag
-  text: Hello Doctor. The airline delayed my suitcase containing my daily blood pressure medication.
-  translation: Hola doctor. La aerolínea demoró mi maleta donde venía mi medicamento diario para la presión.
+  text: Hello Doctor. The airline delayed my suitcase containing my daily blood pressure
+    medication.
+  translation: Hola doctor. La aerolínea demoró mi maleta donde venía mi medicamento
+    diario para la presión.
   visual_hint: 🧳💊
   cloze:
   - 4
@@ -18,8 +20,10 @@ phrases:
     meaning: presión arterial
     ipa: blʌd ˈpreʃər
 - id: photo-of-prescription-label
-  text: I have a clear photo on my phone showing the generic ingredient name and ten-milligram dosage.
-  translation: Tengo una foto clara en mi teléfono que muestra el nombre genérico y la dosis de diez miligramos.
+  text: I have a clear photo on my phone showing the generic ingredient name and ten-milligram
+    dosage.
+  translation: Tengo una foto clara en mi teléfono que muestra el nombre genérico
+    y la dosis de diez miligramos.
   visual_hint: 📱🔍
   cloze:
   - 5
@@ -29,8 +33,10 @@ phrases:
     meaning: dosis
     ipa: ˈdoʊsɪdʒ
 - id: two-week-supply-enough
-  text: I only need a fourteen-day supply to cover the rest of my trip until I fly home.
-  translation: Solo necesito suministro para catorce días para cubrir el resto de mi viaje hasta regresar a casa.
+  text: I only need a fourteen-day supply to cover the rest of my trip until I fly
+    home.
+  translation: Solo necesito suministro para catorce días para cubrir el resto de
+    mi viaje hasta regresar a casa.
   visual_hint: 🗓️✈️
   cloze:
   - 5
@@ -39,42 +45,10 @@ phrases:
   - word: supply
     meaning: suministro / cantidad de pastillas
     ipa: səˈplaɪ
-- id: fill-at-pharmacy-next-door
-  text: Can I take this local prescription straight to the pharmacy next door?
-  translation: ¿Puedo llevar esta receta local directamente a la farmacia de al lado?
-  visual_hint: 🏥➡️
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: next door
-    meaning: de al lado / contigua
-    ipa: nekst dɔːr
-- id: take-every-morning-breakfast
-  text: My blood pressure is 120 over 80—I take one tablet every morning with breakfast.
-  translation: Mi presión está en 120 sobre 80; tomo una pastilla cada mañana con el desayuno.
-  visual_hint: 🩺🥐
-  cloze:
-  - 4
-  - 9
-  glossary:
-  - word: tablet
-    meaning: comprimido / pastilla
-    ipa: ˈtæblət
-- id: keep-meds-in-carryon
-  text: From now on, I'll always pack my essential medications in my carry-on backpack!
-  translation: De ahora en adelante, ¡siempre llevaré mis medicamentos esenciales en la mochila de mano!
-  visual_hint: 🎒✅
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: essential
-    meaning: esenciales / indispensables
-    ipa: ɪˈsenʃəl
 - id: idm-lose-track-of-b1
   text: I always lose track of my pills when I travel.
-  translation: Siempre pierdo la cuenta de mis pastillas cuando viajo. (lose track of = perder la cuenta)
+  translation: Siempre pierdo la cuenta de mis pastillas cuando viajo. (lose track
+    of = perder la cuenta)
   visual_hint: 💊🧳
   cloze:
   - 3
@@ -112,24 +86,31 @@ roleplay:
   - speaker: user
     goal: Explica que la aerolínea demoró tu maleta con tu medicamento para la presión.
     suggested_lines:
-    - Hello Doctor. The airline delayed my suitcase containing my daily blood pressure medication.
-    - I have a clear photo on my phone showing the generic ingredient name and ten-milligram dosage.
+    - Hello Doctor. The airline delayed my suitcase containing my daily blood pressure
+      medication.
+    - I have a clear photo on my phone showing the generic ingredient name and ten-milligram
+      dosage.
   - speaker: ai
-    text: Never skip blood pressure medication! Do you know the exact chemical name and dose?
+    text: Never skip blood pressure medication! Do you know the exact chemical name
+      and dose?
   - speaker: user
-    goal: Muestra en tu teléfono la foto con el ingrediente activo y la dosis de 10 mg.
+    goal: Muestra en tu teléfono la foto con el ingrediente activo y la dosis de 10
+      mg.
     suggested_lines:
-    - I have a clear photo on my phone showing the generic ingredient name and ten-milligram dosage.
+    - I have a clear photo on my phone showing the generic ingredient name and ten-milligram
+      dosage.
     - I only need a fourteen-day supply to cover the rest of my trip until I fly home.
   - speaker: ai
-    text: Amlodipine 10mg—that is widely available here under the exact same generic name.
+    text: Amlodipine 10mg—that is widely available here under the exact same generic
+      name.
   - speaker: user
     goal: Indica que solo necesitas suministro para catorce días hasta volver a casa.
     suggested_lines:
     - I only need a fourteen-day supply to cover the rest of my trip until I fly home.
     - Can I take this local prescription straight to the pharmacy next door?
   - speaker: ai
-    text: Let me check your blood pressure cuff reading quickly, and I'll write you a 14-day script.
+    text: Let me check your blood pressure cuff reading quickly, and I'll write you
+      a 14-day script.
   - speaker: user
     goal: Pregunta si puedes surtir esa receta en la farmacia de al lado.
     suggested_lines:

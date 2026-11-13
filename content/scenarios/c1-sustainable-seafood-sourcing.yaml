@@ -3,11 +3,13 @@ title: Inquiring about sustainable seafood
 title_es: Consultar sobre pesca sostenible y trazabilidad
 cefr: C1
 topic: food-and-drink
-description: Conversa con el chef de un restaurante costero sobre pesca de anzuelo, vedas y trazabilidad marina.
+description: Conversa con el chef de un restaurante costero sobre pesca de anzuelo,
+  vedas y trazabilidad marina.
 phrases:
 - id: line-caught-wild
   text: Is the halibut line-caught in local waters or sourced from offshore trawlers?
-  translation: ¿El fletán es pescado con anzuelo en aguas locales o proviene de arrastreros de altura?
+  translation: ¿El fletán es pescado con anzuelo en aguas locales o proviene de arrastreros
+    de altura?
   visual_hint: 🎣🐟
   cloze:
   - 4
@@ -18,7 +20,8 @@ phrases:
     ipa: laɪn kɔːt
 - id: bycatch-mitigation
   text: We try to support fisheries that actively minimize bycatch and seabed disruption.
-  translation: Intentamos apoyar pesquerías que minimizan activamente la captura incidental y el daño al fondo marino.
+  translation: Intentamos apoyar pesquerías que minimizan activamente la captura incidental
+    y el daño al fondo marino.
   visual_hint: 🌊🐢
   cloze:
   - 4
@@ -28,8 +31,10 @@ phrases:
     meaning: captura incidental
     ipa: ˈbaɪkætʃ
 - id: hand-harvested-scallops
-  text: Knowing the scallops are hand-harvested by divers makes the dish even more compelling.
-  translation: Saber que las vieiras son recolectadas a mano por buzos hace que el plato sea aún más atractivo.
+  text: Knowing the scallops are hand-harvested by divers makes the dish even more
+    compelling.
+  translation: Saber que las vieiras son recolectadas a mano por buzos hace que el
+    plato sea aún más atractivo.
   visual_hint: 🤿🐚
   cloze:
   - 4
@@ -38,43 +43,10 @@ phrases:
   - word: hand-harvested
     meaning: recolectadas a mano
     ipa: hænd ˈhɑːrvɪstɪd
-- id: traceability-qr-code
-  text: I love that your menu lists the vessel name and landing port for full traceability.
-  translation: Me encanta que su menú indique el nombre de la embarcación y el puerto de desembarque para total
-    trazabilidad.
-  visual_hint: ⚓📋
-  cloze:
-  - 5
-  - 10
-  glossary:
-  - word: traceability
-    meaning: trazabilidad
-    ipa: ˌtreɪsəˈbɪləti
-- id: in-season-oysters
-  text: Which of the cold-water oysters has the cleanest briny finish tonight?
-  translation: ¿Cuál de las ostras de agua fría tiene el final salino más limpio esta noche?
-  visual_hint: 🦪🌊
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: briny
-    meaning: salino / sabor a mar
-    ipa: ˈbraɪni
-- id: underutilized-species
-  text: Highlighting underutilized fish species takes real pressure off overfished stocks.
-  translation: Destacar especies poco conocidas alivia la presión sobre las poblaciones sobreexplotadas.
-  visual_hint: 🐟♻️
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: underutilized
-    meaning: poco aprovechadas
-    ipa: ˌʌndərˈjuːtəlaɪzd
 - id: a-drop-in-the-ocean
   text: Our efforts are just a drop in the ocean, honestly.
-  translation: 'Nuestros esfuerzos son solo una gota en el océano, la verdad. (a drop in the ocean: muy poco)'
+  translation: 'Nuestros esfuerzos son solo una gota en el océano, la verdad. (a drop
+    in the ocean: muy poco)'
   visual_hint: 🌊💧
   cloze:
   - 3
@@ -89,7 +61,8 @@ phrases:
   apply_translation: Esas quejas eran solo una gota en el océano.
 - id: swimming-against-the-tide
   text: Sourcing only line-caught fish means swimming against the tide.
-  translation: 'Comprar solo pescado de línea es ir contracorriente. (swimming against the tide: ir contracorriente)'
+  translation: 'Comprar solo pescado de línea es ir contracorriente. (swimming against
+    the tide: ir contracorriente)'
   visual_hint: 🐟🌊
   cloze:
   - 3
@@ -129,7 +102,8 @@ roleplay:
     - Knowing the scallops are hand-harvested by divers makes the dish even more compelling.
     - I love that your menu lists the vessel name and landing port for full traceability.
   - speaker: ai
-    text: I'll fire an order of the diver scallops and halibut for your table right away!
+    text: I'll fire an order of the diver scallops and halibut for your table right
+      away!
   - speaker: user
     goal: Elogia la trazabilidad del menú indicando la embarcación y el puerto.
     suggested_lines:

@@ -3,11 +3,14 @@ title: Revalidating a missed train connection
 title_es: Validar boleto tras perder conexión de tren
 cefr: B1
 topic: travel-and-transport
-description: Explica al inspector que tu primer tren llegó con retraso y necesitas subir al siguiente tren sin recargo.
+description: Explica al inspector que tu primer tren llegó con retraso y necesitas
+  subir al siguiente tren sin recargo.
 phrases:
 - id: first-train-was-delayed
-  text: Excuse me, our incoming regional train was delayed by twenty minutes, so we missed our connection.
-  translation: Disculpe, nuestro tren regional llegó con veinte minutos de retraso, así que perdimos la conexión.
+  text: Excuse me, our incoming regional train was delayed by twenty minutes, so we
+    missed our connection.
+  translation: Disculpe, nuestro tren regional llegó con veinte minutos de retraso,
+    así que perdimos la conexión.
   visual_hint: 🚆⏱️
   cloze:
   - 5
@@ -18,7 +21,8 @@ phrases:
     ipa: ˈɪnkʌmɪŋ
 - id: stamp-ticket-for-next
   text: Can you endorse our tickets so we can board this 11:15 train without a penalty?
-  translation: ¿Puede sellar nuestros boletos para abordar este tren de las 11:15 sin penalización?
+  translation: ¿Puede sellar nuestros boletos para abordar este tren de las 11:15
+    sin penalización?
   visual_hint: 🎫🖋️
   cloze:
   - 5
@@ -28,8 +32,10 @@ phrases:
     meaning: sin multa / sin recargo
     ipa: wɪˈðaʊt ə ˈpenəlti
 - id: sit-in-unreserved-coach
-  text: Since our original seat reservations are gone, which coach has unreserved seating?
-  translation: Como perdimos nuestros asientos originales, ¿qué vagón tiene asientos sin reserva?
+  text: Since our original seat reservations are gone, which coach has unreserved
+    seating?
+  translation: Como perdimos nuestros asientos originales, ¿qué vagón tiene asientos
+    sin reserva?
   visual_hint: 💺🚃
   cloze:
   - 4
@@ -38,42 +44,10 @@ phrases:
   - word: unreserved
     meaning: sin reserva / libre
     ipa: ˌʌnrɪˈzɜːrvd
-- id: change-again-at-reading
-  text: Do we stay on this train all the way, or do we need to transfer again?
-  translation: ¿Nos quedamos en este tren todo el trayecto o debemos hacer transbordo otra vez?
-  visual_hint: 🔄🗺️
-  cloze:
-  - 5
-  - 10
-  glossary:
-  - word: all the way
-    meaning: todo el camino / directo
-    ipa: ɔːl ðə weɪ
-- id: delay-repay-compensation
-  text: Can we claim a partial refund online under the Delay Repay guarantee?
-  translation: ¿Podemos solicitar un reembolso parcial en línea por la garantía de retraso?
-  visual_hint: 💻💷
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: partial refund
-    meaning: reembolso parcial
-    ipa: ˈpɑːrʃəl ˈriːfʌnd
-- id: hop-on-before-whistle
-  text: Thank you so much! We'll board Coach E right now.
-  translation: ¡Muchísimas gracias! Subiremos al vagón E ahora mismo.
-  visual_hint: 🙌🚆
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: board
-    meaning: abordar / subir
-    ipa: bɔːrd
 - id: connection-cut-it-close
   text: We cut it close, and the first train was late.
-  translation: Lo dejamos muy justo, y el primer tren llegó tarde. (cut it close = ir muy justo de tiempo)
+  translation: Lo dejamos muy justo, y el primer tren llegó tarde. (cut it close =
+    ir muy justo de tiempo)
   visual_hint: ⏱️🚆
   cloze:
   - 3
@@ -100,7 +74,8 @@ phrases:
   kind: idiom
   apply_sentence: Sorry, our flight left early, so we didn't ____ home.
   apply_answer: make it
-  apply_translation: Lo siento, nuestro vuelo salió temprano, así que no logramos llegar a casa.
+  apply_translation: Lo siento, nuestro vuelo salió temprano, así que no logramos
+    llegar a casa.
 roleplay:
   ai_role: train conductor
   user_role: traveler
@@ -111,10 +86,12 @@ roleplay:
   - speaker: user
     goal: Explica que su primer tren se retrasó veinte minutos y perdieron la conexión.
     suggested_lines:
-    - Excuse me, our incoming regional train was delayed by twenty minutes, so we missed our connection.
+    - Excuse me, our incoming regional train was delayed by twenty minutes, so we
+      missed our connection.
     - Can you endorse our tickets so we can board this 11:15 train without a penalty?
   - speaker: ai
-    text: Let me check the delay log—yes, the regional service from Bath arrived eighteen minutes late.
+    text: Let me check the delay log—yes, the regional service from Bath arrived eighteen
+      minutes late.
   - speaker: user
     goal: Pregunta si puede validar sus boletos para subir a este tren sin multa.
     suggested_lines:

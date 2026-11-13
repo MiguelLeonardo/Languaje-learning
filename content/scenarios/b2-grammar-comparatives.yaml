@@ -1,0 +1,92 @@
+id: b2-grammar-comparatives
+title: Double comparatives and proportional structures
+title_es: Comparativos dobles y estructuras proporcionales
+cefr: B2
+topic: grammar-and-connectors
+description: Domina estructuras como 'the more... the better', 'nowhere near as...'
+  y 'all the more...' para argumentar.
+phrases:
+- id: the-sooner-the-better
+  text: The sooner we submit the proposal, the better.
+  translation: Cuanto antes enviemos la propuesta, mejor.
+  visual_hint: ⏳🚀
+  cloze:
+  - 1
+  - 7
+  glossary:
+  - word: the sooner, the better
+    meaning: cuanto antes, mejor
+    ipa: ðə ˈsuːnər ðə ˈbetər
+  kind: expression
+  apply_sentence: The more you practice speaking, ____ confident you feel.
+  apply_answer: the more
+  apply_translation: Cuanto más practicas hablar, más seguro te sientes.
+- id: nowhere-near-as-simple
+  text: Fixing the bug was nowhere near as simple as we thought.
+  translation: Arreglar el fallo no fue ni de lejos tan sencillo como pensábamos.
+  visual_hint: 🐛💻
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: nowhere near as
+    meaning: ni de lejos tan ... como
+    ipa: ˈnoʊwer nɪr æz
+  kind: expression
+  apply_sentence: This exam was ____ as hard as the mock test.
+  apply_answer: nowhere near
+  apply_translation: Este examen no fue ni de lejos tan difícil como el simulacro.
+- id: all-the-more-urgent
+  text: The delay makes clear communication all the more urgent.
+  translation: El retraso hace que la comunicación clara sea aún más urgente.
+  visual_hint: 📢⚡
+  cloze:
+  - 5
+  - 7
+  glossary:
+  - word: all the more
+    meaning: tanto más / aún más
+    ipa: ɔːl ðə mɔːr
+- id: twice-as-productive
+  text: With fewer meetings, the team is twice as productive.
+  translation: Con menos reuniones, el equipo es el doble de productivo.
+  visual_hint: 📅⚡
+  cloze:
+  - 6
+  - 8
+  glossary:
+  - word: twice as ... as
+    meaning: el doble de ... que
+    ipa: twaɪs æz
+- id: more-complex-than-appears
+  text: The tax rule is far more complex than it first appears.
+  translation: La norma fiscal es mucho más compleja de lo que parece a primera vista.
+  visual_hint: 📑🔍
+  cloze:
+  - 4
+  - 6
+  glossary:
+  - word: complex
+    meaning: complejo
+    ipa: ˈkɑːmpleks
+roleplay:
+  ai_role: project sponsor
+  user_role: engineering lead
+  setting: Discussing timeline risks in a quarterly planning meeting.
+  turns:
+  - speaker: ai
+    text: Can we wrap up the data migration by Friday?
+  - speaker: user
+    goal: Explica la dificultad usando 'nowhere near as' o 'far more complex'.
+    suggested_lines:
+    - The migration is nowhere near as simple as we hoped.
+    - The legacy schema is far more complex than it first appeared.
+  - speaker: ai
+    text: I see. When should we inform the stakeholders?
+  - speaker: user
+    goal: Responde usando 'the sooner, the better' o 'all the more'.
+    suggested_lines:
+    - The sooner we tell them, the better.
+    - This delay makes an early update all the more important.
+  - speaker: ai
+    text: Agreed. Let's send the update this afternoon.

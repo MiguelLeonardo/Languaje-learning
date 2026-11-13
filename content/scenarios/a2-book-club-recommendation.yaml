@@ -3,7 +3,8 @@ title: Recommending a book to a friend
 title_es: Recomendar un libro a un amigo
 cefr: A2
 topic: social-and-smalltalk
-description: Recomienda una novela de misterio que no pudiste soltar el fin de semana y ofrece prestársela.
+description: Recomienda una novela de misterio que no pudiste soltar el fin de semana
+  y ofrece prestársela.
 phrases:
 - id: finished-great-novel
   text: I just finished an amazing mystery novel last night—I couldn't put it down!
@@ -18,7 +19,8 @@ phrases:
     ipa: ˈkʊdənt pʊt ɪt daʊn
 - id: set-on-scottish-island
   text: It's set on a tiny island in Scotland during a winter storm.
-  translation: Está ambientada en una pequeña isla de Escocia durante una tormenta de invierno.
+  translation: Está ambientada en una pequeña isla de Escocia durante una tormenta
+    de invierno.
   visual_hint: 🏝️🌨️
   cloze:
   - 4
@@ -38,39 +40,6 @@ phrases:
   - word: twist
     meaning: giro inesperado en la trama
     ipa: twɪst
-- id: lend-you-my-copy
-  text: I have the paperback in my bag—you can borrow my copy right now!
-  translation: Traigo la edición de bolsillo en mi bolso; ¡te puedo prestar mi ejemplar ahora mismo!
-  visual_hint: 👜📚
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: borrow
-    meaning: tomar prestado
-    ipa: ˈbɑːroʊ
-- id: short-chapters-fast-read
-  text: The chapters are short, so it's super easy to read on the train.
-  translation: Los capítulos son cortos, así que es muy fácil de leer en el tren.
-  visual_hint: 🚆📖
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: chapters
-    meaning: capítulos
-    ipa: ˈtʃæptərz
-- id: tell-me-who-you-suspect
-  text: Text me when you reach Chapter 10 and tell me who you suspect!
-  translation: ¡Escríbeme cuando llegues al capítulo 10 y dime de quién sospechas!
-  visual_hint: 📱🕵️
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: suspect
-    meaning: sospechar
-    ipa: səˈspekt
 - id: idm-a2bc-page-turner
   text: This novel is a real page-turner. I read it in two days.
   translation: Esta novela es muy absorbente; la leí en dos días (libro que engancha).
@@ -107,7 +76,8 @@ roleplay:
   setting: Having tea on a rainy Sunday afternoon.
   turns:
   - speaker: ai
-    text: I'm looking for a new book to read on my train commute. Read anything good lately?
+    text: I'm looking for a new book to read on my train commute. Read anything good
+      lately?
   - speaker: user
     goal: Cuenta que anoche terminaste una novela de misterio que no podías soltar.
     suggested_lines:

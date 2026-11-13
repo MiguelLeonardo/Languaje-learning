@@ -3,12 +3,14 @@ title: Adjusting a coastal boat charter
 title_es: Ajustar ruta en barco por vientos fuertes
 cefr: B2
 topic: travel-and-transport
-description: Coordina con el capitán de un velero alquilado cambiar el recorrido hacia una bahía protegida del viento.
+description: Coordina con el capitán de un velero alquilado cambiar el recorrido hacia
+  una bahía protegida del viento.
 phrases:
 - id: sheltered-cove-route
-  text: Given the gusty afternoon forecast, would it be wiser to hug the sheltered southern coves?
-  translation: Dado el pronóstico de ráfagas por la tarde, ¿sería más prudente bordear las calas protegidas del
-    sur?
+  text: Given the gusty afternoon forecast, would it be wiser to hug the sheltered
+    southern coves?
+  translation: Dado el pronóstico de ráfagas por la tarde, ¿sería más prudente bordear
+    las calas protegidas del sur?
   visual_hint: ⛵🌬️
   cloze:
   - 5
@@ -18,8 +20,10 @@ phrases:
     meaning: protegidas / resguardadas
     ipa: ˈʃeltərd
 - id: avoid-choppy-swell
-  text: A couple of friends get seasick easily, so we'd love to avoid choppy open-water swell.
-  translation: Un par de amigos se marean fácilmente, así que preferimos evitar el oleaje picado de mar abierto.
+  text: A couple of friends get seasick easily, so we'd love to avoid choppy open-water
+    swell.
+  translation: Un par de amigos se marean fácilmente, así que preferimos evitar el
+    oleaje picado de mar abierto.
   visual_hint: 🌊🤢
   cloze:
   - 5
@@ -30,7 +34,8 @@ phrases:
     ipa: ˈtʃɑːpi
 - id: drop-anchor-for-swim
   text: Can we drop anchor in the turquoise bay around noon for snorkeling and lunch?
-  translation: ¿Podemos echar el ancla en la bahía turquesa al mediodía para hacer snorkel y almorzar?
+  translation: ¿Podemos echar el ancla en la bahía turquesa al mediodía para hacer
+    snorkel y almorzar?
   visual_hint: ⚓🤿
   cloze:
   - 4
@@ -39,42 +44,10 @@ phrases:
   - word: drop anchor
     meaning: echar el ancla / fondear
     ipa: drɑːp ˈæŋkər
-- id: head-back-before-dusk
-  text: Let's aim to dock back at the marina thirty minutes before sunset.
-  translation: Apuntemos a atracar de regreso en la marina treinta minutos antes del atardecer.
-  visual_hint: 🌅⚓
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: dock
-    meaning: atracar en el muelle
-    ipa: dɑːk
-- id: life-vest-briefing
-  text: Please give everyone a quick safety briefing before we cast off the lines.
-  translation: Por favor dé a todos una breve charla de seguridad antes de soltar amarras.
-  visual_hint: 🦺📢
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: cast off
-    meaning: soltar amarras / zarpar
-    ipa: kæst ɔːf
-- id: split-fuel-and-tip
-  text: We'll settle the fuel tab and crew gratuity as soon as we tie up.
-  translation: Liquidaremos el combustible y la propina de la tripulación en cuanto amarremos.
-  visual_hint: 💳🤝
-  cloze:
-  - 4
-  - 9
-  glossary:
-  - word: gratuity
-    meaning: propina
-    ipa: ɡrəˈtuːəti
 - id: harbor-go-with-the-flow
   text: If the swell grows, we will just go with the flow and adjust.
-  translation: Si el oleaje crece, simplemente nos adaptaremos y ajustaremos. (go with the flow = adaptarse)
+  translation: Si el oleaje crece, simplemente nos adaptaremos y ajustaremos. (go
+    with the flow = adaptarse)
   visual_hint: 🌊⛵
   cloze:
   - 4
@@ -89,7 +62,8 @@ phrases:
   apply_translation: En un viaje en barco, lo mejor es dejarse llevar y no estresarse.
 - id: harbor-steer-clear
   text: The captain wants to steer clear of the choppy water near the rocks.
-  translation: El capitán quiere evitar el agua picada cerca de las rocas. (steer clear of = evitar)
+  translation: El capitán quiere evitar el agua picada cerca de las rocas. (steer
+    clear of = evitar)
   visual_hint: 🚫🪨
   cloze:
   - 4
@@ -108,18 +82,22 @@ roleplay:
   setting: Marina dock before setting sail along the coast.
   turns:
   - speaker: ai
-    text: Morning! The breeze is picking up to twenty knots from the northwest this afternoon.
+    text: Morning! The breeze is picking up to twenty knots from the northwest this
+      afternoon.
   - speaker: user
     goal: Pregunta si conviene ir por las calas protegidas del sur ante el viento.
     suggested_lines:
-    - Given the gusty afternoon forecast, would it be wiser to hug the sheltered southern coves?
-    - A couple of friends get seasick easily, so we'd love to avoid choppy open-water swell.
+    - Given the gusty afternoon forecast, would it be wiser to hug the sheltered southern
+      coves?
+    - A couple of friends get seasick easily, so we'd love to avoid choppy open-water
+      swell.
   - speaker: ai
     text: Hugging the southern peninsula keeps us in flat water all day.
   - speaker: user
     goal: Explica que algunos amigos se marean y prefieren aguas tranquilas.
     suggested_lines:
-    - A couple of friends get seasick easily, so we'd love to avoid choppy open-water swell.
+    - A couple of friends get seasick easily, so we'd love to avoid choppy open-water
+      swell.
     - Can we drop anchor in the turquoise bay around noon for snorkeling and lunch?
   - speaker: ai
     text: That's a great plan—Blue Lagoon on the south side is crystal clear and calm.

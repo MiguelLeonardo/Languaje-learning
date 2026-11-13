@@ -1,0 +1,91 @@
+id: a1-daily-morning-routine
+title: Talking about a morning routine
+title_es: Hablar de la rutina de la mañana
+cefr: A1
+topic: daily-tech-and-media
+description: Describe a qué hora suena tu alarma y qué haces cada mañana en casa.
+phrases:
+- id: alarm-goes-off
+  text: My phone alarm rings at seven every morning.
+  translation: La alarma de mi teléfono suena a las siete cada mañana.
+  visual_hint: ⏰☀️
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: alarm
+    meaning: alarma / despertador
+    ipa: əˈlɑːrm
+- id: make-black-coffee
+  text: First, I make coffee in the kitchen.
+  translation: Primero, preparo café en la cocina.
+  visual_hint: ☕🏠
+  cloze:
+  - 2
+  - 6
+  glossary:
+  - word: kitchen
+    meaning: cocina
+    ipa: ˈkɪtʃɪn
+- id: check-weather-app
+  text: Then I check the weather app on my phone.
+  translation: Luego reviso la aplicación del clima en mi teléfono.
+  visual_hint: 🌦️📱
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: weather
+    meaning: clima / tiempo
+    ipa: ˈweðər
+- id: idm-wake-up
+  text: I usually wake up early on weekdays.
+  translation: 'Normalmente me despierto temprano entre semana. (wake up: despertarse)'
+  visual_hint: 🛏️🌞
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: wake up
+    meaning: despertarse
+    ipa: weɪk ʌp
+  kind: phrasal_verb
+  apply_sentence: What time do you ____ on Sunday?
+  apply_answer: wake up
+  apply_translation: ¿A qué hora te despiertas el domingo?
+- id: idm-get-ready
+  text: It takes twenty minutes to get ready for work.
+  translation: 'Me toma veinte minutos alistarme para el trabajo. (get ready: alistarse)'
+  visual_hint: 👕👞
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: get ready
+    meaning: alistarse / prepararse
+    ipa: ɡet ˈredi
+  kind: expression
+  apply_sentence: We need to ____ before the taxi arrives.
+  apply_answer: get ready
+  apply_translation: Necesitamos alistarnos antes de que llegue el taxi.
+roleplay:
+  ai_role: new roommate
+  user_role: flatmate
+  setting: Apartment kitchen on a Monday morning.
+  turns:
+  - speaker: ai
+    text: Good morning! You are up early today.
+  - speaker: user
+    goal: Cuenta a qué hora suena tu alarma y que te despiertas temprano entre semana.
+    suggested_lines:
+    - I usually wake up early on weekdays.
+    - My phone alarm rings at seven every morning.
+  - speaker: ai
+    text: Nice! What do you usually do first?
+  - speaker: user
+    goal: Di que preparas café, revisas el clima en tu teléfono y te alistas.
+    suggested_lines:
+    - First, I make coffee in the kitchen.
+    - Then I check the weather app on my phone.
+  - speaker: ai
+    text: That sounds like a very calm morning!

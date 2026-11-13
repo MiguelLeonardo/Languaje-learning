@@ -3,7 +3,8 @@ title: Finding your reserved train seat
 title_es: Encontrar tu asiento reservado en el tren
 cefr: A2
 topic: travel-and-transport
-description: Verifica el número de tu asiento junto a la ventana y pide permiso para guardar tu mochila arriba.
+description: Verifica el número de tu asiento junto a la ventana y pide permiso para
+  guardar tu mochila arriba.
 phrases:
 - id: seat-twelve-window
   text: Excuse me, I think my ticket is for seat 12A by the window.
@@ -38,42 +39,10 @@ phrases:
   - word: do you mind
     meaning: ¿le importa / molesta?
     ipa: duː juː maɪnd
-- id: power-outlet-under-seat
-  text: Is there a power outlet under the seat to charge my phone?
-  translation: ¿Hay un enchufe debajo del asiento para cargar mi teléfono?
-  visual_hint: 🔌📱
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: power outlet
-    meaning: toma de corriente / enchufe
-    ipa: ˈpaʊər ˈaʊtlet
-- id: free-train-wifi
-  text: Does this train have free Wi-Fi during the trip?
-  translation: ¿Este tren tiene wifi gratuito durante el viaje?
-  visual_hint: 📶🚄
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: during
-    meaning: durante
-    ipa: ˈdʊrɪŋ
-- id: wake-me-at-station
-  text: I'm getting off at York; have a pleasant journey!
-  translation: Me bajo en York; ¡que tenga un buen viaje!
-  visual_hint: 👋😊
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: getting off
-    meaning: bajarse (de tren/autobús)
-    ipa: ˈɡetɪŋ ɔːf
 - id: train-put-away
   text: Please put away your bag so people can walk past.
-  translation: Por favor, guarda tu bolso para que la gente pueda pasar. (put away = guardar)
+  translation: Por favor, guarda tu bolso para que la gente pueda pasar. (put away
+    = guardar)
   visual_hint: 🧳🚆
   cloze:
   - 3
@@ -88,7 +57,8 @@ phrases:
   apply_translation: Guardaré mi teléfono porque viene el revisor.
 - id: train-make-sure
   text: Make sure you check the coach number on your ticket.
-  translation: Asegúrate de revisar el número de vagón en tu boleto. (make sure = asegurarse)
+  translation: Asegúrate de revisar el número de vagón en tu boleto. (make sure =
+    asegurarse)
   visual_hint: ✅🎟️
   cloze:
   - 3
@@ -100,7 +70,8 @@ phrases:
   kind: expression
   apply_sentence: Please ____ the window is closed before you sleep.
   apply_answer: make sure
-  apply_translation: Por favor, asegúrate de que la ventana esté cerrada antes de dormir.
+  apply_translation: Por favor, asegúrate de que la ventana esté cerrada antes de
+    dormir.
 roleplay:
   ai_role: fellow passenger
   user_role: traveler

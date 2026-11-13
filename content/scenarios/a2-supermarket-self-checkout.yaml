@@ -3,7 +3,8 @@ title: Using the supermarket self-checkout
 title_es: Pedir ayuda en la caja de autopago
 cefr: A2
 topic: hotel-and-shopping
-description: Pide ayuda al encargado del supermercado cuando la máquina de autopago no escanea el pan.
+description: Pide ayuda al encargado del supermercado cuando la máquina de autopago
+  no escanea el pan.
 phrases:
 - id: barcode-wont-scan
   text: Excuse me, this bakery bag doesn't have a barcode to scan.
@@ -38,39 +39,6 @@ phrases:
   - word: weighed
     meaning: pesé / puse en la báscula
     ipa: weɪd
-- id: remove-double-scan
-  text: Oops, it scanned the milk twice! Could you remove one carton?
-  translation: ¡Uy, escaneó la leche dos veces! ¿Podría borrar un cartón?
-  visual_hint: 🥛❌
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: twice
-    meaning: dos veces
-    ipa: twaɪs
-- id: use-my-own-bag
-  text: I tapped 'using my own bag' and placed it on the bagging area.
-  translation: Toqué 'uso mi propia bolsa' y la coloqué en el área de empaque.
-  visual_hint: 👜✅
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: bagging area
-    meaning: zona de embolsado
-    ipa: ˈbæɡɪŋ ˈeriə
-- id: tap-phone-to-pay
-  text: All fixed! I'll pay with Apple Pay on the card reader.
-  translation: ¡Todo listo! Pagaré con el celular en el lector de tarjetas.
-  visual_hint: 📲💳
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: card reader
-    meaning: lector de tarjetas
-    ipa: kɑːrd ˈriːdər
 - id: idm-hold-on-sec
   text: Could you hold on a second while I clear the double scan on screen?
   translation: ¿Podría esperar un segundo mientras borro el escaneo doble en pantalla?
@@ -85,7 +53,8 @@ phrases:
   kind: phrasal_verb
   apply_sentence: Please ____ while the attendant checks the barcode price.
   apply_answer: hold on
-  apply_translation: Por favor espere un momento mientras el encargado revisa el precio del código.
+  apply_translation: Por favor espere un momento mientras el encargado revisa el precio
+    del código.
 - id: idm-piece-of-cake
   text: Once you tap the fruit icon, weighing apples is a piece of cake.
   translation: Una vez que tocas el ícono de fruta, pesar manzanas es pan comido.

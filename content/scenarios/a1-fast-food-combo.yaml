@@ -38,42 +38,10 @@ phrases:
   - word: iced
     meaning: con hielo / helada
     ipa: aɪst
-- id: eat-here-tray
-  text: We will eat here at a table.
-  translation: Vamos a comer aquí en una mesa.
-  visual_hint: 🍽️🪑
-  cloze:
-  - 2
-  - 4
-  glossary:
-  - word: eat here
-    meaning: comer aquí
-    ipa: iːt hɪr
-- id: no-onions-please
-  text: No onions on the burger, please.
-  translation: Sin cebolla en la hamburguesa, por favor.
-  visual_hint: 🧅🚫
-  cloze:
-  - 2
-  - 4
-  glossary:
-  - word: onions
-    meaning: cebollas
-    ipa: ˈʌnjənz
-- id: order-number
-  text: Thank you, what is my order number?
-  translation: Gracias, ¿cuál es mi número de pedido?
-  visual_hint: 🔢🧾
-  cloze:
-  - 2
-  - 4
-  glossary:
-  - word: order number
-    meaning: número de pedido
-    ipa: ˈɔːrdər ˈnʌmbər
 - id: run-out-of
   text: They always run out of fries at lunchtime, sir.
-  translation: 'Siempre se quedan sin papas fritas a la hora del almuerzo, señor. (run out of: quedarse sin)'
+  translation: 'Siempre se quedan sin papas fritas a la hora del almuerzo, señor.
+    (run out of: quedarse sin)'
   visual_hint: 🍟😕
   cloze:
   - 3
@@ -88,7 +56,8 @@ phrases:
   apply_translation: Compremos más arroz antes de quedarnos sin él.
 - id: hurry-up
   text: Hurry up, my burger combo is getting cold!
-  translation: '¡Date prisa, mi combo de hamburguesa se está enfriando! (hurry up: apresurarse)'
+  translation: '¡Date prisa, mi combo de hamburguesa se está enfriando! (hurry up:
+    apresurarse)'
   visual_hint: 🍔⏰
   cloze:
   - 2

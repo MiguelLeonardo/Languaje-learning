@@ -3,13 +3,14 @@ title: Agreeing on shared apartment rules
 title_es: Acordar gastos y tareas con tu compañero de piso
 cefr: B2
 topic: social-and-smalltalk
-description: Conversa de forma constructiva con tu compañero de departamento para organizar la limpieza semanal
-  y dividir recibos.
+description: Conversa de forma constructiva con tu compañero de departamento para
+  organizar la limpieza semanal y dividir recibos.
 phrases:
 - id: clear-the-air-friendly
-  text: Hey Jordan, got five minutes to chat about our kitchen routine so we keep the place feeling great?
-  translation: Hola Jordan, ¿tienes cinco minutos para charlar sobre nuestra rutina de cocina y mantener el depa
-    impecable?
+  text: Hey Jordan, got five minutes to chat about our kitchen routine so we keep
+    the place feeling great?
+  translation: Hola Jordan, ¿tienes cinco minutos para charlar sobre nuestra rutina
+    de cocina y mantener el depa impecable?
   visual_hint: 🏠☕
   cloze:
   - 6
@@ -19,8 +20,10 @@ phrases:
     meaning: rutina / organización
     ipa: ruːˈtiːn
 - id: load-dishwasher-at-night
-  text: Since we both cook in the evening, how about a rule that dishes go straight into the dishwasher before bed?
-  translation: Como ambos cocinamos de noche, ¿qué tal si acordamos meter los platos al lavavajillas antes de dormir?
+  text: Since we both cook in the evening, how about a rule that dishes go straight
+    into the dishwasher before bed?
+  translation: Como ambos cocinamos de noche, ¿qué tal si acordamos meter los platos
+    al lavavajillas antes de dormir?
   visual_hint: 🍽️✨
   cloze:
   - 6
@@ -30,8 +33,10 @@ phrases:
     meaning: lavavajillas
     ipa: ˈdɪʃwɔːʃər
 - id: alternate-weekly-cleaning
-  text: We could also alternate weeks for vacuuming and taking out the recycling—what do you think?
-  translation: También podríamos alternar semanas para aspirar y sacar el reciclaje; ¿qué opinas?
+  text: We could also alternate weeks for vacuuming and taking out the recycling—what
+    do you think?
+  translation: También podríamos alternar semanas para aspirar y sacar el reciclaje;
+    ¿qué opinas?
   visual_hint: 🧹♻️
   cloze:
   - 5
@@ -40,43 +45,10 @@ phrases:
   - word: alternate
     meaning: alternar / turnarse
     ipa: ˈɔːltərneɪt
-- id: splitwise-for-utilities
-  text: I set up a shared Splitwise group so we can log the electric bill and household supplies transparently.
-  translation: Creé un grupo compartido en Splitwise para registrar el recibo de luz y artículos de limpieza con
-    transparencia.
-  visual_hint: 📱🧾
-  cloze:
-  - 6
-  - 12
-  glossary:
-  - word: supplies
-    meaning: insumos / artículos del hogar
-    ipa: səˈplaɪz
-- id: heads-up-overnight-guests
-  text: Giving each other a quick heads-up in the group chat before having weekend guests over works great too.
-  translation: Avisarnos por mensaje antes de recibir visitas de fin de semana también funciona genial.
-  visual_hint: 💬🙌
-  cloze:
-  - 6
-  - 12
-  glossary:
-  - word: heads-up
-    meaning: aviso previo
-    ipa: hedz ʌp
-- id: glad-we-talked-openly
-  text: Glad we can talk about this so openly—we make a great housemate team!
-  translation: Me alegra que podamos hablarlo con tanta confianza; ¡hacemos un gran equipo de casa!
-  visual_hint: 🤝😊
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: openly
-    meaning: abiertamente / con franqueza
-    ipa: ˈoʊpənli
 - id: idm-b2rc-pull-weight
   text: We all need to pull our weight around the apartment, honestly.
-  translation: Todos debemos hacer nuestra parte en el apartamento, sinceramente (cumplir con lo que toca).
+  translation: Todos debemos hacer nuestra parte en el apartamento, sinceramente (cumplir
+    con lo que toca).
   visual_hint: 🧹🏠
   cloze:
   - 3
@@ -103,7 +75,8 @@ phrases:
   kind: idiom
   apply_sentence: Neither of us agreed, so we had to ____ halfway.
   apply_answer: meet
-  apply_translation: Ninguno estaba de acuerdo, así que tuvimos que llegar a un punto medio.
+  apply_translation: Ninguno estaba de acuerdo, así que tuvimos que llegar a un punto
+    medio.
 roleplay:
   ai_role: flatmate (Jordan)
   user_role: roommate
@@ -114,28 +87,40 @@ roleplay:
   - speaker: user
     goal: Inicia la charla con buen ánimo para organizar la rutina de la cocina.
     suggested_lines:
-    - Hey Jordan, got five minutes to chat about our kitchen routine so we keep the place feeling great?
-    - Since we both cook in the evening, how about a rule that dishes go straight into the dishwasher before bed?
+    - Hey Jordan, got five minutes to chat about our kitchen routine so we keep the
+      place feeling great?
+    - Since we both cook in the evening, how about a rule that dishes go straight
+      into the dishwasher before bed?
   - speaker: ai
-    text: Yeah, I know I left a couple of pans in the sink on Wednesday when I had a late deadline.
+    text: Yeah, I know I left a couple of pans in the sink on Wednesday when I had
+      a late deadline.
   - speaker: user
-    goal: Propón que los platos entren directo al lavavajillas cada noche antes de dormir.
+    goal: Propón que los platos entren directo al lavavajillas cada noche antes de
+      dormir.
     suggested_lines:
-    - Since we both cook in the evening, how about a rule that dishes go straight into the dishwasher before bed?
-    - We could also alternate weeks for vacuuming and taking out the recycling—what do you think?
+    - Since we both cook in the evening, how about a rule that dishes go straight
+      into the dishwasher before bed?
+    - We could also alternate weeks for vacuuming and taking out the recycling—what
+      do you think?
   - speaker: ai
-    text: Putting dishes straight into the dishwasher at night is super doable—I'm totally on board.
+    text: Putting dishes straight into the dishwasher at night is super doable—I'm
+      totally on board.
   - speaker: user
     goal: Sugiere turnarse cada semana para aspirar y sacar el reciclaje.
     suggested_lines:
-    - We could also alternate weeks for vacuuming and taking out the recycling—what do you think?
-    - I set up a shared Splitwise group so we can log the electric bill and household supplies transparently.
+    - We could also alternate weeks for vacuuming and taking out the recycling—what
+      do you think?
+    - I set up a shared Splitwise group so we can log the electric bill and household
+      supplies transparently.
   - speaker: ai
-    text: Alternating weeks on the fridge calendar makes it really clear whose turn it is.
+    text: Alternating weeks on the fridge calendar makes it really clear whose turn
+      it is.
   - speaker: user
     goal: Menciona el grupo en Splitwise para dividir recibos y compras del hogar.
     suggested_lines:
-    - I set up a shared Splitwise group so we can log the electric bill and household supplies transparently.
-    - Giving each other a quick heads-up in the group chat before having weekend guests over works great too.
+    - I set up a shared Splitwise group so we can log the electric bill and household
+      supplies transparently.
+    - Giving each other a quick heads-up in the group chat before having weekend guests
+      over works great too.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

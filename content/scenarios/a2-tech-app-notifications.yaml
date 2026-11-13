@@ -1,0 +1,93 @@
+id: a2-tech-app-notifications
+title: Managing app notifications
+title_es: Gestionar notificaciones de aplicaciones
+cefr: A2
+topic: daily-tech-and-media
+description: Configura el modo silencioso y desactiva alertas molestas en tu teléfono.
+phrases:
+- id: too-many-notifications
+  text: My phone gets too many notifications all day.
+  translation: Mi teléfono recibe demasiadas notificaciones todo el día.
+  visual_hint: 🔔📱
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: notifications
+    meaning: notificaciones
+    ipa: ˌnoʊtɪfɪˈkeɪʃənz
+- id: do-not-disturb
+  text: I use Do Not Disturb mode when I study.
+  translation: Uso el modo No Molestar cuando estudio.
+  visual_hint: 🌙🔕
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: disturb
+    meaning: molestar
+    ipa: dɪˈstɜːrb
+- id: open-phone-settings
+  text: Open your settings menu to silence social apps.
+  translation: Abre tu menú de ajustes para silenciar las aplicaciones sociales.
+  visual_hint: ⚙️📱
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: settings
+    meaning: ajustes / configuración
+    ipa: ˈsetɪŋz
+- id: idm-turn-off
+  text: You should turn off alerts for shopping apps.
+  translation: 'Deberías desactivar las alertas de las aplicaciones de compras. (turn off: apagar
+    / desactivar)'
+  visual_hint: 🔕🛒
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: turn off
+    meaning: desactivar / apagar
+    ipa: tɜːrn ɔːf
+  kind: phrasal_verb
+  apply_sentence: I always ____ location tracking for games.
+  apply_answer: turn off
+  apply_translation: Siempre desactivo el rastreo de ubicación para los juegos.
+- id: idm-focus-on
+  text: Fewer alerts help me focus on my work.
+  translation: 'Menos alertas me ayudan a concentrarme en mi trabajo. (focus on: concentrarse
+    en)'
+  visual_hint: 🎯💼
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: focus on
+    meaning: concentrarse en
+    ipa: ˈfoʊkəs ɑːn
+  kind: expression
+  apply_sentence: Turn down the music so we can ____ reading.
+  apply_answer: focus on
+  apply_translation: Baja la música para que podamos concentrarnos en leer.
+roleplay:
+  ai_role: tech-savvy coworker
+  user_role: colleague
+  setting: Office desk during a quiet afternoon.
+  turns:
+  - speaker: ai
+    text: Your phone has buzzed five times in two minutes!
+  - speaker: user
+    goal: Comenta que recibes demasiadas notificaciones y te cuesta concentrarte.
+    suggested_lines:
+    - My phone gets too many notifications all day.
+    - Fewer alerts help me focus on my work.
+  - speaker: ai
+    text: You can mute the noisy ones in two taps. Want me to show you?
+  - speaker: user
+    goal: Pregunta cómo abrir los ajustes o di que usarás el modo No Molestar.
+    suggested_lines:
+    - I use Do Not Disturb mode when I study.
+    - You should turn off alerts for shopping apps.
+  - speaker: ai
+    text: Exactly! Your afternoon will feel much quieter now.

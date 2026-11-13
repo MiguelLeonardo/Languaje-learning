@@ -3,7 +3,8 @@ title: Taking a phone message at work
 title_es: Tomar un recado telefónico en la oficina
 cefr: A1
 topic: work-and-career
-description: Contesta el teléfono de la oficina, explica que tu jefa está en una reunión y anota el nombre y número.
+description: Contesta el teléfono de la oficina, explica que tu jefa está en una reunión
+  y anota el nombre y número.
 phrases:
 - id: good-morning-sales-desk
   text: Good morning, BrightTech office, how can I help you?
@@ -38,42 +39,10 @@ phrases:
   - word: phone number
     meaning: número de teléfono
     ipa: foʊn ˈnʌmbər
-- id: spell-your-last-name
-  text: Could you spell your last name for me, please?
-  translation: ¿Podría deletrearme su apellido, por favor?
-  visual_hint: 🔤✍️
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: spell
-    meaning: deletrear
-    ipa: spel
-- id: put-note-on-her-desk
-  text: I will put this note on her desk right now.
-  translation: Pondré esta nota en su escritorio ahora mismo.
-  visual_hint: 📌🖥️
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: note
-    meaning: nota / recado
-    ipa: noʊt
-- id: she-will-call-you-back
-  text: Thank you, Mr. Evans. She will call you back soon!
-  translation: Gracias, Sr. Evans. ¡Ella le devolverá la llamada pronto!
-  visual_hint: 📲✅
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: call back
-    meaning: devolver la llamada
-    ipa: kɔːl bæk
 - id: idm-hold-on
   text: Hold on, please. I will get a pen.
-  translation: 'Espera un momento, por favor. Voy a buscar un bolígrafo. (hold on: esperar)'
+  translation: 'Espera un momento, por favor. Voy a buscar un bolígrafo. (hold on:
+    esperar)'
   visual_hint: ⏳📞
   cloze:
   - 2

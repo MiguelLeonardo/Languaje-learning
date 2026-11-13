@@ -3,12 +3,14 @@ title: Interviewing a heritage seed keeper
 title_es: Entrevistar a un guardián de semillas nativas
 cefr: C2
 topic: food-and-drink
-description: Conduce una entrevista documental sobre biodiversidad agrícola, maíces criollos y resiliencia climática.
+description: Conduce una entrevista documental sobre biodiversidad agrícola, maíces
+  criollos y resiliencia climática.
 phrases:
 - id: genetic-biodiversity
-  text: Preserving heirloom landraces is our strongest insurance policy against monoculture blight.
-  translation: Preservar las variedades criollas nativas es nuestra mejor póliza de seguro frente a las plagas del
-    monocultivo.
+  text: Preserving heirloom landraces is our strongest insurance policy against monoculture
+    blight.
+  translation: Preservar las variedades criollas nativas es nuestra mejor póliza de
+    seguro frente a las plagas del monocultivo.
   visual_hint: 🌽🧬
   cloze:
   - 3
@@ -18,8 +20,10 @@ phrases:
     meaning: variedades criollas / ancestrales
     ipa: ˈerluːm ˈlændreɪsɪz
 - id: culinary-memory
-  text: When a seed variety vanishes, we lose not only genetics but centuries of culinary memory.
-  translation: Cuando desaparece una semilla, perdemos no solo genética sino siglos de memoria culinaria.
+  text: When a seed variety vanishes, we lose not only genetics but centuries of culinary
+    memory.
+  translation: Cuando desaparece una semilla, perdemos no solo genética sino siglos
+    de memoria culinaria.
   visual_hint: 🏺🌾
   cloze:
   - 5
@@ -30,7 +34,8 @@ phrases:
     ipa: ˈvænɪʃɪz
 - id: drought-tolerant-strains
   text: How are these high-altitude strains adapting to erratic rainfall patterns?
-  translation: ¿Cómo se están adaptando estas variedades de gran altitud a los patrones erráticos de lluvia?
+  translation: ¿Cómo se están adaptando estas variedades de gran altitud a los patrones
+    erráticos de lluvia?
   visual_hint: ⛰️🌧️
   cloze:
   - 3
@@ -39,43 +44,10 @@ phrases:
   - word: erratic
     meaning: erráticos / impredecibles
     ipa: ɪˈrætɪk
-- id: chef-farmer-alliances
-  text: Direct alliances between fine-dining chefs and smallholder farmers make conservation economically viable.
-  translation: Las alianzas directas entre chefs y pequeños agricultores hacen que la conservación sea económicamente
-    viable.
-  visual_hint: 👨‍🍳🌾
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: smallholder
-    meaning: pequeño agricultor / minifundista
-    ipa: ˈsmɔːlhoʊldər
-- id: nixtamalization-nutrition
-  text: Traditional nixtamalization unlocks bioavailable niacin and gives the masa its unmistakable aroma.
-  translation: La nixtamalización tradicional libera niacina biodisponible y da a la masa su aroma inconfundible.
-  visual_hint: 🫓🔥
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: unlocks
-    meaning: libera / desbloquea
-    ipa: ʌnˈlɑːks
-- id: intergenerational-stewardship
-  text: Passing this stewardship to young growers ensures the sanctuary thrives for generations.
-  translation: Transmitir esta custodia a jóvenes agricultores asegura que el santuario prospere por generaciones.
-  visual_hint: 🌱👐
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: stewardship
-    meaning: custodia / cuidado responsable
-    ipa: ˈstuːərdʃɪp
 - id: stood-the-test-of-time
   text: Heirloom seeds like these have stood the test of time.
-  translation: 'Semillas ancestrales como estas han resistido el paso del tiempo. (stood the test of time: perdurar)'
+  translation: 'Semillas ancestrales como estas han resistido el paso del tiempo.
+    (stood the test of time: perdurar)'
   visual_hint: 🌱⌛
   cloze:
   - 3
@@ -90,7 +62,8 @@ phrases:
   apply_translation: Pocas novelas han resistido el paso del tiempo como esta.
 - id: pass-the-torch
   text: One day I will pass the torch to my granddaughter.
-  translation: 'Algún día pasaré el testigo a mi nieta. (pass the torch: transmitir el legado)'
+  translation: 'Algún día pasaré el testigo a mi nieta. (pass the torch: transmitir
+    el legado)'
   visual_hint: 🔥👵
   cloze:
   - 3
@@ -109,18 +82,23 @@ roleplay:
   setting: Filming in an Andean heritage grain sanctuary.
   turns:
   - speaker: ai
-    text: Welcome to our seed bank. Here we safeguard over four hundred varieties of ancestral corn and quinoa.
+    text: Welcome to our seed bank. Here we safeguard over four hundred varieties
+      of ancestral corn and quinoa.
   - speaker: user
     goal: Reflexiona sobre cómo las variedades nativas protegen frente al monocultivo.
     suggested_lines:
-    - Preserving heirloom landraces is our strongest insurance policy against monoculture blight.
-    - When a seed variety vanishes, we lose not only genetics but centuries of culinary memory.
+    - Preserving heirloom landraces is our strongest insurance policy against monoculture
+      blight.
+    - When a seed variety vanishes, we lose not only genetics but centuries of culinary
+      memory.
   - speaker: ai
-    text: Farmers in these valleys have selected each color for specific ceremonial dishes.
+    text: Farmers in these valleys have selected each color for specific ceremonial
+      dishes.
   - speaker: user
     goal: Destaca que al perder una semilla también se pierde memoria culinaria.
     suggested_lines:
-    - When a seed variety vanishes, we lose not only genetics but centuries of culinary memory.
+    - When a seed variety vanishes, we lose not only genetics but centuries of culinary
+      memory.
     - How are these high-altitude strains adapting to erratic rainfall patterns?
   - speaker: ai
     text: Exactly—each kernel carries the story of the community that tended it.
@@ -128,13 +106,17 @@ roleplay:
     goal: Pregunta cómo se adaptan estas semillas a las lluvias irregulares.
     suggested_lines:
     - How are these high-altitude strains adapting to erratic rainfall patterns?
-    - Direct alliances between fine-dining chefs and smallholder farmers make conservation economically viable.
+    - Direct alliances between fine-dining chefs and smallholder farmers make conservation
+      economically viable.
   - speaker: ai
-    text: Their deep root systems survive frost and drought far better than commercial hybrids.
+    text: Their deep root systems survive frost and drought far better than commercial
+      hybrids.
   - speaker: user
     goal: Concluye explicando cómo las alianzas con chefs hacen viable la conservación.
     suggested_lines:
-    - Direct alliances between fine-dining chefs and smallholder farmers make conservation economically viable.
-    - Traditional nixtamalization unlocks bioavailable niacin and gives the masa its unmistakable aroma.
+    - Direct alliances between fine-dining chefs and smallholder farmers make conservation
+      economically viable.
+    - Traditional nixtamalization unlocks bioavailable niacin and gives the masa its
+      unmistakable aroma.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

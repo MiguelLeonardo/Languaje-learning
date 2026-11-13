@@ -3,13 +3,14 @@ title: Booking a private dining room
 title_es: Contratar un salón privado en restaurante
 cefr: C1
 topic: food-and-drink
-description: Negocia el consumo mínimo, la tarifa de descorche y el menú impreso para una cena ejecutiva de veinte
-  personas.
+description: Negocia el consumo mínimo, la tarifa de descorche y el menú impreso para
+  una cena ejecutiva de veinte personas.
 phrases:
 - id: minimum-food-spend
-  text: Does the three-thousand-dollar minimum spend include service charges, or strictly food and beverage?
-  translation: ¿El consumo mínimo de tres mil dólares incluye el cargo por servicio o estrictamente alimentos y
-    bebidas?
+  text: Does the three-thousand-dollar minimum spend include service charges, or strictly
+    food and beverage?
+  translation: ¿El consumo mínimo de tres mil dólares incluye el cargo por servicio
+    o estrictamente alimentos y bebidas?
   visual_hint: 📑🍷
   cloze:
   - 4
@@ -19,8 +20,10 @@ phrases:
     meaning: consumo mínimo
     ipa: ˈmɪnɪməm spend
 - id: waive-corkage-fee
-  text: If we order champagne through your cellar, would you waive corkage on two collector bottles?
-  translation: Si pedimos el champán de su cava, ¿eximirían el descorche de dos botellas de colección?
+  text: If we order champagne through your cellar, would you waive corkage on two
+    collector bottles?
+  translation: Si pedimos el champán de su cava, ¿eximirían el descorche de dos botellas
+    de colección?
   visual_hint: 🍾🤝
   cloze:
   - 5
@@ -30,8 +33,10 @@ phrases:
     meaning: derecho de descorche
     ipa: ˈkɔːrkɪdʒ
 - id: three-choice-prix-fixe
-  text: A three-course prix fixe with tableside entrée selection will keep service pacing brisk.
-  translation: Un menú de precio fijo de tres tiempos con elección de plato fuerte en mesa mantendrá un ritmo ágil.
+  text: A three-course prix fixe with tableside entrée selection will keep service
+    pacing brisk.
+  translation: Un menú de precio fijo de tres tiempos con elección de plato fuerte
+    en mesa mantendrá un ritmo ágil.
   visual_hint: 🍽️⏱️
   cloze:
   - 4
@@ -40,42 +45,10 @@ phrases:
   - word: prix fixe
     meaning: menú de precio fijo
     ipa: priː fɪks
-- id: custom-printed-menus
-  text: Could you print bespoke menus featuring our company crest without listing individual prices?
-  translation: ¿Podrían imprimir menús personalizados con nuestro logotipo sin mostrar precios individuales?
-  visual_hint: 🖨️🏛️
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: bespoke
-    meaning: hecho a medida / personalizado
-    ipa: bɪˈspoʊk
-- id: av-projector-screen
-  text: We'll need a discreet screen for a ten-minute toast, then ambient lighting afterward.
-  translation: Necesitaremos una pantalla discreta para un brindis de diez minutos y luego iluminación ambiental.
-  visual_hint: 📽️🕯️
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: discreet
-    meaning: discreta
-    ipa: dɪˈskriːt
-- id: countersign-agreement
-  text: Send over the revised BEO and I'll countersign it before close of business.
-  translation: Envíe la orden de evento revisada y la firmaré antes del cierre del día.
-  visual_hint: ✍️📄
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: countersign
-    meaning: refrendar / firmar contrato
-    ipa: ˈkaʊntərsaɪn
 - id: read-the-fine-print
   text: We should read the fine print before we sign.
-  translation: 'Deberíamos leer la letra pequeña antes de firmar. (the fine print: letra pequeña)'
+  translation: 'Deberíamos leer la letra pequeña antes de firmar. (the fine print:
+    letra pequeña)'
   visual_hint: 📄🔍
   cloze:
   - 3
@@ -113,28 +86,38 @@ roleplay:
   - speaker: user
     goal: Pregunta si el consumo mínimo incluye el servicio o solo alimentos y bebidas.
     suggested_lines:
-    - Does the three-thousand-dollar minimum spend include service charges, or strictly food and beverage?
-    - If we order champagne through your cellar, would you waive corkage on two collector bottles?
+    - Does the three-thousand-dollar minimum spend include service charges, or strictly
+      food and beverage?
+    - If we order champagne through your cellar, would you waive corkage on two collector
+      bottles?
   - speaker: ai
     text: It applies strictly to food and beverage before the 18% gratuity.
   - speaker: user
     goal: Propón que eximan el descorche de dos botellas si compran el champán allí.
     suggested_lines:
-    - If we order champagne through your cellar, would you waive corkage on two collector bottles?
-    - A three-course prix fixe with tableside entrée selection will keep service pacing brisk.
+    - If we order champagne through your cellar, would you waive corkage on two collector
+      bottles?
+    - A three-course prix fixe with tableside entrée selection will keep service pacing
+      brisk.
   - speaker: ai
-    text: We can certainly waive corkage on two bottles. How would you like to structure the menu?
+    text: We can certainly waive corkage on two bottles. How would you like to structure
+      the menu?
   - speaker: user
-    goal: Elige un menú fijo de tres tiempos con selección en mesa para agilizar el servicio.
+    goal: Elige un menú fijo de tres tiempos con selección en mesa para agilizar el
+      servicio.
     suggested_lines:
-    - A three-course prix fixe with tableside entrée selection will keep service pacing brisk.
-    - Could you print bespoke menus featuring our company crest without listing individual prices?
+    - A three-course prix fixe with tableside entrée selection will keep service pacing
+      brisk.
+    - Could you print bespoke menus featuring our company crest without listing individual
+      prices?
   - speaker: ai
-    text: Agreed—our kitchen handles tableside choices for up to twenty-four guests effortlessly.
+    text: Agreed—our kitchen handles tableside choices for up to twenty-four guests
+      effortlessly.
   - speaker: user
     goal: Solicita menús impresos con su logotipo y sin precios individuales.
     suggested_lines:
-    - Could you print bespoke menus featuring our company crest without listing individual prices?
+    - Could you print bespoke menus featuring our company crest without listing individual
+      prices?
     - We'll need a discreet screen for a ten-minute toast, then ambient lighting afterward.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

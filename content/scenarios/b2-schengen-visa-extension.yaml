@@ -3,12 +3,14 @@ title: Explaining a weather delay at border control
 title_es: Explicar cancelación de vuelo en migración
 cefr: B2
 topic: travel-and-transport
-description: Explica a un oficial de migración con constancia de la aerolínea por qué tu vuelo salió un día después.
+description: Explica a un oficial de migración con constancia de la aerolínea por
+  qué tu vuelo salió un día después.
 phrases:
 - id: airline-disruption-letter
-  text: Good morning. My outbound flight yesterday was canceled due to the blizzard; here is the airline's certificate.
-  translation: Buenos días. Mi vuelo de salida de ayer fue cancelado por la tormenta de nieve; aquí está la constancia
-    de la aerolínea.
+  text: Good morning. My outbound flight yesterday was canceled due to the blizzard;
+    here is the airline's certificate.
+  translation: Buenos días. Mi vuelo de salida de ayer fue cancelado por la tormenta
+    de nieve; aquí está la constancia de la aerolínea.
   visual_hint: 🛂❄️
   cloze:
   - 5
@@ -19,7 +21,8 @@ phrases:
     ipa: ˈaʊtbaʊnd
 - id: rebooked-first-available
   text: The carrier rebooked me onto the very first available departure this morning.
-  translation: La aerolínea me reprogramó en la primera salida disponible de esta mañana.
+  translation: La aerolínea me reprogramó en la primera salida disponible de esta
+    mañana.
   visual_hint: ✈️🌅
   cloze:
   - 4
@@ -29,8 +32,10 @@ phrases:
     meaning: aerolínea / transportista
     ipa: ˈkæriər
 - id: force-majeure-waiver
-  text: Could you annotate my exit record as force majeure so it doesn't flag future entries?
-  translation: ¿Podría anotar mi registro de salida como fuerza mayor para que no afecte futuros ingresos?
+  text: Could you annotate my exit record as force majeure so it doesn't flag future
+    entries?
+  translation: ¿Podría anotar mi registro de salida como fuerza mayor para que no
+    afecte futuros ingresos?
   visual_hint: 📝🛡️
   cloze:
   - 5
@@ -39,42 +44,10 @@ phrases:
   - word: force majeure
     meaning: fuerza mayor
     ipa: fɔːrs mɑːˈʒɜːr
-- id: keep-stamped-copy
-  text: Should I keep a stamped copy of this disruption form for my next trip?
-  translation: ¿Debo conservar una copia sellada de este formulario para mi próximo viaje?
-  visual_hint: 📑✅
-  cloze:
-  - 4
-  - 9
-  glossary:
-  - word: annotate
-    meaning: anotar / dejar constancia
-    ipa: ˈænəteɪt
-- id: checked-in-on-time
-  text: As you can see from my original boarding pass, I had already cleared check-in on time.
-  translation: Como puede ver en mi pase original, ya había hecho el check-in a tiempo.
-  visual_hint: 🎫⏱️
-  cloze:
-  - 5
-  - 10
-  glossary:
-  - word: on time
-    meaning: a tiempo
-    ipa: ɑːn taɪm
-- id: appreciate-your-understanding
-  text: I really appreciate your thoroughness and understanding. Have a good day!
-  translation: Agradezco mucho su atención y comprensión. ¡Que tenga un buen día!
-  visual_hint: 🙏🛂
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: understanding
-    meaning: comprensión
-    ipa: ˌʌndərˈstændɪŋ
 - id: visa-red-tape
   text: The border office has so much red tape that everything takes hours.
-  translation: La oficina fronteriza tiene tanta burocracia que todo tarda horas. (red tape = burocracia)
+  translation: La oficina fronteriza tiene tanta burocracia que todo tarda horas.
+    (red tape = burocracia)
   visual_hint: 📎🛂
   cloze:
   - 4
@@ -89,8 +62,8 @@ phrases:
   apply_translation: Obtener un permiso de trabajo implica mucha burocracia.
 - id: visa-bend-over-backwards
   text: The airline bent over backwards to rebook me after the storm.
-  translation: La aerolínea hizo todo lo posible por reubicarme tras la tormenta. (bend over backwards = esforzarse
-    al máximo)
+  translation: La aerolínea hizo todo lo posible por reubicarme tras la tormenta.
+    (bend over backwards = esforzarse al máximo)
   visual_hint: 🙇🌩️
   cloze:
   - 3
@@ -102,18 +75,21 @@ phrases:
   kind: idiom
   apply_sentence: The hotel staff will ____ to make guests comfortable.
   apply_answer: bend over backwards
-  apply_translation: El personal del hotel hará lo imposible para que los huéspedes estén cómodos.
+  apply_translation: El personal del hotel hará lo imposible para que los huéspedes
+    estén cómodos.
 roleplay:
   ai_role: border control officer
   user_role: departing traveler
   setting: Airport passport control booth.
   turns:
   - speaker: ai
-    text: Good morning. Passport and boarding pass, please. I notice your 90-day stay expired yesterday.
+    text: Good morning. Passport and boarding pass, please. I notice your 90-day stay
+      expired yesterday.
   - speaker: user
     goal: Muestra la constancia de la aerolínea por la cancelación debida a la tormenta.
     suggested_lines:
-    - Good morning. My outbound flight yesterday was canceled due to the blizzard; here is the airline's certificate.
+    - Good morning. My outbound flight yesterday was canceled due to the blizzard;
+      here is the airline's certificate.
     - The carrier rebooked me onto the very first available departure this morning.
   - speaker: ai
     text: Let me verify the flight cancellation notice from Lufthansa.
@@ -121,20 +97,24 @@ roleplay:
     goal: Explica que te reubicaron en el primer vuelo disponible de esta mañana.
     suggested_lines:
     - The carrier rebooked me onto the very first available departure this morning.
-    - Could you annotate my exit record as force majeure so it doesn't flag future entries?
+    - Could you annotate my exit record as force majeure so it doesn't flag future
+      entries?
   - speaker: ai
     text: Yes, all flights out of Terminal 1 were grounded for eighteen hours yesterday.
   - speaker: user
     goal: Pide que anoten la salida como causa de fuerza mayor en el sistema.
     suggested_lines:
-    - Could you annotate my exit record as force majeure so it doesn't flag future entries?
+    - Could you annotate my exit record as force majeure so it doesn't flag future
+      entries?
     - Should I keep a stamped copy of this disruption form for my next trip?
   - speaker: ai
-    text: I've entered the weather waiver code into the system—your record remains completely clean.
+    text: I've entered the weather waiver code into the system—your record remains
+      completely clean.
   - speaker: user
     goal: Pregunta si conviene guardar copia sellada para tu próximo viaje.
     suggested_lines:
     - Should I keep a stamped copy of this disruption form for my next trip?
-    - As you can see from my original boarding pass, I had already cleared check-in on time.
+    - As you can see from my original boarding pass, I had already cleared check-in
+      on time.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

@@ -1,0 +1,93 @@
+id: a2-grammar-superlatives
+title: Superlatives for experiences and opinions
+title_es: Superlativos para experiencias y opiniones
+cefr: A2
+topic: grammar-and-connectors
+description: Usa superlativos como 'the worst', 'the most helpful' y 'one of the best'
+  para dar opiniones.
+phrases:
+- id: one-of-the-best
+  text: This is one of the best movies this year.
+  translation: Esta es una de las mejores películas de este año.
+  visual_hint: 🎬🌟
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: one of the best
+    meaning: uno de los mejores
+    ipa: wʌn əv ðə best
+  kind: expression
+  apply_sentence: Kyoto is ____ cities in Japan.
+  apply_answer: one of the best
+  apply_translation: Kioto es una de las mejores ciudades de Japón.
+- id: worst-storm-year
+  text: That was the worst storm of the year.
+  translation: Esa fue la peor tormenta del año. ('the worst' es el superlativo de
+    'bad')
+  visual_hint: ⛈️💨
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: the worst
+    meaning: el peor / la peor
+    ipa: ðə wɜːrst
+- id: most-helpful-staff
+  text: This hotel has the most helpful staff.
+  translation: Este hotel tiene el personal más atento.
+  visual_hint: 🛎️😊
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: helpful
+    meaning: servicial / atento
+    ipa: ˈhelpfəl
+- id: farthest-ever-traveled
+  text: Brazil is the farthest I have ever traveled.
+  translation: Brasil es lo más lejos que he viajado nunca.
+  visual_hint: ✈️🌎
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: the farthest
+    meaning: lo más lejos
+    ipa: ðə ˈfɑːrðɪst
+  kind: expression
+  apply_sentence: This beach is ____ from the city center.
+  apply_answer: the farthest
+  apply_translation: Esta playa es la más lejana del centro de la ciudad.
+- id: funniest-friend
+  text: Leo is the funniest person in our group.
+  translation: Leo es la persona más graciosa de nuestro grupo.
+  visual_hint: 😂🎉
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: funniest
+    meaning: el más gracioso
+    ipa: ˈfʌniɪst
+roleplay:
+  ai_role: coworker
+  user_role: coworker
+  setting: Talking about a recent trip during lunch.
+  turns:
+  - speaker: ai
+    text: Welcome back! How was your trip?
+  - speaker: user
+    goal: Describe tu viaje usando 'one of the best' o 'the farthest'.
+    suggested_lines:
+    - It was great! It is the farthest I have ever traveled.
+    - It was one of the best trips of my life.
+  - speaker: ai
+    text: That sounds amazing! How was the hotel?
+  - speaker: user
+    goal: Comenta sobre el hotel o el clima usando 'the most helpful' o 'the worst'.
+    suggested_lines:
+    - The hotel had the most helpful staff!
+    - The hotel was great, though we had the worst storm on Tuesday.
+  - speaker: ai
+    text: I'm glad you still had a wonderful time!

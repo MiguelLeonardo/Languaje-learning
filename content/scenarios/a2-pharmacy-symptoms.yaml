@@ -3,7 +3,8 @@ title: Explaining symptoms at a pharmacy
 title_es: Explicar síntomas en la farmacia
 cefr: A2
 topic: health-and-emergencies
-description: Explica un dolor de cabeza o resfriado en la farmacia y pregunta cómo tomar el medicamento.
+description: Explica un dolor de cabeza o resfriado en la farmacia y pregunta cómo
+  tomar el medicamento.
 phrases:
 - id: sore-throat
   text: I have a sore throat and a slight fever.
@@ -45,51 +46,6 @@ phrases:
   - word: tablets
     meaning: pastillas / comprimidos
     ipa: ˈtæbləts
-- id: any-allergies-meds
-  text: I am not allergic to any medication, as far as I know.
-  translation: No soy alérgico a ningún medicamento, que yo sepa.
-  visual_hint: 💊✅
-  cloze:
-  - 3
-  - 6
-  - 8
-  glossary:
-  - word: allergic
-    meaning: alérgico
-    ipa: əˈlɜːrdʒɪk
-  - word: as far as I know
-    meaning: que yo sepa
-    ipa: æz fɑːr æz aɪ noʊ
-- id: throat-lozenges
-  text: Do you also have honey lozenges for a dry cough?
-  translation: ¿También tiene pastillas de miel para la tos seca?
-  visual_hint: 🍯🍬
-  cloze:
-  - 4
-  - 5
-  - 9
-  glossary:
-  - word: lozenges
-    meaning: pastillas para chupar
-    ipa: ˈlɑːzɪndʒɪz
-  - word: cough
-    meaning: tos
-    ipa: kɔːf
-- id: with-food-or-water
-  text: Should I take these tablets with food or on an empty stomach?
-  translation: ¿Debo tomar estas pastillas con comida o con el estómago vacío?
-  visual_hint: 🍽️🥛
-  cloze:
-  - 4
-  - 6
-  - 10
-  glossary:
-  - word: tablets
-    meaning: comprimidos / pastillas
-    ipa: ˈtæbləts
-  - word: empty stomach
-    meaning: estómago vacío / en ayunas
-    ipa: ˈempti ˈstʌmək
 - id: idm-come-down-with-a2
   text: I'm afraid I might come down with a cold.
   translation: Me temo que podría resfriarme. (come down with = enfermar de)
@@ -107,7 +63,8 @@ phrases:
   apply_translation: Ponte un abrigo o te dará la gripe.
 - id: idm-get-better-a2
   text: I hope these pills help me get better soon.
-  translation: Espero que estas pastillas me ayuden a mejorar pronto. (get better = mejorar)
+  translation: Espero que estas pastillas me ayuden a mejorar pronto. (get better
+    = mejorar)
   visual_hint: 💊📈
   cloze:
   - 3

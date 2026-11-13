@@ -3,12 +3,14 @@ title: Adjusting a physical therapy rehab plan
 title_es: Ajustar ejercicios con el fisioterapeuta
 cefr: B2
 topic: health-and-emergencies
-description: Explica a tu fisioterapeuta en qué ángulo sientes un pellizco en el hombro y ajusta la resistencia
-  de las bandas.
+description: Explica a tu fisioterapeuta en qué ángulo sientes un pellizco en el hombro
+  y ajusta la resistencia de las bandas.
 phrases:
 - id: range-of-motion-improved
-  text: My overhead range of motion is noticeably smoother this week, especially after a warm shower.
-  translation: Mi rango de movimiento por encima de la cabeza se siente mucho más fluido esta semana.
+  text: My overhead range of motion is noticeably smoother this week, especially after
+    a warm shower.
+  translation: Mi rango de movimiento por encima de la cabeza se siente mucho más
+    fluido esta semana.
   visual_hint: 🏋️‍♀️📈
   cloze:
   - 5
@@ -18,9 +20,10 @@ phrases:
     meaning: rango de movilidad articular
     ipa: reɪndʒ əv ˈmoʊʃən
 - id: pinch-at-ninety-degrees
-  text: However, I still feel a mild pinching sensation when I abduct my arm past ninety degrees.
-  translation: Sin embargo, aún siento un ligero pellizco cuando levanto el brazo lateralmente más allá de noventa
-    grados.
+  text: However, I still feel a mild pinching sensation when I abduct my arm past
+    ninety degrees.
+  translation: Sin embargo, aún siento un ligero pellizco cuando levanto el brazo
+    lateralmente más allá de noventa grados.
   visual_hint: 📐⚡
   cloze:
   - 5
@@ -31,7 +34,8 @@ phrases:
     ipa: ˈpɪntʃɪŋ
 - id: tuck-shoulder-blade-back
   text: When I focus on retracting my shoulder blade first, the pinch almost disappears.
-  translation: Cuando me concentro en retraer primero el omóplato, el pellizco casi desaparece.
+  translation: Cuando me concentro en retraer primero el omóplato, el pellizco casi
+    desaparece.
   visual_hint: 🦴✨
   cloze:
   - 4
@@ -40,39 +44,6 @@ phrases:
   - word: shoulder blade
     meaning: omóplato / escápula
     ipa: ˈʃoʊldər bleɪd
-- id: step-up-to-green-band
-  text: Am I ready to progress from the yellow resistance band to the medium green band for external rotations?
-  translation: ¿Ya estoy listo para pasar de la banda amarilla a la verde mediana en las rotaciones externas?
-  visual_hint: 🟢💪
-  cloze:
-  - 6
-  - 12
-  glossary:
-  - word: progress
-    meaning: avanzar de nivel gradualmente
-    ipa: prəˈɡres
-- id: three-sets-of-fifteen
-  text: I'll stick to three sets of fifteen slow eccentric reps every other day.
-  translation: Mantendré tres series de quince repeticiones lentas un día sí y un día no.
-  visual_hint: 🔢⏱️
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: every other day
-    meaning: un día sí y otro no (días alternos)
-    ipa: ˈevri ˈʌðər deɪ
-- id: return-to-swimming-laps
-  text: Hearing I can start light freestyle swimming next month is the best news!
-  translation: ¡Escuchar que podré volver a nadar suave el próximo mes es la mejor noticia!
-  visual_hint: 🏊‍♂️🌟
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: light
-    meaning: suave / moderado
-    ipa: laɪt
 - id: idm-no-pain-no-gain-b2
   text: It's hard, but no pain, no gain, right?
   translation: Es duro, pero sin esfuerzo no hay recompensa, ¿no? (no pain, no gain)
@@ -90,7 +61,8 @@ phrases:
   apply_translation: El entrenamiento es duro, pero sin esfuerzo no hay recompensa.
 - id: idm-ease-into-b2
   text: We should ease into the new exercises very slowly.
-  translation: Deberíamos adaptarnos a los ejercicios nuevos muy despacio. (ease into = adaptarse poco a poco)
+  translation: Deberíamos adaptarnos a los ejercicios nuevos muy despacio. (ease into
+    = adaptarse poco a poco)
   visual_hint: 🏋️🐢
   cloze:
   - 3
@@ -109,32 +81,40 @@ roleplay:
   setting: Outpatient sports rehabilitation clinic.
   turns:
   - speaker: ai
-    text: Welcome back for Week 3! How has the shoulder been responding to the home band routine?
+    text: Welcome back for Week 3! How has the shoulder been responding to the home
+      band routine?
   - speaker: user
     goal: Comenta que tu rango de movimiento mejoró notablemente esta semana.
     suggested_lines:
-    - My overhead range of motion is noticeably smoother this week, especially after a warm shower.
-    - However, I still feel a mild pinching sensation when I abduct my arm past ninety degrees.
+    - My overhead range of motion is noticeably smoother this week, especially after
+      a warm shower.
+    - However, I still feel a mild pinching sensation when I abduct my arm past ninety
+      degrees.
   - speaker: ai
     text: Show me that lateral raise slowly—where does the impingement kick in?
   - speaker: user
-    goal: Explica que aún sientes un leve pellizco al elevar el brazo a más de 90 grados.
+    goal: Explica que aún sientes un leve pellizco al elevar el brazo a más de 90
+      grados.
     suggested_lines:
-    - However, I still feel a mild pinching sensation when I abduct my arm past ninety degrees.
+    - However, I still feel a mild pinching sensation when I abduct my arm past ninety
+      degrees.
     - When I focus on retracting my shoulder blade first, the pinch almost disappears.
   - speaker: ai
-    text: Try setting your scapula down and back before lifting—how does that feel now?
+    text: Try setting your scapula down and back before lifting—how does that feel
+      now?
   - speaker: user
     goal: Comenta que al retraer primero el omóplato la molestia casi desaparece.
     suggested_lines:
     - When I focus on retracting my shoulder blade first, the pinch almost disappears.
-    - Am I ready to progress from the yellow resistance band to the medium green band for external rotations?
+    - Am I ready to progress from the yellow resistance band to the medium green band
+      for external rotations?
   - speaker: ai
     text: Bingo! That scapular cue gives the rotator cuff tendon plenty of clearance.
   - speaker: user
     goal: Pregunta si ya puedes avanzar a la banda elástica verde en rotaciones externas.
     suggested_lines:
-    - Am I ready to progress from the yellow resistance band to the medium green band for external rotations?
+    - Am I ready to progress from the yellow resistance band to the medium green band
+      for external rotations?
     - I'll stick to three sets of fifteen slow eccentric reps every other day.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

@@ -3,13 +3,14 @@ title: Renegotiating a cloud vendor SLA
 title_es: Renegociar penalizaciones de SLA con proveedor
 cefr: C1
 topic: work-and-career
-description: Exige mejoras contractuales y cláusulas de salida a un proveedor tras dos caídas que incumplieron el
-  99.9% de disponibilidad.
+description: Exige mejoras contractuales y cláusulas de salida a un proveedor tras
+  dos caídas que incumplieron el 99.9% de disponibilidad.
 phrases:
 - id: fell-below-three-nines
-  text: Twice in the past quarter, your EU-West cluster fell below the contractually guaranteed 99.9% uptime threshold.
-  translation: Dos veces en el último trimestre, su clúster europeo cayó por debajo del umbral garantizado del 99.9%
-    de disponibilidad.
+  text: Twice in the past quarter, your EU-West cluster fell below the contractually
+    guaranteed 99.9% uptime threshold.
+  translation: Dos veces en el último trimestre, su clúster europeo cayó por debajo
+    del umbral garantizado del 99.9% de disponibilidad.
   visual_hint: 📉☁️
   cloze:
   - 5
@@ -19,9 +20,10 @@ phrases:
     meaning: umbral mínimo de disponibilidad
     ipa: ˈʌptaɪm ˈθreʃhoʊld
 - id: token-credits-insufficient
-  text: A five-percent invoice credit doesn't offset the engineering hours we burned failing over traffic manually.
-  translation: Un crédito del cinco por ciento en factura no compensa las horas de ingeniería que gastamos desviando
-    tráfico manualmente.
+  text: A five-percent invoice credit doesn't offset the engineering hours we burned
+    failing over traffic manually.
+  translation: Un crédito del cinco por ciento en factura no compensa las horas de
+    ingeniería que gastamos desviando tráfico manualmente.
   visual_hint: ⚖️⏱️
   cloze:
   - 5
@@ -31,9 +33,10 @@ phrases:
     meaning: compensar / contrarrestar
     ipa: ˈɔːfset
 - id: multi-region-active-failover
-  text: Before we sign a renewal, we need multi-region active-active failover included at our current tier price.
-  translation: Antes de firmar la renovación, necesitamos respaldo activo-activo multirregión incluido al precio
-    de nuestro plan actual.
+  text: Before we sign a renewal, we need multi-region active-active failover included
+    at our current tier price.
+  translation: Antes de firmar la renovación, necesitamos respaldo activo-activo multirregión
+    incluido al precio de nuestro plan actual.
   visual_hint: 🌐🛡️
   cloze:
   - 5
@@ -42,45 +45,10 @@ phrases:
   - word: failover
     meaning: conmutación automática por error
     ipa: ˈfeɪloʊvər
-- id: chronic-breach-termination-right
-  text: We also require a termination-for-cause clause if latency or uptime breaches occur in two consecutive months.
-  translation: También exigimos una cláusula de rescisión sin penalización si ocurren incumplimientos en dos meses
-    consecutivos.
-  visual_hint: 📑🔓
-  cloze:
-  - 5
-  - 10
-  glossary:
-  - word: breaches
-    meaning: incumplimientos contractuales
-    ipa: ˈbriːtʃɪz
-- id: fifteen-minute-incident-bridge
-  text: Your enterprise SLA must also guarantee a live engineering bridge within fifteen minutes of a Sev-1 alert.
-  translation: Su SLA empresarial también debe garantizar un canal técnico en vivo en menos de quince minutos ante
-    una alerta crítica.
-  visual_hint: 🚨📞
-  cloze:
-  - 5
-  - 11
-  glossary:
-  - word: Sev-1 alert
-    meaning: alerta de severidad máxima
-    ipa: sev wʌn əˈlɜːrt
-- id: send-redlined-msa
-  text: Our legal team will send the redlined Master Services Agreement by five o'clock.
-  translation: Nuestro equipo legal enviará el contrato marco con marcas de revisión antes de las cinco.
-  visual_hint: ✍️📄
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: redlined
-    meaning: con control de cambios jurídicos
-    ipa: ˈredlaɪnd
 - id: idm-hold-accountable
   text: We need to hold both teams accountable for the repeated downtime.
-  translation: 'Necesitamos hacer responsables a ambos equipos de las caídas repetidas. (hold accountable: exigir
-    responsabilidad)'
+  translation: 'Necesitamos hacer responsables a ambos equipos de las caídas repetidas.
+    (hold accountable: exigir responsabilidad)'
   visual_hint: ⚖️📉
   cloze:
   - 3
@@ -95,7 +63,8 @@ phrases:
   apply_translation: Todo gerente debería responder por su propio presupuesto.
 - id: idm-read-the-fine-print
   text: Before we sign, let's read the fine print on penalties.
-  translation: 'Antes de firmar, leamos la letra pequeña sobre las penalizaciones. (fine print: cláusulas ocultas)'
+  translation: 'Antes de firmar, leamos la letra pequeña sobre las penalizaciones.
+    (fine print: cláusulas ocultas)'
   visual_hint: 📜🔍
   cloze:
   - 3
@@ -107,39 +76,54 @@ phrases:
   kind: idiom
   apply_sentence: Always ____ in a vendor contract before agreeing.
   apply_answer: read the fine print
-  apply_translation: Siempre lee la letra pequeña en un contrato con proveedores antes de aceptar.
+  apply_translation: Siempre lee la letra pequeña en un contrato con proveedores antes
+    de aceptar.
 roleplay:
   ai_role: vendor account executive
   user_role: head of infrastructure
   setting: Contract renewal and SLA review meeting.
   turns:
   - speaker: ai
-    text: We value your partnership and want to discuss your upcoming multi-year enterprise renewal.
+    text: We value your partnership and want to discuss your upcoming multi-year enterprise
+      renewal.
   - speaker: user
-    goal: Expón que en dos ocasiones cayeron por debajo del 99.9% garantizado por contrato.
+    goal: Expón que en dos ocasiones cayeron por debajo del 99.9% garantizado por
+      contrato.
     suggested_lines:
-    - Twice in the past quarter, your EU-West cluster fell below the contractually guaranteed 99.9% uptime threshold.
-    - A five-percent invoice credit doesn't offset the engineering hours we burned failing over traffic manually.
+    - Twice in the past quarter, your EU-West cluster fell below the contractually
+      guaranteed 99.9% uptime threshold.
+    - A five-percent invoice credit doesn't offset the engineering hours we burned
+      failing over traffic manually.
   - speaker: ai
     text: We did issue the standard five-percent SLA credit for last month's incident.
   - speaker: user
     goal: Deja claro que un 5% de descuento no compensa las horas de ingeniería invertidas.
     suggested_lines:
-    - A five-percent invoice credit doesn't offset the engineering hours we burned failing over traffic manually.
-    - Before we sign a renewal, we need multi-region active-active failover included at our current tier price.
+    - A five-percent invoice credit doesn't offset the engineering hours we burned
+      failing over traffic manually.
+    - Before we sign a renewal, we need multi-region active-active failover included
+      at our current tier price.
   - speaker: ai
-    text: What architectural and commercial terms would restore your confidence for the renewal?
+    text: What architectural and commercial terms would restore your confidence for
+      the renewal?
   - speaker: user
-    goal: Condiciona la renovación a que incluyan respaldo multirregión activo sin costo extra.
+    goal: Condiciona la renovación a que incluyan respaldo multirregión activo sin
+      costo extra.
     suggested_lines:
-    - Before we sign a renewal, we need multi-region active-active failover included at our current tier price.
-    - We also require a termination-for-cause clause if latency or uptime breaches occur in two consecutive months.
+    - Before we sign a renewal, we need multi-region active-active failover included
+      at our current tier price.
+    - We also require a termination-for-cause clause if latency or uptime breaches
+      occur in two consecutive months.
   - speaker: ai
-    text: I can get VP approval to bundle active-active multi-region routing at your current rate.
+    text: I can get VP approval to bundle active-active multi-region routing at your
+      current rate.
   - speaker: user
-    goal: Exige incluir una cláusula de salida sin penalización ante fallos en dos meses seguidos.
+    goal: Exige incluir una cláusula de salida sin penalización ante fallos en dos
+      meses seguidos.
     suggested_lines:
-    - We also require a termination-for-cause clause if latency or uptime breaches occur in two consecutive months.
-    - Your enterprise SLA must also guarantee a live engineering bridge within fifteen minutes of a Sev-1 alert.
+    - We also require a termination-for-cause clause if latency or uptime breaches
+      occur in two consecutive months.
+    - Your enterprise SLA must also guarantee a live engineering bridge within fifteen
+      minutes of a Sev-1 alert.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

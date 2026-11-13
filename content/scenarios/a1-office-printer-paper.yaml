@@ -3,7 +3,8 @@ title: Finding office supplies
 title_es: Buscar papel y útiles de oficina
 cefr: A1
 topic: work-and-career
-description: Pregunta a una compañera dónde está el papel para la impresora, toma dos bolígrafos azules y agradece.
+description: Pregunta a una compañera dónde está el papel para la impresora, toma
+  dos bolígrafos azules y agradece.
 phrases:
 - id: printer-out-of-paper
   text: Excuse me, the printer is out of white paper.
@@ -38,42 +39,10 @@ phrases:
   - word: notepad
     meaning: bloc de notas
     ipa: ˈnoʊtpæd
-- id: load-the-paper-tray
-  text: I will put the paper in the bottom tray now.
-  translation: Pondré el papel en la bandeja inferior ahora.
-  visual_hint: 📥🖨️
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: tray
-    meaning: bandeja
-    ipa: treɪ
-- id: press-green-button
-  text: Now I just press the green start button to print.
-  translation: Ahora solo presiono el botón verde de inicio para imprimir.
-  visual_hint: 🟢👆
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: print
-    meaning: imprimir
-    ipa: prɪnt
-- id: thanks-for-showing-me
-  text: It is printing my pages now—thank you, Sarah!
-  translation: Ya está imprimiendo mis páginas; ¡gracias, Sarah!
-  visual_hint: 📄😊
-  cloze:
-  - 2
-  - 5
-  glossary:
-  - word: pages
-    meaning: páginas / hojas
-    ipa: ˈpeɪdʒɪz
 - id: idm-run-out-of
   text: We ran out of paper for the printer again.
-  translation: 'Se nos acabó el papel de la impresora otra vez. (run out of: quedarse sin)'
+  translation: 'Se nos acabó el papel de la impresora otra vez. (run out of: quedarse
+    sin)'
   visual_hint: 📄😟
   cloze:
   - 3

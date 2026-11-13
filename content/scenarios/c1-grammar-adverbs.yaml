@@ -1,0 +1,94 @@
+id: c1-grammar-adverbs
+title: Negative adverbials and subject-auxiliary inversion
+title_es: Adverbios negativos e inversión sujeto-auxiliar
+cefr: C1
+topic: grammar-and-connectors
+description: 'Domina la inversión enfática tras adverbios restrictivos y negativos:
+  seldom, not only, scarcely, rarely y hardly.'
+phrases:
+- id: seldom-have-witnessed
+  text: Seldom have I witnessed such remarkable composure under pressure.
+  translation: Rara vez he presenciado tanta serenidad bajo presión. (inversión tras
+    'Seldom')
+  visual_hint: 🧘🔥
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: seldom
+    meaning: rara vez / pocas veces
+    ipa: ˈseldəm
+  kind: expression
+  apply_sentence: ____ have we seen such unanimous support from the committee.
+  apply_answer: Seldom
+  apply_translation: Rara vez hemos visto un apoyo tan unánime del comité.
+- id: not-only-did-deliver
+  text: Not only did they meet the deadline, but they also exceeded targets.
+  translation: No solo cumplieron el plazo, sino que también superaron los objetivos.
+  visual_hint: 🎯📈
+  cloze:
+  - 0
+  - 2
+  glossary:
+  - word: not only ... but also
+    meaning: no solo ... sino también
+    ipa: nɑːt ˈoʊnli
+  kind: expression
+  apply_sentence: ____ did she resolve the dispute, but she also strengthened the
+    partnership.
+  apply_answer: Not only
+  apply_translation: No solo resolvió la disputa, sino que también fortaleció la alianza.
+- id: scarcely-had-begun
+  text: Scarcely had the keynote begun when the projector failed.
+  translation: Apenas había comenzado la ponencia cuando falló el proyector.
+  visual_hint: 🎤🔌
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: scarcely ... when
+    meaning: apenas ... cuando
+    ipa: ˈskersli
+- id: rarely-do-policies
+  text: Rarely do regulatory reforms take effect without debate.
+  translation: Rara vez entran en vigor reformas regulatorias sin debate.
+  visual_hint: ⚖️🏛️
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: rarely
+    meaning: rara vez / raramente
+    ipa: ˈrerli
+- id: never-before-faced
+  text: Never before has the sector faced such rapid disruption.
+  translation: Nunca antes se había enfrentado el sector a una disrupción tan rápida.
+  visual_hint: 🌊⚡
+  cloze:
+  - 0
+  - 2
+  glossary:
+  - word: disruption
+    meaning: disrupción / transformación brusca
+    ipa: dɪsˈrʌpʃən
+roleplay:
+  ai_role: conference moderator
+  user_role: keynote panelist
+  setting: Live Q&A at an international leadership summit.
+  turns:
+  - speaker: ai
+    text: How would you characterize the pace of change in your industry this year?
+  - speaker: user
+    goal: Responde usando una inversión con 'Never before' o 'Seldom'.
+    suggested_lines:
+    - Never before has the sector faced such rapid disruption.
+    - Seldom have I seen teams adapt this quickly.
+  - speaker: ai
+    text: And how did your engineering group handle the transition?
+  - speaker: user
+    goal: Destaca logros usando 'Not only did...' o 'Rarely do...'.
+    suggested_lines:
+    - Not only did they meet the deadline, but they also cut costs.
+    - Rarely do major migrations go so smoothly.
+  - speaker: ai
+    text: An impressive case study—thank you for sharing.

@@ -3,13 +3,14 @@ title: Bantering as a culture podcast guest
 title_es: Conversar con agudeza en un pódcast cultural
 cefr: C1
 topic: social-and-smalltalk
-description: Conversa en un pódcast sobre el síndrome del impostor, la creatividad desconectada y los hábitos de
-  atención.
+description: Conversa en un pódcast sobre el síndrome del impostor, la creatividad
+  desconectada y los hábitos de atención.
 phrases:
 - id: reclaiming-boredom
-  text: We've optimized away every idle moment, yet productive boredom is where our best creative leaps happen.
-  translation: Hemos eliminado cada minuto libre, pero el aburrimiento productivo es donde surgen nuestros mejores
-    saltos creativos.
+  text: We've optimized away every idle moment, yet productive boredom is where our
+    best creative leaps happen.
+  translation: Hemos eliminado cada minuto libre, pero el aburrimiento productivo
+    es donde surgen nuestros mejores saltos creativos.
   visual_hint: 🎙️💡
   cloze:
   - 5
@@ -19,10 +20,10 @@ phrases:
     meaning: momento de ocio / sin estímulos
     ipa: ˈaɪdəl ˈmoʊmənt
 - id: impostor-syndrome-signpost
-  text: I've come to view impostor syndrome not as a flaw, but as a signpost that you're stretching beyond your
-    comfort zone.
-  translation: He llegado a ver el síndrome del impostor no como un defecto, sino como señal de que estás saliendo
-    de tu zona de confort.
+  text: I've come to view impostor syndrome not as a flaw, but as a signpost that
+    you're stretching beyond your comfort zone.
+  translation: He llegado a ver el síndrome del impostor no como un defecto, sino
+    como señal de que estás saliendo de tu zona de confort.
   visual_hint: 🧭🚀
   cloze:
   - 7
@@ -32,9 +33,10 @@ phrases:
     meaning: señal indicadora
     ipa: ˈsaɪnpoʊst
 - id: analog-morning-ritual
-  text: Keeping the first hour of the morning strictly analog—just coffee and a fountain pen—protects deep focus.
-  translation: Mantener la primera hora de la mañana estrictamente analógica —solo café y pluma— protege la concentración
-    profunda.
+  text: Keeping the first hour of the morning strictly analog—just coffee and a fountain
+    pen—protects deep focus.
+  translation: Mantener la primera hora de la mañana estrictamente analógica —solo
+    café y pluma— protege la concentración profunda.
   visual_hint: ☕✒️
   cloze:
   - 5
@@ -43,39 +45,6 @@ phrases:
   - word: strictly analog
     meaning: 100% libre de pantallas
     ipa: ˈstrɪktli ˈænəlɔːɡ
-- id: permission-to-write-bad-drafts
-  text: Giving yourself permission to write a clumsy first draft takes the paralysis out of perfectionism.
-  translation: Darte permiso de escribir un primer borrador imperfecto elimina la parálisis del perfeccionismo.
-  visual_hint: 📝🙌
-  cloze:
-  - 5
-  - 10
-  glossary:
-  - word: clumsy
-    meaning: torpe / imperfecto
-    ipa: ˈklʌmzi
-- id: curiosity-over-certainty
-  text: Leading with curiosity rather than performative certainty makes conversations infinitely richer.
-  translation: Guiarse por la curiosidad en vez de la certeza aparente hace las conversaciones mucho más ricas.
-  visual_hint: 🌱🗣️
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: performative
-    meaning: aparente / para la galería
-    ipa: pərˈfɔːrmətɪv
-- id: pleasure-being-on-show
-  text: This hour flew by—thank you for such a thoughtful conversation!
-  translation: Esta hora se pasó volando; ¡gracias por una conversación tan profunda!
-  visual_hint: 🎧🌟
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: thoughtful
-    meaning: reflexiva / profunda
-    ipa: ˈθɔːtfəl
 - id: idm-c1pg-hit-nail
   text: You hit the nail on the head with that observation, honestly.
   translation: Diste justo en el clavo con esa observación (acertar totalmente).
@@ -112,34 +81,43 @@ roleplay:
   setting: Recording studio with broadcast microphones and headphones.
   turns:
   - speaker: ai
-    text: Welcome to the show! In your new essay, you argue that smartphones killed the daydream. Tell us more.
+    text: Welcome to the show! In your new essay, you argue that smartphones killed
+      the daydream. Tell us more.
   - speaker: user
     goal: Reflexiona sobre cómo el aburrimiento productivo impulsa la creatividad.
     suggested_lines:
-    - We've optimized away every idle moment, yet productive boredom is where our best creative leaps happen.
-    - I've come to view impostor syndrome not as a flaw, but as a signpost that you're stretching beyond your comfort
-      zone.
+    - We've optimized away every idle moment, yet productive boredom is where our
+      best creative leaps happen.
+    - I've come to view impostor syndrome not as a flaw, but as a signpost that you're
+      stretching beyond your comfort zone.
   - speaker: ai
-    text: That resonates with so many listeners. How do you handle self-doubt when starting a blank page?
+    text: That resonates with so many listeners. How do you handle self-doubt when
+      starting a blank page?
   - speaker: user
     goal: Replantea el síndrome del impostor como señal de crecimiento.
     suggested_lines:
-    - I've come to view impostor syndrome not as a flaw, but as a signpost that you're stretching beyond your comfort
-      zone.
-    - Keeping the first hour of the morning strictly analog—just coffee and a fountain pen—protects deep focus.
+    - I've come to view impostor syndrome not as a flaw, but as a signpost that you're
+      stretching beyond your comfort zone.
+    - Keeping the first hour of the morning strictly analog—just coffee and a fountain
+      pen—protects deep focus.
   - speaker: ai
     text: I love that reframe. What practical daily habit keeps your attention anchored?
   - speaker: user
     goal: Comparte tu ritual matutino sin pantallas para proteger la concentración.
     suggested_lines:
-    - Keeping the first hour of the morning strictly analog—just coffee and a fountain pen—protects deep focus.
-    - Giving yourself permission to write a clumsy first draft takes the paralysis out of perfectionism.
+    - Keeping the first hour of the morning strictly analog—just coffee and a fountain
+      pen—protects deep focus.
+    - Giving yourself permission to write a clumsy first draft takes the paralysis
+      out of perfectionism.
   - speaker: ai
-    text: Before we wrap up, what one piece of advice would you leave with aspiring creators?
+    text: Before we wrap up, what one piece of advice would you leave with aspiring
+      creators?
   - speaker: user
     goal: Aconseja darse permiso de escribir un primer borrador imperfecto.
     suggested_lines:
-    - Giving yourself permission to write a clumsy first draft takes the paralysis out of perfectionism.
-    - Leading with curiosity rather than performative certainty makes conversations infinitely richer.
+    - Giving yourself permission to write a clumsy first draft takes the paralysis
+      out of perfectionism.
+    - Leading with curiosity rather than performative certainty makes conversations
+      infinitely richer.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

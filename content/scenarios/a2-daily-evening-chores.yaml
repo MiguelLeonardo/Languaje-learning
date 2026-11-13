@@ -1,0 +1,92 @@
+id: a2-daily-evening-chores
+title: Organizing evening chores at home
+title_es: Organizar las tareas nocturnas en casa
+cefr: A2
+topic: daily-tech-and-media
+description: Reparte las tareas del hogar por la tarde usando una lista compartida.
+phrases:
+- id: shared-checklist-app
+  text: I added the groceries to our shared checklist app.
+  translation: Agregué las compras a nuestra aplicación de lista compartida.
+  visual_hint: 📝📱
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: checklist
+    meaning: lista de verificación
+    ipa: ˈtʃeklɪst
+- id: load-the-dishwasher
+  text: Could you load the dishwasher after dinner?
+  translation: ¿Podrías cargar el lavavajillas después de cenar?
+  visual_hint: 🍽️🫧
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: dishwasher
+    meaning: lavavajillas
+    ipa: ˈdɪʃwɑːʃər
+- id: fold-the-laundry
+  text: I still need to fold the clean laundry.
+  translation: Todavía necesito doblar la ropa limpia.
+  visual_hint: 🧺👕
+  cloze:
+  - 4
+  - 7
+  glossary:
+  - word: laundry
+    meaning: ropa por lavar / ropa lavada
+    ipa: ˈlɔːndri
+- id: idm-take-out
+  text: Do not forget to take out the recycling tonight.
+  translation: 'No olvides sacar el reciclaje esta noche. (take out: sacar)'
+  visual_hint: ♻️🗑️
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: take out
+    meaning: sacar
+    ipa: teɪk aʊt
+  kind: phrasal_verb
+  apply_sentence: I will ____ the trash before bed.
+  apply_answer: take out
+  apply_translation: Sacaré la basura antes de acostarme.
+- id: idm-catch-up-on
+  text: After chores, we can catch up on our series.
+  translation: 'Después de las tareas, podemos ponernos al día con nuestra serie. (catch up
+    on: ponerse al día con)'
+  visual_hint: 📺🛋️
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: catch up on
+    meaning: ponerse al día con
+    ipa: kætʃ ʌp ɑːn
+  kind: phrasal_verb
+  apply_sentence: I need the weekend to ____ sleep and reading.
+  apply_answer: catch up on
+  apply_translation: Necesito el fin de semana para ponerme al día con el sueño y la lectura.
+roleplay:
+  ai_role: housemate
+  user_role: housemate
+  setting: Home living room after dinner.
+  turns:
+  - speaker: ai
+    text: Dinner was great! What is left on our evening list?
+  - speaker: user
+    goal: Menciona el lavavajillas y la ropa limpia que falta doblar.
+    suggested_lines:
+    - Could you load the dishwasher after dinner?
+    - I still need to fold the clean laundry.
+  - speaker: ai
+    text: Sure, I will load the dishes right now. Anything else?
+  - speaker: user
+    goal: Recuerda sacar el reciclaje y propón ponerse al día con una serie después.
+    suggested_lines:
+    - Do not forget to take out the recycling tonight.
+    - After chores, we can catch up on our series.
+  - speaker: ai
+    text: Deal! Twenty minutes and we are done.

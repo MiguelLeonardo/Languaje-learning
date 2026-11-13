@@ -3,14 +3,14 @@ title: Evaluating clinical trial informed consent
 title_es: Evaluar consentimiento en ensayo clínico
 cefr: C2
 topic: health-and-emergencies
-description: Analiza con el investigador principal el diseño cruzado del estudio, el perfil de efectos adversos
-  y el derecho de retiro.
+description: Analiza con el investigador principal el diseño cruzado del estudio,
+  el perfil de efectos adversos y el derecho de retiro.
 phrases:
 - id: crossover-arm-guarantee
-  text: If I'm randomized into the placebo control arm initially, does the protocol guarantee open-label crossover
-    at week twelve?
-  translation: Si soy asignado por azar al brazo placebo inicialmente, ¿el protocolo garantiza el cruce al fármaco
-    activo en la semana doce?
+  text: If I'm randomized into the placebo control arm initially, does the protocol
+    guarantee open-label crossover at week twelve?
+  translation: Si soy asignado por azar al brazo placebo inicialmente, ¿el protocolo
+    garantiza el cruce al fármaco activo en la semana doce?
   visual_hint: 🧬🔬
   cloze:
   - 6
@@ -20,8 +20,10 @@ phrases:
     meaning: asignado aleatoriamente
     ipa: ˈrændəmaɪzd
 - id: dose-limiting-toxicities
-  text: What were the most prevalent dose-limiting toxicities observed during the Phase II dose-escalation cohort?
-  translation: ¿Cuáles fueron las toxicidades limitantes de dosis más frecuentes observadas durante la Fase II?
+  text: What were the most prevalent dose-limiting toxicities observed during the
+    Phase II dose-escalation cohort?
+  translation: ¿Cuáles fueron las toxicidades limitantes de dosis más frecuentes observadas
+    durante la Fase II?
   visual_hint: 📊🩺
   cloze:
   - 4
@@ -31,8 +33,10 @@ phrases:
     meaning: frecuentes / prevalentes
     ipa: ˈprevələnt
 - id: unblind-in-emergency
-  text: Should an unexpected adverse event arise, can my primary physician break the blind immediately?
-  translation: En caso de surgir un evento adverso imprevisto, ¿puede mi médico de cabecera abrir el ciego de inmediato?
+  text: Should an unexpected adverse event arise, can my primary physician break the
+    blind immediately?
+  translation: En caso de surgir un evento adverso imprevisto, ¿puede mi médico de
+    cabecera abrir el ciego de inmediato?
   visual_hint: 🔓🏥
   cloze:
   - 4
@@ -41,44 +45,10 @@ phrases:
   - word: break the blind
     meaning: revelar la asignación del estudio por urgencia médica
     ipa: breɪk ðə blaɪnd
-- id: withdraw-without-prejudice
-  text: I appreciate that consent is voluntary and that I may withdraw at any point without affecting my standard
-    clinical care.
-  translation: Valoro que el consentimiento sea voluntario y pueda retirarme en cualquier momento sin afectar mi
-    atención médica habitual.
-  visual_hint: ✍️🛡️
-  cloze:
-  - 6
-  - 13
-  glossary:
-  - word: without prejudice
-    meaning: sin perjuicio ni menoscabo de derechos
-    ipa: wɪˈðaʊt ˈpredʒədɪs
-- id: pharmacokinetic-blood-draws
-  text: Are the biweekly pharmacokinetic blood draws coordinated with my regular morning lab visits?
-  translation: ¿Las tomas de sangre quincuincales se coordinan con mis visitas habituales de laboratorio?
-  visual_hint: 🧪🕗
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: biweekly
-    meaning: cada dos semanas / quincenal
-    ipa: baɪˈwiːkli
-- id: sign-informed-consent
-  text: All my questions have been addressed thoroughly—I'm ready to sign the consent form.
-  translation: Todas mis preguntas fueron respondidas con rigor; estoy listo para firmar el consentimiento.
-  visual_hint: ✅📄
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: thoroughly
-    meaning: a fondo / exhaustivamente
-    ipa: ˈθɜːroʊli
 - id: idm-read-between-the-lines-c2
   text: Patients must learn to read between the lines of consent forms.
-  translation: Los pacientes deben aprender a leer entre líneas en los consentimientos. (read between the lines)
+  translation: Los pacientes deben aprender a leer entre líneas en los consentimientos.
+    (read between the lines)
   visual_hint: 📜🧐
   cloze:
   - 3
@@ -93,7 +63,8 @@ phrases:
   apply_translation: Ella sabe leer entre líneas en sus correos educados.
 - id: idm-the-devil-is-in-the-details-c2
   text: With consent forms, the devil is in the details.
-  translation: En los consentimientos, el diablo está en los detalles. (the devil is in the details)
+  translation: En los consentimientos, el diablo está en los detalles. (the devil
+    is in the details)
   visual_hint: 😈🔬
   cloze:
   - 3
@@ -112,35 +83,47 @@ roleplay:
   setting: Academic medical center clinical research consultation.
   turns:
   - speaker: ai
-    text: Thank you for reviewing the informed consent dossier for our Phase III targeted biologics trial.
+    text: Thank you for reviewing the informed consent dossier for our Phase III targeted
+      biologics trial.
   - speaker: user
-    goal: Pregunta si quienes entran al grupo placebo pasan al tratamiento activo en la semana doce.
+    goal: Pregunta si quienes entran al grupo placebo pasan al tratamiento activo
+      en la semana doce.
     suggested_lines:
-    - If I'm randomized into the placebo control arm initially, does the protocol guarantee open-label crossover
-      at week twelve?
-    - What were the most prevalent dose-limiting toxicities observed during the Phase II dose-escalation cohort?
+    - If I'm randomized into the placebo control arm initially, does the protocol
+      guarantee open-label crossover at week twelve?
+    - What were the most prevalent dose-limiting toxicities observed during the Phase
+      II dose-escalation cohort?
   - speaker: ai
-    text: Yes, every participant in the control arm transitions to the active biologic at the twelve-week mark.
+    text: Yes, every participant in the control arm transitions to the active biologic
+      at the twelve-week mark.
   - speaker: user
     goal: Pregunta qué efectos adversos limitantes se observaron durante la Fase II.
     suggested_lines:
-    - What were the most prevalent dose-limiting toxicities observed during the Phase II dose-escalation cohort?
-    - Should an unexpected adverse event arise, can my primary physician break the blind immediately?
+    - What were the most prevalent dose-limiting toxicities observed during the Phase
+      II dose-escalation cohort?
+    - Should an unexpected adverse event arise, can my primary physician break the
+      blind immediately?
   - speaker: ai
-    text: Phase II showed transient mild transaminase elevations in six percent of patients, all reversible.
+    text: Phase II showed transient mild transaminase elevations in six percent of
+      patients, all reversible.
   - speaker: user
-    goal: Verifica que tu médico pueda conocer la asignación de inmediato ante cualquier urgencia.
+    goal: Verifica que tu médico pueda conocer la asignación de inmediato ante cualquier
+      urgencia.
     suggested_lines:
-    - Should an unexpected adverse event arise, can my primary physician break the blind immediately?
-    - I appreciate that consent is voluntary and that I may withdraw at any point without affecting my standard
-      clinical care.
+    - Should an unexpected adverse event arise, can my primary physician break the
+      blind immediately?
+    - I appreciate that consent is voluntary and that I may withdraw at any point
+      without affecting my standard clinical care.
   - speaker: ai
-    text: 24-hour emergency unblinding is built into the pharmacy portal, and you can withdraw at any time.
+    text: 24-hour emergency unblinding is built into the pharmacy portal, and you
+      can withdraw at any time.
   - speaker: user
-    goal: Confirma tu derecho a retirarte en cualquier momento sin afectar tu atención médica.
+    goal: Confirma tu derecho a retirarte en cualquier momento sin afectar tu atención
+      médica.
     suggested_lines:
-    - I appreciate that consent is voluntary and that I may withdraw at any point without affecting my standard
-      clinical care.
-    - Are the biweekly pharmacokinetic blood draws coordinated with my regular morning lab visits?
+    - I appreciate that consent is voluntary and that I may withdraw at any point
+      without affecting my standard clinical care.
+    - Are the biweekly pharmacokinetic blood draws coordinated with my regular morning
+      lab visits?
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

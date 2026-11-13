@@ -3,11 +3,13 @@ title: Repairing eyeglasses at an optical shop
 title_es: Reparar lentes en una óptica
 cefr: B1
 topic: hotel-and-shopping
-description: Pide a un óptico reemplazar el tornillo de la patilla de tus lentes y ajustar el puente nasal.
+description: Pide a un óptico reemplazar el tornillo de la patilla de tus lentes y
+  ajustar el puente nasal.
 phrases:
 - id: hinge-screw-fell-out
   text: Hello! The tiny screw on the left arm of my glasses just fell out.
-  translation: ¡Hola! El pequeño tornillo de la patilla izquierda de mis lentes se acaba de caer.
+  translation: ¡Hola! El pequeño tornillo de la patilla izquierda de mis lentes se
+    acaba de caer.
   visual_hint: 👓🔩
   cloze:
   - 4
@@ -29,7 +31,8 @@ phrases:
     ipa: hɪndʒ
 - id: sliding-down-my-nose
   text: They've also been sliding down my nose lately; could you adjust the nose pads?
-  translation: Últimamente también se me resbalan por la nariz; ¿podría ajustar las plaquetas?
+  translation: Últimamente también se me resbalan por la nariz; ¿podría ajustar las
+    plaquetas?
   visual_hint: 👃🔧
   cloze:
   - 4
@@ -38,39 +41,6 @@ phrases:
   - word: nose pads
     meaning: plaquetas nasales
     ipa: noʊz pædz
-- id: ultrasonic-lens-clean
-  text: Thank you! How much do I owe you for the repair and cleaning?
-  translation: ¡Gracias! ¿Cuánto le debo por la reparación y la limpieza?
-  visual_hint: ✨💳
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: owe
-    meaning: deber (pago)
-    ipa: oʊ
-- id: microfiber-cloth-spray
-  text: I'll buy a bottle of anti-fog lens spray and a microfiber cloth.
-  translation: Compraré un frasco de spray antiempañante y un paño de microfibra.
-  visual_hint: 🧴🧼
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: anti-fog
-    meaning: antiempañante
-    ipa: ˈænti fɑːɡ
-- id: fit-snugly-now
-  text: They sit level and fit snugly behind my ears now—thank you!
-  translation: Ahora quedan nivelados y ajustan perfecto detrás de las orejas; ¡gracias!
-  visual_hint: 😊👌
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: snugly
-    meaning: cómodamente ajustados
-    ipa: ˈsnʌɡli
 - id: idm-come-apart-hinge
   text: The right arm of my glasses started to come apart at the hinge.
   translation: La patilla derecha de mis lentes empezó a soltarse en la bisagra.
@@ -85,10 +55,12 @@ phrases:
   kind: phrasal_verb
   apply_sentence: Cheap plastic frames tend to ____ after a few months.
   apply_answer: come apart
-  apply_translation: Los armazones de plástico barato tienden a desarmarse después de unos meses.
+  apply_translation: Los armazones de plástico barato tienden a desarmarse después
+    de unos meses.
 - id: idm-in-the-meantime
   text: In the meantime, could you lend me a spare case while you fix them?
-  translation: Mientras tanto, ¿podría prestarme un estuche de repuesto mientras los repara?
+  translation: Mientras tanto, ¿podría prestarme un estuche de repuesto mientras los
+    repara?
   visual_hint: ⏳☕
   cloze:
   - 4
@@ -100,7 +72,8 @@ phrases:
   kind: expression
   apply_sentence: Your lenses will be ready at four; ____, feel free to grab a coffee.
   apply_answer: in the meantime
-  apply_translation: Sus lentes estarán listos a las cuatro; mientras tanto, puede tomar un café.
+  apply_translation: Sus lentes estarán listos a las cuatro; mientras tanto, puede
+    tomar un café.
 roleplay:
   ai_role: optician
   user_role: customer
@@ -114,21 +87,24 @@ roleplay:
     - Hello! The tiny screw on the left arm of my glasses just fell out.
     - Do you have a replacement screw that fits this titanium hinge?
   - speaker: ai
-    text: The threads on the hinge are completely fine—it just needs a new 1.4-millimeter screw.
+    text: The threads on the hinge are completely fine—it just needs a new 1.4-millimeter
+      screw.
   - speaker: user
     goal: Pregunta si tienen un tornillo de repuesto para esa bisagra.
     suggested_lines:
     - Do you have a replacement screw that fits this titanium hinge?
     - They've also been sliding down my nose lately; could you adjust the nose pads?
   - speaker: ai
-    text: I've put a new lock-screw in both sides so the right one doesn't loosen either.
+    text: I've put a new lock-screw in both sides so the right one doesn't loosen
+      either.
   - speaker: user
     goal: Pide que ajusten las plaquetas porque se te resbalan.
     suggested_lines:
     - They've also been sliding down my nose lately; could you adjust the nose pads?
     - Thank you! How much do I owe you for the repair and cleaning?
   - speaker: ai
-    text: I warmed the temple tips and adjusted the pads, plus ran them through our ultrasonic cleaner.
+    text: I warmed the temple tips and adjusted the pads, plus ran them through our
+      ultrasonic cleaner.
   - speaker: user
     goal: Pregunta cuánto debes por la reparación y el ajuste.
     suggested_lines:

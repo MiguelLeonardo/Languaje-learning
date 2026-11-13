@@ -3,11 +3,13 @@ title: Planning corporate event catering
 title_es: Planificar el catering de un evento
 cefr: B2
 topic: food-and-drink
-description: Coordina con una empresa de banquetes estaciones de comida, opciones veganas y horarios de servicio.
+description: Coordina con una empresa de banquetes estaciones de comida, opciones
+  veganas y horarios de servicio.
 phrases:
 - id: bite-sized-canapes
   text: We want passed bite-sized canapés so guests can mingle easily.
-  translation: Queremos canapés de un bocado servidos en bandeja para que los invitados conversen cómodamente.
+  translation: Queremos canapés de un bocado servidos en bandeja para que los invitados
+    conversen cómodamente.
   visual_hint: 🍢🥂
   cloze:
   - 3
@@ -17,8 +19,10 @@ phrases:
     meaning: socializar / mezclarse
     ipa: ˈmɪŋɡəl
 - id: clearly-labeled-allergens
-  text: At least thirty percent of the platter options should be vegan and clearly labeled.
-  translation: Al menos el treinta por ciento de las bandejas deben ser veganas y estar claramente etiquetadas.
+  text: At least thirty percent of the platter options should be vegan and clearly
+    labeled.
+  translation: Al menos el treinta por ciento de las bandejas deben ser veganas y
+    estar claramente etiquetadas.
   visual_hint: 🌱🏷️
   cloze:
   - 4
@@ -29,7 +33,8 @@ phrases:
     ipa: ˈplætər
 - id: coffee-and-pastry-break
   text: Can you set up an espresso bar during the afternoon networking break?
-  translation: ¿Pueden instalar una barra de espresso durante el receso de networking de la tarde?
+  translation: ¿Pueden instalar una barra de espresso durante el receso de networking
+    de la tarde?
   visual_hint: ☕⚡
   cloze:
   - 4
@@ -38,42 +43,10 @@ phrases:
   - word: set up
     meaning: instalar / montar
     ipa: set ʌp
-- id: final-headcount-deadline
-  text: When is the final cutoff date to confirm our exact guest headcount?
-  translation: ¿Cuál es la fecha límite para confirmar el número exacto de asistentes?
-  visual_hint: 📅👥
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: headcount
-    meaning: número de asistentes
-    ipa: ˈhedkaʊnt
-- id: staffing-and-clean-up
-  text: Does the quote include servers, glassware rental, and post-event cleanup?
-  translation: ¿La cotización incluye meseros, alquiler de cristalería y limpieza final?
-  visual_hint: 🧾🥂
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: glassware
-    meaning: cristalería
-    ipa: ˈɡlæswer
-- id: tasting-session-friday
-  text: Let's schedule a menu tasting this Friday before we sign the deposit.
-  translation: Agendemos una degustación de menú este viernes antes de firmar el anticipo.
-  visual_hint: 🍽️✍️
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: tasting
-    meaning: degustación
-    ipa: ˈteɪstɪŋ
 - id: a-ballpark-figure
   text: Could you give us a ballpark figure for the headcount?
-  translation: '¿Podría darnos una cifra aproximada de asistentes? (a ballpark figure: cifra aproximada)'
+  translation: '¿Podría darnos una cifra aproximada de asistentes? (a ballpark figure:
+    cifra aproximada)'
   visual_hint: 🔢🍽️
   cloze:
   - 3
@@ -88,8 +61,8 @@ phrases:
   apply_translation: Solo necesito una cifra aproximada, no un precio exacto.
 - id: cover-all-the-bases
   text: Let's cover all the bases and label every allergen clearly.
-  translation: 'Cubramos todos los frentes y etiquetemos claramente cada alérgeno. (cover all the bases: no dejar
-    nada al azar)'
+  translation: 'Cubramos todos los frentes y etiquetemos claramente cada alérgeno.
+    (cover all the bases: no dejar nada al azar)'
   visual_hint: ✅🥪
   cloze:
   - 3
@@ -101,14 +74,16 @@ phrases:
   kind: idiom
   apply_sentence: Our lawyer wanted to ____ before signing the contract.
   apply_answer: cover all the bases
-  apply_translation: Nuestro abogado quiso cubrir todos los frentes antes de firmar el contrato.
+  apply_translation: Nuestro abogado quiso cubrir todos los frentes antes de firmar
+    el contrato.
 roleplay:
   ai_role: catering manager
   user_role: event organizer
   setting: Planning the menu for a 60-person product launch.
   turns:
   - speaker: ai
-    text: Thanks for meeting today! For your 60 guests, do you prefer a sit-down buffet or cocktail style?
+    text: Thanks for meeting today! For your 60 guests, do you prefer a sit-down buffet
+      or cocktail style?
   - speaker: user
     goal: Explica que prefieren canapés de un bocado para facilitar el networking.
     suggested_lines:

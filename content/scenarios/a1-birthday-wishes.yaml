@@ -3,7 +3,8 @@ title: Wishing a friend happy birthday
 title_es: Felicitar a un amigo en su cumpleaños
 cefr: A1
 topic: social-and-smalltalk
-description: Felicita a una compañera de clase por su cumpleaños, entrégale una tarjeta y unos chocolates.
+description: Felicita a una compañera de clase por su cumpleaños, entrégale una tarjeta
+  y unos chocolates.
 phrases:
 - id: happy-birthday-emma
   text: Happy birthday, Emma! I hope you have a wonderful day.
@@ -38,39 +39,6 @@ phrases:
   - word: dark chocolates
     meaning: chocolates amargos / oscuros
     ipa: dɑːrk ˈtʃɑːkləts
-- id: dinner-with-family
-  text: Are you having a special dinner tonight with your family?
-  translation: ¿Vas a tener una cena especial esta noche con tu familia?
-  visual_hint: 🍽️🥂
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: special
-    meaning: especial
-    ipa: ˈspeʃəl
-- id: try-a-vanilla-cupcake
-  text: Thank you for the vanilla cupcake—it looks delicious!
-  translation: ¡Gracias por el cupcake de vainilla; se ve delicioso!
-  visual_hint: 🧁😋
-  cloze:
-  - 2
-  - 5
-  glossary:
-  - word: delicious
-    meaning: delicioso
-    ipa: dɪˈlɪʃəs
-- id: sing-happy-birthday
-  text: Let's sing Happy Birthday together before the lesson!
-  translation: ¡Cantemos el Feliz Cumpleaños juntos antes de la lección!
-  visual_hint: 🎶🎉
-  cloze:
-  - 2
-  - 5
-  glossary:
-  - word: sing
-    meaning: cantar
-    ipa: sɪŋ
 - id: idm-a1bd-piece-of-cake
   text: Thank you! The cake was a piece of cake to make.
   translation: ¡Gracias! Hacer el pastel fue pan comido (muy fácil).

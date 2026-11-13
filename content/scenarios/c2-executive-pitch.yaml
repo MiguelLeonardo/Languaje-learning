@@ -3,11 +3,13 @@ title: Pitching strategy and defending budget
 title_es: Presentar estrategia y defender presupuesto
 cefr: C2
 topic: work-and-career
-description: Presenta una iniciativa estratégica ante el comité directivo y defiende el retorno de inversión.
+description: Presenta una iniciativa estratégica ante el comité directivo y defiende
+  el retorno de inversión.
 phrases:
 - id: long-term-payoff
   text: While the upfront investment is substantial, the long-term payoff is undeniable.
-  translation: Aunque la inversión inicial es considerable, el beneficio a largo plazo es innegable.
+  translation: Aunque la inversión inicial es considerable, el beneficio a largo plazo
+    es innegable.
   visual_hint: 📈💼
   cloze:
   - 2
@@ -21,7 +23,8 @@ phrases:
     ipa: ˈpeɪɔːf
 - id: mitigate-risk
   text: We've built in clear milestones so we can course-correct if needed.
-  translation: Hemos incorporado hitos claros para poder corregir el rumbo si fuera necesario.
+  translation: Hemos incorporado hitos claros para poder corregir el rumbo si fuera
+    necesario.
   visual_hint: 🧭🎯
   cloze:
   - 4
@@ -34,7 +37,8 @@ phrases:
     meaning: corregir el rumbo sobre la marcha
 - id: green-light
   text: With your green light today, we can kick off the pilot next month.
-  translation: Con su visto bueno hoy, podemos poner en marcha el piloto el próximo mes.
+  translation: Con su visto bueno hoy, podemos poner en marcha el piloto el próximo
+    mes.
   visual_hint: 🟢🚀
   cloze:
   - 2
@@ -44,58 +48,10 @@ phrases:
     meaning: visto bueno / aprobación
   - word: kick off
     meaning: dar inicio / poner en marcha
-- id: downside-mitigation
-  text: We've ring-fenced the downside risk by staging capital deployment across three milestones.
-  translation: Hemos acotado el riesgo de pérdida escalonando el despliegue de capital en tres hitos.
-  visual_hint: 🛡️🏛️
-  cloze:
-  - 1
-  - 3
-  - 7
-  - 11
-  glossary:
-  - word: ring-fenced
-    meaning: blindado / aislado financieramente
-    ipa: ˈrɪŋ fenst
-  - word: milestones
-    meaning: hitos
-    ipa: ˈmaɪlstoʊnz
-- id: unit-economics
-  text: Our unit economics turn cash-flow positive well before the Series B runway expires.
-  translation: Nuestra economía unitaria genera flujo de caja positivo mucho antes de que expire el capital de la
-    Serie B.
-  visual_hint: 💹🏦
-  cloze:
-  - 1
-  - 2
-  - 4
-  - 11
-  glossary:
-  - word: unit economics
-    meaning: economía unitaria
-    ipa: ˈjuːnɪt ˌiːkəˈnɑːmɪks
-  - word: runway
-    meaning: margen de liquidez
-    ipa: ˈrʌnweɪ
-- id: board-alignment
-  text: With the board's green light today, we can execute the rollout by Q3.
-  translation: Con la luz verde del directorio hoy, podemos ejecutar el lanzamiento para el tercer trimestre.
-  visual_hint: 🟢🚀
-  cloze:
-  - 3
-  - 4
-  - 8
-  - 10
-  glossary:
-  - word: green light
-    meaning: aprobación / luz verde
-    ipa: ɡriːn laɪt
-  - word: rollout
-    meaning: despliegue / lanzamiento
-    ipa: ˈroʊlaʊt
 - id: idm-bite-the-bullet
   text: It's time to bite the bullet and fund the migration.
-  translation: 'Es hora de armarse de valor y financiar la migración. (bite the bullet: afrontar algo difícil)'
+  translation: 'Es hora de armarse de valor y financiar la migración. (bite the bullet:
+    afrontar algo difícil)'
   visual_hint: 🔫😬
   cloze:
   - 3
@@ -110,7 +66,8 @@ phrases:
   apply_translation: La junta por fin decidió armarse de valor y recortar costes.
 - id: idm-move-the-needle
   text: Small tweaks won't move the needle on our margins.
-  translation: 'Pequeños ajustes no cambiarán de forma notable nuestros márgenes. (move the needle: marcar diferencia)'
+  translation: 'Pequeños ajustes no cambiarán de forma notable nuestros márgenes.
+    (move the needle: marcar diferencia)'
   visual_hint: 📊🪡
   cloze:
   - 3
@@ -122,7 +79,8 @@ phrases:
   kind: idiom
   apply_sentence: Only a bold strategy can ____ on market share.
   apply_answer: move the needle
-  apply_translation: Solo una estrategia audaz puede marcar la diferencia en la cuota de mercado.
+  apply_translation: Solo una estrategia audaz puede marcar la diferencia en la cuota
+    de mercado.
 roleplay:
   ai_role: chief financial officer
   user_role: product director

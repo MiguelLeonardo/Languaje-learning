@@ -1,0 +1,90 @@
+id: c2-grammar-adverbs
+title: Rhetorical fronting and literary adverbials
+title_es: Anteposición retórica y adverbios literarios
+cefr: C2
+topic: grammar-and-connectors
+description: 'Emplea inversiones y adverbios de matiz superior: ''little did'', ''under
+  no circumstances'', ''only by'', ''unwittingly'' y ''ostensibly''.'
+phrases:
+- id: little-did-realize
+  text: Little did we realize how profoundly the merger would reshape culture.
+  translation: Poco nos imaginábamos hasta qué punto la fusión transformaría la cultura.
+  visual_hint: 🏢🔄
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: little did ... realize
+    meaning: poco se imaginaba que...
+    ipa: ˈlɪtəl dɪd
+  kind: expression
+  apply_sentence: ____ she know that her brief essay would spark a national debate.
+  apply_answer: Little did
+  apply_translation: Poco sabía ella que su breve ensayo desataría un debate nacional.
+- id: under-no-circumstances
+  text: Under no circumstances should unverified data reach the press.
+  translation: Bajo ninguna circunstancia deben llegar datos sin verificar a la prensa.
+  visual_hint: 🚫📰
+  cloze:
+  - 0
+  - 2
+  glossary:
+  - word: under no circumstances
+    meaning: bajo ninguna circunstancia
+    ipa: ˈʌndər noʊ ˈsɜːrkəmstænsɪz
+  kind: expression
+  apply_sentence: ____ are guests permitted inside the archive without an escort.
+  apply_answer: Under no circumstances
+  apply_translation: Bajo ninguna circunstancia se permite entrar al archivo sin acompañante.
+- id: only-by-rethinking
+  text: Only by rethinking incentives can we curb short-termism.
+  translation: Solo replanteando los incentivos podemos frenar el cortoplacismo.
+  visual_hint: 🎯🔄
+  cloze:
+  - 0
+  - 4
+  glossary:
+  - word: curb
+    meaning: frenar / contener
+    ipa: kɜːrb
+- id: unwittingly-triggered
+  text: The memo unwittingly triggered a wave of speculation.
+  translation: El memorando desató inadvertidamente una ola de especulación.
+  visual_hint: 📄💥
+  cloze:
+  - 2
+  glossary:
+  - word: unwittingly
+    meaning: inadvertidamente / sin quererlo
+    ipa: ʌnˈwɪtɪŋli
+- id: ostensibly-routine
+  text: The visit was ostensibly routine, yet tensions were palpable.
+  translation: La visita era aparentemente rutinaria, pero las tensiones eran palpables.
+  visual_hint: 🎭🤝
+  cloze:
+  - 3
+  glossary:
+  - word: ostensibly
+    meaning: aparentemente / en apariencia
+    ipa: ɑːˈstensəbli
+roleplay:
+  ai_role: investigative journalist
+  user_role: policy analyst
+  setting: On-air interview about a corporate governance scandal.
+  turns:
+  - speaker: ai
+    text: When that internal memo leaked, did anyone foresee the fallout?
+  - speaker: user
+    goal: Responde usando 'Little did...' o 'unwittingly'.
+    suggested_lines:
+    - Little did the board realize how fiercely investors would react.
+    - The memo unwittingly exposed deeper structural flaws.
+  - speaker: ai
+    text: What guardrails should prevent this from happening again?
+  - speaker: user
+    goal: Establece una regla firme con 'Under no circumstances' o 'Only by...'.
+    suggested_lines:
+    - Under no circumstances should audit reports bypass the ethics committee.
+    - Only by rethinking executive incentives can we restore trust.
+  - speaker: ai
+    text: A sharp and sobering takeaway. Thank you for joining us.

@@ -3,7 +3,8 @@ title: Chatting about dogs at the park
 title_es: Hablar de mascotas en el parque
 cefr: A1
 topic: social-and-smalltalk
-description: Conversa con otro dueño de perro en el parque sobre el nombre, la edad y qué le gusta jugar a tu mascota.
+description: Conversa con otro dueño de perro en el parque sobre el nombre, la edad
+  y qué le gusta jugar a tu mascota.
 phrases:
 - id: cute-golden-dog
   text: Your dog is so cute and friendly! What is his name?
@@ -38,42 +39,10 @@ phrases:
   - word: chasing
     meaning: perseguir / correr tras
     ipa: ˈtʃeɪsɪŋ
-- id: come-here-every-morning
-  text: We walk in this park every morning at eight.
-  translation: Caminamos en este parque todas las mañanas a las ocho.
-  visual_hint: 🌳🕗
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: every morning
-    meaning: todas las mañanas
-    ipa: ˈevri ˈmɔːrnɪŋ
-- id: give-him-a-treat
-  text: May I give Bruno a small dog biscuit?
-  translation: ¿Puedo darle a Bruno una pequeña galleta para perro?
-  visual_hint: 🦴😊
-  cloze:
-  - 2
-  - 5
-  glossary:
-  - word: biscuit
-    meaning: galleta / premio
-    ipa: ˈbɪskɪt
-- id: time-for-water
-  text: Look, they are thirsty now—let's go to the water bowl!
-  translation: Mira, ya tienen sed; ¡vamos al bebedero de agua!
-  visual_hint: 💧🐕
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: thirsty
-    meaning: sedientos / con sed
-    ipa: ˈθɜːrsti
 - id: idm-a1tp-take-for-a-walk
   text: I take out my dog every morning before school.
-  translation: Saco a pasear a mi perro cada mañana antes de la escuela (sacar de casa).
+  translation: Saco a pasear a mi perro cada mañana antes de la escuela (sacar de
+    casa).
   visual_hint: 🐕🚶
   cloze:
   - 3

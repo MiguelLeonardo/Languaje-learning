@@ -3,12 +3,14 @@ title: Acquiring a painting at an art gallery
 title_es: Consultar procedencia y conservación en galería
 cefr: C1
 topic: hotel-and-shopping
-description: Conversa con el director de una galería sobre procedencia de una obra, cristal antirreflejo y transporte
-  asegurado.
+description: Conversa con el director de una galería sobre procedencia de una obra,
+  cristal antirreflejo y transporte asegurado.
 phrases:
 - id: exhibition-provenance
-  text: Could you share the full provenance and exhibition history for this oil-on-linen piece?
-  translation: ¿Podría compartir la procedencia completa y el historial de exposiciones de este óleo sobre lino?
+  text: Could you share the full provenance and exhibition history for this oil-on-linen
+    piece?
+  translation: ¿Podría compartir la procedencia completa y el historial de exposiciones
+    de este óleo sobre lino?
   visual_hint: 🖼️📜
   cloze:
   - 4
@@ -18,8 +20,10 @@ phrases:
     meaning: procedencia / historial de propiedad
     ipa: ˈprɑːvənəns
 - id: museum-grade-uv-glazing
-  text: If we hang it in a sunlit foyer, would you recommend framing it behind museum-grade UV acrylic?
-  translation: Si lo colgamos en un vestíbulo iluminado, ¿recomendaría enmarcarlo con acrílico UV de grado museístico?
+  text: If we hang it in a sunlit foyer, would you recommend framing it behind museum-grade
+    UV acrylic?
+  translation: Si lo colgamos en un vestíbulo iluminado, ¿recomendaría enmarcarlo
+    con acrílico UV de grado museístico?
   visual_hint: ☀️🛡️
   cloze:
   - 5
@@ -29,8 +33,10 @@ phrases:
     meaning: de calidad de museo
     ipa: mjuːˈziːəm ɡreɪd
 - id: condition-report-craquelure
-  text: The impasto brushwork is vibrant, and I see zero surface craquelure under raking light.
-  translation: La pincelada de empaste es vibrante y no veo ninguna grieta superficial bajo luz rasante.
+  text: The impasto brushwork is vibrant, and I see zero surface craquelure under
+    raking light.
+  translation: La pincelada de empaste es vibrante y no veo ninguna grieta superficial
+    bajo luz rasante.
   visual_hint: 🎨🔦
   cloze:
   - 4
@@ -39,42 +45,10 @@ phrases:
   - word: impasto
     meaning: empaste (capa gruesa de pintura)
     ipa: ɪmˈpæstoʊ
-- id: fine-art-crate-shipping
-  text: Can your registrars arrange climate-controlled fine-art shipping and wall installation?
-  translation: ¿Puede su equipo gestionar el transporte climatizado de obras de arte y la instalación en pared?
-  visual_hint: 📦🚚
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: registrars
-    meaning: encargados de registro y conservación
-    ipa: ˈredʒɪstrɑːrz
-- id: certificate-of-authenticity
-  text: Please include the signed certificate of authenticity and archival invoice for our insurer.
-  translation: Por favor incluya el certificado de autenticidad firmado y la factura para nuestra aseguradora.
-  visual_hint: ✍️📑
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: authenticity
-    meaning: autenticidad
-    ipa: ˌɔːθenˈtɪsəti
-- id: place-red-dot-reserve
-  text: Let's place a formal hold on the work while our bank processes the wire.
-  translation: Pongamos una reserva formal sobre la obra mientras nuestro banco procesa la transferencia.
-  visual_hint: 🔴🤝
-  cloze:
-  - 4
-  - 9
-  glossary:
-  - word: formal hold
-    meaning: reserva formal de compra
-    ipa: ˈfɔːrməl hoʊld
 - id: idm-pin-down-provenance
   text: The archivist helped us pin down the painting's exact exhibition history.
-  translation: El archivista nos ayudó a precisar el historial exacto de exposiciones de la pintura.
+  translation: El archivista nos ayudó a precisar el historial exacto de exposiciones
+    de la pintura.
   visual_hint: 🖼️🔎
   cloze:
   - 3
@@ -84,12 +58,15 @@ phrases:
     meaning: precisar / confirmar con exactitud
     ipa: pɪn daʊn
   kind: phrasal_verb
-  apply_sentence: Collectors want to ____ every prior owner before bidding on a rare canvas.
+  apply_sentence: Collectors want to ____ every prior owner before bidding on a rare
+    canvas.
   apply_answer: pin down
-  apply_translation: Los coleccionistas quieren precisar cada dueño anterior antes de pujar por un lienzo raro.
+  apply_translation: Los coleccionistas quieren precisar cada dueño anterior antes
+    de pujar por un lienzo raro.
 - id: idm-par-for-the-course
   text: Requesting an independent condition report is par for the course at this level.
-  translation: Solicitar un informe de estado independiente es lo normal (lo esperado) a este nivel.
+  translation: Solicitar un informe de estado independiente es lo normal (lo esperado)
+    a este nivel.
   visual_hint: 🏛️📜
   cloze:
   - 4
@@ -101,7 +78,8 @@ phrases:
   kind: idiom
   apply_sentence: Extended escrow periods for museum-grade works are ____.
   apply_answer: par for the course
-  apply_translation: Los plazos de depósito prolongados para obras de nivel museo son algo habitual.
+  apply_translation: Los plazos de depósito prolongados para obras de nivel museo
+    son algo habitual.
 roleplay:
   ai_role: gallery director
   user_role: art collector
@@ -110,23 +88,31 @@ roleplay:
   - speaker: ai
     text: This 2019 canvas is one of the artist's most sought-after coastal studies.
   - speaker: user
-    goal: Pide revisar la procedencia completa y el historial de exposiciones de la obra.
+    goal: Pide revisar la procedencia completa y el historial de exposiciones de la
+      obra.
     suggested_lines:
-    - Could you share the full provenance and exhibition history for this oil-on-linen piece?
-    - If we hang it in a sunlit foyer, would you recommend framing it behind museum-grade UV acrylic?
+    - Could you share the full provenance and exhibition history for this oil-on-linen
+      piece?
+    - If we hang it in a sunlit foyer, would you recommend framing it behind museum-grade
+      UV acrylic?
   - speaker: ai
-    text: It comes directly from the estate collection and was exhibited at the Venice Biennale.
+    text: It comes directly from the estate collection and was exhibited at the Venice
+      Biennale.
   - speaker: user
     goal: Pregunta cómo proteger la obra de la luz solar en el vestíbulo.
     suggested_lines:
-    - If we hang it in a sunlit foyer, would you recommend framing it behind museum-grade UV acrylic?
-    - The impasto brushwork is vibrant, and I see zero surface craquelure under raking light.
+    - If we hang it in a sunlit foyer, would you recommend framing it behind museum-grade
+      UV acrylic?
+    - The impasto brushwork is vibrant, and I see zero surface craquelure under raking
+      light.
   - speaker: ai
-    text: For an oil painting, we'll apply a breathable conservation varnish and recommend indirect LED spots.
+    text: For an oil painting, we'll apply a breathable conservation varnish and recommend
+      indirect LED spots.
   - speaker: user
     goal: Comenta el excelente estado del empaste bajo luz rasante.
     suggested_lines:
-    - The impasto brushwork is vibrant, and I see zero surface craquelure under raking light.
+    - The impasto brushwork is vibrant, and I see zero surface craquelure under raking
+      light.
     - Can your registrars arrange climate-controlled fine-art shipping and wall installation?
   - speaker: ai
     text: Our conservator signed the clean condition report this morning.
@@ -134,6 +120,7 @@ roleplay:
     goal: Pregunta si la galería coordina el transporte climatizado y el montaje.
     suggested_lines:
     - Can your registrars arrange climate-controlled fine-art shipping and wall installation?
-    - Please include the signed certificate of authenticity and archival invoice for our insurer.
+    - Please include the signed certificate of authenticity and archival invoice for
+      our insurer.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

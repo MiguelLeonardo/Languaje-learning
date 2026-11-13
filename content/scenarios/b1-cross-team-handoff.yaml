@@ -3,11 +3,14 @@ title: Handing off design files to engineering
 title_es: Entregar archivos de diseño a ingeniería
 cefr: B1
 topic: work-and-career
-description: Explica al desarrollador principal cómo están organizados los componentes en Figma y los estados móviles.
+description: Explica al desarrollador principal cómo están organizados los componentes
+  en Figma y los estados móviles.
 phrases:
 - id: annotated-figma-specs
-  text: I've marked the checkout flow as 'Ready for Dev' in Figma with all spacing and color tokens.
-  translation: Marqué el flujo de pago como 'Listo para Desarrollo' en Figma con todos los espacios y colores.
+  text: I've marked the checkout flow as 'Ready for Dev' in Figma with all spacing
+    and color tokens.
+  translation: Marqué el flujo de pago como 'Listo para Desarrollo' en Figma con todos
+    los espacios y colores.
   visual_hint: 🎨💻
   cloze:
   - 5
@@ -17,8 +20,10 @@ phrases:
     meaning: variables de diseño (colores, medidas)
     ipa: ˈtoʊkənz
 - id: mobile-and-error-states
-  text: Next to each desktop screen, I included the mobile view plus the empty and error states.
-  translation: Junto a cada pantalla de escritorio incluí la vista móvil además de los estados vacíos y de error.
+  text: Next to each desktop screen, I included the mobile view plus the empty and
+    error states.
+  translation: Junto a cada pantalla de escritorio incluí la vista móvil además de
+    los estados vacíos y de error.
   visual_hint: 📱⚠️
   cloze:
   - 5
@@ -28,8 +33,10 @@ phrases:
     meaning: pantallas de estado de error
     ipa: ˈerər steɪts
 - id: exportable-svg-icons
-  text: All the custom icons are grouped as exportable SVGs so you can grab them in one click.
-  translation: Todos los íconos personalizados están agrupados como SVG exportables para descargarlos en un clic.
+  text: All the custom icons are grouped as exportable SVGs so you can grab them in
+    one click.
+  translation: Todos los íconos personalizados están agrupados como SVG exportables
+    para descargarlos en un clic.
   visual_hint: ✨📥
   cloze:
   - 5
@@ -38,40 +45,6 @@ phrases:
   - word: exportable
     meaning: listos para exportar
     ipa: ɪkˈspɔːrtəbəl
-- id: do-a-quick-qa-pass
-  text: Once you deploy it to the staging link on Wednesday, let's do a fifteen-minute visual QA together.
-  translation: En cuanto lo suban al enlace de pruebas el miércoles, hagamos juntos una revisión visual de quince
-    minutos.
-  visual_hint: 🔍✅
-  cloze:
-  - 5
-  - 11
-  glossary:
-  - word: staging
-    meaning: entorno de pruebas previas
-    ipa: ˈsteɪdʒɪŋ
-- id: accessible-contrast-ratios
-  text: I also verified that all button text meets double-A contrast ratios.
-  translation: También verifiqué que todos los botones cumplan el contraste de accesibilidad AA.
-  visual_hint: 👁️🛡️
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: meets
-    meaning: cumple con (un estándar)
-    ipa: miːts
-- id: ping-in-slack-thread
-  text: If any interaction feels tricky to animate, just tag me in the Slack thread!
-  translation: Si alguna animación resulta compleja, ¡etiquétame en el hilo de Slack!
-  visual_hint: 💬🙌
-  cloze:
-  - 4
-  - 9
-  glossary:
-  - word: tricky
-    meaning: complicado / con truco
-    ipa: ˈtrɪki
 - id: idm-hand-over
   text: I will hand over the design files to your team today.
   translation: 'Hoy le entregaré los archivos de diseño a tu equipo. (hand over: entregar)'
@@ -89,7 +62,8 @@ phrases:
   apply_translation: Tuvo que entregar sus proyectos antes de irse de baja.
 - id: idm-on-the-same-page
   text: Let's make sure we are all on the same page.
-  translation: 'Asegurémonos de que todos estamos de acuerdo. (on the same page: entender igual)'
+  translation: 'Asegurémonos de que todos estamos de acuerdo. (on the same page: entender
+    igual)'
   visual_hint: 📄🤝
   cloze:
   - 3
@@ -112,28 +86,39 @@ roleplay:
   - speaker: user
     goal: Explica que ya marcaste el flujo en Figma como listo para desarrollo.
     suggested_lines:
-    - I've marked the checkout flow as 'Ready for Dev' in Figma with all spacing and color tokens.
-    - Next to each desktop screen, I included the mobile view plus the empty and error states.
+    - I've marked the checkout flow as 'Ready for Dev' in Figma with all spacing and
+      color tokens.
+    - Next to each desktop screen, I included the mobile view plus the empty and error
+      states.
   - speaker: ai
-    text: Having the design tokens mapped saves us so much guesswork! What about edge cases?
+    text: Having the design tokens mapped saves us so much guesswork! What about edge
+      cases?
   - speaker: user
     goal: Detalla que incluiste vistas móviles y estados de error junto a cada pantalla.
     suggested_lines:
-    - Next to each desktop screen, I included the mobile view plus the empty and error states.
-    - All the custom icons are grouped as exportable SVGs so you can grab them in one click.
+    - Next to each desktop screen, I included the mobile view plus the empty and error
+      states.
+    - All the custom icons are grouped as exportable SVGs so you can grab them in
+      one click.
   - speaker: ai
-    text: Oh nice, engineers always forget to ask about the empty state until the last day!
+    text: Oh nice, engineers always forget to ask about the empty state until the
+      last day!
   - speaker: user
     goal: Indica que todos los íconos están listos para exportar en formato SVG.
     suggested_lines:
-    - All the custom icons are grouped as exportable SVGs so you can grab them in one click.
-    - Once you deploy it to the staging link on Wednesday, let's do a fifteen-minute visual QA together.
+    - All the custom icons are grouped as exportable SVGs so you can grab them in
+      one click.
+    - Once you deploy it to the staging link on Wednesday, let's do a fifteen-minute
+      visual QA together.
   - speaker: ai
-    text: Everything looks crystal clear. I'll ping you as soon as the staging build is live.
+    text: Everything looks crystal clear. I'll ping you as soon as the staging build
+      is live.
   - speaker: user
-    goal: Propón hacer una revisión visual de 15 minutos cuando esté en el entorno de pruebas.
+    goal: Propón hacer una revisión visual de 15 minutos cuando esté en el entorno
+      de pruebas.
     suggested_lines:
-    - Once you deploy it to the staging link on Wednesday, let's do a fifteen-minute visual QA together.
+    - Once you deploy it to the staging link on Wednesday, let's do a fifteen-minute
+      visual QA together.
     - I also verified that all button text meets double-A contrast ratios.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

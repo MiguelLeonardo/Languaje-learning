@@ -3,12 +3,14 @@ title: Delivering a best-friend wedding toast
 title_es: Dar un brindis emotivo en una boda
 cefr: B2
 topic: social-and-smalltalk
-description: Pronuncia un brindis cálido y con humor en la boda de tus mejores amigos y pide a los invitados alzar
-  sus copas.
+description: Pronuncia un brindis cálido y con humor en la boda de tus mejores amigos
+  y pide a los invitados alzar sus copas.
 phrases:
 - id: for-those-who-dont-know
-  text: Good evening, everyone! For those who haven't met me, I'm Marco, Leo's college roommate and partner in crime.
-  translation: ¡Buenas noches a todos! Para quienes no me conocen, soy Marco, compañero de cuarto de Leo en la universidad.
+  text: Good evening, everyone! For those who haven't met me, I'm Marco, Leo's college
+    roommate and partner in crime.
+  translation: ¡Buenas noches a todos! Para quienes no me conocen, soy Marco, compañero
+    de cuarto de Leo en la universidad.
   visual_hint: 🎙️🥂
   cloze:
   - 6
@@ -18,8 +20,10 @@ phrases:
     meaning: cómplice de aventuras / gran amigo
     ipa: ˈpɑːrtnər ɪn kraɪm
 - id: knew-from-first-date
-  text: I knew Clara was the one when Leo actually showed up fifteen minutes early for their very first coffee date.
-  translation: Supe que Clara era la indicada cuando Leo llegó quince minutos temprano a su primera cita de café.
+  text: I knew Clara was the one when Leo actually showed up fifteen minutes early
+    for their very first coffee date.
+  translation: Supe que Clara era la indicada cuando Leo llegó quince minutos temprano
+    a su primera cita de café.
   visual_hint: ☕😄
   cloze:
   - 6
@@ -29,8 +33,10 @@ phrases:
     meaning: la persona indicada / el amor de su vida
     ipa: ðə wʌn
 - id: bring-out-the-best
-  text: Jokes aside, the way you two ground each other and bring out the best in everyone around you is inspiring.
-  translation: Fuera de broma, la forma en que se complementan y sacan lo mejor de quienes los rodean es inspiradora.
+  text: Jokes aside, the way you two ground each other and bring out the best in everyone
+    around you is inspiring.
+  translation: Fuera de broma, la forma en que se complementan y sacan lo mejor de
+    quienes los rodean es inspiradora.
   visual_hint: ✨❤️
   cloze:
   - 6
@@ -39,39 +45,6 @@ phrases:
   - word: bring out the best
     meaning: sacar lo mejor de alguien
     ipa: brɪŋ aʊt ðə best
-- id: raise-your-glasses
-  text: Everyone, please stand and raise your glasses to Clara and Leo—may your marriage be filled with laughter!
-  translation: 'Por favor pónganse de pie y alcen sus copas por Clara y Leo: ¡que su matrimonio esté lleno de risas!'
-  visual_hint: 🥂🎉
-  cloze:
-  - 5
-  - 11
-  glossary:
-  - word: filled with
-    meaning: lleno de / colmado de
-    ipa: fɪld wɪð
-- id: always-have-a-couch
-  text: Just remember I still claim permanent VIP rights to your guest sofa!
-  translation: ¡Solo recuerden que conservo derecho VIP permanente en su sofá de visitas!
-  visual_hint: 🛋️😂
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: claim
-    meaning: reclamar en broma
-    ipa: kleɪm
-- id: to-the-happy-couple
-  text: To Clara and Leo—salud and cheers!
-  translation: '¡Por Clara y Leo: salud y felicidades!'
-  visual_hint: 🥂🌟
-  cloze:
-  - 2
-  - 4
-  glossary:
-  - word: newlyweds
-    meaning: recién casados
-    ipa: ˈnuːliwedz
 - id: idm-b2wt-tie-the-knot
   text: Today my best friend finally decided to tie the knot with Laura.
   translation: Hoy mi mejor amigo por fin decidió casarse con Laura (casarse).
@@ -112,28 +85,36 @@ roleplay:
   - speaker: user
     goal: Preséntate ante los invitados como el gran amigo de universidad de Leo.
     suggested_lines:
-    - Good evening, everyone! For those who haven't met me, I'm Marco, Leo's college roommate and partner in crime.
-    - I knew Clara was the one when Leo actually showed up fifteen minutes early for their very first coffee date.
+    - Good evening, everyone! For those who haven't met me, I'm Marco, Leo's college
+      roommate and partner in crime.
+    - I knew Clara was the one when Leo actually showed up fifteen minutes early for
+      their very first coffee date.
   - speaker: ai
     text: (Laughter from the tables) Tell us how they first met!
   - speaker: user
-    goal: Cuenta con humor cómo supiste que Clara era la persona indicada desde la primera cita.
+    goal: Cuenta con humor cómo supiste que Clara era la persona indicada desde la
+      primera cita.
     suggested_lines:
-    - I knew Clara was the one when Leo actually showed up fifteen minutes early for their very first coffee date.
-    - Jokes aside, the way you two ground each other and bring out the best in everyone around you is inspiring.
+    - I knew Clara was the one when Leo actually showed up fifteen minutes early for
+      their very first coffee date.
+    - Jokes aside, the way you two ground each other and bring out the best in everyone
+      around you is inspiring.
   - speaker: ai
     text: (Smiles and applause from the couple at the head table)
   - speaker: user
     goal: Destaca con emoción cómo ambos sacan lo mejor el uno del otro.
     suggested_lines:
-    - Jokes aside, the way you two ground each other and bring out the best in everyone around you is inspiring.
-    - Everyone, please stand and raise your glasses to Clara and Leo—may your marriage be filled with laughter!
+    - Jokes aside, the way you two ground each other and bring out the best in everyone
+      around you is inspiring.
+    - Everyone, please stand and raise your glasses to Clara and Leo—may your marriage
+      be filled with laughter!
   - speaker: ai
     text: Hear, hear! What is your wish for the newlyweds?
   - speaker: user
     goal: Invita a todos a ponerse de pie y alzar sus copas por los novios.
     suggested_lines:
-    - Everyone, please stand and raise your glasses to Clara and Leo—may your marriage be filled with laughter!
+    - Everyone, please stand and raise your glasses to Clara and Leo—may your marriage
+      be filled with laughter!
     - Just remember I still claim permanent VIP rights to your guest sofa!
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

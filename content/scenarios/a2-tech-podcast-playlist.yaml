@@ -1,0 +1,93 @@
+id: a2-tech-podcast-playlist
+title: Sharing a podcast or playlist
+title_es: Compartir un pódcast o lista de reproducción
+cefr: A2
+topic: daily-tech-and-media
+description: Recomienda un pódcast para el trayecto diario y comparte el enlace.
+phrases:
+- id: listen-during-commute
+  text: I listen to podcasts during my morning commute.
+  translation: Escucho pódcast durante mi trayecto de la mañana.
+  visual_hint: 🎧🚇
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: commute
+    meaning: trayecto diario
+    ipa: kəˈmjuːt
+- id: download-episodes-offline
+  text: I download episodes so I can listen offline.
+  translation: Descargo episodios para poder escuchar sin conexión.
+  visual_hint: ⬇️🎧
+  cloze:
+  - 1
+  - 7
+  glossary:
+  - word: offline
+    meaning: sin conexión
+    ipa: ˌɔːfˈlaɪn
+- id: share-playlist-link
+  text: I will send you the link to this playlist.
+  translation: Te enviaré el enlace a esta lista de reproducción.
+  visual_hint: 🔗🎶
+  cloze:
+  - 5
+  - 8
+  glossary:
+  - word: playlist
+    meaning: lista de reproducción
+    ipa: ˈpleɪlɪst
+- id: idm-check-out
+  text: You should check out the new tech episode.
+  translation: 'Deberías echarle un vistazo al nuevo episodio de tecnología. (check out: echar
+    un vistazo / probar)'
+  visual_hint: 👀🎙️
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: check out
+    meaning: echar un vistazo / revisar
+    ipa: tʃek aʊt
+  kind: phrasal_verb
+  apply_sentence: Let us ____ that new music app tonight.
+  apply_answer: check out
+  apply_translation: Probemos esa nueva aplicación de música esta noche.
+- id: idm-worth-a-listen
+  text: The host is funny, so it is worth a listen.
+  translation: 'El presentador es gracioso, así que vale la pena escucharlo. (worth a listen:
+    vale la pena escucharlo)'
+  visual_hint: ⭐🎧
+  cloze:
+  - 7
+  - 9
+  glossary:
+  - word: worth a listen
+    meaning: vale la pena escucharlo
+    ipa: wɜːrθ ə ˈlɪsən
+  kind: expression
+  apply_sentence: Her latest album is definitely ____.
+  apply_answer: worth a listen
+  apply_translation: Su último álbum definitivamente vale la pena escucharlo.
+roleplay:
+  ai_role: friend
+  user_role: friend
+  setting: Walking together after lunch.
+  turns:
+  - speaker: ai
+    text: I need something new to listen to on the train. Any ideas?
+  - speaker: user
+    goal: Cuenta que escuchas pódcast en el trayecto y recomienda el episodio nuevo.
+    suggested_lines:
+    - I listen to podcasts during my morning commute.
+    - You should check out the new tech episode.
+  - speaker: ai
+    text: Oh, nice! Is it good even without Wi-Fi on the subway?
+  - speaker: user
+    goal: Explica que descargas episodios sin conexión y enviarás el enlace.
+    suggested_lines:
+    - I download episodes so I can listen offline.
+    - I will send you the link to this playlist.
+  - speaker: ai
+    text: Awesome, send it over! I will listen tomorrow morning.

@@ -136,5 +136,17 @@ TOPIC_MODULES: dict[str, dict[str, str]] = {
         "icon": "🏥",
         "description_es": "Explica síntomas en farmacias, acude a urgencias y gestiona seguros médicos.",
     },
+    "grammar-and-connectors": {
+        "title_es": "Gramática, Adverbios y Conectores",
+        "title_en": "Grammar, Adverbs & Connectors",
+        "icon": "🧩",
+        "description_es": "Practica adverbios, comparativos, superlativos, conectores y estructuras clave en contexto.",
+    },
+    "daily-tech-and-media": {
+        "title_es": "Tecnología, Hogar y Rutinas",
+        "title_en": "Tech, Home & Daily Routines",
+        "icon": "📱",
+        "description_es": "Resuelve problemas técnicos, organiza tu hogar, habla de compras online y noticias.",
+    },
 }
 

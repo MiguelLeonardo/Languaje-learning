@@ -1,0 +1,97 @@
+id: c1-tech-home-network-security
+title: Hardening home network security
+title_es: Reforzar la seguridad de la red doméstica
+cefr: C1
+topic: daily-tech-and-media
+description: Segmenta dispositivos IoT en VLANs y configura DNS cifrado para proteger la red
+  del hogar.
+phrases:
+- id: segment-iot-vlan
+  text: Segmenting IoT appliances onto an isolated VLAN limits lateral movement.
+  translation: Segmentar los electrodomésticos IoT en una VLAN aislada limita el movimiento
+    lateral.
+  visual_hint: 🛡️🌐
+  cloze:
+  - 0
+  - 5
+  glossary:
+  - word: lateral movement
+    meaning: movimiento lateral (en ciberseguridad)
+    ipa: ˈlætərəl ˈmuːvmənt
+- id: encrypted-dns-queries
+  text: Enabling DNS-over-HTTPS prevents local eavesdropping on browsing queries.
+  translation: Habilitar DNS sobre HTTPS evita escuchas locales en las consultas de navegación.
+  visual_hint: 🔐🔎
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: eavesdropping
+    meaning: escucha clandestina / espionaje
+    ipa: ˈiːvzdrɑːpɪŋ
+- id: firmware-patches-timely
+  text: Unpatched router firmware remains one of the easiest entry points.
+  translation: El firmware del router sin parches sigue siendo uno de los puntos de entrada
+    más fáciles.
+  visual_hint: ⚙️⚠️
+  cloze:
+  - 0
+  - 2
+  glossary:
+  - word: firmware
+    meaning: firmware / software interno
+    ipa: ˈfɜːrmwer
+- id: idm-lock-down
+  text: We should lock down remote administration before traveling abroad.
+  translation: 'Deberíamos restringir la administración remota antes de viajar al extranjero.
+    (lock down: bloquear / restringir)'
+  visual_hint: 🔒✈️
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: lock down
+    meaning: restringir / asegurar
+    ipa: lɑːk daʊn
+  kind: phrasal_verb
+  apply_sentence: The admin had to ____ the firewall rules after the scan.
+  apply_answer: lock down
+  apply_translation: El administrador tuvo que restringir las reglas del cortafuegos tras el
+    escaneo.
+- id: idm-single-point-of-failure
+  text: Relying on default passwords creates a glaring single point of failure.
+  translation: 'Depender de contraseñas predeterminadas crea un punto único de fallo evidente.
+    (single point of failure: punto único de fallo)'
+  visual_hint: 💥🔑
+  cloze:
+  - 6
+  - 9
+  glossary:
+  - word: single point of failure
+    meaning: punto único de fallo
+    ipa: ˈsɪŋɡəl pɔɪnt əv ˈfeɪljər
+  kind: expression
+  apply_sentence: Storing every backup on one drive creates a ____.
+  apply_answer: single point of failure
+  apply_translation: Guardar cada respaldo en un solo disco crea un punto único de fallo.
+roleplay:
+  ai_role: security engineer friend
+  user_role: home lab enthusiast
+  setting: Reviewing home firewall topology over tea.
+  turns:
+  - speaker: ai
+    text: You have twenty smart bulbs and cameras now. Are they still on your main Wi-Fi?
+  - speaker: user
+    goal: Explica por qué segmentas los dispositivos IoT en una VLAN y usas DNS cifrado.
+    suggested_lines:
+    - Segmenting IoT appliances onto an isolated VLAN limits lateral movement.
+    - Enabling DNS-over-HTTPS prevents local eavesdropping on browsing queries.
+  - speaker: ai
+    text: Solid architecture. What about external access when you are away?
+  - speaker: user
+    goal: Di que restringes la administración remota y vigilas las actualizaciones de firmware.
+    suggested_lines:
+    - We should lock down remote administration before traveling abroad.
+    - Unpatched router firmware remains one of the easiest entry points.
+  - speaker: ai
+    text: That is cleaner than most small-office setups I audit!

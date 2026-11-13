@@ -3,7 +3,8 @@ title: Asking for first aid at reception
 title_es: Pedir un botiquín en recepción
 cefr: A1
 topic: health-and-emergencies
-description: Pide ayuda sencilla por un corte pequeño en el dedo, solicita una curita y agua.
+description: Pide ayuda sencilla por un corte pequeño en el dedo, solicita una curita
+  y agua.
 phrases:
 - id: cut-my-finger
   text: Excuse me, I have a small cut on my finger.
@@ -46,50 +47,6 @@ phrases:
   - word: wipes
     meaning: toallitas limpiadoras
     ipa: waɪps
-- id: glass-of-water
-  text: Could I also get a glass of cold water?
-  translation: ¿Me podría dar también un vaso de agua fría?
-  visual_hint: 🥛💧
-  cloze:
-  - 5
-  - 7
-  - 8
-  glossary:
-  - word: glass
-    meaning: vaso
-    ipa: ɡlæs
-  - word: cold
-    meaning: fría
-    ipa: koʊld
-- id: feel-much-better
-  text: It is not serious. I feel much better now.
-  translation: No es grave. Me siento mucho mejor ahora.
-  visual_hint: 😌👍
-  cloze:
-  - 3
-  - 5
-  - 7
-  glossary:
-  - word: serious
-    meaning: grave / serio
-    ipa: ˈsɪriəs
-  - word: better
-    meaning: mejor
-    ipa: ˈbetər
-- id: nearest-clinic
-  text: Where is the nearest pharmacy from here?
-  translation: ¿Dónde está la farmacia más cercana desde aquí?
-  visual_hint: 🏥📍
-  cloze:
-  - 3
-  - 4
-  glossary:
-  - word: nearest
-    meaning: más cercana
-    ipa: ˈnɪrɪst
-  - word: pharmacy
-    meaning: farmacia
-    ipa: ˈfɑːrməsi
 - id: idm-looking-for-a1
   text: I am looking for someone who can give first aid.
   translation: Busco a alguien que pueda dar primeros auxilios. (look for = buscar)

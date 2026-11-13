@@ -43,48 +43,6 @@ phrases:
     ipa: fɪts
   - word: I'll take it
     meaning: me lo llevo
-- id: different-color
-  text: Do you have this shirt in black or navy blue?
-  translation: ¿Tiene esta camisa en negro o azul marino?
-  visual_hint: 👔🎨
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: shirt
-    meaning: camisa
-    ipa: ʃɜːrt
-  - word: navy blue
-    meaning: azul marino
-    ipa: ˈneɪvi bluː
-- id: on-sale-today
-  text: Is this jacket on sale today?
-  translation: ¿Está esta chaqueta en oferta hoy?
-  visual_hint: 🏷️🧥
-  cloze:
-  - 2
-  - 4
-  glossary:
-  - word: jacket
-    meaning: chaqueta
-    ipa: ˈdʒækɪt
-  - word: on sale
-    meaning: en oferta / descuento
-    ipa: ɑːn seɪl
-- id: take-this-one
-  text: It fits well. I will take this one, please.
-  translation: Me queda bien. Me llevo esta, por favor.
-  visual_hint: 🛍️✅
-  cloze:
-  - 1
-  - 5
-  glossary:
-  - word: fits
-    meaning: queda bien de talla
-    ipa: fɪts
-  - word: take
-    meaning: llevar
-    ipa: teɪk
 - id: idm-try-on-jacket
   text: Excuse me, where can I try on this blue jacket?
   translation: Disculpe, ¿dónde puedo probarme esta chaqueta azul?

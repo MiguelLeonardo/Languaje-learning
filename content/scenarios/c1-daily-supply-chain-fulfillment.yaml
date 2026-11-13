@@ -1,0 +1,98 @@
+id: c1-daily-supply-chain-fulfillment
+title: Negotiating expedited fulfillment & SLA credits
+title_es: Negociar envíos urgentes y créditos por SLA
+cefr: C1
+topic: daily-tech-and-media
+description: Reclama incumplimientos de entrega garantizada y negocia envíos prioritarios en
+  pedidos recurrentes.
+phrases:
+- id: guaranteed-delivery-window
+  text: The vendor repeatedly missed the guaranteed forty-eight-hour delivery window.
+  translation: El proveedor incumplió repetidamente la ventana de entrega garantizada de cuarenta
+    y ocho horas.
+  visual_hint: ⏱️📦
+  cloze:
+  - 2
+  - 6
+  glossary:
+  - word: repeatedly
+    meaning: repetidamente
+    ipa: rɪˈpiːtɪdli
+- id: expedited-courier-upgrade
+  text: We expect an expedited courier upgrade at no additional surcharge.
+  translation: Esperamos una mejora a mensajería urgente sin recargo adicional.
+  visual_hint: ✈️🚚
+  cloze:
+  - 3
+  - 9
+  glossary:
+  - word: surcharge
+    meaning: recargo
+    ipa: ˈsɜːrtʃɑːrdʒ
+- id: service-level-credit
+  text: Under our subscription terms, missed deadlines trigger an automatic service credit.
+  translation: Según los términos de suscripción, los plazos incumplidos activan un crédito
+    de servicio automático.
+  visual_hint: 💳📄
+  cloze:
+  - 5
+  - 9
+  glossary:
+  - word: trigger
+    meaning: activar / desencadenar
+    ipa: ˈtrɪɡər
+- id: idm-fall-short-of
+  text: Recent shipments have fallen short of the reliability we signed up for.
+  translation: 'Los envíos recientes no han estado a la altura de la fiabilidad que contratamos.
+    (fall short of: quedarse corto respecto a)'
+  visual_hint: 📉📦
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: fall short of
+    meaning: no alcanzar / quedarse corto
+    ipa: fɔːl ʃɔːrt ʌv
+  kind: expression
+  apply_sentence: Their customer portal ____ expectations during the holiday rush.
+  apply_answer: fell short of
+  apply_translation: Su portal de clientes no estuvo a la altura de las expectativas en las
+    fiestas.
+- id: idm-make-up-for
+  text: Waiving next month's fee would help make up for the disruption.
+  translation: 'Exonerar la tarifa del próximo mes ayudaría a compensar la interrupción. (make
+    up for: compensar)'
+  visual_hint: 🤝💼
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: make up for
+    meaning: compensar por
+    ipa: meɪk ʌp fɔːr
+  kind: phrasal_verb
+  apply_sentence: They offered express shipping to ____ the two-day delay.
+  apply_answer: make up for
+  apply_translation: Ofrecieron envío exprés para compensar el retraso de dos días.
+roleplay:
+  ai_role: account manager
+  user_role: operations lead
+  setting: Video call regarding recurring supply deliveries for a home studio.
+  turns:
+  - speaker: ai
+    text: Thanks for hopping on the call. I understand two of your recent shipments arrived
+      late.
+  - speaker: user
+    goal: Señala que incumplieron la ventana garantizada y que el servicio no cumplió lo pactado.
+    suggested_lines:
+    - The vendor repeatedly missed the guaranteed forty-eight-hour delivery window.
+    - Recent shipments have fallen short of the reliability we signed up for.
+  - speaker: ai
+    text: You are right, our regional hub had a sorting bottleneck. How can we make this right?
+  - speaker: user
+    goal: Solicita envío urgente sin recargo y un crédito de servicio para compensar.
+    suggested_lines:
+    - We expect an expedited courier upgrade at no additional surcharge.
+    - Waiving next month's fee would help make up for the disruption.
+  - speaker: ai
+    text: Consider both approved. I will send the updated terms over right away.

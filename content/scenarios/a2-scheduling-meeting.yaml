@@ -3,7 +3,8 @@ title: Scheduling a team call
 title_es: Agendar una videollamada de equipo
 cefr: A2
 topic: work-and-career
-description: Coordina una videollamada con un colega en otra zona horaria, confirma la hora y envía la invitación.
+description: Coordina una videollamada con un colega en otra zona horaria, confirma
+  la hora y envía la invitación.
 phrases:
 - id: free-tomorrow-morning
   text: Are you free for a quick video call tomorrow morning?
@@ -50,54 +51,10 @@ phrases:
   - word: link
     meaning: enlace
     ipa: lɪŋk
-- id: share-the-slides
-  text: Could you share the presentation slides before the meeting?
-  translation: ¿Podrías compartir las diapositivas de la presentación antes de la reunión?
-  visual_hint: 📊📤
-  cloze:
-  - 2
-  - 5
-  - 8
-  glossary:
-  - word: share
-    meaning: compartir
-    ipa: ʃer
-  - word: slides
-    meaning: diapositivas
-    ipa: slaɪdz
-- id: push-it-back
-  text: If you are busy, we can move it to Thursday afternoon.
-  translation: Si estás ocupado, podemos moverla para el jueves por la tarde.
-  visual_hint: 🔄🕓
-  cloze:
-  - 3
-  - 6
-  - 9
-  glossary:
-  - word: busy
-    meaning: ocupado
-    ipa: ˈbɪzi
-  - word: move it
-    meaning: cambiarla de hora / moverla
-    ipa: muːv ɪt
-- id: talk-to-you-then
-  text: Perfect, thirty minutes will be enough. Talk to you tomorrow!
-  translation: Perfecto, treinta minutos serán suficientes. ¡Hablamos mañana!
-  visual_hint: 👍⏱️
-  cloze:
-  - 2
-  - 5
-  - 9
-  glossary:
-  - word: enough
-    meaning: suficiente
-    ipa: ɪˈnʌf
-  - word: talk to you
-    meaning: hablamos / conversamos
-    ipa: tɔːk tə juː
 - id: idm-get-together
   text: Let's get together on Tuesday for a short team call.
-  translation: 'Reunámonos el martes para una breve llamada de equipo. (get together: reunirse)'
+  translation: 'Reunámonos el martes para una breve llamada de equipo. (get together:
+    reunirse)'
   visual_hint: 👥📆
   cloze:
   - 3
@@ -112,7 +69,8 @@ phrases:
   apply_translation: El equipo se reúne cada lunes para planear la semana.
 - id: idm-works-for-me
   text: Three o'clock works for me, if it works for you.
-  translation: 'Las tres me viene bien, si a ti te viene bien. (works for me: me va bien)'
+  translation: 'Las tres me viene bien, si a ti te viene bien. (works for me: me va
+    bien)'
   visual_hint: 👍🕒
   cloze:
   - 3
@@ -124,14 +82,16 @@ phrases:
   kind: expression
   apply_sentence: Thursday morning ____, but Friday is too busy.
   apply_answer: works for me
-  apply_translation: El jueves por la mañana me va bien, pero el viernes estoy muy ocupado.
+  apply_translation: El jueves por la mañana me va bien, pero el viernes estoy muy
+    ocupado.
 roleplay:
   ai_role: colleague (David)
   user_role: project coordinator
   setting: Planning a sync call to review client slides.
   turns:
   - speaker: ai
-    text: Hi! We should review the client presentation soon. When would you like to meet?
+    text: Hi! We should review the client presentation soon. When would you like to
+      meet?
   - speaker: user
     goal: Pregunta si está libre para una videollamada mañana a las 10:30 AM.
     suggested_lines:

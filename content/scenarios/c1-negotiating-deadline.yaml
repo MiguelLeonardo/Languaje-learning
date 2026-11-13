@@ -39,49 +39,10 @@ phrases:
   - word: compromising
     meaning: comprometer / sacrificar
     ipa: ˈkɑːmprəmaɪzɪŋ
-- id: meet-halfway
-  text: Perhaps we could meet halfway and ship the core features first.
-  translation: Quizás podríamos llegar a un punto medio y entregar primero las funciones principales.
-  visual_hint: 🤝
-  cloze:
-  - 3
-  - 4
-  glossary:
-  - word: meet halfway
-    meaning: llegar a un acuerdo intermedio
-- id: parallel-workstreams
-  text: We can run QA testing in parallel to compress the critical path.
-  translation: Podemos ejecutar las pruebas de calidad en paralelo para comprimir la ruta crítica.
-  visual_hint: 🔀⚙️
-  cloze:
-  - 5
-  - 7
-  - 10
-  glossary:
-  - word: in parallel
-    meaning: en paralelo
-    ipa: ɪn ˈpærəlel
-  - word: compress
-    meaning: comprimir / acortar
-    ipa: kəmˈpres
-- id: stakeholder-sign-off
-  text: Once we secure stakeholder sign-off today, we'll lock in the sprint scope.
-  translation: Una vez que aseguremos la aprobación de los interesados hoy, fijaremos el alcance del sprint.
-  visual_hint: ✍️🔒
-  cloze:
-  - 2
-  - 4
-  - 7
-  glossary:
-  - word: sign-off
-    meaning: aprobación formal
-    ipa: ˈsaɪn ɔːf
-  - word: lock in
-    meaning: asegurar / fijar
-    ipa: lɑːk ɪn
 - id: idm-meet-halfway
   text: Could we meet halfway and deliver in two phases?
-  translation: '¿Podríamos llegar a un punto medio y entregar en dos fases? (meet halfway: ceder ambos)'
+  translation: '¿Podríamos llegar a un punto medio y entregar en dos fases? (meet
+    halfway: ceder ambos)'
   visual_hint: 🤝⚖️
   cloze:
   - 3
@@ -93,11 +54,12 @@ phrases:
   kind: idiom
   apply_sentence: Neither side wanted to ____ during the contract talks.
   apply_answer: meet halfway
-  apply_translation: Ninguna parte quiso llegar a un punto medio durante las negociaciones del contrato.
+  apply_translation: Ninguna parte quiso llegar a un punto medio durante las negociaciones
+    del contrato.
 - id: idm-down-to-the-wire
   text: Last time it went down to the wire, and we burned out.
-  translation: 'La última vez se decidió en el último minuto y nos agotamos. (down to the wire: hasta el último
-    momento)'
+  translation: 'La última vez se decidió en el último minuto y nos agotamos. (down
+    to the wire: hasta el último momento)'
   visual_hint: ⏰😰
   cloze:
   - 4
@@ -109,7 +71,8 @@ phrases:
   kind: idiom
   apply_sentence: The budget approval came ____, just before midnight.
   apply_answer: down to the wire
-  apply_translation: La aprobación del presupuesto llegó en el último minuto, justo antes de medianoche.
+  apply_translation: La aprobación del presupuesto llegó en el último minuto, justo
+    antes de medianoche.
 roleplay:
   ai_role: client project lead
   user_role: agency project manager
@@ -127,8 +90,8 @@ roleplay:
   - speaker: user
     goal: Propón aplazar una semana y justifícalo.
     suggested_lines:
-    - Would you be open to pushing the deadline back by a week? That way we can deliver without compromising on
-      quality.
+    - Would you be open to pushing the deadline back by a week? That way we can deliver
+      without compromising on quality.
   - speaker: ai
     text: A full week is hard for us. Our marketing campaign is already booked.
   - speaker: user

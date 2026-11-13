@@ -3,14 +3,14 @@ title: Treating a corneal abrasion
 title_es: Consulta oftalmológica por abrasión corneal
 cefr: C1
 topic: health-and-emergencies
-description: Describe al oftalmólogo fotofobia y sensación de cuerpo extraño tras un día ventoso, realizando tinción
-  con fluoresceína.
+description: Describe al oftalmólogo fotofobia y sensación de cuerpo extraño tras
+  un día ventoso, realizando tinción con fluoresceína.
 phrases:
 - id: foreign-body-sensation
-  text: A gust of wind blew grit into my left eye yesterday, and I still have a sharp foreign-body sensation every
-    time I blink.
-  translation: Una ráfaga de viento metió tierra en mi ojo izquierdo ayer y sigo sintiendo una basurita cada vez
-    que parpadeo.
+  text: A gust of wind blew grit into my left eye yesterday, and I still have a sharp
+    foreign-body sensation every time I blink.
+  translation: Una ráfaga de viento metió tierra en mi ojo izquierdo ayer y sigo sintiendo
+    una basurita cada vez que parpadeo.
   visual_hint: 👁️🌬️
   cloze:
   - 7
@@ -20,8 +20,10 @@ phrases:
     meaning: parpadear
     ipa: blɪŋk
 - id: photophobia-and-tearing
-  text: Bright light triggers immediate tearing and photophobia, though my central vision isn't blurry.
-  translation: La luz brillante me provoca lagrimeo inmediato y fotofobia, aunque mi visión central no está borrosa.
+  text: Bright light triggers immediate tearing and photophobia, though my central
+    vision isn't blurry.
+  translation: La luz brillante me provoca lagrimeo inmediato y fotofobia, aunque
+    mi visión central no está borrosa.
   visual_hint: ☀️💧
   cloze:
   - 4
@@ -31,8 +33,10 @@ phrases:
     meaning: sensibilidad intensa a la luz
     ipa: ˌfoʊtəˈfoʊbiə
 - id: superficial-corneal-abrasion
-  text: Does the cobalt-blue light show a retained speck under the upper lid, or just a superficial corneal scratch?
-  translation: ¿La luz azul muestra alguna partícula bajo el párpado superior o solo un rasguño corneal superficial?
+  text: Does the cobalt-blue light show a retained speck under the upper lid, or just
+    a superficial corneal scratch?
+  translation: ¿La luz azul muestra alguna partícula bajo el párpado superior o solo
+    un rasguño corneal superficial?
   visual_hint: 🔬🔵
   cloze:
   - 6
@@ -41,44 +45,10 @@ phrases:
   - word: superficial
     meaning: superficial
     ipa: ˌsuːpərˈfɪʃəl
-- id: antibiotic-ointment-no-contacts
-  text: I'll apply the lubricating antibiotic ointment four times daily and stay out of contact lenses for a full
-    week.
-  translation: Aplicaré el ungüento antibiótico lubricante cuatro veces al día y no usaré lentes de contacto en
-    toda la semana.
-  visual_hint: 🧴👓
-  cloze:
-  - 6
-  - 12
-  glossary:
-  - word: ointment
-    meaning: ungüento / pomada oftálmica
-    ipa: ˈɔɪntmənt
-- id: wear-polarized-sunglasses
-  text: Wearing polarized sunglasses outdoors will keep ciliary spasm to a minimum today.
-  translation: Usar gafas de sol polarizadas al aire libre reducirá el espasmo ocular hoy.
-  visual_hint: 🕶️🌤️
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: outdoors
-    meaning: al aire libre
-    ipa: ˌaʊtˈdɔːrz
-- id: recheck-in-forty-eight-hours
-  text: I'll come back Friday morning so you can confirm the epithelium has closed completely.
-  translation: Regresaré el viernes por la mañana para confirmar que el epitelio cerró por completo.
-  visual_hint: 📅✅
-  cloze:
-  - 4
-  - 9
-  glossary:
-  - word: heals
-    meaning: cicatriza / sana
-    ipa: hiːlz
 - id: idm-easier-said-than-done-c1
   text: Not rubbing the eye is easier said than done.
-  translation: No frotarse el ojo es más fácil de decir que de hacer. (easier said than done)
+  translation: No frotarse el ojo es más fácil de decir que de hacer. (easier said
+    than done)
   visual_hint: 👁️🙈
   cloze:
   - 3
@@ -93,7 +63,8 @@ phrases:
   apply_translation: Dejar el azúcar es más fácil de decir que de hacer.
 - id: idm-on-the-road-to-recovery-c1
   text: You're well on the road to recovery now.
-  translation: Ya vas muy bien camino de la recuperación. (on the road to recovery = recuperándose)
+  translation: Ya vas muy bien camino de la recuperación. (on the road to recovery
+    = recuperándose)
   visual_hint: 🛣️👁️
   cloze:
   - 2
@@ -112,36 +83,46 @@ roleplay:
   setting: Eye clinic examination room with a slit lamp.
   turns:
   - speaker: ai
-    text: Rest your chin on the slit-lamp frame for me. Did you rub the eye when the grit blew in?
+    text: Rest your chin on the slit-lamp frame for me. Did you rub the eye when the
+      grit blew in?
   - speaker: user
     goal: Explica que entró polvo a tu ojo ayer y sientes molestia aguda al parpadear.
     suggested_lines:
-    - A gust of wind blew grit into my left eye yesterday, and I still have a sharp foreign-body sensation every
-      time I blink.
-    - Bright light triggers immediate tearing and photophobia, though my central vision isn't blurry.
+    - A gust of wind blew grit into my left eye yesterday, and I still have a sharp
+      foreign-body sensation every time I blink.
+    - Bright light triggers immediate tearing and photophobia, though my central vision
+      isn't blurry.
   - speaker: ai
-    text: I'm going to instill one anesthetic drop and a touch of orange fluorescein dye to inspect the cornea.
+    text: I'm going to instill one anesthetic drop and a touch of orange fluorescein
+      dye to inspect the cornea.
   - speaker: user
-    goal: Detalla que la luz te causa lagrimeo y sensibilidad, pero tu visión central es clara.
+    goal: Detalla que la luz te causa lagrimeo y sensibilidad, pero tu visión central
+      es clara.
     suggested_lines:
-    - Bright light triggers immediate tearing and photophobia, though my central vision isn't blurry.
-    - Does the cobalt-blue light show a retained speck under the upper lid, or just a superficial corneal scratch?
+    - Bright light triggers immediate tearing and photophobia, though my central vision
+      isn't blurry.
+    - Does the cobalt-blue light show a retained speck under the upper lid, or just
+      a superficial corneal scratch?
   - speaker: ai
-    text: I flushed a tiny grain of quartz from under the upper tarsal plate, leaving a two-millimeter superficial
-      abrasion.
+    text: I flushed a tiny grain of quartz from under the upper tarsal plate, leaving
+      a two-millimeter superficial abrasion.
   - speaker: user
-    goal: Pregunta si aún hay una partícula bajo el párpado o es solo una abrasión superficial.
+    goal: Pregunta si aún hay una partícula bajo el párpado o es solo una abrasión
+      superficial.
     suggested_lines:
-    - Does the cobalt-blue light show a retained speck under the upper lid, or just a superficial corneal scratch?
-    - I'll apply the lubricating antibiotic ointment four times daily and stay out of contact lenses for a full
-      week.
+    - Does the cobalt-blue light show a retained speck under the upper lid, or just
+      a superficial corneal scratch?
+    - I'll apply the lubricating antibiotic ointment four times daily and stay out
+      of contact lenses for a full week.
   - speaker: ai
-    text: The corneal epithelium heals remarkably fast—usually within twenty-four to forty-eight hours.
+    text: The corneal epithelium heals remarkably fast—usually within twenty-four
+      to forty-eight hours.
   - speaker: user
-    goal: Confirma que aplicarás el ungüento cuatro veces al día y no usarás lentes de contacto.
+    goal: Confirma que aplicarás el ungüento cuatro veces al día y no usarás lentes
+      de contacto.
     suggested_lines:
-    - I'll apply the lubricating antibiotic ointment four times daily and stay out of contact lenses for a full
-      week.
+    - I'll apply the lubricating antibiotic ointment four times daily and stay out
+      of contact lenses for a full week.
     - Wearing polarized sunglasses outdoors will keep ciliary spasm to a minimum today.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

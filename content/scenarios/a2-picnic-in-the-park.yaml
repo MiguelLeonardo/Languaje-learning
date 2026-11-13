@@ -3,11 +3,13 @@ title: Organizing a Sunday park picnic
 title_es: Organizar un picnic en el parque
 cefr: A2
 topic: social-and-smalltalk
-description: Coordina con tus amigos quién lleva la manta, los sándwiches y el altavoz Bluetooth para el domingo.
+description: Coordina con tus amigos quién lleva la manta, los sándwiches y el altavoz
+  Bluetooth para el domingo.
 phrases:
 - id: meet-by-lake-fountain
   text: Let's meet by the big fountain near the lake at one o'clock on Sunday.
-  translation: Encontrémonos junto a la fuente grande cerca del lago el domingo a la una.
+  translation: Encontrémonos junto a la fuente grande cerca del lago el domingo a
+    la una.
   visual_hint: ⛲🌳
   cloze:
   - 4
@@ -38,39 +40,6 @@ phrases:
   - word: cooler
     meaning: hielera / nevera portátil
     ipa: ˈkuːlər
-- id: bluetooth-speaker-frisbee
-  text: I also packed a Frisbee and a small speaker for background music.
-  translation: También guardé un frisbi y una bocina pequeña para poner música de fondo.
-  visual_hint: 🥏🎶
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: background music
-    meaning: música de fondo
-    ipa: ˈbækɡraʊnd ˈmjuːzɪk
-- id: sit-under-oak-trees
-  text: There is plenty of shade under the big oak trees by the water.
-  translation: Hay mucha sombra bajo los grandes robles junto al agua.
-  visual_hint: 🌳☀️
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: shade
-    meaning: sombra
-    ipa: ʃeɪd
-- id: bring-sunscreen-and-hat
-  text: Remind everyone in the group chat to bring sunglasses and sunscreen!
-  translation: ¡Recuérdales a todos en el chat grupal traer lentes de sol y bloqueador!
-  visual_hint: 🕶️🧴
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: remind
-    meaning: recordar a alguien
-    ipa: rɪˈmaɪnd
 - id: idm-a2pp-set-up
   text: Let's set up the blanket under that big tree over there.
   translation: Pongamos la manta bajo ese árbol grande de allá (preparar o montar).
@@ -107,14 +76,16 @@ roleplay:
   setting: Planning a Sunday afternoon picnic by the lake.
   turns:
   - speaker: ai
-    text: The forecast for Sunday is 24 degrees and sunny! Where should we set up our picnic?
+    text: The forecast for Sunday is 24 degrees and sunny! Where should we set up
+      our picnic?
   - speaker: user
     goal: Propón encontrarse junto a la fuente del lago el domingo a la una.
     suggested_lines:
     - Let's meet by the big fountain near the lake at one o'clock on Sunday.
     - I'll bring a large waterproof picnic blanket and paper plates.
   - speaker: ai
-    text: 1:00 PM by the lake fountain is easy for everyone to find. What should I bring?
+    text: 1:00 PM by the lake fountain is easy for everyone to find. What should I
+      bring?
   - speaker: user
     goal: Ofrece llevar una manta impermeable grande y platos.
     suggested_lines:

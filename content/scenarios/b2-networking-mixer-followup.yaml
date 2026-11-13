@@ -3,12 +3,14 @@ title: Connecting at an industry mixer
 title_es: Conectar en un evento de networking
 cefr: B2
 topic: social-and-smalltalk
-description: Inicia una conversación natural tras una charla de diseño, intercambien LinkedIn y acuerden tomar un
-  café.
+description: Inicia una conversación natural tras una charla de diseño, intercambien
+  LinkedIn y acuerden tomar un café.
 phrases:
 - id: loved-your-panel-question
-  text: Hi! I really enjoyed the question you asked during the accessibility panel earlier.
-  translation: ¡Hola! Me gustó mucho la pregunta que hiciste hace rato durante el panel de accesibilidad.
+  text: Hi! I really enjoyed the question you asked during the accessibility panel
+    earlier.
+  translation: ¡Hola! Me gustó mucho la pregunta que hiciste hace rato durante el
+    panel de accesibilidad.
   visual_hint: 🎙️👏
   cloze:
   - 4
@@ -18,8 +20,10 @@ phrases:
     meaning: hace rato / más temprano
     ipa: ˈɜːrliər
 - id: working-on-similar-challenge
-  text: My team has been tackling a very similar onboarding challenge over the past quarter.
-  translation: Mi equipo ha estado abordando un reto de incorporación muy similar durante el último trimestre.
+  text: My team has been tackling a very similar onboarding challenge over the past
+    quarter.
+  translation: Mi equipo ha estado abordando un reto de incorporación muy similar
+    durante el último trimestre.
   visual_hint: 🧩💡
   cloze:
   - 4
@@ -30,7 +34,8 @@ phrases:
     ipa: ˈtæklɪŋ
 - id: swap-linkedin-qr
   text: I'd love to hear how your user testing went—shall we scan LinkedIn QR codes?
-  translation: Me encantaría saber cómo les fue en las pruebas de usuario; ¿escaneamos nuestros códigos QR de LinkedIn?
+  translation: Me encantaría saber cómo les fue en las pruebas de usuario; ¿escaneamos
+    nuestros códigos QR de LinkedIn?
   visual_hint: 📱🤝
   cloze:
   - 4
@@ -39,43 +44,10 @@ phrases:
   - word: user testing
     meaning: pruebas con usuarios
     ipa: ˈjuːzər ˈtestɪŋ
-- id: grab-coffee-next-week
-  text: If you're in town on Tuesday, let's grab a coffee near the convention center and compare notes.
-  translation: Si sigues en la ciudad el martes, tomemos un café cerca del centro de convenciones e intercambiemos
-    ideas.
-  visual_hint: ☕📅
-  cloze:
-  - 5
-  - 11
-  glossary:
-  - word: compare notes
-    meaning: intercambiar experiencias / ideas
-    ipa: kəmˈper noʊts
-- id: introduce-to-colleague
-  text: Before I head out, let me introduce you to our UX researcher, Priya.
-  translation: Antes de irme, déjame presentarte a nuestra investigadora de UX, Priya.
-  visual_hint: 👋👩‍💻
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: head out
-    meaning: retirarse / salir de un lugar
-    ipa: hed aʊt
-- id: shoot-you-a-message
-  text: I'll shoot you a message tomorrow morning to lock in a time for Tuesday!
-  translation: ¡Te escribo mañana temprano para confirmar la hora del martes!
-  visual_hint: 💬✅
-  cloze:
-  - 4
-  - 9
-  glossary:
-  - word: lock in
-    meaning: confirmar / asegurar hora
-    ipa: lɑːk ɪn
 - id: idm-b2nm-touch-base
   text: It was great meeting you. Let's touch base next week about it.
-  translation: Fue un gusto conocerte. Hablemos la próxima semana al respecto (ponerse en contacto).
+  translation: Fue un gusto conocerte. Hablemos la próxima semana al respecto (ponerse
+    en contacto).
   visual_hint: 💼🤝
   cloze:
   - 4
@@ -90,7 +62,8 @@ phrases:
   apply_translation: Me pondré en contacto con el equipo el viernes.
 - id: idm-b2nm-pick-your-brain
   text: Would you mind if I picked your brain about the industry?
-  translation: ¿Te importaría si te hago unas preguntas sobre el sector? (pedir consejo a un experto)
+  translation: ¿Te importaría si te hago unas preguntas sobre el sector? (pedir consejo
+    a un experto)
   visual_hint: 🧠💡
   cloze:
   - 3
@@ -114,13 +87,15 @@ roleplay:
     goal: Inicia la conversación comentando la buena pregunta que hizo en el panel.
     suggested_lines:
     - Hi! I really enjoyed the question you asked during the accessibility panel earlier.
-    - My team has been tackling a very similar onboarding challenge over the past quarter.
+    - My team has been tackling a very similar onboarding challenge over the past
+      quarter.
   - speaker: ai
     text: Are you working in product design or engineering yourself?
   - speaker: user
     goal: Comenta que tu equipo ha estado resolviendo un reto similar este trimestre.
     suggested_lines:
-    - My team has been tackling a very similar onboarding challenge over the past quarter.
+    - My team has been tackling a very similar onboarding challenge over the past
+      quarter.
     - I'd love to hear how your user testing went—shall we scan LinkedIn QR codes?
   - speaker: ai
     text: No way! How did you approach simplifying the first-run screen?
@@ -128,13 +103,15 @@ roleplay:
     goal: Propón intercambiar perfiles de LinkedIn para conversar sobre sus pruebas.
     suggested_lines:
     - I'd love to hear how your user testing went—shall we scan LinkedIn QR codes?
-    - If you're in town on Tuesday, let's grab a coffee near the convention center and compare notes.
+    - If you're in town on Tuesday, let's grab a coffee near the convention center
+      and compare notes.
   - speaker: ai
     text: Connected on LinkedIn! Are you based here in the city or flying back tomorrow?
   - speaker: user
     goal: Invítala a tomar un café el martes para intercambiar ideas.
     suggested_lines:
-    - If you're in town on Tuesday, let's grab a coffee near the convention center and compare notes.
+    - If you're in town on Tuesday, let's grab a coffee near the convention center
+      and compare notes.
     - Before I head out, let me introduce you to our UX researcher, Priya.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

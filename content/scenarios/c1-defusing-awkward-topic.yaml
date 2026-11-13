@@ -3,14 +3,14 @@ title: Gracefully pivoting a tense dinner topic
 title_es: Cambiar de tema con diplomacia en una cena
 cefr: C1
 topic: social-and-smalltalk
-description: Suaviza con humor y tacto una discusión acalorada en una cena, validando a ambos invitados y cambiando
-  de tema.
+description: Suaviza con humor y tacto una discusión acalorada en una cena, validando
+  a ambos invitados y cambiando de tema.
 phrases:
 - id: passion-at-the-table
-  text: It's clear you both care deeply about this issue—and we're definitely not solving municipal tax policy before
-    dessert!
-  translation: Está claro que a ambos les importa mucho este tema, ¡y seguro no resolveremos la política fiscal
-    antes del postre!
+  text: It's clear you both care deeply about this issue—and we're definitely not
+    solving municipal tax policy before dessert!
+  translation: Está claro que a ambos les importa mucho este tema, ¡y seguro no resolveremos
+    la política fiscal antes del postre!
   visual_hint: 🍷😊
   cloze:
   - 6
@@ -20,8 +20,10 @@ phrases:
     meaning: importar profundamente
     ipa: ker ˈdiːpli
 - id: agree-to-disagree-gracefully
-  text: Let's chalk that one up to a spirited 'agree to disagree' while the tiramisu is still chilled.
-  translation: Dejemos eso en un cordial 'acordemos disentir' mientras el tiramisú sigue frío.
+  text: Let's chalk that one up to a spirited 'agree to disagree' while the tiramisu
+    is still chilled.
+  translation: Dejemos eso en un cordial 'acordemos disentir' mientras el tiramisú
+    sigue frío.
   visual_hint: 🍰🤝
   cloze:
   - 5
@@ -32,7 +34,8 @@ phrases:
     ipa: əˈɡriː tuː ˌdɪsəˈɡriː
 - id: pivot-to-shared-passion
   text: Speaking of Italy, didn't you two both hike the Dolomites last autumn?
-  translation: Hablando de Italia, ¿no hicieron ambos senderismo en los Dolomitas el otoño pasado?
+  translation: Hablando de Italia, ¿no hicieron ambos senderismo en los Dolomitas
+    el otoño pasado?
   visual_hint: 🏔️🥾
   cloze:
   - 4
@@ -41,42 +44,10 @@ phrases:
   - word: speaking of
     meaning: hablando de... (para cambiar de tema)
     ipa: ˈspiːkɪŋ əv
-- id: hear-about-mountain-huts
-  text: Tell the table about those high-altitude refuges—we're planning a trip there in September!
-  translation: Cuéntenle a la mesa sobre esos refugios de montaña; ¡planeamos un viaje allá en septiembre!
-  visual_hint: 🏡🌄
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: refuges
-    meaning: refugios alpinos
-    ipa: ˈrefjuːdʒɪz
-- id: refill-everyone-glasses
-  text: Let me top up everyone's wine glasses while you compare trail routes.
-  translation: Déjenme rellenar las copas de todos mientras comparan rutas de montaña.
-  visual_hint: 🍷✨
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: top up
-    meaning: rellenar la copa
-    ipa: tɑːp ʌp
-- id: warmth-back-in-room
-  text: Nothing brings a dinner table together quite like trading travel stories!
-  translation: Nada une tanto a una mesa como compartir historias de viaje.
-  visual_hint: 🌍❤️
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: trading
-    meaning: intercambiar (anécdotas)
-    ipa: ˈtreɪdɪŋ
 - id: idm-c1da-change-subject
   text: Why don't we steer clear of politics and talk about the trip instead?
-  translation: ¿Por qué no evitamos la política y hablamos mejor del viaje? (mantenerse alejado)
+  translation: ¿Por qué no evitamos la política y hablamos mejor del viaje? (mantenerse
+    alejado)
   visual_hint: 🍷🙊
   cloze:
   - 4
@@ -91,7 +62,8 @@ phrases:
   apply_translation: Será mejor que evites ese tema en la cena.
 - id: idm-c1da-clear-the-air
   text: Let's clear the air before dessert so nobody feels uncomfortable.
-  translation: Aclaremos las cosas antes del postre para que nadie se sienta incómodo (eliminar tensión).
+  translation: Aclaremos las cosas antes del postre para que nadie se sienta incómodo
+    (eliminar tensión).
   visual_hint: 🌬️🕊️
   cloze:
   - 3
@@ -114,29 +86,37 @@ roleplay:
   - speaker: user
     goal: Reconoce con humor el entusiasmo de ambos para distender el ambiente.
     suggested_lines:
-    - It's clear you both care deeply about this issue—and we're definitely not solving municipal tax policy before
-      dessert!
-    - Let's chalk that one up to a spirited 'agree to disagree' while the tiramisu is still chilled.
+    - It's clear you both care deeply about this issue—and we're definitely not solving
+      municipal tax policy before dessert!
+    - Let's chalk that one up to a spirited 'agree to disagree' while the tiramisu
+      is still chilled.
   - speaker: ai
-    text: (Chuckles around the table) Fair enough, I might have gotten carried away on my soapbox!
+    text: (Chuckles around the table) Fair enough, I might have gotten carried away
+      on my soapbox!
   - speaker: user
-    goal: Invita a dejar el punto en un respetuoso 'acordemos disentir' para servir el postre.
+    goal: Invita a dejar el punto en un respetuoso 'acordemos disentir' para servir
+      el postre.
     suggested_lines:
-    - Let's chalk that one up to a spirited 'agree to disagree' while the tiramisu is still chilled.
+    - Let's chalk that one up to a spirited 'agree to disagree' while the tiramisu
+      is still chilled.
     - Speaking of Italy, didn't you two both hike the Dolomites last autumn?
   - speaker: ai
     text: Thank you for rescuing us! That tiramisu looks incredible.
   - speaker: user
-    goal: Redirige la conversación hacia el viaje de senderismo que ambos hicieron en los Dolomitas.
+    goal: Redirige la conversación hacia el viaje de senderismo que ambos hicieron
+      en los Dolomitas.
     suggested_lines:
     - Speaking of Italy, didn't you two both hike the Dolomites last autumn?
-    - Tell the table about those high-altitude refuges—we're planning a trip there in September!
+    - Tell the table about those high-altitude refuges—we're planning a trip there
+      in September!
   - speaker: ai
     text: Wait, you hiked the Alta Via 1 too? Which mountain hut was your favorite?
   - speaker: user
-    goal: Pídeles que cuenten sobre los refugios de montaña para integrar a toda la mesa.
+    goal: Pídeles que cuenten sobre los refugios de montaña para integrar a toda la
+      mesa.
     suggested_lines:
-    - Tell the table about those high-altitude refuges—we're planning a trip there in September!
+    - Tell the table about those high-altitude refuges—we're planning a trip there
+      in September!
     - Let me top up everyone's wine glasses while you compare trail routes.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

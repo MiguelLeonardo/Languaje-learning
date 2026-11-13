@@ -38,42 +38,10 @@ phrases:
   - word: sprinkles
     meaning: chispas dulces
     ipa: ˈsprɪŋkəlz
-- id: napkin-please
-  text: Can I have an extra napkin, please?
-  translation: ¿Me da una servilleta extra, por favor?
-  visual_hint: 🧻👌
-  cloze:
-  - 2
-  - 4
-  glossary:
-  - word: napkin
-    meaning: servilleta
-    ipa: ˈnæpkɪn
-- id: taste-the-mango
-  text: May I taste the mango flavor first?
-  translation: ¿Puedo probar el sabor de mango primero?
-  visual_hint: 🥭🥄
-  cloze:
-  - 2
-  - 4
-  glossary:
-  - word: taste
-    meaning: probar
-    ipa: teɪst
-- id: very-cold-and-good
-  text: This ice cream is very good, thank you!
-  translation: ¡Este helado está muy rico, gracias!
-  visual_hint: 😋🍦
-  cloze:
-  - 2
-  - 5
-  glossary:
-  - word: good
-    meaning: bueno / rico
-    ipa: ɡʊd
 - id: cool-down
   text: Ice cream helps me cool down on hot days.
-  translation: 'El helado me ayuda a refrescarme en los días calurosos. (cool down: refrescarse)'
+  translation: 'El helado me ayuda a refrescarme en los días calurosos. (cool down:
+    refrescarse)'
   visual_hint: 🍦☀️
   cloze:
   - 3
@@ -88,7 +56,8 @@ phrases:
   apply_translation: Siéntate a la sombra y refréscate un minuto.
 - id: a-sweet-tooth
   text: I have a sweet tooth, so chocolate please!
-  translation: 'Me encantan los dulces, ¡así que chocolate, por favor! (a sweet tooth: gusto por lo dulce)'
+  translation: 'Me encantan los dulces, ¡así que chocolate, por favor! (a sweet tooth:
+    gusto por lo dulce)'
   visual_hint: 🍫😋
   cloze:
   - 2

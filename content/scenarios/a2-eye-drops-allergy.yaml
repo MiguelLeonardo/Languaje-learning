@@ -3,11 +3,13 @@ title: Buying allergy eye drops
 title_es: Pedir gotas para alergia ocular
 cefr: A2
 topic: health-and-emergencies
-description: Pide gotas antihistamínicas porque el polen de primavera te causa picazón en los ojos.
+description: Pide gotas antihistamínicas porque el polen de primavera te causa picazón
+  en los ojos.
 phrases:
 - id: itchy-watery-eyes
   text: Hello! The tree pollen is giving me very itchy, watery eyes today.
-  translation: ¡Hola! El polen de los árboles me está causando mucha picazón y lagrimeo hoy.
+  translation: ¡Hola! El polen de los árboles me está causando mucha picazón y lagrimeo
+    hoy.
   visual_hint: 👁️🌸
   cloze:
   - 4
@@ -28,8 +30,10 @@ phrases:
     meaning: receta médica
     ipa: prɪˈskrɪpʃən
 - id: safe-with-contact-lenses
-  text: I wear soft contact lenses—should I take them out before putting the drops in?
-  translation: Uso lentes de contacto blandos; ¿debo quitármelos antes de ponerme las gotas?
+  text: I wear soft contact lenses—should I take them out before putting the drops
+    in?
+  translation: Uso lentes de contacto blandos; ¿debo quitármelos antes de ponerme
+    las gotas?
   visual_hint: 👓💧
   cloze:
   - 4
@@ -38,42 +42,10 @@ phrases:
   - word: take them out
     meaning: quitárselos / retirarlos
     ipa: teɪk ðem aʊt
-- id: one-drop-twice-a-day
-  text: So I put one drop in each eye in the morning and evening?
-  translation: ¿Entonces pongo una gota en cada ojo por la mañana y por la noche?
-  visual_hint: 🕗🌙
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: each
-    meaning: cada
-    ipa: iːtʃ
-- id: saline-nasal-spray
-  text: I'll also take a simple saline nasal spray for my stuffy nose.
-  translation: También llevaré un spray nasal salino para la nariz tapada.
-  visual_hint: 👃🌿
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: stuffy nose
-    meaning: nariz tapada / congestión
-    ipa: ˈstʌfi noʊz
-- id: sunglasses-help-outside
-  text: Wearing wrap-around sunglasses in the park helps block the pollen too!
-  translation: Usar lentes de sol en el parque también ayuda a frenar el polen.
-  visual_hint: 🕶️🌳
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: block
-    meaning: bloquear / frenar
-    ipa: blɑːk
 - id: idm-better-safe-than-sorry-a2
   text: I'll buy the drops anyway; better safe than sorry.
-  translation: Compraré las gotas igual; más vale prevenir que lamentar. (better safe than sorry)
+  translation: Compraré las gotas igual; más vale prevenir que lamentar. (better safe
+    than sorry)
   visual_hint: 👁️💧
   cloze:
   - 3
@@ -88,7 +60,8 @@ phrases:
   apply_translation: Lleva un paraguas; más vale prevenir que lamentar.
 - id: idm-ran-out-of-a2
   text: I ran out of my eye drops at the hotel.
-  translation: Me quedé sin mis gotas para los ojos en el hotel. (run out of = quedarse sin)
+  translation: Me quedé sin mis gotas para los ojos en el hotel. (run out of = quedarse
+    sin)
   visual_hint: 🧴❌
   cloze:
   - 3
@@ -107,7 +80,8 @@ roleplay:
   setting: Pharmacy counter during spring pollen season.
   turns:
   - speaker: ai
-    text: Hello! Spring allergy season is in full swing. What symptoms are bothering you?
+    text: Hello! Spring allergy season is in full swing. What symptoms are bothering
+      you?
   - speaker: user
     goal: Explica que el polen te causa picazón y lagrimeo en los ojos.
     suggested_lines:

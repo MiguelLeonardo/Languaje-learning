@@ -1,0 +1,94 @@
+id: b2-tech-fact-checking-news
+title: Fact-checking headlines and online news
+title_es: Verificar titulares y noticias en línea
+cefr: B2
+topic: daily-tech-and-media
+description: Analiza titulares sensacionalistas y verifica fuentes antes de compartir noticias.
+phrases:
+- id: sensational-clickbait-headline
+  text: That viral post relies on a sensational clickbait headline.
+  translation: Esa publicación viral se basa en un titular sensacionalista de cebo.
+  visual_hint: 📰⚠️
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: clickbait
+    meaning: ciberanzuelo / titular engañoso
+    ipa: ˈklɪkbeɪt
+- id: verify-primary-source
+  text: Always trace the claim back to its primary source.
+  translation: Siempre rastrea la afirmación hasta su fuente primaria.
+  visual_hint: 🔎📄
+  cloze:
+  - 2
+  - 6
+  glossary:
+  - word: primary source
+    meaning: fuente primaria
+    ipa: ˈpraɪmeri sɔːrs
+- id: cross-check-outlets
+  text: Cross-checking two independent outlets usually reveals missing context.
+  translation: Contrastar dos medios independientes suele revelar el contexto que falta.
+  visual_hint: 🗞️✅
+  cloze:
+  - 0
+  - 3
+  glossary:
+  - word: outlets
+    meaning: medios de comunicación
+    ipa: ˈaʊtlets
+- id: idm-take-with-grain-of-salt
+  text: I take anonymous screenshots with a grain of salt.
+  translation: 'Tomo las capturas de pantalla anónimas con escepticismo. (take with a grain
+    of salt: tomar con reservas)'
+  visual_hint: 🧂🧐
+  cloze:
+  - 6
+  - 8
+  glossary:
+  - word: grain of salt
+    meaning: con escepticismo / reservas
+    ipa: ɡreɪn əv sɔːlt
+  kind: idiom
+  apply_sentence: You should ____ any rumor posted without a named author.
+  apply_answer: take with a grain of salt
+  apply_translation: Deberías tomar con reservas cualquier rumor publicado sin autor identificado.
+- id: idm-hold-off-on
+  text: Let us hold off on sharing the article until it is confirmed.
+  translation: 'Esperemos antes de compartir el artículo hasta que se confirme. (hold off on:
+    posponer / esperar)'
+  visual_hint: ⏸️📲
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: hold off on
+    meaning: posponer / esperar para hacer algo
+    ipa: hoʊld ɔːf ɑːn
+  kind: phrasal_verb
+  apply_sentence: Journalists decided to ____ publishing the story until Monday.
+  apply_answer: hold off on
+  apply_translation: Los periodistas decidieron posponer la publicación de la noticia hasta
+    el lunes.
+roleplay:
+  ai_role: friend
+  user_role: media-literate friend
+  setting: Group chat discussion over coffee.
+  turns:
+  - speaker: ai
+    text: Did you see that wild breaking news post going around on social media?
+  - speaker: user
+    goal: Advierte que parece un titular engañoso y que conviene tomarlo con reservas.
+    suggested_lines:
+    - That viral post relies on a sensational clickbait headline.
+    - I take anonymous screenshots with a grain of salt.
+  - speaker: ai
+    text: Really? It already has thousands of reposts! How do you check?
+  - speaker: user
+    goal: Explica cómo verificar la fuente primaria y pide esperar antes de compartir.
+    suggested_lines:
+    - Always trace the claim back to its primary source.
+    - Let us hold off on sharing the article until it is confirmed.
+  - speaker: ai
+    text: Good call—I just checked and the original report was from three years ago!

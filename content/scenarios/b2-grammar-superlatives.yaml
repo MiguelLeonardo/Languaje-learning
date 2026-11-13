@@ -1,0 +1,93 @@
+id: b2-grammar-superlatives
+title: Emphatic superlatives and high-impact praise
+title_es: Superlativos enfáticos y elogios de alto impacto
+cefr: B2
+topic: grammar-and-connectors
+description: Destaca cualidades con fuerza usando 'by far the most', 'second to none',
+  'the single most' y 'without a doubt'.
+phrases:
+- id: by-far-most-efficient
+  text: This route is by far the most efficient option.
+  translation: Esta ruta es, con diferencia, la opción más eficiente.
+  visual_hint: 🛣️🏆
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: by far
+    meaning: con diferencia / por mucho
+    ipa: baɪ fɑːr
+  kind: expression
+  apply_sentence: That was ____ the hardest interview I have ever had.
+  apply_answer: by far
+  apply_translation: Esa fue con diferencia la entrevista más difícil que he tenido.
+- id: second-to-none-service
+  text: Their customer support is truly second to none.
+  translation: Su atención al cliente es verdaderamente insuperable.
+  visual_hint: 🌟📞
+  cloze:
+  - 5
+  - 7
+  glossary:
+  - word: second to none
+    meaning: insuperable / sin igual
+    ipa: ˈsekənd tuː nʌn
+  kind: idiom
+  apply_sentence: When it comes to fresh pastries, this bakery is ____.
+  apply_answer: second to none
+  apply_translation: En cuanto a bollería fresca, esta panadería es insuperable.
+- id: single-most-important
+  text: Trust is the single most important factor in teamwork.
+  translation: La confianza es el factor más importante de todos en el trabajo en
+    equipo.
+  visual_hint: 🤝💎
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: the single most
+    meaning: el más ... de todos (enfatizando uno solo)
+    ipa: ðə ˈsɪŋɡəl moʊst
+- id: without-doubt-finest
+  text: It is without a doubt the finest museum in the region.
+  translation: Es sin duda el mejor museo de la región.
+  visual_hint: 🏛️✨
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: without a doubt
+    meaning: sin lugar a dudas
+    ipa: wɪˈðaʊt ə daʊt
+- id: least-likely-to-fail
+  text: Option B is the least likely to cause delays.
+  translation: La opción B es la menos propensa a causar retrasos.
+  visual_hint: ✅⏱️
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: the least likely
+    meaning: el menos probable / propenso
+    ipa: ðə liːst ˈlaɪkli
+roleplay:
+  ai_role: vendor evaluator
+  user_role: operations lead
+  setting: Choosing a cloud vendor for a company migration.
+  turns:
+  - speaker: ai
+    text: Between the three vendors, which one stood out to you?
+  - speaker: user
+    goal: Destaca al mejor proveedor usando 'by far the most' o 'second to none'.
+    suggested_lines:
+    - Vendor A is by far the most reliable option.
+    - Their customer support is second to none.
+  - speaker: ai
+    text: What makes you prioritize support over a lower price?
+  - speaker: user
+    goal: Justifica usando 'the single most' o 'the least likely'.
+    suggested_lines:
+    - Uptime is the single most important factor for us.
+    - Vendor A is the least likely to cause outages.
+  - speaker: ai
+    text: Fair enough, let's move forward with Vendor A.

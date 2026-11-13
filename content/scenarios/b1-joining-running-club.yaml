@@ -3,11 +3,14 @@ title: Joining a Saturday running club
 title_es: Integrarse a un club de corredores local
 cefr: B1
 topic: social-and-smalltalk
-description: Preséntate en un grupo de corredores de fin de semana, pregunta el ritmo por kilómetro y la ruta.
+description: Preséntate en un grupo de corredores de fin de semana, pregunta el ritmo
+  por kilómetro y la ruta.
 phrases:
 - id: first-time-joining-group
-  text: Morning! I saw your club on Instagram and decided to join for the first time today.
-  translation: ¡Buenos días! Vi su club en Instagram y decidí unirme por primera vez hoy.
+  text: Morning! I saw your club on Instagram and decided to join for the first time
+    today.
+  translation: ¡Buenos días! Vi su club en Instagram y decidí unirme por primera vez
+    hoy.
   visual_hint: 👟🌅
   cloze:
   - 5
@@ -28,8 +31,10 @@ phrases:
     meaning: ritmo de carrera
     ipa: peɪs
 - id: conversational-pace-group
-  text: I'll stick with the five-thirty per kilometer group so I can chat along the way.
-  translation: Me uniré al grupo de cinco treinta por kilómetro para poder conversar en el camino.
+  text: I'll stick with the five-thirty per kilometer group so I can chat along the
+    way.
+  translation: Me uniré al grupo de cinco treinta por kilómetro para poder conversar
+    en el camino.
   visual_hint: 💬🏃
   cloze:
   - 5
@@ -38,42 +43,10 @@ phrases:
   - word: stick with
     meaning: mantenerse con / ir en
     ipa: stɪk wɪð
-- id: coffee-stop-after-run
-  text: Does everyone really grab pastries and coffee together at the finish line?
-  translation: ¿De verdad todos van por pan dulce y café juntos al llegar a la meta?
-  visual_hint: 🥐☕
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: finish line
-    meaning: línea de meta / final
-    ipa: ˈfɪnɪʃ laɪn
-- id: bag-drop-in-van
-  text: Can I leave my sweatshirt in the club's gear bag while we run?
-  translation: ¿Puedo dejar mi sudadera en la bolsa del club mientras corremos?
-  visual_hint: 🧥🎒
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: sweatshirt
-    meaning: sudadera
-    ipa: ˈswetʃɜːrt
-- id: great-way-start-weekend
-  text: Running with a group makes the kilometers fly by—see you next Saturday!
-  translation: Correr en grupo hace que los kilómetros pasen volando; ¡nos vemos el próximo sábado!
-  visual_hint: 🙌🏅
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: fly by
-    meaning: pasar volando (el tiempo)
-    ipa: flaɪ baɪ
 - id: idm-b1rc-warm-up
   text: We always warm up for ten minutes before we start running.
-  translation: Siempre calentamos diez minutos antes de empezar a correr (preparar el cuerpo).
+  translation: Siempre calentamos diez minutos antes de empezar a correr (preparar
+    el cuerpo).
   visual_hint: 🏃‍♀️🔥
   cloze:
   - 3
@@ -88,7 +61,8 @@ phrases:
   apply_translation: Deberías calentar antes de jugar al fútbol.
 - id: idm-b1rc-first-things
   text: Don't worry, you'll get the hang of it in a few weeks.
-  translation: No te preocupes, le agarrarás el truco en unas semanas (aprender a hacerlo).
+  translation: No te preocupes, le agarrarás el truco en unas semanas (aprender a
+    hacerlo).
   visual_hint: 👟📈
   cloze:
   - 4
@@ -111,7 +85,8 @@ roleplay:
   - speaker: user
     goal: Saluda y cuenta que viste el club en Instagram y vienes por primera vez.
     suggested_lines:
-    - Morning! I saw your club on Instagram and decided to join for the first time today.
+    - Morning! I saw your club on Instagram and decided to join for the first time
+      today.
     - Do you split into different pace groups for the eight-kilometer loop?
   - speaker: ai
     text: So glad you came out! What distance and pace do you usually enjoy running?
@@ -119,13 +94,16 @@ roleplay:
     goal: Pregunta si se dividen en distintos grupos de ritmo para el recorrido.
     suggested_lines:
     - Do you split into different pace groups for the eight-kilometer loop?
-    - I'll stick with the five-thirty per kilometer group so I can chat along the way.
+    - I'll stick with the five-thirty per kilometer group so I can chat along the
+      way.
   - speaker: ai
-    text: Yes! We have a fast group, a 5:30 conversational pace group, and a run-walk group.
+    text: Yes! We have a fast group, a 5:30 conversational pace group, and a run-walk
+      group.
   - speaker: user
     goal: Elige el grupo de ritmo conversacional de 5:30 por kilómetro.
     suggested_lines:
-    - I'll stick with the five-thirty per kilometer group so I can chat along the way.
+    - I'll stick with the five-thirty per kilometer group so I can chat along the
+      way.
     - Does everyone really grab pastries and coffee together at the finish line?
   - speaker: ai
     text: I'm pacing the 5:30 group today! It's a flat loop along the river bridges.

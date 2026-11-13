@@ -28,16 +28,6 @@ phrases:
   - word: small
     meaning: pequeño
     ipa: smɔːl
-- id: how-much
-  text: How much is it?
-  translation: ¿Cuánto cuesta?
-  visual_hint: 💵
-  cloze:
-  - 1
-  glossary:
-  - word: much
-    meaning: mucho (how much = cuánto)
-    ipa: mʌtʃ
 - id: thank-you
   text: Thank you very much.
   translation: Muchas gracias.
@@ -48,34 +38,6 @@ phrases:
   - word: very
     meaning: muy
     ipa: ˈveri
-- id: with-oat-milk
-  text: Can I get it with oat milk?
-  translation: ¿Me lo puede dar con leche de avena?
-  visual_hint: 🥛🌾
-  cloze:
-  - 2
-  - 5
-  glossary:
-  - word: get
-    meaning: conseguir / pedir
-    ipa: ɡet
-  - word: oat milk
-    meaning: leche de avena
-    ipa: oʊt mɪlk
-- id: for-here-or-to-go
-  text: To go, please, and a blueberry muffin.
-  translation: Para llevar, por favor, y un muffin de arándanos.
-  visual_hint: 🧁🛍️
-  cloze:
-  - 1
-  - 6
-  glossary:
-  - word: to go
-    meaning: para llevar
-    ipa: tə ɡoʊ
-  - word: muffin
-    meaning: panecillo / muffin
-    ipa: ˈmʌfɪn
 - id: wake-up
   text: I need coffee to wake up in the morning.
   translation: 'Necesito café para despertarme por la mañana. (wake up: despertarse)'

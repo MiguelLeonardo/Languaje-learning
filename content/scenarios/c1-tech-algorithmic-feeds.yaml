@@ -1,0 +1,100 @@
+id: c1-tech-algorithmic-feeds
+title: Critiquing algorithmic recommendation feeds
+title_es: Criticar los algoritmos de recomendación
+cefr: C1
+topic: daily-tech-and-media
+description: Debate cómo los feeds algorítmicos moldean la atención, los hábitos y la economía
+  de la atención.
+phrases:
+- id: optimize-for-engagement
+  text: Recommendation engines routinely optimize for outrage and prolonged engagement.
+  translation: Los motores de recomendación suelen optimizar para la indignación y la interacción
+    prolongada.
+  visual_hint: 📈🧠
+  cloze:
+  - 3
+  - 5
+  glossary:
+  - word: engagement
+    meaning: interacción / retención
+    ipa: ɪnˈɡeɪdʒmənt
+- id: echo-chamber-effect
+  text: Curated feeds can subtly trap users inside ideological echo chambers.
+  translation: Los feeds curados pueden atrapar sutilmente a los usuarios en cámaras de eco
+    ideológicas.
+  visual_hint: 🔁💬
+  cloze:
+  - 7
+  - 8
+  glossary:
+  - word: echo chamber
+    meaning: cámara de eco
+    ipa: ˈekoʊ ˈtʃeɪmbər
+- id: chronological-feed-toggle
+  text: Switching back to a chronological feed restores intentional browsing.
+  translation: Volver a un feed cronológico devuelve la navegación intencional.
+  visual_hint: 🕒📱
+  cloze:
+  - 4
+  - 7
+  glossary:
+  - word: chronological
+    meaning: cronológico
+    ipa: ˌkrɑːnəˈlɑːdʒɪkəl
+- id: idm-suck-in
+  text: Autoplay features are engineered to suck you in for hours.
+  translation: 'Las funciones de reproducción automática están diseñadas para atraparte durante
+    horas. (suck someone in: absorber / atrapar)'
+  visual_hint: 🌀📺
+  cloze:
+  - 5
+  - 7
+  glossary:
+  - word: suck in
+    meaning: atrapar / absorber
+    ipa: sʌk ɪn
+  kind: phrasal_verb
+  apply_sentence: Short-form clips can easily ____ viewers before they notice the time.
+  apply_answer: suck in
+  apply_translation: Los videos cortos pueden atrapar fácilmente a los espectadores antes de
+    que noten la hora.
+- id: idm-double-edged-sword
+  text: Hyper-personalization is a double-edged sword for independent creators.
+  translation: 'La hiperpersonalización es un arma de doble filo para los creadores independientes.
+    (double-edged sword: arma de doble filo)'
+  visual_hint: ⚔️🎭
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: double-edged sword
+    meaning: arma de doble filo
+    ipa: ˌdʌbəl edʒd sɔːrd
+  kind: idiom
+  apply_sentence: Viral discovery can be a ____ when audience expectations shift overnight.
+  apply_answer: double-edged sword
+  apply_translation: El descubrimiento viral puede ser un arma de doble filo cuando las expectativas
+    cambian de la noche a la mañana.
+roleplay:
+  ai_role: media researcher
+  user_role: panelist
+  setting: Post-talk Q&A at a digital culture symposium.
+  turns:
+  - speaker: ai
+    text: Do you think users genuinely want algorithmic feeds, or have they simply grown accustomed
+      to them?
+  - speaker: user
+    goal: Argumenta que los motores optimizan la retención y atrapan a la gente en cámaras de
+      eco.
+    suggested_lines:
+    - Recommendation engines routinely optimize for outrage and prolonged engagement.
+    - Curated feeds can subtly trap users inside ideological echo chambers.
+  - speaker: ai
+    text: Yet small creators say algorithms help them find niche audiences.
+  - speaker: user
+    goal: Reconoce que es un arma de doble filo y defiende volver a feeds cronológicos.
+    suggested_lines:
+    - Hyper-personalization is a double-edged sword for independent creators.
+    - Switching back to a chronological feed restores intentional browsing.
+  - speaker: ai
+    text: That balance between discovery and agency is the crux of the debate.

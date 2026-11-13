@@ -1,0 +1,99 @@
+id: c2-daily-digital-detox
+title: Designing an intentional digital detox
+title_es: Diseñar una desintoxicación digital intencional
+cefr: C2
+topic: daily-tech-and-media
+description: Reemplaza la hiperconectividad nocturna con rituales analógicos sostenibles en
+  casa.
+phrases:
+- id: fragmented-attention-span
+  text: Constant context-switching erodes deep reading and leaves attention fragmented.
+  translation: El cambio constante de contexto erosiona la lectura profunda y deja la atención
+    fragmentada.
+  visual_hint: 🧠📚
+  cloze:
+  - 2
+  - 8
+  glossary:
+  - word: erodes
+    meaning: erosiona / desgasta
+    ipa: ɪˈroʊdz
+- id: analog-evening-sanctuary
+  text: Designating the bedroom a screen-free sanctuary restores circadian rhythm.
+  translation: Designar el dormitorio como santuario sin pantallas restaura el ritmo circadiano.
+  visual_hint: 🌙🛏️
+  cloze:
+  - 4
+  - 6
+  glossary:
+  - word: sanctuary
+    meaning: santuario / refugio
+    ipa: ˈsæŋktʃueri
+- id: grayscale-friction-tactic
+  text: Switching displays to grayscale introduces subtle friction against compulsive scrolling.
+  translation: Cambiar las pantallas a escala de grises introduce una fricción sutil contra
+    el desplazamiento compulsivo.
+  visual_hint: 📱⬜
+  cloze:
+  - 3
+  - 5
+  glossary:
+  - word: friction
+    meaning: fricción / obstáculo útil
+    ipa: ˈfrɪkʃən
+- id: idm-wean-off
+  text: It took three weeks to wean myself off checking headlines before dawn.
+  translation: 'Me tomó tres semanas desacostumbrarme a revisar titulares antes del amanecer.
+    (wean off: desacostumbrar gradualmente)'
+  visual_hint: 🌅📵
+  cloze:
+  - 5
+  - 7
+  glossary:
+  - word: wean off
+    meaning: desacostumbrar gradualmente
+    ipa: wiːn ɔːf
+  kind: phrasal_verb
+  apply_sentence: A dumb alarm clock helps you ____ sleeping next to your phone.
+  apply_answer: wean yourself off
+  apply_translation: Un despertador tradicional te ayuda a desacostumbrarte a dormir junto al
+    teléfono.
+- id: idm-kick-the-habit
+  text: Replacing doomscrolling with evening walks finally helped me kick the habit.
+  translation: 'Reemplazar el desplazamiento compulsivo con caminatas nocturnas por fin me ayudó
+    a dejar el hábito. (kick the habit: dejar un hábito)'
+  visual_hint: 🚶‍♀️✨
+  cloze:
+  - 8
+  - 10
+  glossary:
+  - word: kick the habit
+    meaning: dejar un vicio o hábito
+    ipa: kɪk ðə ˈhæbɪt
+  kind: idiom
+  apply_sentence: Deleting social apps from his home screen helped him ____.
+  apply_answer: kick the habit
+  apply_translation: Borrar las aplicaciones sociales de su pantalla de inicio le ayudó a dejar
+    el hábito.
+roleplay:
+  ai_role: behavioral psychologist
+  user_role: client
+  setting: Coaching session on reclaiming focus and sleep quality.
+  turns:
+  - speaker: ai
+    text: You mentioned wanting to overhaul your evening screen habits. What triggered that
+      decision?
+  - speaker: user
+    goal: Explica cómo el cambio constante de contexto erosiona tu atención y qué fricción añadiste.
+    suggested_lines:
+    - Constant context-switching erodes deep reading and leaves attention fragmented.
+    - Switching displays to grayscale introduces subtle friction against compulsive scrolling.
+  - speaker: ai
+    text: Grayscale is surprisingly effective. How are you protecting your sleep environment?
+  - speaker: user
+    goal: Describe tu dormitorio libre de pantallas y cómo lograste dejar el hábito nocturno.
+    suggested_lines:
+    - Designating the bedroom a screen-free sanctuary restores circadian rhythm.
+    - Replacing doomscrolling with evening walks finally helped me kick the habit.
+  - speaker: ai
+    text: Those environmental cues are far more reliable than willpower alone.

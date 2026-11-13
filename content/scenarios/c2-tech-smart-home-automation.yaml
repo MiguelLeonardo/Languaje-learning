@@ -1,0 +1,101 @@
+id: c2-tech-smart-home-automation
+title: Architecting local-first smart home automation
+title_es: Domótica local sin dependencia de la nube
+cefr: C2
+topic: daily-tech-and-media
+description: Diseña automatizaciones del hogar con procesamiento local para evitar fallos por
+  nube o latencia.
+phrases:
+- id: local-first-control-plane
+  text: A local-first control plane ensures lighting automations survive internet outages.
+  translation: Un plano de control prioritariamente local garantiza que las automatizaciones
+    de luz sobrevivan a cortes de internet.
+  visual_hint: 🏠⚡
+  cloze:
+  - 2
+  - 6
+  glossary:
+  - word: outages
+    meaning: interrupciones / cortes
+    ipa: ˈaʊtɪdʒɪz
+- id: vendor-lock-in-risk
+  text: Proprietary hubs expose households to abrupt vendor lock-in and sunsetted APIs.
+  translation: Los concentradores propietarios exponen a los hogares a un bloqueo de proveedor
+    abrupto y APIs descontinuadas.
+  visual_hint: 🔒🔌
+  cloze:
+  - 5
+  - 8
+  glossary:
+  - word: vendor lock-in
+    meaning: dependencia de un proveedor
+    ipa: ˈvendər lɑːk ɪn
+- id: sub-second-zigbee-latency
+  text: Local Zigbee bindings deliver sub-second responsiveness without cloud round-trips.
+  translation: Los enlaces Zigbee locales ofrecen una respuesta inferior al segundo sin viajes
+    de ida y vuelta a la nube.
+  visual_hint: ⚡📡
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: responsiveness
+    meaning: capacidad de respuesta
+    ipa: rɪˈspɑːnsɪvnəs
+- id: idm-hinge-on
+  text: Your front door lock should never hinge on a remote server staying online.
+  translation: 'La cerradura de tu puerta principal nunca debería depender de que un servidor
+    remoto siga en línea. (hinge on: depender de)'
+  visual_hint: 🚪🔑
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: hinge on
+    meaning: depender por completo de
+    ipa: hɪndʒ ɑːn
+  kind: phrasal_verb
+  apply_sentence: Resilient home infrastructure does not ____ third-party uptime.
+  apply_answer: hinge on
+  apply_translation: Una infraestructura doméstica resiliente no depende de la disponibilidad
+    de terceros.
+- id: idm-bell-and-whistle
+  text: I would trade every voice-assistant bell and whistle for rock-solid reliability.
+  translation: 'Cambiaría cada adorno llamativo del asistente de voz por una fiabilidad a prueba
+    de fallos. (bell and whistle: adorno / función llamativa)'
+  visual_hint: 🎛️✅
+  cloze:
+  - 5
+  - 7
+  glossary:
+  - word: bell and whistle
+    meaning: función llamativa pero secundaria
+    ipa: bel ænd ˈwɪsəl
+  kind: idiom
+  apply_sentence: The new smart fridge has every ____, yet its Wi-Fi chip drops daily.
+  apply_answer: bell and whistle
+  apply_translation: El nuevo refrigerador inteligente tiene cada adorno llamativo, pero su
+    chip Wi-Fi se cae a diario.
+roleplay:
+  ai_role: smart home architect
+  user_role: homeowner
+  setting: Planning a whole-home automation upgrade during a renovation.
+  turns:
+  - speaker: ai
+    text: Most off-the-shelf smart devices route every button press through the cloud. Does
+      that bother you?
+  - speaker: user
+    goal: Critica la dependencia de proveedores y defiende un plano de control local.
+    suggested_lines:
+    - Proprietary hubs expose households to abrupt vendor lock-in and sunsetted APIs.
+    - A local-first control plane ensures lighting automations survive internet outages.
+  - speaker: ai
+    text: Agreed. What matters most to you in day-to-day use?
+  - speaker: user
+    goal: Prioriza la respuesta inmediata y di que prefieres fiabilidad antes que funciones
+      llamativas.
+    suggested_lines:
+    - Local Zigbee bindings deliver sub-second responsiveness without cloud round-trips.
+    - I would trade every voice-assistant bell and whistle for rock-solid reliability.
+  - speaker: ai
+    text: Then a local Zigbee coordinator with Matter fallback is the way to go.

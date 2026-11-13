@@ -3,7 +3,8 @@ title: Small talk in the elevator
 title_es: Charlar sobre el clima en el ascensor
 cefr: A1
 topic: social-and-smalltalk
-description: Rompe el hielo en el ascensor hablando del buen clima del fin de semana y qué piso presionas.
+description: Rompe el hielo en el ascensor hablando del buen clima del fin de semana
+  y qué piso presionas.
 phrases:
 - id: going-up-floor-five
   text: Good afternoon! Which floor are you going to?
@@ -38,39 +39,6 @@ phrases:
   - word: sunny
     meaning: soleado
     ipa: ˈsʌni
-- id: walk-by-the-beach
-  text: Yes! I am going to the beach with my family tomorrow.
-  translation: ¡Sí! Mañana voy a la playa con mi familia.
-  visual_hint: 🏖️👨‍👩‍👧
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: beach
-    meaning: playa
-    ipa: biːtʃ
-- id: no-rain-until-monday
-  text: I am glad there is no rain this weekend.
-  translation: Me alegra que no haya lluvia este fin de semana.
-  visual_hint: 🌈😊
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: rain
-    meaning: lluvia
-    ipa: reɪn
-- id: have-a-great-weekend
-  text: Here is your floor. Have a great weekend!
-  translation: Aquí está tu piso. ¡Que tengas un excelente fin de semana!
-  visual_hint: 👋🌟
-  cloze:
-  - 2
-  - 5
-  glossary:
-  - word: weekend
-    meaning: fin de semana
-    ipa: ˈwiːkend
 - id: idm-a1ww-nice-day
   text: What a nice day! I hope it stays sunny this weekend.
   translation: ¡Qué lindo día! Espero que siga soleado este fin de semana.

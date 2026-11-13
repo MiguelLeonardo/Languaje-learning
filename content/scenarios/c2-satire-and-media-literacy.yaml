@@ -3,13 +3,14 @@ title: Analyzing political satire and media literacy
 title_es: Analizar sátira y alfabetización mediática
 cefr: C2
 topic: social-and-smalltalk
-description: Debate la delgada línea entre la sátira política como válvula democrática y el cinismo que desmoviliza
-  al ciudadano.
+description: Debate la delgada línea entre la sátira política como válvula democrática
+  y el cinismo que desmoviliza al ciudadano.
 phrases:
 - id: satire-punches-up
-  text: At its best, satire punches up—puncturing institutional pomposity when straight reporting hits a wall.
-  translation: 'En su mejor expresión, la sátira apunta hacia arriba: desinfla la pomposidad del poder cuando el
-    periodismo tradicional topa con pared.'
+  text: At its best, satire punches up—puncturing institutional pomposity when straight
+    reporting hits a wall.
+  translation: 'En su mejor expresión, la sátira apunta hacia arriba: desinfla la
+    pomposidad del poder cuando el periodismo tradicional topa con pared.'
   visual_hint: 🎭📰
   cloze:
   - 4
@@ -19,9 +20,10 @@ phrases:
     meaning: desinflar / desmontar la solemnidad
     ipa: ˈpʌŋktʃərɪŋ
 - id: corrosive-cynicism-trap
-  text: Yet when irony becomes the default register for everything, it risks curdling into corrosive cynicism.
-  translation: Sin embargo, cuando la ironía se vuelve el tono por defecto para todo, corre el riesgo de volverse
-    cinismo corrosivo.
+  text: Yet when irony becomes the default register for everything, it risks curdling
+    into corrosive cynicism.
+  translation: Sin embargo, cuando la ironía se vuelve el tono por defecto para todo,
+    corre el riesgo de volverse cinismo corrosivo.
   visual_hint: ⚠️🗣️
   cloze:
   - 5
@@ -31,9 +33,10 @@ phrases:
     meaning: degenerar / agriarse en
     ipa: ˈkɜːrdlɪŋ ˈɪntuː
 - id: poes-law-online
-  text: In an era of algorithmic outrage, Poe's Law means parody is routinely mistaken for literal endorsement.
-  translation: En una era de indignación algorítmica, la Ley de Poe hace que la parodia se confunda a menudo con
-    una postura literal.
+  text: In an era of algorithmic outrage, Poe's Law means parody is routinely mistaken
+    for literal endorsement.
+  translation: En una era de indignación algorítmica, la Ley de Poe hace que la parodia
+    se confunda a menudo con una postura literal.
   visual_hint: 🌐🤯
   cloze:
   - 5
@@ -42,44 +45,10 @@ phrases:
   - word: mistaken for
     meaning: confundida con
     ipa: mɪˈsteɪkən fɔːr
-- id: pair-wit-with-earnestness
-  text: The antidote isn't abandoning wit, but pairing sharp critique with an earnest commitment to truth.
-  translation: El antídoto no es abandonar el ingenio, sino acompañar la crítica aguda con un compromiso genuino
-    con la verdad.
-  visual_hint: ✨⚖️
-  cloze:
-  - 5
-  - 10
-  glossary:
-  - word: earnest
-    meaning: genuino / serio y sincero
-    ipa: ˈɜːrnɪst
-- id: catharsis-versus-action
-  text: Laughter provides vital catharsis, provided it doesn't become a substitute for civic participation.
-  translation: La risa brinda una catarsis vital, siempre que no sustituya la participación ciudadana.
-  visual_hint: 🗳️🎭
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: catharsis
-    meaning: catarsis / desahogo emocional
-    ipa: kəˈθɑːrsɪs
-- id: nuanced-media-diet
-  text: Cultivating media literacy means savoring irony while still verifying primary sources.
-  translation: Cultivar la alfabetización mediática implica disfrutar la ironía verificando siempre las fuentes
-    primarias.
-  visual_hint: 🔍📑
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: savoring
-    meaning: degustar / apreciar con matices
-    ipa: ˈseɪvərɪŋ
 - id: idm-c2sm-tip-iceberg
   text: That headline is just the tip of the iceberg, believe me.
-  translation: Ese titular es solo la punta del iceberg, créeme (una pequeña parte visible).
+  translation: Ese titular es solo la punta del iceberg, créeme (una pequeña parte
+    visible).
   visual_hint: 📰🧊
   cloze:
   - 3
@@ -94,7 +63,8 @@ phrases:
   apply_translation: El escándalo era solo la punta del iceberg.
 - id: idm-c2sm-spin
   text: Politicians always put a spin on the facts to suit them.
-  translation: Los políticos siempre le dan un giro a los hechos para su conveniencia (manipular el relato).
+  translation: Los políticos siempre le dan un giro a los hechos para su conveniencia
+    (manipular el relato).
   visual_hint: 📺🌀
   cloze:
   - 3
@@ -113,32 +83,45 @@ roleplay:
   setting: Live literary festival conversation on humor and public discourse.
   turns:
   - speaker: ai
-    text: Does political satire sharpen civic awareness, or does it merely preach to the converted?
+    text: Does political satire sharpen civic awareness, or does it merely preach
+      to the converted?
   - speaker: user
     goal: Sostén que la buena sátira cuestiona al poder y desmonta la solemnidad.
     suggested_lines:
-    - At its best, satire punches up—puncturing institutional pomposity when straight reporting hits a wall.
-    - Yet when irony becomes the default register for everything, it risks curdling into corrosive cynicism.
+    - At its best, satire punches up—puncturing institutional pomposity when straight
+      reporting hits a wall.
+    - Yet when irony becomes the default register for everything, it risks curdling
+      into corrosive cynicism.
   - speaker: ai
-    text: Where do you see the danger when audiences consume news primarily through late-night comedy?
+    text: Where do you see the danger when audiences consume news primarily through
+      late-night comedy?
   - speaker: user
     goal: Advierte que abusar de la ironía puede derivar en un cinismo paralizante.
     suggested_lines:
-    - Yet when irony becomes the default register for everything, it risks curdling into corrosive cynicism.
-    - In an era of algorithmic outrage, Poe's Law means parody is routinely mistaken for literal endorsement.
+    - Yet when irony becomes the default register for everything, it risks curdling
+      into corrosive cynicism.
+    - In an era of algorithmic outrage, Poe's Law means parody is routinely mistaken
+      for literal endorsement.
   - speaker: ai
-    text: And social media strips away the contextual cues that used to signal 'this is a joke.'
+    text: And social media strips away the contextual cues that used to signal 'this
+      is a joke.'
   - speaker: user
-    goal: Explica cómo en redes sociales la parodia suele confundirse con afirmaciones literales.
+    goal: Explica cómo en redes sociales la parodia suele confundirse con afirmaciones
+      literales.
     suggested_lines:
-    - In an era of algorithmic outrage, Poe's Law means parody is routinely mistaken for literal endorsement.
-    - The antidote isn't abandoning wit, but pairing sharp critique with an earnest commitment to truth.
+    - In an era of algorithmic outrage, Poe's Law means parody is routinely mistaken
+      for literal endorsement.
+    - The antidote isn't abandoning wit, but pairing sharp critique with an earnest
+      commitment to truth.
   - speaker: ai
     text: So how does a writer keep their edge without feeding into apathy?
   - speaker: user
-    goal: Concluye proponiendo unir el ingenio crítico con un compromiso sincero con la verdad.
+    goal: Concluye proponiendo unir el ingenio crítico con un compromiso sincero con
+      la verdad.
     suggested_lines:
-    - The antidote isn't abandoning wit, but pairing sharp critique with an earnest commitment to truth.
-    - Laughter provides vital catharsis, provided it doesn't become a substitute for civic participation.
+    - The antidote isn't abandoning wit, but pairing sharp critique with an earnest
+      commitment to truth.
+    - Laughter provides vital catharsis, provided it doesn't become a substitute for
+      civic participation.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

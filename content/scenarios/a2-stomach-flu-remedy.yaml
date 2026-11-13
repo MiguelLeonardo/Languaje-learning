@@ -3,7 +3,8 @@ title: Getting stomach remedies at a pharmacy
 title_es: Pedir suero oral por malestar estomacal
 cefr: A2
 topic: health-and-emergencies
-description: Explica al farmacéutico que comiste algo que te cayó mal ayer y pide sales de rehidratación oral.
+description: Explica al farmacéutico que comiste algo que te cayó mal ayer y pide
+  sales de rehidratación oral.
 phrases:
 - id: upset-stomach-since-last-night
   text: Hi, I've had an upset stomach and nausea since dinner last night.
@@ -18,7 +19,8 @@ phrases:
     ipa: ʌpˈset ˈstʌmək
 - id: rehydration-electrolyte-powder
   text: Do you have oral rehydration salts or electrolyte packets I can mix with water?
-  translation: ¿Tienen sales de rehidratación oral o sobres de electrolitos para mezclar con agua?
+  translation: ¿Tienen sales de rehidratación oral o sobres de electrolitos para mezclar
+    con agua?
   visual_hint: 💧🥤
   cloze:
   - 4
@@ -38,39 +40,6 @@ phrases:
   - word: sleepy
     meaning: con sueño / somnoliento
     ipa: ˈsliːpi
-- id: stick-to-plain-toast
-  text: Should I stick to plain toast, rice, and herbal tea for today?
-  translation: ¿Debería comer solo pan tostado, arroz y té de hierbas por hoy?
-  visual_hint: 🍞🍵
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: stick to
-    meaning: limitarse a / mantenerse con
-    ipa: stɪk tuː
-- id: no-fever-just-weak
-  text: I don't have a fever, I just feel a bit tired and dehydrated.
-  translation: No tengo fiebre, solo me siento un poco cansado y deshidratado.
-  visual_hint: 🌡️👌
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: fever
-    meaning: fiebre / temperatura
-    ipa: ˈfiːvər
-- id: see-doctor-if-continues
-  text: If it doesn't improve by tomorrow morning, I'll visit the walk-in clinic.
-  translation: Si no mejora para mañana temprano, iré a la clínica sin cita.
-  visual_hint: 🏥✅
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: improve
-    meaning: mejorar
-    ipa: ɪmˈpruːv
 - id: idm-feel-like-a2
   text: I don't feel like eating anything today.
   translation: Hoy no tengo ganas de comer nada. (feel like = tener ganas de)
@@ -121,7 +90,8 @@ roleplay:
     - Do you have oral rehydration salts or electrolyte packets I can mix with water?
     - Is there a mild tablet that helps stop nausea without making me sleepy?
   - speaker: ai
-    text: Yes, dissolve one of these lemon electrolyte sachets in a tall bottle of water.
+    text: Yes, dissolve one of these lemon electrolyte sachets in a tall bottle of
+      water.
   - speaker: user
     goal: Pregunta si tienen alguna pastilla para las náuseas que no dé sueño.
     suggested_lines:

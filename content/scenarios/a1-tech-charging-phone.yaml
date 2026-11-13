@@ -1,0 +1,91 @@
+id: a1-tech-charging-phone
+title: Charging a phone with low battery
+title_es: Cargar el teléfono con batería baja
+cefr: A1
+topic: daily-tech-and-media
+description: Pide un cargador y un enchufe porque tu teléfono tiene poca batería.
+phrases:
+- id: battery-is-low
+  text: My phone battery is very low right now.
+  translation: La batería de mi teléfono está muy baja ahora mismo.
+  visual_hint: 🪫📱
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: battery
+    meaning: batería
+    ipa: ˈbætəri
+- id: borrow-a-charger
+  text: Can I borrow a phone charger for ten minutes?
+  translation: ¿Puedo pedir prestado un cargador de teléfono por diez minutos?
+  visual_hint: 🔌⏱️
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: charger
+    meaning: cargador
+    ipa: ˈtʃɑːrdʒər
+- id: outlet-near-wall
+  text: There is a power outlet near the window.
+  translation: Hay un enchufe cerca de la ventana.
+  visual_hint: ⚡🪟
+  cloze:
+  - 4
+  - 7
+  glossary:
+  - word: outlet
+    meaning: enchufe / toma de corriente
+    ipa: ˈaʊtlet
+- id: idm-plug-in
+  text: Let me plug in my cable over there.
+  translation: 'Déjame enchufar mi cable allá. (plug in: enchufar)'
+  visual_hint: 🔌✅
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: plug in
+    meaning: enchufar
+    ipa: plʌɡ ɪn
+  kind: phrasal_verb
+  apply_sentence: Please ____ the lamp before you turn it on.
+  apply_answer: plug in
+  apply_translation: Por favor, enchufa la lámpara antes de encenderla.
+- id: idm-run-out
+  text: I do not want my phone to run out of power.
+  translation: 'No quiero que mi teléfono se quede sin batería. (run out: quedarse sin)'
+  visual_hint: 🔋❗
+  cloze:
+  - 7
+  - 8
+  glossary:
+  - word: run out
+    meaning: quedarse sin
+    ipa: rʌn aʊt
+  kind: phrasal_verb
+  apply_sentence: Hurry, our tablet is going to ____ of battery.
+  apply_answer: run out
+  apply_translation: Date prisa, nuestra tableta se va a quedar sin batería.
+roleplay:
+  ai_role: helpful friend
+  user_role: guest
+  setting: A friend's living room before going out for dinner.
+  turns:
+  - speaker: ai
+    text: Are you ready to go, or do you need a minute?
+  - speaker: user
+    goal: Explica que tu batería está baja y pide un cargador prestado.
+    suggested_lines:
+    - My phone battery is very low right now.
+    - Can I borrow a phone charger for ten minutes?
+  - speaker: ai
+    text: Of course! Here is my USB-C cable.
+  - speaker: user
+    goal: Di que vas a enchufar el cable para no quedarte sin batería.
+    suggested_lines:
+    - Let me plug in my cable over there.
+    - I do not want my phone to run out of power.
+  - speaker: ai
+    text: Sounds good, take your time!

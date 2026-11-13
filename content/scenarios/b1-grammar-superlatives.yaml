@@ -1,0 +1,92 @@
+id: b1-grammar-superlatives
+title: Superlatives with present perfect and emphasis
+title_es: Superlativos con presente perfecto y énfasis
+cefr: B1
+topic: grammar-and-connectors
+description: Combina superlativos con 'I've ever...', 'easily the...' y 'the least...'
+  para destacar experiencias.
+phrases:
+- id: most-exciting-ever
+  text: It is the most exciting match I have ever watched.
+  translation: Es el partido más emocionante que he visto en mi vida.
+  visual_hint: ⚽🔥
+  cloze:
+  - 3
+  - 8
+  glossary:
+  - word: ever
+    meaning: alguna vez / en la vida (con superlativo)
+    ipa: ˈevər
+  kind: expression
+  apply_sentence: That was the best concert I have ____ attended.
+  apply_answer: ever
+  apply_translation: Ese fue el mejor concierto al que he asistido en mi vida.
+- id: easily-best-decision
+  text: Moving here was easily the best decision we made.
+  translation: Mudarnos aquí fue sin duda la mejor decisión que tomamos.
+  visual_hint: 🏡💯
+  cloze:
+  - 3
+  - 5
+  glossary:
+  - word: easily the best
+    meaning: fácilmente / sin duda el mejor
+    ipa: ˈiːzəli ðə best
+  kind: expression
+  apply_sentence: She is ____ the fastest runner on the team.
+  apply_answer: easily
+  apply_translation: Ella es sin duda la corredora más rápida del equipo.
+- id: least-stressful-route
+  text: Taking the ferry is the least stressful way to commute.
+  translation: Tomar el ferry es la forma menos estresante de desplazarse al trabajo.
+  visual_hint: ⛴️😌
+  cloze:
+  - 1
+  - 5
+  glossary:
+  - word: the least
+    meaning: el menos / la menos
+    ipa: ðə liːst
+- id: second-largest-island
+  text: This is the second largest island in the region.
+  translation: Esta es la segunda isla más grande de la región.
+  visual_hint: 🏝️🗺️
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: second largest
+    meaning: el segundo más grande
+    ipa: ˈsekənd ˈlɑːrdʒɪst
+- id: most-reliable-friend
+  text: Elena is the most reliable person in our department.
+  translation: Elena es la persona más confiable de nuestro departamento.
+  visual_hint: 🤝⭐
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: reliable
+    meaning: confiable / de fiar
+    ipa: rɪˈlaɪəbəl
+roleplay:
+  ai_role: podcast host
+  user_role: guest
+  setting: Recording a short travel and lifestyle podcast episode.
+  turns:
+  - speaker: ai
+    text: Welcome to the show! What is a trip you will never forget?
+  - speaker: user
+    goal: Describe un viaje usando un superlativo con 'ever'.
+    suggested_lines:
+    - Patagonia is the most amazing place I have ever visited.
+    - That hike was the most exciting thing I have ever done.
+  - speaker: ai
+    text: And what about your daily routine now—what works best for you?
+  - speaker: user
+    goal: Usa 'easily the best' o 'the least stressful'.
+    suggested_lines:
+    - Cycling to work is the least stressful way to commute.
+    - Joining a morning club was easily the best decision I made.
+  - speaker: ai
+    text: Great advice for our listeners!

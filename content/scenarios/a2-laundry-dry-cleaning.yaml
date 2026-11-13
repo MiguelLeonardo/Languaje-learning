@@ -3,7 +3,8 @@ title: Dropping off clothes for dry cleaning
 title_es: Dejar ropa en la tintorería
 cefr: A2
 topic: hotel-and-shopping
-description: Entrega un traje y una camisa blanca en la tintorería, indica una mancha de café y pide entrega exprés.
+description: Entrega un traje y una camisa blanca en la tintorería, indica una mancha
+  de café y pide entrega exprés.
 phrases:
 - id: dry-clean-this-suit
   text: Hi, I need to get this wool suit dry-cleaned and pressed.
@@ -38,39 +39,6 @@ phrases:
   - word: ready by
     meaning: listo antes de / para
     ipa: ˈredi baɪ
-- id: hangers-instead-folded
-  text: Please put the white shirts on hangers instead of folding them.
-  translation: Por favor ponga las camisas blancas en ganchos en lugar de doblarlas.
-  visual_hint: 👔🪝
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: hangers
-    meaning: ganchos / perchas de ropa
-    ipa: ˈhæŋərz
-- id: light-starch-collar
-  text: Just light starch on the shirt collars, please.
-  translation: Solo un poco de almidón en los cuellos de las camisas, por favor.
-  visual_hint: ✨👔
-  cloze:
-  - 2
-  - 5
-  glossary:
-  - word: collar
-    meaning: cuello de camisa
-    ipa: ˈkɑːlər
-- id: keep-pickup-ticket
-  text: I'll bring this pink pickup ticket with me tomorrow.
-  translation: Traeré este boleto rosa de recogida conmigo mañana.
-  visual_hint: 🎟️👍
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: pickup
-    meaning: recogida
-    ipa: ˈpɪkʌp
 - id: idm-get-rid-of
   text: Do you think your stain remover can get rid of this coffee mark?
   translation: ¿Cree que su quitamanchas pueda eliminar esta marca de café?
@@ -85,10 +53,12 @@ phrases:
   kind: phrasal_verb
   apply_sentence: I washed the shirt twice, yet I couldn't ____ the ink spot.
   apply_answer: get rid of
-  apply_translation: Lavé la camisa dos veces, pero no pude deshacerme de la mancha de tinta.
+  apply_translation: Lavé la camisa dos veces, pero no pude deshacerme de la mancha
+    de tinta.
 - id: idm-in-a-rush
   text: I'm in a rush for a wedding tomorrow, so can I pay for express service?
-  translation: Ando con prisa para una boda mañana, así que ¿puedo pagar servicio exprés?
+  translation: Ando con prisa para una boda mañana, así que ¿puedo pagar servicio
+    exprés?
   visual_hint: ⏱️👔
   cloze:
   - 5
@@ -100,7 +70,8 @@ phrases:
   kind: expression
   apply_sentence: Sorry I can't chat long; I'm ____ to catch the last train.
   apply_answer: in a rush
-  apply_translation: Disculpa que no pueda charlar mucho; ando con prisa para tomar el último tren.
+  apply_translation: Disculpa que no pueda charlar mucho; ando con prisa para tomar
+    el último tren.
 roleplay:
   ai_role: dry cleaner
   user_role: customer

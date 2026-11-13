@@ -3,11 +3,14 @@ title: Onboarding a new team member
 title_es: Guiar a un nuevo compañero de equipo
 cefr: B1
 topic: work-and-career
-description: Muéstrale a un compañero nuevo cómo están organizadas las carpetas compartidas y las reuniones semanales.
+description: Muéstrale a un compañero nuevo cómo están organizadas las carpetas compartidas
+  y las reuniones semanales.
 phrases:
 - id: walk-through-shared-drive
-  text: Welcome to the team, Lucas! Let me walk you through our shared Google Drive folders.
-  translation: ¡Bienvenido al equipo, Lucas! Déjame mostrarte paso a paso nuestras carpetas compartidas.
+  text: Welcome to the team, Lucas! Let me walk you through our shared Google Drive
+    folders.
+  translation: ¡Bienvenido al equipo, Lucas! Déjame mostrarte paso a paso nuestras
+    carpetas compartidas.
   visual_hint: 📂🤝
   cloze:
   - 5
@@ -17,8 +20,10 @@ phrases:
     meaning: explicarte paso a paso
     ipa: wɔːk juː θruː
 - id: active-client-templates
-  text: All the active client presentations and brand guidelines live inside this '01-Current' folder.
-  translation: Todas las presentaciones activas y guías de marca están dentro de esta carpeta '01-Current'.
+  text: All the active client presentations and brand guidelines live inside this
+    '01-Current' folder.
+  translation: Todas las presentaciones activas y guías de marca están dentro de esta
+    carpeta '01-Current'.
   visual_hint: 📊🗂️
   cloze:
   - 4
@@ -28,8 +33,10 @@ phrases:
     meaning: lineamientos / guías
     ipa: ˈɡaɪdlaɪnz
 - id: monday-kickoff-board
-  text: Every Monday at nine thirty, we review the Kanban board together to assign priorities.
-  translation: Cada lunes a las nueve y media revisamos juntos el tablero Kanban para asignar prioridades.
+  text: Every Monday at nine thirty, we review the Kanban board together to assign
+    priorities.
+  translation: Cada lunes a las nueve y media revisamos juntos el tablero Kanban para
+    asignar prioridades.
   visual_hint: 📋🕤
   cloze:
   - 4
@@ -38,43 +45,10 @@ phrases:
   - word: assign
     meaning: asignar
     ipa: əˈsaɪn
-- id: ask-me-any-questions
-  text: There's a lot to take in during week one, so ping me anytime if you get stuck!
-  translation: Hay mucho que asimilar en la primera semana, ¡así que escríbeme si te atoras en algo!
-  visual_hint: 💬🙌
-  cloze:
-  - 5
-  - 11
-  glossary:
-  - word: take in
-    meaning: asimilar / procesar información
-    ipa: teɪk ɪn
-- id: shadow-tomorrows-call
-  text: Tomorrow you can shadow our client discovery call just to see how we run it.
-  translation: Mañana puedes entrar como observador a nuestra llamada con el cliente para ver la dinámica.
-  visual_hint: 🎧📞
-  cloze:
-  - 5
-  - 10
-  glossary:
-  - word: shadow
-    meaning: acompañar para aprender observando
-    ipa: ˈʃædoʊ
-- id: grab-team-lunch-today
-  text: At noon the whole team is taking you out for tacos around the corner!
-  translation: ¡Al mediodía todo el equipo te llevará a comer tacos a la vuelta de la esquina!
-  visual_hint: 🌮🎉
-  cloze:
-  - 4
-  - 9
-  glossary:
-  - word: around the corner
-    meaning: a la vuelta de la esquina
-    ipa: əˈraʊnd ðə ˈkɔːrnər
 - id: idm-learn-the-ropes
   text: Don't worry, you'll soon learn the ropes around here.
-  translation: 'No te preocupes, pronto aprenderás cómo funcionan las cosas aquí. (learn the ropes: aprender lo
-    básico)'
+  translation: 'No te preocupes, pronto aprenderás cómo funcionan las cosas aquí.
+    (learn the ropes: aprender lo básico)'
   visual_hint: 🧭🧑‍💼
   cloze:
   - 3
@@ -89,7 +63,8 @@ phrases:
   apply_translation: Se tarda unas semanas en aprender cómo funciona un trabajo nuevo.
 - id: idm-feel-free
   text: Feel free to ask me anything about the tools.
-  translation: 'Siéntete libre de preguntarme lo que quieras sobre las herramientas. (feel free: no dudes en)'
+  translation: 'Siéntete libre de preguntarme lo que quieras sobre las herramientas.
+    (feel free: no dudes en)'
   visual_hint: 🙌💬
   cloze:
   - 3
@@ -108,18 +83,22 @@ roleplay:
   setting: Sitting together at a shared desk during Lucas's first week.
   turns:
   - speaker: ai
-    text: Thanks for being my onboarding buddy! Where do we keep the current project templates?
+    text: Thanks for being my onboarding buddy! Where do we keep the current project
+      templates?
   - speaker: user
     goal: Dale la bienvenida y ofrécele mostrarle las carpetas compartidas.
     suggested_lines:
-    - Welcome to the team, Lucas! Let me walk you through our shared Google Drive folders.
-    - All the active client presentations and brand guidelines live inside this '01-Current' folder.
+    - Welcome to the team, Lucas! Let me walk you through our shared Google Drive
+      folders.
+    - All the active client presentations and brand guidelines live inside this '01-Current'
+      folder.
   - speaker: ai
     text: That folder structure is super clean! How does the team track weekly tasks?
   - speaker: user
     goal: Explica que las presentaciones y guías están en la carpeta '01-Current'.
     suggested_lines:
-    - All the active client presentations and brand guidelines live inside this '01-Current' folder.
+    - All the active client presentations and brand guidelines live inside this '01-Current'
+      folder.
     - Every Monday at nine thirty, we review the Kanban board together to assign priorities.
   - speaker: ai
     text: Got it—I'll bookmark the Kanban board in my browser right now.
@@ -129,9 +108,11 @@ roleplay:
     - Every Monday at nine thirty, we review the Kanban board together to assign priorities.
     - There's a lot to take in during week one, so ping me anytime if you get stuck!
   - speaker: ai
-    text: Everyone has been so welcoming! What should I focus on finishing before Friday?
+    text: Everyone has been so welcoming! What should I focus on finishing before
+      Friday?
   - speaker: user
-    goal: Anímalo a escribirte en cualquier momento si tiene dudas durante la primera semana.
+    goal: Anímalo a escribirte en cualquier momento si tiene dudas durante la primera
+      semana.
     suggested_lines:
     - There's a lot to take in during week one, so ping me anytime if you get stuck!
     - Tomorrow you can shadow our client discovery call just to see how we run it.

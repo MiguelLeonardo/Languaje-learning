@@ -3,7 +3,8 @@ title: Checking the train platform
 title_es: Preguntar el andén del tren
 cefr: A1
 topic: travel-and-transport
-description: Pregunta a un empleado de la estación de qué andén sale el tren a Oxford y en qué vagón subir.
+description: Pregunta a un empleado de la estación de qué andén sale el tren a Oxford
+  y en qué vagón subir.
 phrases:
 - id: which-platform-oxford
   text: Excuse me, which platform is the train to Oxford?
@@ -38,39 +39,6 @@ phrases:
   - word: coach
     meaning: vagón de pasajeros
     ipa: koʊtʃ
-- id: show-ticket-on-phone
-  text: Here is my ticket QR code on my phone.
-  translation: Aquí está el código QR de mi boleto en mi teléfono.
-  visual_hint: 📱🎫
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: code
-    meaning: código
-    ipa: koʊd
-- id: quiet-car-rules
-  text: Is there a cafe car on this train?
-  translation: ¿Hay un vagón cafetería en este tren?
-  visual_hint: ☕🚆
-  cloze:
-  - 2
-  - 5
-  glossary:
-  - word: cafe car
-    meaning: vagón cafetería
-    ipa: kæˈfeɪ kɑːr
-- id: have-a-good-trip
-  text: Thank you very much for your help!
-  translation: ¡Muchas gracias por su ayuda!
-  visual_hint: 🙏😊
-  cloze:
-  - 2
-  - 4
-  glossary:
-  - word: help
-    meaning: ayuda
-    ipa: help
 - id: train-get-off
   text: Get off at Oxford, and the platform is on the left.
   translation: Bájate en Oxford, y el andén está a la izquierda. (get off = bajarse)
@@ -88,7 +56,8 @@ phrases:
   apply_translation: ¿Dónde nos bajamos del autobús para ir al museo?
 - id: train-keep-an-eye-on
   text: Please keep an eye on my bag while I find coach B.
-  translation: Por favor, vigila mi bolso mientras busco el vagón B. (keep an eye on = vigilar)
+  translation: Por favor, vigila mi bolso mientras busco el vagón B. (keep an eye
+    on = vigilar)
   visual_hint: 👁️🧳
   cloze:
   - 4

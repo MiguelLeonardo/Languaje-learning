@@ -3,11 +3,13 @@ title: Requesting two vacation days
 title_es: Solicitar dos días de vacaciones
 cefr: A2
 topic: work-and-career
-description: Pide a tu supervisora tomar libres el viernes y el lunes próximos y explica quién cubrirá tus tareas.
+description: Pide a tu supervisora tomar libres el viernes y el lunes próximos y explica
+  quién cubrirá tus tareas.
 phrases:
 - id: take-friday-monday-off
   text: Hi Elena, could I request this coming Friday and Monday as vacation days?
-  translation: Hola Elena, ¿podría solicitar este próximo viernes y lunes como días de vacaciones?
+  translation: Hola Elena, ¿podría solicitar este próximo viernes y lunes como días
+    de vacaciones?
   visual_hint: 🗓️✈️
   cloze:
   - 4
@@ -29,7 +31,8 @@ phrases:
     ipa: bɪˈfɔːr
 - id: carlos-can-cover-urgent
   text: Carlos agreed to cover any urgent client emails while I'm away.
-  translation: Carlos aceptó cubrir cualquier correo urgente de clientes mientras no esté.
+  translation: Carlos aceptó cubrir cualquier correo urgente de clientes mientras
+    no esté.
   visual_hint: 🤝📧
   cloze:
   - 3
@@ -38,42 +41,10 @@ phrases:
   - word: while I'm away
     meaning: mientras estoy ausente
     ipa: waɪl aɪm əˈweɪ
-- id: submit-in-hr-portal
-  text: I'll submit the dates in the HR portal right now for your approval.
-  translation: Subiré las fechas en el portal de Recursos Humanos ahora mismo para tu aprobación.
-  visual_hint: 💻👍
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: approval
-    meaning: aprobación
-    ipa: əˈpruːvəl
-- id: set-out-of-office-reply
-  text: I'll also set up an automatic out-of-office email reply on Thursday evening.
-  translation: También activaré una respuesta automática fuera de la oficina el jueves por la tarde.
-  visual_hint: 📩🔄
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: out-of-office
-    meaning: respuesta automática de ausencia
-    ipa: aʊt əv ˈɔːfɪs
-- id: enjoy-the-long-weekend
-  text: Thanks so much, Elena! I'm visiting my family by the coast.
-  translation: ¡Muchas gracias, Elena! Visitaré a mi familia en la costa.
-  visual_hint: 🏖️😊
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: coast
-    meaning: costa
-    ipa: koʊst
 - id: idm-take-time-off
   text: I would like to take time off next Friday.
-  translation: 'Me gustaría tomarme tiempo libre el próximo viernes. (take time off: pedir días libres)'
+  translation: 'Me gustaría tomarme tiempo libre el próximo viernes. (take time off:
+    pedir días libres)'
   visual_hint: 🏖️📅
   cloze:
   - 3
@@ -88,7 +59,8 @@ phrases:
   apply_translation: Ella quiere tomarse días libres en agosto para visitar a su familia.
 - id: idm-fill-in
   text: Who can fill in for me while I am away?
-  translation: '¿Quién puede sustituirme mientras estoy fuera? (fill in: suplir a alguien)'
+  translation: '¿Quién puede sustituirme mientras estoy fuera? (fill in: suplir a
+    alguien)'
   visual_hint: 🔄🧑‍💼
   cloze:
   - 3
@@ -114,7 +86,8 @@ roleplay:
     - Hi Elena, could I request this coming Friday and Monday as vacation days?
     - I will finish all my weekly reports before Thursday afternoon.
   - speaker: ai
-    text: Let's look at the team calendar for next week. How are your current tasks looking?
+    text: Let's look at the team calendar for next week. How are your current tasks
+      looking?
   - speaker: user
     goal: Asegura que terminarás todos tus reportes antes del jueves por la tarde.
     suggested_lines:
@@ -128,7 +101,8 @@ roleplay:
     - Carlos agreed to cover any urgent client emails while I'm away.
     - I'll submit the dates in the HR portal right now for your approval.
   - speaker: ai
-    text: Perfect! Go ahead and log the request in the system and I'll approve it today.
+    text: Perfect! Go ahead and log the request in the system and I'll approve it
+      today.
   - speaker: user
     goal: Indica que registrarás las fechas en el portal de RR. HH. para su aprobación.
     suggested_lines:

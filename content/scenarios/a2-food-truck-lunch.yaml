@@ -3,7 +3,8 @@ title: Ordering at a street food truck
 title_es: Pedir en un camión de comida
 cefr: A2
 topic: food-and-drink
-description: Pide tacos de pescado a la parrilla, pregunta qué tan picante es la salsa y pide servilletas.
+description: Pide tacos de pescado a la parrilla, pregunta qué tan picante es la salsa
+  y pide servilletas.
 phrases:
 - id: grilled-fish-tacos
   text: Hi! I'll try an order of three grilled fish tacos.
@@ -38,42 +39,10 @@ phrases:
   - word: on the side
     meaning: aparte / a un lado
     ipa: ɑːn ðə saɪd
-- id: call-my-name
-  text: Will you call my name when the food is ready?
-  translation: ¿Llamará mi nombre cuando la comida esté lista?
-  visual_hint: 📣🌮
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: ready
-    meaning: lista
-    ipa: ˈredi
-- id: cold-horchata
-  text: Add a large cold horchata to my order, please.
-  translation: Agregue una horchata fría grande a mi pedido, por favor.
-  visual_hint: 🥤🧊
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: add
-    meaning: agregar / añadir
-    ipa: æd
-- id: picnic-benches
-  text: Are those picnic benches over there free to use?
-  translation: ¿Esas bancas de picnic de allá son de uso libre?
-  visual_hint: 🪑🌳
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: benches
-    meaning: bancas
-    ipa: ˈbentʃɪz
 - id: grab-a-bite
   text: Let's grab a bite at the food truck before class.
-  translation: 'Comamos algo en el camión de comida antes de la clase. (grab a bite: comer algo rápido)'
+  translation: 'Comamos algo en el camión de comida antes de la clase. (grab a bite:
+    comer algo rápido)'
   visual_hint: 🌮🚚
   cloze:
   - 3
@@ -88,7 +57,8 @@ phrases:
   apply_translation: ¿Quieres comer algo después del museo?
 - id: easy-on
   text: Go easy on the salsa, it's too spicy for me.
-  translation: 'Ve despacio con la salsa, es demasiado picante para mí. (go easy on: no pasarse con)'
+  translation: 'Ve despacio con la salsa, es demasiado picante para mí. (go easy on:
+    no pasarse con)'
   visual_hint: 🌶️😅
   cloze:
   - 3

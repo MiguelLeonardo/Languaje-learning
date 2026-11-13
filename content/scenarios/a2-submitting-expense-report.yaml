@@ -3,7 +3,8 @@ title: Submitting travel expense receipts
 title_es: Subir recibos de gastos de viaje
 cefr: A2
 topic: work-and-career
-description: Pregunta a contabilidad cómo subir las fotos de los recibos del hotel y taxi en la aplicación de gastos.
+description: Pregunta a contabilidad cómo subir las fotos de los recibos del hotel
+  y taxi en la aplicación de gastos.
 phrases:
 - id: upload-trip-receipts
   text: Hi! Could you show me how to submit my receipts from the Boston conference?
@@ -18,7 +19,8 @@ phrases:
     ipa: səbˈmɪt
 - id: take-photo-with-app
   text: Can I just take a photo of the taxi and dinner receipts with the mobile app?
-  translation: ¿Puedo simplemente tomar una foto de los recibos de taxi y cena con la app móvil?
+  translation: ¿Puedo simplemente tomar una foto de los recibos de taxi y cena con
+    la app móvil?
   visual_hint: 📱📸
   cloze:
   - 5
@@ -38,42 +40,10 @@ phrases:
   - word: dropdown menu
     meaning: menú desplegable
     ipa: ˈdrɑːpdaʊn ˈmenjuː
-- id: reimbursed-next-paycheck
-  text: Will the reimbursement be added to my next paycheck at the end of the month?
-  translation: ¿El reembolso se sumará a mi próximo pago a fin de mes?
-  visual_hint: 🏦📅
-  cloze:
-  - 5
-  - 10
-  glossary:
-  - word: paycheck
-    meaning: pago de nómina / sueldo
-    ipa: ˈpeɪtʃek
-- id: hotel-itemized-pdf
-  text: I also attached the PDF invoice that the hotel emailed me.
-  translation: También adjunté la factura en PDF que me envió el hotel por correo.
-  visual_hint: 📎🏨
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: attached
-    meaning: adjunté
-    ipa: əˈtætʃt
-- id: thanks-that-was-easy
-  text: Done! That took less than five minutes—thank you!
-  translation: ¡Listo! Eso tomó menos de cinco minutos; ¡gracias!
-  visual_hint: 🙌✅
-  cloze:
-  - 2
-  - 5
-  glossary:
-  - word: less than
-    meaning: menos de
-    ipa: les ðæn
 - id: idm-keep-track
   text: Please keep track of every receipt from your trip.
-  translation: 'Por favor, lleva el control de cada recibo de tu viaje. (keep track: llevar la cuenta)'
+  translation: 'Por favor, lleva el control de cada recibo de tu viaje. (keep track:
+    llevar la cuenta)'
   visual_hint: 🧾🧮
   cloze:
   - 3
@@ -88,7 +58,8 @@ phrases:
   apply_translation: Es difícil llevar la cuenta de todos mis gastos pequeños.
 - id: idm-pay-back
   text: The company will pay back your travel costs soon.
-  translation: 'La empresa te reembolsará los gastos de viaje pronto. (pay back: devolver dinero)'
+  translation: 'La empresa te reembolsará los gastos de viaje pronto. (pay back: devolver
+    dinero)'
   visual_hint: 💸🔙
   cloze:
   - 3

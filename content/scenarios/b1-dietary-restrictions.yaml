@@ -3,7 +3,8 @@ title: Dietary restrictions and allergies
 title_es: Alergias y cambios en el menú
 cefr: B1
 topic: food-and-drink
-description: Explica una alergia alimentaria, pregunta por ingredientes y pide cambiar la guarnición.
+description: Explica una alergia alimentaria, pregunta por ingredientes y pide cambiar
+  la guarnición.
 phrases:
 - id: allergic-to-nuts
   text: I'm severely allergic to peanuts and tree nuts.
@@ -44,49 +45,6 @@ phrases:
   - word: swap
     meaning: intercambiar / sustituir
     ipa: swɑːp
-- id: dairy-free-option
-  text: Do you have any dairy-free desserts on the menu?
-  translation: ¿Tienen algún postre sin lácteos en el menú?
-  visual_hint: 🍨🚫
-  cloze:
-  - 4
-  - 5
-  glossary:
-  - word: dairy-free
-    meaning: sin lácteos
-    ipa: ˈderi friː
-  - word: desserts
-    meaning: postres
-    ipa: dɪˈzɜːrts
-- id: olive-oil-instead
-  text: Could the chef cook it in olive oil instead of butter?
-  translation: ¿Podría el chef cocinarlo con aceite de oliva en lugar de mantequilla?
-  visual_hint: 🫒🍳
-  cloze:
-  - 3
-  - 8
-  glossary:
-  - word: instead of
-    meaning: en lugar de
-    ipa: ɪnˈsted əv
-  - word: butter
-    meaning: mantequilla
-    ipa: ˈbʌtər
-- id: ingredients-list
-  text: I'd appreciate it if you could double-check the dressing ingredients.
-  translation: Le agradecería si pudiera revisar dos veces los ingredientes del aderezo.
-  visual_hint: 🥗🔍
-  cloze:
-  - 1
-  - 6
-  - 8
-  glossary:
-  - word: double-check
-    meaning: verificar dos veces
-    ipa: ˌdʌbəl ˈtʃek
-  - word: dressing
-    meaning: aderezo / aliño
-    ipa: ˈdresɪŋ
 - id: steer-clear-of
   text: I have to steer clear of nuts completely.
   translation: 'Tengo que evitar por completo los frutos secos. (steer clear of: evitar)'
@@ -104,7 +62,8 @@ phrases:
   apply_translation: Los médicos dicen que debería evitar la comida frita.
 - id: play-it-safe
   text: I'd rather play it safe and ask about the ingredients.
-  translation: 'Prefiero ir sobre seguro y preguntar por los ingredientes. (play it safe: ir a lo seguro)'
+  translation: 'Prefiero ir sobre seguro y preguntar por los ingredientes. (play it
+    safe: ir a lo seguro)'
   visual_hint: 🛡️🥗
   cloze:
   - 3
@@ -123,7 +82,8 @@ roleplay:
   setting: Ordering lunch at a busy restaurant.
   turns:
   - speaker: ai
-    text: Hi! Before I take your order, do you have any food allergies we should know about?
+    text: Hi! Before I take your order, do you have any food allergies we should know
+      about?
   - speaker: user
     goal: Explica que tienes alergia a los frutos secos.
     suggested_lines:

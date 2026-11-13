@@ -1,0 +1,87 @@
+id: a2-grammar-prepositions
+title: Prepositions of movement and duration
+title_es: Preposiciones de movimiento y duración
+cefr: A2
+topic: grammar-and-connectors
+description: Practica preposiciones de movimiento (across, through) y tiempo (until,
+  during, since).
+phrases:
+- id: walk-across-bridge
+  text: Walk across the bridge to reach the station.
+  translation: Cruza el puente a pie para llegar a la estación.
+  visual_hint: 🌉🚶
+  cloze:
+  - 1
+  glossary:
+  - word: across
+    meaning: a través de / cruzando
+    ipa: əˈkrɔːs
+- id: drive-through-tunnel
+  text: The train goes through a long tunnel.
+  translation: El tren pasa por un túnel largo.
+  visual_hint: 🚆🕳️
+  cloze:
+  - 3
+  glossary:
+  - word: through
+    meaning: a través de (por dentro)
+    ipa: θruː
+- id: wait-until-five
+  text: I will wait here until five o'clock.
+  translation: Esperaré aquí hasta las cinco en punto.
+  visual_hint: ⏳🕔
+  cloze:
+  - 4
+  glossary:
+  - word: until
+    meaning: hasta (un momento límite)
+    ipa: ənˈtɪl
+  kind: expression
+  apply_sentence: The museum stays open ____ eight tonight.
+  apply_answer: until
+  apply_translation: El museo permanece abierto hasta las ocho esta noche.
+- id: quiet-during-movie
+  text: Please turn off your phone during the movie.
+  translation: Por favor, apaga tu teléfono durante la película.
+  visual_hint: 📵🎬
+  cloze:
+  - 5
+  glossary:
+  - word: during
+    meaning: durante
+    ipa: ˈdʊrɪŋ
+  kind: expression
+  apply_sentence: We took many photos ____ our vacation.
+  apply_answer: during
+  apply_translation: Tomamos muchas fotos durante nuestras vacaciones.
+- id: lived-here-since
+  text: She has lived in Madrid since 2021.
+  translation: Ella ha vivido en Madrid desde 2021.
+  visual_hint: 🏙️📆
+  cloze:
+  - 5
+  glossary:
+  - word: since
+    meaning: desde (un punto en el pasado)
+    ipa: sɪns
+roleplay:
+  ai_role: passerby
+  user_role: local resident
+  setting: Giving walking directions to a train station.
+  turns:
+  - speaker: ai
+    text: Excuse me, how do I get to the central station?
+  - speaker: user
+    goal: Indica el camino usando 'across' o 'through'.
+    suggested_lines:
+    - Walk across the bridge, and you will see it.
+    - Go through the park and walk across the street.
+  - speaker: ai
+    text: Thanks! Do you know when the ticket office closes?
+  - speaker: user
+    goal: Responde usando 'until'.
+    suggested_lines:
+    - It is open until nine o'clock.
+    - You can buy tickets there until ten.
+  - speaker: ai
+    text: Awesome, I have plenty of time. Thanks!

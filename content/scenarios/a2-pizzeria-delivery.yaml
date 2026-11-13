@@ -3,7 +3,8 @@ title: Ordering pizza to your hotel
 title_es: Pedir pizza a domicilio al hotel
 cefr: A2
 topic: food-and-drink
-description: Llama a una pizzería local para pedir una pizza mediana, indica tu habitación y forma de pago.
+description: Llama a una pizzería local para pedir una pizza mediana, indica tu habitación
+  y forma de pago.
 phrases:
 - id: order-for-delivery
   text: Hi, I'd like to place an order for delivery, please.
@@ -38,39 +39,6 @@ phrases:
   - word: thin crust
     meaning: masa delgada
     ipa: θɪn krʌst
-- id: deliver-hotel-lobby
-  text: Please deliver it to the Park Hotel lobby, room 210.
-  translation: Por favor entréguela en la recepción del Hotel Park, habitación 210.
-  visual_hint: 🏨📍
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: lobby
-    meaning: vestíbulo / recepción
-    ipa: ˈlɑːbi
-- id: how-long-delivery
-  text: How long will the delivery take tonight?
-  translation: ¿Cuánto tardará la entrega esta noche?
-  visual_hint: ⏱️🛵
-  cloze:
-  - 2
-  - 4
-  glossary:
-  - word: take
-    meaning: tardar / tomar tiempo
-    ipa: teɪk
-- id: pay-driver-by-card
-  text: Can I pay the driver with a credit card?
-  translation: ¿Puedo pagarle al repartidor con tarjeta de crédito?
-  visual_hint: 💳🤝
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: driver
-    meaning: repartidor / conductor
-    ipa: ˈdraɪvər
 - id: on-its-way
   text: Your pizza is on its way to the hotel now.
   translation: 'Su pizza va en camino al hotel ahora. (on its way: en camino)'

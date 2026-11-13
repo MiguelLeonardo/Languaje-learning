@@ -3,7 +3,8 @@ title: Visiting a doctor urgently
 title_es: Consulta médica de urgencia
 cefr: B1
 topic: health-and-emergencies
-description: Describe cuándo empezaron los síntomas, la intensidad del dolor y pide una receta.
+description: Describe cuándo empezaron los síntomas, la intensidad del dolor y pide
+  una receta.
 phrases:
 - id: sharp-pain
   text: I've had a sharp pain in my ankle since yesterday morning.
@@ -43,54 +44,10 @@ phrases:
   - word: X-ray
     meaning: radiografía / rayos X
     ipa: ˈeks reɪ
-- id: need-an-xray
-  text: Do you think I need an X-ray to rule out a fracture?
-  translation: ¿Cree que necesito una radiografía para descartar una fractura?
-  visual_hint: 🩻🦴
-  cloze:
-  - 5
-  - 7
-  - 11
-  glossary:
-  - word: X-ray
-    meaning: radiografía
-    ipa: ˈeks reɪ
-  - word: rule out
-    meaning: descartar
-    ipa: ruːl aʊt
-- id: keep-it-elevated
-  text: How many days should I keep my leg elevated and apply ice?
-  translation: ¿Cuántos días debo mantener la pierna elevada y aplicar hielo?
-  visual_hint: 🧊🦵
-  cloze:
-  - 5
-  - 8
-  - 10
-  glossary:
-  - word: elevated
-    meaning: elevada
-    ipa: ˈelɪveɪtɪd
-  - word: apply
-    meaning: aplicar
-    ipa: əˈplaɪ
-- id: medical-certificate
-  text: Could you write a medical certificate so I can rest from work?
-  translation: ¿Podría extenderme un certificado médico para poder descansar del trabajo?
-  visual_hint: 📋🏥
-  cloze:
-  - 4
-  - 5
-  - 9
-  glossary:
-  - word: medical certificate
-    meaning: certificado / justificante médico
-    ipa: ˈmedɪkəl sərˈtɪfɪkət
-  - word: rest
-    meaning: descansar
-    ipa: rest
 - id: idm-fit-me-in-b1
   text: Could you fit me in this afternoon, please?
-  translation: ¿Podría hacerme un hueco esta tarde, por favor? (fit in = encajar en la agenda)
+  translation: ¿Podría hacerme un hueco esta tarde, por favor? (fit in = encajar en
+    la agenda)
   visual_hint: 🩺🗓️
   cloze:
   - 2

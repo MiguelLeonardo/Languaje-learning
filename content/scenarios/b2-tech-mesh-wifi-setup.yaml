@@ -1,0 +1,94 @@
+id: b2-tech-mesh-wifi-setup
+title: Fixing Wi-Fi dead zones with a mesh system
+title_es: Solucionar zonas sin Wi-Fi con red mesh
+cefr: B2
+topic: daily-tech-and-media
+description: Configura nodos mesh y una red de invitados para eliminar zonas sin señal en casa.
+phrases:
+- id: dead-zone-upstairs
+  text: The upstairs bedroom has become a complete Wi-Fi dead zone.
+  translation: El dormitorio de arriba se ha convertido en una zona totalmente sin Wi-Fi.
+  visual_hint: 📶🚫
+  cloze:
+  - 2
+  - 8
+  glossary:
+  - word: dead zone
+    meaning: zona sin cobertura
+    ipa: ded zoʊn
+- id: place-mesh-node
+  text: Placing a mesh node in the hallway should boost coverage.
+  translation: Colocar un nodo mesh en el pasillo debería mejorar la cobertura.
+  visual_hint: 📡🏠
+  cloze:
+  - 3
+  - 8
+  glossary:
+  - word: coverage
+    meaning: cobertura
+    ipa: ˈkʌvərɪdʒ
+- id: separate-guest-network
+  text: We ought to isolate smart plugs on a separate guest network.
+  translation: Deberíamos aislar los enchufes inteligentes en una red de invitados separada.
+  visual_hint: 🔒🌐
+  cloze:
+  - 3
+  - 8
+  glossary:
+  - word: isolate
+    meaning: aislar
+    ipa: ˈaɪsəleɪt
+- id: idm-iron-out
+  text: Once we move the router, we will iron out any interference.
+  translation: 'Una vez que movamos el router, resolveremos cualquier interferencia. (iron out:
+    pulir / resolver)'
+  visual_hint: 🛠️📶
+  cloze:
+  - 7
+  - 8
+  glossary:
+  - word: iron out
+    meaning: resolver / pulir detalles
+    ipa: ˈaɪərn aʊt
+  kind: phrasal_verb
+  apply_sentence: The IT team stayed late to ____ the remaining network bugs.
+  apply_answer: iron out
+  apply_translation: El equipo de TI se quedó hasta tarde para resolver los fallos de red restantes.
+- id: idm-night-and-day
+  text: With wired backhaul, the speed difference is night and day.
+  translation: 'Con conexión por cable entre nodos, la diferencia de velocidad es abismal. (night
+    and day: como el día y la noche)'
+  visual_hint: 🌗⚡
+  cloze:
+  - 7
+  - 9
+  glossary:
+  - word: night and day
+    meaning: totalmente distinto / abismal
+    ipa: naɪt ænd deɪ
+  kind: idiom
+  apply_sentence: Switching from DSL to fiber was ____ for our video calls.
+  apply_answer: night and day
+  apply_translation: Cambiar de DSL a fibra fue como el día y la noche para nuestras videollamadas.
+roleplay:
+  ai_role: networking-savvy friend
+  user_role: homeowner
+  setting: Setting up a two-pack mesh router system in a two-story apartment.
+  turns:
+  - speaker: ai
+    text: Where does the signal usually drop when you are working from home?
+  - speaker: user
+    goal: Explica dónde está la zona sin señal y dónde piensas poner el nodo mesh.
+    suggested_lines:
+    - The upstairs bedroom has become a complete Wi-Fi dead zone.
+    - Placing a mesh node in the hallway should boost coverage.
+  - speaker: ai
+    text: That hallway spot has line of sight to both rooms. What about smart home devices?
+  - speaker: user
+    goal: Propón aislar los dispositivos en una red de invitados y menciona que la mejora será
+      enorme.
+    suggested_lines:
+    - We ought to isolate smart plugs on a separate guest network.
+    - With wired backhaul, the speed difference is night and day.
+  - speaker: ai
+    text: Let us run a speed test upstairs and verify it.

@@ -1,0 +1,93 @@
+id: a1-grammar-superlatives
+title: Basic superlatives with -est and the most
+title_es: Superlativos básicos con -est y the most
+cefr: A1
+topic: grammar-and-connectors
+description: Expresa el grado máximo usando 'the ...-est' y 'the most ...' para describir
+  lugares y cosas.
+phrases:
+- id: tallest-building
+  text: That is the tallest building in the city.
+  translation: Ese es el edificio más alto de la ciudad.
+  visual_hint: 🏙️⬆️
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: tallest
+    meaning: el más alto
+    ipa: ˈtɔːlɪst
+- id: cheapest-ticket
+  text: This is the cheapest ticket on the website.
+  translation: Este es el boleto más barato en el sitio web.
+  visual_hint: 🎫💲
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: cheapest
+    meaning: el más barato
+    ipa: ˈtʃiːpɪst
+- id: best-pizza-town
+  text: They make the best pizza in town.
+  translation: Ellos hacen la mejor pizza del pueblo. ('the best' es el superlativo
+    de 'good')
+  visual_hint: 🍕🏆
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: the best
+    meaning: el mejor / la mejor
+    ipa: ðə best
+  kind: expression
+  apply_sentence: This bakery has ____ bread in the neighborhood.
+  apply_answer: the best
+  apply_translation: Esta panadería tiene el mejor pan del barrio.
+- id: most-popular-park
+  text: Central Park is the most popular park here.
+  translation: Central Park es el parque más popular aquí.
+  visual_hint: 🌳⭐
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: the most popular
+    meaning: el más popular
+    ipa: ðə moʊst ˈpɑːpjələr
+  kind: expression
+  apply_sentence: Soccer is ____ sport in my country.
+  apply_answer: the most popular
+  apply_translation: El fútbol es el deporte más popular en mi país.
+- id: oldest-museum
+  text: It is the oldest museum in my country.
+  translation: Es el museo más antiguo de mi país.
+  visual_hint: 🏛️📜
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: oldest
+    meaning: el más antiguo / viejo
+    ipa: ˈoʊldɪst
+roleplay:
+  ai_role: tourist
+  user_role: local guide
+  setting: Helping a tourist in a city square.
+  turns:
+  - speaker: ai
+    text: Excuse me, where can I eat good pizza near here?
+  - speaker: user
+    goal: Recomienda un lugar usando 'the best'.
+    suggested_lines:
+    - Try Mario's! They make the best pizza in town.
+    - Mario's is the best restaurant here.
+  - speaker: ai
+    text: Awesome! And what is a famous place to visit?
+  - speaker: user
+    goal: Menciona un lugar usando 'the tallest', 'the oldest' o 'the most popular'.
+    suggested_lines:
+    - Central Park is the most popular park here.
+    - You can see the oldest museum in my country.
+  - speaker: ai
+    text: Thank you so much for the tips!

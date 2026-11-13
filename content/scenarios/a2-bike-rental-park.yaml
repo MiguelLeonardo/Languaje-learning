@@ -3,7 +3,8 @@ title: Renting city bikes for the afternoon
 title_es: Alquilar bicicletas para el parque
 cefr: A2
 topic: travel-and-transport
-description: Alquila dos bicicletas con casco y candado, pregunta por la ciclovía junto al río y la hora de devolución.
+description: Alquila dos bicicletas con casco y candado, pregunta por la ciclovía
+  junto al río y la hora de devolución.
 phrases:
 - id: rent-two-bikes
   text: Hi! We'd like to rent two city bikes for three hours.
@@ -38,42 +39,10 @@ phrases:
   - word: bike path
     meaning: ciclovía / carril bici
     ipa: baɪk pæθ
-- id: return-by-six-pm
-  text: If we return them before six o'clock, do we get our ID back here?
-  translation: Si las devolvemos antes de las seis, ¿recogemos nuestra identificación aquí?
-  visual_hint: 🕕🪪
-  cloze:
-  - 4
-  - 9
-  glossary:
-  - word: return
-    meaning: devolver
-    ipa: rɪˈtɜːrn
-- id: check-tire-brakes
-  text: Both brakes feel good and the tires have plenty of air.
-  translation: Ambos frenos se sienten bien y las llantas tienen buen aire.
-  visual_hint: 🛞👌
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: brakes
-    meaning: frenos
-    ipa: breɪks
-- id: park-at-designated-racks
-  text: We will lock them at the metal bike racks when we stop for coffee.
-  translation: Las aseguraremos en los aparcabicis metálicos cuando paremos por café.
-  visual_hint: ☕🚲
-  cloze:
-  - 4
-  - 9
-  glossary:
-  - word: racks
-    meaning: soportes / aparcabicis
-    ipa: ræks
 - id: bike-take-it-easy
   text: Take it easy on the path, because it is crowded today.
-  translation: Ve con calma en el camino, porque hoy hay mucha gente. (take it easy = ir con calma)
+  translation: Ve con calma en el camino, porque hoy hay mucha gente. (take it easy
+    = ir con calma)
   visual_hint: 🚲😌
   cloze:
   - 3

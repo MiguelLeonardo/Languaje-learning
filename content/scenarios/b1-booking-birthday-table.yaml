@@ -3,11 +3,13 @@ title: Reserving a birthday dinner table
 title_es: Reservar mesa para una cena de cumpleaños
 cefr: B1
 topic: food-and-drink
-description: Llama a un restaurante para reservar mesa para ocho personas en la terraza y coordinar un pastel.
+description: Llama a un restaurante para reservar mesa para ocho personas en la terraza
+  y coordinar un pastel.
 phrases:
 - id: table-for-eight-patio
   text: Hi, I'd like to book a table for eight on the heated patio this Friday.
-  translation: Hola, quisiera reservar una mesa para ocho en la terraza climatizada este viernes.
+  translation: Hola, quisiera reservar una mesa para ocho en la terraza climatizada
+    este viernes.
   visual_hint: 🎂🌿
   cloze:
   - 5
@@ -38,42 +40,10 @@ phrases:
   - word: celebrating
     meaning: celebrando
     ipa: ˈselɪbreɪtɪŋ
-- id: store-in-fridge
-  text: Could your staff keep the cake in the fridge until dessert?
-  translation: ¿Podría su personal guardar el pastel en el refrigerador hasta el postre?
-  visual_hint: 🧊🍰
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: fridge
-    meaning: refrigerador / nevera
-    ipa: frɪdʒ
-- id: one-vegetarian-guest
-  text: Two of our guests are vegetarian, just so the kitchen knows.
-  translation: Dos de nuestros invitados son vegetarianos, para que la cocina lo sepa.
-  visual_hint: 🥗🌱
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: just so
-    meaning: solo para que
-    ipa: dʒʌst soʊ
-- id: confirm-by-text
-  text: Great, please put the reservation under Sofia and send a text confirmation.
-  translation: Genial, ponga la reserva a nombre de Sofía y envíe confirmación por mensaje.
-  visual_hint: 📱✅
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: confirmation
-    meaning: confirmación
-    ipa: ˌkɑːnfərˈmeɪʃən
 - id: the-more-the-merrier
   text: Bring your cousins too, the more the merrier!
-  translation: '¡Trae también a tus primos, cuantos más, mejor! (the more the merrier: cuantos más mejor)'
+  translation: '¡Trae también a tus primos, cuantos más, mejor! (the more the merrier:
+    cuantos más mejor)'
   visual_hint: 🎂🎉
   cloze:
   - 2

@@ -1,0 +1,97 @@
+id: c2-grammar-comparatives
+title: Subtle and idiomatic comparative constructions
+title_es: Construcciones comparativas sutiles e idiomáticas
+cefr: C2
+topic: grammar-and-connectors
+description: Matiza juicios complejos con 'no more... than', 'not so much... as',
+  'more of a... than' y 'as... as it is'.
+phrases:
+- id: not-so-much-as
+  text: It is not so much a technical flaw as a failure of imagination.
+  translation: No es tanto un fallo técnico como una falta de imaginación.
+  visual_hint: 💡⚙️
+  cloze:
+  - 4
+  - 8
+  glossary:
+  - word: not so much X as Y
+    meaning: no tanto X como Y
+    ipa: nɑːt soʊ mʌtʃ ... æz
+  kind: expression
+  apply_sentence: Her tone was ____ angry as deeply disappointed.
+  apply_answer: not so much
+  apply_translation: Su tono no era tanto de enfado como de profunda decepción.
+- id: no-more-sustainable-than
+  text: This stopgap is no more sustainable than the previous subsidy.
+  translation: Este parche no es más sostenible que el subsidio anterior (ninguno
+    lo es).
+  visual_hint: 🩹📉
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: no more ... than
+    meaning: no más ... que (ambos igual de negativos)
+    ipa: noʊ mɔːr ... ðæn
+- id: more-of-a-catalyst
+  text: The crisis acted more of a catalyst than a deterrent.
+  translation: La crisis actuó más como un catalizador que como un elemento disuasorio.
+  visual_hint: ⚡🌱
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: catalyst
+    meaning: catalizador
+    ipa: ˈkætəlɪst
+  - word: deterrent
+    meaning: elemento disuasorio
+    ipa: dɪˈtɜːrənt
+  kind: expression
+  apply_sentence: The new regulation proved ____ hindrance than a help.
+  apply_answer: more of a
+  apply_translation: La nueva norma resultó más un obstáculo que una ayuda.
+- id: fragile-as-it-is
+  text: Fragile as it is, the truce still holds.
+  translation: Por frágil que sea, la tregua aún se mantiene.
+  visual_hint: 🕊️⚖️
+  cloze:
+  - 1
+  - 7
+  glossary:
+  - word: adj + as it is
+    meaning: por muy ... que sea
+    ipa: æz ɪt ɪz
+- id: infinitely-more-nuanced
+  text: Public sentiment is infinitely more nuanced than polling suggests.
+  translation: El sentir público es infinitamente más matizado de lo que sugieren
+    las encuestas.
+  visual_hint: 📊🗣️
+  cloze:
+  - 3
+  - 5
+  glossary:
+  - word: sentiment
+    meaning: sentir / opinión general
+    ipa: ˈsentɪmənt
+roleplay:
+  ai_role: literary critic
+  user_role: essayist
+  setting: Discussing a controversial new novel on a cultural radio show.
+  turns:
+  - speaker: ai
+    text: Critics call the book's ending abrupt. Do you see it as a flaw?
+  - speaker: user
+    goal: Reencuadra la crítica usando 'not so much... as' o 'more of a... than'.
+    suggested_lines:
+    - It is not so much a flaw as a deliberate provocation.
+    - The ending feels more of a mirror than a resolution.
+  - speaker: ai
+    text: And does the political subplot hold up today?
+  - speaker: user
+    goal: Usa 'no more... than' o 'as it is' para matizar tu postura.
+    suggested_lines:
+    - Ambiguous as it is, the subplot captures the era vividly.
+    - The characters are infinitely more nuanced than a simple allegory.
+  - speaker: ai
+    text: A compelling reading—it certainly invites a second look.

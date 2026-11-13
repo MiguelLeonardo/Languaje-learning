@@ -3,11 +3,14 @@ title: Ordering a bespoke craft cocktail
 title_es: Pedir un cóctel de autor a medida
 cefr: C1
 topic: food-and-drink
-description: Pide a un mixólogo un cóctel equilibrado con mezcal ahumado, cítricos frescos y amargo aromático.
+description: Pide a un mixólogo un cóctel equilibrado con mezcal ahumado, cítricos
+  frescos y amargo aromático.
 phrases:
 - id: smoky-yet-herbaceous
-  text: I'm in the mood for something smoky yet herbaceous—perhaps built around artisanal mezcal.
-  translation: Me apetece algo ahumado pero herbal, tal vez elaborado a base de mezcal artesanal.
+  text: I'm in the mood for something smoky yet herbaceous—perhaps built around artisanal
+    mezcal.
+  translation: Me apetece algo ahumado pero herbal, tal vez elaborado a base de mezcal
+    artesanal.
   visual_hint: 🍸🌿
   cloze:
   - 4
@@ -18,7 +21,8 @@ phrases:
     ipa: ɪn ðə muːd fɔːr
 - id: not-cloyingly-sweet
   text: Could you keep it spirit-forward and dry rather than cloyingly sweet?
-  translation: ¿Podría mantenerlo seco y con presencia de destilado en vez de empalagosamente dulce?
+  translation: ¿Podría mantenerlo seco y con presencia de destilado en vez de empalagosamente
+    dulce?
   visual_hint: 🥃🍋
   cloze:
   - 3
@@ -28,8 +32,10 @@ phrases:
     meaning: empalagosamente
     ipa: ˈklɔɪɪŋli
 - id: chartreuse-and-bitters
-  text: A rinse of green Chartreuse and grapefruit bitters sounds like a brilliant counterbalance.
-  translation: Un toque de Chartreuse verde y bíter de pomelo suena como un contrapeso brillante.
+  text: A rinse of green Chartreuse and grapefruit bitters sounds like a brilliant
+    counterbalance.
+  translation: Un toque de Chartreuse verde y bíter de pomelo suena como un contrapeso
+    brillante.
   visual_hint: 🍊✨
   cloze:
   - 4
@@ -38,42 +44,10 @@ phrases:
   - word: counterbalance
     meaning: contrapeso / equilibrio
     ipa: ˈkaʊntərbæləns
-- id: served-up-large-rock
-  text: Let's serve it over a single hand-carved ice sphere with expressed orange peel.
-  translation: Sirvámoslo sobre una esfera de hielo tallada con piel de naranja exprimida.
-  visual_hint: 🧊🍊
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: expressed peel
-    meaning: piel cítrica exprimida por sus aceites
-    ipa: ɪkˈsprest piːl
-- id: clarified-citrus-cordial
-  text: Using clarified lime cordial gives it a silky mouthfeel without clouding the glass.
-  translation: Usar cordial de lima clarificado le da una textura sedosa sin enturbiar la copa.
-  visual_hint: 🥂🔬
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: mouthfeel
-    meaning: sensación en boca / textura
-    ipa: ˈmaʊθfiːl
-- id: compliments-on-balance
-  text: The interplay of peat smoke and botanicals is spot-on; my compliments!
-  translation: El juego entre el humo y los botánicos es exacto; ¡mis felicitaciones!
-  visual_hint: 👏🍸
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: spot-on
-    meaning: exacto / en el clavo
-    ipa: spɑːt ɑːn
 - id: hits-the-spot
   text: This smoky cocktail hits the spot every single time.
-  translation: 'Este cóctel ahumado da en el clavo cada vez. (hit the spot: justo lo que se necesitaba)'
+  translation: 'Este cóctel ahumado da en el clavo cada vez. (hit the spot: justo
+    lo que se necesitaba)'
   visual_hint: 🍸🎯
   cloze:
   - 3
@@ -88,7 +62,8 @@ phrases:
   apply_translation: Un baño caliente después del trabajo siempre viene perfecto.
 - id: a-far-cry-from
   text: This is a far cry from your usual sugary cocktails.
-  translation: 'Esto dista mucho de tus cócteles azucarados habituales. (a far cry from: muy diferente de)'
+  translation: 'Esto dista mucho de tus cócteles azucarados habituales. (a far cry
+    from: muy diferente de)'
   visual_hint: 🍹↔️
   cloze:
   - 3
@@ -107,11 +82,13 @@ roleplay:
   setting: A speakeasy cocktail bar with no printed menu.
   turns:
   - speaker: ai
-    text: Welcome! We craft bespoke drinks to your palate. What spirit and flavors do you gravitate toward?
+    text: Welcome! We craft bespoke drinks to your palate. What spirit and flavors
+      do you gravitate toward?
   - speaker: user
     goal: Pide algo ahumado y herbal a base de mezcal artesanal.
     suggested_lines:
-    - I'm in the mood for something smoky yet herbaceous—perhaps built around artisanal mezcal.
+    - I'm in the mood for something smoky yet herbaceous—perhaps built around artisanal
+      mezcal.
     - Could you keep it spirit-forward and dry rather than cloyingly sweet?
   - speaker: ai
     text: I love working with mezcal. How do you feel about sweetness versus bitterness?
@@ -121,7 +98,8 @@ roleplay:
     - Could you keep it spirit-forward and dry rather than cloyingly sweet?
     - A rinse of green Chartreuse and grapefruit bitters sounds like a brilliant counterbalance.
   - speaker: ai
-    text: I'm thinking Tobalá mezcal, dry vermouth, a touch of green Chartreuse, and grapefruit bitters.
+    text: I'm thinking Tobalá mezcal, dry vermouth, a touch of green Chartreuse, and
+      grapefruit bitters.
   - speaker: user
     goal: Aprueba la combinación con Chartreuse verde y bíter de pomelo.
     suggested_lines:
@@ -133,6 +111,7 @@ roleplay:
     goal: Elige que lo sirva en roca grande de hielo con piel de naranja.
     suggested_lines:
     - Let's serve it over a single hand-carved ice sphere with expressed orange peel.
-    - Using clarified lime cordial gives it a silky mouthfeel without clouding the glass.
+    - Using clarified lime cordial gives it a silky mouthfeel without clouding the
+      glass.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

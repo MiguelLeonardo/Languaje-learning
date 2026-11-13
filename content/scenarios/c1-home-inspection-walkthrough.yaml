@@ -3,12 +3,14 @@ title: Reviewing a property inspection report
 title_es: Revisar informe técnico de inspección de vivienda
 cefr: C1
 topic: hotel-and-shopping
-description: Recorre una casa con el inspector técnico evaluando el estado del techo, el tablero eléctrico y el
-  drenaje.
+description: Recorre una casa con el inspector técnico evaluando el estado del techo,
+  el tablero eléctrico y el drenaje.
 phrases:
 - id: flashing-around-chimney
-  text: Did the thermal camera pick up any active moisture intrusion around the chimney flashing?
-  translation: ¿La cámara térmica detectó alguna filtración activa de humedad alrededor de la junta de la chimenea?
+  text: Did the thermal camera pick up any active moisture intrusion around the chimney
+    flashing?
+  translation: ¿La cámara térmica detectó alguna filtración activa de humedad alrededor
+    de la junta de la chimenea?
   visual_hint: 🏠🔍
   cloze:
   - 4
@@ -18,9 +20,10 @@ phrases:
     meaning: tapajuntas metálico del techo
     ipa: ˈflæʃɪŋ
 - id: upgrade-breaker-panel
-  text: Since the electrical panel is only a hundred amps, we'll need to upgrade to two hundred amps for an EV charger.
-  translation: Como el tablero eléctrico es de solo cien amperios, necesitaremos ampliarlo a doscientos para cargador
-    de auto eléctrico.
+  text: Since the electrical panel is only a hundred amps, we'll need to upgrade to
+    two hundred amps for an EV charger.
+  translation: Como el tablero eléctrico es de solo cien amperios, necesitaremos ampliarlo
+    a doscientos para cargador de auto eléctrico.
   visual_hint: ⚡🧰
   cloze:
   - 7
@@ -30,9 +33,10 @@ phrases:
     meaning: tablero de interruptores eléctricos
     ipa: ˈbreɪkər ˈpænəl
 - id: seller-repair-credit
-  text: Rather than having the seller do a rushed patch job, we'll request a five-thousand-dollar closing credit.
-  translation: En vez de que el vendedor haga una reparación apresurada, pediremos un crédito de cinco mil dólares
-    al cierre.
+  text: Rather than having the seller do a rushed patch job, we'll request a five-thousand-dollar
+    closing credit.
+  translation: En vez de que el vendedor haga una reparación apresurada, pediremos
+    un crédito de cinco mil dólares al cierre.
   visual_hint: 📑💵
   cloze:
   - 5
@@ -41,42 +45,10 @@ phrases:
   - word: closing credit
     meaning: descuento a favor del comprador al escriturar
     ipa: ˈkloʊzɪŋ ˈkredɪt
-- id: sewer-scope-clear
-  text: Did the fiber-optic sewer scope confirm the main line to the street is free of tree-root intrusion?
-  translation: ¿La cámara de fibra óptica en el drenaje confirmó que la tubería principal está libre de raíces?
-  visual_hint: 📹🚰
-  cloze:
-  - 5
-  - 11
-  glossary:
-  - word: sewer scope
-    meaning: inspección con cámara del drenaje
-    ipa: ˈsuːər skoʊp
-- id: hvac-heat-exchanger
-  text: Knowing the furnace heat exchanger still has ten years of serviceable life is a huge relief.
-  translation: Saber que el intercambiador de calor de la calefacción tiene diez años de vida útil es un gran alivio.
-  visual_hint: 🌡️✅
-  cloze:
-  - 5
-  - 10
-  glossary:
-  - word: serviceable life
-    meaning: vida útil operativa
-    ipa: ˈsɜːrvɪsəbəl laɪf
-- id: pdf-report-by-tomorrow
-  text: Once you upload the annotated PDF report tonight, we'll submit our inspection addendum.
-  translation: En cuanto suba el informe en PDF esta noche, presentaremos nuestro anexo de inspección.
-  visual_hint: 💻📋
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: addendum
-    meaning: anexo contractual
-    ipa: əˈdendəm
 - id: idm-flag-up-wiring
   text: The inspector flagged up outdated aluminum wiring behind the kitchen panel.
-  translation: El inspector señaló cableado de aluminio obsoleto detrás del tablero de la cocina.
+  translation: El inspector señaló cableado de aluminio obsoleto detrás del tablero
+    de la cocina.
   visual_hint: 🏠🚩
   cloze:
   - 3
@@ -86,12 +58,15 @@ phrases:
     meaning: señalar / advertir (un problema)
     ipa: flæɡ ʌp
   kind: phrasal_verb
-  apply_sentence: Be sure to ____ any moisture readings near the foundation during the walkthrough.
+  apply_sentence: Be sure to ____ any moisture readings near the foundation during
+    the walkthrough.
   apply_answer: flag up
-  apply_translation: Asegúrate de señalar cualquier lectura de humedad cerca de los cimientos durante el recorrido.
+  apply_translation: Asegúrate de señalar cualquier lectura de humedad cerca de los
+    cimientos durante el recorrido.
 - id: idm-sweep-under-rug
   text: We can't sweep roof flashing defects under the rug before closing.
-  translation: No podemos barrer los defectos del tapajuntas del techo bajo la alfombra antes de escriturar.
+  translation: No podemos barrer los defectos del tapajuntas del techo bajo la alfombra
+    antes de escriturar.
   visual_hint: 🧹🏠
   cloze:
   - 3
@@ -103,39 +78,51 @@ phrases:
   kind: idiom
   apply_sentence: A reputable seller never tries to ____ past drainage issues.
   apply_answer: sweep under the rug
-  apply_translation: Un vendedor serio nunca intenta ocultar bajo la alfombra problemas previos de drenaje.
+  apply_translation: Un vendedor serio nunca intenta ocultar bajo la alfombra problemas
+    previos de drenaje.
 roleplay:
   ai_role: licensed home inspector
   user_role: homebuyer
   setting: Walkthrough inspection of a 1930s brick house before closing.
   turns:
   - speaker: ai
-    text: I've just come down from the attic and roof. Overall, the structural framing is rock-solid.
+    text: I've just come down from the attic and roof. Overall, the structural framing
+      is rock-solid.
   - speaker: user
     goal: Pregunta si la cámara térmica detectó humedad en la junta de la chimenea.
     suggested_lines:
-    - Did the thermal camera pick up any active moisture intrusion around the chimney flashing?
-    - Since the electrical panel is only a hundred amps, we'll need to upgrade to two hundred amps for an EV charger.
+    - Did the thermal camera pick up any active moisture intrusion around the chimney
+      flashing?
+    - Since the electrical panel is only a hundred amps, we'll need to upgrade to
+      two hundred amps for an EV charger.
   - speaker: ai
     text: The chimney flashing was resealed recently—bone dry on the infrared scan.
   - speaker: user
     goal: Señala que deberán ampliar el tablero eléctrico a 200 amperios.
     suggested_lines:
-    - Since the electrical panel is only a hundred amps, we'll need to upgrade to two hundred amps for an EV charger.
-    - Rather than having the seller do a rushed patch job, we'll request a five-thousand-dollar closing credit.
+    - Since the electrical panel is only a hundred amps, we'll need to upgrade to
+      two hundred amps for an EV charger.
+    - Rather than having the seller do a rushed patch job, we'll request a five-thousand-dollar
+      closing credit.
   - speaker: ai
-    text: The panel upgrade and adding GFCI outlets in the garage will run about four thousand dollars.
+    text: The panel upgrade and adding GFCI outlets in the garage will run about four
+      thousand dollars.
   - speaker: user
     goal: Explica que pedirán un crédito al cierre en lugar de reparaciones apresuradas.
     suggested_lines:
-    - Rather than having the seller do a rushed patch job, we'll request a five-thousand-dollar closing credit.
-    - Did the fiber-optic sewer scope confirm the main line to the street is free of tree-root intrusion?
+    - Rather than having the seller do a rushed patch job, we'll request a five-thousand-dollar
+      closing credit.
+    - Did the fiber-optic sewer scope confirm the main line to the street is free
+      of tree-root intrusion?
   - speaker: ai
-    text: Requesting a closing credit is always smarter so you can hire your own licensed electrician.
+    text: Requesting a closing credit is always smarter so you can hire your own licensed
+      electrician.
   - speaker: user
     goal: Pregunta si la inspección con cámara del drenaje descartó raíces de árboles.
     suggested_lines:
-    - Did the fiber-optic sewer scope confirm the main line to the street is free of tree-root intrusion?
-    - Knowing the furnace heat exchanger still has ten years of serviceable life is a huge relief.
+    - Did the fiber-optic sewer scope confirm the main line to the street is free
+      of tree-root intrusion?
+    - Knowing the furnace heat exchanger still has ten years of serviceable life is
+      a huge relief.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

@@ -3,11 +3,14 @@ title: Disputing erroneous hotel checkout charges
 title_es: Aclarar cargos erróneos al hacer checkout
 cefr: B2
 topic: hotel-and-shopping
-description: Revisa el estado de cuenta al salir del hotel y pide eliminar cargos de minibar y gimnasio que no consumiste.
+description: Revisa el estado de cuenta al salir del hotel y pide eliminar cargos
+  de minibar y gimnasio que no consumiste.
 phrases:
 - id: reviewing-folio-statement
-  text: Good morning. I'm checking out of Room 612, and I noticed two erroneous charges on my folio.
-  translation: Buenos días. Estoy entregando la habitación 612 y noté dos cargos erróneos en mi estado de cuenta.
+  text: Good morning. I'm checking out of Room 612, and I noticed two erroneous charges
+    on my folio.
+  translation: Buenos días. Estoy entregando la habitación 612 y noté dos cargos erróneos
+    en mi estado de cuenta.
   visual_hint: 🧾🏨
   cloze:
   - 5
@@ -17,8 +20,10 @@ phrases:
     meaning: erróneos / equivocados
     ipa: ɪˈroʊniəs
 - id: didnt-touch-minibar
-  text: We never opened the minibar sensor tray—we only placed our own water bottles on top.
-  translation: Nunca abrimos la bandeja con sensor del minibar; solo pusimos nuestras botellas de agua encima.
+  text: We never opened the minibar sensor tray—we only placed our own water bottles
+    on top.
+  translation: Nunca abrimos la bandeja con sensor del minibar; solo pusimos nuestras
+    botellas de agua encima.
   visual_hint: 🍾🚫
   cloze:
   - 5
@@ -29,7 +34,8 @@ phrases:
     ipa: ˈsensər treɪ
 - id: resort-fee-waived-tier
   text: Also, the daily spa access fee should be waived under our loyalty tier booking.
-  translation: Además, el cargo diario de spa debería estar exento según nuestra reserva de categoría fidelidad.
+  translation: Además, el cargo diario de spa debería estar exento según nuestra reserva
+    de categoría fidelidad.
   visual_hint: 🏅✨
   cloze:
   - 4
@@ -38,39 +44,6 @@ phrases:
   - word: waived
     meaning: exento / condonado
     ipa: weɪvd
-- id: reprint-zero-balance
-  text: Could you rerun the final charge and print an updated invoice for my expense report?
-  translation: ¿Podría procesar el cargo corregido e imprimir la factura actualizada para mi reporte de gastos?
-  visual_hint: 🖨️💼
-  cloze:
-  - 5
-  - 10
-  glossary:
-  - word: expense report
-    meaning: reporte de gastos
-    ipa: ɪkˈspens rɪˈpɔːrt
-- id: hold-bags-until-two
-  text: May we leave our two bags with the bell desk until our 2:00 PM airport transfer?
-  translation: ¿Podemos dejar dos maletas en custodia hasta nuestro traslado de las 2:00 PM?
-  visual_hint: 🧳🕑
-  cloze:
-  - 5
-  - 10
-  glossary:
-  - word: bell desk
-    meaning: mostrador de botones / consigna
-    ipa: bel desk
-- id: wonderful-stay-overall
-  text: Aside from that billing hiccup, we had a wonderful stay—thank you!
-  translation: Fuera de ese detalle en la cuenta, tuvimos una estancia maravillosa; ¡gracias!
-  visual_hint: 🌟🤝
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: hiccup
-    meaning: pequeño contratiempo
-    ipa: ˈhɪkʌp
 - id: idm-add-up-bill
   text: Wait—the minibar total on my folio doesn't add up to what I used.
   translation: Espere—el total del minibar en mi factura no cuadra con lo que consumí.
@@ -83,9 +56,11 @@ phrases:
     meaning: cuadrar / tener sentido (cuentas)
     ipa: æd ʌp
   kind: phrasal_verb
-  apply_sentence: When the numbers on a hotel bill don't ____, ask for an itemized copy.
+  apply_sentence: When the numbers on a hotel bill don't ____, ask for an itemized
+    copy.
   apply_answer: add up
-  apply_translation: Cuando los números en la factura del hotel no cuadran, pida una copia desglosada.
+  apply_translation: Cuando los números en la factura del hotel no cuadran, pida una
+    copia desglosada.
 - id: idm-set-record-straight
   text: Let's check the sensor log so we can set the record straight immediately.
   translation: Revisemos el registro del sensor para aclarar los hechos de inmediato.
@@ -100,39 +75,49 @@ phrases:
   kind: idiom
   apply_sentence: I brought my signed receipt to ____ about the duplicate charge.
   apply_answer: set the record straight
-  apply_translation: Traje mi recibo firmado para aclarar las cosas sobre el cargo duplicado.
+  apply_translation: Traje mi recibo firmado para aclarar las cosas sobre el cargo
+    duplicado.
 roleplay:
   ai_role: front desk supervisor
   user_role: departing guest
   setting: Hotel reception desk during morning checkout.
   turns:
   - speaker: ai
-    text: Good morning! I emailed your preliminary folio for Room 612. Did everything look okay?
+    text: Good morning! I emailed your preliminary folio for Room 612. Did everything
+      look okay?
   - speaker: user
-    goal: Indica que entregas la habitación 612 y notaste dos cargos erróneos en la factura.
+    goal: Indica que entregas la habitación 612 y notaste dos cargos erróneos en la
+      factura.
     suggested_lines:
-    - Good morning. I'm checking out of Room 612, and I noticed two erroneous charges on my folio.
-    - We never opened the minibar sensor tray—we only placed our own water bottles on top.
+    - Good morning. I'm checking out of Room 612, and I noticed two erroneous charges
+      on my folio.
+    - We never opened the minibar sensor tray—we only placed our own water bottles
+      on top.
   - speaker: ai
     text: Which line items on the statement look incorrect to you?
   - speaker: user
     goal: Explica que nunca consumieron del minibar, solo apoyaron botellas de agua.
     suggested_lines:
-    - We never opened the minibar sensor tray—we only placed our own water bottles on top.
+    - We never opened the minibar sensor tray—we only placed our own water bottles
+      on top.
     - Also, the daily spa access fee should be waived under our loyalty tier booking.
   - speaker: ai
-    text: Ah, those optical weight sensors trigger if anything rests on the tray! I'll void the $42 minibar charge.
+    text: Ah, those optical weight sensors trigger if anything rests on the tray!
+      I'll void the $42 minibar charge.
   - speaker: user
     goal: Recuerda que el cargo diario de spa está exento por tu nivel de fidelidad.
     suggested_lines:
     - Also, the daily spa access fee should be waived under our loyalty tier booking.
-    - Could you rerun the final charge and print an updated invoice for my expense report?
+    - Could you rerun the final charge and print an updated invoice for my expense
+      report?
   - speaker: ai
-    text: You're completely right—Platinum bookings include complimentary spa access. I've removed both items.
+    text: You're completely right—Platinum bookings include complimentary spa access.
+      I've removed both items.
   - speaker: user
     goal: Pide imprimir la factura corregida para tu reporte de gastos laborales.
     suggested_lines:
-    - Could you rerun the final charge and print an updated invoice for my expense report?
+    - Could you rerun the final charge and print an updated invoice for my expense
+      report?
     - May we leave our two bags with the bell desk until our 2:00 PM airport transfer?
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

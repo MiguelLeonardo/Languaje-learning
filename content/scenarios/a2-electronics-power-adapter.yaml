@@ -3,11 +3,13 @@ title: Buying a universal travel adapter
 title_es: Comprar un adaptador de enchufe universal
 cefr: A2
 topic: hotel-and-shopping
-description: Compra un adaptador universal con puertos USB-C en una tienda de electrónica y verifica el voltaje.
+description: Compra un adaptador universal con puertos USB-C en una tienda de electrónica
+  y verifica el voltaje.
 phrases:
 - id: universal-plug-adapter
   text: Hi, I'm looking for a universal travel plug adapter for Europe and the UK.
-  translation: Hola, busco un adaptador de enchufe universal para Europa y el Reino Unido.
+  translation: Hola, busco un adaptador de enchufe universal para Europa y el Reino
+    Unido.
   visual_hint: 🔌🌍
   cloze:
   - 4
@@ -29,7 +31,8 @@ phrases:
     ipa: bɪlt ɪn
 - id: safe-for-laptop
   text: Is it safe to plug my laptop charger and phone into it at the same time?
-  translation: ¿Es seguro conectar el cargador de mi laptop y mi teléfono al mismo tiempo?
+  translation: ¿Es seguro conectar el cargador de mi laptop y mi teléfono al mismo
+    tiempo?
   visual_hint: 💻🔌
   cloze:
   - 5
@@ -38,39 +41,6 @@ phrases:
   - word: at the same time
     meaning: al mismo tiempo
     ipa: æt ðə seɪm taɪm
-- id: braided-charging-cable
-  text: I'll also grab a two-meter braided charging cable, please.
-  translation: También me llevaré un cable de carga trenzado de dos metros, por favor.
-  visual_hint: ➰🔋
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: cable
-    meaning: cable
-    ipa: ˈkeɪbəl
-- id: spare-fuse-inside
-  text: It's nice that it includes a spare safety fuse inside the case.
-  translation: Qué bueno que incluye un fusible de repuesto dentro del estuche.
-  visual_hint: 🛡️⚙️
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: spare
-    meaning: de repuesto
-    ipa: sper
-- id: test-before-leaving
-  text: Everything fits snugly in the travel pouch—I'll take it!
-  translation: Todo cabe perfecto en el estuche de viaje; ¡me lo llevo!
-  visual_hint: 🎒✅
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: pouch
-    meaning: estuche / bolsita
-    ipa: paʊtʃ
 - id: idm-run-out-of
   text: My phone is about to run out of battery before my flight.
   translation: Mi teléfono está a punto de quedarse sin batería antes de mi vuelo.
@@ -85,10 +55,12 @@ phrases:
   kind: phrasal_verb
   apply_sentence: We always carry a power bank so we never ____ charge.
   apply_answer: run out of
-  apply_translation: Siempre llevamos una batería portátil para nunca quedarnos sin carga.
+  apply_translation: Siempre llevamos una batería portátil para nunca quedarnos sin
+    carga.
 - id: idm-worth-every-penny
   text: This sturdy travel adapter is a bit pricey, but it's worth every penny.
-  translation: Este adaptador de viaje resistente es un poco caro, pero vale cada centavo.
+  translation: Este adaptador de viaje resistente es un poco caro, pero vale cada
+    centavo.
   visual_hint: 🔌💎
   cloze:
   - 4

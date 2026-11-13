@@ -3,14 +3,14 @@ title: De-escalating an urgent client outage call
 title_es: Calmar a un cliente tras una caída del servicio
 cefr: B2
 topic: work-and-career
-description: Escucha sin ponernos a la defensiva a un cliente afectado por una interrupción de 20 minutos y explica
-  el plan de prevención.
+description: Escucha sin ponernos a la defensiva a un cliente afectado por una interrupción
+  de 20 minutos y explica el plan de prevención.
 phrases:
 - id: own-the-impact-fully
-  text: First, I want to acknowledge the disruption this twenty-minute outage caused your support team during peak
-    hours.
-  translation: Primero, quiero reconocer la afectación que esta interrupción de veinte minutos causó a su equipo
-    en hora punta.
+  text: First, I want to acknowledge the disruption this twenty-minute outage caused
+    your support team during peak hours.
+  translation: Primero, quiero reconocer la afectación que esta interrupción de veinte
+    minutos causó a su equipo en hora punta.
   visual_hint: 🛡️🤝
   cloze:
   - 5
@@ -20,10 +20,10 @@ phrases:
     meaning: reconocer abiertamente
     ipa: əkˈnɑːlɪdʒ
 - id: root-cause-connection-pool
-  text: Our engineers identified the root cause—a database connection pool limit triggered during the traffic spike—and
-    rolled out a fix.
-  translation: Nuestros ingenieros identificaron la causa raíz —un límite de conexiones durante el pico de tráfico—
-    y aplicaron la corrección.
+  text: Our engineers identified the root cause—a database connection pool limit triggered
+    during the traffic spike—and rolled out a fix.
+  translation: Nuestros ingenieros identificaron la causa raíz —un límite de conexiones
+    durante el pico de tráfico— y aplicaron la corrección.
   visual_hint: 🔍⚙️
   cloze:
   - 6
@@ -33,10 +33,10 @@ phrases:
     meaning: causa raíz / origen del fallo
     ipa: ruːt kɔːz
 - id: automated-autoscaling-guard
-  text: We've tripled the connection ceiling and added an automated alert at sixty-percent capacity so it scales
-    ahead of demand.
-  translation: Triplicamos el tope de conexiones y agregamos una alerta automática al sesenta por ciento para escalar
-    antes del pico.
+  text: We've tripled the connection ceiling and added an automated alert at sixty-percent
+    capacity so it scales ahead of demand.
+  translation: Triplicamos el tope de conexiones y agregamos una alerta automática
+    al sesenta por ciento para escalar antes del pico.
   visual_hint: 📈🔔
   cloze:
   - 6
@@ -45,46 +45,10 @@ phrases:
   - word: ceiling
     meaning: tope máximo / límite
     ipa: ˈsiːlɪŋ
-- id: written-rca-and-sla-credit
-  text: You'll have our full written root-cause analysis by 4:00 PM today, and we're applying the SLA service credit
-    to next month's invoice.
-  translation: Tendrán nuestro informe escrito de causa raíz hoy a las 4:00 PM, y aplicaremos el crédito de garantía
-    SLA en su próxima factura.
-  visual_hint: 📑✅
-  cloze:
-  - 7
-  - 14
-  glossary:
-  - word: service credit
-    meaning: bonificación en factura por nivel de servicio
-    ipa: ˈsɜːrvɪs ˈkredɪt
-- id: dedicated-engineer-on-standby
-  text: For the remainder of your flash sale through Sunday, we've assigned an on-call engineer to monitor your
-    tenant.
-  translation: Durante el resto de su promoción hasta el domingo, asignamos un ingeniero de guardia para monitorear
-    su cuenta.
-  visual_hint: 👨‍💻👀
-  cloze:
-  - 6
-  - 12
-  glossary:
-  - word: on-call
-    meaning: de guardia
-    ipa: ɑːn kɔːl
-- id: follow-up-check-in-monday
-  text: Let's do a quick fifteen-minute check-in on Monday morning to review the weekend telemetry.
-  translation: Hagamos una revisión breve de quince minutos el lunes para ver las métricas del fin de semana.
-  visual_hint: 📅📊
-  cloze:
-  - 4
-  - 9
-  glossary:
-  - word: telemetry
-    meaning: métricas de monitoreo en tiempo real
-    ipa: təˈlemətri
 - id: idm-put-out-fires
   text: We are working around the clock, putting out fires.
-  translation: 'Trabajamos sin parar, apagando incendios. (put out fires: resolver crisis urgentes)'
+  translation: 'Trabajamos sin parar, apagando incendios. (put out fires: resolver
+    crisis urgentes)'
   visual_hint: 🔥🚒
   cloze:
   - 3
@@ -96,10 +60,12 @@ phrases:
   kind: idiom
   apply_sentence: Our team spends half the week ____ for other departments.
   apply_answer: putting out fires
-  apply_translation: Nuestro equipo pasa media semana apagando incendios para otros departamentos.
+  apply_translation: Nuestro equipo pasa media semana apagando incendios para otros
+    departamentos.
 - id: idm-bear-the-brunt
   text: I know your customers bore the brunt of this outage.
-  translation: 'Sé que tus clientes cargaron con lo peor de esta caída. (bear the brunt: sufrir lo peor)'
+  translation: 'Sé que tus clientes cargaron con lo peor de esta caída. (bear the
+    brunt: sufrir lo peor)'
   visual_hint: 😤📞
   cloze:
   - 3
@@ -111,46 +77,52 @@ phrases:
   kind: idiom
   apply_sentence: Support staff ____ of the angry calls last week.
   apply_answer: bore the brunt
-  apply_translation: El personal de soporte cargó con lo peor de las llamadas enfadadas la semana pasada.
+  apply_translation: El personal de soporte cargó con lo peor de las llamadas enfadadas
+    la semana pasada.
 roleplay:
   ai_role: enterprise client director
   user_role: account manager
   setting: Urgent video call one hour after a 20-minute API outage.
   turns:
   - speaker: ai
-    text: Our checkout API threw 502 errors for twenty minutes this morning right during our flash sale!
+    text: Our checkout API threw 502 errors for twenty minutes this morning right
+      during our flash sale!
   - speaker: user
     goal: Reconoce con empatía el impacto que tuvo la interrupción en su operación.
     suggested_lines:
-    - First, I want to acknowledge the disruption this twenty-minute outage caused your support team during peak
-      hours.
-    - Our engineers identified the root cause—a database connection pool limit triggered during the traffic spike—and
-      rolled out a fix.
+    - First, I want to acknowledge the disruption this twenty-minute outage caused
+      your support team during peak hours.
+    - Our engineers identified the root cause—a database connection pool limit triggered
+      during the traffic spike—and rolled out a fix.
   - speaker: ai
-    text: What actually happened under the hood, and how do we know it won't happen again tonight?
+    text: What actually happened under the hood, and how do we know it won't happen
+      again tonight?
   - speaker: user
     goal: Explica la causa raíz detectada y confirma que la corrección ya fue aplicada.
     suggested_lines:
-    - Our engineers identified the root cause—a database connection pool limit triggered during the traffic spike—and
-      rolled out a fix.
-    - We've tripled the connection ceiling and added an automated alert at sixty-percent capacity so it scales ahead
-      of demand.
+    - Our engineers identified the root cause—a database connection pool limit triggered
+      during the traffic spike—and rolled out a fix.
+    - We've tripled the connection ceiling and added an automated alert at sixty-percent
+      capacity so it scales ahead of demand.
   - speaker: ai
     text: Tripling the ceiling helps, but my CFO is asking for a formal incident report.
   - speaker: user
-    goal: Detalla que triplicaron la capacidad y activaron alertas preventivas al 60%.
+    goal: Detalla que triplicaron la capacidad y activaron alertas preventivas al
+      60%.
     suggested_lines:
-    - We've tripled the connection ceiling and added an automated alert at sixty-percent capacity so it scales ahead
-      of demand.
-    - You'll have our full written root-cause analysis by 4:00 PM today, and we're applying the SLA service credit
-      to next month's invoice.
+    - We've tripled the connection ceiling and added an automated alert at sixty-percent
+      capacity so it scales ahead of demand.
+    - You'll have our full written root-cause analysis by 4:00 PM today, and we're
+      applying the SLA service credit to next month's invoice.
   - speaker: ai
     text: Thank you for owning it directly and having the fix already in place.
   - speaker: user
-    goal: Compromete el informe escrito hoy a las 4:00 PM y la bonificación SLA en factura.
+    goal: Compromete el informe escrito hoy a las 4:00 PM y la bonificación SLA en
+      factura.
     suggested_lines:
-    - You'll have our full written root-cause analysis by 4:00 PM today, and we're applying the SLA service credit
-      to next month's invoice.
-    - For the remainder of your flash sale through Sunday, we've assigned an on-call engineer to monitor your tenant.
+    - You'll have our full written root-cause analysis by 4:00 PM today, and we're
+      applying the SLA service credit to next month's invoice.
+    - For the remainder of your flash sale through Sunday, we've assigned an on-call
+      engineer to monitor your tenant.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

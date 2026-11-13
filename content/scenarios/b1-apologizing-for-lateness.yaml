@@ -3,7 +3,8 @@ title: Apologizing for running late
 title_es: Disculparse por llegar tarde debido al tráfico
 cefr: B1
 topic: social-and-smalltalk
-description: Llama a tu amigo para avisar que el metro se detuvo, calcula tu hora de llegada y pídele que vaya pidiendo.
+description: Llama a tu amigo para avisar que el metro se detuvo, calcula tu hora
+  de llegada y pídele que vaya pidiendo.
 phrases:
 - id: so-sorry-running-late
   text: Hey! I'm so sorry, I'm running about fifteen minutes behind schedule.
@@ -38,39 +39,6 @@ phrases:
   - word: go ahead
     meaning: adelante / procede sin esperar
     ipa: ɡoʊ əˈhed
-- id: walking-fast-two-blocks
-  text: I just exited the station and I'm walking fast—I'll be there in four minutes!
-  translation: Acabo de salir de la estación y voy caminando rápido; ¡llego en cuatro minutos!
-  visual_hint: 🏃‍♂️🏙️
-  cloze:
-  - 4
-  - 9
-  glossary:
-  - word: exited
-    meaning: salí de
-    ipa: ˈeksɪtɪd
-- id: first-round-on-me
-  text: Thanks for being so patient—the first round of drinks is definitely on me!
-  translation: Gracias por ser tan paciente; ¡la primera ronda de bebidas corre por mi cuenta!
-  visual_hint: 🍹🤝
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: round
-    meaning: ronda de bebidas
-    ipa: raʊnd
-- id: wave-from-the-door
-  text: I'm walking through the front door right now—I see you waving!
-  translation: Estoy entrando por la puerta principal ahora mismo; ¡ya te veo saludando!
-  visual_hint: 👋😊
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: waving
-    meaning: saludando con la mano
-    ipa: ˈweɪvɪŋ
 - id: idm-b1al-stuck-in-traffic
   text: Sorry I'm late, I got stuck in traffic on the highway.
   translation: Perdona la tardanza, quedé atascado en el tráfico de la autopista.

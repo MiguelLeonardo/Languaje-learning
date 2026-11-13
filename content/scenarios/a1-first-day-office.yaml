@@ -3,7 +3,8 @@ title: First day at the office
 title_es: Primer día en la oficina
 cefr: A1
 topic: work-and-career
-description: Preséntate en recepción en tu primer día de trabajo, pregunta por tu escritorio y conoce a tu equipo.
+description: Preséntate en recepción en tu primer día de trabajo, pregunta por tu
+  escritorio y conoce a tu equipo.
 phrases:
 - id: first-day-here
   text: Good morning! Today is my first day in the marketing team.
@@ -48,48 +49,6 @@ phrases:
   - word: badge
     meaning: credencial / gafete
     ipa: bædʒ
-- id: kitchen-and-coffee
-  text: Is the coffee machine on this floor?
-  translation: ¿Está la máquina de café en este piso?
-  visual_hint: ☕🏢
-  cloze:
-  - 2
-  - 6
-  glossary:
-  - word: coffee machine
-    meaning: máquina de café
-    ipa: ˈkɔːfi məˈʃiːn
-  - word: floor
-    meaning: piso / planta
-    ipa: flɔːr
-- id: happy-to-be-here
-  text: Nice to meet you! I am very happy to join the team.
-  translation: ¡Mucho gusto! Estoy muy feliz de unirme al equipo.
-  visual_hint: 🤝🌟
-  cloze:
-  - 6
-  - 8
-  glossary:
-  - word: happy
-    meaning: feliz / contento
-    ipa: ˈhæpi
-  - word: join
-    meaning: unirse a
-    ipa: dʒɔɪn
-- id: what-time-lunch
-  text: What time do we usually have lunch?
-  translation: ¿A qué hora solemos almorzar?
-  visual_hint: 🥗🕛
-  cloze:
-  - 1
-  - 6
-  glossary:
-  - word: usually
-    meaning: usualmente
-    ipa: ˈjuːʒuəli
-  - word: lunch
-    meaning: almuerzo
-    ipa: lʌntʃ
 - id: idm-piece-of-cake
   text: The computer login is a piece of cake today.
   translation: 'Entrar al ordenador hoy es muy fácil. (a piece of cake: algo muy fácil)'
@@ -107,7 +66,8 @@ phrases:
   apply_translation: Este informe nuevo es pan comido, lo terminé rápido.
 - id: idm-sit-down
   text: Please sit down here, this is your new desk.
-  translation: 'Siéntate aquí, por favor, este es tu escritorio nuevo. (sit down: sentarse)'
+  translation: 'Siéntate aquí, por favor, este es tu escritorio nuevo. (sit down:
+    sentarse)'
   visual_hint: 🪑👋
   cloze:
   - 3
@@ -140,7 +100,8 @@ roleplay:
     - Where is my desk, please?
     - Is the coffee machine on this floor?
   - speaker: ai
-    text: Your desk is right by the window, and the kitchen with free coffee is down the hall.
+    text: Your desk is right by the window, and the kitchen with free coffee is down
+      the hall.
   - speaker: user
     goal: Di que estás muy feliz de unirte al equipo.
     suggested_lines:

@@ -1,0 +1,90 @@
+id: a2-grammar-adverbs
+title: Adverbs of manner and degree
+title_es: Adverbios de modo y grado
+cefr: A2
+topic: grammar-and-connectors
+description: Describe cómo se hacen las acciones (quickly, carefully) y su intensidad
+  (quite, too, enough).
+phrases:
+- id: speak-slowly-please
+  text: Could you speak more slowly, please?
+  translation: ¿Podría hablar más despacio, por favor?
+  visual_hint: 🗣️🐢
+  cloze:
+  - 4
+  glossary:
+  - word: slowly
+    meaning: despacio / lentamente
+    ipa: ˈsloʊli
+- id: read-instructions-carefully
+  text: Please read the instructions carefully.
+  translation: Por favor, lee las instrucciones con cuidado.
+  visual_hint: 📋🧐
+  cloze:
+  - 4
+  glossary:
+  - word: carefully
+    meaning: cuidadosamente / con cuidado
+    ipa: ˈkerfəli
+- id: too-noisy-here
+  text: It is too noisy to study here.
+  translation: Hay demasiado ruido para estudiar aquí. ('too' indica exceso)
+  visual_hint: 🔊😵
+  cloze:
+  - 2
+  glossary:
+  - word: too
+    meaning: demasiado (más de lo necesario)
+    ipa: tuː
+  kind: expression
+  apply_sentence: This soup is ____ hot to eat right now.
+  apply_answer: too
+  apply_translation: Esta sopa está demasiado caliente para comerla ahora.
+- id: not-warm-enough
+  text: The room is not warm enough.
+  translation: La habitación no está suficientemente cálida. ('enough' va después
+    del adjetivo)
+  visual_hint: 🥶🌡️
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: enough
+    meaning: suficientemente
+    ipa: ɪˈnʌf
+  kind: expression
+  apply_sentence: I am not tall ____ to reach that shelf.
+  apply_answer: enough
+  apply_translation: No soy lo suficientemente alto para alcanzar ese estante.
+- id: quite-easy-test
+  text: The driving test was quite easy.
+  translation: El examen de conducir fue bastante fácil.
+  visual_hint: 🚗✅
+  cloze:
+  - 4
+  glossary:
+  - word: quite
+    meaning: bastante
+    ipa: kwaɪt
+roleplay:
+  ai_role: librarian
+  user_role: student
+  setting: Looking for a quiet study spot in a public library.
+  turns:
+  - speaker: ai
+    text: Hello! How can I help you today?
+  - speaker: user
+    goal: Explica que la otra sala tiene demasiado ruido usando 'too'.
+    suggested_lines:
+    - It is too noisy to study near the entrance.
+    - The first floor is too noisy for me.
+  - speaker: ai
+    text: You can try the third floor. Please walk quietly up the stairs.
+  - speaker: user
+    goal: Pregunta si hay suficiente luz o espacio usando 'enough' o comenta algo
+      con 'quite'.
+    suggested_lines:
+    - Is the third floor bright enough?
+    - Great, that sounds quite peaceful.
+  - speaker: ai
+    text: Yes, it is very bright and quiet. Enjoy your study session!

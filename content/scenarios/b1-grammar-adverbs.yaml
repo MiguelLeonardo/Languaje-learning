@@ -1,0 +1,88 @@
+id: b1-grammar-adverbs
+title: Adverbs of certainty, attitude, and frequency
+title_es: Adverbios de certeza, actitud y frecuencia
+cefr: B1
+topic: grammar-and-connectors
+description: Expresa certeza, duda y actitud con adverbios como definitely, probably,
+  honestly, hardly y already.
+phrases:
+- id: definitely-worth-visiting
+  text: The old town is definitely worth visiting.
+  translation: Definitivamente vale la pena visitar el casco antiguo.
+  visual_hint: 🏰✨
+  cloze:
+  - 4
+  glossary:
+  - word: definitely
+    meaning: definitivamente / sin duda
+    ipa: ˈdefɪnətli
+  kind: expression
+  apply_sentence: This documentary is ____ worth watching.
+  apply_answer: definitely
+  apply_translation: Definitivamente vale la pena ver este documental.
+- id: probably-rain-tonight
+  text: It will probably rain later tonight.
+  translation: Probablemente llueva más tarde esta noche.
+  visual_hint: 🌦️🌙
+  cloze:
+  - 2
+  glossary:
+  - word: probably
+    meaning: probablemente
+    ipa: ˈprɑːbəbli
+- id: honestly-dont-know
+  text: Honestly, I have no idea where he went.
+  translation: Sinceramente, no tengo ni idea de adónde fue.
+  visual_hint: 🤷💬
+  cloze:
+  - 0
+  glossary:
+  - word: honestly
+    meaning: sinceramente / honestamente
+    ipa: ˈɑːnɪstli
+  kind: expression
+  apply_sentence: ____, I think we should take the earlier train.
+  apply_answer: Honestly
+  apply_translation: Sinceramente, creo que deberíamos tomar el tren más temprano.
+- id: hardly-sleep-noise
+  text: I could hardly sleep because of the noise.
+  translation: 'Apenas pude dormir por el ruido. (''hardly'' tiene sentido negativo:
+    casi no)'
+  visual_hint: 🛏️🔊
+  cloze:
+  - 2
+  glossary:
+  - word: hardly
+    meaning: apenas / casi no
+    ipa: ˈhɑːrdli
+- id: already-finished-report
+  text: She has already finished the weekly report.
+  translation: Ella ya ha terminado el informe semanal.
+  visual_hint: 📄✅
+  cloze:
+  - 2
+  glossary:
+  - word: already
+    meaning: ya (antes de lo esperado)
+    ipa: ɔːlˈredi
+roleplay:
+  ai_role: team lead
+  user_role: colleague
+  setting: Catching up before a project deadline.
+  turns:
+  - speaker: ai
+    text: Hey, do you think we will finish the slides today?
+  - speaker: user
+    goal: Responde expresando certeza o probabilidad con 'definitely' o 'probably'.
+    suggested_lines:
+    - Yes, we will probably finish them by four.
+    - They are definitely going to be ready today.
+  - speaker: ai
+    text: Awesome! Have you heard back from the client yet?
+  - speaker: user
+    goal: Responde usando 'honestly', 'hardly' o 'already'.
+    suggested_lines:
+    - Honestly, I haven't checked my email yet.
+    - Yes, they have already approved the draft.
+  - speaker: ai
+    text: Great, let's do a quick review after lunch.

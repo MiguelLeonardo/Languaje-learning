@@ -3,7 +3,8 @@ title: Joining a local cooking class
 title_es: Unirse a una clase de cocina local
 cefr: B1
 topic: food-and-drink
-description: Pregunta al chef instructor cómo preparar pasta fresca, pide un delantal y anota las proporciones.
+description: Pregunta al chef instructor cómo preparar pasta fresca, pide un delantal
+  y anota las proporciones.
 phrases:
 - id: knead-the-dough
   text: How many minutes should we knead the pasta dough until it's smooth?
@@ -38,42 +39,10 @@ phrases:
   - word: rest
     meaning: reposar
     ipa: rest
-- id: email-the-recipe
-  text: Will you email us the recipe card so we can practice at home?
-  translation: ¿Nos enviará por correo la ficha de la receta para practicar en casa?
-  visual_hint: 📧📖
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: recipe card
-    meaning: ficha de receta
-    ipa: ˈresəpi kɑːrd
-- id: apron-and-rolling-pin
-  text: Could I borrow an apron and a wooden rolling pin?
-  translation: ¿Me podría prestar un delantal y un rodillo de madera?
-  visual_hint: 👨‍🍳🪵
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: apron
-    meaning: delantal
-    ipa: ˈeɪprən
-- id: simmer-the-sauce
-  text: Let the tomato basil sauce simmer on low heat for twenty minutes.
-  translation: Deja que la salsa de tomate y albahaca hierva a fuego lento veinte minutos.
-  visual_hint: 🍅🔥
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: simmer
-    meaning: hervir a fuego lento
-    ipa: ˈsɪmər
 - id: from-scratch
   text: We made the pasta dough completely from scratch today.
-  translation: 'Hicimos la masa de pasta completamente desde cero hoy. (from scratch: desde cero)'
+  translation: 'Hicimos la masa de pasta completamente desde cero hoy. (from scratch:
+    desde cero)'
   visual_hint: 🍝👩‍🍳
   cloze:
   - 3
@@ -88,7 +57,8 @@ phrases:
   apply_translation: Ella construye sus computadoras desde cero cada año.
 - id: rule-of-thumb
   text: A good rule of thumb is to taste as you cook.
-  translation: 'Una buena regla general es probar mientras cocinas. (rule of thumb: regla general)'
+  translation: 'Una buena regla general es probar mientras cocinas. (rule of thumb:
+    regla general)'
   visual_hint: 👍🥄
   cloze:
   - 3

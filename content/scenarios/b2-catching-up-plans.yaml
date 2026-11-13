@@ -3,11 +3,13 @@ title: Catching up and making plans
 title_es: Ponerse al día con un amigo
 cefr: B2
 topic: social-and-smalltalk
-description: Ponte al día después de mucho tiempo y coordina una salida para el fin de semana.
+description: Ponte al día después de mucho tiempo y coordina una salida para el fin
+  de semana.
 phrases:
 - id: long-time-no-see
   text: It's been ages since we last caught up! How have you been?
-  translation: ¡Ha pasado muchísimo tiempo desde la última vez que nos pusimos al día! ¿Cómo has estado?
+  translation: ¡Ha pasado muchísimo tiempo desde la última vez que nos pusimos al
+    día! ¿Cómo has estado?
   visual_hint: ☕🤗
   cloze:
   - 2
@@ -39,39 +41,10 @@ phrases:
   glossary:
   - word: lock in
     meaning: confirmar / dejar fijo un horario
-- id: book-in-advance
-  text: That place fills up fast, so I'll book a table in advance.
-  translation: Ese lugar se llena rápido, así que reservaré una mesa con anticipación.
-  visual_hint: 📲🍽️
-  cloze:
-  - 2
-  - 7
-  - 11
-  glossary:
-  - word: fills up
-    meaning: se llena
-    ipa: fɪlz ʌp
-  - word: in advance
-    meaning: con anticipación
-    ipa: ɪn ədˈvæns
-- id: pick-you-up
-  text: I can swing by your place around seven to pick you up.
-  translation: Puedo pasar por tu casa alrededor de las siete para recogerte.
-  visual_hint: 🚗🕖
-  cloze:
-  - 2
-  - 3
-  - 9
-  glossary:
-  - word: swing by
-    meaning: pasar rápidamente por
-    ipa: swɪŋ baɪ
-  - word: pick you up
-    meaning: recogerte
-    ipa: pɪk juː ʌp
 - id: idm-b2cu-long-time-no-see
   text: Long time no see! We really should catch up properly soon.
-  translation: ¡Cuánto tiempo sin vernos! Deberíamos ponernos al día pronto (saludo informal).
+  translation: ¡Cuánto tiempo sin vernos! Deberíamos ponernos al día pronto (saludo
+    informal).
   visual_hint: ☕👋
   cloze:
   - 3
@@ -98,7 +71,8 @@ phrases:
   kind: idiom
   apply_sentence: It's hard to ____ with old classmates abroad.
   apply_answer: keep in touch
-  apply_translation: Es difícil mantener el contacto con antiguos compañeros en el extranjero.
+  apply_translation: Es difícil mantener el contacto con antiguos compañeros en el
+    extranjero.
 roleplay:
   ai_role: close friend
   user_role: friend

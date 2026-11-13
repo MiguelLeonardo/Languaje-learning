@@ -1,0 +1,90 @@
+id: b2-grammar-connectors
+title: Formal discourse and logical connectors
+title_es: Conectores formales de discurso y lógica
+cefr: B2
+topic: grammar-and-connectors
+description: Estructura argumentos complejos con 'moreover', 'nevertheless', 'consequently',
+  'whereas' y 'provided that'.
+phrases:
+- id: moreover-reduces-cost
+  text: The plan saves time; moreover, it reduces operating costs.
+  translation: El plan ahorra tiempo; es más, reduce los costos operativos.
+  visual_hint: ⏱️💰
+  cloze:
+  - 4
+  glossary:
+  - word: moreover
+    meaning: además / es más (registro formal)
+    ipa: mɔːrˈoʊvər
+- id: nevertheless-worth-trying
+  text: The risk is real; nevertheless, the idea is worth testing.
+  translation: El riesgo es real; no obstante, vale la pena probar la idea.
+  visual_hint: ⚖️🧪
+  cloze:
+  - 4
+  glossary:
+  - word: nevertheless
+    meaning: no obstante / sin embargo
+    ipa: ˌnevərðəˈles
+  kind: expression
+  apply_sentence: The weather was fierce; ____, the rescue team pressed on.
+  apply_answer: nevertheless
+  apply_translation: El clima era feroz; no obstante, el equipo de rescate siguió
+    adelante.
+- id: consequently-postponed
+  text: Funding was cut; consequently, the launch was postponed.
+  translation: Se recortó la financiación; en consecuencia, se pospuso el lanzamiento.
+  visual_hint: 📉📅
+  cloze:
+  - 3
+  glossary:
+  - word: consequently
+    meaning: en consecuencia / por consiguiente
+    ipa: ˈkɑːnsɪkwentli
+- id: whereas-hardware-costs
+  text: Software scales quickly, whereas hardware requires capital.
+  translation: El software escala rápido, mientras que el hardware requiere capital.
+  visual_hint: 💻🏭
+  cloze:
+  - 3
+  glossary:
+  - word: whereas
+    meaning: mientras que (contraste directo)
+    ipa: werˈæz
+  kind: expression
+  apply_sentence: Some colleagues prefer mornings, ____ others peak at night.
+  apply_answer: whereas
+  apply_translation: Algunos colegas prefieren las mañanas, mientras que otros rinden
+    más de noche.
+- id: provided-that-signed
+  text: We can ship tomorrow, provided that the contract is signed.
+  translation: Podemos enviar mañana, siempre y cuando el contrato esté firmado.
+  visual_hint: 📦✍️
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: provided that
+    meaning: siempre y cuando / con tal de que
+    ipa: prəˈvaɪdɪd ðæt
+roleplay:
+  ai_role: board member
+  user_role: director
+  setting: Presenting a regional expansion proposal.
+  turns:
+  - speaker: ai
+    text: Why expand into the northern market before stabilizing the south?
+  - speaker: user
+    goal: Contrasta ambos mercados usando 'whereas' o 'nevertheless'.
+    suggested_lines:
+    - The south is saturated, whereas the north has high demand.
+    - There is risk; nevertheless, the timing is ideal.
+  - speaker: ai
+    text: And what conditions need to be met before we sign?
+  - speaker: user
+    goal: Pon una condición usando 'provided that' o agrega un beneficio con 'moreover'.
+    suggested_lines:
+    - We can launch in Q3, provided that we hire two local leads.
+    - Moreover, our logistics partner already covers that region.
+  - speaker: ai
+    text: That is a very well-reasoned case. You have my vote.

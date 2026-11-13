@@ -3,7 +3,8 @@ title: Giving your address for an emergency
 title_es: Dar la dirección para una ambulancia
 cefr: A1
 topic: health-and-emergencies
-description: Llama al número de emergencias para pedir una ambulancia e indica la calle y el número con claridad.
+description: Llama al número de emergencias para pedir una ambulancia e indica la
+  calle y el número con claridad.
 phrases:
 - id: need-an-ambulance
   text: Hello, we need an ambulance right away, please.
@@ -38,42 +39,10 @@ phrases:
   - word: awake
     meaning: despierto / consciente
     ipa: əˈweɪk
-- id: forty-two-king-street
-  text: We are at 42 King Street, in front of the bank.
-  translation: Estamos en el 42 de King Street, frente al banco.
-  visual_hint: 📍🏦
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: street
-    meaning: calle
-    ipa: striːt
-- id: stay-with-him-here
-  text: We will stay with him until the paramedics arrive.
-  translation: Nos quedaremos con él hasta que lleguen los paramédicos.
-  visual_hint: 🤝🚑
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: stay
-    meaning: quedarse
-    ipa: steɪ
-- id: wave-at-the-corner
-  text: My friend is waiting at the corner to wave to the driver.
-  translation: Mi amigo espera en la esquina para hacer señas al conductor.
-  visual_hint: 👋🚨
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: corner
-    meaning: esquina
-    ipa: ˈkɔːrnər
 - id: idm-hurry-up-a1
   text: Please hurry up, my father needs help right now!
-  translation: ¡Por favor, dese prisa, mi padre necesita ayuda ahora mismo! (hurry up = apresurarse)
+  translation: ¡Por favor, dese prisa, mi padre necesita ayuda ahora mismo! (hurry
+    up = apresurarse)
   visual_hint: 🚑⏱️
   cloze:
   - 3

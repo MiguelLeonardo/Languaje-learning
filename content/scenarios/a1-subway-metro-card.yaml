@@ -3,7 +3,8 @@ title: Buying a metro card
 title_es: Comprar una tarjeta de metro
 cefr: A1
 topic: travel-and-transport
-description: Compra una tarjeta de metro para todo el día y pregunta hacia dónde va la línea azul.
+description: Compra una tarjeta de metro para todo el día y pregunta hacia dónde va
+  la línea azul.
 phrases:
 - id: one-day-metro-pass
   text: Can I buy a one-day metro pass, please?
@@ -38,42 +39,10 @@ phrases:
   - word: stops
     meaning: paradas / estaciones
     ipa: stɑːps
-- id: tap-card-at-gate
-  text: Do I tap the card on the yellow gate?
-  translation: ¿Debo pasar la tarjeta por el lector amarillo?
-  visual_hint: 📲🚧
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: tap
-    meaning: acercar / tocar con la tarjeta
-    ipa: tæp
-- id: free-metro-map
-  text: May I take one of these pocket metro maps?
-  translation: ¿Puedo llevarme uno de estos mapas de bolsillo del metro?
-  visual_hint: 🗺️🚇
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: pocket
-    meaning: de bolsillo
-    ipa: ˈpɑːkɪt
-- id: trains-every-five-min
-  text: Great! The train is coming now, thank you.
-  translation: ¡Genial! El tren ya viene, gracias.
-  visual_hint: 🚆👍
-  cloze:
-  - 2
-  - 5
-  glossary:
-  - word: coming
-    meaning: viniendo / llegando
-    ipa: ˈkʌmɪŋ
 - id: metro-piece-of-cake
   text: Buying a metro card is a piece of cake with this machine.
-  translation: Comprar una tarjeta de metro es pan comido con esta máquina. (a piece of cake = algo muy fácil)
+  translation: Comprar una tarjeta de metro es pan comido con esta máquina. (a piece
+    of cake = algo muy fácil)
   visual_hint: 🍰🚇
   cloze:
   - 4
@@ -88,7 +57,8 @@ phrases:
   apply_translation: Encontrar la línea azul fue pan comido para nosotros hoy.
 - id: metro-get-on
   text: Get on the blue line and go four stops downtown.
-  translation: Sube a la línea azul y ve cuatro paradas al centro. (get on = subir a)
+  translation: Sube a la línea azul y ve cuatro paradas al centro. (get on = subir
+    a)
   visual_hint: 🚇⬆️
   cloze:
   - 3

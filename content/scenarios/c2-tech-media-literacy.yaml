@@ -1,0 +1,100 @@
+id: c2-tech-media-literacy
+title: Deconstructing synthetic media and deepfakes
+title_es: Desmontar medios sintéticos y deepfakes
+cefr: C2
+topic: daily-tech-and-media
+description: Analiza la erosión de la confianza epistémica ante audio y video sintético en la
+  esfera pública.
+phrases:
+- id: synthetic-media-plausible
+  text: Hyper-realistic synthetic media blurs the boundary between fabrication and testimony.
+  translation: Los medios sintéticos hiperrealistas difuminan la frontera entre la fabricación
+    y el testimonio.
+  visual_hint: 🎭🎥
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: fabrication
+    meaning: invención / falsificación
+    ipa: ˌfæbrɪˈkeɪʃən
+- id: cryptographic-content-provenance
+  text: Cryptographic content credentials let newsrooms verify unedited camera capture.
+  translation: Las credenciales criptográficas de contenido permiten a las redacciones verificar
+    capturas de cámara sin editar.
+  visual_hint: 🔐📷
+  cloze:
+  - 0
+  - 5
+  glossary:
+  - word: cryptographic
+    meaning: criptográfico
+    ipa: ˌkrɪptəˈɡræfɪk
+- id: liars-dividend-skepticism
+  text: Blanket cynicism fuels the liar's dividend, letting bad actors dismiss genuine footage.
+  translation: El cinismo generalizado alimenta el dividendo del mentiroso, permitiendo descartar
+    grabaciones auténticas.
+  visual_hint: 🗣️⚠️
+  cloze:
+  - 1
+  - 7
+  glossary:
+  - word: cynicism
+    meaning: cinismo / desconfianza total
+    ipa: ˈsɪnɪsɪzəm
+- id: idm-sift-through
+  text: Audiences need practical heuristics to sift through manipulated clips quickly.
+  translation: 'Las audiencias necesitan heurísticas prácticas para filtrar clips manipulados
+    rápidamente. (sift through: cribar / filtrar)'
+  visual_hint: 🔎🎞️
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: sift through
+    meaning: cribar / examinar minuciosamente
+    ipa: sɪft θruː
+  kind: phrasal_verb
+  apply_sentence: Fact-checkers had to ____ dozens of altered screenshots after the speech.
+  apply_answer: sift through
+  apply_translation: Los verificadores tuvieron que examinar decenas de capturas alteradas tras
+    el discurso.
+- id: idm-at-face-value
+  text: In an era of voice cloning, no viral audio clip can be taken at face value.
+  translation: 'En una era de clonación de voz, ningún audio viral puede tomarse al pie de la
+    letra. (at face value: por lo que aparenta)'
+  visual_hint: 🎙️❓
+  cloze:
+  - 12
+  - 14
+  glossary:
+  - word: at face value
+    meaning: tal cual / por lo que aparenta
+    ipa: æt feɪs ˈvæljuː
+  kind: idiom
+  apply_sentence: Never accept an urgent wire-transfer voicemail ____.
+  apply_answer: at face value
+  apply_translation: Nunca aceptes un mensaje de voz urgente de transferencia bancaria tal cual
+    aparenta.
+roleplay:
+  ai_role: digital forensics lecturer
+  user_role: graduate researcher
+  setting: University seminar on epistemic trust and synthetic media.
+  turns:
+  - speaker: ai
+    text: Everyone talks about being fooled by deepfakes, yet isn't total distrust just as dangerous?
+  - speaker: user
+    goal: Explica el dividendo del mentiroso y por qué no podemos aceptar audios virales sin
+      verificar.
+    suggested_lines:
+    - Blanket cynicism fuels the liar's dividend, letting bad actors dismiss genuine footage.
+    - In an era of voice cloning, no viral audio clip can be taken at face value.
+  - speaker: ai
+    text: Precisely. So what technical or educational safeguards actually scale?
+  - speaker: user
+    goal: Propón credenciales criptográficas de contenido y heurísticas para filtrar clips.
+    suggested_lines:
+    - Cryptographic content credentials let newsrooms verify unedited camera capture.
+    - Audiences need practical heuristics to sift through manipulated clips quickly.
+  - speaker: ai
+    text: Pairing provenance standards with public literacy is our strongest defense.

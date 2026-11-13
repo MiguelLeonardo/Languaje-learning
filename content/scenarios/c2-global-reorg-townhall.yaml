@@ -3,13 +3,14 @@ title: Communicating a strategic reorganization
 title_es: Comunicar reestructuración global en townhall
 cefr: C2
 topic: work-and-career
-description: Explica en una asamblea global por qué la empresa pasa de silos regionales a unidades de producto globales
-  sin recortes de personal.
+description: Explica en una asamblea global por qué la empresa pasa de silos regionales
+  a unidades de producto globales sin recortes de personal.
 phrases:
 - id: shift-from-silos-to-pods
-  text: Today we're realigning from regional silos into global product pods so decisions happen closest to the customer.
-  translation: Hoy pasamos de silos regionales a unidades globales de producto para que las decisiones se tomen
-    más cerca del cliente.
+  text: Today we're realigning from regional silos into global product pods so decisions
+    happen closest to the customer.
+  translation: Hoy pasamos de silos regionales a unidades globales de producto para
+    que las decisiones se tomen más cerca del cliente.
   visual_hint: 🌍🧭
   cloze:
   - 5
@@ -19,9 +20,10 @@ phrases:
     meaning: departamentos aislados / silos
     ipa: ˈsaɪloʊz
 - id: zero-headcount-reduction
-  text: 'Let me state this upfront: this reorganization is about speed and clarity, with zero headcount reduction.'
-  translation: 'Quiero decirlo desde el principio: esta reorganización busca velocidad y claridad, sin ningún recorte
-    de personal.'
+  text: 'Let me state this upfront: this reorganization is about speed and clarity,
+    with zero headcount reduction.'
+  translation: 'Quiero decirlo desde el principio: esta reorganización busca velocidad
+    y claridad, sin ningún recorte de personal.'
   visual_hint: 🛡️🤝
   cloze:
   - 5
@@ -31,10 +33,10 @@ phrases:
     meaning: de entrada / con total franqueza
     ipa: ˌʌpˈfrʌnt
 - id: eliminate-duplicate-approvals
-  text: Previously, launching a feature in three regions required fourteen sign-offs; under the new model, one pod
-    lead owns it end-to-end.
-  translation: Antes, lanzar una función en tres regiones requería catorce firmas; bajo el nuevo modelo, un líder
-    la gestiona de principio a fin.
+  text: Previously, launching a feature in three regions required fourteen sign-offs;
+    under the new model, one pod lead owns it end-to-end.
+  translation: Antes, lanzar una función en tres regiones requería catorce firmas;
+    bajo el nuevo modelo, un líder la gestiona de principio a fin.
   visual_hint: ⚡✅
   cloze:
   - 6
@@ -43,45 +45,10 @@ phrases:
   - word: end-to-end
     meaning: de principio a fin / integralmente
     ipa: end tuː end
-- id: one-on-one-mapping-calls
-  text: Every manager is holding 1-on-1 transition chats over the next forty-eight hours so everyone knows their
-    pod and charter.
-  translation: Cada gerente tendrá reuniones individuales en las próximas cuarenta y ocho horas para que todos conozcan
-    su equipo y misión.
-  visual_hint: 📅💬
-  cloze:
-  - 6
-  - 12
-  glossary:
-  - word: charter
-    meaning: misión / mandato del equipo
-    ipa: ˈtʃɑːrtər
-- id: async-norms-across-timezones
-  text: To protect work-life balance across time zones, we're adopting asynchronous decision memos before scheduling
-    meetings.
-  translation: Para proteger el equilibrio entre zonas horarias, adoptaremos documentos de decisión asíncronos.
-  visual_hint: 🕒📝
-  cloze:
-  - 5
-  - 10
-  glossary:
-  - word: asynchronous
-    meaning: asíncrono (sin exigir conexión simultánea)
-    ipa: eɪˈsɪŋkrənəs
-- id: open-office-hours-all-week
-  text: My calendar is open for drop-in office hours all week—let's build this next chapter together.
-  translation: Mi agenda está abierta toda la semana para consultas directas; construyamos juntos esta etapa.
-  visual_hint: 🚪🌟
-  cloze:
-  - 5
-  - 10
-  glossary:
-  - word: drop-in
-    meaning: de puertas abiertas / sin cita previa
-    ipa: drɑːp ɪn
 - id: idm-shake-up
   text: This reorganization is a major shake-up, and I understand the unease.
-  translation: 'Esta reorganización es un gran cambio, y entiendo la inquietud. (shake-up: reestructuración drástica)'
+  translation: 'Esta reorganización es un gran cambio, y entiendo la inquietud. (shake-up:
+    reestructuración drástica)'
   visual_hint: 🌪️🏢
   cloze:
   - 3
@@ -93,11 +60,12 @@ phrases:
   kind: expression
   apply_sentence: The CEO announced a ____ of the leadership team.
   apply_answer: shake-up
-  apply_translation: El director ejecutivo anunció una reestructuración del equipo directivo.
+  apply_translation: El director ejecutivo anunció una reestructuración del equipo
+    directivo.
 - id: idm-keep-the-lights-on
   text: Some teams simply keep the lights on while others build.
-  translation: 'Algunos equipos solo mantienen la operación mientras otros construyen. (keep the lights on: sostener
-    lo básico)'
+  translation: 'Algunos equipos solo mantienen la operación mientras otros construyen.
+    (keep the lights on: sostener lo básico)'
   visual_hint: 💡🏭
   cloze:
   - 3
@@ -116,37 +84,47 @@ roleplay:
   setting: Global all-hands townhall broadcast across twelve offices.
   turns:
   - speaker: ai
-    text: Thanks for hosting this townhall. Why are we changing our organizational structure right now?
+    text: Thanks for hosting this townhall. Why are we changing our organizational
+      structure right now?
   - speaker: user
     goal: Explica el paso de silos regionales a unidades globales cercanas al cliente.
     suggested_lines:
-    - Today we're realigning from regional silos into global product pods so decisions happen closest to the customer.
-    - 'Let me state this upfront: this reorganization is about speed and clarity, with zero headcount reduction.'
+    - Today we're realigning from regional silos into global product pods so decisions
+      happen closest to the customer.
+    - 'Let me state this upfront: this reorganization is about speed and clarity,
+      with zero headcount reduction.'
   - speaker: ai
-    text: Whenever people hear the word 'reorg,' the first worry is layoffs—are any roles being eliminated?
+    text: Whenever people hear the word 'reorg,' the first worry is layoffs—are any
+      roles being eliminated?
   - speaker: user
-    goal: Aclara desde el inicio que la reorganización no implica ningún recorte de personal.
+    goal: Aclara desde el inicio que la reorganización no implica ningún recorte de
+      personal.
     suggested_lines:
-    - 'Let me state this upfront: this reorganization is about speed and clarity, with zero headcount reduction.'
-    - Previously, launching a feature in three regions required fourteen sign-offs; under the new model, one pod
-      lead owns it end-to-end.
+    - 'Let me state this upfront: this reorganization is about speed and clarity,
+      with zero headcount reduction.'
+    - Previously, launching a feature in three regions required fourteen sign-offs;
+      under the new model, one pod lead owns it end-to-end.
   - speaker: ai
-    text: How will this change our day-to-day workflow when shipping cross-border features?
+    text: How will this change our day-to-day workflow when shipping cross-border
+      features?
   - speaker: user
-    goal: Ilustra cómo se eliminan catorce firmas burocráticas dando autonomía de principio a fin.
+    goal: Ilustra cómo se eliminan catorce firmas burocráticas dando autonomía de
+      principio a fin.
     suggested_lines:
-    - Previously, launching a feature in three regions required fourteen sign-offs; under the new model, one pod
-      lead owns it end-to-end.
-    - Every manager is holding 1-on-1 transition chats over the next forty-eight hours so everyone knows their pod
-      and charter.
+    - Previously, launching a feature in three regions required fourteen sign-offs;
+      under the new model, one pod lead owns it end-to-end.
+    - Every manager is holding 1-on-1 transition chats over the next forty-eight hours
+      so everyone knows their pod and charter.
   - speaker: ai
-    text: When will individual contributors find out which global pod they belong to?
+    text: When will individual contributors find out which global pod they belong
+      to?
   - speaker: user
-    goal: Informa que en las próximas 48 horas cada persona tendrá su reunión individual de transición.
+    goal: Informa que en las próximas 48 horas cada persona tendrá su reunión individual
+      de transición.
     suggested_lines:
-    - Every manager is holding 1-on-1 transition chats over the next forty-eight hours so everyone knows their pod
-      and charter.
-    - To protect work-life balance across time zones, we're adopting asynchronous decision memos before scheduling
-      meetings.
+    - Every manager is holding 1-on-1 transition chats over the next forty-eight hours
+      so everyone knows their pod and charter.
+    - To protect work-life balance across time zones, we're adopting asynchronous
+      decision memos before scheduling meetings.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

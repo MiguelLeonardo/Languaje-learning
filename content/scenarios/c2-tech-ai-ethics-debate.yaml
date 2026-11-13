@@ -1,0 +1,102 @@
+id: c2-tech-ai-ethics-debate
+title: Debating AI ethics, bias, and copyright
+title_es: Debate sobre ética, sesgos y derechos en IA
+cefr: C2
+topic: daily-tech-and-media
+description: Analiza la responsabilidad algorítmica, la propiedad intelectual y los sesgos en
+  modelos generativos.
+phrases:
+- id: opaque-training-provenance
+  text: Opaque training data provenance complicates legitimate copyright enforcement.
+  translation: La procedencia opaca de los datos de entrenamiento complica la aplicación legítima
+    de derechos de autor.
+  visual_hint: 🤖⚖️
+  cloze:
+  - 0
+  - 3
+  glossary:
+  - word: provenance
+    meaning: procedencia / origen
+    ipa: ˈprɑːvənəns
+- id: amplify-historical-bias
+  text: Unchecked models risk laundering historical bias as objective neutrality.
+  translation: Los modelos sin control corren el riesgo de blanquear sesgos históricos como
+    neutralidad objetiva.
+  visual_hint: 📊⚠️
+  cloze:
+  - 3
+  - 5
+  glossary:
+  - word: laundering
+    meaning: encubrir / blanquear
+    ipa: ˈlɔːndərɪŋ
+- id: algorithmic-accountability-framework
+  text: Meaningful algorithmic accountability requires independent external audits, not self-regulation.
+  translation: Una verdadera rendición de cuentas algorítmica exige auditorías externas independientes,
+    no autorregulación.
+  visual_hint: 🔍🏛️
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: accountability
+    meaning: rendición de cuentas / responsabilidad
+    ipa: əˌkaʊntəˈbɪləti
+- id: idm-pass-the-buck
+  text: Developers cannot pass the buck to end users when automated outputs cause harm.
+  translation: 'Los desarrolladores no pueden eludir su responsabilidad culpando al usuario
+    final cuando los resultados automatizados causan daño. (pass the buck: pasar la pelota /
+    eludir responsabilidad)'
+  visual_hint: 👉🔄
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: pass the buck
+    meaning: pasar la responsabilidad a otro
+    ipa: pæs ðə bʌk
+  kind: idiom
+  apply_sentence: Both the platform and the deployer refused to take blame and tried to ____.
+  apply_answer: pass the buck
+  apply_translation: Tanto la plataforma como el implementador se negaron a asumir la culpa
+    e intentaron pasar la responsabilidad.
+- id: idm-gloss-over
+  text: Benchmark leaderboards often gloss over brittle reasoning in edge-case scenarios.
+  translation: 'Las tablas de clasificación suelen pasar por alto el razonamiento frágil en
+    casos límite. (gloss over: minimizar / pasar por alto)'
+  visual_hint: 📉🧪
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: gloss over
+    meaning: pasar por alto / encubrir
+    ipa: ɡlɔːs ˈoʊvər
+  kind: phrasal_verb
+  apply_sentence: Marketing demos tend to ____ licensing ambiguities.
+  apply_answer: gloss over
+  apply_translation: Las demostraciones comerciales tienden a pasar por alto las ambigüedades
+    de licencia.
+roleplay:
+  ai_role: AI policy fellow
+  user_role: ethics panelist
+  setting: Roundtable discussion on generative AI governance.
+  turns:
+  - speaker: ai
+    text: Industry leaders argue that voluntary safety pledges are enough for now. Where do
+      you stand?
+  - speaker: user
+    goal: Exige auditorías externas y advierte sobre el blanqueo de sesgos históricos.
+    suggested_lines:
+    - Meaningful algorithmic accountability requires independent external audits, not self-regulation.
+    - Unchecked models risk laundering historical bias as objective neutrality.
+  - speaker: ai
+    text: And what about creators whose work was scraped without consent?
+  - speaker: user
+    goal: Señala la procedencia opaca de datos y que los desarrolladores no pueden eludir responsabilidad.
+    suggested_lines:
+    - Opaque training data provenance complicates legitimate copyright enforcement.
+    - Developers cannot pass the buck to end users when automated outputs cause harm.
+  - speaker: ai
+    text: That distinction between provenance and liability will define the next decade of tech
+      law.

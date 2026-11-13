@@ -3,7 +3,8 @@ title: Buying bread at a bakery
 title_es: Comprar pan en la panadería
 cefr: A1
 topic: food-and-drink
-description: Pide croissants recién horneados, jugo de naranja y pregunta el precio en una panadería.
+description: Pide croissants recién horneados, jugo de naranja y pregunta el precio
+  en una panadería.
 phrases:
 - id: two-croissants
   text: Can I have two warm croissants, please?
@@ -38,39 +39,6 @@ phrases:
   - word: sweet
     meaning: dulce
     ipa: swiːt
-- id: paper-bag
-  text: Put them in a paper bag, please.
-  translation: Póngalos en una bolsa de papel, por favor.
-  visual_hint: 🛍️🥖
-  cloze:
-  - 2
-  - 4
-  glossary:
-  - word: paper bag
-    meaning: bolsa de papel
-    ipa: ˈpeɪpər bæɡ
-- id: pay-with-cash
-  text: Here is ten dollars in cash.
-  translation: Aquí tiene diez dólares en efectivo.
-  visual_hint: 💵🙌
-  cloze:
-  - 2
-  - 4
-  glossary:
-  - word: cash
-    meaning: efectivo
-    ipa: kæʃ
-- id: keep-the-receipt
-  text: Thank you! Have a lovely morning.
-  translation: ¡Gracias! Que tenga una linda mañana.
-  visual_hint: ☀️😊
-  cloze:
-  - 2
-  - 4
-  glossary:
-  - word: lovely
-    meaning: linda / agradable
-    ipa: ˈlʌvli
 - id: pick-up
   text: I pick up fresh bread every morning at this bakery.
   translation: 'Recojo pan fresco cada mañana en esta panadería. (pick up: recoger)'
@@ -88,7 +56,8 @@ phrases:
   apply_translation: ¿Puedes recoger mi bolso de la mesa, por favor?
 - id: a-piece-of-cake
   text: Speaking English at the bakery is a piece of cake now.
-  translation: 'Hablar inglés en la panadería ya es pan comido. (a piece of cake: algo muy fácil)'
+  translation: 'Hablar inglés en la panadería ya es pan comido. (a piece of cake:
+    algo muy fácil)'
   visual_hint: 🍰👍
   cloze:
   - 3

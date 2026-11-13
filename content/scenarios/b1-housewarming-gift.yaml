@@ -3,8 +3,8 @@ title: Attending a friend's housewarming party
 title_es: Ir a una fiesta de inauguración de casa
 cefr: B1
 topic: social-and-smalltalk
-description: Felicita a tus amigos por su nuevo departamento, entrégales una planta para la sala y elogia la luz
-  natural.
+description: Felicita a tus amigos por su nuevo departamento, entrégales una planta
+  para la sala y elogia la luz natural.
 phrases:
 - id: congrats-on-new-place
   text: Congratulations on the new apartment! We're so excited to see it.
@@ -18,8 +18,10 @@ phrases:
     meaning: emocionados / ilusionados
     ipa: ɪkˈsaɪtɪd
 - id: low-maintenance-plant
-  text: We brought you this potted olive tree for the balcony—it's super easy to care for.
-  translation: Les trajimos este pequeño olivo en maceta para el balcón; es muy fácil de cuidar.
+  text: We brought you this potted olive tree for the balcony—it's super easy to care
+    for.
+  translation: Les trajimos este pequeño olivo en maceta para el balcón; es muy fácil
+    de cuidar.
   visual_hint: 🪴🌿
   cloze:
   - 5
@@ -39,39 +41,6 @@ phrases:
   - word: let in
     meaning: dejar entrar
     ipa: let ɪn
-- id: open-kitchen-layout
-  text: I love how the open kitchen flows right into the living room.
-  translation: Me encanta cómo la cocina abierta se conecta directo con la sala.
-  visual_hint: 🍳🛋️
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: flows into
-    meaning: se integra / fluye hacia
-    ipa: floʊz ˈɪntuː
-- id: cozy-reading-nook
-  text: That bookshelf alcove by the window makes the perfect reading nook.
-  translation: Ese rincón con librero junto a la ventana es perfecto para leer.
-  visual_hint: 📚🪑
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: nook
-    meaning: rincón acogedor
-    ipa: nʊk
-- id: toast-to-new-memories
-  text: Here's to many happy years and great dinners in your new home!
-  translation: ¡Por muchos años felices y grandes cenas en su nuevo hogar!
-  visual_hint: 🥂🏠
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: here's to
-    meaning: brindemos por
-    ipa: hɪrz tuː
 - id: idm-b1hg-make-yourself
   text: Come in and make yourself at home, the kitchen's through there.
   translation: Pasa y siéntete como en casa, la cocina está por allá (ponte cómodo).
@@ -89,7 +58,8 @@ phrases:
   apply_translation: Por favor quítate el abrigo y siéntete como en casa.
 - id: idm-b1hg-show-around
   text: Let me show you around before everyone else arrives, okay?
-  translation: Déjame mostrarte la casa antes de que llegue todos los demás (hacer un recorrido).
+  translation: Déjame mostrarte la casa antes de que llegue todos los demás (hacer
+    un recorrido).
   visual_hint: 🔑🚪
   cloze:
   - 3
@@ -113,16 +83,19 @@ roleplay:
     goal: Felicita a tus amigos por su nuevo departamento.
     suggested_lines:
     - Congratulations on the new apartment! We're so excited to see it.
-    - We brought you this potted olive tree for the balcony—it's super easy to care for.
+    - We brought you this potted olive tree for the balcony—it's super easy to care
+      for.
   - speaker: ai
     text: Aw, you didn't have to bring a gift! What a beautiful plant!
   - speaker: user
     goal: Entrégales la planta en maceta y di que es muy fácil de cuidar.
     suggested_lines:
-    - We brought you this potted olive tree for the balcony—it's super easy to care for.
+    - We brought you this potted olive tree for the balcony—it's super easy to care
+      for.
     - These floor-to-ceiling windows let in so much natural light!
   - speaker: ai
-    text: It'll look amazing on the sunny corner of our balcony. Let me give you the grand tour!
+    text: It'll look amazing on the sunny corner of our balcony. Let me give you the
+      grand tour!
   - speaker: user
     goal: Elogia la cantidad de luz natural que entra por los ventanales.
     suggested_lines:

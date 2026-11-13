@@ -38,42 +38,10 @@ phrases:
   - word: box
     meaning: caja
     ipa: bɑːks
-- id: how-much-all
-  text: How much is everything together?
-  translation: ¿Cuánto es todo junto?
-  visual_hint: 💶🧮
-  cloze:
-  - 1
-  - 3
-  glossary:
-  - word: together
-    meaning: junto / en total
-    ipa: təˈɡeðər
-- id: sweet-oranges
-  text: These oranges smell very fresh.
-  translation: Estas naranjas huelen muy frescas.
-  visual_hint: 🍊🌿
-  cloze:
-  - 1
-  - 3
-  glossary:
-  - word: smell
-    meaning: oler
-    ipa: smel
-- id: have-my-own-bag
-  text: I have my own cloth bag, thanks.
-  translation: Traigo mi propia bolsa de tela, gracias.
-  visual_hint: 👜♻️
-  cloze:
-  - 2
-  - 4
-  glossary:
-  - word: own
-    meaning: propia
-    ipa: oʊn
 - id: a-bunch-of
   text: I would like a bunch of ripe bananas, please.
-  translation: 'Quisiera un racimo de plátanos maduros, por favor. (a bunch of: un manojo/racimo de)'
+  translation: 'Quisiera un racimo de plátanos maduros, por favor. (a bunch of: un
+    manojo/racimo de)'
   visual_hint: 🍌🛒
   cloze:
   - 3
@@ -88,7 +56,8 @@ phrases:
   apply_translation: Ella me dio un ramo de flores por mi cumpleaños.
 - id: have-a-look
   text: Can I have a look at those sweet oranges?
-  translation: '¿Puedo echar un vistazo a esas naranjas dulces? (have a look: echar un vistazo)'
+  translation: '¿Puedo echar un vistazo a esas naranjas dulces? (have a look: echar
+    un vistazo)'
   visual_hint: 🍊👀
   cloze:
   - 3

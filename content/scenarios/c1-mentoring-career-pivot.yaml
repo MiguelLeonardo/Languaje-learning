@@ -3,11 +3,14 @@ title: Advising a friend on a career sabbatical
 title_es: Aconsejar a un amigo sobre un año sabático
 cefr: C1
 topic: social-and-smalltalk
-description: Escucha con empatía a un amigo agotado y ayúdale a estructurar una pausa sabática con propósito.
+description: Escucha con empatía a un amigo agotado y ayúdale a estructurar una pausa
+  sabática con propósito.
 phrases:
 - id: running-on-fumes
-  text: Honestly, it sounds like you've been running on fumes for the past year—stepping back isn't quitting.
-  translation: Sinceramente, suena a que llevas un año al límite de tus fuerzas; tomar distancia no es rendirse.
+  text: Honestly, it sounds like you've been running on fumes for the past year—stepping
+    back isn't quitting.
+  translation: Sinceramente, suena a que llevas un año al límite de tus fuerzas; tomar
+    distancia no es rendirse.
   visual_hint: 🌊🤝
   cloze:
   - 5
@@ -17,8 +20,10 @@ phrases:
     meaning: al límite de energía / agotado
     ipa: ˈrʌnɪŋ ɑːn fjuːmz
 - id: intentional-sabbatical
-  text: The key is framing the six months as an intentional sabbatical rather than an open-ended drift.
-  translation: La clave es plantear los seis meses como un sabático intencional y no como una deriva sin rumbo.
+  text: The key is framing the six months as an intentional sabbatical rather than
+    an open-ended drift.
+  translation: La clave es plantear los seis meses como un sabático intencional y
+    no como una deriva sin rumbo.
   visual_hint: 🧭📅
   cloze:
   - 5
@@ -28,8 +33,10 @@ phrases:
     meaning: deriva sin rumbo definido
     ipa: ˈoʊpən ˈendɪd drɪft
 - id: financial-cushion-peace
-  text: Since you've already built a twelve-month financial cushion, you've earned the breathing room to explore.
-  translation: Como ya construiste un colchón financiero de doce meses, te has ganado el respiro para explorar.
+  text: Since you've already built a twelve-month financial cushion, you've earned
+    the breathing room to explore.
+  translation: Como ya construiste un colchón financiero de doce meses, te has ganado
+    el respiro para explorar.
   visual_hint: 🛡️🌱
   cloze:
   - 5
@@ -38,40 +45,6 @@ phrases:
   - word: breathing room
     meaning: margen de respiro / tranquilidad
     ipa: ˈbriːðɪŋ ruːm
-- id: prototype-next-chapter
-  text: Treat the second half of the break as a low-stakes lab to prototype what your next chapter looks like.
-  translation: Toma la segunda mitad de la pausa como un laboratorio sin presión para probar cómo será tu próxima
-    etapa.
-  visual_hint: 🔬✨
-  cloze:
-  - 6
-  - 12
-  glossary:
-  - word: low-stakes
-    meaning: de bajo riesgo / sin presión
-    ipa: loʊ steɪks
-- id: narrative-for-future-interviews
-  text: Future employers respect candidates who take time to upskill and return with renewed clarity.
-  translation: Los futuros empleadores respetan a quienes toman tiempo para aprender y regresan con claridad renovada.
-  visual_hint: 💼🌟
-  cloze:
-  - 4
-  - 9
-  glossary:
-  - word: renewed clarity
-    meaning: claridad renovada
-    ipa: rɪˈnuːd ˈklærəti
-- id: check-in-monthly-brunch
-  text: Let's do a monthly brunch check-in so you have a sounding board along the way!
-  translation: Hagamos un brunch mensual para que tengas con quién contrastar ideas en el camino.
-  visual_hint: 🥞🙌
-  cloze:
-  - 5
-  - 10
-  glossary:
-  - word: sounding board
-    meaning: interlocutor de confianza para rebotar ideas
-    ipa: ˈsaʊndɪŋ bɔːrd
 - id: idm-c1mc-leap-of-faith
   text: Leaving your job is a leap of faith, but it might pay off.
   translation: Dejar tu empleo es un salto de fe, pero podría valer la pena (arriesgarse).
@@ -89,7 +62,8 @@ phrases:
   apply_translation: Mudarse al extranjero solo fue un verdadero salto de fe.
 - id: idm-c1mc-weigh-up
   text: You should weigh up the pros and cons before deciding anything.
-  translation: Deberías sopesar los pros y contras antes de decidir nada (evaluar opciones).
+  translation: Deberías sopesar los pros y contras antes de decidir nada (evaluar
+    opciones).
   visual_hint: ⚖️💼
   cloze:
   - 3
@@ -108,32 +82,42 @@ roleplay:
   setting: Walking along the waterfront on a quiet Saturday morning.
   turns:
   - speaker: ai
-    text: I'm thinking of taking a six-month sabbatical, but part of me feels guilty stepping off the ladder.
+    text: I'm thinking of taking a six-month sabbatical, but part of me feels guilty
+      stepping off the ladder.
   - speaker: user
     goal: Valida su cansancio y recuérdale que hacer una pausa no es rendirse.
     suggested_lines:
-    - Honestly, it sounds like you've been running on fumes for the past year—stepping back isn't quitting.
-    - The key is framing the six months as an intentional sabbatical rather than an open-ended drift.
+    - Honestly, it sounds like you've been running on fumes for the past year—stepping
+      back isn't quitting.
+    - The key is framing the six months as an intentional sabbatical rather than an
+      open-ended drift.
   - speaker: ai
     text: How do I keep from feeling lost once the daily office structure disappears?
   - speaker: user
     goal: Aconseja estructurar los seis meses como un sabático con intención clara.
     suggested_lines:
-    - The key is framing the six months as an intentional sabbatical rather than an open-ended drift.
-    - Since you've already built a twelve-month financial cushion, you've earned the breathing room to explore.
+    - The key is framing the six months as an intentional sabbatical rather than an
+      open-ended drift.
+    - Since you've already built a twelve-month financial cushion, you've earned the
+      breathing room to explore.
   - speaker: ai
     text: I did save up a full year of living expenses specifically for this transition.
   - speaker: user
     goal: Recuérdale que su colchón financiero le permite explorar con tranquilidad.
     suggested_lines:
-    - Since you've already built a twelve-month financial cushion, you've earned the breathing room to explore.
-    - Treat the second half of the break as a low-stakes lab to prototype what your next chapter looks like.
+    - Since you've already built a twelve-month financial cushion, you've earned the
+      breathing room to explore.
+    - Treat the second half of the break as a low-stakes lab to prototype what your
+      next chapter looks like.
   - speaker: ai
     text: What should I focus on once I actually feel rested again?
   - speaker: user
-    goal: Sugiere usar la segunda mitad del sabático para experimentar su próximo paso.
+    goal: Sugiere usar la segunda mitad del sabático para experimentar su próximo
+      paso.
     suggested_lines:
-    - Treat the second half of the break as a low-stakes lab to prototype what your next chapter looks like.
-    - Future employers respect candidates who take time to upskill and return with renewed clarity.
+    - Treat the second half of the break as a low-stakes lab to prototype what your
+      next chapter looks like.
+    - Future employers respect candidates who take time to upskill and return with
+      renewed clarity.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

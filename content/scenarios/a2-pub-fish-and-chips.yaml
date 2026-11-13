@@ -3,7 +3,8 @@ title: Ordering lunch at a British pub
 title_es: Almorzar en un pub británico
 cefr: A2
 topic: food-and-drink
-description: Ordena en la barra indicando el número de tu mesa, pide pescado con papas y vinagre de malta.
+description: Ordena en la barra indicando el número de tu mesa, pide pescado con papas
+  y vinagre de malta.
 phrases:
 - id: order-at-the-bar
   text: Hi, we are sitting at table twelve. Do we order here at the bar?
@@ -38,39 +39,6 @@ phrases:
   - word: tartar sauce
     meaning: salsa tártara
     ipa: ˈtɑːrtər sɔːs
-- id: ginger-beer-ice
-  text: Two glasses of ginger beer with ice and lemon, please.
-  translation: Dos vasos de cerveza de jengibre con hielo y limón, por favor.
-  visual_hint: 🥂🍋
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: ginger beer
-    meaning: refresco de jengibre
-    ipa: ˈdʒɪndʒər bɪr
-- id: sunday-roast-special
-  text: Do you also serve the traditional Sunday roast here?
-  translation: ¿También sirven el asado tradicional de los domingos aquí?
-  visual_hint: 🥩🥕
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: roast
-    meaning: asado al horno
-    ipa: roʊst
-- id: close-the-tab
-  text: We're ready to pay right now by contactless card.
-  translation: Estamos listos para pagar ahora mismo con tarjeta sin contacto.
-  visual_hint: 💳📲
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: contactless
-    meaning: sin contacto
-    ipa: ˈkɑːntæktləs
 - id: my-treat
   text: It's my treat, so order whatever you like.
   translation: 'Invito yo, así que pide lo que quieras. (my treat: yo invito)'
@@ -85,10 +53,12 @@ phrases:
   kind: expression
   apply_sentence: Dinner tonight is ____ because you paid last time.
   apply_answer: my treat
-  apply_translation: La cena de esta noche va por mi cuenta porque tú pagaste la última vez.
+  apply_translation: La cena de esta noche va por mi cuenta porque tú pagaste la última
+    vez.
 - id: on-the-house
   text: The waiter said the ginger beer was on the house.
-  translation: 'El camarero dijo que la cerveza de jengibre era cortesía de la casa. (on the house: gratis)'
+  translation: 'El camarero dijo que la cerveza de jengibre era cortesía de la casa.
+    (on the house: gratis)'
   visual_hint: 🍹🎁
   cloze:
   - 3

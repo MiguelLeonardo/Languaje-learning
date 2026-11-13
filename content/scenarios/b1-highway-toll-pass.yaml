@@ -3,7 +3,8 @@ title: Using electronic highway tolls
 title_es: Consultar cómo funciona el telepeaje
 cefr: B1
 topic: travel-and-transport
-description: Pregunta en la agencia de autos cómo funciona el telepeaje electrónico y dónde estacionar en el centro.
+description: Pregunta en la agencia de autos cómo funciona el telepeaje electrónico
+  y dónde estacionar en el centro.
 phrases:
 - id: electronic-toll-lanes
   text: Do the highways around here use cash booths or electronic toll transponders?
@@ -29,7 +30,8 @@ phrases:
     ipa: ˈwɪndʃiːld
 - id: billed-to-card-later
   text: Are the toll fees billed automatically to the card on file after we return?
-  translation: ¿Los peajes se cobran automáticamente a la tarjeta registrada después de devolver el auto?
+  translation: ¿Los peajes se cobran automáticamente a la tarjeta registrada después
+    de devolver el auto?
   visual_hint: 💳🧾
   cloze:
   - 4
@@ -38,43 +40,10 @@ phrases:
   - word: card on file
     meaning: tarjeta registrada
     ipa: kɑːrd ɑːn faɪl
-- id: unleaded-regular-fuel
-  text: Just to be sure, does this car take regular unleaded gasoline?
-  translation: Solo para estar seguro, ¿este auto usa gasolina regular sin plomo?
-  visual_hint: ⛽🚗
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: unleaded
-    meaning: sin plomo (gasolina)
-    ipa: ˌʌnˈledɪd
-- id: congestion-zone-downtown
-  text: Is there a downtown congestion charge we should register for online?
-  translation: ¿Hay algún cargo por congestión en el centro en el que debamos registrarnos?
-  visual_hint: 🏙️⚠️
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: congestion
-    meaning: congestión vehicular
-    ipa: kənˈdʒestʃən
-- id: emergency-roadside-number
-  text: Good to know the 24-hour roadside assistance number is on the key tag.
-  translation: Es bueno saber que el número de asistencia vial 24 horas está en el llavero.
-  visual_hint: 🔑📞
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: roadside assistance
-    meaning: asistencia en carretera
-    ipa: ˈroʊdsaɪd əˈsɪstəns
 - id: toll-ahead-of-time
   text: I activated the box ahead of time, so the toll lane worked.
-  translation: Activé el dispositivo con anticipación, así que el carril de peaje funcionó. (ahead of time = con
-    antelación)
+  translation: Activé el dispositivo con anticipación, así que el carril de peaje
+    funcionó. (ahead of time = con antelación)
   visual_hint: 🛣️🕐
   cloze:
   - 4
@@ -89,7 +58,8 @@ phrases:
   apply_translation: Es inteligente reservar el ferri con antelación en verano.
 - id: toll-fill-up
   text: Let's fill up with fuel before we reach the congestion zone.
-  translation: Llenemos el tanque antes de llegar a la zona de congestión. (fill up = llenar)
+  translation: Llenemos el tanque antes de llegar a la zona de congestión. (fill up
+    = llenar)
   visual_hint: ⛽🚗
   cloze:
   - 3
@@ -115,21 +85,24 @@ roleplay:
     - Do the highways around here use cash booths or electronic toll transponders?
     - Do I need to slide the little box on the windshield open to activate it?
   - speaker: ai
-    text: All bridges and expressways are cashless now, using the E-ZPass on your windshield.
+    text: All bridges and expressways are cashless now, using the E-ZPass on your
+      windshield.
   - speaker: user
     goal: Pregunta cómo activar la cajita del parabrisas.
     suggested_lines:
     - Do I need to slide the little box on the windshield open to activate it?
     - Are the toll fees billed automatically to the card on file after we return?
   - speaker: ai
-    text: Yes, just slide the grey switch to the left and drive through the express lanes.
+    text: Yes, just slide the grey switch to the left and drive through the express
+      lanes.
   - speaker: user
     goal: Pregunta si los peajes se cargan automáticamente a la tarjeta registrada.
     suggested_lines:
     - Are the toll fees billed automatically to the card on file after we return?
     - Just to be sure, does this car take regular unleaded gasoline?
   - speaker: ai
-    text: Exactly—you'll receive an itemized toll summary by email forty-eight hours after return.
+    text: Exactly—you'll receive an itemized toll summary by email forty-eight hours
+      after return.
   - speaker: user
     goal: Confirma que el auto usa gasolina regular sin plomo.
     suggested_lines:

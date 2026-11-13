@@ -3,11 +3,13 @@ title: Chatting at a fitness class
 title_es: Conversar en una clase del gimnasio
 cefr: A2
 topic: social-and-smalltalk
-description: Saluda a un compañero en la clase de ciclismo bajo techo, comparte pesas y comenten el entrenamiento.
+description: Saluda a un compañero en la clase de ciclismo bajo techo, comparte pesas
+  y comenten el entrenamiento.
 phrases:
 - id: first-time-in-class
   text: Hi! Is this spot next to you taken? It's my first time in this class.
-  translation: ¡Hola! ¿Está ocupado este lugar junto a ti? Es mi primera vez en esta clase.
+  translation: ¡Hola! ¿Está ocupado este lugar junto a ti? Es mi primera vez en esta
+    clase.
   visual_hint: 🏋️‍♀️👋
   cloze:
   - 5
@@ -38,39 +40,6 @@ phrases:
   - word: upbeat
     meaning: animada / con energía
     ipa: ˈʌpbiːt
-- id: grab-smoothie-after
-  text: That was a great workout! Do you come to the Tuesday and Thursday sessions?
-  translation: ¡Fue un gran entrenamiento! ¿Vienes a las sesiones de martes y jueves?
-  visual_hint: 🥤💦
-  cloze:
-  - 4
-  - 9
-  glossary:
-  - word: workout
-    meaning: entrenamiento / rutina
-    ipa: ˈwɜːrkaʊt
-- id: wipe-down-the-mat
-  text: Here are the disinfectant wipes to clean our mats and weights.
-  translation: Aquí están las toallitas desinfectantes para limpiar nuestros tapetes y pesas.
-  visual_hint: 🧻✨
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: mat
-    meaning: tapete de ejercicio / colchoneta
-    ipa: mæt
-- id: see-you-on-thursday
-  text: Awesome, I'll book my spot for Thursday—see you then!
-  translation: Genial, reservaré mi lugar para el jueves; ¡nos vemos entonces!
-  visual_hint: 📅🙌
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: book my spot
-    meaning: reservar mi lugar
-    ipa: bʊk maɪ spɑːt
 - id: idm-a2gw-work-out
   text: I try to work out three times a week after work.
   translation: Intento hacer ejercicio tres veces por semana después del trabajo.

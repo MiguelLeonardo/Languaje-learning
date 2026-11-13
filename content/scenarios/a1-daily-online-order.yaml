@@ -1,0 +1,91 @@
+id: a1-daily-online-order
+title: Receiving an online delivery
+title_es: Recibir un pedido en línea
+cefr: A1
+topic: daily-tech-and-media
+description: Recibe un paquete de una compra en línea en la puerta de tu edificio.
+phrases:
+- id: ordered-online-yesterday
+  text: I ordered a new lamp online yesterday.
+  translation: Pedí una lámpara nueva en línea ayer.
+  visual_hint: 🛒💡
+  cloze:
+  - 1
+  - 4
+  glossary:
+  - word: ordered
+    meaning: pedí / ordené
+    ipa: ˈɔːrdərd
+- id: delivery-at-door
+  text: The delivery driver is at the front door.
+  translation: El repartidor está en la puerta principal.
+  visual_hint: 📦🚪
+  cloze:
+  - 1
+  - 6
+  glossary:
+  - word: delivery
+    meaning: entrega / reparto
+    ipa: dɪˈlɪvəri
+- id: sign-for-package
+  text: Do I need to sign for this package?
+  translation: ¿Necesito firmar por este paquete?
+  visual_hint: ✍️📦
+  cloze:
+  - 4
+  - 7
+  glossary:
+  - word: package
+    meaning: paquete
+    ipa: ˈpækɪdʒ
+- id: idm-pick-up
+  text: I can pick up the box at reception.
+  translation: 'Puedo recoger la caja en recepción. (pick up: recoger)'
+  visual_hint: 📥🏢
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: pick up
+    meaning: recoger
+    ipa: pɪk ʌp
+  kind: phrasal_verb
+  apply_sentence: Can you ____ my parcel from the locker?
+  apply_answer: pick up
+  apply_translation: ¿Puedes recoger mi paquete del casillero?
+- id: idm-on-time
+  text: Thank you, the box arrived right on time.
+  translation: 'Gracias, la caja llegó justo a tiempo. (on time: a tiempo)'
+  visual_hint: ⏰📦
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: on time
+    meaning: a tiempo / puntual
+    ipa: ɑːn taɪm
+  kind: expression
+  apply_sentence: The courier always delivers ____.
+  apply_answer: on time
+  apply_translation: El mensajero siempre entrega a tiempo.
+roleplay:
+  ai_role: delivery driver
+  user_role: customer
+  setting: Apartment building lobby entrance.
+  turns:
+  - speaker: ai
+    text: Hello! I have a delivery for apartment 4B.
+  - speaker: user
+    goal: Confirma que pediste algo en línea y pregunta si debes firmar.
+    suggested_lines:
+    - I ordered a new lamp online yesterday.
+    - Do I need to sign for this package?
+  - speaker: ai
+    text: Yes, please sign right here on my screen.
+  - speaker: user
+    goal: Agradece y di que el paquete llegó a tiempo.
+    suggested_lines:
+    - Thank you, the box arrived right on time.
+    - I can pick up the box at reception.
+  - speaker: ai
+    text: You're welcome! Have a great afternoon.

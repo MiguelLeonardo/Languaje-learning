@@ -3,14 +3,14 @@ title: Discussing sublingual immunotherapy
 title_es: Analizar protocolo de inmunoterapia con alergólogo
 cefr: C2
 topic: health-and-emergencies
-description: Debate con un inmunólogo las ventajas de la inmunoterapia sublingual frente a la subcutánea y el perfil
-  de citoquinas.
+description: Debate con un inmunólogo las ventajas de la inmunoterapia sublingual
+  frente a la subcutánea y el perfil de citoquinas.
 phrases:
 - id: sublingual-versus-subcutaneous
-  text: How does daily sublingual tablet immunotherapy compare to weekly subcutaneous injections in long-term immune
-    tolerance?
-  translation: ¿Cómo se compara la inmunoterapia sublingual diaria frente a las inyecciones subcutáneas semanales
-    en tolerancia a largo plazo?
+  text: How does daily sublingual tablet immunotherapy compare to weekly subcutaneous
+    injections in long-term immune tolerance?
+  translation: ¿Cómo se compara la inmunoterapia sublingual diaria frente a las inyecciones
+    subcutáneas semanales en tolerancia a largo plazo?
   visual_hint: 🧬💊
   cloze:
   - 5
@@ -20,10 +20,10 @@ phrases:
     meaning: tolerancia inmunológica sostenida
     ipa: ɪˈmjuːn ˈtɑːlərəns
 - id: first-dose-under-supervision
-  text: I understand the initial sublingual tablet is administered here under thirty-minute observation before transitioning
-    to home dosing.
-  translation: Entiendo que la primera tableta sublingual se administra aquí bajo observación de treinta minutos
-    antes de pasar a casa.
+  text: I understand the initial sublingual tablet is administered here under thirty-minute
+    observation before transitioning to home dosing.
+  translation: Entiendo que la primera tableta sublingual se administra aquí bajo
+    observación de treinta minutos antes de pasar a casa.
   visual_hint: 🏥⏱️
   cloze:
   - 5
@@ -33,9 +33,10 @@ phrases:
     meaning: observación médica preventiva
     ipa: ˌɑːbzərˈveɪʃən
 - id: pre-seasonal-lead-time
-  text: Starting the regimen sixteen weeks prior to spring pollination should significantly blunt peak mucosal inflammation.
-  translation: Iniciar el esquema dieciséis semanas antes de la polinización primaveral debería atenuar significativamente
-    la inflamación.
+  text: Starting the regimen sixteen weeks prior to spring pollination should significantly
+    blunt peak mucosal inflammation.
+  translation: Iniciar el esquema dieciséis semanas antes de la polinización primaveral
+    debería atenuar significativamente la inflamación.
   visual_hint: 🌱🛡️
   cloze:
   - 5
@@ -44,45 +45,10 @@ phrases:
   - word: blunt
     meaning: atenuar / amortiguar la intensidad
     ipa: blʌnt
-- id: hold-dose-after-dental-work
-  text: If I have dental work or a minor oral abrasion, I should pause the tablet for forty-eight hours so the mucosa
-    heals.
-  translation: Si tengo un procedimiento dental o pequeña herida oral, debo pausar la tableta cuarenta y ocho horas
-    hasta que sane.
-  visual_hint: 🦷✅
-  cloze:
-  - 7
-  - 14
-  glossary:
-  - word: pause
-    meaning: pausar temporalmente
-    ipa: pɔːz
-- id: step-down-rescue-inhalers
-  text: As desensitization progresses in Year 2, we can gradually taper my rescue antihistamines and nasal steroids.
-  translation: Conforme avance la desensibilización en el segundo año, podremos reducir gradualmente los antihistamínicos
-    de rescate.
-  visual_hint: 📉🌿
-  cloze:
-  - 5
-  - 10
-  glossary:
-  - word: taper
-    meaning: reducir la dosis de forma gradual
-    ipa: ˈteɪpər
-- id: begin-supervised-dose-today
-  text: Let's administer the first sublingual dose today so we stay right on the pre-seasonal timeline.
-  translation: Administremos la primera dosis sublingual hoy mismo para cumplir con el calendario.
-  visual_hint: 🙌🔬
-  cloze:
-  - 5
-  - 10
-  glossary:
-  - word: timeline
-    meaning: cronograma clínico
-    ipa: ˈtaɪmlaɪn
 - id: idm-bite-the-bullet-c2
   text: Patients must bite the bullet and endure months of daily doses.
-  translation: Los pacientes deben apretar los dientes y soportar meses de dosis diarias. (bite the bullet)
+  translation: Los pacientes deben apretar los dientes y soportar meses de dosis diarias.
+    (bite the bullet)
   visual_hint: 💊😬
   cloze:
   - 3
@@ -97,8 +63,8 @@ phrases:
   apply_translation: Decidí armarme de valor y por fin decirle la verdad.
 - id: idm-slow-and-steady-wins-the-race-c2
   text: With desensitization, slow and steady wins the race.
-  translation: En la desensibilización, despacio y con constancia se gana la carrera. (slow and steady wins the
-    race)
+  translation: En la desensibilización, despacio y con constancia se gana la carrera.
+    (slow and steady wins the race)
   visual_hint: 🐢🏆
   cloze:
   - 2
@@ -117,38 +83,47 @@ roleplay:
   setting: University allergy and immunology specialty clinic.
   turns:
   - speaker: ai
-    text: Your IgE panel confirms severe sensitivity to birch and timothy grass pollen. Let's discuss desensitization.
+    text: Your IgE panel confirms severe sensitivity to birch and timothy grass pollen.
+      Let's discuss desensitization.
   - speaker: user
-    goal: Pregunta cómo se compara la vía sublingual frente a la subcutánea a largo plazo.
+    goal: Pregunta cómo se compara la vía sublingual frente a la subcutánea a largo
+      plazo.
     suggested_lines:
-    - How does daily sublingual tablet immunotherapy compare to weekly subcutaneous injections in long-term immune
-      tolerance?
-    - I understand the initial sublingual tablet is administered here under thirty-minute observation before transitioning
-      to home dosing.
+    - How does daily sublingual tablet immunotherapy compare to weekly subcutaneous
+      injections in long-term immune tolerance?
+    - I understand the initial sublingual tablet is administered here under thirty-minute
+      observation before transitioning to home dosing.
   - speaker: ai
-    text: After a three-year course, both modalities induce comparable IgG4 blocking antibodies, though sublingual
-      is needle-free.
+    text: After a three-year course, both modalities induce comparable IgG4 blocking
+      antibodies, though sublingual is needle-free.
   - speaker: user
-    goal: Confirma que la primera dosis se toma en clínica bajo treinta minutos de observación.
+    goal: Confirma que la primera dosis se toma en clínica bajo treinta minutos de
+      observación.
     suggested_lines:
-    - I understand the initial sublingual tablet is administered here under thirty-minute observation before transitioning
-      to home dosing.
-    - Starting the regimen sixteen weeks prior to spring pollination should significantly blunt peak mucosal inflammation.
+    - I understand the initial sublingual tablet is administered here under thirty-minute
+      observation before transitioning to home dosing.
+    - Starting the regimen sixteen weeks prior to spring pollination should significantly
+      blunt peak mucosal inflammation.
   - speaker: ai
-    text: Exactly—once you tolerate Day 1 in the clinic, you take it at home each morning.
+    text: Exactly—once you tolerate Day 1 in the clinic, you take it at home each
+      morning.
   - speaker: user
     goal: Destaca la ventaja de iniciar dieciséis semanas antes de la primavera.
     suggested_lines:
-    - Starting the regimen sixteen weeks prior to spring pollination should significantly blunt peak mucosal inflammation.
-    - If I have dental work or a minor oral abrasion, I should pause the tablet for forty-eight hours so the mucosa
-      heals.
+    - Starting the regimen sixteen weeks prior to spring pollination should significantly
+      blunt peak mucosal inflammation.
+    - If I have dental work or a minor oral abrasion, I should pause the tablet for
+      forty-eight hours so the mucosa heals.
   - speaker: ai
-    text: Starting now in November gives your T-regulatory cells a full four-month head start before spring.
+    text: Starting now in November gives your T-regulatory cells a full four-month
+      head start before spring.
   - speaker: user
-    goal: Verifica la indicación de pausar la tableta 48 horas tras cualquier procedimiento dental.
+    goal: Verifica la indicación de pausar la tableta 48 horas tras cualquier procedimiento
+      dental.
     suggested_lines:
-    - If I have dental work or a minor oral abrasion, I should pause the tablet for forty-eight hours so the mucosa
-      heals.
-    - As desensitization progresses in Year 2, we can gradually taper my rescue antihistamines and nasal steroids.
+    - If I have dental work or a minor oral abrasion, I should pause the tablet for
+      forty-eight hours so the mucosa heals.
+    - As desensitization progresses in Year 2, we can gradually taper my rescue antihistamines
+      and nasal steroids.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

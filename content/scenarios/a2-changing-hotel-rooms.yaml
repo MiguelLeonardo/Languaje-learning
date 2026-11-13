@@ -3,11 +3,13 @@ title: Asking to move to a quieter hotel room
 title_es: Pedir cambio a una habitación más tranquila
 cefr: A2
 topic: hotel-and-shopping
-description: Explica en recepción que tu habitación está justo al lado del ascensor y pide cambiar a otra más silenciosa.
+description: Explica en recepción que tu habitación está justo al lado del ascensor
+  y pide cambiar a otra más silenciosa.
 phrases:
 - id: next-to-elevator
   text: Good morning. I'm in room 201, right next to the elevator and ice machine.
-  translation: Buenos días. Estoy en la habitación 201, justo al lado del ascensor y la máquina de hielo.
+  translation: Buenos días. Estoy en la habitación 201, justo al lado del ascensor
+    y la máquina de hielo.
   visual_hint: 🏨🛗
   cloze:
   - 4
@@ -18,7 +20,8 @@ phrases:
     ipa: aɪs məˈʃiːn
 - id: move-to-quieter-room
   text: Would it be possible to move to a quieter room down the hall?
-  translation: ¿Sería posible cambiarme a una habitación más silenciosa al final del pasillo?
+  translation: ¿Sería posible cambiarme a una habitación más silenciosa al final del
+    pasillo?
   visual_hint: 🤫🚪
   cloze:
   - 4
@@ -29,7 +32,8 @@ phrases:
     ipa: ˈkwaɪətər
 - id: courtyard-view-fine
   text: A room facing the inner courtyard on the fourth floor sounds wonderful.
-  translation: Una habitación con vista al patio interior en el cuarto piso suena maravilloso.
+  translation: Una habitación con vista al patio interior en el cuarto piso suena
+    maravilloso.
   visual_hint: 🌳🪟
   cloze:
   - 4
@@ -38,42 +42,10 @@ phrases:
   - word: courtyard
     meaning: patio interior
     ipa: ˈkɔːrtjɑːrd
-- id: pack-up-in-ten-minutes
-  text: I can pack my suitcase in ten minutes and swap the key cards here.
-  translation: Puedo empacar mi maleta en diez minutos y cambiar las tarjetas llave aquí.
-  visual_hint: 🧳🔑
-  cloze:
-  - 4
-  - 9
-  glossary:
-  - word: swap
-    meaning: intercambiar / cambiar
-    ipa: swɑːp
-- id: bellhop-help-bags
-  text: We only have two carry-on bags, so we can carry them up ourselves.
-  translation: Solo tenemos dos maletas de mano, así que podemos subirlas nosotros mismos.
-  visual_hint: 🎒🙌
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: carry-on
-    meaning: equipaje de mano
-    ipa: ˈkæri ɑːn
-- id: sleep-much-better
-  text: Thank you for being so helpful—we'll sleep much better tonight!
-  translation: ¡Gracias por ser tan amable; dormiremos mucho mejor esta noche!
-  visual_hint: 😴🌟
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: helpful
-    meaning: servicial / amable
-    ipa: ˈhelpfəl
 - id: idm-put-up-with
   text: I can't put up with the street noise outside my window all night.
-  translation: No puedo aguantar el ruido de la calle afuera de mi ventana toda la noche.
+  translation: No puedo aguantar el ruido de la calle afuera de mi ventana toda la
+    noche.
   visual_hint: 🔊🏨
   cloze:
   - 4
@@ -85,7 +57,8 @@ phrases:
   kind: phrasal_verb
   apply_sentence: Guests shouldn't have to ____ a broken air conditioner in summer.
   apply_answer: put up with
-  apply_translation: Los huéspedes no deberían tener que soportar un aire acondicionado dañado en verano.
+  apply_translation: Los huéspedes no deberían tener que soportar un aire acondicionado
+    dañado en verano.
 - id: idm-sleep-like-a-log
   text: In a quiet room at the back, I will sleep like a log.
   translation: En una habitación tranquila al fondo, dormiré como un tronco.
@@ -109,26 +82,30 @@ roleplay:
   - speaker: ai
     text: Good morning! How did you sleep last night?
   - speaker: user
-    goal: Explica que estás en la habitación 201 junto al ascensor y la máquina de hielo.
+    goal: Explica que estás en la habitación 201 junto al ascensor y la máquina de
+      hielo.
     suggested_lines:
     - Good morning. I'm in room 201, right next to the elevator and ice machine.
     - Would it be possible to move to a quieter room down the hall?
   - speaker: ai
-    text: Oh, I'm sorry if the hallway noise disturbed your rest! Let me check our system.
+    text: Oh, I'm sorry if the hallway noise disturbed your rest! Let me check our
+      system.
   - speaker: user
     goal: Pregunta si es posible cambiar a una habitación más silenciosa.
     suggested_lines:
     - Would it be possible to move to a quieter room down the hall?
     - A room facing the inner courtyard on the fourth floor sounds wonderful.
   - speaker: ai
-    text: We have room 418 available right now—it's at the end of the hall facing the quiet courtyard.
+    text: We have room 418 available right now—it's at the end of the hall facing
+      the quiet courtyard.
   - speaker: user
     goal: Acepta encantado la habitación con vista al patio interior.
     suggested_lines:
     - A room facing the inner courtyard on the fourth floor sounds wonderful.
     - I can pack my suitcase in ten minutes and swap the key cards here.
   - speaker: ai
-    text: There is no extra charge for the move, and housekeeping has already cleaned 418.
+    text: There is no extra charge for the move, and housekeeping has already cleaned
+      418.
   - speaker: user
     goal: Indica que empacarás en diez minutos y bajarás a cambiar las llaves.
     suggested_lines:

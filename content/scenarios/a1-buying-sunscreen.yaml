@@ -3,7 +3,8 @@ title: Buying sunscreen and aloe vera
 title_es: Comprar protector solar en la farmacia
 cefr: A1
 topic: health-and-emergencies
-description: Pide un bloqueador solar factor 50 y gel de aloe vera para una quemadura de sol en la playa.
+description: Pide un bloqueador solar factor 50 y gel de aloe vera para una quemadura
+  de sol en la playa.
 phrases:
 - id: sunscreen-fifty-spf
   text: Hello, do you have sunscreen with SPF 50?
@@ -38,42 +39,10 @@ phrases:
   - word: skin
     meaning: piel
     ipa: skɪn
-- id: drink-lots-of-water
-  text: I will also buy two big bottles of water.
-  translation: También compraré dos botellas grandes de agua.
-  visual_hint: 💧🍾
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: bottles
-    meaning: botellas
-    ipa: ˈbɑːtəlz
-- id: wear-a-sun-hat
-  text: Put the gel on three times a day.
-  translation: Aplique el gel tres veces al día.
-  visual_hint: 🕒👌
-  cloze:
-  - 2
-  - 5
-  glossary:
-  - word: three times
-    meaning: tres veces
-    ipa: θriː taɪmz
-- id: thank-you-pharmacist
-  text: Thank you! My skin will feel better tonight.
-  translation: ¡Gracias! Mi piel se sentirá mejor esta noche.
-  visual_hint: 😌🌙
-  cloze:
-  - 2
-  - 5
-  glossary:
-  - word: tonight
-    meaning: esta noche
-    ipa: təˈnaɪt
 - id: idm-put-on-a1
   text: Please put on sunscreen before you go to the beach.
-  translation: Por favor, ponte protector solar antes de ir a la playa. (put on = aplicarse/ponerse)
+  translation: Por favor, ponte protector solar antes de ir a la playa. (put on =
+    aplicarse/ponerse)
   visual_hint: 🧴☀️
   cloze:
   - 3

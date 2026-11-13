@@ -3,7 +3,8 @@ title: Checking into a hotel
 title_es: Registrarse en un hotel
 cefr: B1
 topic: hotel-and-shopping
-description: Confirma tu reserva, resuelve un problema con la habitación y pregunta por servicios.
+description: Confirma tu reserva, resuelve un problema con la habitación y pregunta
+  por servicios.
 phrases:
 - id: have-a-reservation
   text: Hi, I have a reservation under the name Garcia.
@@ -40,46 +41,6 @@ phrases:
   - word: afraid
     meaning: I'm afraid = me temo (forma educada de dar una mala noticia)
     ipa: əˈfreɪd
-- id: late-checkout
-  text: Would it be possible to check out a bit later?
-  translation: ¿Sería posible hacer el check-out un poco más tarde?
-  visual_hint: 🕐
-  cloze:
-  - 3
-  glossary:
-  - word: possible
-    meaning: posible
-    ipa: ˈpɑːsəbəl
-- id: quiet-room-high-floor
-  text: Do you happen to have a quiet room on a higher floor?
-  translation: ¿Por casualidad tienen una habitación tranquila en un piso más alto?
-  visual_hint: 🏢🤫
-  cloze:
-  - 3
-  - 6
-  - 10
-  glossary:
-  - word: happen to
-    meaning: por casualidad
-    ipa: ˈhæpən tə
-  - word: quiet
-    meaning: tranquila / silenciosa
-    ipa: ˈkwaɪət
-- id: luggage-storage
-  text: Could we store our bags at the front desk after checkout?
-  translation: ¿Podríamos guardar nuestras maletas en recepción después de entregar la habitación?
-  visual_hint: 🧳🛎️
-  cloze:
-  - 2
-  - 4
-  - 8
-  glossary:
-  - word: store
-    meaning: guardar / almacenar
-    ipa: stɔːr
-  - word: front desk
-    meaning: recepción
-    ipa: frʌnt desk
 - id: idm-sort-out-booking
   text: Let me sort out this reservation mix-up with the manager right away.
   translation: Déjeme resolver esta confusión con la reserva con el gerente de inmediato.
@@ -109,7 +70,8 @@ phrases:
   kind: expression
   apply_sentence: Because we finished packing ____, we reached the hotel early.
   apply_answer: ahead of schedule
-  apply_translation: Como terminamos de empacar antes de lo previsto, llegamos temprano al hotel.
+  apply_translation: Como terminamos de empacar antes de lo previsto, llegamos temprano
+    al hotel.
 roleplay:
   ai_role: hotel receptionist
   user_role: guest

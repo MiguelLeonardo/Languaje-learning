@@ -1,0 +1,91 @@
+id: a1-tech-watching-movie
+title: Choosing a movie to watch
+title_es: Elegir una película para ver
+cefr: A1
+topic: daily-tech-and-media
+description: Elige una película en la televisión con subtítulos y ajusta el volumen.
+phrases:
+- id: watch-movie-tonight
+  text: Let us watch a funny movie tonight.
+  translation: Veamos una película divertida esta noche.
+  visual_hint: 🎬🍿
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: movie
+    meaning: película
+    ipa: ˈmuːvi
+- id: turn-on-subtitles
+  text: Can we put English subtitles on the screen?
+  translation: ¿Podemos poner subtítulos en inglés en la pantalla?
+  visual_hint: 📺💬
+  cloze:
+  - 4
+  - 7
+  glossary:
+  - word: subtitles
+    meaning: subtítulos
+    ipa: ˈsʌbtaɪtlz
+- id: where-is-remote
+  text: Where is the TV remote control?
+  translation: ¿Dónde está el control remoto de la tele?
+  visual_hint: 🎛️📺
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: remote control
+    meaning: control remoto
+    ipa: rɪˈmoʊt kənˈtroʊl
+- id: idm-turn-up
+  text: Please turn up the volume a little bit.
+  translation: 'Por favor sube un poco el volumen. (turn up: subir el volumen)'
+  visual_hint: 🔊⬆️
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: turn up
+    meaning: subir (el volumen)
+    ipa: tɜːrn ʌp
+  kind: phrasal_verb
+  apply_sentence: I cannot hear the actors, can you ____ the sound?
+  apply_answer: turn up
+  apply_translation: No puedo oír a los actores, ¿puedes subir el sonido?
+- id: idm-sounds-good
+  text: That comedy sounds good to me.
+  translation: 'Esa comedia me parece bien. (sounds good: suena bien / me parece bien)'
+  visual_hint: 👍😄
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: sounds good
+    meaning: suena bien / me parece bien
+    ipa: saʊndz ɡʊd
+  kind: expression
+  apply_sentence: A short documentary ____ for Friday night.
+  apply_answer: sounds good
+  apply_translation: Un documental corto suena bien para el viernes por la noche.
+roleplay:
+  ai_role: partner
+  user_role: viewer
+  setting: Living room sofa on a Friday evening.
+  turns:
+  - speaker: ai
+    text: What do you want to watch on TV tonight?
+  - speaker: user
+    goal: Propón ver una película divertida y pregunta por el control remoto.
+    suggested_lines:
+    - Let us watch a funny movie tonight.
+    - Where is the TV remote control?
+  - speaker: ai
+    text: Here is the remote! How about this comedy?
+  - speaker: user
+    goal: Acepta la comedia y pide subtítulos o subir un poco el volumen.
+    suggested_lines:
+    - That comedy sounds good to me.
+    - Can we put English subtitles on the screen?
+  - speaker: ai
+    text: Done! Grab the popcorn, it is starting.

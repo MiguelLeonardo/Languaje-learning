@@ -3,7 +3,8 @@ title: Saying goodbye after work
 title_es: Despedirse al terminar el trabajo
 cefr: A1
 topic: work-and-career
-description: Avisa a tu equipo que ya terminaste tus tareas del día, apaga tu computadora y despídete.
+description: Avisa a tu equipo que ya terminaste tus tareas del día, apaga tu computadora
+  y despídete.
 phrases:
 - id: finished-my-report
   text: Hi Mark, I finished all my emails and the daily table.
@@ -38,42 +39,10 @@ phrases:
   - word: anything else
     meaning: algo más
     ipa: ˈeniθɪŋ els
-- id: see-you-tomorrow-nine
-  text: Thank you! Have a good evening, see you tomorrow at nine!
-  translation: ¡Gracias! Que pases buena noche, ¡nos vemos mañana a las nueve!
-  visual_hint: 🌙👋
-  cloze:
-  - 3
-  - 7
-  glossary:
-  - word: evening
-    meaning: tarde-noche
-    ipa: ˈiːvnɪŋ
-- id: lock-my-desk-drawer
-  text: I locked my desk drawer and took my badge.
-  translation: Cerré con llave el cajón de mi escritorio y tomé mi credencial.
-  visual_hint: 🔒🪪
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: drawer
-    meaning: cajón
-    ipa: drɔːr
-- id: catch-the-five-forty-train
-  text: If I walk fast, I can catch the 5:40 train!
-  translation: Si camino rápido, ¡puedo alcanzar el tren de las 5:40!
-  visual_hint: 🚆🏃
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: catch
-    meaning: alcanzar / tomar (transporte)
-    ipa: kætʃ
 - id: idm-call-it-a-day
   text: It is six o'clock, so let's call it a day.
-  translation: 'Son las seis, así que terminemos por hoy. (call it a day: dejar de trabajar)'
+  translation: 'Son las seis, así que terminemos por hoy. (call it a day: dejar de
+    trabajar)'
   visual_hint: 🌆😴
   cloze:
   - 3

@@ -1,0 +1,94 @@
+id: b1-tech-streaming-subscription
+title: Managing streaming subscriptions
+title_es: Gestionar suscripciones de streaming
+cefr: B1
+topic: daily-tech-and-media
+description: Compara planes de streaming y cancela una suscripción que ya no usas.
+phrases:
+- id: monthly-fee-increased
+  text: The monthly subscription fee increased again this year.
+  translation: La tarifa mensual de suscripción subió otra vez este año.
+  visual_hint: 💳📈
+  cloze:
+  - 2
+  - 4
+  glossary:
+  - word: subscription
+    meaning: suscripción
+    ipa: səbˈskrɪpʃən
+- id: ad-supported-tier
+  text: They offer a cheaper ad-supported tier now.
+  translation: Ahora ofrecen un plan más barato con anuncios.
+  visual_hint: 📺💰
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: tier
+    meaning: nivel / plan
+    ipa: tɪr
+- id: cancel-before-renewal
+  text: I want to cancel before the automatic renewal date.
+  translation: Quiero cancelar antes de la fecha de renovación automática.
+  visual_hint: 📅❌
+  cloze:
+  - 3
+  - 7
+  glossary:
+  - word: renewal
+    meaning: renovación
+    ipa: rɪˈnuːəl
+- id: idm-cut-back-on
+  text: We decided to cut back on unused streaming services.
+  translation: 'Decidimos reducir los servicios de streaming que no usamos. (cut back on: recortar
+    / reducir)'
+  visual_hint: ✂️📺
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: cut back on
+    meaning: recortar / reducir
+    ipa: kʌt bæk ɑːn
+  kind: phrasal_verb
+  apply_sentence: To save money, I need to ____ takeout meals.
+  apply_answer: cut back on
+  apply_translation: Para ahorrar dinero, necesito reducir las comidas para llevar.
+- id: idm-get-moneys-worth
+  text: We barely watch it, so we do not get our money's worth.
+  translation: 'Apenas lo vemos, así que no le sacamos provecho a lo que pagamos. (get one''s
+    money''s worth: desquitar el gasto)'
+  visual_hint: 💸🤔
+  cloze:
+  - 8
+  - 10
+  glossary:
+  - word: get your money's worth
+    meaning: sacarle provecho al dinero
+    ipa: ɡet jʊr ˈmʌniz wɜːrθ
+  kind: idiom
+  apply_sentence: If you go to the gym four times a week, you definitely ____.
+  apply_answer: get your money's worth
+  apply_translation: Si vas al gimnasio cuatro veces por semana, definitivamente desquitas el
+    gasto.
+roleplay:
+  ai_role: roommate
+  user_role: roommate
+  setting: Reviewing shared monthly bills on the sofa.
+  turns:
+  - speaker: ai
+    text: Did you notice our streaming bill went up by five dollars?
+  - speaker: user
+    goal: Comenta que la tarifa subió y que deben recortar los servicios sin uso.
+    suggested_lines:
+    - The monthly subscription fee increased again this year.
+    - We decided to cut back on unused streaming services.
+  - speaker: ai
+    text: True! Which ones should we keep, and which should we drop?
+  - speaker: user
+    goal: Di que quieres cancelar antes de la renovación porque no desquitan el gasto.
+    suggested_lines:
+    - I want to cancel before the automatic renewal date.
+    - We barely watch it, so we do not get our money's worth.
+  - speaker: ai
+    text: Agreed. Let us cancel it tonight!

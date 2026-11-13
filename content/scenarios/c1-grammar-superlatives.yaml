@@ -1,0 +1,94 @@
+id: c1-grammar-superlatives
+title: Sophisticated superlatives and absolute praise
+title_es: Superlativos sofisticados y elogios categóricos
+cefr: C1
+topic: grammar-and-connectors
+description: Expresa excelencia o relevancia máxima con 'unrivaled', 'the quintessential',
+  'by a wide margin' y 'the least of'.
+phrases:
+- id: quintessential-example
+  text: This neighborhood is the quintessential example of urban renewal.
+  translation: Este barrio es el ejemplo por excelencia de renovación urbana.
+  visual_hint: 🏙️🌿
+  cloze:
+  - 4
+  glossary:
+  - word: quintessential
+    meaning: por excelencia / arquetípico
+    ipa: ˌkwɪntɪˈsenʃəl
+  kind: expression
+  apply_sentence: Espresso is the ____ Italian coffee ritual.
+  apply_answer: quintessential
+  apply_translation: El espresso es el ritual de café italiano por excelencia.
+- id: by-wide-margin
+  text: She won the architectural competition by a wide margin.
+  translation: Ganó el concurso de arquitectura por un amplio margen.
+  visual_hint: 🏆📐
+  cloze:
+  - 7
+  - 8
+  glossary:
+  - word: by a wide margin
+    meaning: por un amplio margen
+    ipa: baɪ ə waɪd ˈmɑːrdʒɪn
+  kind: expression
+  apply_sentence: Renewable energy was the fastest-growing sector ____.
+  apply_answer: by a wide margin
+  apply_translation: La energía renovable fue el sector de mayor crecimiento por un
+    amplio margen.
+- id: unrivaled-precision
+  text: The observatory offers unrivaled precision in deep-space imaging.
+  translation: El observatorio ofrece una precisión inigualable en imágenes del espacio
+    profundo.
+  visual_hint: 🔭🌌
+  cloze:
+  - 3
+  glossary:
+  - word: unrivaled
+    meaning: inigualable / sin rival
+    ipa: ʌnˈraɪvəld
+- id: least-of-our-worries
+  text: Server bandwidth is the least of our worries right now.
+  translation: El ancho de banda del servidor es la menor de nuestras preocupaciones
+    ahora mismo.
+  visual_hint: 🖥️😌
+  cloze:
+  - 4
+  - 7
+  glossary:
+  - word: the least of one's worries
+    meaning: la menor de las preocupaciones
+    ipa: ðə liːst əv wʌnz ˈwɜːriz
+- id: most-compelling-evidence
+  text: The longitudinal study provides the most compelling evidence yet.
+  translation: El estudio longitudinal aporta la evidencia más contundente hasta la
+    fecha.
+  visual_hint: 🔬📑
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: compelling
+    meaning: convincente / contundente
+    ipa: kəmˈpelɪŋ
+roleplay:
+  ai_role: architecture critic
+  user_role: urban planner
+  setting: Reviewing finalists for a city waterfront project.
+  turns:
+  - speaker: ai
+    text: Which of the three waterfront designs stood out to the jury?
+  - speaker: user
+    goal: Destaca la propuesta ganadora usando 'by a wide margin' o 'unrivaled'.
+    suggested_lines:
+    - Studio Nord won by a wide margin.
+    - Their integration of green space shows unrivaled foresight.
+  - speaker: ai
+    text: Was cost a concern with their timber pavilion?
+  - speaker: user
+    goal: Responde usando 'the least of our worries' o 'the quintessential'.
+    suggested_lines:
+    - Actually, budget is the least of our worries given the modular design.
+    - It is the quintessential example of sustainable civic design.
+  - speaker: ai
+    text: I can't wait to see the pavilion built next spring.

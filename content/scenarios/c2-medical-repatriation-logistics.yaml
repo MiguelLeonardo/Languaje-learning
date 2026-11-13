@@ -3,14 +3,14 @@ title: Coordinating an air-ambulance medevac
 title_es: Coordinar evacuación aeromédica entre hospitales
 cefr: C2
 topic: health-and-emergencies
-description: Coordina como enlace médico-familiar el traslado en ambulancia aérea presurizada a nivel del mar de
-  cama a cama.
+description: Coordina como enlace médico-familiar el traslado en ambulancia aérea
+  presurizada a nivel del mar de cama a cama.
 phrases:
 - id: bed-to-bed-transfer
-  text: Have the sending and receiving ICU attendings completed the physician-to-physician handoff for a bed-to-bed
-    transfer?
-  translation: ¿Los médicos de terapia intensiva de origen y destino ya completaron la entrega clínica para el traslado
-    cama a cama?
+  text: Have the sending and receiving ICU attendings completed the physician-to-physician
+    handoff for a bed-to-bed transfer?
+  translation: ¿Los médicos de terapia intensiva de origen y destino ya completaron
+    la entrega clínica para el traslado cama a cama?
   visual_hint: 🛩️🏥
   cloze:
   - 5
@@ -20,10 +20,10 @@ phrases:
     meaning: entrega de guardia / traspaso clínico
     ipa: ˈhændɔːf
 - id: sea-level-cabin-pressurization
-  text: Given the patient's recent pneumothorax, the flight plan must maintain a sea-level cabin altitude throughout
-    the cruise.
-  translation: Dado el neumotórax reciente del paciente, el plan de vuelo debe mantener presurización a nivel del
-    mar durante todo el crucero.
+  text: Given the patient's recent pneumothorax, the flight plan must maintain a sea-level
+    cabin altitude throughout the cruise.
+  translation: Dado el neumotórax reciente del paciente, el plan de vuelo debe mantener
+    presurización a nivel del mar durante todo el crucero.
   visual_hint: 🫁✈️
   cloze:
   - 5
@@ -33,10 +33,10 @@ phrases:
     meaning: cabina presurizada a altitud de nivel del mar
     ipa: siː ˈlevəl ˈkæbɪn
 - id: continuous-telemetry-infusion
-  text: Will the critical-care flight nurse bring dual syringe pumps and portable blood-gas monitoring for the tarmac
-    transfer?
-  translation: ¿El enfermero de vuelo llevará bombas de infusión dobles y monitor portátil de gases durante el traslado
-    en pista?
+  text: Will the critical-care flight nurse bring dual syringe pumps and portable
+    blood-gas monitoring for the tarmac transfer?
+  translation: ¿El enfermero de vuelo llevará bombas de infusión dobles y monitor
+    portátil de gases durante el traslado en pista?
   visual_hint: 🩺🔋
   cloze:
   - 5
@@ -45,45 +45,10 @@ phrases:
   - word: tarmac
     meaning: plataforma del aeropuerto / pista
     ipa: ˈtɑːrmæk
-- id: tarmac-customs-clearance
-  text: Airport authorities approved direct ambulance ramp access so customs clears the passport bedside without
-    delay.
-  translation: Las autoridades aeroportuarias aprobaron acceso directo de la ambulancia a pista para sellar pasaporte
-    sin demora.
-  visual_hint: 🛂🚑
-  cloze:
-  - 5
-  - 10
-  glossary:
-  - word: bedside
-    meaning: al pie de la camilla
-    ipa: ˈbedsaɪd
-- id: dicom-imaging-uploaded
-  text: All DICOM imaging files and medication administration records have been uploaded to the receiving hospital's
-    portal.
-  translation: Todas las imágenes DICOM y registros de medicación ya se subieron al portal del hospital receptor.
-  visual_hint: 💻📂
-  cloze:
-  - 5
-  - 10
-  glossary:
-  - word: records
-    meaning: expedientes / registros clínicos
-    ipa: ˈrekərdz
-- id: wheels-up-at-fourteen-hundred
-  text: With all clinical and customs clearances green, we are set for wheels-up at 14:00.
-  translation: Con todas las autorizaciones clínicas y aduaneras listas, despegamos a las 14:00.
-  visual_hint: 🛫✅
-  cloze:
-  - 4
-  - 9
-  glossary:
-  - word: wheels-up
-    meaning: hora exacta de despegue
-    ipa: wiːlz ʌp
 - id: idm-pull-strings-c2
   text: We had to pull strings to clear the flight permits.
-  translation: Tuvimos que mover hilos para conseguir los permisos de vuelo. (pull strings = usar influencias)
+  translation: Tuvimos que mover hilos para conseguir los permisos de vuelo. (pull
+    strings = usar influencias)
   visual_hint: 🛩️🪢
   cloze:
   - 3
@@ -98,7 +63,8 @@ phrases:
   apply_translation: Consiguió mover hilos para conseguirme un asiento.
 - id: idm-touch-and-go-c2
   text: It was touch and go until the plane finally landed.
-  translation: Estuvo en el aire hasta que el avión por fin aterrizó. (touch and go = situación crítica)
+  translation: Estuvo en el aire hasta que el avión por fin aterrizó. (touch and go
+    = situación crítica)
   visual_hint: 🚁😨
   cloze:
   - 3
@@ -117,38 +83,48 @@ roleplay:
   setting: Coordinating a bed-to-bed international medical repatriation.
   turns:
   - speaker: ai
-    text: Our air-ambulance Learjet is positioned on the tarmac. Let's review the final clinical clearance.
+    text: Our air-ambulance Learjet is positioned on the tarmac. Let's review the
+      final clinical clearance.
   - speaker: user
-    goal: Pregunta si los médicos de ambos hospitales ya hicieron el traspaso clínico directo.
+    goal: Pregunta si los médicos de ambos hospitales ya hicieron el traspaso clínico
+      directo.
     suggested_lines:
-    - Have the sending and receiving ICU attendings completed the physician-to-physician handoff for a bed-to-bed
-      transfer?
-    - Given the patient's recent pneumothorax, the flight plan must maintain a sea-level cabin altitude throughout
-      the cruise.
+    - Have the sending and receiving ICU attendings completed the physician-to-physician
+      handoff for a bed-to-bed transfer?
+    - Given the patient's recent pneumothorax, the flight plan must maintain a sea-level
+      cabin altitude throughout the cruise.
   - speaker: ai
-    text: Yes, Dr. Morales in Zurich accepted the bed assignment and reviewed the chest CT scans.
+    text: Yes, Dr. Morales in Zurich accepted the bed assignment and reviewed the
+      chest CT scans.
   - speaker: user
-    goal: Subraya la exigencia de mantener cabina presurizada a nivel del mar durante el vuelo.
+    goal: Subraya la exigencia de mantener cabina presurizada a nivel del mar durante
+      el vuelo.
     suggested_lines:
-    - Given the patient's recent pneumothorax, the flight plan must maintain a sea-level cabin altitude throughout
-      the cruise.
-    - Will the critical-care flight nurse bring dual syringe pumps and portable blood-gas monitoring for the tarmac
-      transfer?
+    - Given the patient's recent pneumothorax, the flight plan must maintain a sea-level
+      cabin altitude throughout the cruise.
+    - Will the critical-care flight nurse bring dual syringe pumps and portable blood-gas
+      monitoring for the tarmac transfer?
   - speaker: ai
-    text: Our flight deck has filed a lower cruise profile to hold cabin pressure at sea level.
+    text: Our flight deck has filed a lower cruise profile to hold cabin pressure
+      at sea level.
   - speaker: user
-    goal: Verifica que el equipo de vuelo lleve bombas de infusión y monitoreo continuo en pista.
+    goal: Verifica que el equipo de vuelo lleve bombas de infusión y monitoreo continuo
+      en pista.
     suggested_lines:
-    - Will the critical-care flight nurse bring dual syringe pumps and portable blood-gas monitoring for the tarmac
-      transfer?
-    - Airport authorities approved direct ambulance ramp access so customs clears the passport bedside without delay.
+    - Will the critical-care flight nurse bring dual syringe pumps and portable blood-gas
+      monitoring for the tarmac transfer?
+    - Airport authorities approved direct ambulance ramp access so customs clears
+      the passport bedside without delay.
   - speaker: ai
-    text: Our ICU flight nurse and respiratory therapist have redundant battery packs and telemetry ready.
+    text: Our ICU flight nurse and respiratory therapist have redundant battery packs
+      and telemetry ready.
   - speaker: user
-    goal: Confirma el acceso directo a plataforma para el trámite migratorio junto a la camilla.
+    goal: Confirma el acceso directo a plataforma para el trámite migratorio junto
+      a la camilla.
     suggested_lines:
-    - Airport authorities approved direct ambulance ramp access so customs clears the passport bedside without delay.
-    - All DICOM imaging files and medication administration records have been uploaded to the receiving hospital's
-      portal.
+    - Airport authorities approved direct ambulance ramp access so customs clears
+      the passport bedside without delay.
+    - All DICOM imaging files and medication administration records have been uploaded
+      to the receiving hospital's portal.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

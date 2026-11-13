@@ -3,12 +3,14 @@ title: Discussing diagnostic options with a specialist
 title_es: Consultar segunda opinión con un especialista
 cefr: C2
 topic: health-and-emergencies
-description: Analiza con un médico especialista los pros y contras de un tratamiento conservador frente a una intervención
-  quirúrgica.
+description: Analiza con un médico especialista los pros y contras de un tratamiento
+  conservador frente a una intervención quirúrgica.
 phrases:
 - id: conservative-management
-  text: Before consenting to an invasive procedure, I'd like to weigh the efficacy of conservative physical therapy.
-  translation: Antes de consentir un procedimiento invasivo, quisiera sopesar la eficacia de la fisioterapia conservadora.
+  text: Before consenting to an invasive procedure, I'd like to weigh the efficacy
+    of conservative physical therapy.
+  translation: Antes de consentir un procedimiento invasivo, quisiera sopesar la eficacia
+    de la fisioterapia conservadora.
   visual_hint: 🩺⚖️
   cloze:
   - 1
@@ -23,9 +25,10 @@ phrases:
     meaning: sopesar la eficacia
     ipa: weɪ ði ˈefɪkəsi
 - id: mri-findings
-  text: Do the high-resolution MRI findings correlate with a partial tear or merely localized inflammation?
-  translation: ¿Los hallazgos de la resonancia magnética de alta resolución se correlacionan con un desgarro parcial
-    o solo inflamación localizada?
+  text: Do the high-resolution MRI findings correlate with a partial tear or merely
+    localized inflammation?
+  translation: ¿Los hallazgos de la resonancia magnética de alta resolución se correlacionan
+    con un desgarro parcial o solo inflamación localizada?
   visual_hint: 🧲🔬
   cloze:
   - 4
@@ -40,8 +43,10 @@ phrases:
     meaning: desgarro parcial
     ipa: ˈpɑːrʃəl ter
 - id: recovery-trajectory
-  text: What does the postoperative rehabilitation trajectory look like compared to non-surgical management?
-  translation: ¿Cómo es la evolución de la rehabilitación posoperatoria en comparación con el manejo no quirúrgico?
+  text: What does the postoperative rehabilitation trajectory look like compared to
+    non-surgical management?
+  translation: ¿Cómo es la evolución de la rehabilitación posoperatoria en comparación
+    con el manejo no quirúrgico?
   visual_hint: 📈🏃
   cloze:
   - 3
@@ -55,57 +60,10 @@ phrases:
   - word: trajectory
     meaning: trayectoria / curva de recuperación
     ipa: trəˈdʒektəri
-- id: long-term-prognosis
-  text: If we defer arthroscopy for twelve weeks, do we risk compromising the long-term prognosis?
-  translation: Si posponemos la artroscopia por doce semanas, ¿corremos el riesgo de comprometer el pronóstico a
-    largo plazo?
-  visual_hint: ⏳🩺
-  cloze:
-  - 2
-  - 9
-  - 13
-  glossary:
-  - word: defer
-    meaning: posponer / diferir
-    ipa: dɪˈfɜːr
-  - word: prognosis
-    meaning: pronóstico médico
-    ipa: prɑːɡˈnoʊsɪs
-- id: targeted-biomechanics
-  text: I'm keen to pursue a targeted biomechanical protocol and reassess mobility at the six-week mark.
-  translation: Estoy muy interesado en seguir un protocolo biomecánico específico y reevaluar la movilidad a las
-    seis semanas.
-  visual_hint: 🏋️‍♂️🗓️
-  cloze:
-  - 3
-  - 5
-  - 9
-  glossary:
-  - word: keen to
-    meaning: muy dispuesto / interesado en
-    ipa: kiːn tə
-  - word: reassess
-    meaning: reevaluar
-    ipa: ˌriːəˈses
-- id: multidisciplinary-consult
-  text: Could your office forward the imaging report to my sports physiotherapist so both teams stay aligned?
-  translation: ¿Podría su consultorio reenviar el informe de imagenología a mi fisioterapeuta deportivo para que
-    ambos equipos estén alineados?
-  visual_hint: 📤🤝
-  cloze:
-  - 3
-  - 6
-  - 15
-  glossary:
-  - word: imaging report
-    meaning: informe radiológico / de imagen
-    ipa: ˈɪmɪdʒɪŋ rɪˈpɔːrt
-  - word: stay aligned
-    meaning: mantenerse coordinados
-    ipa: steɪ əˈlaɪnd
 - id: idm-a-grain-of-salt-c2
   text: I'd take that first diagnosis with a grain of salt.
-  translation: Yo tomaría ese primer diagnóstico con pinzas. (with a grain of salt = con reservas)
+  translation: Yo tomaría ese primer diagnóstico con pinzas. (with a grain of salt
+    = con reservas)
   visual_hint: 🧂🩺
   cloze:
   - 3
@@ -120,7 +78,8 @@ phrases:
   apply_translation: Toma las reseñas en línea con pinzas.
 - id: idm-leave-no-stone-unturned-c2
   text: The specialist promised to leave no stone unturned.
-  translation: El especialista prometió no dejar piedra sin remover. (leave no stone unturned)
+  translation: El especialista prometió no dejar piedra sin remover. (leave no stone
+    unturned)
   visual_hint: 🪨🔎
   cloze:
   - 2
@@ -139,33 +98,45 @@ roleplay:
   setting: Specialist consultation reviewing shoulder MRI scans.
   turns:
   - speaker: ai
-    text: Good morning. I've reviewed your shoulder MRI from last week. What questions are top of mind for you today?
+    text: Good morning. I've reviewed your shoulder MRI from last week. What questions
+      are top of mind for you today?
   - speaker: user
-    goal: Pregunta si la resonancia muestra un desgarro parcial o inflamación y pide evaluar terapia conservadora.
+    goal: Pregunta si la resonancia muestra un desgarro parcial o inflamación y pide
+      evaluar terapia conservadora.
     suggested_lines:
-    - Do the high-resolution MRI findings correlate with a partial tear or merely localized inflammation?
-    - Before consenting to an invasive procedure, I'd like to weigh the efficacy of conservative physical therapy.
+    - Do the high-resolution MRI findings correlate with a partial tear or merely
+      localized inflammation?
+    - Before consenting to an invasive procedure, I'd like to weigh the efficacy of
+      conservative physical therapy.
   - speaker: ai
-    text: It's a low-grade partial tendon tear with bursitis. Surgery is an option, but structured rehab often resolves
-      eighty percent of cases.
+    text: It's a low-grade partial tendon tear with bursitis. Surgery is an option,
+      but structured rehab often resolves eighty percent of cases.
   - speaker: user
-    goal: Pregunta por la curva de recuperación posoperatoria y si posponer la cirugía compromete el pronóstico.
+    goal: Pregunta por la curva de recuperación posoperatoria y si posponer la cirugía
+      compromete el pronóstico.
     suggested_lines:
-    - What does the postoperative rehabilitation trajectory look like compared to non-surgical management?
-    - If we defer arthroscopy for twelve weeks, do we risk compromising the long-term prognosis?
+    - What does the postoperative rehabilitation trajectory look like compared to
+      non-surgical management?
+    - If we defer arthroscopy for twelve weeks, do we risk compromising the long-term
+      prognosis?
   - speaker: ai
-    text: Deferring for twelve weeks carries virtually no structural risk as long as you avoid overhead loading.
+    text: Deferring for twelve weeks carries virtually no structural risk as long
+      as you avoid overhead loading.
   - speaker: user
-    goal: Expresa que prefieres iniciar el protocolo biomecánico y reevaluar a las seis semanas.
+    goal: Expresa que prefieres iniciar el protocolo biomecánico y reevaluar a las
+      seis semanas.
     suggested_lines:
-    - I'm keen to pursue a targeted biomechanical protocol and reassess mobility at the six-week mark.
+    - I'm keen to pursue a targeted biomechanical protocol and reassess mobility at
+      the six-week mark.
     - Let's start with targeted physical therapy and reassess in six weeks.
   - speaker: ai
     text: That is a very sensible, evidence-based approach. I'll draft the rehab prescription.
   - speaker: user
     goal: Pide que envíen el informe de imagenología a tu fisioterapeuta deportivo.
     suggested_lines:
-    - Could your office forward the imaging report to my sports physiotherapist so both teams stay aligned?
+    - Could your office forward the imaging report to my sports physiotherapist so
+      both teams stay aligned?
     - Please forward the MRI report to my physiotherapist.
   - speaker: ai
-    text: Consider it done. We'll see you back here in six weeks to measure your range of motion!
+    text: Consider it done. We'll see you back here in six weeks to measure your range
+      of motion!

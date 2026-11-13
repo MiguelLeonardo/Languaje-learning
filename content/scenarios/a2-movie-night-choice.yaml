@@ -3,7 +3,8 @@ title: Choosing a movie at the cinema
 title_es: Elegir una película en el cine
 cefr: A2
 topic: social-and-smalltalk
-description: Decide con un amigo entre una comedia o una película de ciencia ficción y compren palomitas.
+description: Decide con un amigo entre una comedia o una película de ciencia ficción
+  y compren palomitas.
 phrases:
 - id: sci-fi-or-comedy
   text: Do you feel like watching the new sci-fi adventure or the comedy?
@@ -18,7 +19,8 @@ phrases:
     ipa: fiːl laɪk
 - id: starts-at-seven-thirty
   text: The sci-fi movie starts at seven thirty in the IMAX theater.
-  translation: La película de ciencia ficción empieza a las siete y media en la sala IMAX.
+  translation: La película de ciencia ficción empieza a las siete y media en la sala
+    IMAX.
   visual_hint: 🕢📽️
   cloze:
   - 3
@@ -38,39 +40,6 @@ phrases:
   - word: middle row
     meaning: fila central
     ipa: ˈmɪdəl roʊ
-- id: share-large-popcorn
-  text: Want to share a large bucket of buttered popcorn and two sodas?
-  translation: ¿Quieres compartir una cubeta grande de palomitas con mantequilla y dos refrescos?
-  visual_hint: 🍿🥤
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: share
-    meaning: compartir
-    ipa: ʃer
-- id: put-phones-on-silent
-  text: Don't forget to put our phones on silent before the trailers start.
-  translation: No olvidemos poner los teléfonos en silencio antes de que empiecen los avances.
-  visual_hint: 📵🎞️
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: silent
-    meaning: modo silencio
-    ipa: ˈsaɪlənt
-- id: grab-tickets-at-kiosk
-  text: I'll get the popcorn while you print the tickets at the kiosk!
-  translation: ¡Yo compro las palomitas mientras tú imprimes los boletos en el quiosco!
-  visual_hint: 🎟️🙌
-  cloze:
-  - 4
-  - 8
-  glossary:
-  - word: while
-    meaning: mientras
-    ipa: waɪl
 - id: idm-a2mn-my-cup-of-tea
   text: Horror films aren't really my cup of tea, honestly.
   translation: Las películas de terror no son lo mío, la verdad (no me gustan).
@@ -88,7 +57,8 @@ phrases:
   apply_translation: Los programas de cocina no son lo mío.
 - id: idm-a2mn-sold-out
   text: Sorry, the late show is sold out, so let's pick another one.
-  translation: Lo siento, la función de la noche está agotada, elijamos otra (sin entradas).
+  translation: Lo siento, la función de la noche está agotada, elijamos otra (sin
+    entradas).
   visual_hint: 🎟️🚫
   cloze:
   - 4

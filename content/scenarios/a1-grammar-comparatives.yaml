@@ -1,0 +1,96 @@
+id: a1-grammar-comparatives
+title: Basic comparatives with -er and more
+title_es: Comparativos básicos con -er y more
+cefr: A1
+topic: grammar-and-connectors
+description: Compara objetos, lugares y precios usando adjetivos cortos (-er than)
+  y largos (more ... than).
+phrases:
+- id: bigger-than-mine
+  text: Your bag is bigger than mine.
+  translation: Tu bolso es más grande que el mío.
+  visual_hint: 👜📏
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: bigger
+    meaning: más grande
+    ipa: ˈbɪɡər
+  - word: than
+    meaning: que (en comparaciones)
+    ipa: ðæn
+- id: cheaper-than-taxi
+  text: The bus is cheaper than a taxi.
+  translation: El autobús es más barato que un taxi.
+  visual_hint: 🚌🚕
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: cheaper
+    meaning: más barato
+    ipa: ˈtʃiːpər
+- id: more-expensive-hotel
+  text: This hotel is more expensive than that one.
+  translation: Este hotel es más caro que aquel. ('more' se usa con adjetivos largos)
+  visual_hint: 🏨💵
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: more expensive
+    meaning: más caro
+    ipa: mɔːr ɪkˈspensɪv
+  kind: expression
+  apply_sentence: A new car is ____ than a bicycle.
+  apply_answer: more expensive
+  apply_translation: Un coche nuevo es más caro que una bicicleta.
+- id: better-than-yesterday
+  text: The weather today is better than yesterday.
+  translation: El clima de hoy es mejor que el de ayer. ('better' es el comparativo
+    irregular de 'good')
+  visual_hint: ☀️👍
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: better
+    meaning: mejor (comparativo de good)
+    ipa: ˈbetər
+  kind: expression
+  apply_sentence: This coffee tastes ____ the old one.
+  apply_answer: better than
+  apply_translation: Este café sabe mejor que el anterior.
+- id: older-than-brother
+  text: My sister is older than my brother.
+  translation: Mi hermana es mayor que mi hermano.
+  visual_hint: 👧👦
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: older
+    meaning: mayor / más viejo
+    ipa: ˈoʊldər
+roleplay:
+  ai_role: shop assistant
+  user_role: customer
+  setting: Comparing two travel bags in a store.
+  turns:
+  - speaker: ai
+    text: Hello! Do you like the blue bag or the black bag?
+  - speaker: user
+    goal: Compara el tamaño de los bolsos usando 'bigger than'.
+    suggested_lines:
+    - The black bag is bigger than the blue one.
+    - Your black bag is bigger than mine.
+  - speaker: ai
+    text: Yes, it is. The blue one is forty dollars and the black one is sixty.
+  - speaker: user
+    goal: Compara el precio usando 'cheaper than' o 'more expensive than'.
+    suggested_lines:
+    - The blue bag is cheaper than the black bag.
+    - The black bag is more expensive than the blue one.
+  - speaker: ai
+    text: Both are very good quality! Let me know which one you prefer.

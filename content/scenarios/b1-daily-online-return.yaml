@@ -1,0 +1,93 @@
+id: b1-daily-online-return
+title: Requesting an online return & refund
+title_es: Solicitar devolución y reembolso en línea
+cefr: B1
+topic: daily-tech-and-media
+description: Gestiona la devolución de un artículo defectuoso comprado por internet.
+phrases:
+- id: arrived-with-crack
+  text: The blender arrived with a crack in the glass.
+  translation: La licuadora llegó con una grieta en el vidrio.
+  visual_hint: 📦💥
+  cloze:
+  - 5
+  - 8
+  glossary:
+  - word: crack
+    meaning: grieta / rajadura
+    ipa: kræk
+- id: prepaid-return-label
+  text: Can you email me a prepaid return label?
+  translation: ¿Pueden enviarme por correo una etiqueta de devolución prepagada?
+  visual_hint: 🏷️📧
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: return label
+    meaning: etiqueta de devolución
+    ipa: rɪˈtɜːrn ˈleɪbəl
+- id: full-refund-card
+  text: I would prefer a full refund to my original card.
+  translation: Preferiría un reembolso completo a mi tarjeta original.
+  visual_hint: 💳💸
+  cloze:
+  - 5
+  - 9
+  glossary:
+  - word: refund
+    meaning: reembolso
+    ipa: ˈriːfʌnd
+- id: idm-send-back
+  text: I will send back the damaged item tomorrow morning.
+  translation: 'Devolveré el artículo dañado mañana por la mañana. (send back: devolver por
+    correo)'
+  visual_hint: 📮↩️
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: send back
+    meaning: devolver (por envío)
+    ipa: send bæk
+  kind: phrasal_verb
+  apply_sentence: If the jacket does not fit, you can ____ it within thirty days.
+  apply_answer: send back
+  apply_translation: Si la chaqueta no te queda, puedes devolverla en treinta días.
+- id: idm-sort-out
+  text: Thank you for helping me sort out this issue quickly.
+  translation: 'Gracias por ayudarme a resolver este problema rápidamente. (sort out: resolver
+    / solucionar)'
+  visual_hint: 🤝✅
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: sort out
+    meaning: resolver / solucionar
+    ipa: sɔːrt aʊt
+  kind: phrasal_verb
+  apply_sentence: Customer care will ____ the missing invoice today.
+  apply_answer: sort out
+  apply_translation: Atención al cliente resolverá la factura faltante hoy.
+roleplay:
+  ai_role: returns specialist
+  user_role: customer
+  setting: Customer service call regarding a damaged kitchen appliance.
+  turns:
+  - speaker: ai
+    text: Thanks for calling HomeGoods Returns. What seems to be wrong with your order?
+  - speaker: user
+    goal: Explica que la licuadora llegó con una grieta y pide un reembolso completo.
+    suggested_lines:
+    - The blender arrived with a crack in the glass.
+    - I would prefer a full refund to my original card.
+  - speaker: ai
+    text: I am so sorry about that. We can process a full refund right away.
+  - speaker: user
+    goal: Pide una etiqueta de devolución prepagada y di cuándo lo enviarás de vuelta.
+    suggested_lines:
+    - Can you email me a prepaid return label?
+    - I will send back the damaged item tomorrow morning.
+  - speaker: ai
+    text: Sent! You will see the refund within three business days.

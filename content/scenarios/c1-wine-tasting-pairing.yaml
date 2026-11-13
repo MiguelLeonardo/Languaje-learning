@@ -3,7 +3,8 @@ title: Sommelier pairing & tasting notes
 title_es: Maridaje y cata con el sommelier
 cefr: C1
 topic: food-and-drink
-description: Conversa con un sommelier sobre acidez, cuerpo y maridaje ideal para un menú degustación.
+description: Conversa con un sommelier sobre acidez, cuerpo y maridaje ideal para
+  un menú degustación.
 phrases:
 - id: crisp-acidity
   text: We're looking for a dry white with crisp acidity to complement the ceviche.
@@ -22,7 +23,8 @@ phrases:
     ipa: ˈkɑːmplɪment
 - id: velvety-tannins
   text: Ideally, the red should have velvety tannins that won't overpower the duck.
-  translation: Idealmente, el tinto debería tener taninos aterciopelados que no opaquen el pato.
+  translation: Idealmente, el tinto debería tener taninos aterciopelados que no opaquen
+    el pato.
   visual_hint: 🍷🦆
   cloze:
   - 5
@@ -50,54 +52,10 @@ phrases:
   - word: vintage
     meaning: añada / cosecha
     ipa: ˈvɪntɪdʒ
-- id: mineral-undertones
-  text: On the palate, it has subtle mineral undertones and a lingering finish.
-  translation: En boca, tiene sutiles matices minerales y un final persistente.
-  visual_hint: ✨🍇
-  cloze:
-  - 2
-  - 6
-  - 10
-  glossary:
-  - word: palate
-    meaning: paladar / en boca
-    ipa: ˈpælət
-  - word: lingering
-    meaning: persistente / prolongado
-    ipa: ˈlɪŋɡərɪŋ
-- id: by-the-glass-pairing
-  text: Could we opt for the curated by-the-glass pairing across all five courses?
-  translation: ¿Podríamos optar por el maridaje por copa seleccionado para los cinco tiempos?
-  visual_hint: 🍷🍽️
-  cloze:
-  - 2
-  - 6
-  - 11
-  glossary:
-  - word: opt for
-    meaning: optar por / elegir
-    ipa: ɑːpt fɔːr
-  - word: courses
-    meaning: tiempos del menú
-    ipa: ˈkɔːrsɪz
-- id: non-alcoholic-botanical
-  text: Do you also offer a zero-proof botanical pairing for one of our guests?
-  translation: ¿Ofrecen también un maridaje botánico sin alcohol para uno de nuestros invitados?
-  visual_hint: 🌿🥂
-  cloze:
-  - 5
-  - 6
-  - 7
-  glossary:
-  - word: zero-proof
-    meaning: sin graduación alcohólica
-    ipa: ˈzɪroʊ pruːf
-  - word: botanical
-    meaning: botánico / herbal
-    ipa: bəˈtænɪkəl
 - id: let-it-breathe
   text: Decant it first and let it breathe for an hour.
-  translation: 'Decántelo primero y deje que respire una hora. (let it breathe: dejar que se oxigene)'
+  translation: 'Decántelo primero y deje que respire una hora. (let it breathe: dejar
+    que se oxigene)'
   visual_hint: 🍷💨
   cloze:
   - 3
@@ -112,7 +70,8 @@ phrases:
   apply_translation: Abre la botella pronto y deja que respire antes de servir.
 - id: worth-its-weight-in-gold
   text: A good pairing like this is worth its weight in gold.
-  translation: 'Un buen maridaje como este vale su peso en oro. (worth its weight in gold: muy valioso)'
+  translation: 'Un buen maridaje como este vale su peso en oro. (worth its weight
+    in gold: muy valioso)'
   visual_hint: 🍷🥇
   cloze:
   - 3
@@ -131,21 +90,24 @@ roleplay:
   setting: A tasting-menu restaurant selecting wine and zero-proof pairings.
   turns:
   - speaker: ai
-    text: Good evening. I see you've chosen the five-course tasting menu. What styles of wine do you enjoy?
+    text: Good evening. I see you've chosen the five-course tasting menu. What styles
+      of wine do you enjoy?
   - speaker: user
     goal: Pide un blanco seco con buena acidez para el ceviche.
     suggested_lines:
     - We're looking for a dry white with crisp acidity to complement the ceviche.
     - Something dry with crisp acidity for the starter.
   - speaker: ai
-    text: An Albariño would be stellar. And for the roasted duck breast in the third course?
+    text: An Albariño would be stellar. And for the roasted duck breast in the third
+      course?
   - speaker: user
     goal: Pide un tinto con taninos suaves que no opaque el pato.
     suggested_lines:
     - Ideally, the red should have velvety tannins that won't overpower the duck.
     - A red with velvety tannins that won't overpower the dish.
   - speaker: ai
-    text: Here is a taste of our aged Pinot Noir. What are your impressions on the palate?
+    text: Here is a taste of our aged Pinot Noir. What are your impressions on the
+      palate?
   - speaker: user
     goal: Describe sus matices minerales y final persistente.
     suggested_lines:
@@ -159,4 +121,5 @@ roleplay:
     - Do you also offer a zero-proof botanical pairing for one of our guests?
     - Could we get the wine pairing plus one zero-proof botanical pairing?
   - speaker: ai
-    text: Absolutely, our house-fermented botanical infusions pair beautifully with every course.
+    text: Absolutely, our house-fermented botanical infusions pair beautifully with
+      every course.

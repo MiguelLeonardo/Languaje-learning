@@ -1,0 +1,92 @@
+id: b1-daily-meal-prep-schedule
+title: Coordinating meal prep & grocery delivery
+title_es: Coordinar comidas y entrega del súper
+cefr: B1
+topic: daily-tech-and-media
+description: Organiza un pedido semanal de supermercado en línea y el horario de cocina en casa.
+phrases:
+- id: schedule-delivery-slot
+  text: Let us book a grocery delivery slot for Sunday afternoon.
+  translation: Reservemos una franja de entrega del súper para el domingo por la tarde.
+  visual_hint: 🥦🚚
+  cloze:
+  - 2
+  - 5
+  glossary:
+  - word: delivery slot
+    meaning: franja horaria de entrega
+    ipa: dɪˈlɪvəri slɑːt
+- id: check-pantry-first
+  text: We should check the pantry before placing the order.
+  translation: Deberíamos revisar la despensa antes de hacer el pedido.
+  visual_hint: 🥫👀
+  cloze:
+  - 4
+  - 7
+  glossary:
+  - word: pantry
+    meaning: despensa
+    ipa: ˈpæntri
+- id: batch-cook-lunches
+  text: Batch cooking on Sunday saves time during busy weekdays.
+  translation: Cocinar por lotes el domingo ahorra tiempo entre semana.
+  visual_hint: 🍱⏱️
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: batch cooking
+    meaning: cocinar por lotes
+    ipa: bætʃ ˈkʊkɪŋ
+- id: idm-run-low-on
+  text: We are starting to run low on olive oil and rice.
+  translation: 'Nos estamos quedando con poco aceite de oliva y arroz. (run low on: empezar
+    a quedarse sin)'
+  visual_hint: 🫒🍚
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: run low on
+    meaning: quedarse con poco de
+    ipa: rʌn loʊ ɑːn
+  kind: expression
+  apply_sentence: Add coffee to the cart because we ____ beans.
+  apply_answer: run low on
+  apply_translation: Agrega café al carrito porque nos estamos quedando con pocos granos.
+- id: idm-figure-out
+  text: Let us figure out three easy recipes for this week.
+  translation: 'Decidamos tres recetas fáciles para esta semana. (figure out: resolver / decidir)'
+  visual_hint: 📖🍳
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: figure out
+    meaning: resolver / descifrar
+    ipa: ˈfɪɡjər aʊt
+  kind: phrasal_verb
+  apply_sentence: We need to ____ how much pasta to buy for six people.
+  apply_answer: figure out
+  apply_translation: Necesitamos calcular cuánta pasta comprar para seis personas.
+roleplay:
+  ai_role: partner
+  user_role: planner
+  setting: Kitchen table with a laptop open to a grocery delivery app.
+  turns:
+  - speaker: ai
+    text: I have the grocery app open. When should we schedule the delivery?
+  - speaker: user
+    goal: Propón una franja el domingo y sugiere revisar primero la despensa.
+    suggested_lines:
+    - Let us book a grocery delivery slot for Sunday afternoon.
+    - We should check the pantry before placing the order.
+  - speaker: ai
+    text: Good call. What staples do we need to add right now?
+  - speaker: user
+    goal: Menciona lo que se está acabando y propón decidir tres recetas fáciles.
+    suggested_lines:
+    - We are starting to run low on olive oil and rice.
+    - Let us figure out three easy recipes for this week.
+  - speaker: ai
+    text: Perfect, I just confirmed the Sunday 4 p.m. slot!

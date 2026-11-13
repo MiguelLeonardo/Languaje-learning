@@ -3,13 +3,14 @@ title: Negotiating an apartment lease
 title_es: Negociar un contrato de alquiler
 cefr: C1
 topic: hotel-and-shopping
-description: 'Negocia cláusulas de un contrato de arrendamiento: duración, mantenimiento incluido y cláusula de
-  salida anticipada.'
+description: 'Negocia cláusulas de un contrato de arrendamiento: duración, mantenimiento
+  incluido y cláusula de salida anticipada.'
 phrases:
 - id: lock-in-rent
-  text: If we sign an eighteen-month lease, would the landlord agree to cap the annual rent increase?
-  translation: Si firmamos un contrato de dieciocho meses, ¿aceptaría el propietario limitar el aumento anual del
-    alquiler?
+  text: If we sign an eighteen-month lease, would the landlord agree to cap the annual
+    rent increase?
+  translation: Si firmamos un contrato de dieciocho meses, ¿aceptaría el propietario
+    limitar el aumento anual del alquiler?
   visual_hint: 🏠📝
   cloze:
   - 5
@@ -23,9 +24,10 @@ phrases:
     meaning: poner un tope / limitar
     ipa: kæp
 - id: break-clause
-  text: Since my company relocates staff periodically, we need a diplomatic break clause with sixty days' notice.
-  translation: Como mi empresa reubica personal periódicamente, necesitamos una cláusula de rescisión anticipada
-    con sesenta días de preaviso.
+  text: Since my company relocates staff periodically, we need a diplomatic break
+    clause with sixty days' notice.
+  translation: Como mi empresa reubica personal periódicamente, necesitamos una cláusula
+    de rescisión anticipada con sesenta días de preaviso.
   visual_hint: 📄✈️
   cloze:
   - 3
@@ -39,9 +41,10 @@ phrases:
     meaning: cláusula de salida anticipada
     ipa: breɪk klɔːz
 - id: utilities-and-hoa
-  text: Just to clarify, are building maintenance fees and water utilities bundled into the monthly rent?
-  translation: Solo para aclarar, ¿las cuotas de mantenimiento del edificio y el agua están incluidas en la renta
-    mensual?
+  text: Just to clarify, are building maintenance fees and water utilities bundled
+    into the monthly rent?
+  translation: Solo para aclarar, ¿las cuotas de mantenimiento del edificio y el agua
+    están incluidas en la renta mensual?
   visual_hint: 💧🏢
   cloze:
   - 2
@@ -54,53 +57,6 @@ phrases:
   - word: bundled into
     meaning: incluidos dentro de
     ipa: ˈbʌndəld ˈɪntuː
-- id: wear-and-tear
-  text: The security deposit clause should explicitly distinguish between normal wear and tear and structural damage.
-  translation: La cláusula del depósito debe distinguir explícitamente entre el desgaste normal por uso y daños
-    estructurales.
-  visual_hint: 🔍🔑
-  cloze:
-  - 6
-  - 9
-  - 11
-  glossary:
-  - word: explicitly
-    meaning: explícitamente
-    ipa: ɪkˈsplɪsɪtli
-  - word: wear and tear
-    meaning: desgaste normal por el uso
-    ipa: wer ænd ter
-- id: appliance-repairs
-  text: We'd like it stated in writing that major appliance repairs remain the owner's responsibility.
-  translation: Nos gustaría que conste por escrito que las reparaciones de electrodomésticos principales siguen
-    siendo responsabilidad del propietario.
-  visual_hint: 🛠️🧊
-  cloze:
-  - 3
-  - 8
-  - 9
-  glossary:
-  - word: stated in writing
-    meaning: establecido por escrito
-    ipa: ˈsteɪtɪd ɪn ˈraɪtɪŋ
-  - word: appliance
-    meaning: electrodoméstico
-    ipa: əˈplaɪəns
-- id: move-in-walkthrough
-  text: Let's schedule a joint walkthrough prior to move-in to sign off on the inventory checklist.
-  translation: Agendemos un recorrido conjunto antes de la mudanza para firmar la lista de inventario.
-  visual_hint: 📋🚪
-  cloze:
-  - 4
-  - 7
-  - 14
-  glossary:
-  - word: walkthrough
-    meaning: inspección / recorrido presencial
-    ipa: ˈwɔːkθruː
-  - word: sign off on
-    meaning: aprobar con firma
-    ipa: saɪn ɔːf ɑːn
 - id: idm-iron-out-clause
   text: We just need to iron out the subletting clause in paragraph twelve.
   translation: Solo necesitamos pulir la cláusula de subarriendo en el párrafo doce.
@@ -115,7 +71,8 @@ phrases:
   kind: phrasal_verb
   apply_sentence: Our attorneys will ____ the maintenance cap before Friday's signing.
   apply_answer: iron out
-  apply_translation: Nuestros abogados pulirán el tope de mantenimiento antes de la firma del viernes.
+  apply_translation: Nuestros abogados pulirán el tope de mantenimiento antes de la
+    firma del viernes.
 - id: idm-read-between-lines
   text: If you read between the lines, the landlord expects a two-year commitment.
   translation: Si lees entre líneas, el propietario espera un compromiso de dos años.
@@ -130,40 +87,53 @@ phrases:
   kind: idiom
   apply_sentence: Always ____ when a commercial lease mentions 'customary escalations'.
   apply_answer: read between the lines
-  apply_translation: Siempre lee entre líneas cuando un contrato menciona 'incrementos habituales'.
+  apply_translation: Siempre lee entre líneas cuando un contrato menciona 'incrementos
+    habituales'.
 roleplay:
   ai_role: leasing agent
   user_role: prospective tenant
   setting: Reviewing a residential lease agreement before signing.
   turns:
   - speaker: ai
-    text: Here is the draft lease for the two-bedroom apartment. Did you have any questions about the terms?
+    text: Here is the draft lease for the two-bedroom apartment. Did you have any
+      questions about the terms?
   - speaker: user
-    goal: Pregunta si las cuotas de mantenimiento y agua están incluidas y propone contrato de 18 meses con tope
-      de aumento.
+    goal: Pregunta si las cuotas de mantenimiento y agua están incluidas y propone
+      contrato de 18 meses con tope de aumento.
     suggested_lines:
-    - Just to clarify, are building maintenance fees and water utilities bundled into the monthly rent?
-    - If we sign an eighteen-month lease, would the landlord agree to cap the annual rent increase?
+    - Just to clarify, are building maintenance fees and water utilities bundled into
+      the monthly rent?
+    - If we sign an eighteen-month lease, would the landlord agree to cap the annual
+      rent increase?
   - speaker: ai
-    text: Water and HOA fees are included, and the owner can cap the renewal increase at three percent.
+    text: Water and HOA fees are included, and the owner can cap the renewal increase
+      at three percent.
   - speaker: user
-    goal: Solicita una cláusula de salida anticipada con 60 días de preaviso por posibles traslados laborales.
+    goal: Solicita una cláusula de salida anticipada con 60 días de preaviso por posibles
+      traslados laborales.
     suggested_lines:
-    - Since my company relocates staff periodically, we need a diplomatic break clause with sixty days' notice.
+    - Since my company relocates staff periodically, we need a diplomatic break clause
+      with sixty days' notice.
     - Could we add a break clause with sixty days' notice in case of work relocation?
   - speaker: ai
-    text: We can add that after the sixth month. Anything else regarding maintenance or the deposit?
+    text: We can add that after the sixth month. Anything else regarding maintenance
+      or the deposit?
   - speaker: user
-    goal: Pide que conste por escrito la responsabilidad de electrodomésticos y el desgaste normal.
+    goal: Pide que conste por escrito la responsabilidad de electrodomésticos y el
+      desgaste normal.
     suggested_lines:
-    - We'd like it stated in writing that major appliance repairs remain the owner's responsibility.
-    - The security deposit clause should explicitly distinguish between normal wear and tear and structural damage.
+    - We'd like it stated in writing that major appliance repairs remain the owner's
+      responsibility.
+    - The security deposit clause should explicitly distinguish between normal wear
+      and tear and structural damage.
   - speaker: ai
     text: Fair enough. I'll amend Clause 9 and Clause 14 right now.
   - speaker: user
-    goal: Propón agendar un recorrido conjunto antes de la mudanza para firmar el inventario.
+    goal: Propón agendar un recorrido conjunto antes de la mudanza para firmar el
+      inventario.
     suggested_lines:
-    - Let's schedule a joint walkthrough prior to move-in to sign off on the inventory checklist.
+    - Let's schedule a joint walkthrough prior to move-in to sign off on the inventory
+      checklist.
     - Can we do a joint walkthrough before move-in to sign the inventory?
   - speaker: ai
     text: Let's meet at the apartment Thursday at 10 AM with the keys!

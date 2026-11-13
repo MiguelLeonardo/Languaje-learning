@@ -3,7 +3,8 @@ title: Buying postcards and magnets
 title_es: Comprar postales e imanes
 cefr: A1
 topic: hotel-and-shopping
-description: Compra tres postales, un imán para el refrigerador y estampillas en una tienda de recuerdos.
+description: Compra tres postales, un imán para el refrigerador y estampillas en una
+  tienda de recuerdos.
 phrases:
 - id: three-postcards
   text: I would like these three city postcards, please.
@@ -38,42 +39,10 @@ phrases:
   - word: stamps
     meaning: estampillas / sellos postales
     ipa: stæmps
-- id: small-gift-bag
-  text: Can you put them in a small gift bag?
-  translation: ¿Puede ponerlos en una bolsita de regalo?
-  visual_hint: 🎁🛍️
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: gift bag
-    meaning: bolsa de regalo
-    ipa: ɡɪft bæɡ
-- id: red-keychain
-  text: I will also take this red keychain for my sister.
-  translation: También me llevo este llavero rojo para mi hermana.
-  visual_hint: 🔑❤️
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: keychain
-    meaning: llavero
-    ipa: ˈkiːtʃeɪn
-- id: mailbox-outside
-  text: Great, I see the yellow mailbox outside the shop!
-  translation: ¡Genial, veo el buzón amarillo afuera de la tienda!
-  visual_hint: 📮😊
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: mailbox
-    meaning: buzón de correo
-    ipa: ˈmeɪlbɑːks
 - id: idm-look-around-shop
   text: Feel free to look around the shop while I wrap your magnets.
-  translation: Siéntase libre de dar un vistazo por la tienda mientras envuelvo sus imanes.
+  translation: Siéntase libre de dar un vistazo por la tienda mientras envuelvo sus
+    imanes.
   visual_hint: 🧲🛍️
   cloze:
   - 4
@@ -85,10 +54,12 @@ phrases:
   kind: phrasal_verb
   apply_sentence: We like to ____ small gift shops when we visit a new town.
   apply_answer: look around
-  apply_translation: Nos gusta curiosear por pequeñas tiendas de regalos cuando visitamos un pueblo nuevo.
+  apply_translation: Nos gusta curiosear por pequeñas tiendas de regalos cuando visitamos
+    un pueblo nuevo.
 - id: idm-keep-the-change
   text: Here is twenty dollars for the postcards—please keep the change.
-  translation: Aquí tiene veinte dólares por las postales; por favor quédese con el cambio.
+  translation: Aquí tiene veinte dólares por las postales; por favor quédese con el
+    cambio.
   visual_hint: 💵😊
   cloze:
   - 3
@@ -100,7 +71,8 @@ phrases:
   kind: expression
   apply_sentence: The taxi ride was nine dollars, so I told the driver to ____.
   apply_answer: keep the change
-  apply_translation: El viaje en taxi costó nueve dólares, así que le dije al conductor que se quedara con el cambio.
+  apply_translation: El viaje en taxi costó nueve dólares, así que le dije al conductor
+    que se quedara con el cambio.
 roleplay:
   ai_role: shopkeeper
   user_role: tourist

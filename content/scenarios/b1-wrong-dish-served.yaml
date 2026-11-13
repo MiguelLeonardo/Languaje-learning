@@ -3,7 +3,8 @@ title: Politely fixing a wrong order
 title_es: Corregir amablemente un pedido equivocado
 cefr: B1
 topic: food-and-drink
-description: Explica con cortesía al mesero que te trajeron pasta con carne cuando habías pedido el risotto vegetariano.
+description: Explica con cortesía al mesero que te trajeron pasta con carne cuando
+  habías pedido el risotto vegetariano.
 phrases:
 - id: sorry-to-bother
   text: Excuse me, sorry to bother you, but I think there's a mix-up.
@@ -38,42 +39,10 @@ phrases:
   - word: mistakes happen
     meaning: los errores pasan
     ipa: mɪˈsteɪks ˈhæpən
-- id: how-long-new-dish
-  text: Will the risotto take long, or is there one ready?
-  translation: ¿Tardará mucho el risotto, o tienen alguno listo?
-  visual_hint: ⏱️🍲
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: take long
-    meaning: tardar mucho
-    ipa: teɪk lɔːŋ
-- id: keep-side-salad
-  text: Thank you for offering the complimentary salad while I wait.
-  translation: Gracias por ofrecer la ensalada de cortesía mientras espero.
-  visual_hint: 🥗🙏
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: complimentary
-    meaning: de cortesía / gratuito
-    ipa: ˌkɑːmplɪˈmentəri
-- id: tastes-wonderful
-  text: The risotto came out hot and tastes wonderful, thank you!
-  translation: ¡El risotto salió caliente y sabe maravilloso, gracias!
-  visual_hint: 👨‍🍳🌟
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: came out
-    meaning: salió / quedó
-    ipa: keɪm aʊt
 - id: no-big-deal
   text: No big deal, I know the kitchen is busy.
-  translation: 'No pasa nada, sé que la cocina está ocupada. (no big deal: no es para tanto)'
+  translation: 'No pasa nada, sé que la cocina está ocupada. (no big deal: no es para
+    tanto)'
   visual_hint: 🍝🙂
   cloze:
   - 3
@@ -128,7 +97,8 @@ roleplay:
     - No worries at all, mistakes happen when it's this busy.
     - Will the risotto take long, or is there one ready?
   - speaker: ai
-    text: The chef can have a fresh risotto out in six minutes, and I'll bring a free side salad.
+    text: The chef can have a fresh risotto out in six minutes, and I'll bring a free
+      side salad.
   - speaker: user
     goal: Acepta la ensalada de cortesía mientras esperas.
     suggested_lines:

@@ -3,8 +3,8 @@ title: Hosting a business lunch
 title_es: Anfitrión en un almuerzo de negocios
 cefr: B2
 topic: food-and-drink
-description: Da la bienvenida a clientes en un restaurante, sugiere entradas para compartir y hazte cargo de la
-  cuenta con cortesía.
+description: Da la bienvenida a clientes en un restaurante, sugiere entradas para
+  compartir y hazte cargo de la cuenta con cortesía.
 phrases:
 - id: reserved-table-under
   text: Good afternoon, we have a reservation for four under the name Martinez.
@@ -37,7 +37,8 @@ phrases:
     ipa: lʊk ˈoʊvər
 - id: seasonal-specials
   text: Could you tell us about today's seasonal specials and fresh catch?
-  translation: ¿Podría contarnos sobre los platos especiales de temporada de hoy y la pesca del día?
+  translation: ¿Podría contarnos sobre los platos especiales de temporada de hoy y
+    la pesca del día?
   visual_hint: 🐟🌿
   cloze:
   - 6
@@ -50,54 +51,10 @@ phrases:
   - word: fresh catch
     meaning: pesca fresca del día
     ipa: freʃ kætʃ
-- id: medium-rare-steak
-  text: I'd like the ribeye cooked medium-rare with roasted asparagus on the side.
-  translation: Quisiera el ojo de bife término medio-rojo con espárragos asados de guarnición.
-  visual_hint: 🥩🌱
-  cloze:
-  - 4
-  - 5
-  - 7
-  glossary:
-  - word: medium-rare
-    meaning: término medio-rojo / al punto menos
-    ipa: ˌmiːdiəm ˈrer
-  - word: roasted
-    meaning: asados
-    ipa: ˈroʊstɪd
-- id: espresso-after-meal
-  text: Would anyone care for an espresso or dessert before we wrap up?
-  translation: ¿A alguien le apetece un espresso o postre antes de que terminemos?
-  visual_hint: ☕🍰
-  cloze:
-  - 2
-  - 5
-  - 10
-  glossary:
-  - word: care for
-    meaning: apetecer / gustar
-    ipa: ker fɔːr
-  - word: wrap up
-    meaning: concluir / cerrar
-    ipa: ræp ʌp
-- id: this-one-is-on-us
-  text: Please put everything on one check; this lunch is on us today.
-  translation: Por favor ponga todo en una sola cuenta; este almuerzo corre por nuestra cuenta hoy.
-  visual_hint: 💳🤝
-  cloze:
-  - 5
-  - 9
-  - 10
-  glossary:
-  - word: one check
-    meaning: una sola cuenta
-    ipa: wʌn tʃek
-  - word: on us
-    meaning: invitamos nosotros / corre por nuestra cuenta
-    ipa: ɑːn ʌs
 - id: break-the-ice
   text: A relaxed appetizer is a good way to break the ice.
-  translation: 'Un aperitivo relajado es buena forma de romper el hielo. (break the ice: romper el hielo)'
+  translation: 'Un aperitivo relajado es buena forma de romper el hielo. (break the
+    ice: romper el hielo)'
   visual_hint: 🧊🤝
   cloze:
   - 3
@@ -112,7 +69,8 @@ phrases:
   apply_translation: Contó un chiste para romper el hielo en la reunión.
 - id: pick-up-the-tab
   text: Please let me pick up the tab; I'm hosting today.
-  translation: 'Permítame pagar la cuenta; hoy soy el anfitrión. (pick up the tab: pagar la cuenta)'
+  translation: 'Permítame pagar la cuenta; hoy soy el anfitrión. (pick up the tab:
+    pagar la cuenta)'
   visual_hint: 🧾💼
   cloze:
   - 3
@@ -131,28 +89,32 @@ roleplay:
   setting: A modern upscale bistro during a client lunch meeting.
   turns:
   - speaker: ai
-    text: Good afternoon! Welcome to The Olive Tree. Do you have a reservation with us?
+    text: Good afternoon! Welcome to The Olive Tree. Do you have a reservation with
+      us?
   - speaker: user
     goal: Indica que tienes una reservación para cuatro a nombre de Martínez.
     suggested_lines:
     - Good afternoon, we have a reservation for four under the name Martinez.
     - Yes, a table for four under Martinez, please.
   - speaker: ai
-    text: Right this way. Here are your menus. Would you like to start with something for the table?
+    text: Right this way. Here are your menus. Would you like to start with something
+      for the table?
   - speaker: user
     goal: Pregunta por las especialidades de temporada y sugiere pedir entradas.
     suggested_lines:
     - Could you tell us about today's seasonal specials and fresh catch?
     - Shall we order a few appetizers for the table while we look over the menu?
   - speaker: ai
-    text: Today we have wild sea bass and prime ribeye. What can I get for your main course?
+    text: Today we have wild sea bass and prime ribeye. What can I get for your main
+      course?
   - speaker: user
     goal: Ordena el corte de carne término medio-rojo con espárragos.
     suggested_lines:
     - I'd like the ribeye cooked medium-rare with roasted asparagus on the side.
     - I'll have the ribeye medium-rare with asparagus, please.
   - speaker: ai
-    text: Wonderful. Now that you've finished your mains, how should I prepare the bill?
+    text: Wonderful. Now that you've finished your mains, how should I prepare the
+      bill?
   - speaker: user
     goal: Pide todo en una sola cuenta e indica que tú invitas.
     suggested_lines:

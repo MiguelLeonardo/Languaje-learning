@@ -1,0 +1,94 @@
+id: b1-tech-two-factor-login
+title: Setting up two-factor authentication
+title_es: Configurar la verificación en dos pasos
+cefr: B1
+topic: daily-tech-and-media
+description: Activa la verificación en dos pasos con una aplicación de seguridad para proteger
+  tu cuenta.
+phrases:
+- id: enable-two-factor
+  text: I want to enable two-factor authentication on my account.
+  translation: Quiero activar la verificación en dos pasos en mi cuenta.
+  visual_hint: 🔐📱
+  cloze:
+  - 3
+  - 5
+  glossary:
+  - word: authentication
+    meaning: autenticación / verificación
+    ipa: ɔːˌθentɪˈkeɪʃən
+- id: scan-qr-code
+  text: Scan this QR code using your authenticator app.
+  translation: Escanea este código QR usando tu aplicación de autenticación.
+  visual_hint: 📷📲
+  cloze:
+  - 0
+  - 2
+  glossary:
+  - word: scan
+    meaning: escanear
+    ipa: skæn
+- id: save-backup-codes
+  text: Make sure you store the backup codes somewhere safe.
+  translation: Asegúrate de guardar los códigos de respaldo en un lugar seguro.
+  visual_hint: 🗝️📄
+  cloze:
+  - 3
+  - 5
+  glossary:
+  - word: backup codes
+    meaning: códigos de respaldo
+    ipa: ˈbækʌp koʊdz
+- id: idm-set-up
+  text: It only takes two minutes to set up extra security.
+  translation: 'Solo toma dos minutos configurar seguridad adicional. (set up: configurar /
+    instalar)'
+  visual_hint: ⚙️🛡️
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: set up
+    meaning: configurar / instalar
+    ipa: set ʌp
+  kind: phrasal_verb
+  apply_sentence: We need to ____ a separate guest profile on the tablet.
+  apply_answer: set up
+  apply_translation: Necesitamos configurar un perfil de invitado separado en la tableta.
+- id: idm-better-safe
+  text: I prefer strong passwords because it is better safe than sorry.
+  translation: 'Prefiero contraseñas fuertes porque más vale prevenir que lamentar. (better
+    safe than sorry: más vale prevenir que lamentar)'
+  visual_hint: 🛡️✅
+  cloze:
+  - 7
+  - 10
+  glossary:
+  - word: better safe than sorry
+    meaning: más vale prevenir que lamentar
+    ipa: ˈbetər seɪf ðæn ˈsɑːri
+  kind: idiom
+  apply_sentence: Always lock your laptop at cafés; ____.
+  apply_answer: better safe than sorry
+  apply_translation: Siempre bloquea tu portátil en cafeterías; más vale prevenir que lamentar.
+roleplay:
+  ai_role: security advisor
+  user_role: user
+  setting: Helping a friend secure their email and banking apps.
+  turns:
+  - speaker: ai
+    text: You got a suspicious login alert yesterday. Have you added extra protection yet?
+  - speaker: user
+    goal: Di que quieres activar la verificación en dos pasos porque más vale prevenir que lamentar.
+    suggested_lines:
+    - I want to enable two-factor authentication on my account.
+    - I prefer strong passwords because it is better safe than sorry.
+  - speaker: ai
+    text: Smart choice! Open your security settings and tap 'Add Authenticator'.
+  - speaker: user
+    goal: Pregunta si debes escanear el código QR y guardar los códigos de respaldo.
+    suggested_lines:
+    - Scan this QR code using your authenticator app.
+    - It only takes two minutes to set up extra security.
+  - speaker: ai
+    text: Yes, scan it and write those recovery codes down offline!

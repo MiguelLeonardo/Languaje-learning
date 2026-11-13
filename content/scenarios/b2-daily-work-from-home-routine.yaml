@@ -1,0 +1,93 @@
+id: b2-daily-work-from-home-routine
+title: Balancing a work-from-home routine
+title_es: Equilibrar la rutina de teletrabajo
+cefr: B2
+topic: daily-tech-and-media
+description: Establece límites claros entre el trabajo remoto y la vida doméstica diaria.
+phrases:
+- id: dedicated-workspace-corner
+  text: Setting up a dedicated workspace helps separate work from rest.
+  translation: Acondicionar un espacio de trabajo dedicado ayuda a separar el trabajo del descanso.
+  visual_hint: 💻🪴
+  cloze:
+  - 3
+  - 6
+  glossary:
+  - word: dedicated
+    meaning: dedicado / exclusivo
+    ipa: ˈdedɪkeɪtɪd
+- id: mute-slack-after-six
+  text: I mute team chat notifications promptly at six o'clock.
+  translation: Silencio las notificaciones del chat del equipo puntualmente a las seis.
+  visual_hint: 🔕🕕
+  cloze:
+  - 1
+  - 5
+  glossary:
+  - word: promptly
+    meaning: puntualmente
+    ipa: ˈprɑːmptli
+- id: screen-fatigue-break
+  text: Taking a twenty-minute walk prevents afternoon screen fatigue.
+  translation: Dar una caminata de veinte minutos previene la fatiga visual de la tarde.
+  visual_hint: 🚶‍♂️☀️
+  cloze:
+  - 5
+  - 7
+  glossary:
+  - word: fatigue
+    meaning: fatiga / cansancio
+    ipa: fəˈtiːɡ
+- id: idm-wind-down
+  text: I close my laptop at six to wind down properly.
+  translation: 'Cierro mi portátil a las seis para desconectarme bien. (wind down: relajarse
+    / ir cerrando el día)'
+  visual_hint: 🌙☕
+  cloze:
+  - 7
+  - 8
+  glossary:
+  - word: wind down
+    meaning: relajarse / bajar el ritmo
+    ipa: waɪnd daʊn
+  kind: phrasal_verb
+  apply_sentence: Reading a paperback helps me ____ before sleeping.
+  apply_answer: wind down
+  apply_translation: Leer un libro de papel me ayuda a relajarme antes de dormir.
+- id: idm-draw-the-line
+  text: You have to draw the line at answering emails from bed.
+  translation: 'Tienes que poner el límite y no responder correos desde la cama. (draw the line:
+    poner un límite)'
+  visual_hint: 🛑🛏️
+  cloze:
+  - 3
+  - 5
+  glossary:
+  - word: draw the line
+    meaning: poner un límite
+    ipa: drɔː ðə laɪn
+  kind: idiom
+  apply_sentence: I ____ at taking work calls during family dinner.
+  apply_answer: draw the line
+  apply_translation: Pongo el límite en atender llamadas de trabajo durante la cena familiar.
+roleplay:
+  ai_role: remote coworker
+  user_role: remote worker
+  setting: Virtual coffee chat between two remote colleagues.
+  turns:
+  - speaker: ai
+    text: Ever since going remote, I feel like my workday never really ends. How do you manage?
+  - speaker: user
+    goal: Explica cómo separas tu espacio de trabajo y a qué hora silencias el chat.
+    suggested_lines:
+    - Setting up a dedicated workspace helps separate work from rest.
+    - I mute team chat notifications promptly at six o'clock.
+  - speaker: ai
+    text: That sounds healthy. Do you still get tempted to check emails at night?
+  - speaker: user
+    goal: Di dónde pones el límite y cómo te desconectas al final del día.
+    suggested_lines:
+    - You have to draw the line at answering emails from bed.
+    - I close my laptop at six to wind down properly.
+  - speaker: ai
+    text: I am going to try that starting tonight!

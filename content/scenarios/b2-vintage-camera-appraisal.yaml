@@ -3,12 +3,14 @@ title: Inspecting a vintage film camera
 title_es: Inspeccionar una cámara clásica antes de comprar
 cefr: B2
 topic: hotel-and-shopping
-description: Revisa velocidades de obturación, limpieza del lente y fotómetro de una cámara analógica en una tienda
-  especializada.
+description: Revisa velocidades de obturación, limpieza del lente y fotómetro de una
+  cámara analógica en una tienda especializada.
 phrases:
 - id: check-slow-shutter-speeds
-  text: Do the slow shutter speeds—especially one-eighth and one-quarter second—fire without sticking?
-  translation: ¿Las velocidades lentas de obturación —especialmente un octavo y un cuarto— disparan sin trabarse?
+  text: Do the slow shutter speeds—especially one-eighth and one-quarter second—fire
+    without sticking?
+  translation: ¿Las velocidades lentas de obturación —especialmente un octavo y un
+    cuarto— disparan sin trabarse?
   visual_hint: 📷⚙️
   cloze:
   - 3
@@ -18,8 +20,10 @@ phrases:
     meaning: velocidades de obturación
     ipa: ˈʃʌtər spiːdz
 - id: hold-lens-to-light
-  text: When I hold the 50mm lens up to the light, the glass looks free of haze or fungus.
-  translation: Cuando pongo el lente de 50 mm a contraluz, el cristal se ve libre de neblina u hongos.
+  text: When I hold the 50mm lens up to the light, the glass looks free of haze or
+    fungus.
+  translation: Cuando pongo el lente de 50 mm a contraluz, el cristal se ve libre
+    de neblina u hongos.
   visual_hint: 🔍💡
   cloze:
   - 6
@@ -30,7 +34,8 @@ phrases:
     ipa: heɪz
 - id: light-seals-and-meter
   text: Have the foam light seals around the film door been replaced recently?
-  translation: ¿Se han reemplazado recientemente los sellos de espuma contra luz en la tapa del rollo?
+  translation: ¿Se han reemplazado recientemente los sellos de espuma contra luz en
+    la tapa del rollo?
   visual_hint: 🎞️🛠️
   cloze:
   - 4
@@ -39,42 +44,10 @@ phrases:
   - word: light seals
     meaning: sellos de espuma contra filtración de luz
     ipa: laɪt siːlz
-- id: bundle-with-leather-strap
-  text: If I take the camera body and two prime lenses, could you throw in the leather strap and a UV filter?
-  translation: Si me llevo el cuerpo y dos lentes fijos, ¿podría incluir la correa de cuero y un filtro UV?
-  visual_hint: 🤝🎒
-  cloze:
-  - 7
-  - 14
-  glossary:
-  - word: throw in
-    meaning: incluir sin costo adicional
-    ipa: θroʊ ɪn
-- id: ninety-day-shop-warranty
-  text: Knowing it comes with a ninety-day mechanical shop warranty gives me total peace of mind.
-  translation: Saber que incluye garantía mecánica de noventa días me da total tranquilidad.
-  visual_hint: 🛡️✅
-  cloze:
-  - 5
-  - 10
-  glossary:
-  - word: peace of mind
-    meaning: tranquilidad
-    ipa: piːs əv maɪnd
-- id: grab-three-rolls-film
-  text: Let's add three rolls of 400-speed color film so I can shoot a test roll today!
-  translation: Agreguemos tres rollos de película a color ISO 400 para hacer una prueba hoy mismo.
-  visual_hint: 🎞️☀️
-  cloze:
-  - 5
-  - 10
-  glossary:
-  - word: test roll
-    meaning: rollo de prueba
-    ipa: test roʊl
 - id: idm-turn-out-authentic
   text: It turns out this 1968 rangefinder still has its original leather case.
-  translation: Resulta que esta cámara telemétrica de 1968 aún conserva su estuche de cuero original.
+  translation: Resulta que esta cámara telemétrica de 1968 aún conserva su estuche
+    de cuero original.
   visual_hint: 📷✨
   cloze:
   - 4
@@ -84,12 +57,15 @@ phrases:
     meaning: resultar ser
     ipa: tɜːrn aʊt
   kind: phrasal_verb
-  apply_sentence: What looked like dust on the lens didn't ____ to be fungus after all.
+  apply_sentence: What looked like dust on the lens didn't ____ to be fungus after
+    all.
   apply_answer: turn out
-  apply_translation: Lo que parecía polvo en el lente no resultó ser hongo después de todo.
+  apply_translation: Lo que parecía polvo en el lente no resultó ser hongo después
+    de todo.
 - id: idm-rule-of-thumb
   text: As a rule of thumb, never buy a vintage shutter without testing slow speeds.
-  translation: Por regla general, nunca compres un obturador antiguo sin probar las velocidades lentas.
+  translation: Por regla general, nunca compres un obturador antiguo sin probar las
+    velocidades lentas.
   visual_hint: 👍📸
   cloze:
   - 4
@@ -99,23 +75,28 @@ phrases:
     meaning: regla general / regla práctica
     ipa: ruːl ʌv θʌm
   kind: idiom
-  apply_sentence: A good ____ with classic optics is to inspect the glass against bright light.
+  apply_sentence: A good ____ with classic optics is to inspect the glass against
+    bright light.
   apply_answer: rule of thumb
-  apply_translation: Una buena regla práctica con ópticas clásicas es revisar el cristal a contraluz.
+  apply_translation: Una buena regla práctica con ópticas clásicas es revisar el cristal
+    a contraluz.
 roleplay:
   ai_role: camera shop specialist
   user_role: photographer
   setting: A specialist vintage camera store.
   turns:
   - speaker: ai
-    text: Here is the 1978 mechanical SLR you called about. Go ahead and cock the lever!
+    text: Here is the 1978 mechanical SLR you called about. Go ahead and cock the
+      lever!
   - speaker: user
     goal: Pregunta si las velocidades lentas de obturación disparan sin trabarse.
     suggested_lines:
-    - Do the slow shutter speeds—especially one-eighth and one-quarter second—fire without sticking?
+    - Do the slow shutter speeds—especially one-eighth and one-quarter second—fire
+      without sticking?
     - When I hold the 50mm lens up to the light, the glass looks free of haze or fungus.
   - speaker: ai
-    text: Our technician just cla'd the shutter mechanism last month—every speed is dead-on.
+    text: Our technician just cla'd the shutter mechanism last month—every speed is
+      dead-on.
   - speaker: user
     goal: Verifica el lente a contraluz para comprobar que no tenga hongos ni neblina.
     suggested_lines:
@@ -127,13 +108,17 @@ roleplay:
     goal: Pregunta si cambiaron los sellos de espuma de la tapa del rollo.
     suggested_lines:
     - Have the foam light seals around the film door been replaced recently?
-    - If I take the camera body and two prime lenses, could you throw in the leather strap and a UV filter?
+    - If I take the camera body and two prime lenses, could you throw in the leather
+      strap and a UV filter?
   - speaker: ai
-    text: Yes, new foam seals and a fresh silver-oxide battery for the light meter were installed Tuesday.
+    text: Yes, new foam seals and a fresh silver-oxide battery for the light meter
+      were installed Tuesday.
   - speaker: user
     goal: Propón que incluyan la correa de cuero y un filtro UV al comprar el equipo.
     suggested_lines:
-    - If I take the camera body and two prime lenses, could you throw in the leather strap and a UV filter?
-    - Knowing it comes with a ninety-day mechanical shop warranty gives me total peace of mind.
+    - If I take the camera body and two prime lenses, could you throw in the leather
+      strap and a UV filter?
+    - Knowing it comes with a ninety-day mechanical shop warranty gives me total peace
+      of mind.
   - speaker: ai
     text: Wonderful! Everything is all set. Have a fantastic day!

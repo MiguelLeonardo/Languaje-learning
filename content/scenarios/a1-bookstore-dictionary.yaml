@@ -3,7 +3,8 @@ title: Buying a travel guide at a bookstore
 title_es: Comprar una guía en la librería
 cefr: A1
 topic: hotel-and-shopping
-description: Busca una guía de viaje en inglés con mapa de la ciudad y un cuaderno pequeño en una librería.
+description: Busca una guía de viaje en inglés con mapa de la ciudad y un cuaderno
+  pequeño en una librería.
 phrases:
 - id: travel-books-section
   text: Excuse me, where are the city travel guides?
@@ -38,42 +39,10 @@ phrases:
   - word: notebook
     meaning: cuaderno / libreta
     ipa: ˈnoʊtbʊk
-- id: free-bookmark
-  text: May I have one of these paper bookmarks, please?
-  translation: ¿Me regala uno de estos separadores de libros, por favor?
-  visual_hint: 🔖📘
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: bookmark
-    meaning: separador de libros / marcapáginas
-    ipa: ˈbʊkmɑːrk
-- id: english-short-stories
-  text: This book of easy short stories looks great too.
-  translation: Este libro de cuentos cortos fáciles también se ve genial.
-  visual_hint: 📖✨
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: short stories
-    meaning: cuentos cortos / relatos
-    ipa: ʃɔːrt ˈstɔːriz
-- id: pay-at-counter
-  text: Here is my card. Thank you for your help!
-  translation: Aquí está mi tarjeta. ¡Gracias por su ayuda!
-  visual_hint: 💳😊
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: counter
-    meaning: mostrador
-    ipa: ˈkaʊntər
 - id: idm-pick-up-guide
   text: I want to pick up a pocket city guide before my trip.
-  translation: Quiero pasar a comprar (pick up = recoger/comprar de paso) una guía de bolsillo antes de mi viaje.
+  translation: Quiero pasar a comprar (pick up = recoger/comprar de paso) una guía
+    de bolsillo antes de mi viaje.
   visual_hint: 📚🛍️
   cloze:
   - 4
@@ -85,7 +54,8 @@ phrases:
   kind: phrasal_verb
   apply_sentence: Can we ____ some travel books at the corner shop?
   apply_answer: pick up
-  apply_translation: ¿Podemos pasar a comprar unos libros de viaje en la tienda de la esquina?
+  apply_translation: ¿Podemos pasar a comprar unos libros de viaje en la tienda de
+    la esquina?
 - id: idm-at-a-glance
   text: This fold-out map shows all the main streets at a glance.
   translation: Este mapa desplegable muestra todas las calles principales de un vistazo.

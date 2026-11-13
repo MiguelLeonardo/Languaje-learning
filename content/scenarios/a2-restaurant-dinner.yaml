@@ -41,58 +41,6 @@ phrases:
   - word: glass of water
     meaning: vaso de agua
     ipa: ɡlæs əv ˈwɔːtər
-- id: have-the-bill
-  text: Could we have the bill, please?
-  translation: ¿Nos trae la cuenta, por favor?
-  visual_hint: 🧾💳
-  cloze:
-  - 4
-  glossary:
-  - word: bill
-    meaning: la cuenta (en restaurante)
-    ipa: bɪl
-- id: sparkling-water
-  text: Could you bring us a bottle of sparkling water?
-  translation: ¿Nos podría traer una botella de agua con gas?
-  visual_hint: 🍾💧
-  cloze:
-  - 2
-  - 7
-  glossary:
-  - word: bring
-    meaning: traer
-    ipa: brɪŋ
-  - word: sparkling
-    meaning: con gas / espumosa
-    ipa: ˈspɑːrklɪŋ
-- id: split-the-bill
-  text: Can we split the bill by card, please?
-  translation: ¿Podemos dividir la cuenta con tarjeta, por favor?
-  visual_hint: 💳➗
-  cloze:
-  - 2
-  - 4
-  glossary:
-  - word: split
-    meaning: dividir
-    ipa: splɪt
-  - word: bill
-    meaning: cuenta / factura
-    ipa: bɪl
-- id: side-of-vegetables
-  text: Does the dish come with a side of vegetables?
-  translation: ¿El plato viene con una guarnición de verduras?
-  visual_hint: 🥦🥕
-  cloze:
-  - 3
-  - 6
-  glossary:
-  - word: dish
-    meaning: plato
-    ipa: dɪʃ
-  - word: side
-    meaning: acompañamiento / guarnición
-    ipa: saɪd
 - id: go-dutch
   text: Let's go Dutch and split the bill tonight.
   translation: 'Paguemos cada uno lo suyo esta noche. (go Dutch: pagar a medias)'
@@ -110,8 +58,8 @@ phrases:
   apply_translation: Siempre pagamos cada uno lo suyo cuando salimos a comer con amigos.
 - id: fully-booked
   text: Sorry, we are fully booked until nine o'clock tonight.
-  translation: 'Lo siento, estamos completamente reservados hasta las nueve de esta noche. (fully booked: sin mesas
-    libres)'
+  translation: 'Lo siento, estamos completamente reservados hasta las nueve de esta
+    noche. (fully booked: sin mesas libres)'
   visual_hint: 📅🚫
   cloze:
   - 3

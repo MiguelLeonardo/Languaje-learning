@@ -1,0 +1,91 @@
+id: b1-grammar-connectors
+title: Cause, contrast, and addition connectors
+title_es: Conectores de causa, contraste y adición
+cefr: B1
+topic: grammar-and-connectors
+description: Conecta argumentos en conversaciones y textos con 'even though', 'despite',
+  'therefore' y 'on the other hand'.
+phrases:
+- id: even-though-tired
+  text: Even though she was exhausted, she kept smiling.
+  translation: Aunque estaba agotada, siguió sonriendo.
+  visual_hint: 😮‍💨😊
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: even though
+    meaning: aunque (enfático, + sujeto y verbo)
+    ipa: ˈiːvən ðoʊ
+  kind: expression
+  apply_sentence: ____ it was late, we decided to walk home.
+  apply_answer: Even though
+  apply_translation: Aunque era tarde, decidimos caminar a casa.
+- id: despite-heavy-rain
+  text: Despite the heavy rain, the concert went ahead.
+  translation: A pesar de la fuerte lluvia, el concierto siguió adelante. ('despite'
+    va seguido de sustantivo o -ing)
+  visual_hint: 🌧️🎸
+  cloze:
+  - 0
+  glossary:
+  - word: despite
+    meaning: a pesar de (+ sustantivo / -ing)
+    ipa: dɪˈspaɪt
+  kind: expression
+  apply_sentence: ____ feeling nervous, he gave a great speech.
+  apply_answer: Despite
+  apply_translation: A pesar de sentirse nervioso, dio un gran discurso.
+- id: missed-train-therefore
+  text: We missed the train; therefore, we arrived late.
+  translation: Perdimos el tren; por lo tanto, llegamos tarde.
+  visual_hint: 🚆🏃
+  cloze:
+  - 4
+  glossary:
+  - word: therefore
+    meaning: por lo tanto / por consiguiente
+    ipa: ˈðerfɔːr
+- id: on-the-other-hand
+  text: City life is exciting; on the other hand, it is pricey.
+  translation: La vida en la ciudad es emocionante; por otro lado, es costosa.
+  visual_hint: 🏙️⚖️
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: on the other hand
+    meaning: por otro lado
+    ipa: ɑːn ði ˈʌðər hænd
+- id: in-addition-experience
+  text: In addition to Spanish, he speaks fluent French.
+  translation: Además de español, él habla francés con fluidez.
+  visual_hint: 🗣️🌍
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: in addition to
+    meaning: además de
+    ipa: ɪn əˈdɪʃən tuː
+roleplay:
+  ai_role: career advisor
+  user_role: job seeker
+  setting: Discussing two job offers during an advising session.
+  turns:
+  - speaker: ai
+    text: You have two interesting offers. Which one are you leaning toward?
+  - speaker: user
+    goal: Compara las dos ofertas usando 'on the other hand' o 'even though'.
+    suggested_lines:
+    - Company A pays well; on the other hand, the commute is long.
+    - Even though Company B is smaller, the role is exciting.
+  - speaker: ai
+    text: Good point. Did the long commute worry you during the interview?
+  - speaker: user
+    goal: Explica tu postura usando 'despite' o 'therefore'.
+    suggested_lines:
+    - Despite the distance, they allow remote work twice a week.
+    - I prefer balance; therefore, Company B feels right.
+  - speaker: ai
+    text: That sounds like a very thoughtful decision.

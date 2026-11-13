@@ -3,7 +3,8 @@ title: Introducing yourself and hobbies
 title_es: Presentarse y hablar de hobbies
 cefr: A2
 topic: social-and-smalltalk
-description: Preséntate en un evento social, cuenta a qué te dedicas y qué haces en tu tiempo libre.
+description: Preséntate en un evento social, cuenta a qué te dedicas y qué haces en
+  tu tiempo libre.
 phrases:
 - id: nice-to-meet
   text: Hi, I'm Alex. It's really nice to meet you!
@@ -39,51 +40,6 @@ phrases:
     ipa: ˈɪntuː
   - word: hiking
     meaning: senderismo / caminata en montaña
-    ipa: ˈhaɪkɪŋ
-- id: how-long-living-here
-  text: How long have you been living in this city?
-  translation: ¿Cuánto tiempo llevas viviendo en esta ciudad?
-  visual_hint: 🏙️⏳
-  cloze:
-  - 1
-  - 4
-  - 8
-  glossary:
-  - word: how long
-    meaning: cuánto tiempo
-    ipa: haʊ lɔːŋ
-  - word: living
-    meaning: viviendo
-    ipa: ˈlɪvɪŋ
-- id: keep-in-touch
-  text: It was great chatting with you; let's exchange numbers!
-  translation: Fue genial charlar contigo; ¡intercambiemos números!
-  visual_hint: 📱🤝
-  cloze:
-  - 2
-  - 3
-  - 7
-  glossary:
-  - word: chatting
-    meaning: charlando / conversando
-    ipa: ˈtʃætɪŋ
-  - word: exchange
-    meaning: intercambiar
-    ipa: ɪksˈtʃeɪndʒ
-- id: free-time-hobbies
-  text: On weekends I usually go hiking or try new coffee shops.
-  translation: Los fines de semana suelo ir de excursión o probar nuevas cafeterías.
-  visual_hint: 🥾☕
-  cloze:
-  - 3
-  - 5
-  - 7
-  glossary:
-  - word: usually
-    meaning: usualmente / normalmente
-    ipa: ˈjuːʒuəli
-  - word: hiking
-    meaning: senderismo / caminata
     ipa: ˈhaɪkɪŋ
 - id: idm-a2mp-hang-out
   text: In my free time I like to hang out with friends.
