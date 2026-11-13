@@ -48439,7 +48439,7 @@
         const scen = state.currentScenario || FALLBACK_SCENARIOS[0];
         const foundPhrase = (scen.phrases || []).find(p => p.id === phraseId || p.text === phraseText);
         const cleanSel = (selected || '').toLowerCase().replace(/[^a-z']/g, '');
-        const foundGloss = foundPhrase && (foundPhrase.glossary || []).find(g => g.word.toLowerCase() === cleanSel || (isSingleWord && g.word.toLowerCase().split(/\s+/).includes(cleanSel)));
+        const foundGloss = foundPhrase && (foundPhrase.glossary || []).find(g => g.word.toLowerCase() === cleanSel);
         let singularMeaning = foundGloss ? foundGloss.meaning : '';
         if (!singularMeaning && isSingleWord) {
           singularMeaning = await translateSingleWordEs(selected);
@@ -48473,6 +48473,90 @@
       ).join('');
       document.getElementById('tr-speak-word').onclick = () => speakText(card.selected_text);
       document.getElementById('tr-speak-phrase').onclick = () => speakText(card.phrase_text);
+
+      // Populate individual word-by-word translations for the full phrase
+      const wbwEl = document.getElementById('tr-word-by-word');
+      if (wbwEl) {
+        const scenObj = state.currentScenario || FALLBACK_SCENARIOS[0];
+        const phrObj = (scenObj.phrases || []).find(p => p.id === phraseId || p.text === card.phrase_text);
+        const rawTokens = (card.phrase_text || '').split(/\s+/).map(t => t.replace(/^[^a-zA-Z0-9']+|[^a-zA-Z0-9']+$/g, '')).filter(Boolean);
+        const seen = new Set();
+        const uniqueWords = rawTokens.filter(w => {
+          const k = w.toLowerCase();
+          if (seen.has(k)) return false;
+          seen.add(k);
+          return true;
+        });
+        const selLower = (card.selected_text || '').toLowerCase().replace(/[^a-z']/g, '');
+        const getQuickEs = (w) => {
+          const k = w.toLowerCase().replace(/[^a-z']/g, '');
+          if (isSingleWord && k === selLower && card.word_translation_es && !card.word_translation_es.includes('palabra individual')) {
+            return card.word_translation_es;
+          }
+          const exactG = phrObj && (phrObj.glossary || []).find(g => g.word.toLowerCase() === k);
+          if (exactG) return exactG.meaning;
+          return WORD_DICT_ES[k] || _wordTranslationCache[k] || '';
+        };
+        wbwEl.innerHTML = uniqueWords.map((w, i) => {
+          const k = w.toLowerCase().replace(/[^a-z']/g, '');
+          const tr = getQuickEs(w);
+          const isSel = isSingleWord && k === selLower;
+          return `
+            <button onclick="openTranslateOverlay('${escapeJs(w)}', '${escapeJs(card.phrase_text)}', '${escapeJs(card.scenario_id || '')}', '${escapeJs(card.phrase_id || '')}')"
+              class="text-xs px-2.5 py-1.5 rounded-xl border transition flex items-center gap-1.5 ${
+                isSel
+                  ? 'bg-emerald-500/20 border-emerald-400/60 text-white shadow-xs'
+                  : 'bg-slate-900 hover:bg-slate-800 border-slate-800 text-slate-200'
+              }">
+              <span class="font-bold">${w}</span>
+              <span class="text-slate-500">→</span>
+              <span id="tr-wbw-${i}" class="text-emerald-300 font-medium">${tr || '…'}</span>
+            </button>
+          `;
+        }).join('');
+        uniqueWords.forEach(async (w, i) => {
+          if (!getQuickEs(w)) {
+            const tr = await translateSingleWordEs(w);
+            const span = document.getElementById(`tr-wbw-${i}`);
+            if (span) span.textContent = tr || w;
+          }
+        });
+      }
+
+      // Populate situational tips for when to use the idiom
+      const sitEl = document.getElementById('tr-idiom-situations');
+      if (sitEl) {
+        const scenObj = state.currentScenario || FALLBACK_SCENARIOS[0];
+        const phrObj = (scenObj.phrases || []).find(p => p.id === phraseId || p.text === card.phrase_text);
+        const idiomInfo = getIdiomFocus(scenObj.id, phrObj ? phrObj.id : phraseId, phrObj);
+        const targetIdiom = idiomInfo.label || card.selected_text;
+        const fullLower = (card.phrase_text || '').toLowerCase();
+
+        const topicSituations = {
+          'food-and-dining': 'Restaurantes, cafeterías, pedir comida, preguntar por ingredientes o pagar la cuenta.',
+          'travel-and-transport': 'Aeropuertos, estaciones de tren/autobús, pedir direcciones o resolver retrasos de viaje.',
+          'hotel-and-stays': 'Check-in/check-out en hoteles, solicitar servicios de habitación o reportar inconvenientes.',
+          'work-and-career': 'Reuniones de equipo, llamadas con clientes, entrevistas laborales o correos profesionales.',
+          'health-and-emergencies': 'Consultas médicas, farmacias, describir síntomas o pedir ayuda en urgencias.',
+          'social-and-daily': 'Charlas cotidianas con amigos, vecinos, planes de fin de semana o eventos sociales.'
+        };
+        const topicHint = topicSituations[scenObj.topic] || (scenObj.description || scenObj.title_es || 'Conversaciones cotidianas en inglés.');
+        const isPolite = /\b(could|would|please|excuse me|may i|sorry|appreciate)\b/i.test(fullLower);
+        const isQuestion = (card.phrase_text || '').includes('?') || /^(how|what|where|when|which|can|could|would|do|is|are)\b/i.test(fullLower);
+        const registerTip = isPolite
+          ? 'Registro cortés y natural: ideal con desconocidos, clientes, personal de servicio o colegas.'
+          : 'Registro cercano y coloquial: úsalo en charlas fluidas para sonar como hablante nativo.';
+        const whenTip = isQuestion
+          ? `Úsalo cuando necesites iniciar una petición o pregunta clave sobre "${scenObj.title_es || 'este tema'}".`
+          : `Úsalo para responder con naturalidad durante "${scenObj.title_es || 'la conversación'}".`;
+
+        sitEl.innerHTML = `
+          <div>• <strong>Expresión foco:</strong> <span class="text-amber-300 font-semibold">“${targetIdiom}”</span>${idiomInfo.meaning ? ` (${idiomInfo.meaning})` : ''}</div>
+          <div>• <strong>Situaciones ideales:</strong> ${topicHint}</div>
+          <div>• <strong>Cuándo decirlo:</strong> ${whenTip}</div>
+          <div>• <strong>Tono recomendado:</strong> ${registerTip}</div>
+        `;
+      }
     }
 
     function closeTranslateOverlay() {
