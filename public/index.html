@@ -64798,37 +64798,71 @@
               }
 
               // Vary the context naturally for phrases without an explicit apply_sentence
-              const gloss0 = (p.glossary && p.glossary[0]) ? p.glossary[0] : null;
-              const rawTarget = (info.label || (gloss0 && gloss0.word) || '').trim();
-              const target = rawTarget || (p.text || '').split(/\s+/).find(w => w.replace(/[^a-zA-Z]/g, '').length > 3) || 'expression';
-              const targetMeaning = (gloss0 && gloss0.meaning) ? gloss0.meaning.split('/')[0].trim() : target;
-              const lowerTarget = target.toLowerCase();
+              const glossList = Array.isArray(p.glossary) ? p.glossary : [];
+              const g0 = glossList[0] || null;
+              const g1 = glossList[1] || null;
+              const shortMean = (g, fallback) => {
+                if (!g || !g.meaning) return fallback;
+                let m = g.meaning.split('/')[0].split('(')[0].trim();
+                if (m.includes(':')) m = m.split(':')[1].trim();
+                return m.length > 32 ? fallback : m;
+              };
+
+              const rawTarget0 = (info.label || (g0 && g0.word) || '').trim();
+              const target0 = rawTarget0 || (p.text || '').split(/\s+/).find(w => w.replace(/[^a-zA-Z]/g, '').length > 3) || 'expression';
+              const target1 = (g1 && g1.word && g1.word.toLowerCase() !== target0.toLowerCase()) ? g1.word.trim() : '';
+              const mean0 = shortMean(g0, target0);
+              const mean1 = target1 ? shortMean(g1, target1) : '';
+              const lowerTarget0 = target0.toLowerCase();
               const lowerText = (p.text || '').toLowerCase();
 
               let variedEn = '';
               let variedEs = '';
-              if (/ly$/.test(lowerTarget) && !/\s/.test(lowerTarget)) {
-                variedEn = `When the main system went offline, the team handled every order ${target} until noon.`;
-                variedEs = `Cuando el sistema principal se cayó, el equipo gestionó cada pedido ${targetMeaning} hasta el mediodía.`;
+              if (target1) {
+                if (/^been\s+/i.test(lowerTarget0)) {
+                  variedEn = `My teammate has ${target0} on our ${target1} tasks since early morning.`;
+                  variedEs = `Mi compañero ha estado trabajando (${target0}) en nuestras tareas de ${mean1} desde temprano.`;
+                } else {
+                  const pairTemplates = [
+                    {
+                      en: `During the afternoon shift, we used ${target0} and ${target1} to solve the issue quickly.`,
+                      es: `Durante el turno de la tarde, usamos "${mean0}" y "${mean1}" para resolver el problema rápido.`
+                    },
+                    {
+                      en: `At the new office, everyone relies on ${target0} along with ${target1} every single day.`,
+                      es: `En la nueva oficina, todos confían en "${mean0}" junto con "${mean1}" cada día.`
+                    },
+                    {
+                      en: `Before the meeting ended, she combined ${target0} with ${target1} in her final plan.`,
+                      es: `Antes de terminar la reunión, ella combinó "${mean0}" con "${mean1}" en su plan final.`
+                    }
+                  ];
+                  const pick = pairTemplates[idx % pairTemplates.length];
+                  variedEn = pick.en;
+                  variedEs = pick.es;
+                }
+              } else if (/ly$/.test(lowerTarget0) && !/\s/.test(lowerTarget0)) {
+                variedEn = `When the main system went offline, the team handled every order ${target0} until noon.`;
+                variedEs = `Cuando el sistema principal se cayó, el equipo gestionó cada pedido ${mean0} hasta el mediodía.`;
               } else if (/^(can i|could i|may i|could you|would you)\b/i.test(lowerText)) {
-                variedEn = `At a different counter later that day, you politely ask about ${target} before paying.`;
-                variedEs = `En otro mostrador más tarde ese día, preguntas con cortesía por "${targetMeaning}" antes de pagar.`;
+                variedEn = `At a different counter later that day, you politely ask about ${target0} before paying.`;
+                variedEs = `En otro mostrador más tarde ese día, preguntas con cortesía por "${mean0}" antes de pagar.`;
               } else if (/\?$/.test((p.text || '').trim())) {
-                variedEn = `In a new situation, a coworker asks you to double-check ${target} before sending the report.`;
-                variedEs = `En una nueva situación, un compañero te pide revisar "${targetMeaning}" antes de enviar el informe.`;
+                variedEn = `In a new situation, a coworker asks you to double-check ${target0} before sending the report.`;
+                variedEs = `En una nueva situación, un compañero te pide revisar "${mean0}" antes de enviar el informe.`;
               } else {
                 const templates = [
                   {
-                    en: `During last week's project, everyone noticed how useful ${target} was for the whole team.`,
-                    es: `Durante el proyecto de la semana pasada, todos notaron lo útil que fue "${targetMeaning}" para todo el equipo.`
+                    en: `During last week's project, everyone noticed how useful ${target0} was for the whole team.`,
+                    es: `Durante el proyecto de la semana pasada, todos notaron lo útil que fue "${mean0}" para todo el equipo.`
                   },
                   {
-                    en: `At the new office downtown, clients often appreciate ${target} right from the first visit.`,
-                    es: `En la nueva oficina del centro, los clientes suelen valorar "${targetMeaning}" desde la primera visita.`
+                    en: `At the new office downtown, clients often appreciate ${target0} right from the first visit.`,
+                    es: `En la nueva oficina del centro, los clientes suelen valorar "${mean0}" desde la primera visita.`
                   },
                   {
-                    en: `Before finishing the trip, we made sure to arrange ${target} ahead of time.`,
-                    es: `Antes de terminar el viaje, nos aseguramos de organizar "${targetMeaning}" con anticipación.`
+                    en: `Before finishing the trip, we made sure to arrange ${target0} ahead of time.`,
+                    es: `Antes de terminar el viaje, nos aseguramos de organizar "${mean0}" con anticipación.`
                   }
                 ];
                 const pick = templates[idx % templates.length];
@@ -64836,7 +64870,11 @@
                 variedEs = pick.es;
               }
 
-              const targetTerms = target.split(/\s+/).map(w => w.replace(/[^a-zA-Z0-9'-]/g, '')).filter(Boolean);
+              const targetTerms = [target0, target1]
+                .filter(Boolean)
+                .flatMap(t => t.split(/\s+/))
+                .map(w => w.replace(/[^a-zA-Z0-9'-]/g, ''))
+                .filter(Boolean);
               const tokens = variedEn.split(/\s+/);
               const mask = computeIdiomTokenMask(tokens, targetTerms.length ? targetTerms : info.terms);
               const maskedVaried = tokens.map((tok, i) => mask[i] ? firstHint(tok) : tok).join(' ');
@@ -64845,7 +64883,7 @@
                 id: `${scenario.id}.${p.id}.recall`, type: 'recall', support: 'full', scenario_id: scenario.id, phrase_id: p.id,
                 expected_text: variedEn, pass_threshold: 0.75, response_mode: 'speech',
                 prompt: {
-                  instruction_es: 'Aplica la expresión aprendida en un contexto diferente guiándote por las letras incompletas.',
+                  instruction_es: 'Aplica las expresiones aprendidas en un contexto diferente guiándote por las letras incompletas.',
                   display_text: maskedVaried, translation: variedEs, glossary: p.glossary || [],
                   visual_hint: p.visual_hint, audio_text: variedEn,
                   focus_words: targetTerms.length ? targetTerms : info.terms
