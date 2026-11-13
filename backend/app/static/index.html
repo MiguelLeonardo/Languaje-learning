@@ -49303,32 +49303,43 @@
       const phrEsc = escapeJs(ex.phrase_id || '');
       const progressPct = Math.round(((idx + 1) / Math.max(1, total)) * 100);
 
+      const idiomInfo = getIdiomFocus(ex.scenario_id, ex.phrase_id);
+      const showIdiomBadge = (ex.type === 'shadowing' || ex.type === 'guided' || state.lastEvaluation) && idiomInfo.label;
+      const idiomBadgeHtml = showIdiomBadge ? `
+        <div class="inline-flex flex-wrap items-center justify-center gap-1.5 px-3.5 py-1.5 rounded-2xl bg-amber-500/15 border border-amber-400/35 text-xs text-amber-200 shadow-xs">
+          <span>✨</span>
+          <span class="text-amber-300/90 font-medium">Modismo / Expresión clave:</span>
+          <strong class="text-amber-200 font-extrabold">“${idiomInfo.label}”</strong>
+          ${idiomInfo.meaning ? `<span class="text-slate-300">(${idiomInfo.meaning})</span>` : ''}
+        </div>
+      ` : '';
+
       // Clean guidance banners for active challenges (WITHOUT spoiling the answer before recording)
       let guidanceBannerHtml = '';
       if (!state.lastEvaluation) {
         if (ex.type === 'recall') {
           guidanceBannerHtml = `
-            <div class="mb-4 inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-semibold shadow-xs">
-              <span>🎯</span><span>Aplica la expresión aprendida en el espacio en blanco y pronuncia la oración completa.</span>
+            <div class="mb-2 inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-semibold shadow-xs">
+              <span>🎯</span><span>Completa la frase guiándote por las letras iniciales del modismo o palabra clave.</span>
             </div>
           `;
         } else if (ex.type === 'guided') {
           guidanceBannerHtml = `
-            <div class="mb-4 inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold shadow-xs">
-              <span>💡</span><span>Pronuncia la frase completa guiándote solo por la primera letra de cada palabra.</span>
+            <div class="mb-2 inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold shadow-xs">
+              <span>💡</span><span>Practica solo las palabras del modismo (no necesitas decir toda la frase).</span>
             </div>
           `;
         } else if (ex.type === 'completion') {
           guidanceBannerHtml = `
-            <div class="mb-4 inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-semibold shadow-xs">
-              <span>🧩</span><span>Reto de memoria: pronuncia la oración completa diciendo las palabras que faltan.</span>
+            <div class="mb-2 inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-semibold shadow-xs">
+              <span>🧩</span><span>Aplica y completa la oración diciendo las palabras que faltan.</span>
             </div>
           `;
         }
       }
 
-      // Glossary cards: only shown before recording in stage 1 (shadowing); in recall/guided/completion they are revealed AFTER evaluation
-      const showGlossaryNow = ex.type === 'shadowing' || state.lastEvaluation;
+      // Glossary cards: shown in Stage 1 (shadowing), Stage 2 (Practica), or after evaluation
+      const showGlossaryNow = ex.type === 'shadowing' || ex.type === 'guided' || state.lastEvaluation;
       const glossaryHtml = (showGlossaryNow && p.glossary && p.glossary.length) ? `
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
           ${p.glossary.map(g => `
@@ -49347,8 +49358,8 @@
       // Translation visibility: in completion (Stage 4), hide translation before recording for pure memory recall
       const showTranslation = ex.type !== 'completion' || state.lastEvaluation;
 
-      // Audio model button: in active practice (recall, guided, completion), hide before recording so user answers by voice first
-      const allowListenBeforeEval = ex.type === 'shadowing' || state.lastEvaluation;
+      // Audio model button: keep available in Sombra (shadowing), Practica (guided), and Completa (completion)
+      const allowListenBeforeEval = ex.type === 'shadowing' || ex.type === 'guided' || ex.type === 'completion' || state.lastEvaluation;
 
       return `
         <div class="space-y-4">
@@ -49364,16 +49375,22 @@
 
           <div class="bg-slate-950/90 border border-slate-800/90 rounded-3xl p-6 sm:p-8 space-y-4 text-center">
             ${guidanceBannerHtml}
+            ${idiomBadgeHtml ? `<div>${idiomBadgeHtml}</div>` : ''}
             ${p.visual_hint ? `<div class="text-3xl">${p.visual_hint}</div>` : ''}
             <p class="text-xs text-slate-400">${p.instruction_es}</p>
             <div class="text-2xl sm:text-3xl font-bold tracking-tight text-white leading-snug">
               ${renderTappablePhrase(p.display_text || '', fullPhrase, ex.scenario_id, ex.phrase_id)}
             </div>
+            ${(ex.type === 'guided' && p.context_sentence) ? `
+              <div class="text-xs text-slate-400 bg-slate-900/70 border border-slate-800/80 rounded-xl px-3.5 py-2 inline-block">
+                <span class="text-slate-500">En contexto:</span> “${renderTappablePhrase(p.context_sentence, p.context_sentence, ex.scenario_id, ex.phrase_id)}”
+              </div>
+            ` : ''}
             ${(showTranslation && p.translation) ? `<p class="text-base text-slate-300 font-medium">“${p.translation}”</p>` : ''}
 
             <div class="flex flex-wrap items-center justify-center gap-2 pt-2">
               ${allowListenBeforeEval ? `<button onclick="speakText('${fullEsc}')" class="px-3.5 py-2 text-xs rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-100 font-medium transition flex items-center gap-1.5">
-                <span>🔊</span><span>Escuchar pronunciación</span>
+                <span>🔊</span><span>Escuchar guía de audio</span>
               </button>` : ''}
               <button onclick="openTranslateOverlay('${fullEsc}', '${fullEsc}', '${scenEsc}', '${phrEsc}')" class="px-3.5 py-2 text-xs rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-indigo-300 font-medium transition flex items-center gap-1.5">
                 <span>🌐</span><span>Ver traducción y ayuda</span>
