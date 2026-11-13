@@ -65628,14 +65628,15 @@
 
     async function recordSingleWord(wordIndex, targetWord, exId) {
       if (state._activeWordTrainerRec) {
-        if (state._wordMediaRecorder && state._wordMediaRecorder.state === 'recording') {
-          try { state._wordMediaRecorder.stop(); } catch (_) {}
-          state._wordMediaRecorder = null;
-        }
-        try { state._activeWordTrainerRec.stop(); } catch (_) {}
+        const active = state._activeWordTrainerRec;
         state._activeWordTrainerRec = null;
-        state.wordTrainerState = { activeIndex: null, status: 'idle', lastHeard: '' };
-        await renderActiveTab();
+        if (typeof active._forceFinalize === 'function') {
+          active._forceFinalize(true);
+        } else {
+          try { active.stop(); } catch (_) {}
+          state.wordTrainerState = { activeIndex: null, status: 'idle', lastHeard: '' };
+          await renderActiveTab();
+        }
         return;
       }
 
@@ -65661,16 +65662,19 @@
       state._activeWordTrainerRec = rec;
       rec.lang = state.speechLang || 'en-US';
       rec.continuous = false;
-      rec.interimResults = false;
+      rec.interimResults = true;
       rec.maxAlternatives = 4;
 
       let heardTranscript = '';
+      let interimTranscript = '';
       let alternatives = [];
       let ended = false;
+      let finalized = false;
       let wordAudioChunks = [];
       let wordRecorder = null;
       let chosenMime = '';
       let resolveStopPromise = null;
+      let maxWaitTimer = null;
       const androidNoParallel = isAndroidBrowser() && localStorage.getItem('sf_android_no_parallel_rec') === '1';
 
       const startWordAudioRecorder = async () => {
@@ -65734,7 +65738,7 @@
           resolve();
         };
         resolveStopPromise = done;
-        setTimeout(done, 400);
+        setTimeout(done, 450);
         try {
           activeRec.requestData && activeRec.requestData();
         } catch (_) {}
@@ -65745,13 +65749,76 @@
         }
       });
 
+      const finalizeTake = async (wasCancelledWithoutSpeech = false) => {
+        if (finalized) return;
+        finalized = true;
+        ended = true;
+        if (maxWaitTimer) { clearTimeout(maxWaitTimer); maxWaitTimer = null; }
+        if (state._activeWordTrainerRec === rec) state._activeWordTrainerRec = null;
+
+        await stopWordAudioRecorderAndWait();
+
+        const bestTranscript = (heardTranscript || interimTranscript || '').trim();
+        if (wasCancelledWithoutSpeech && !bestTranscript) {
+          state.wordTrainerState = { activeIndex: null, status: 'idle', lastHeard: '' };
+          await renderActiveTab();
+          return;
+        }
+
+        const numMap = { '0':'zero','1':'one','2':'two','3':'three','4':'four','5':'five','6':'six','7':'seven','8':'eight','9':'nine','10':'ten' };
+        const clean = s => {
+          const raw = (s || '').toLowerCase().trim();
+          const mapped = numMap[raw] || raw;
+          return mapped.replace(/[^a-z0-9]/g, '');
+        };
+        const expClean = clean(targetWord);
+        const heardClean = clean(bestTranscript);
+        const altsClean = alternatives.map(clean);
+
+        const isMatch = !!heardClean && (
+          expClean === heardClean ||
+          heardClean.includes(expClean) ||
+          (expClean.length >= 4 && expClean.includes(heardClean) && heardClean.length >= 3) ||
+          altsClean.some(a => a === expClean || a.includes(expClean)) ||
+          levenshteinDistance(expClean, heardClean) <= (expClean.length > 5 ? 2 : 1)
+        );
+
+        if (isMatch) {
+          await handleCorrectedWordTake(wordIndex, targetWord, exId);
+        } else {
+          state.wordTrainerState = {
+            activeIndex: wordIndex,
+            status: 'retry',
+            lastHeard: bestTranscript || 'no detectado'
+          };
+          await renderActiveTab();
+        }
+      };
+
+      rec._forceFinalize = (fromUserStop = false) => {
+        try { rec.stop(); } catch (_) {}
+        setTimeout(() => {
+          if (!finalized) finalizeTake(fromUserStop);
+        }, 450);
+      };
+
       rec.onresult = (e) => {
-        if (e.results && e.results[0]) {
-          heardTranscript = (e.results[0][0].transcript || '').trim();
-          for (let i = 0; i < e.results[0].length; i++) {
-            alternatives.push((e.results[0][i].transcript || '').trim());
+        let finalStr = '';
+        let interimStr = '';
+        for (let i = 0; i < e.results.length; i++) {
+          const res = e.results[i];
+          const txt = (res[0] && res[0].transcript) ? res[0].transcript.trim() : '';
+          if (res.isFinal) {
+            finalStr += (finalStr ? ' ' : '') + txt;
+            for (let j = 0; j < res.length; j++) {
+              alternatives.push((res[j].transcript || '').trim());
+            }
+          } else {
+            interimStr += (interimStr ? ' ' : '') + txt;
           }
         }
+        if (finalStr) heardTranscript = finalStr;
+        if (interimStr) interimTranscript = interimStr;
       };
 
       rec.onerror = (e) => {
@@ -65764,41 +65831,31 @@
           state._wordMediaRecorder = null;
           VoiceSession.releaseStream();
         }
-      };
-
-      rec.onend = async () => {
-        ended = true;
-        state._activeWordTrainerRec = null;
-        await stopWordAudioRecorderAndWait();
-
-        const clean = s => (s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
-        const expClean = clean(targetWord);
-        const heardClean = clean(heardTranscript);
-        const altsClean = alternatives.map(clean);
-
-        const isMatch = expClean === heardClean ||
-          heardClean.includes(expClean) ||
-          (expClean.length >= 4 && expClean.includes(heardClean) && heardClean.length >= 3) ||
-          altsClean.some(a => a === expClean || a.includes(expClean)) ||
-          levenshteinDistance(expClean, heardClean) <= (expClean.length > 5 ? 2 : 1);
-
-        if (isMatch) {
-          await handleCorrectedWordTake(wordIndex, targetWord, exId);
-        } else {
-          state.wordTrainerState = {
-            activeIndex: wordIndex,
-            status: 'retry',
-            lastHeard: heardTranscript || 'no detectado'
-          };
-          await renderActiveTab();
+        if (!finalized && (e.error === 'not-allowed' || e.error === 'service-not-allowed' || e.error === 'audio-capture' || e.error === 'no-speech')) {
+          finalizeTake(false);
         }
       };
 
+      rec.onend = async () => {
+        await finalizeTake(false);
+      };
+
+      maxWaitTimer = setTimeout(() => {
+        if (!finalized) {
+          try { rec.stop(); } catch (_) {}
+          setTimeout(() => {
+            if (!finalized) finalizeTake(false);
+          }, 400);
+        }
+      }, 8000);
+
       try {
-        await startWordAudioRecorder();
         rec.start();
+        startWordAudioRecorder();
       } catch (err) {
+        if (maxWaitTimer) { clearTimeout(maxWaitTimer); maxWaitTimer = null; }
         ended = true;
+        finalized = true;
         state._activeWordTrainerRec = null;
         if (state._wordMediaRecorder && state._wordMediaRecorder.state === 'recording') {
           try { state._wordMediaRecorder.stop(); } catch (_) {}
